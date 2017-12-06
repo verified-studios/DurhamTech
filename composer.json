@@ -13,7 +13,8 @@
         "drupal/media_entity": "^1.7",
         "drupal/video_embed_field": "^1.5",
         "drupal/fitvids": "^1.0",
-        "drupal/colorbox": "^1.4"
+        "drupal/colorbox": "^1.4",
+        "drupal/slick": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.4"
