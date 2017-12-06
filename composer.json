@@ -11,7 +11,8 @@
         "drupal/addtoany": "^1.8",
         "drupal/facets": "^1.0@beta",
         "drupal/media_entity": "^1.7",
-        "drupal/video_embed_field": "^1.5"
+        "drupal/video_embed_field": "^1.5",
+        "drupal/fitvids": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.4"
