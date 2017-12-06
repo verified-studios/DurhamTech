@@ -9,7 +9,8 @@
         "drupal/search_api": "^1.5",
         "drupal/paragraphs": "^1.2",
         "drupal/addtoany": "^1.8",
-        "drupal/facets": "^1.0@beta"
+        "drupal/facets": "^1.0@beta",
+        "drupal/media_entity": "^1.7"
     },
     "replace": {
         "drupal/core": "^8.4"
