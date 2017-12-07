@@ -22,7 +22,8 @@
         "drupal/menu_block": "^1.4",
         "drupal/xmlsitemap": "^1.0@alpha",
         "drupal/page_manager": "^4.0@beta",
-        "drupal/panels": "^4.2"
+        "drupal/panels": "^4.2",
+        "drupal/panelizer": "^4.0"
     },
     "replace": {
         "drupal/core": "^8.4"
