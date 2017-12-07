@@ -14,7 +14,8 @@
         "drupal/video_embed_field": "^1.5",
         "drupal/fitvids": "^1.0",
         "drupal/colorbox": "^1.4",
-        "drupal/slick": "^1.0"
+        "drupal/slick": "^1.0",
+        "drupal/twig_tweak": "^1.9"
     },
     "replace": {
         "drupal/core": "^8.4"
