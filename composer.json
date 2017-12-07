@@ -21,7 +21,8 @@
         "drupal/slick_views": "^1.0@RC",
         "drupal/menu_block": "^1.4",
         "drupal/xmlsitemap": "^1.0@alpha",
-        "drupal/page_manager": "^4.0@beta"
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/panels": "^4.2"
     },
     "replace": {
         "drupal/core": "^8.4"
