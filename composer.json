@@ -18,7 +18,8 @@
         "drupal/twig_tweak": "^1.9",
         "drupal/admin_toolbar": "^1.21",
         "drupal/better_exposed_filters": "^3.0@alpha",
-        "drupal/slick_views": "^1.0@RC"
+        "drupal/slick_views": "^1.0@RC",
+        "drupal/menu_block": "^1.4"
     },
     "replace": {
         "drupal/core": "^8.4"
