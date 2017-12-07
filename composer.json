@@ -16,7 +16,8 @@
         "drupal/colorbox": "^1.4",
         "drupal/slick": "^1.0",
         "drupal/twig_tweak": "^1.9",
-        "drupal/admin_toolbar": "^1.21"
+        "drupal/admin_toolbar": "^1.21",
+        "drupal/better_exposed_filters": "^3.0@alpha"
     },
     "replace": {
         "drupal/core": "^8.4"
