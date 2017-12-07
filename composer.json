@@ -15,7 +15,8 @@
         "drupal/fitvids": "^1.0",
         "drupal/colorbox": "^1.4",
         "drupal/slick": "^1.0",
-        "drupal/twig_tweak": "^1.9"
+        "drupal/twig_tweak": "^1.9",
+        "drupal/admin_toolbar": "^1.21"
     },
     "replace": {
         "drupal/core": "^8.4"
