@@ -1,0 +1,9 @@
+uuid: f4354b22-7323-497e-8b3e-73e880cf1c33
+langcode: en
+status: true
+dependencies: {  }
+name: 'Class Format'
+vid: class_format
+description: 'Format of an individual class, used for organizing and filtering courses. Flat structure'
+hierarchy: 0
+weight: 0

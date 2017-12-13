@@ -1,0 +1,9 @@
+uuid: b83af6ba-6499-44a0-9d6a-cbeda0da5b57
+langcode: en
+status: true
+dependencies: {  }
+name: Department
+vid: department
+description: 'Department a person is involved with. Used for filtering Faculty directory. Hierarchal Structure'
+hierarchy: 0
+weight: 0

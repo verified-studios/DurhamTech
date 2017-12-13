@@ -1,0 +1,9 @@
+uuid: d85e225d-ec9f-43c7-a48f-ea290d3a4f32
+langcode: en
+status: true
+dependencies: {  }
+name: 'Degree Options'
+vid: degree_options
+description: 'Various end-goals for attending Durham Tech. Flat structure'
+hierarchy: 0
+weight: 0
