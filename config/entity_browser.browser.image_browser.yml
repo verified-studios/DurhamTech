@@ -1,0 +1,31 @@
+uuid: 6aafad11-69b3-4cdc-bd32-40954c9d3b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: image_browser
+label: 'Image Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select image'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  adea38c3-e420-4c8d-a973-462c067aceca:
+    settings:
+      view: entity_browser
+      view_display: entity_browser_2
+      submit_text: 'Select image'
+      auto_select: false
+    uuid: adea38c3-e420-4c8d-a973-462c067aceca
+    weight: 1
+    label: Images
+    id: view
