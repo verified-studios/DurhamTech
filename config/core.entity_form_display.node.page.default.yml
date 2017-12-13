@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_banner_image
     - node.type.page
   module:
+    - entity_browser_entity_form
+    - inline_entity_form
     - path
     - text
 _core:
@@ -30,6 +33,21 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_banner_image:
+    weight: 121
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: banner_image_browser
+    type: inline_entity_form_complex
+    region: content
   path:
     type: path
     weight: 30

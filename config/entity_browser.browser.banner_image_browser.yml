@@ -1,0 +1,31 @@
+uuid: 40481d61-2b3a-4df4-99e0-91835bfb7f8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: banner_image_browser
+label: 'Banner Image Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select banner'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  381cca2c-0321-4580-b2a5-27f4bd407ede:
+    settings:
+      view: entity_browser
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 381cca2c-0321-4580-b2a5-27f4bd407ede
+    weight: -10
+    label: Banners
+    id: view
