@@ -1,0 +1,38 @@
+uuid: 0e0712f5-9f74-4f3a-af15-96e93c036e45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_alignment
+    - field.field.paragraph.header.field_header
+    - field.field.paragraph.header.field_size
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_alignment:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_header:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_size:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: 0fe1c753-5006-49f3-8b70-3a9cab7a41a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_style
+    - paragraphs.paragraphs_type.link
+  module:
+    - options
+id: paragraph.link.field_link_style
+field_name: field_link_style
+entity_type: paragraph
+bundle: link
+label: 'Link Style'
+description: 'Choose whether to be a standard link or a button.'
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

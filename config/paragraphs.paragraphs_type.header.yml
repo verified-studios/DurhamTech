@@ -1,0 +1,9 @@
+uuid: f12b66aa-329d-440b-8a4f-12825a74970d
+langcode: en
+status: true
+dependencies: {  }
+id: header
+label: Header
+icon_uuid: null
+description: 'Displays a header that can be modified with options (alignment, size).'
+behavior_plugins: {  }

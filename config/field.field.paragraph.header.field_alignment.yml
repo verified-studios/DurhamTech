@@ -1,0 +1,23 @@
+uuid: 75f5fa95-11ce-4175-8d0d-2075fb23ab0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_alignment
+    - paragraphs.paragraphs_type.header
+  module:
+    - options
+id: paragraph.header.field_alignment
+field_name: field_alignment
+entity_type: paragraph
+bundle: header
+label: Alignment
+description: 'Alignment of the header.'
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string
