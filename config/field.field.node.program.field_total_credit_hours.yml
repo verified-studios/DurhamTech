@@ -1,0 +1,19 @@
+uuid: 2f7a1bcd-8e86-4d4f-8970-5293d456e4c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_total_credit_hours
+    - node.type.program
+id: node.program.field_total_credit_hours
+field_name: field_total_credit_hours
+entity_type: node
+bundle: program
+label: 'Total Credit Hours'
+description: 'Duration/credit amount of the program'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

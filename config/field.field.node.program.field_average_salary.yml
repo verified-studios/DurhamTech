@@ -1,0 +1,19 @@
+uuid: d8a47102-3947-4755-acfb-d625f181c385
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_average_salary
+    - node.type.program
+id: node.program.field_average_salary
+field_name: field_average_salary
+entity_type: node
+bundle: program
+label: 'Average Salary'
+description: 'Average salary statistic of degree/certificate holder.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

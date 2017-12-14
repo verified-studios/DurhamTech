@@ -1,0 +1,29 @@
+uuid: 7aacec35-81df-4886-b934-6ac69e12b0b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree_option
+    - node.type.program
+    - taxonomy.vocabulary.degree_options
+id: node.program.field_degree_option
+field_name: field_degree_option
+entity_type: node
+bundle: program
+label: 'Degree Option'
+description: 'End-goal of the program, used for filtering'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      degree_options: degree_options
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
