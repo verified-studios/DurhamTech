@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: link
 label: 'Link Style'
 description: 'Choose whether to be a standard link or a button.'
-required: false
+required: true
 translatable: false
 default_value:
   -

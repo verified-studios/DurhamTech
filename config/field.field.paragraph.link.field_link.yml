@@ -13,7 +13,7 @@ entity_type: paragraph
 bundle: link
 label: Link
 description: 'URL for the link. Can be external or internal. Can also optionally have text to mask the link.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
