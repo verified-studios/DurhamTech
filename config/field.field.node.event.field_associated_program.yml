@@ -1,0 +1,28 @@
+uuid: 9c38e708-8e52-4ebf-a185-3ec5ffcc7e6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_associated_program
+    - node.type.event
+    - node.type.program
+id: node.event.field_associated_program
+field_name: field_associated_program
+entity_type: node
+bundle: event
+label: 'Associated Program'
+description: 'Program event is related to'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

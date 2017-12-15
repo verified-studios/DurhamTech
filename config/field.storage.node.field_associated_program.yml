@@ -1,0 +1,19 @@
+uuid: 3683e892-6999-4de5-a370-55af0d99edb8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_associated_program
+field_name: field_associated_program
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

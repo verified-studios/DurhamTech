@@ -1,0 +1,64 @@
+uuid: 8ec749af-5d18-4236-a08b-cbf1037dac50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_associated_program
+    - field.field.node.event.field_description
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_start_date
+    - node.type.event
+  module:
+    - datetime
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  field_associated_program:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_event_type:
+    weight: 103
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_start_date:
+    weight: 102
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
