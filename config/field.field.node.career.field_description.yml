@@ -1,0 +1,19 @@
+uuid: 8a5952b8-8621-4dd2-a826-3b42dfa39391
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.career
+id: node.career.field_description
+field_name: field_description
+entity_type: node
+bundle: career
+label: Description
+description: 'Description of the individual career'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

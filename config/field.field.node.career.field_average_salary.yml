@@ -1,0 +1,19 @@
+uuid: 8ea046d2-7cd4-4e9f-aab9-331a4c98f0fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_average_salary
+    - node.type.career
+id: node.career.field_average_salary
+field_name: field_average_salary
+entity_type: node
+bundle: career
+label: 'Average Salary'
+description: 'Average salary statistic for career'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

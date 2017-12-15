@@ -1,0 +1,19 @@
+uuid: c7f0dd47-f05f-4ba1-93c7-45058d9c8aa8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_job_growth
+    - node.type.career
+id: node.career.field_job_growth
+field_name: field_job_growth
+entity_type: node
+bundle: career
+label: 'Job Growth'
+description: 'Job growth statistic for career'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

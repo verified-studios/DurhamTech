@@ -1,0 +1,18 @@
+uuid: 6d76e7b1-6fa3-4dc1-87b4-d40d38abc259
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.career
+id: node.career.title
+field_name: title
+entity_type: node
+bundle: career
+label: 'Career Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

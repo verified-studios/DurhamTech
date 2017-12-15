@@ -1,0 +1,29 @@
+uuid: 0223401e-8438-4642-946c-67cf4b7587a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree_option
+    - node.type.career
+    - taxonomy.vocabulary.degree_options
+id: node.career.field_degree_option
+field_name: field_degree_option
+entity_type: node
+bundle: career
+label: 'Basic Education Requirement'
+description: 'Minimum requirement of education for career'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      degree_options: degree_options
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
