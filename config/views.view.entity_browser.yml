@@ -3,8 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.banner_image
     - media_entity.bundle.image
+    - media_entity.bundle.people
   module:
     - entity_browser
     - image
@@ -289,7 +289,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            banner_image: banner_image
+            people: people
           group: 1
           exposed: false
           expose:
@@ -422,6 +422,22 @@ display:
         operator: AND
         groups:
           1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags: {  }
+  entity_browser_3:
+    display_plugin: entity_browser
+    id: entity_browser_3
+    display_title: 'People Image Browser'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

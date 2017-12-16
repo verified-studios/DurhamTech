@@ -1,0 +1,16 @@
+uuid: fa5bda79-10e6-4005-bbcd-15a6e012b2a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: people
+label: People
+description: 'Images of people'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_person_image
+  gather_exif: false
+field_map: {  }

@@ -1,0 +1,31 @@
+uuid: cc187187-f05d-4b25-982b-fc9015af8367
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: people_image_browser
+label: 'People Image Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select person image'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  a78099a6-abeb-4ec7-bac3-1db123e77698:
+    settings:
+      view: entity_browser
+      view_display: entity_browser_3
+      submit_text: 'Select person'
+      auto_select: false
+    uuid: a78099a6-abeb-4ec7-bac3-1db123e77698
+    weight: 1
+    label: People
+    id: view

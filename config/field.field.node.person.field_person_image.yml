@@ -1,0 +1,28 @@
+uuid: dc1638a1-5c4f-4868-8d7e-8290ee3aaadf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_image
+    - media_entity.bundle.people
+    - node.type.person
+id: node.person.field_person_image
+field_name: field_person_image
+entity_type: node
+bundle: person
+label: 'Person Image'
+description: 'An image of the person'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      people: people
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
