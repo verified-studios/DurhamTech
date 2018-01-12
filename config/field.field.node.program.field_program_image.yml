@@ -12,7 +12,7 @@ entity_type: node
 bundle: program
 label: 'Program Image'
 description: 'Image next to program title and description.'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
