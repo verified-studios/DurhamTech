@@ -9,7 +9,7 @@ id: node.program.field_licensure_pass_rate
 field_name: field_licensure_pass_rate
 entity_type: node
 bundle: program
-label: 'Licensure Pass Rate'
+label: 'Certificate Pass Rate'
 description: 'Pass rate statistic for the program/certificate.'
 required: false
 translatable: false
