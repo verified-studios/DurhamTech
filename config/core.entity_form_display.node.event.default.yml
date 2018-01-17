@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_description
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_featured
     - field.field.node.event.field_start_date
     - node.type.event
   module:
@@ -44,6 +45,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_featured:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_start_date:
     weight: 2
