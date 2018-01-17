@@ -1,0 +1,33 @@
+uuid: 006435db-f072-43a9-9c47-a7b50b34e949
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+id: news_index
+name: 'News Index'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - new_article
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

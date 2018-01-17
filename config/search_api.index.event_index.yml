@@ -1,0 +1,33 @@
+uuid: 10d247eb-d872-4a44-8af0-1f3ad9120101
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+id: event_index
+name: 'Event Index'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

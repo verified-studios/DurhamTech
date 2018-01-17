@@ -1,0 +1,33 @@
+uuid: ff96b1f3-cc80-4551-bfa9-76b08a9389cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+id: people_index
+name: 'People Index'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected:
+        - person
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech
