@@ -1,0 +1,50 @@
+uuid: 84818b2f-8d1b-444d-9a81-e432a60fec5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+    - file
+    - media_entity
+    - paragraphs
+id: site_index
+name: 'Site Index'
+description: ''
+read_only: false
+field_settings: {  }
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:file': {  }
+  'entity:media':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:paragraph':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  rendered_item: {  }
+  add_url: {  }
+  aggregated_field: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

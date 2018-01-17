@@ -1,0 +1,17 @@
+uuid: 052c159f-df48-4653-8acd-5f8f9cf5bb11
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: durham_tech
+name: 'Durham Tech'
+description: 'Search server for Durham Tech.'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  partial_matches: false
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true
