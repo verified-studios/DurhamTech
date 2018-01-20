@@ -9,7 +9,7 @@ _core:
 id: durhamtech_page_title
 theme: durhamtech
 region: content
-weight: -50
+weight: -4
 provider: null
 plugin: page_title_block
 settings:

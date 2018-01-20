@@ -10,8 +10,8 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: durhamtech_branding
 theme: durhamtech
-region: header
-weight: 0
+region: navigation
+weight: -6
 provider: null
 plugin: system_branding_block
 settings:
