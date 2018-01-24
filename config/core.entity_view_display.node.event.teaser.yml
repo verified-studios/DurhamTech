@@ -17,3 +17,8 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_associated_program: true
+  field_description: true
+  field_event_type: true
+  field_featured: true
+  field_start_date: true

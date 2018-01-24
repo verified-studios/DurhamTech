@@ -1,0 +1,18 @@
+one_column_mixed:
+  label: One column mixed
+  category: Panelizer
+  template: templates/panelizer/one-col-mixed
+  regions:
+    full_1:
+      label: Full Width
+    fixed_1:
+      label: Container Width
+    full_2:
+      label: Full Width
+    fixed_2:
+      label: Container Width
+    full_3:
+      label: Full Width
+    fixed_3:
+      label: Container Width
+

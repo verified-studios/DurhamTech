@@ -1,0 +1,17 @@
+uuid: 3891a509-6f6c-47b6-86c6-d70738a29dae
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landing Page'
+type: landing_page
+description: 'A general landing page that relies more on components rather than content. Uses panelizer to lay out the structure of the page. '
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -17,3 +17,8 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_department: true
+  field_e_mail: true
+  field_person_image: true
+  field_phone_number: true
+  field_position_title: true

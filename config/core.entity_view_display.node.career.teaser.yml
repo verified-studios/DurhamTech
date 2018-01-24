@@ -17,3 +17,9 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_average_salary: true
+  field_banner_image: true
+  field_degree_option: true
+  field_description: true
+  field_job_growth: true
+  field_title_image: true

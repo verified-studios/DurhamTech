@@ -17,3 +17,13 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_average_completion: true
+  field_average_cost: true
+  field_average_salary: true
+  field_degree_option: true
+  field_description: true
+  field_format: true
+  field_licensure_pass_rate: true
+  field_program_image: true
+  field_program_type: true
+  field_total_credit_hours: true

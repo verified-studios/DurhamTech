@@ -25,3 +25,4 @@ content:
     region: content
 hidden:
   field_banner_image: true
+  field_body: true

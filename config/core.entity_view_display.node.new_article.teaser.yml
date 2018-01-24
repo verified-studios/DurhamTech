@@ -17,3 +17,9 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_author: true
+  field_body: true
+  field_featured: true
+  field_news_format: true
+  field_news_type: true
+  field_publish_date: true
