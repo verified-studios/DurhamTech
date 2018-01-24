@@ -1,6 +1,9 @@
 // Default colors
 $white: #FFFFFF;
 $black: #000000;
+$gray: #262626;
+$dark-gray: #4c4c4c;
+$orange: #B75A13;
 
 // Brand Colors
 $green: #19975D;
@@ -9,4 +12,9 @@ $orange: #E87722;
 $gray: #808990;
 
 // Typography
+$header-gray: $gray;
+$body-gray: $dark-gray;
+
 $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$hover-color: $orange;
