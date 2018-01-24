@@ -4,9 +4,12 @@
 // Bootstrap Framework.
 @import '../bootstrap/assets/stylesheets/bootstrap';
 
-// Base-theme overrides.
-@import 'overrides';
+// Utilities
+@import "utility/mixins";
 
 // Base sass
 @import "base/vars";
 @import "base/typography";
+
+// Base-theme overrides.
+@import 'overrides';

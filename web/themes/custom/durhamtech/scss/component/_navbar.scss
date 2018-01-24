@@ -67,3 +67,38 @@ body {
   }
 }
 
+// Branding
+.logo {
+  img {
+    width: 283px;
+  }
+}
+
+// Menu items
+.menu.main-menu {
+  > li {
+    > a {
+      @include transition();
+      color: $black;
+      padding-left: 5px;
+      padding-right: 0px;
+
+      &:after {
+        content: "|";
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      &:hover {
+        @include transition();
+        background: transparent;
+        text-decoration: underline;
+      }
+    }
+
+    &:last-of-type > a:after {
+      content: "";
+    }
+  }
+}
+

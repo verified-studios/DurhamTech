@@ -1,0 +1,8 @@
+/*
+ * Mixins for reusuable blocks of css.
+ */
+
+// Transitions
+@mixin transition($time: 2s, $prop: all, $timing: ease-in) {
+  transition: $time $prop $timing;
+}
