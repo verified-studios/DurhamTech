@@ -71,34 +71,83 @@ body {
 .logo {
   img {
     width: 283px;
+
+    @media #{$tablet} {
+      width: 100px;
+    }
+
+    @media #{$normal} {
+      width: 200px;
+    }
+
+    @media#{$wide} {
+      width: 283px;
+    }
   }
 }
 
 // Menu items
+$main-nav-height: 60px;
+
 .menu.main-menu {
   > li {
     > a {
       @include transition();
       color: $black;
-      padding-left: 5px;
-      padding-right: 0px;
-
-      &:after {
-        content: "|";
-        display: inline-block;
-        margin-left: 5px;
-      }
 
       &:hover {
         @include transition();
-        background: transparent;
-        text-decoration: underline;
       }
     }
+  }
 
-    &:last-of-type > a:after {
-      content: "";
+  @media #{$tablet} {
+    > li {
+      > a {
+        padding-left: 5px;
+        padding-right: 0px;
+
+        &:after {
+          content: "|";
+          display: inline-block;
+          margin-left: 5px;
+        }
+
+        &:hover {
+          background: transparent;
+          text-decoration: underline;
+        }
+      }
+
+      &:last-of-type > a:after {
+        content: "";
+      }
     }
+  }
+}
+
+.secondary-menu {
+  background-color: $transparent-black;
+  @media #{$tablet} {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    > li {
+      flex-basis: 14%;
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+
+// Toggle button
+.navbar-toggle {
+  .icon-bar {
+    background-color: $black;
   }
 }
 
