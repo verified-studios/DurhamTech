@@ -5857,9 +5857,23 @@ a:hover {
 
 .btn {
   background-color: #19975D;
+  border-color: #19975D;
   color: #FFFFFF; }
+  .btn-outline {
+    background-color: transparent;
+    border-color: #19975D;
+    border-width: 2px;
+    color: #808990; }
+    .btn-outline:hover {
+      background-color: inherit;
+      color: #FFFFFF; }
   .btn:hover {
     background-color: #19975D; }
+  .btn-large {
+    padding: 10px 20px; }
+  .btn-full {
+    display: block;
+    width: 100%; }
 
 /**
  * Alert styling.
