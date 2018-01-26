@@ -101,3 +101,4 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
+  panelizer: true

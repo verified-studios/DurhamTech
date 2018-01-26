@@ -1,0 +1,8 @@
+uuid: 3417e3d4-7c12-4aa7-9008-5633e3574f3c
+langcode: en
+status: true
+dependencies: {  }
+id: footer-column-3
+label: 'Footer Column 3'
+description: 'Menu for third column of footer'
+locked: false

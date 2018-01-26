@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: secondary-menu
 label: 'Secondary Menu'
-description: ''
+description: 'Secondary navigation in the header'
 locked: false
