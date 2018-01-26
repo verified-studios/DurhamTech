@@ -21,6 +21,7 @@
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",
     "drupal/core": "^8",
+    "drupal/devel": "^1.2",
     "drupal/entity_browser": "^1.4",
     "drupal/facets": "^1.0@beta",
     "drupal/fitvids": "^1.0",
