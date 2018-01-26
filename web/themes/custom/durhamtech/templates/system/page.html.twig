@@ -91,6 +91,19 @@
   {% endblock %}
 {% endif %}
 
+{# Secondary Menu - Full Width #}
+{% if page.secondary_nav %}
+  {% block secondary_nav %}
+    <div class="secondary-nav" id="secondary-nav" role="secondary-nav">
+      <div class="{{ container }}">
+        <div class="row">
+          {{ page.secondary_nav }}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
