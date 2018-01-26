@@ -5852,7 +5852,14 @@ p {
   color: #4c4c4c; }
 
 a:hover {
+  background-color: transparent;
   color: #E87722; }
+
+.btn {
+  background-color: #19975D;
+  color: #FFFFFF; }
+  .btn:hover {
+    background-color: #19975D; }
 
 /**
  * Alert styling.
@@ -6118,6 +6125,9 @@ body {
       z-index: 500; }
     body.toolbar-vertical.navbar-is-fixed-top header {
       top: 39px; } }
+
+.nav > li > a:hover {
+  background-color: transparent; }
 
 @media screen and (min-width: 768px) {
   .navbar.container {

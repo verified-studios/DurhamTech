@@ -44,6 +44,16 @@ body {
     }
   }
 }
+
+.nav {
+  > li {
+    > a {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
 .navbar.container {
   @media #{$tablet} {
     max-width: (($container-sm - $grid-gutter-width));
