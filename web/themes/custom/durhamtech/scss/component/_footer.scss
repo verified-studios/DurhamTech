@@ -1,5 +1,23 @@
-footer {
+.footer {
   background-color: $dark-gray;
+  padding: 25px 0 0;
+
+  .footer-bottom {
+    background-color: $black;
+    padding: 15px 0;
+
+    ul {
+      list-style-type: none;
+      > li {
+        float: left;
+
+        a {
+          color: $white;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
 }
 
 #block-footerinformationalblock {

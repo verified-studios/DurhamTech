@@ -6489,8 +6489,19 @@ p:last-child,
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
 
-footer {
-  background-color: #4c4c4c; }
+.footer {
+  background-color: #4c4c4c;
+  padding: 25px 0 0; }
+  .footer .footer-bottom {
+    background-color: #000000;
+    padding: 15px 0; }
+    .footer .footer-bottom ul {
+      list-style-type: none; }
+      .footer .footer-bottom ul > li {
+        float: left; }
+        .footer .footer-bottom ul > li a {
+          color: #FFFFFF;
+          padding: 5px 10px; }
 
 #block-footerinformationalblock p {
   color: #FFFFFF; }
