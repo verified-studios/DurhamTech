@@ -126,19 +126,30 @@ $main-nav-height: 60px;
   }
 }
 
-.secondary-menu {
+.region-navigation-collapsible {
+  .secondary-menu {
+    @media #{$tablet} {
+      display: none;
+    }
+  }
+}
+
+#secondary-nav {
   background-color: $transparent-black;
-  @media #{$tablet} {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
 
-    > li {
-      flex-basis: 14%;
+  .secondary-menu {
+    @media #{$tablet} {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
 
-      a {
-        color: $white;
+      > li {
+        flex-basis: 14%;
+
+        a {
+          color: $white;
+        }
       }
     }
   }

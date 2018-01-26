@@ -1,4 +1,4 @@
-uuid: 2064036b-3e3a-4aad-b10a-05a12b02ecde
+uuid: ff8ceb65-9f0e-443a-8d0a-5738feca3756
 langcode: en
 status: true
 dependencies:
@@ -8,20 +8,20 @@ dependencies:
     - menu_block
   theme:
     - durhamtech
-id: secondary_menu
+id: secondary_mobile_menu
 theme: durhamtech
-region: secondary_nav
-weight: -5
+region: navigation_collapsible
+weight: 0
 provider: null
 plugin: 'menu_block:secondary-menu'
 settings:
   id: 'menu_block:secondary-menu'
-  label: 'Secondary Menu'
+  label: 'Secondary Mobile Menu'
   provider: menu_block
   label_display: '0'
   level: 1
   depth: 0
   expand: 0
   parent: 'secondary-menu:'
-  suggestion: secondary_menu
+  suggestion: secondary_mobile_menu
 visibility: {  }

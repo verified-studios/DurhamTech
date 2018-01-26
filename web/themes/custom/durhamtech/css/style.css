@@ -6173,17 +6173,21 @@ body {
   .menu.main-menu > li:last-of-type > a:after {
     content: ""; } }
 
-.secondary-menu {
+@media screen and (min-width: 768px) {
+  .region-navigation-collapsible .secondary-menu {
+    display: none; } }
+
+#secondary-nav {
   background-color: rgba(0, 0, 0, 0.7); }
   @media screen and (min-width: 768px) {
-    .secondary-menu {
+    #secondary-nav .secondary-menu {
       align-items: center;
       display: flex;
       justify-content: space-around;
       width: 100%; }
-      .secondary-menu > li {
+      #secondary-nav .secondary-menu > li {
         flex-basis: 14%; }
-        .secondary-menu > li a {
+        #secondary-nav .secondary-menu > li a {
           color: #FFFFFF; } }
 
 .navbar-toggle .icon-bar {
