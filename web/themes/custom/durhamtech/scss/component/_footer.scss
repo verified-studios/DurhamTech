@@ -1,0 +1,35 @@
+footer {
+  background-color: $dark-gray;
+}
+
+#block-footerinformationalblock {
+  p {
+    color: $white;
+  }
+
+  @media #{$tablet} {
+    float: left;
+    width: 33%;
+  }
+}
+
+[id^="block-footercolumn"] {
+
+  ul {
+    > li {
+      a {
+        color: $white;
+        padding: 5px 0;
+
+        &:hover {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  @media #{$tablet} {
+    float: left;
+    width: 22%;
+  }
+}

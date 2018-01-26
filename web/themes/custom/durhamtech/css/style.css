@@ -6465,4 +6465,27 @@ p:last-child,
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
 
+footer {
+  background-color: #4c4c4c; }
+
+#block-footerinformationalblock p {
+  color: #FFFFFF; }
+
+@media screen and (min-width: 768px) {
+  #block-footerinformationalblock {
+    float: left;
+    width: 33%; } }
+
+[id^="block-footercolumn"] ul > li a {
+  color: #FFFFFF;
+  padding: 5px 0; }
+  [id^="block-footercolumn"] ul > li a:hover {
+    color: #FFFFFF;
+    text-decoration: underline; }
+
+@media screen and (min-width: 768px) {
+  [id^="block-footercolumn"] {
+    float: left;
+    width: 22%; } }
+
 /*# sourceMappingURL=style.css.map */
