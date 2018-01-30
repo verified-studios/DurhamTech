@@ -1,6 +1,14 @@
 .footer {
   background-color: $dark-gray;
-  padding: 25px 0 0;
+  padding: 0;
+
+  .footer-top {
+    padding: 15px 0;
+
+    .row {
+      margin: 0;
+    }
+  }
 
   .footer-bottom {
     background-color: $black;
@@ -18,26 +26,43 @@
       }
     }
   }
+
+  @media #{$tablet} {
+    .footer-top {
+      padding: 25px 0;
+    }
+  }
 }
 
 #block-footerinformationalblock {
   p {
     color: $white;
+    text-align: center;
   }
 
   @media #{$tablet} {
     float: left;
     width: 33%;
+
+    p {
+      text-align: left;
+    }
   }
 }
 
 [id^="block-footercolumn"] {
 
+  .footer-column-1 {
+    margin-top: 10px;
+  }
+
   ul {
+
     > li {
       a {
         color: $white;
-        padding: 5px 0;
+        padding: 10px 0;
+        text-align: center;
 
         &:hover {
           color: $white;
@@ -47,7 +72,24 @@
     }
   }
   @media #{$tablet} {
+    border-left: 2px solid $white;
     float: left;
+    margin: 6px 0;
     width: 22%;
+
+    .footer-column-1 {
+      margin-top: 0;
+    }
+
+    ul {
+
+      > li {
+        a {
+          padding: 0;
+          padding-left: 10px;
+          text-align: left;
+        }
+      }
+    }
   }
 }
