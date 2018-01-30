@@ -112,6 +112,8 @@ $main-nav-height: 60px;
   }
 
   @media #{$tablet} {
+    margin: 6px 16px;
+
     > li {
       > a {
         padding-left: 5px;
@@ -148,6 +150,8 @@ $main-nav-height: 60px;
   background-color: $transparent-black;
 
   .secondary-menu {
+    display: none;
+
     @media #{$tablet} {
       align-items: center;
       display: flex;
@@ -167,6 +171,8 @@ $main-nav-height: 60px;
 
 // Toggle button
 .navbar-toggle {
+  padding: 14px 10px;
+
   .icon-bar {
     background-color: $black;
   }

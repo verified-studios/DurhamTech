@@ -6184,18 +6184,20 @@ body {
     transition: 2s all ease-in; }
 
 @media screen and (min-width: 768px) {
-  .menu.main-menu > li > a {
-    padding-left: 5px;
-    padding-right: 0px; }
-    .menu.main-menu > li > a:after {
-      content: "|";
-      display: inline-block;
-      margin-left: 5px; }
-    .menu.main-menu > li > a:hover {
-      background: transparent;
-      text-decoration: underline; }
-  .menu.main-menu > li:last-of-type > a:after {
-    content: ""; } }
+  .menu.main-menu {
+    margin: 6px 16px; }
+    .menu.main-menu > li > a {
+      padding-left: 5px;
+      padding-right: 0px; }
+      .menu.main-menu > li > a:after {
+        content: "|";
+        display: inline-block;
+        margin-left: 5px; }
+      .menu.main-menu > li > a:hover {
+        background: transparent;
+        text-decoration: underline; }
+    .menu.main-menu > li:last-of-type > a:after {
+      content: ""; } }
 
 @media screen and (min-width: 768px) {
   .region-navigation-collapsible .secondary-menu {
@@ -6203,19 +6205,23 @@ body {
 
 #secondary-nav {
   background-color: rgba(0, 0, 0, 0.7); }
-  @media screen and (min-width: 768px) {
-    #secondary-nav .secondary-menu {
-      align-items: center;
-      display: flex;
-      justify-content: space-around;
-      width: 100%; }
-      #secondary-nav .secondary-menu > li {
-        flex-basis: 14%; }
-        #secondary-nav .secondary-menu > li a {
-          color: #FFFFFF; } }
+  #secondary-nav .secondary-menu {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      #secondary-nav .secondary-menu {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        width: 100%; }
+        #secondary-nav .secondary-menu > li {
+          flex-basis: 14%; }
+          #secondary-nav .secondary-menu > li a {
+            color: #FFFFFF; } }
 
-.navbar-toggle .icon-bar {
-  background-color: #000000; }
+.navbar-toggle {
+  padding: 14px 10px; }
+  .navbar-toggle .icon-bar {
+    background-color: #000000; }
 
 /**
  * Node styling.
