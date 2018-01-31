@@ -5825,9 +5825,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/*
- * Mixins for reusuable blocks of css.
- */
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px; }
@@ -5853,7 +5850,7 @@ p {
 
 a:hover {
   background-color: transparent;
-  color: #E87722; }
+  color: #B75A13; }
 
 .btn {
   background-color: #19975D;
@@ -5882,6 +5879,39 @@ a:hover {
     .btn-white:hover {
       background-color: #FFFFFF;
       color: #000000; }
+
+/*
+ * Mixins for reusuable blocks of css.
+ */
+.bg-white {
+  background-color: #FFFFFF; }
+
+.bg-black {
+  background-color: #000000; }
+
+.bg-gray {
+  background-color: #262626; }
+
+.bg-dark-gray {
+  background-color: #4c4c4c; }
+
+.bg-dark-orange {
+  background-color: #B75A13; }
+
+.bg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+.bg-green {
+  background-color: #19975D; }
+
+.bg-light-green {
+  background-color: #99C221; }
+
+.bg-orange {
+  background-color: #E87722; }
+
+.bg-brand-gray {
+  background-color: #808990; }
 
 /**
  * Alert styling.

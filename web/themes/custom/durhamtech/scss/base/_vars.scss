@@ -3,20 +3,34 @@ $white: #FFFFFF;
 $black: #000000;
 $gray: #262626;
 $dark-gray: #4c4c4c;
-$orange: #B75A13;
+$dark-orange: #B75A13;
 $transparent-black: rgba(0,0,0,0.7);
 
 // Brand Colors
 $green: #19975D;
 $light-green: #99C221;
-$orange: #E87722;
-$gray: #808990;
+$brand-orange: #E87722;
+$brand-gray: #808990;
+
+// Colors array
+$colors: (
+  'white': $white,
+  'black': $black,
+  'gray': $gray,
+  'dark-gray': $dark-gray,
+  'dark-orange': $dark-orange,
+  'transparent-black': $transparent-black,
+  'green': $green,
+  'light-green': $light-green,
+  'orange': $brand-orange,
+  'brand-gray': $brand-gray,
+);
 
 // Typography
-$header-gray: $gray;
+$header-gray: $brand-gray;
 $body-gray: $dark-gray;
 
 $helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $open-sans: 'Open Sans', sans-serif;
 
-$hover-color: $orange;
+$hover-color: $dark-orange;
