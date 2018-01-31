@@ -164,6 +164,14 @@ $main-nav-height: 60px;
         a {
           color: $white;
         }
+
+        &:first-of-type a {
+          padding-left: 0;
+        }
+
+        &:last-of-type a {
+          padding-right: 0;
+        }
       }
     }
   }

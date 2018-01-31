@@ -6216,7 +6216,11 @@ body {
         #secondary-nav .secondary-menu > li {
           flex-basis: 14%; }
           #secondary-nav .secondary-menu > li a {
-            color: #FFFFFF; } }
+            color: #FFFFFF; }
+          #secondary-nav .secondary-menu > li:first-of-type a {
+            padding-left: 0; }
+          #secondary-nav .secondary-menu > li:last-of-type a {
+            padding-right: 0; } }
 
 .navbar-toggle {
   padding: 14px 10px; }
@@ -6494,6 +6498,9 @@ p:last-child,
   padding: 0; }
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
+
+.navbar.container {
+  max-width: none; }
 
 .footer {
   background-color: #4c4c4c;
