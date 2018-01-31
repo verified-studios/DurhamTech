@@ -16,3 +16,7 @@ $browser-context: 16; // Default
 @function rem($pixels, $context: $browser-context) {
   @return #{$pixels/0.1}rem;
 }
+
+@mixin border-radius($radius: 4px) {
+  border-radius: $radius;
+}
