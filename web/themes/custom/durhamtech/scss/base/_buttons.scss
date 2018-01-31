@@ -3,21 +3,20 @@
   border-color: $green;
   color: $white;
 
+  &:hover {
+    background-color: $green;
+  }
 
   &-outline {
     background-color: transparent;
-    border-color: $green;
+    border-color: $black;
     border-width: 2px;
-    color: $gray;
+    color: $black;
 
     &:hover {
-      background-color: inherit;
+      background-color: $black;
       color: $white;
     }
-  }
-
-  &:hover {
-    background-color: $green;
   }
 
   &-large {
@@ -27,5 +26,17 @@
   &-full {
     display: block;
     width: 100%;
+  }
+
+  &-white {
+    background-color: transparent;
+    border-color: $white;
+    border-width: 2px;
+    color: $white;
+
+    &:hover {
+      background-color: $white;
+      color: $black;
+    }
   }
 }

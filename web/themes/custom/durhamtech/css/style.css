@@ -5859,21 +5859,29 @@ a:hover {
   background-color: #19975D;
   border-color: #19975D;
   color: #FFFFFF; }
-  .btn-outline {
-    background-color: transparent;
-    border-color: #19975D;
-    border-width: 2px;
-    color: #808990; }
-    .btn-outline:hover {
-      background-color: inherit;
-      color: #FFFFFF; }
   .btn:hover {
     background-color: #19975D; }
+  .btn-outline {
+    background-color: transparent;
+    border-color: #000000;
+    border-width: 2px;
+    color: #000000; }
+    .btn-outline:hover {
+      background-color: #000000;
+      color: #FFFFFF; }
   .btn-large {
     padding: 10px 20px; }
   .btn-full {
     display: block;
     width: 100%; }
+  .btn-white {
+    background-color: transparent;
+    border-color: #FFFFFF;
+    border-width: 2px;
+    color: #FFFFFF; }
+    .btn-white:hover {
+      background-color: #FFFFFF;
+      color: #000000; }
 
 /**
  * Alert styling.
