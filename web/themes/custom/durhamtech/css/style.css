@@ -6505,19 +6505,29 @@ p:last-child,
   .footer .footer-bottom {
     background-color: #000000;
     padding: 15px 0; }
+    .footer .footer-bottom-menu {
+      padding: 0; }
     .footer .footer-bottom ul {
-      list-style-type: none; }
+      list-style-type: none;
+      padding-left: 0; }
       .footer .footer-bottom ul > li {
-        float: left; }
+        text-align: center; }
         .footer .footer-bottom ul > li a {
           color: #FFFFFF;
+          font-size: 0.875em;
           padding: 5px 10px; }
   @media screen and (min-width: 768px) {
     .footer .footer-top {
-      padding: 25px 0; } }
+      padding: 25px 0; }
+    .footer .footer-bottom ul > li {
+      float: left;
+      text-align: left; }
+      .footer .footer-bottom ul > li:first-of-type a {
+        padding-left: 0; } }
 
 #block-footerinformationalblock p {
   color: #FFFFFF;
+  font-size: 0.875em;
   text-align: center; }
 
 @media screen and (min-width: 768px) {

@@ -14,13 +14,20 @@
     background-color: $black;
     padding: 15px 0;
 
+    &-menu {
+      padding: 0;
+    }
+
     ul {
       list-style-type: none;
+      padding-left: 0;
+
       > li {
-        float: left;
+        text-align: center;
 
         a {
           color: $white;
+          font-size: em(14);
           padding: 5px 10px;
         }
       }
@@ -31,12 +38,29 @@
     .footer-top {
       padding: 25px 0;
     }
+
+    .footer-bottom {
+      ul {
+
+        > li {
+          float: left;
+          text-align: left;
+
+          &:first-of-type {
+            a {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 #block-footerinformationalblock {
   p {
     color: $white;
+    font-size: em(14);
     text-align: center;
   }
 
