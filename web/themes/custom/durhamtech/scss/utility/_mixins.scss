@@ -6,3 +6,13 @@
 @mixin transition($time: 2s, $prop: all, $timing: ease-in) {
   transition: $time $prop $timing;
 }
+
+// Usage: "font-size: em(16)" will convert to "font-size: 1em"
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+// Usage: "font-size: rem(16)" will convert to "font-size: 1.6rem"
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/0.1}rem;
+}
