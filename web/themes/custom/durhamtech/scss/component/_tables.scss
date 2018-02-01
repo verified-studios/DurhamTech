@@ -1,0 +1,22 @@
+table {
+  width: 100%;
+
+  th, td {
+    border-left: 1px solid $white;
+    padding: 5px;
+
+    &:first-of-type {
+      border: none;
+    }
+  }
+
+  th {
+    background-color: $green;
+  }
+
+  tr {
+    &:nth-of-type(2n) {
+      background-color: $brand-gray;
+    }
+  }
+}

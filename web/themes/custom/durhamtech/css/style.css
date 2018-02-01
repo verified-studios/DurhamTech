@@ -6826,4 +6826,16 @@ p:last-child,
       padding-left: 10px;
       text-align: left; } }
 
+table {
+  width: 100%; }
+  table th, table td {
+    border-left: 1px solid #FFFFFF;
+    padding: 5px; }
+    table th:first-of-type, table td:first-of-type {
+      border: none; }
+  table th {
+    background-color: #19975D; }
+  table tr:nth-of-type(2n) {
+    background-color: #808990; }
+
 /*# sourceMappingURL=style.css.map */
