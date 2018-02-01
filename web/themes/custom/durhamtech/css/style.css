@@ -5886,32 +5886,62 @@ a:hover {
 .bg-white {
   background-color: #FFFFFF; }
 
+.white {
+  color: #FFFFFF; }
+
 .bg-black {
   background-color: #000000; }
+
+.black {
+  color: #000000; }
 
 .bg-gray {
   background-color: #262626; }
 
+.gray {
+  color: #262626; }
+
 .bg-dark-gray {
   background-color: #4c4c4c; }
+
+.dark-gray {
+  color: #4c4c4c; }
 
 .bg-dark-orange {
   background-color: #B75A13; }
 
+.dark-orange {
+  color: #B75A13; }
+
 .bg-transparent-black {
   background-color: rgba(0, 0, 0, 0.7); }
+
+.transparent-black {
+  color: rgba(0, 0, 0, 0.7); }
 
 .bg-green {
   background-color: #19975D; }
 
+.green {
+  color: #19975D; }
+
 .bg-light-green {
   background-color: #99C221; }
+
+.light-green {
+  color: #99C221; }
 
 .bg-orange {
   background-color: #E87722; }
 
+.orange {
+  color: #E87722; }
+
 .bg-brand-gray {
   background-color: #808990; }
+
+.brand-gray {
+  color: #808990; }
 
 .margin-5 {
   margin: 5px; }
