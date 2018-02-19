@@ -18,6 +18,7 @@ module:
   ctools_block: 0
   datetime: 0
   dblog: 0
+  durhamtech_colleague_migrate: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -40,6 +41,10 @@ module:
   media_entity_image: 0
   menu_block: 0
   menu_ui: 0
+  migrate: 0
+  migrate_plus: 0
+  migrate_source_csv: 0
+  migrate_tools: 0
   node: 0
   options: 0
   page_cache: 0

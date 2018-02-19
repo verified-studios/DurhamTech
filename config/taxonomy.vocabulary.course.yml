@@ -1,0 +1,9 @@
+uuid: 36079bf7-f8f8-416e-ae89-e216740943fe
+langcode: en
+status: true
+dependencies: {  }
+name: Course
+vid: course
+description: 'Taxonomy used to create individual course pages'
+hierarchy: 0
+weight: 0

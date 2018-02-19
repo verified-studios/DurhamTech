@@ -1,0 +1,15 @@
+uuid: 32b7c30b-a5d7-4169-912b-1524ff6a7c52
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: Tx7vPMaWH_gyFqh_M2Oa_F4Lf4dR0kaZH7OngEq2QLM
+id: durhamtech_colleague_migrate
+label: 'Colleague Migration'
+description: 'Migrates data from colleague into Drupal'
+source_type: 'CSV files'
+module: null
+shared_configuration: null

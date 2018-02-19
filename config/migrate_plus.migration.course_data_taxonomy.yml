@@ -1,0 +1,38 @@
+uuid: a9d5d281-bc64-4230-97e4-3f1638dc2267
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: zxnGD4tMKW6ZJElsiJRWLTLkgCewVXq0rZP-yAi6hT4
+id: course_data_taxonomy
+migration_tags:
+  - courses
+  - taxonomy
+migration_group: durhamtech_colleague_migrate
+label: 'Course program data for taxonomy terms'
+source:
+  plugin: csv
+  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  header_row_count: 1
+  keys:
+    - Name
+  fields:
+    Name: 'Unique identifier for the course as in the data source.'
+    Title: 'Name of the course.'
+    Type: 'Type of course.'
+    Description: 'Description of the course.'
+    Division: 'Broad category of the course.'
+    Department: 'Specific category of the course.'
+    Credits: 'How many credits the course is worth.'
+    'Delivery Method': 'How the course will be presented.'
+process:
+  name: Name
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: course
+migration_dependencies:
+  optional: {  }
+  required: {  }

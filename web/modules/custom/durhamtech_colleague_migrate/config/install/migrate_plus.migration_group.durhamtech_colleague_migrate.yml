@@ -1,0 +1,11 @@
+id: durhamtech_colleague_migrate
+label: Colleague Migration
+description: Migrates data from colleague into Drupal
+source_type: CSV files
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+migrate_dependencies:
+  optional: {}
+  required: {}
