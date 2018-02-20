@@ -1,0 +1,21 @@
+uuid: 0b269595-9003-4f77-96ec-cdc51eeaafb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_days
+    - node.type.class
+  module:
+    - options
+id: node.class.field_meeting_days
+field_name: field_meeting_days
+entity_type: node
+bundle: class
+label: 'Meeting Days'
+description: 'The day(s) the class meets on'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

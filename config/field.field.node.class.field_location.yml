@@ -1,0 +1,21 @@
+uuid: 55e36279-121f-4335-844f-f49e930de16b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.class
+  module:
+    - options
+id: node.class.field_location
+field_name: field_location
+entity_type: node
+bundle: class
+label: Location
+description: 'The location of the class'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

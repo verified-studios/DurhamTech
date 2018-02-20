@@ -1,0 +1,21 @@
+uuid: cfe6f415-3e8a-4506-9a5a-b429dbccfd3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_end_time
+    - node.type.class
+  module:
+    - datetime
+id: node.class.field_end_time
+field_name: field_end_time
+entity_type: node
+bundle: class
+label: 'End Time'
+description: 'End time for the class.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

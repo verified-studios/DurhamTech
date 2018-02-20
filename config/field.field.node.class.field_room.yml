@@ -1,0 +1,19 @@
+uuid: ba224227-7588-4e0a-812f-ce9723f210c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room
+    - node.type.class
+id: node.class.field_room
+field_name: field_room
+entity_type: node
+bundle: class
+label: Room
+description: 'Room number of the class'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
