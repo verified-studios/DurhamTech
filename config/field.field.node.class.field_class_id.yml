@@ -1,0 +1,19 @@
+uuid: e69d01f8-ff35-478c-b79e-35593fa81c85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_id
+    - node.type.class
+id: node.class.field_class_id
+field_name: field_class_id
+entity_type: node
+bundle: class
+label: 'Class Id'
+description: 'Unique ID for the class'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

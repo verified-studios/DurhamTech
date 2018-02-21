@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.node.class.field_building
+    - field.field.node.class.field_class_id
     - field.field.node.class.field_course
+    - field.field.node.class.field_delivery_method
     - field.field.node.class.field_end_date
     - field.field.node.class.field_end_time
     - field.field.node.class.field_location
@@ -35,8 +37,25 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_class_id:
+    weight: 130
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_course:
     weight: 121
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_delivery_method:
+    weight: 131
     settings:
       match_operator: CONTAINS
       size: 60
