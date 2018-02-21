@@ -1,17 +1,18 @@
-uuid: b0238913-f90d-45b1-aa51-fbe4a45e53ac
+uuid: d3d3237e-211b-439c-b1f5-8bffd70af5a6
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - node
 id: node.field_start_time
 field_name: field_start_time
 entity_type: node
-type: datetime
+type: string
 settings:
-  datetime_type: datetime
-module: datetime
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

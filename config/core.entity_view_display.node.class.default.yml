@@ -66,13 +66,12 @@ content:
     type: datetime_default
     region: content
   field_end_time:
-    weight: 105
+    weight: 113
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: datetime_default
+    type: string
     region: content
   field_location:
     weight: 107
@@ -109,10 +108,9 @@ content:
     weight: 112
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
+      link_to_entity: false
     third_party_settings: {  }
-    type: datetime_default
+    type: string
     region: content
   links:
     weight: 100

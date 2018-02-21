@@ -1,12 +1,10 @@
-uuid: c498ced8-f030-49e8-8396-82953c74d423
+uuid: 4f374450-195b-441a-b48d-dd0e04705700
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_start_time
     - node.type.class
-  module:
-    - datetime
 id: node.class.field_start_time
 field_name: field_start_time
 entity_type: node
@@ -18,4 +16,4 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: string
