@@ -1,18 +1,18 @@
-uuid: 9df6b19b-4be3-4be4-87f5-cb3dd7334247
+uuid: c498ced8-f030-49e8-8396-82953c74d423
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_start
+    - field.storage.node.field_start_time
     - node.type.class
   module:
     - datetime
-id: node.class.field_start
-field_name: field_start
+id: node.class.field_start_time
+field_name: field_start_time
 entity_type: node
 bundle: class
 label: 'Start Time'
-description: 'Start time of the class'
+description: 'Starting time of the class'
 required: false
 translatable: false
 default_value: {  }

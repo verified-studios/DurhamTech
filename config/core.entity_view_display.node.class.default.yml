@@ -12,8 +12,8 @@ dependencies:
     - field.field.node.class.field_location
     - field.field.node.class.field_meeting_days
     - field.field.node.class.field_room
-    - field.field.node.class.field_start
     - field.field.node.class.field_start_date
+    - field.field.node.class.field_start_time
     - node.type.class
   module:
     - datetime
@@ -96,8 +96,8 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_start:
-    weight: 104
+  field_start_date:
+    weight: 102
     label: above
     settings:
       format_type: medium
@@ -105,8 +105,8 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
-  field_start_date:
-    weight: 102
+  field_start_time:
+    weight: 112
     label: above
     settings:
       format_type: medium
