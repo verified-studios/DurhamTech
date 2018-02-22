@@ -1,0 +1,128 @@
+id: class_data_node
+label: Individual class data for nodes.
+migration_group: durhamtech_colleague_migrate
+migration_tags:
+  - classes
+  - nodes
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+source:
+  plugin: csv
+  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  header_row_count: 1
+  keys:
+    - Id
+  fields:
+    Id: Id of the class offering.
+    Name: Name of the class.
+    Title: Title of class.
+    Type: Type of class.
+    Delivery Method: How the course will be presented.
+    Meeting Days: Days of the week the class meets.
+    Start Date: Starting date of the class.
+    End Date: Ending date of the class.
+    Start Time: Starting time of the class.
+    End Time: Ending time of the class.
+    Location: General location of the class.
+    Building: Distinct building class is located in.
+    Room: Room number where the class is located in.
+  constants:
+    bool_0: 0
+    bool_1: 1
+    uid_root: 1
+migration_dependencies:
+  optional: {}
+  required: {}
+destination:
+  plugin: 'entity:node'
+  default_bundle: class
+process:
+  title:
+    plugin: concat
+    source:
+      - Title
+      - Name
+      - Id
+    delimiter: -
+  promote: constants/bool_0
+  uid: constants/uid_root
+  field_class_id: Id
+  field_course:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: course
+    value_key: name
+    source: Name
+  field_delivery_method:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: class_format
+    value_key: name
+    source: Delivery Method
+  field_start_date:
+    plugin: format_date
+    from_format: Y-m-d
+    to_format: Y-m-d
+    source: Start Date
+  field_end_date:
+    plugin: format_date
+    from_format: Y-m-d
+    to_format: Y-m-d
+    source: End Date
+  field_start_time: Start Time
+  field_end_time: End Time
+  field_building: 
+    plugin: static_map
+    source: Building
+    map:
+      MC01: White (Building 1)
+      MC02: Collins (Building 2)
+      MC03: Phillips (Building 3)
+      MC04: Newton (Building 4)
+      MC05: ERC (Building 5)
+      MC06: CEC (Building 6)
+      MC07: Facility Services (Building 7)
+      MC08: Building 8 
+      MC10: Wynn (Building 10)
+      MC20: Bacon (Building 20)
+      OC01: OCC
+      ND01: NDC
+      OL: Online
+      CLIN: Clinical
+  field_location:
+    -
+      plugin: callback
+      callable: strtolower
+      source: Location
+    -
+      plugin: static_map
+      bypass: TRUE
+      map:
+        mc: main_campus
+        int: internet
+  field_room:
+    plugin: explode
+    source: Room
+    delimiter: \n
+  field_meeting_days:
+    -
+      plugin: callback
+      callable: strtolower
+      source: Meeting Days
+    -
+      plugin: static_map
+      map:
+        m: monday
+        t: tuesday
+        w: wednesday
+        th: thursday
+        f: friday
+        s: saturday
+        su: sunday
+
+
+
