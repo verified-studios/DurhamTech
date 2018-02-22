@@ -1,8 +1,9 @@
-uuid: b4d39ae9-8982-4509-bf27-e833c62df4fa
+uuid: ba62eaf3-8397-46bd-8148-94e99ab8298c
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.course.field_class_format
     - field.field.taxonomy_term.course.field_credits
     - field.field.taxonomy_term.course.field_department
@@ -19,10 +20,10 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-id: taxonomy_term.course.default
+id: taxonomy_term.course.full
 targetEntityType: taxonomy_term
 bundle: course
-mode: default
+mode: full
 content:
   description:
     label: hidden
