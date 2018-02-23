@@ -6492,7 +6492,9 @@ body {
     display: none; } }
 
 #secondary-nav {
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%; }
   #secondary-nav .secondary-menu {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -6867,5 +6869,57 @@ table {
     background-color: #19975D; }
   table tr:nth-of-type(2n) {
     background-color: #808990; }
+
+.secondary-page-header {
+  position: relative; }
+  .secondary-page-header .banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    padding-top: 70px; }
+
+#block-get-started {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 30px 40px;
+  position: absolute;
+  right: 0; }
+  #block-get-started .title {
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 5.625em;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    width: 25%;
+    vertical-align: middle; }
+    #block-get-started .title .small {
+      display: block;
+      font-size: 4rem; }
+  #block-get-started .options {
+    display: inline-block;
+    width: 53%;
+    vertical-align: middle; }
+    #block-get-started .options .get-started-select {
+      font-size: 1.25em;
+      height: 30px;
+      margin-bottom: 10px;
+      width: 100%; }
+      #block-get-started .options .get-started-select:last-of-type {
+        margin-bottom: 0; }
+  #block-get-started .actions {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+    vertical-align: middle; }
+    #block-get-started .actions a.btn-lg, #block-get-started .actions .btn-group-lg > a.btn {
+      font-size: 2.5rem; }
+    #block-get-started .actions a:not(.btn) {
+      display: block;
+      margin-top: 30px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,61 @@
+#block-get-started {
+  background-color: $transparent-black;
+  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 30px 40px;
+  position: absolute;
+  right: 0;
+
+  .title {
+    color: $white;
+    display: inline-block;
+    font-size: em(90);
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    width: 25%;
+    vertical-align: middle;
+
+    .small {
+      display: block;
+      font-size: rem(40);
+    }
+  }
+
+  .options {
+    display: inline-block;
+    width: 53%;
+    vertical-align: middle;
+
+    .get-started-select {
+      font-size: em(20);
+      height: 30px;
+      margin-bottom: 10px;
+      width: 100%;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .actions {
+    display: inline-block;
+    text-align: right;
+    width: 20%;
+    vertical-align: middle;
+
+    a.btn-lg {
+      font-size: rem(25);
+    }
+
+    a:not(.btn) {
+      display: block;
+      margin-top: 30px;
+    }
+  }
+
+}

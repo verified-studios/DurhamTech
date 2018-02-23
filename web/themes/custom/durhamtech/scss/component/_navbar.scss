@@ -148,6 +148,8 @@ $main-nav-height: 60px;
 
 #secondary-nav {
   background-color: $transparent-black;
+  position: absolute;
+  width: 100%;
 
   .secondary-menu {
     display: none;
