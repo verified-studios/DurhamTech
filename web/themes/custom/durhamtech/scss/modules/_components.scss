@@ -59,3 +59,43 @@
   }
 
 }
+
+$banner-menu-orange: #ff9000;
+$banner-menu-orange-hover: #f27604;
+#block-banner-menu {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+
+  .menu {
+
+    > li > a {
+      @include transition();
+      background-color: $banner-menu-orange;
+      border-radius: 5px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      color: $black;
+      margin-bottom: 10px;
+      max-width: 160px;
+      overflow: hidden;
+      padding: 7px 30px 7px 7px;
+
+      &:before {
+        content: "";
+        float: left;
+        min-height: 50px;
+        min-width: 50px;
+        vertical-align: middle;
+      }
+
+      &:hover {
+        @include transition();
+        background-color: $banner-menu-orange-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 17720be7-8520-4077-afa3-112ab5e629d5
+langcode: en
+status: true
+dependencies: {  }
+id: banner-menu
+label: 'Banner Menu'
+description: 'Menu with links for apply, chat, info request, and fin aid.'
+locked: false

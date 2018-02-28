@@ -92,8 +92,8 @@
     </header>
   {% endblock %}
 {% endif %}
-{{ kint(page|keys) }}
-{{ kint(page['#process']) }}
+{#{ kint(page|keys) }#}
+{#{ kint(page['#process']) }#}
 
 {# Secondary Menu - Full Width #}
 {% if page.secondary_nav %}
@@ -108,12 +108,7 @@
       </div>
     {% endblock %}
     <div class="banner" style="background-image: url('{{ file_url(banner_img) }}')">
-      {% if page.secondary_nav.breadcrumbs %}
-        {{ page.secondary_nav.breadcrumbs }}
-      {% endif %}
-      {% if page.secondary_nav.get_started %}
-        {{ page.secondary_nav.get_started }}
-      {% endif %}
+      {{ page.secondary_nav|without('secondary_menu') }}
     </div>
   </div>
 {% endif %}

@@ -6466,10 +6466,10 @@ body {
     width: 283px; } }
 
 .menu.main-menu > li > a {
-  transition: 2s all ease-in;
+  transition: 0.2s all ease-in;
   color: #000000; }
   .menu.main-menu > li > a:hover {
-    transition: 2s all ease-in; }
+    transition: 0.2s all ease-in; }
 
 @media screen and (min-width: 768px) {
   .menu.main-menu {
@@ -6921,5 +6921,32 @@ table {
     #block-get-started .actions a:not(.btn) {
       display: block;
       margin-top: 30px; }
+
+#block-banner-menu {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); }
+  #block-banner-menu .menu > li > a {
+    transition: 0.2s all ease-in;
+    background-color: #ff9000;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #000000;
+    margin-bottom: 10px;
+    max-width: 160px;
+    overflow: hidden;
+    padding: 7px 30px 7px 7px; }
+    #block-banner-menu .menu > li > a:before {
+      content: "";
+      float: left;
+      min-height: 50px;
+      min-width: 50px;
+      vertical-align: middle; }
+    #block-banner-menu .menu > li > a:hover {
+      transition: 0.2s all ease-in;
+      background-color: #f27604; }
 
 /*# sourceMappingURL=style.css.map */
