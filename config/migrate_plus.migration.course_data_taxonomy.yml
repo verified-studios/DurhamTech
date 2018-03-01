@@ -1,0 +1,69 @@
+uuid: be683006-fbbe-4d41-9e07-6dff2f65a0b2
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: LjNn_d9TLCmvP8AT57Tp6rpWqQvyqQggZjeNTzwm3H4
+id: course_data_taxonomy
+migration_tags:
+  - courses
+  - taxonomy
+migration_group: durhamtech_colleague_migrate
+label: 'Course program data for taxonomy terms'
+source:
+  plugin: csv
+  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  header_row_count: 1
+  keys:
+    - Name
+  fields:
+    Name: 'Unique identifier for the course as in the data source.'
+    Title: 'Name of the course.'
+    Type: 'Type of course.'
+    Description: 'Description of the course.'
+    Division: 'Broad category of the course.'
+    Department: 'Specific category of the course.'
+    Credits: 'How many credits the course is worth.'
+    'Delivery Method': 'How the course will be presented.'
+process:
+  name: Name
+  field_title: Title
+  field_description: Description
+  field_credits: Credits
+  field_class_format:
+    -
+      plugin: static_map
+      source: 'Delivery Method'
+      map:
+        HY: Hybrid
+        TR: 'In Class'
+        IN: Online
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: class_format
+      value_key: name
+  field_department:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: Department
+    value_key: name
+    source: Department
+  field_division:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: Department
+    value_key: name
+    source: Division
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: course
+migration_dependencies:
+  optional: {  }
+  required: {  }

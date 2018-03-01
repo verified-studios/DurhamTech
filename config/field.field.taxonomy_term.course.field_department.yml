@@ -1,0 +1,29 @@
+uuid: 2350485c-2ee5-4e09-8e8e-bed9750fb60d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_department
+    - taxonomy.vocabulary.course
+    - taxonomy.vocabulary.department
+id: taxonomy_term.course.field_department
+field_name: field_department
+entity_type: taxonomy_term
+bundle: course
+label: Department
+description: 'Department category for the course'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      department: department
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

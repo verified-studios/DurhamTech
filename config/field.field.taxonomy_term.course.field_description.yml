@@ -1,0 +1,19 @@
+uuid: 8663b412-6163-4885-8cfb-3f32871ef23c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description
+    - taxonomy.vocabulary.course
+id: taxonomy_term.course.field_description
+field_name: field_description
+entity_type: taxonomy_term
+bundle: course
+label: Description
+description: 'Full description of the course'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

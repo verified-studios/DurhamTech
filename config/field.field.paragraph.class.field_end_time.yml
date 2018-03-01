@@ -1,0 +1,19 @@
+uuid: 20ca6a27-82b6-42bc-ba77-6ac1e88c6050
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_end_time
+    - paragraphs.paragraphs_type.class
+id: paragraph.class.field_end_time
+field_name: field_end_time
+entity_type: paragraph
+bundle: class
+label: 'End Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,82 @@
+uuid: ba62eaf3-8397-46bd-8148-94e99ab8298c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.course.field_class_format
+    - field.field.taxonomy_term.course.field_credits
+    - field.field.taxonomy_term.course.field_department
+    - field.field.taxonomy_term.course.field_description
+    - field.field.taxonomy_term.course.field_division
+    - field.field.taxonomy_term.course.field_title
+    - taxonomy.vocabulary.course
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.course.full
+targetEntityType: taxonomy_term
+bundle: course
+mode: full
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_class_format:
+    weight: 6
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_credits:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_department:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_division:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

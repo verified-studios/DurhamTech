@@ -1,0 +1,36 @@
+.program {
+
+  .program-header {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .field--name-field-program-image {
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(100% - 10px);
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+
+.program-stats-wrapper {
+  background-color: $transparent-black;
+  padding: 60px 0;
+
+  .section-title {
+    color: $white;
+    text-align: center;
+  }
+
+  .stat-title {
+    color: $white;
+  }
+
+  .field {
+    color: $white;
+  }
+}

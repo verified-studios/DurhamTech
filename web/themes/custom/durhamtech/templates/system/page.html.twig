@@ -92,18 +92,25 @@
     </header>
   {% endblock %}
 {% endif %}
+{#{ kint(page|keys) }#}
+{#{ kint(page['#process']) }#}
 
 {# Secondary Menu - Full Width #}
 {% if page.secondary_nav %}
-  {% block secondary_nav %}
-    <div class="secondary-nav" id="secondary-nav" role="secondary-nav">
-      <div class="{{ container }}">
-        <div class="row">
-          {{ page.secondary_nav }}
+  <div class="secondary-page-header">
+    {% block secondary_nav %}
+      <div class="secondary-nav" id="secondary-nav" role="secondary-nav">
+        <div class="{{ container }}">
+          <div class="row">
+            {{ page.secondary_nav.secondary_menu }}
+          </div>
         </div>
       </div>
+    {% endblock %}
+    <div class="banner" style="background-image: url('{{ file_url(banner_img) }}')">
+      {{ page.secondary_nav|without('secondary_menu') }}
     </div>
-  {% endblock %}
+  </div>
 {% endif %}
 
 {# Main #}
