@@ -1,0 +1,42 @@
+uuid: 1d011991-78af-4ee4-9aab-a3a473097e74
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_meeting_days
+field_name: field_meeting_days
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: M
+      label: Monday
+    -
+      value: T
+      label: Tuesday
+    -
+      value: W
+      label: Wednesday
+    -
+      value: TH
+      label: Thursday
+    -
+      value: F
+      label: Friday
+    -
+      value: S
+      label: Saturday
+    -
+      value: SU
+      label: Sunday
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

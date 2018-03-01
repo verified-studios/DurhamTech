@@ -1,0 +1,46 @@
+uuid: 84d4646b-f3e1-4888-ace1-902a9826d7f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_class_item
+    - node.type.class
+    - paragraphs.paragraphs_type.class
+  module:
+    - entity_reference_revisions
+id: node.class.field_class_item
+field_name: field_class_item
+entity_type: node
+bundle: class
+label: 'Class item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      class: class
+    target_bundles_drag_drop:
+      body:
+        weight: 7
+        enabled: false
+      class:
+        enabled: true
+        weight: 8
+      header:
+        weight: 9
+        enabled: false
+      image_and_text:
+        weight: 10
+        enabled: false
+      link:
+        weight: 11
+        enabled: false
+      quote:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

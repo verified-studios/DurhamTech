@@ -14,6 +14,15 @@ settings:
     -
       value: main_campus
       label: 'Main Campus'
+    -
+      value: internet
+      label: Internet
+    -
+      value: occ
+      label: OCC
+    -
+      value: ndc
+      label: NDC
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,0 +1,21 @@
+uuid: 55f8e287-bf94-4938-9462-eaa1008c4317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_meeting_days
+    - paragraphs.paragraphs_type.class
+  module:
+    - options
+id: paragraph.class.field_meeting_days
+field_name: field_meeting_days
+entity_type: paragraph
+bundle: class
+label: 'Meeting Days'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

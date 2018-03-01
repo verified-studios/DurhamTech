@@ -1,4 +1,4 @@
-uuid: a0455b55-6591-4ecd-81a8-75582d325795
+uuid: b2efc426-aefc-448b-b2fa-32a7e83fefcf
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: wRKVQLvoEml9juMzJotCoyeTCQitthogaCheCfLAwhY
+  default_config_hash: R7IQH6rEUlMVSMH1NiHgVnpwyEv_QQRnLoWlAVMmI_Q
 id: class_data_node
 migration_tags:
   - classes
@@ -25,6 +25,7 @@ source:
     Title: 'Title of class.'
     Type: 'Type of class.'
     'Delivery Method': 'How the course will be presented.'
+    'Meeting Days': 'Days of the week the class meets.'
     'Start Date': 'Starting date of the class.'
     'End Date': 'Ending date of the class.'
     'Start Time': 'Starting time of the class.'
@@ -71,8 +72,6 @@ process:
     from_format: Y-m-d
     to_format: Y-m-d
     source: 'End Date'
-  field_start_time: 'Start Time'
-  field_end_time: 'End Time'
   field_building:
     plugin: static_map
     source: Building
@@ -92,16 +91,19 @@ process:
       OL: Online
       CLIN: Clinical
   field_location:
-    plugin: static_map
-    source: Location
-    bypass: true
-    map:
-      MC: 'Main Campus'
-      INT: Internet
-  field_room:
-    plugin: explode
-    source: Room
-    delimiter: \n
+    -
+      plugin: callback
+      callable: strtolower
+      source: Location
+    -
+      plugin: static_map
+      bypass: true
+      map:
+        mc: main_campus
+        int: internet
+  class_items:
+    plugin: durhamtech_room_migrate
+    source: Id
 destination:
   plugin: 'entity:node'
   default_bundle: class
