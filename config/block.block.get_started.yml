@@ -1,0 +1,25 @@
+uuid: 40bd17dd-15e1-4545-8b88-9a235c7aac06
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c61c846b-b51f-44cd-bdd2-b0120d69111d'
+  module:
+    - block_content
+  theme:
+    - durhamtech
+id: get_started
+theme: durhamtech
+region: secondary_nav
+weight: 0
+provider: null
+plugin: 'block_content:c61c846b-b51f-44cd-bdd2-b0120d69111d'
+settings:
+  id: 'block_content:c61c846b-b51f-44cd-bdd2-b0120d69111d'
+  label: 'Mock Get Started'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

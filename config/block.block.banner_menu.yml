@@ -1,0 +1,27 @@
+uuid: 0067e716-c2e8-4e14-937a-b6cac941f142
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.banner-menu
+  module:
+    - menu_block
+  theme:
+    - durhamtech
+id: banner_menu
+theme: durhamtech
+region: secondary_nav
+weight: 0
+provider: null
+plugin: 'menu_block:banner-menu'
+settings:
+  id: 'menu_block:banner-menu'
+  label: 'Banner Menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'banner-menu:'
+  suggestion: banner_menu
+visibility: {  }
