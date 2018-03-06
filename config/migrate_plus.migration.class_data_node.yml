@@ -1,4 +1,4 @@
-uuid: b2efc426-aefc-448b-b2fa-32a7e83fefcf
+uuid: e7db82d8-a854-4002-ba77-523612550f12
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: R7IQH6rEUlMVSMH1NiHgVnpwyEv_QQRnLoWlAVMmI_Q
+  default_config_hash: vDCbMum7ZXWhknipScLNBL5tF427w9yBrUZgdgt42YQ
 id: class_data_node
 migration_tags:
   - classes
@@ -84,12 +84,14 @@ process:
       MC06: 'CEC (Building 6)'
       MC07: 'Facility Services (Building 7)'
       MC08: 'Building 8'
+      MC09: 'Building 9'
       MC10: 'Wynn (Building 10)'
       MC20: 'Bacon (Building 20)'
       OC01: OCC
       ND01: NDC
       OL: Online
       CLIN: Clinical
+      TBA: TBA
   field_location:
     -
       plugin: callback

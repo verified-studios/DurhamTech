@@ -1,0 +1,57 @@
+uuid: 79e794a3-fa4c-4f7d-bbb8-ada057107a81
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: gl9QxQ4cStL89UlMNhQuFkQmwJTHPXtv_HCWVeiDUN4
+id: program_data_node
+migration_tags:
+  - classes
+  - nodes
+migration_group: durhamtech_colleague_migrate
+label: 'Individual program data for nodes.'
+source:
+  plugin: csv
+  path: 'public://import/program/WebsiteData_ProgramTest.csv'
+  header_row_count: 1
+  keys:
+    - 'Program ID'
+  fields:
+    'Program ID': 'Id of the program.'
+    'Program Title': 'Title of program.'
+    Description: 'Description of program.'
+    'Program Types': 'Type of program.'
+    'Academic Level': 'Academic Level of the program.'
+    'Minimum Required Credits': 'Minimum Required Credits.'
+    'Minimum Required Institutional Credits': 'Minimum Required Institutional Credits.'
+    'Minimum Required Institutional GPA': 'Minimum Required Institutional GPA.'
+    'Course Outline': 'Course Outline.'
+  constants:
+    bool_0: 0
+    uid_root: 1
+process:
+  title: 'Program Title'
+  promote: constants/bool_0
+  uid: constants/uid_root
+  field_description: Description
+  field_program_type:
+    -
+      plugin: durhamtech_program_explode
+      source: 'Program Types'
+    -
+      plugin: durhamtech_program_type
+      process:
+        target_id: '0'
+  field_program_id: 'Program ID'
+  field_min_required_credits: 'Minimum Required Credits'
+  field_min_required_inst: 'Minimum Required Institutional Credits'
+  field_min_required_inst_gpa: 'Minimum Required Institutional GPA'
+destination:
+  plugin: 'entity:node'
+  default_bundle: program
+migration_dependencies:
+  optional: {  }
+  required: {  }

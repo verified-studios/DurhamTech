@@ -10,6 +10,10 @@ dependencies:
     - field.field.node.program.field_description
     - field.field.node.program.field_format
     - field.field.node.program.field_licensure_pass_rate
+    - field.field.node.program.field_min_required_credits
+    - field.field.node.program.field_min_required_inst
+    - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
     - field.field.node.program.field_program_type
     - field.field.node.program.field_total_credit_hours
@@ -75,6 +79,38 @@ content:
     region: content
   field_licensure_pass_rate:
     weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_min_required_credits:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_min_required_inst:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_min_required_inst_gpa:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_program_id:
+    weight: 29
     settings:
       size: 60
       placeholder: ''
