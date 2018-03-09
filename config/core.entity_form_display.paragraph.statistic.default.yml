@@ -12,7 +12,7 @@ bundle: statistic
 mode: default
 content:
   field_data:
-    weight: 0
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -20,7 +20,7 @@ content:
     type: string_textfield
     region: content
   field_header:
-    weight: 1
+    weight: 0
     settings:
       size: 60
       placeholder: ''

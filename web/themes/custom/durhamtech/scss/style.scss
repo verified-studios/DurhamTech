@@ -6,11 +6,11 @@
 
 // Base sass
 @import "base/vars";
+@import "utility/mixins";
 @import "base/typography";
 @import "base/buttons";
 
 // Utilities
-@import "utility/mixins";
 @import "utility/helpers";
 
 // Base-theme overrides.
