@@ -7000,6 +7000,10 @@ table {
   text-align: center; }
   .program-stats-wrapper .paragraph--type--statistic-with-icon {
     padding: 15px 0; }
+  .program-stats-wrapper .field--name-field-icon-image {
+    margin-bottom: 20px; }
+    .program-stats-wrapper .field--name-field-icon-image img {
+      margin: 0 auto; }
   .program-stats-wrapper .section-title {
     color: #FFFFFF;
     text-align: center; }

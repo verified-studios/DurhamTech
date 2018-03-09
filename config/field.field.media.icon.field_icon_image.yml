@@ -1,0 +1,38 @@
+uuid: 374dd9be-91e9-4971-bb59-ac79f977d15d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_icon_image
+    - media_entity.bundle.icon
+  module:
+    - image
+id: media.icon.field_icon_image
+field_name: field_icon_image
+entity_type: media
+bundle: icon
+label: 'Icon Image'
+description: 'Image upload field for icons. Please use a transparent png when uploading icons. Icons should have a square height/width ratio and should only be 70px wide/high.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: icons
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
