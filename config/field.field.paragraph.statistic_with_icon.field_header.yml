@@ -1,0 +1,19 @@
+uuid: 41133350-d287-4658-a972-29f5e14e9dbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.statistic_with_icon
+id: paragraph.statistic_with_icon.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: statistic_with_icon
+label: 'Stat Title'
+description: 'Title for the statistic data.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

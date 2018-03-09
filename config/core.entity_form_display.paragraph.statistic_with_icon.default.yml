@@ -1,0 +1,33 @@
+uuid: e6845bfe-e342-46ab-859f-ef8d4eebcbac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistic_with_icon.field_data
+    - field.field.paragraph.statistic_with_icon.field_header
+    - paragraphs.paragraphs_type.statistic_with_icon
+id: paragraph.statistic_with_icon.default
+targetEntityType: paragraph
+bundle: statistic_with_icon
+mode: default
+content:
+  field_data:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_header:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

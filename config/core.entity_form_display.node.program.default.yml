@@ -3,24 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.program.field_average_completion
-    - field.field.node.program.field_average_cost
-    - field.field.node.program.field_average_salary
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
     - field.field.node.program.field_format
-    - field.field.node.program.field_licensure_pass_rate
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
     - field.field.node.program.field_min_required_inst_gpa
     - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
+    - field.field.node.program.field_statistic
     - field.field.node.program.field_total_credit_hours
     - node.type.program
   module:
     - entity_browser_entity_form
     - inline_entity_form
+    - paragraphs
     - path
 id: node.program.default
 targetEntityType: node
@@ -29,34 +28,10 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_average_completion:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_average_cost:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_average_salary:
-    weight: 8
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_degree_option:
     weight: 3
     settings: {  }
@@ -72,21 +47,13 @@ content:
     type: string_textarea
     region: content
   field_format:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_licensure_pass_rate:
-    weight: 9
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_min_required_credits:
-    weight: 26
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -94,7 +61,7 @@ content:
     type: string_textfield
     region: content
   field_min_required_inst:
-    weight: 27
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -102,15 +69,7 @@ content:
     type: string_textfield
     region: content
   field_min_required_inst_gpa:
-    weight: 28
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_program_id:
-    weight: 29
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -132,14 +91,42 @@ content:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
     region: content
+  field_program_stats:
+    type: paragraphs
+    weight: 13
+    settings:
+      title: 'Statistic with icon'
+      title_plural: 'Statistics with icons'
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: statistic_with_icon
+    third_party_settings: {  }
+    region: content
   field_program_type:
-    weight: 10
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_statistic:
+    type: paragraphs
+    weight: 7
+    settings:
+      title: Statistic
+      title_plural: Statistics
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: statistic
+    third_party_settings: {  }
+    region: content
   field_total_credit_hours:
-    weight: 5
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -148,7 +135,7 @@ content:
     region: content
   path:
     type: path
-    weight: 13
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -169,7 +156,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60
@@ -177,5 +164,6 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_program_id: true
   promote: true
   sticky: true

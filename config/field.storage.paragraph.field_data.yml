@@ -1,12 +1,12 @@
-uuid: 1e3c1685-c149-4064-a8ec-4f36bc2bedba
+uuid: 80439864-f45f-4cc4-a3f8-ed0979983720
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_average_completion
-field_name: field_average_completion
-entity_type: node
+    - paragraphs
+id: paragraph.field_data
+field_name: field_data
+entity_type: paragraph
 type: string
 settings:
   max_length: 255

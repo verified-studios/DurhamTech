@@ -75,6 +75,31 @@
     'clearfix',
   ]
 %}
+
+{% set stats_count = node.field_statistic.getvalue|length %}
+{% set stats_row_class = '' %}
+{% if stats_count == 1 %}
+  {% set stats_row_class = 'col-sm-12' %}
+{% elseif stats_count == 2 %}
+  {% set stats_row_class = 'col-sm-6' %}
+{% elseif stats_count == 3 %}
+  {% set stats_row_class = 'col-sm-4' %}
+{% elseif stats_count == 4 %}
+  {% set stats_row_class = 'col-sm-3' %}
+{% endif %}
+
+{% set program_stats_count = node.field_program_stats.getvalue|length %}
+{% set program_stats_row_class = '' %}
+{% if program_stats_count == 1 %}
+  {% set program_stats_row_class = 'col-sm-12' %}
+{% elseif program_stats_count == 2 %}
+  {% set program_stats_row_class = 'col-sm-6' %}
+{% elseif program_stats_count == 3 %}
+  {% set program_stats_row_class = 'col-sm-4' %}
+{% elseif program_stats_count == 4 %}
+  {% set program_stats_row_class = 'col-sm-3' %}
+{% endif %}
+
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
@@ -84,7 +109,7 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
-{{ kint(content|keys) }}
+{#{ kint(content|keys) }#}
   <div{{ content_attributes.addClass('content') }}>
     {#{ content }#}
     <div{{ content_attributes.addClass('container') }}>
@@ -99,43 +124,41 @@
         <div class="col-sm-6">
           {{ content.field_description }}
           {# application deadline and apply btn here #}
+          <div class="row">
+            <div class="app-deadline green col-sm-6">Next Application Deadline is July 1</div>
+            <div class="apply col-sm-6">
+              <a class="apply-btn btn btn-lg">Apply Now</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        {# graduation stats #}
-      </div>
+      {% if stats_count > 0 %}
+        <div class="row stats-row">
+          {% for key, stat in content.field_statistic if key|first!='#' %}
+            <div class="{{ stats_row_class }}">
+              {{ stat }}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
 
     {# slideshow here #}
 
-    <div class="program-stats-wrapper">
-      <div{{ content_attributes.addClass('container') }}>
-        <h3 class="section-title">Program <span class="green">Stats</span></h3>
-        <div class="row">
-          <div class="col-sm-3">
-            {% if content.field_average_completion %}
-              <h4 class="stat-title">Estimated Completion Time</h4>
-              {{ content.field_average_completion }}
-            {% endif %}
-          </div>
-          <div class="col-sm-3">
-            {# faculty to student ratio here #}
-          </div>
-          <div class="col-sm-3">
-            {% if content.field_average_salary %}
-              <h4 class="stat-title">Average Salary of Certificate Holder</h4>
-              {{ content.field_average_salary }}
-            {% endif %}
-          </div>
-          <div class="col-sm-3">
-            {% if content.field_licensure_pass_rate %}
-              <h4 class="stat-title">Licensure Pass Rate</h4>
-              {{ content.field_licensure_pass_rate }}
-            {% endif %}
+    {% if program_stats_count > 0 %}
+      <div class="program-stats-wrapper">
+        <div{{ content_attributes.addClass('container') }}>
+          <h3 class="section-title">Program <span class="green">Stats</span></h3>
+          <div class="row program-stats-row">
+            {% for key, stat in content.field_program_stats if key|first!='#' %}
+              <div class="{{ program_stats_row_class }}">
+                {{ stat }}
+              </div>
+            {% endfor %}
           </div>
         </div>
       </div>
-    </div>
+    {% endif %}
 
     {# upcoming program events here #}
     {# required classes here #}
