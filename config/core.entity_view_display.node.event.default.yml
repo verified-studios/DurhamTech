@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_description
+    - field.field.node.event.field_event_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_featured
-    - field.field.node.event.field_start_date
     - node.type.event
   module:
     - datetime
@@ -39,6 +39,15 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_event_date:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_event_type:
     weight: 3
     label: hidden
@@ -46,15 +55,6 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_start_date:
-    weight: 2
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   links:
     weight: 0

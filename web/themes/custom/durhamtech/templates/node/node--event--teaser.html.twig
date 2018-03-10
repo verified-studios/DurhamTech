@@ -75,101 +75,28 @@
     'clearfix',
   ]
 %}
-
-{% set stats_count = node.field_statistic.getvalue|length %}
-{% set stats_row_class = '' %}
-{% if stats_count == 1 %}
-  {% set stats_row_class = 'col-sm-12' %}
-{% elseif stats_count == 2 %}
-  {% set stats_row_class = 'col-sm-6' %}
-{% elseif stats_count == 3 %}
-  {% set stats_row_class = 'col-sm-4' %}
-{% elseif stats_count == 4 %}
-  {% set stats_row_class = 'col-sm-3' %}
-{% endif %}
-
-{% set program_stats_count = node.field_program_stats.getvalue|length %}
-{% set program_stats_row_class = '' %}
-{% if program_stats_count == 1 %}
-  {% set program_stats_row_class = 'col-sm-12' %}
-{% elseif program_stats_count == 2 %}
-  {% set program_stats_row_class = 'col-sm-6' %}
-{% elseif program_stats_count == 3 %}
-  {% set program_stats_row_class = 'col-sm-4' %}
-{% elseif program_stats_count == 4 %}
-  {% set program_stats_row_class = 'col-sm-3' %}
-{% endif %}
-
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}>
+    <h3{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
+    </h3>
   {% endif %}
   {{ title_suffix }}
-{#{ kint(content|keys) }#}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes.addClass('author') }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
+      </div>
+    </footer>
+  {% endif %}
+
   <div{{ content_attributes.addClass('content') }}>
-    {#{ content }#}
-    <div{{ content_attributes.addClass('container') }}>
-      <div class="row program-header">
-        <h2 class="page-title">Program <span class="green">Overview</span></h3>
-        <h3 class="program-name">{{ label }}</h3>
-      </div>
-      <div class="row program-info-row">
-        <div class="col-sm-6">
-          {{ content.field_program_image }}
-        </div>
-        <div class="col-sm-6">
-          {{ content.field_description }}
-          {# application deadline and apply btn here #}
-          <div class="row">
-            <div class="app-deadline green col-sm-6">Next Application Deadline is July 1</div>
-            <div class="apply col-sm-6">
-              <a class="apply-btn btn btn-lg">Apply Now</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% if stats_count > 0 %}
-        <div class="row stats-row">
-          {% for key, stat in content.field_statistic if key|first!='#' %}
-            <div class="{{ stats_row_class }}">
-              {{ stat }}
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
-    </div>
-
-    {# slideshow here #}
-
-    {% if program_stats_count > 0 %}
-      <div class="program-stats-wrapper">
-        <div{{ content_attributes.addClass('container') }}>
-          <h3 class="section-title">Program <span class="green">Stats</span></h3>
-          <div class="row program-stats-row">
-            {% for key, stat in content.field_program_stats if key|first!='#' %}
-              <div class="{{ program_stats_row_class }}">
-                {{ stat }}
-              </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    {% endif %}
-
-    {% set upcoming_event = drupal_view('events', 'upcoming_program_events') %}
-    {% if upcoming_event %}
-      <div{{ content_attributes.addClass('container') }}>
-        <h3 class="section-title">Upcoming Program <span class="green">Events</span></h3>
-        <div class="row">
-          {{ upcoming_event }}
-        </div>
-      </div>
-    {% endif %}
-    {# required classes here #}
+    {{ content }}
   </div>
 
 </article>
