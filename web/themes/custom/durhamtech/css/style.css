@@ -5825,9 +5825,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/*
- * Mixins for reusuable blocks of css.
- */
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px; }
@@ -5851,7 +5848,7 @@ h4 {
 
 h4.stat-title {
   color: #000000;
-  font-size: 1.6rem;
+  font-size: rem(16);
   font-weight: 500;
   margin-bottom: 0; }
 
@@ -5863,7 +5860,7 @@ a:hover {
   color: #B75A13; }
 
 .stat .field--name-field-data {
-  font-size: 1.5em;
+  font-size: em(24);
   font-weight: 600; }
 
 .btn {
@@ -5894,6 +5891,9 @@ a:hover {
       background-color: #FFFFFF;
       color: #000000; }
 
+/*
+ * Mixins for reusuable blocks of css.
+ */
 .bg-white {
   background-color: #FFFFFF; }
 
@@ -7000,10 +7000,6 @@ table {
   text-align: center; }
   .program-stats-wrapper .paragraph--type--statistic-with-icon {
     padding: 15px 0; }
-  .program-stats-wrapper .field--name-field-icon-image {
-    margin-bottom: 20px; }
-    .program-stats-wrapper .field--name-field-icon-image img {
-      margin: 0 auto; }
   .program-stats-wrapper .section-title {
     color: #FFFFFF;
     text-align: center; }
