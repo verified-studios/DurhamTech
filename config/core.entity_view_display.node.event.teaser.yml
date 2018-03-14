@@ -4,17 +4,41 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.event.field_associated_program
+    - field.field.node.event.field_description
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_featured
     - node.type.event
   module:
+    - datetime
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.event.teaser
 targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_event_date:
+    type: datetime_default
+    weight: 0
     region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_day
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   field_associated_program: true
