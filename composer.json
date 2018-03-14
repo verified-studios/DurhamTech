@@ -25,6 +25,7 @@
     "drupal/entity_browser": "^1.4",
     "drupal/facets": "^1.0@beta",
     "drupal/fitvids": "^1.0",
+    "drupal/fontawesome": "^2.0",
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/media_entity": "^1.7",
     "drupal/media_entity_image": "^1.2",
