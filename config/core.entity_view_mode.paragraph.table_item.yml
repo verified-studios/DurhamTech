@@ -1,0 +1,10 @@
+uuid: bc76b0ad-b052-4026-bbd4-65d088f0d866
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.table_item
+label: 'Table Item'
+targetEntityType: paragraph
+cache: true

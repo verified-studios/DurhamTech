@@ -21,23 +21,30 @@ dependencies:
     - datetime
     - entity_reference_revisions
     - options
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.class.table_format
 targetEntityType: node
 bundle: class
 mode: table_format
 content:
   field_building:
-    weight: 109
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_class_id:
-    weight: 110
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -45,32 +52,24 @@ content:
     region: content
   field_class_item:
     type: entity_reference_revisions_entity_view
-    weight: 114
-    label: above
+    weight: 6
+    region: content
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    region: content
-  field_course:
-    weight: 101
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_delivery_method:
-    weight: 111
-    label: above
+    weight: 5
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_end_date:
-    weight: 103
-    label: above
+    weight: 1
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
@@ -78,27 +77,26 @@ content:
     type: datetime_default
     region: content
   field_location:
-    weight: 107
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_start_date:
-    weight: 102
-    label: above
+    weight: 0
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
     region: content
-  links:
-    weight: 100
-    region: content
 hidden:
   addtoany: true
+  field_course: true
   field_end_time: true
   field_meeting_days: true
   field_room: true
   field_start_time: true
+  links: true

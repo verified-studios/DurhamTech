@@ -7,6 +7,12 @@ dependencies:
     - node.type.class
   module:
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.class.teaser
 targetEntityType: node
 bundle: class
