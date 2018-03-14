@@ -16,7 +16,11 @@ table {
 
   tr {
     &:nth-of-type(2n) {
-      background-color: $brand-gray;
+      background-color: $light-gray;
     }
+  }
+  // nested table
+  table > tbody > tr:nth-of-type(2n) {
+    background-color: transparent;
   }
 }

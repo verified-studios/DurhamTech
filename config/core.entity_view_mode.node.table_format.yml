@@ -1,0 +1,10 @@
+uuid: 284daaa1-a2c2-47c4-b18a-46f27e424848
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.table_format
+label: 'Table Format'
+targetEntityType: node
+cache: true

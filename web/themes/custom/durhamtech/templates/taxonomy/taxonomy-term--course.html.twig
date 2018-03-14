@@ -32,11 +32,13 @@
   {% endif %}
   {{ title_suffix }}
 
-  {{ kint(content|keys) }}
+  {#{ kint(content|keys) }#}
 
-  <h2 class="center couse-title">{{ name|render|striptags }} {{ content.field_title|render|striptags }}</h2>
+  <h2 class="center course-title">{{ name|render|striptags }} {{ content.field_title|render|striptags }}</h2>
 
-  {{ content.field_description }}
+  <div class="text-center">
+    {{ content.field_description.0|render|replace({"\n": "", "\r\n": "", "\t": "", "\n\r": "", "<br />": ""}) }}
+  </div>
   {#{{ content }}#}
 
   <div class="course-metadata row">
