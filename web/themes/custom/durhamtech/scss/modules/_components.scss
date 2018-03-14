@@ -84,11 +84,11 @@ $banner-menu-orange-hover: #f27604;
       overflow: hidden;
       padding: 7px 30px 7px 7px;
 
-      &:before {
-        content: "";
+      svg {
         float: left;
-        min-height: 50px;
-        min-width: 50px;
+        margin-right: 10px;
+        min-height: 40px;
+        min-width: 40px;
         vertical-align: middle;
       }
 

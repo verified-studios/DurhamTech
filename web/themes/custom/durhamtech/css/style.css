@@ -6961,11 +6961,11 @@ table {
     max-width: 160px;
     overflow: hidden;
     padding: 7px 30px 7px 7px; }
-    #block-banner-menu .menu > li > a:before {
-      content: "";
+    #block-banner-menu .menu > li > a svg {
       float: left;
-      min-height: 50px;
-      min-width: 50px;
+      margin-right: 10px;
+      min-height: 40px;
+      min-width: 40px;
       vertical-align: middle; }
     #block-banner-menu .menu > li > a:hover {
       transition: 0.2s all ease-in;
