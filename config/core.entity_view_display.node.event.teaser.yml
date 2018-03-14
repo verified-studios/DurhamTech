@@ -25,6 +25,13 @@ targetEntityType: node
 bundle: event
 mode: teaser
 content:
+  field_description:
+    type: basic_string
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_event_date:
     type: datetime_default
     weight: 0
@@ -32,17 +39,16 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      format_type: month_day
+      format_type: html_date
     third_party_settings: {  }
   links:
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   addtoany: true
   field_associated_program: true
-  field_description: true
   field_event_type: true
   field_featured: true
   field_start_date: true

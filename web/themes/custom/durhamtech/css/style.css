@@ -5846,6 +5846,13 @@ h2 {
 h3 {
   font-size: 1.5em; }
 
+h3.section-title {
+  font-size: 3rem;
+  margin-bottom: 30px; }
+  @media screen and (min-width: 768px) {
+    h3.section-title {
+      margin-bottom: 60px; } }
+
 h4 {
   font-size: 1.2em; }
 
@@ -6971,8 +6978,14 @@ table {
       transition: 0.2s all ease-in;
       background-color: #f27604; }
 
+section.program {
+  padding: 30px 0; }
+  @media screen and (min-width: 768px) {
+    section.program {
+      padding: 60px 0; } }
+
 .program .program-header {
-  padding: 30px 0;
+  padding-bottom: 30px;
   text-align: center; }
 
 .program .field--name-field-program-image {
@@ -6981,9 +6994,6 @@ table {
   overflow: hidden; }
   .program .field--name-field-program-image img {
     width: 100%; }
-
-.program .program-info-row {
-  margin-bottom: 30px; }
 
 .program .stats-row {
   border-bottom: 1px solid #000000;
@@ -6996,18 +7006,15 @@ table {
 
 @media screen and (min-width: 768px) {
   .program .program-header {
-    padding: 60px 0; }
+    padding-bottom: 60px; }
   .program .field--name-field-program-image {
     margin-bottom: 0;
     width: calc(100% - 10px); }
   .program .program-info-row {
-    margin-bottom: 60px; }
-  .program .stats-row {
     margin-bottom: 60px; } }
 
 .program-stats-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 0;
   text-align: center; }
   .program-stats-wrapper .paragraph--type--statistic-with-icon {
     padding: 15px 0; }
@@ -7023,10 +7030,8 @@ table {
   .program-stats-wrapper .field {
     color: #FFFFFF; }
   @media screen and (min-width: 768px) {
-    .program-stats-wrapper {
-      padding: 60px 0; }
-      .program-stats-wrapper .paragraph--type--statistic-with-icon {
-        padding: 0; } }
+    .program-stats-wrapper .paragraph--type--statistic-with-icon {
+      padding: 0; } }
 
 .event.teaser .date {
   display: inline-block;

@@ -112,7 +112,7 @@
 {#{ kint(content|keys) }#}
   <div{{ content_attributes.addClass('content') }}>
     {#{ content }#}
-    <div{{ content_attributes.addClass('container') }}>
+    <section{{ content_attributes.addClass('container', 'program') }}>
       <div class="row program-header">
         <h2 class="page-title">Program <span class="green">Overview</span></h3>
         <h3 class="program-name">{{ label }}</h3>
@@ -141,12 +141,12 @@
           {% endfor %}
         </div>
       {% endif %}
-    </div>
+    </section>
 
     {# slideshow here #}
 
     {% if program_stats_count > 0 %}
-      <div class="program-stats-wrapper">
+      <section class="program-stats-wrapper program">
         <div{{ content_attributes.addClass('container') }}>
           <h3 class="section-title">Program <span class="green">Stats</span></h3>
           <div class="row program-stats-row">
@@ -162,12 +162,12 @@
 
     {% set upcoming_event = drupal_view('events', 'upcoming_program_events') %}
     {% if upcoming_event %}
-      <div{{ content_attributes.addClass('container') }}>
+      <section {{ content_attributes }}>
         <h3 class="section-title">Upcoming Program <span class="green">Events</span></h3>
         <div class="row">
           {{ upcoming_event }}
         </div>
-      </div>
+      </section>
     {% endif %}
     {# required classes here #}
   </div>
