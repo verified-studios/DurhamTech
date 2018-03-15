@@ -5825,6 +5825,9 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/*
+ * Mixins for reusuable blocks of css.
+ */
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 16px; }
@@ -5846,12 +5849,25 @@ h3 {
 h4 {
   font-size: 1.2em; }
 
+h4.stat-title {
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0; }
+
+.section-title, .course-title {
+  text-align: center; }
+
 p {
   color: #4c4c4c; }
 
 a:hover {
   background-color: transparent;
   color: #B75A13; }
+
+.stat .field--name-field-data {
+  font-size: 1.5em;
+  font-weight: 600; }
 
 .btn {
   background-color: #19975D;
@@ -5881,9 +5897,6 @@ a:hover {
       background-color: #FFFFFF;
       color: #000000; }
 
-/*
- * Mixins for reusuable blocks of css.
- */
 .bg-white {
   background-color: #FFFFFF; }
 
@@ -5895,6 +5908,12 @@ a:hover {
 
 .black {
   color: #000000; }
+
+.bg-light-gray {
+  background-color: #CED2D5; }
+
+.light-gray {
+  color: #CED2D5; }
 
 .bg-gray {
   background-color: #262626; }
@@ -6869,7 +6888,9 @@ table {
   table th {
     background-color: #19975D; }
   table tr:nth-of-type(2n) {
-    background-color: #808990; }
+    background-color: #CED2D5; }
+  table table > tbody > tr:nth-of-type(2n) {
+    background-color: transparent; }
 
 .secondary-page-header {
   position: relative; }
@@ -6951,19 +6972,49 @@ table {
       background-color: #f27604; }
 
 .program .program-header {
-  padding: 60px 0;
+  padding: 30px 0;
   text-align: center; }
 
 .program .field--name-field-program-image {
   border-radius: 8px;
-  overflow: hidden;
-  width: calc(100% - 10px); }
+  margin-bottom: 30px;
+  overflow: hidden; }
   .program .field--name-field-program-image img {
     width: 100%; }
 
+.program .program-info-row {
+  margin-bottom: 30px; }
+
+.program .stats-row {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  margin-bottom: 30px;
+  padding: 20px;
+  text-align: center; }
+  .program .stats-row .paragraph--type--statistic {
+    padding: 15px 0; }
+
+@media screen and (min-width: 768px) {
+  .program .program-header {
+    padding: 60px 0; }
+  .program .field--name-field-program-image {
+    margin-bottom: 0;
+    width: calc(100% - 10px); }
+  .program .program-info-row {
+    margin-bottom: 60px; }
+  .program .stats-row {
+    margin-bottom: 60px; } }
+
 .program-stats-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 60px 0; }
+  padding: 30px 0;
+  text-align: center; }
+  .program-stats-wrapper .paragraph--type--statistic-with-icon {
+    padding: 15px 0; }
+  .program-stats-wrapper .field--name-field-icon-image {
+    margin-bottom: 20px; }
+    .program-stats-wrapper .field--name-field-icon-image img {
+      margin: 0 auto; }
   .program-stats-wrapper .section-title {
     color: #FFFFFF;
     text-align: center; }
@@ -6971,5 +7022,10 @@ table {
     color: #FFFFFF; }
   .program-stats-wrapper .field {
     color: #FFFFFF; }
+  @media screen and (min-width: 768px) {
+    .program-stats-wrapper {
+      padding: 60px 0; }
+      .program-stats-wrapper .paragraph--type--statistic-with-icon {
+        padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */

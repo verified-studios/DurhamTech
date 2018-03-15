@@ -26,6 +26,17 @@ h4 {
   font-size: 1.2em;
 }
 
+h4.stat-title {
+  color: $black;
+  font-size: rem(16);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.section-title, .course-title {
+  text-align: center;
+}
+
 p {
   color: $body-gray;
 }
@@ -36,4 +47,9 @@ a {
     background-color: transparent;
     color: $hover-color;
   }
+}
+
+.stat .field--name-field-data {
+  font-size: em(24);
+  font-weight: 600;
 }

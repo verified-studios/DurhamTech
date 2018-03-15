@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_description
+    - field.field.node.event.field_event_date
     - field.field.node.event.field_event_type
     - field.field.node.event.field_featured
-    - field.field.node.event.field_start_date
     - node.type.event
   module:
     - datetime
@@ -40,6 +40,12 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
+  field_event_date:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_event_type:
     weight: 3
     settings: {  }
@@ -52,12 +58,6 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
-    region: content
-  field_start_date:
-    weight: 2
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   path:
     type: path

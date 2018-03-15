@@ -1,0 +1,19 @@
+uuid: 013a8098-ce4c-4e8f-8eb8-eccd0af31d1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.statistic
+id: paragraph.statistic.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: statistic
+label: Title
+description: 'Title of data point'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

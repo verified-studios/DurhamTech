@@ -1,0 +1,52 @@
+uuid: 52d876cf-6e50-4939-943e-8e9c99487871
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_stats
+    - node.type.program
+    - paragraphs.paragraphs_type.statistic_with_icon
+  module:
+    - entity_reference_revisions
+id: node.program.field_program_stats
+field_name: field_program_stats
+entity_type: node
+bundle: program
+label: 'Program Stats'
+description: 'Statistics for the "Program Stats" section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      statistic_with_icon: statistic_with_icon
+    target_bundles_drag_drop:
+      body:
+        weight: 9
+        enabled: false
+      class:
+        weight: 10
+        enabled: false
+      header:
+        weight: 11
+        enabled: false
+      image_and_text:
+        weight: 12
+        enabled: false
+      link:
+        weight: 13
+        enabled: false
+      quote:
+        weight: 14
+        enabled: false
+      statistic:
+        weight: 15
+        enabled: false
+      statistic_with_icon:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions
