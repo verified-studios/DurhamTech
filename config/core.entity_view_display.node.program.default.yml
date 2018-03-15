@@ -3,9 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.program.field_average_completion
-    - field.field.node.program.field_average_cost
-    - field.field.node.program.field_average_salary
     - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
@@ -35,30 +32,6 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
-  field_average_completion:
-    weight: 107
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_average_cost:
-    weight: 104
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_average_salary:
-    weight: 108
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_courses:
     weight: 116
     label: above
