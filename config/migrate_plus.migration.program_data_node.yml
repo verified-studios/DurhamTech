@@ -1,4 +1,4 @@
-uuid: 79e794a3-fa4c-4f7d-bbb8-ada057107a81
+uuid: 7b7542ee-e8cf-4ec1-b267-0f1247a51250
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: gl9QxQ4cStL89UlMNhQuFkQmwJTHPXtv_HCWVeiDUN4
+  default_config_hash: _rvGk-NFmxikY_7vd2cRSt-xvPM5zNx-mpDqr7mWyTI
 id: program_data_node
 migration_tags:
   - classes
@@ -39,6 +39,10 @@ process:
   field_description: Description
   field_program_type:
     -
+      plugin: skip_on_empty
+      method: process
+      source: 'Program Types'
+    -
       plugin: durhamtech_program_explode
       source: 'Program Types'
     -
@@ -49,6 +53,14 @@ process:
   field_min_required_credits: 'Minimum Required Credits'
   field_min_required_inst: 'Minimum Required Institutional Credits'
   field_min_required_inst_gpa: 'Minimum Required Institutional GPA'
+  field_courses:
+    -
+      plugin: durhamtech_course_outline
+      source: 'Course Outline'
+    -
+      plugin: iterator
+      process:
+        target_id: '0'
 destination:
   plugin: 'entity:node'
   default_bundle: program

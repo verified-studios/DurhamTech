@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.program.field_average_completion
     - field.field.node.program.field_average_cost
     - field.field.node.program.field_average_salary
+    - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
     - field.field.node.program.field_format
@@ -56,6 +57,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_courses:
+    weight: 31
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_degree_option:
     weight: 3

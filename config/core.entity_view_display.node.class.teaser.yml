@@ -17,3 +17,15 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_building: true
+  field_class_id: true
+  field_class_item: true
+  field_course: true
+  field_delivery_method: true
+  field_end_date: true
+  field_end_time: true
+  field_location: true
+  field_meeting_days: true
+  field_room: true
+  field_start_date: true
+  field_start_time: true

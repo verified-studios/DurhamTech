@@ -93,3 +93,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_end_time: true
+  field_meeting_days: true
+  field_room: true
+  field_start_time: true
