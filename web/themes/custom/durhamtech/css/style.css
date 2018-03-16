@@ -7033,6 +7033,14 @@ section.program {
     .program-stats-wrapper .paragraph--type--statistic-with-icon {
       padding: 0; } }
 
+.required-classes {
+  border-top: 1px solid #000000; }
+  .required-classes .section-title {
+    margin-top: 30px; }
+  @media screen and (min-width: 768px) {
+    .required-classes .section-title {
+      margin-top: 60px; } }
+
 .event.teaser .date {
   display: inline-block;
   font-weight: 600;

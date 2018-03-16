@@ -90,3 +90,17 @@ section.program {
     }
   }
 }
+
+.required-classes {
+  border-top: 1px solid $black;
+
+  .section-title {
+    margin-top: $section-spacing-sm;
+  }
+
+  @media #{$tablet} {
+    .section-title {
+      margin-top: $section-spacing-lg;
+    }
+  }
+}

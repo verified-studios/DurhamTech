@@ -157,7 +157,7 @@
             {% endfor %}
           </div>
         </div>
-      </div>
+      </section>
     {% endif %}
 
     {% set upcoming_event = drupal_view('events', 'upcoming_program_events') %}
@@ -171,7 +171,8 @@
     {% endif %}
     {% set required_classes = drupal_view('required_classes', 'required_classes') %}
     {% if required_classes %}
-      <div class="container required-classes">
+      <section class="container required-classes">
+        <h3 class="section-title">Required <span class="green">Classes</span></h3>
         {{ required_classes }}
       </div>
     {% endif %}
