@@ -44,5 +44,8 @@ function durhamtech_theme_suggestions_page_alter(array &$suggestions, array $var
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
     $content_type = $node->bundle();
     $suggestions[] = 'page__'.$content_type;
+  } else if ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    $taxonomy_type = $taxonomy->bundle();
+    $suggestions[] = 'page__'.$taxonomy_type;
   }
 }
