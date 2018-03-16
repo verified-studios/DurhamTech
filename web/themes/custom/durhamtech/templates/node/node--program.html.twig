@@ -169,7 +169,12 @@
         </div>
       </section>
     {% endif %}
-    {# required classes here #}
+    {% set required_classes = drupal_view('required_classes', 'required_classes') %}
+    {% if required_classes %}
+      <div class="container required-classes">
+        {{ required_classes }}
+      </div>
+    {% endif %}
   </div>
 
 </article>
