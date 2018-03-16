@@ -76,9 +76,9 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-
+  {% set event_date = content.field_event_date.0['#text']|date('U') %}
   <div class="date">
-    {{ content.field_event_date.value|date('M') }}<br /><span class="date-number">{{ content.field_event_date.value|date('d') }}</span>
+    {{ event_date|format_date('custom', 'M') }}<br /><span class="date-number">{{ event_date|format_date('custom', 'd') }}</span>
   </div>
   <div{{ content_attributes.addClass('content') }}>
     <a href="{{ url }}">
