@@ -56,7 +56,9 @@ section.program {
 }
 
 .program-stats-wrapper {
-  background-color: $transparent-black;
+  background: linear-gradient($transparent-black, $transparent-black), url('/sites/default/files/banner_images/program_stats.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center;
 
   .paragraph--type--statistic-with-icon {

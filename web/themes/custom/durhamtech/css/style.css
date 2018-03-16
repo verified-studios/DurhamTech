@@ -7014,7 +7014,9 @@ section.program {
     margin-bottom: 60px; } }
 
 .program-stats-wrapper {
-  background-color: rgba(0, 0, 0, 0.7);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/sites/default/files/banner_images/program_stats.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   text-align: center; }
   .program-stats-wrapper .paragraph--type--statistic-with-icon {
     padding: 15px 0; }
