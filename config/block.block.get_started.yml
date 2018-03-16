@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:c61c846b-b51f-44cd-bdd2-b0120d69111d'
   module:
     - block_content
+    - system
   theme:
     - durhamtech
 id: get_started
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/node/*'
+    negate: true
+    context_mapping: {  }

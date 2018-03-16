@@ -6978,6 +6978,25 @@ table {
       transition: 0.2s all ease-in;
       background-color: #f27604; }
 
+.banner-text-wrapper {
+  margin-top: 10%; }
+  .banner-text-wrapper .breadcrumb {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-weight: 600; }
+    .banner-text-wrapper .breadcrumb a {
+      color: #FFFFFF;
+      margin-right: 10px;
+      text-decoration: underline; }
+      .banner-text-wrapper .breadcrumb a:hover {
+        text-decoration: none; }
+  .banner-text-wrapper .banner-title {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    padding: 0 20px; }
+    .banner-text-wrapper .banner-title h1 {
+      font-weight: 800; }
+
 section.program {
   padding: 30px 0; }
   @media screen and (min-width: 768px) {
