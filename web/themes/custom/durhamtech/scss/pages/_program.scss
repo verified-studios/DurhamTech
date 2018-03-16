@@ -1,22 +1,29 @@
+$section-spacing-sm: 30px;
+$section-spacing-lg: 60px;
+
+section.program {
+  padding: $section-spacing-sm 0;
+
+  @media #{$tablet} {
+    padding: $section-spacing-lg 0;
+  }
+}
+
 .program {
 
   .program-header {
-    padding: 30px 0;
+    padding-bottom: 30px;
     text-align: center;
   }
 
   .field--name-field-program-image {
     border-radius: 8px;
-    margin-bottom: 30px;
+    margin-bottom: $section-spacing-sm;
     overflow: hidden;
 
     img {
       width: 100%;
     }
-  }
-
-  .program-info-row {
-    margin-bottom: 30px;
   }
 
   .stats-row {
@@ -34,26 +41,22 @@
   @media #{$tablet} {
 
     .program-header {
-      padding: 60px 0;
+      padding-bottom: $section-spacing-lg;
     }
+
     .field--name-field-program-image {
       margin-bottom: 0;
       width: calc(100% - 10px);
     }
 
     .program-info-row {
-      margin-bottom: 60px;
-    }
-
-    .stats-row {
-      margin-bottom: 60px;
+      margin-bottom: $section-spacing-lg;
     }
   }
 }
 
 .program-stats-wrapper {
   background-color: $transparent-black;
-  padding: 30px 0;
   text-align: center;
 
   .paragraph--type--statistic-with-icon {
@@ -81,10 +84,23 @@
   }
 
   @media #{$tablet} {
-    padding: 60px 0;
 
     .paragraph--type--statistic-with-icon {
       padding: 0;
+    }
+  }
+}
+
+.required-classes {
+  border-top: 1px solid $black;
+
+  .section-title {
+    margin-top: $section-spacing-sm;
+  }
+
+  @media #{$tablet} {
+    .section-title {
+      margin-top: $section-spacing-lg;
     }
   }
 }

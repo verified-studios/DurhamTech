@@ -16,31 +16,31 @@ bundle: class
 mode: default
 content:
   field_end_time:
-    weight: 3
-    label: above
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_meeting_days:
-    weight: 1
-    label: above
+    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_room:
-    weight: 0
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_start_time:
-    weight: 2
-    label: above
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

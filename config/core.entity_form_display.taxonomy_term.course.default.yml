@@ -8,6 +8,7 @@ dependencies:
     - field.field.taxonomy_term.course.field_department
     - field.field.taxonomy_term.course.field_description
     - field.field.taxonomy_term.course.field_division
+    - field.field.taxonomy_term.course.field_requisites
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
@@ -19,21 +20,18 @@ bundle: course
 mode: default
 content:
   description:
-    type: text_textfield
+    type: text_textarea
     weight: 0
     region: content
     settings:
-      size: 60
       placeholder: ''
+      rows: 5
     third_party_settings: {  }
   field_class_format:
     weight: 36
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_credits:
     weight: 35
@@ -62,6 +60,12 @@ content:
     region: content
   field_division:
     weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_requisites:
+    weight: 37
     settings:
       match_operator: CONTAINS
       size: 60

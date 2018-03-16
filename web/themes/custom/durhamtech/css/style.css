@@ -5846,6 +5846,13 @@ h2 {
 h3 {
   font-size: 1.5em; }
 
+h3.section-title {
+  font-size: 3rem;
+  margin-bottom: 30px; }
+  @media screen and (min-width: 768px) {
+    h3.section-title {
+      margin-bottom: 60px; } }
+
 h4 {
   font-size: 1.2em; }
 
@@ -6961,18 +6968,24 @@ table {
     max-width: 160px;
     overflow: hidden;
     padding: 7px 30px 7px 7px; }
-    #block-banner-menu .menu > li > a:before {
-      content: "";
+    #block-banner-menu .menu > li > a svg {
       float: left;
-      min-height: 50px;
-      min-width: 50px;
+      margin-right: 10px;
+      min-height: 40px;
+      min-width: 40px;
       vertical-align: middle; }
     #block-banner-menu .menu > li > a:hover {
       transition: 0.2s all ease-in;
       background-color: #f27604; }
 
+section.program {
+  padding: 30px 0; }
+  @media screen and (min-width: 768px) {
+    section.program {
+      padding: 60px 0; } }
+
 .program .program-header {
-  padding: 30px 0;
+  padding-bottom: 30px;
   text-align: center; }
 
 .program .field--name-field-program-image {
@@ -6981,9 +6994,6 @@ table {
   overflow: hidden; }
   .program .field--name-field-program-image img {
     width: 100%; }
-
-.program .program-info-row {
-  margin-bottom: 30px; }
 
 .program .stats-row {
   border-bottom: 1px solid #000000;
@@ -6996,18 +7006,15 @@ table {
 
 @media screen and (min-width: 768px) {
   .program .program-header {
-    padding: 60px 0; }
+    padding-bottom: 60px; }
   .program .field--name-field-program-image {
     margin-bottom: 0;
     width: calc(100% - 10px); }
   .program .program-info-row {
-    margin-bottom: 60px; }
-  .program .stats-row {
     margin-bottom: 60px; } }
 
 .program-stats-wrapper {
   background-color: rgba(0, 0, 0, 0.7);
-  padding: 30px 0;
   text-align: center; }
   .program-stats-wrapper .paragraph--type--statistic-with-icon {
     padding: 15px 0; }
@@ -7023,9 +7030,46 @@ table {
   .program-stats-wrapper .field {
     color: #FFFFFF; }
   @media screen and (min-width: 768px) {
-    .program-stats-wrapper {
-      padding: 60px 0; }
-      .program-stats-wrapper .paragraph--type--statistic-with-icon {
-        padding: 0; } }
+    .program-stats-wrapper .paragraph--type--statistic-with-icon {
+      padding: 0; } }
+
+.required-classes {
+  border-top: 1px solid #000000; }
+  .required-classes .section-title {
+    margin-top: 30px; }
+  @media screen and (min-width: 768px) {
+    .required-classes .section-title {
+      margin-top: 60px; } }
+
+.event.teaser .date {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+  padding-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 55px;
+  vertical-align: top; }
+  .event.teaser .date .date-number {
+    font-size: 2em; }
+
+.event.teaser .content {
+  border-left: 2px solid #000000;
+  display: inline-block;
+  padding-left: 30px;
+  width: calc(100% - 60px); }
+  .event.teaser .content .field--name-field-description {
+    margin-bottom: 15px; }
+
+.course .view-header {
+  padding: 30px 0; }
+  .course .view-header .course-metadata {
+    padding-top: 30px; }
+
+@media screen and (min-width: 768px) {
+  .course .view-header {
+    padding: 60px 0; }
+    .course .view-header .course-metadata {
+      padding-top: 60px; } }
 
 /*# sourceMappingURL=style.css.map */

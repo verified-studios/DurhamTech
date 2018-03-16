@@ -34,10 +34,12 @@ module:
   file: 0
   filter: 0
   fitvids: 0
+  fontawesome: 0
   help: 0
   history: 0
   image: 0
   inline_entity_form: 0
+  kint: 0
   layout_discovery: 0
   link: 0
   media_entity: 0

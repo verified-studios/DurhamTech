@@ -4,8 +4,11 @@ _core:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://durhamtech:8888/themes/contrib/bootstrap/favicon.ico'
+  url: 'http://durhamtech:8888/themes/custom/durhamtech/favicon.ico'
   use_default: true
+schemas:
+  bootstrap: 8000
+  durhamtech: 8000
 features:
   comment_user_picture: true
   comment_user_verification: true
@@ -15,6 +18,17 @@ logo:
   path: ''
   url: ''
   use_default: true
-schemas:
-  bootstrap: 8000
-  durhamtech: 8000
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  secondary_nav: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: well
+  footer: ''
+table_hover: 0
+table_responsive: '-1'
+table: ''
