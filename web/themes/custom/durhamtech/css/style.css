@@ -6903,7 +6903,7 @@ table {
   position: relative; }
   .secondary-page-header .banner {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     min-height: 500px;
     padding-top: 70px; }
 
@@ -6979,7 +6979,7 @@ table {
       background-color: #f27604; }
 
 .banner-text-wrapper {
-  margin-top: 10%; }
+  margin-top: 5%; }
   .banner-text-wrapper .breadcrumb {
     background-color: transparent;
     color: #FFFFFF;
