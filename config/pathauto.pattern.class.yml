@@ -1,0 +1,23 @@
+uuid: 2976f8f1-bbcb-4e5d-a9d1-b4528699634f
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: class
+label: Class
+type: 'canonical_entities:taxonomy_term'
+pattern: 'class/[term:field_title:value]'
+selection_criteria:
+  91c58bc4-6e39-47e9-9f13-0436ea9acb3c:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      course: course
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 91c58bc4-6e39-47e9-9f13-0436ea9acb3c
+selection_logic: and
+weight: -5
+relationships: {  }

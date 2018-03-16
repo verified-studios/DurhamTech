@@ -1,0 +1,22 @@
+uuid: 2c2adc96-aee1-4ac6-b486-69401c940cc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: program
+label: Program
+type: 'canonical_entities:node'
+pattern: 'program/[node:title]'
+selection_criteria:
+  3921c1d3-0a8b-402d-bd0b-8c96dba50bf9:
+    id: node_type
+    bundles:
+      program: program
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3921c1d3-0a8b-402d-bd0b-8c96dba50bf9
+selection_logic: and
+weight: -5
+relationships: {  }
