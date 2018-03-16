@@ -6995,6 +6995,10 @@ section.program {
   .program .field--name-field-program-image img {
     width: 100%; }
 
+.program .apply-row {
+  margin-top: 30px;
+  max-width: 400px; }
+
 .program .stats-row {
   border-bottom: 1px solid #000000;
   border-top: 1px solid #000000;

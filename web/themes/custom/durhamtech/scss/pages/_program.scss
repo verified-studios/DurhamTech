@@ -26,6 +26,11 @@ section.program {
     }
   }
 
+  .apply-row {
+    margin-top: $section-spacing-sm;
+    max-width: 400px;
+  }
+
   .stats-row {
     border-bottom: 1px solid $black;
     border-top: 1px solid $black;
