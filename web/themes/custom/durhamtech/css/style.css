@@ -5843,6 +5843,9 @@ h1 {
 h2 {
   font-size: 2em; }
 
+h2.page-title {
+  text-align: center; }
+
 h3 {
   font-size: 1.5em; }
 
@@ -5856,7 +5859,7 @@ h3.section-title {
 h4 {
   font-size: 1.2em; }
 
-h4.stat-title {
+h4.stat-title, h4.event-data-title {
   color: #000000;
   font-size: 1.6rem;
   font-weight: 500;
@@ -7065,6 +7068,22 @@ section.program {
   @media screen and (min-width: 768px) {
     .required-classes .section-title {
       margin-top: 60px; } }
+
+.page-node-type-event .page-title {
+  margin-bottom: 30px; }
+
+@media screen and (min-width: 768px) {
+  .page-node-type-event .page-title {
+    margin-bottom: 60px; } }
+
+.event-data {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
+  margin-bottom: 30px;
+  padding: 15px 0; }
+  @media screen and (min-width: 768px) {
+    .event-data {
+      margin-bottom: 60px; } }
 
 .event.teaser .date {
   display: inline-block;

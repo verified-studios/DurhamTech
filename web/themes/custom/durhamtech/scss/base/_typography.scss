@@ -18,6 +18,10 @@ h2 {
   font-size: 2em;
 }
 
+h2.page-title {
+  text-align: center;
+}
+
 h3 {
   font-size: 1.5em;
 }
@@ -35,7 +39,7 @@ h4 {
   font-size: 1.2em;
 }
 
-h4.stat-title {
+h4.stat-title, h4.event-data-title {
   color: $black;
   font-size: rem(16);
   font-weight: 500;

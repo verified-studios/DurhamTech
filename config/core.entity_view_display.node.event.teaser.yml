@@ -5,10 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.field_associated_program
-    - field.field.node.event.field_description
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
     - field.field.node.event.field_event_type
     - field.field.node.event.field_featured
+    - field.field.node.event.field_rich_text
     - node.type.event
   module:
     - datetime
@@ -25,13 +26,6 @@ targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  field_description:
-    type: basic_string
-    weight: 1
-    region: content
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_event_date:
     type: datetime_default
     weight: 0
@@ -49,6 +43,8 @@ content:
 hidden:
   addtoany: true
   field_associated_program: true
+  field_event_location: true
   field_event_type: true
   field_featured: true
+  field_rich_text: true
   field_start_date: true

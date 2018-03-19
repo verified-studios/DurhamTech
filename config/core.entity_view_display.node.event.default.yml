@@ -4,14 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.event.field_associated_program
-    - field.field.node.event.field_description
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_location
     - field.field.node.event.field_event_type
     - field.field.node.event.field_featured
+    - field.field.node.event.field_rich_text
     - node.type.event
   module:
     - datetime
     - panelizer
+    - text
     - user
 third_party_settings:
   panelizer:
@@ -24,29 +26,22 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
-  field_associated_program:
-    weight: 4
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_description:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_event_date:
-    weight: 5
-    label: above
+    weight: 0
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: html_datetime
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_event_location:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_event_type:
     weight: 3
@@ -56,11 +51,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 0
-    region: content
+  field_rich_text:
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    type: text_default
+    region: content
 hidden:
   addtoany: true
+  field_associated_program: true
   field_featured: true
+  links: true
