@@ -1,0 +1,19 @@
+uuid: 6950c701-73b9-480e-8ca2-a1af1ff7fe5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.statistic_with_subtitle
+id: paragraph.statistic_with_subtitle.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: statistic_with_subtitle
+label: 'Sub Title'
+description: 'Subtitle that goes underneath statistic data.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -3,14 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.career.field_average_salary
     - field.field.node.career.field_banner_image
+    - field.field.node.career.field_career_statistics
     - field.field.node.career.field_degree_option
     - field.field.node.career.field_description
-    - field.field.node.career.field_job_growth
+    - field.field.node.career.field_percentage_infographic
     - field.field.node.career.field_title_image
     - node.type.career
   module:
+    - entity_reference_revisions
     - panelizer
     - user
 third_party_settings:
@@ -24,14 +25,6 @@ targetEntityType: node
 bundle: career
 mode: default
 content:
-  field_average_salary:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_banner_image:
     weight: 2
     label: hidden
@@ -40,6 +33,15 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_career_statistics:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
     region: content
   field_degree_option:
     weight: 5
@@ -56,13 +58,14 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_job_growth:
-    weight: 6
+  field_percentage_infographic:
+    type: entity_reference_revisions_entity_view
+    weight: 7
     label: hidden
     settings:
-      link_to_entity: false
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: string
     region: content
   field_title_image:
     weight: 1

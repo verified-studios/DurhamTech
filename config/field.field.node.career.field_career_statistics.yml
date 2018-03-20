@@ -1,0 +1,58 @@
+uuid: 37e71f6e-1cdd-4703-bbc3-08705e3d5d18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_career_statistics
+    - node.type.career
+    - paragraphs.paragraphs_type.statistic_with_subtitle
+  module:
+    - entity_reference_revisions
+id: node.career.field_career_statistics
+field_name: field_career_statistics
+entity_type: node
+bundle: career
+label: 'Career Statistics'
+description: 'Statistic relating to the career.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      statistic_with_subtitle: statistic_with_subtitle
+    target_bundles_drag_drop:
+      body:
+        weight: 11
+        enabled: false
+      class:
+        weight: 12
+        enabled: false
+      header:
+        weight: 13
+        enabled: false
+      image_and_text:
+        weight: 14
+        enabled: false
+      link:
+        weight: 15
+        enabled: false
+      quote:
+        weight: 16
+        enabled: false
+      statistic:
+        weight: 17
+        enabled: false
+      statistic_infographic:
+        weight: 18
+        enabled: false
+      statistic_with_icon:
+        weight: 19
+        enabled: false
+      statistic_with_subtitle:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

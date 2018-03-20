@@ -1,0 +1,9 @@
+uuid: 6d5e86d5-75c7-43d8-9e4c-fea13cfbb08b
+langcode: en
+status: true
+dependencies: {  }
+id: statistic_with_subtitle
+label: 'Statistic with subtitle'
+icon_uuid: null
+description: 'Statistic with a subtitle underneath.'
+behavior_plugins: {  }

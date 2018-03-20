@@ -3,16 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.career.field_average_salary
     - field.field.node.career.field_banner_image
+    - field.field.node.career.field_career_statistics
     - field.field.node.career.field_degree_option
     - field.field.node.career.field_description
-    - field.field.node.career.field_job_growth
+    - field.field.node.career.field_percentage_infographic
     - field.field.node.career.field_title_image
     - node.type.career
   module:
     - entity_browser_entity_form
     - inline_entity_form
+    - paragraphs
     - path
 id: node.career.default
 targetEntityType: node
@@ -25,14 +26,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_average_salary:
-    weight: 4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_banner_image:
     weight: 1
     settings:
@@ -48,6 +41,20 @@ content:
         entity_browser_id: banner_image_browser
     type: inline_entity_form_complex
     region: content
+  field_career_statistics:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Statistic
+      title_plural: Statistics
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: statistic_with_subtitle
+    third_party_settings: {  }
+    region: content
   field_degree_option:
     weight: 5
     settings: {  }
@@ -62,13 +69,19 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_job_growth:
+  field_percentage_infographic:
+    type: paragraphs
     weight: 6
     settings:
-      size: 60
-      placeholder: ''
+      title: Infographic
+      title_plural: Infographics
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: statistic_infographic
     third_party_settings: {  }
-    type: string_textfield
     region: content
   field_title_image:
     weight: 2

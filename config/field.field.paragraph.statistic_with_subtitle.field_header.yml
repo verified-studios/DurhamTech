@@ -1,0 +1,19 @@
+uuid: ff92e432-c94d-4d21-8f17-5862d6a0a439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.statistic_with_subtitle
+id: paragraph.statistic_with_subtitle.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: statistic_with_subtitle
+label: Title
+description: 'Title of the statistic'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

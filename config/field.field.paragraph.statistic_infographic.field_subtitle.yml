@@ -1,0 +1,19 @@
+uuid: 29f471a0-96d8-4b7b-b481-e71c1832c2aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.statistic_infographic
+id: paragraph.statistic_infographic.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: statistic_infographic
+label: 'Sub Title'
+description: 'Subtitle to annotate percentage infographic.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

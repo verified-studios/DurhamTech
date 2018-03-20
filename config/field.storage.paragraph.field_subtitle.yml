@@ -1,12 +1,12 @@
-uuid: 0ea4684f-3259-411c-b018-44c78c4af962
+uuid: c6186d43-be86-4fa7-bb3f-a6b59ed6b2fd
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_average_salary
-field_name: field_average_salary
-entity_type: node
+    - paragraphs
+id: paragraph.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
 type: string
 settings:
   max_length: 255

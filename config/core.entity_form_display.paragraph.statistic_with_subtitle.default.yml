@@ -1,0 +1,42 @@
+uuid: b0501146-0c50-4fde-b7de-55e4f28709ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistic_with_subtitle.field_data
+    - field.field.paragraph.statistic_with_subtitle.field_header
+    - field.field.paragraph.statistic_with_subtitle.field_subtitle
+    - paragraphs.paragraphs_type.statistic_with_subtitle
+id: paragraph.statistic_with_subtitle.default
+targetEntityType: paragraph
+bundle: statistic_with_subtitle
+mode: default
+content:
+  field_data:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_header:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_subtitle:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true
