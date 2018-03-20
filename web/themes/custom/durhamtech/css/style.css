@@ -5845,6 +5845,8 @@ h2 {
 
 h2.page-title {
   text-align: center; }
+  h2.page-title.left {
+    text-align: left; }
 
 h3 {
   font-size: 1.5em; }
@@ -7115,5 +7117,9 @@ section.program {
     padding: 60px 0; }
     .course .view-header .course-metadata {
       padding-top: 60px; } }
+
+.news-metadata {
+  font-style: italic;
+  margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */

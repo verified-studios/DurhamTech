@@ -47,8 +47,8 @@ content:
     weight: 2
     label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: html_date
     third_party_settings: {  }
     type: datetime_default
     region: content

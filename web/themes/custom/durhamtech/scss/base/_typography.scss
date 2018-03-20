@@ -20,6 +20,10 @@ h2 {
 
 h2.page-title {
   text-align: center;
+
+  &.left {
+    text-align: left;
+  }
 }
 
 h3 {
