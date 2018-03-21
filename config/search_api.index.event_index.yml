@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_event_location
+    - field.storage.node.field_event_date
+    - field.storage.node.field_event_type
     - search_api.server.durham_tech
   module:
     - search_api
@@ -11,20 +14,63 @@ id: event_index
 name: 'Event Index'
 description: ''
 read_only: false
-field_settings: {  }
+field_settings:
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  field_event_location:
+    label: 'Event Location'
+    datasource_id: 'entity:node'
+    property_path: field_event_location
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_location
+  field_event_date:
+    label: 'Event Date'
+    datasource_id: 'entity:node'
+    property_path: field_event_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date
+  field_event_type:
+    label: 'Event Type'
+    datasource_id: 'entity:node'
+    property_path: field_event_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_type
 datasource_settings:
   'entity:node':
     bundles:
-      default: true
+      default: false
       selected:
         - event
     languages:
       default: true
       selected: {  }
 processor_settings:
-  rendered_item: {  }
-  add_url: {  }
   aggregated_field: {  }
+  add_url: {  }
+  rendered_item: {  }
 tracker_settings:
   default: {  }
 options:
