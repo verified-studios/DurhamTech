@@ -1,4 +1,18 @@
 $border-color: $black;
+$section-spacing-sm: 15px;
+$section-spacing-lg: 30px;
+
+.page-node-type-career {
+  .page-title {
+    margin-bottom: $section-spacing-sm;
+  }
+
+  @media #{$tablet} {
+    .page-title {
+      margin-bottom: $section-spacing-lg;
+    }
+  }
+}
 
 .career-stats-top, .career-stats-bottom {
   [class*="stat-col"] {

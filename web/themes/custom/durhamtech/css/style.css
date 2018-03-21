@@ -7052,10 +7052,10 @@ table {
   0% {
     stroke-dasharray: 0 100; } }
 
-section.program {
+section.container, section.program {
   padding: 30px 0; }
   @media screen and (min-width: 768px) {
-    section.program {
+    section.container, section.program {
       padding: 60px 0; } }
 
 .program .program-header {
@@ -7171,6 +7171,13 @@ section.program {
 .news-metadata {
   font-style: italic;
   margin-bottom: 30px; }
+
+.page-node-type-career .page-title {
+  margin-bottom: 15px; }
+
+@media screen and (min-width: 768px) {
+  .page-node-type-career .page-title {
+    margin-bottom: 30px; } }
 
 .career-stats-top [class*="stat-col"], .career-stats-bottom [class*="stat-col"] {
   padding: 15px; }

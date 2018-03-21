@@ -97,67 +97,72 @@
 
   <div{{ content_attributes.addClass('content') }}>
     {#{ kint(content|keys) }#}
-    <div class="row">
-      {% if content.field_career_statistics.0 or content.field_percentage_infographic.0 %}
-        <div class="col-sm-6">
-          <div class="row career-stats-top">
-            {% if content.field_career_statistics.0 %}
-              {% if content.field_career_statistics.1 %}
-                <div class="col-sm-6 stat-col-1">
-                  {{ content.field_career_statistics.0 }}
-                </div>
-                <div class="col-sm-6 stat-col-2">
-                  {{ content.field_career_statistics.1 }}
-                {% else %}
-                  <div class="col-sm-12 stat-col">
+    <section class="content container">
+      <div class="career-header">
+        <h2 class="page-title">{{ label }}</h2>
+      </div>
+      <div class="row">
+        {% if content.field_career_statistics.0 or content.field_percentage_infographic.0 %}
+          <div class="col-sm-6">
+            <div class="row career-stats-top">
+              {% if content.field_career_statistics.0 %}
+                {% if content.field_career_statistics.1 %}
+                  <div class="col-sm-6 stat-col-1">
                     {{ content.field_career_statistics.0 }}
+                  </div>
+                  <div class="col-sm-6 stat-col-2">
+                    {{ content.field_career_statistics.1 }}
+                  {% else %}
+                    <div class="col-sm-12 stat-col">
+                      {{ content.field_career_statistics.0 }}
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+            {% if content.field_percentage_infographic.0 %}
+              <div class="row career-infographic">
+                {% if content.field_percentage_infographic.1 %}
+                  <div class="col-sm-6">
+                    {{ content.field_percentage_infographic.0 }}
+                  </div>
+                  <div class="col-sm-6">
+                    {{ content.field_percentage_infographic.1 }}
+                  </div>
+                {% else %}
+                  <div class="col-sm-12">
+                    {{ content.field_percentage_infographic.0 }}
                   </div>
                 {% endif %}
               </div>
-            </div>
-          {% endif %}
-          {% if content.field_percentage_infographic.0 %}
-            <div class="row career-infographic">
-              {% if content.field_percentage_infographic.1 %}
-                <div class="col-sm-6">
-                  {{ content.field_percentage_infographic.0 }}
-                </div>
-                <div class="col-sm-6">
-                  {{ content.field_percentage_infographic.1 }}
-                </div>
-              {% else %}
-                <div class="col-sm-12">
-                  {{ content.field_percentage_infographic.0 }}
-                </div>
-              {% endif %}
-            </div>
-          {% endif %}
-          {% if content.field_career_statistics.2 %}
-            <div class="row career-stats-bottom">
-              {% if content.field_career_statistics.3 %}
-                <div class="col-sm-6 stat-col-3">
-                  {{ content.field_career_statistics.2 }}
-                </div>
-                <div class="col-sm-6 stat-col-4">
-                  {{ content.field_career_statistics.3 }}
-                </div>
-              {% else %}
-                <div class="col-sm-12 stat-col">
-                  {{ content.field_career_statistics.2 }}
-                </div>
-              {% endif %}
-            </div>
-          {% endif %}
-        </div>
-        <div class="col-sm-6">
-          {{ content.field_description }}
-        </div>
-      {% else %}
-        <div class="col-xs-12">
-          {{ content.field_description }}
-        </div>
-      {% endif %}
+            {% endif %}
+            {% if content.field_career_statistics.2 %}
+              <div class="row career-stats-bottom">
+                {% if content.field_career_statistics.3 %}
+                  <div class="col-sm-6 stat-col-3">
+                    {{ content.field_career_statistics.2 }}
+                  </div>
+                  <div class="col-sm-6 stat-col-4">
+                    {{ content.field_career_statistics.3 }}
+                  </div>
+                {% else %}
+                  <div class="col-sm-12 stat-col">
+                    {{ content.field_career_statistics.2 }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+          <div class="col-sm-6">
+            {{ content.field_description }}
+          </div>
+        {% else %}
+          <div class="col-xs-12">
+            {{ content.field_description }}
+          </div>
+        {% endif %}
+      </div>
     </div>
-  </div>
+  </section>
 
 </article>

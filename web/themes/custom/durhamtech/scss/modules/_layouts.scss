@@ -1,0 +1,10 @@
+$section-spacing-sm: 30px;
+$section-spacing-lg: 60px;
+
+section.container, section.program {
+  padding: $section-spacing-sm 0;
+
+  @media #{$tablet} {
+    padding: $section-spacing-lg 0;
+  }
+}
