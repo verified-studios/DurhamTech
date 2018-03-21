@@ -12,7 +12,7 @@ entity_type: node
 bundle: career
 label: 'Banner Image'
 description: 'Banner image to be displayed at the top of the page'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

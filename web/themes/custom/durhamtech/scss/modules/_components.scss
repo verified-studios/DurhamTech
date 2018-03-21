@@ -130,3 +130,36 @@ $banner-menu-orange-hover: #f27604;
     }
   }
 }
+
+// Circle infographic
+.circular-chart {
+  display: block;
+  height: auto;
+  margin: 10px auto;
+  width: 140px;
+
+  .circle {
+    stroke: $light-green;
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: square;
+    animation: progress 1s ease-out forwards;
+  }
+
+  .circle-bg {
+    fill: $green;
+  }
+
+  .percentage {
+    fill: $white;
+    font-size: 0.5em;
+    font-weight: 800;
+    text-anchor: middle;
+  }
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
