@@ -1,0 +1,40 @@
+$border-color: $black;
+
+.career-stats-top, .career-stats-bottom {
+  [class*="stat-col"] {
+    padding: 15px;
+  }
+
+  @media #{$tablet} {
+
+    [class*="stat-col"] {
+      padding: 30px;
+    }
+
+    .stat-col-2, .stat-col-4 {
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+
+.career-infographic [class*="col-"] {
+  padding: 15px;
+}
+
+@media #{$tablet} {
+
+  .career-infographic [class*="col-"] {
+    padding: 30px;
+  }
+  .career-stats-top + .career-infographic {
+    border-top: 1px solid $border-color;
+  }
+
+  .career-infographic + .career-stats-bottom {
+    border-top: 1px solid $border-color;
+  }
+
+  .career-stats-top + .career-stats-bottom {
+    border-top: 1px solid $border-color;
+  }
+}

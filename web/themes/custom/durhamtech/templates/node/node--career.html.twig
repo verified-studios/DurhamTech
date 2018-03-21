@@ -96,21 +96,20 @@
   {% endif %}
 
   <div{{ content_attributes.addClass('content') }}>
-    {{ kint(content|keys) }}
-    {{ kint(content.field_career_statistics|keys) }}
+    {#{ kint(content|keys) }#}
     <div class="row">
       {% if content.field_career_statistics.0 or content.field_percentage_infographic.0 %}
         <div class="col-sm-6">
           <div class="row career-stats-top">
             {% if content.field_career_statistics.0 %}
               {% if content.field_career_statistics.1 %}
-                <div class="col-sm-6">
+                <div class="col-sm-6 stat-col-1">
                   {{ content.field_career_statistics.0 }}
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 stat-col-2">
                   {{ content.field_career_statistics.1 }}
                 {% else %}
-                  <div class="col-sm-12">
+                  <div class="col-sm-12 stat-col">
                     {{ content.field_career_statistics.0 }}
                   </div>
                 {% endif %}
@@ -118,7 +117,7 @@
             </div>
           {% endif %}
           {% if content.field_percentage_infographic.0 %}
-            <div class="row career-inforgraphic">
+            <div class="row career-infographic">
               {% if content.field_percentage_infographic.1 %}
                 <div class="col-sm-6">
                   {{ content.field_percentage_infographic.0 }}
@@ -134,16 +133,16 @@
             </div>
           {% endif %}
           {% if content.field_career_statistics.2 %}
-            <div class="row career-stats-top">
+            <div class="row career-stats-bottom">
               {% if content.field_career_statistics.3 %}
-                <div class="col-sm-6">
+                <div class="col-sm-6 stat-col-3">
                   {{ content.field_career_statistics.2 }}
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-6 stat-col-4">
                   {{ content.field_career_statistics.3 }}
                 </div>
               {% else %}
-                <div class="col-sm-12">
+                <div class="col-sm-12 stat-col">
                   {{ content.field_career_statistics.2 }}
                 </div>
               {% endif %}

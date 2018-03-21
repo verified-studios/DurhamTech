@@ -6199,6 +6199,29 @@ a:hover {
   padding-top: 50px;
   padding-bottom: 50px; }
 
+.bordered {
+  border: 1px solid #000000; }
+
+.bordered-lr {
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000; }
+
+.bordered-left {
+  border-left: 1px solid #000000; }
+
+.bordered-right {
+  border-right: 1px solid #000000; }
+
+.bordered-tb {
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000; }
+
+.bordered-bottom {
+  border-bottom: 1px solid #000000; }
+
+.bordered-top {
+  border-top: 1px solid #000000; }
+
 /**
  * Alert styling.
  */
@@ -7148,5 +7171,27 @@ section.program {
 .news-metadata {
   font-style: italic;
   margin-bottom: 30px; }
+
+.career-stats-top [class*="stat-col"], .career-stats-bottom [class*="stat-col"] {
+  padding: 15px; }
+
+@media screen and (min-width: 768px) {
+  .career-stats-top [class*="stat-col"], .career-stats-bottom [class*="stat-col"] {
+    padding: 30px; }
+  .career-stats-top .stat-col-2, .career-stats-top .stat-col-4, .career-stats-bottom .stat-col-2, .career-stats-bottom .stat-col-4 {
+    border-left: 1px solid #000000; } }
+
+.career-infographic [class*="col-"] {
+  padding: 15px; }
+
+@media screen and (min-width: 768px) {
+  .career-infographic [class*="col-"] {
+    padding: 30px; }
+  .career-stats-top + .career-infographic {
+    border-top: 1px solid #000000; }
+  .career-infographic + .career-stats-bottom {
+    border-top: 1px solid #000000; }
+  .career-stats-top + .career-stats-bottom {
+    border-top: 1px solid #000000; } }
 
 /*# sourceMappingURL=style.css.map */

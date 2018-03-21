@@ -35,3 +35,36 @@
     padding-bottom: #{$i * 5}px;
   }
 }
+
+// Border helper classes
+$border-color: $black;
+
+.bordered {
+  border: 1px solid $border-color;
+}
+
+.bordered-lr {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+}
+
+.bordered-left {
+  border-left: 1px solid $border-color;
+}
+
+.bordered-right {
+  border-right: 1px solid $border-color;
+}
+
+.bordered-tb {
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $black;
+}
+
+.bordered-bottom {
+  border-bottom: 1px solid $border-color;
+}
+
+.bordered-top {
+  border-top: 1px solid $border-color;
+}
