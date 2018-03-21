@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_event_location
     - field.storage.node.field_event_date
     - field.storage.node.field_event_type
+    - field.storage.node.field_featured
+    - field.storage.node.field_feature_event_image
     - search_api.server.durham_tech
   module:
     - search_api
@@ -58,6 +60,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_event_type
+  field_featured:
+    label: Featured
+    datasource_id: 'entity:node'
+    property_path: field_featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_featured
+  field_feature_event_image:
+    label: 'Feature Event Image'
+    datasource_id: 'entity:node'
+    property_path: field_feature_event_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_feature_event_image
 datasource_settings:
   'entity:node':
     bundles:
