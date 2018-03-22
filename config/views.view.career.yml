@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_average_salary
     - field.storage.node.field_degree_option
     - field.storage.node.field_title_image
     - image.style.thumbnail
@@ -190,69 +189,6 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_average_salary:
-          id: field_average_salary
-          table: node__field_average_salary
-          field: field_average_salary
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Average Yearly Salary'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_degree_option:
           id: field_degree_option
           table: node__field_degree_option
@@ -378,7 +314,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<a href=\"{{ path }}\" class=\"career-search-link\">\n  <div class=\"career-search-thumbnail\">{{ field_title_image }}</div>\n  <div class=\"career-search-title\">{{ title }}</div>\n  <div class=\"career-search-salary\">\n    <span class=\"career-search-salary-label\">Average Yearly Salary: </span>\n    {{ field_average_salary }}\n  </div>\n  <div class=\"career-search-degree\">\n    <span class=\"career-search-degree-label\">Basic Education Requirement: </span>\n    {{ field_degree_option }}\n  </div>\n</a>"
+            text: "<a href=\"{{ path }}\" class=\"career-search-link\">\n  <div class=\"career-search-thumbnail\">{{ field_title_image }}</div>\n  <div class=\"career-search-title\">{{ title }}</div>\n  <div class=\"career-search-degree\">\n    <span class=\"career-search-degree-label\">Basic Education Requirement: </span>\n    {{ field_degree_option }}\n  </div>\n</a>"
             make_link: false
             path: ''
             absolute: false
@@ -481,7 +417,6 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_average_salary'
         - 'config:field.storage.node.field_degree_option'
         - 'config:field.storage.node.field_title_image'
   block_1:
@@ -499,6 +434,5 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.field_average_salary'
         - 'config:field.storage.node.field_degree_option'
         - 'config:field.storage.node.field_title_image'
