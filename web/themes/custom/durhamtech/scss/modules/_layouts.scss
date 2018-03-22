@@ -1,7 +1,7 @@
 $section-spacing-sm: 30px;
 $section-spacing-lg: 60px;
 
-section.container, section.program {
+section.container, section.program, section.career {
   padding: $section-spacing-sm 0;
 
   @media #{$tablet} {

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.career.field_degree_option
     - field.field.node.career.field_description
     - field.field.node.career.field_percentage_infographic
+    - field.field.node.career.field_related_programs
     - field.field.node.career.field_title_image
     - node.type.career
   module:
@@ -66,6 +67,15 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_related_programs:
+    weight: 8
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_title_image:
     weight: 1

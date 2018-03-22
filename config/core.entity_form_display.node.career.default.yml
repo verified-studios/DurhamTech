@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.career.field_degree_option
     - field.field.node.career.field_description
     - field.field.node.career.field_percentage_infographic
+    - field.field.node.career.field_related_programs
     - field.field.node.career.field_title_image
     - node.type.career
   module:
@@ -22,7 +23,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -83,6 +84,15 @@ content:
       default_paragraph_type: _none
     third_party_settings: {  }
     region: content
+  field_related_programs:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_title_image:
     weight: 2
     settings:
@@ -100,13 +110,13 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -121,7 +131,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60

@@ -77,102 +77,32 @@
 %}
 <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('author') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+  <div{{ content_attributes.addClass('content', 'bg-white') }}>
+    {#{ content }#}
+    <div class="row teaser-row">
+      <div class="col-sm-2">
+        {{ content.field_program_image }}
       </div>
-    </footer>
-  {% endif %}
 
-  <div{{ content_attributes.addClass('content') }}>
-    {#{ kint(content|keys) }#}
-    <section class="content container career">
-      <div class="career-header">
-        <h2 class="page-title">{{ label }}</h2>
-      </div>
-      <div class="row">
-        {% if content.field_career_statistics.0 or content.field_percentage_infographic.0 %}
-          <div class="col-sm-6">
-            <div class="row career-stats-top">
-              {% if content.field_career_statistics.0 %}
-                {% if content.field_career_statistics.1 %}
-                  <div class="col-sm-6 stat-col-1">
-                    {{ content.field_career_statistics.0 }}
-                  </div>
-                  <div class="col-sm-6 stat-col-2">
-                    {{ content.field_career_statistics.1 }}
-                  {% else %}
-                    <div class="col-sm-12 stat-col">
-                      {{ content.field_career_statistics.0 }}
-                    </div>
-                  {% endif %}
-                </div>
-              </div>
-            {% endif %}
-            {% if content.field_percentage_infographic.0 %}
-              <div class="row career-infographic">
-                {% if content.field_percentage_infographic.1 %}
-                  <div class="col-sm-6">
-                    {{ content.field_percentage_infographic.0 }}
-                  </div>
-                  <div class="col-sm-6">
-                    {{ content.field_percentage_infographic.1 }}
-                  </div>
-                {% else %}
-                  <div class="col-sm-12">
-                    {{ content.field_percentage_infographic.0 }}
-                  </div>
-                {% endif %}
-              </div>
-            {% endif %}
-            {% if content.field_career_statistics.2 %}
-              <div class="row career-stats-bottom">
-                {% if content.field_career_statistics.3 %}
-                  <div class="col-sm-6 stat-col-3">
-                    {{ content.field_career_statistics.2 }}
-                  </div>
-                  <div class="col-sm-6 stat-col-4">
-                    {{ content.field_career_statistics.3 }}
-                  </div>
-                {% else %}
-                  <div class="col-sm-12 stat-col">
-                    {{ content.field_career_statistics.2 }}
-                  </div>
-                {% endif %}
-              </div>
-            {% endif %}
-          </div>
-          <div class="col-sm-6">
-            {{ content.field_description }}
-          </div>
-        {% else %}
-          <div class="col-xs-12">
-            {{ content.field_description }}
-          </div>
+      <div class="col-sm-8">
+        <h3 class="program-teaser-title">
+          <a href="{{ url }}" class="green">{{ label }}</a>
+        </h3>
+        {% set description = content.field_description.0['#context'].value|render %}
+        <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
+        {% if content.field_program_type.0 %}
+          <div class="type">Type: {{ content.field_program_type.0 }}</div>
         {% endif %}
+        {% if content.field_program_stats.0 %}
+          <div class="format">Format: {{ content.field_format.0 }}</div>
+        {% endif %}
+        {{ content.field_program_stats }}
+      </div>
+      <div class="col-sm-2">
+        <a href="{{ url }}" class="btn btn-full btn-outline">Learn More</a>
       </div>
     </div>
-  </section>
-  {% if content.field_related_programs.0 %}
-    <section class="related-programs career bg-transparent-black">
-      <div class="container">
-        <h3 class="section-title white">Durham Tech Programs to Help You Get This Career!</h3>
-        {% for key, program in content.field_related_programs if key|first!="#" %}
-          {{ program }}
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
+  </div>
 
 </article>
