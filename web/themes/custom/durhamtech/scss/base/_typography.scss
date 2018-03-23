@@ -27,19 +27,24 @@ h2.page-title {
   }
 }
 
+
 h3 {
   font-size: 1.75em;
   font-weight: 400;
   color: $green;
 }
 
-h3.section-title {
+h3.section-title, .block-views .block-title {
   font-size: rem(30);
   margin-bottom: 30px;
 
   @media #{$tablet} {
     margin-bottom: 60px;
   }
+}
+
+.block-views .block-title {
+  text-align: center;
 }
 
 h4 {

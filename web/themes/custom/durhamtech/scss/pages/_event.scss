@@ -26,7 +26,7 @@ $section-spacing-lg: 60px;
 
 
 // Event teaser
-.event.column-teaser {
+.event.column-teaser, .event.teaser {
   .date {
     display: inline-block;
     font-weight: 600;
@@ -50,6 +50,37 @@ $section-spacing-lg: 60px;
 
     .field--name-field-description {
       margin-bottom: 15px;
+    }
+  }
+}
+
+.event.teaser {
+  .content {
+    width: calc(100% - 165px);
+  }
+  .event-buttons {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+  }
+}
+
+// Events view
+.view-id-events_search {
+  .view-content {
+    .views-row {
+      border-bottom: 1px solid $black;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &.view-display-id-attachment_1 {
+    .view-content {
+      .views-row {
+        border-bottom: none;
+        padding: 10px;
+      }
     }
   }
 }

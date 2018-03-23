@@ -100,3 +100,28 @@
     }
   }
 }
+
+legend {
+  border-bottom: none;
+  text-align: center;
+}
+
+.form-checkboxes {
+  .form-item {
+    display: block;
+  }
+}
+
+.bef-exposed-form {
+
+  @media #{$tablet} {
+    .form-wrapper {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .form-type-textfield {
+      margin-bottom: 20px;
+    }
+  }
+}
