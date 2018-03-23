@@ -2,9 +2,18 @@
   background-color: $green;
   border-color: $green;
   color: $white;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+
+  &.btn-large {
+    font-size: 1em;
+  }
 
   &:hover {
-    background-color: $green;
+    background-color: darken($green, 5);
+    color: $white;
   }
 
   &-outline {

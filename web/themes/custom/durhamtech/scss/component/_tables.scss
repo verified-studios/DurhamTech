@@ -3,7 +3,7 @@ table {
 
   th, td {
     border-left: 1px solid $white;
-    padding: 5px;
+    padding: 1rem 1.25rem;
 
     &:first-of-type {
       border: none;
@@ -12,11 +12,12 @@ table {
 
   th {
     background-color: $green;
+    color: $white;
   }
 
   tr {
     &:nth-of-type(2n) {
-      background-color: $light-gray;
+      background-color: lighten($light-gray, 10);
     }
   }
   // nested table

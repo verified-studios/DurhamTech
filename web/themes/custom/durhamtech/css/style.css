@@ -5833,9 +5833,10 @@ body {
   font-size: 16px; }
 
 h1, h2, h3, h4, h5 {
-  color: #808990;
+  color: #4c4c4c;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-top: 0; }
+  margin-top: 0;
+  letter-spacing: -0.02em; }
 
 h1 {
   font-size: 2.5em; }
@@ -5849,7 +5850,9 @@ h2.page-title {
     text-align: left; }
 
 h3 {
-  font-size: 1.5em; }
+  font-size: 1.75em;
+  font-weight: 400;
+  color: #19975D; }
 
 h3.section-title {
   font-size: 3rem;
@@ -5859,7 +5862,11 @@ h3.section-title {
       margin-bottom: 60px; } }
 
 h4 {
-  font-size: 1.2em; }
+  font-size: 1.15em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #262626; }
 
 h4.stat-title, h4.event-data-title {
   color: #000000;
@@ -5871,7 +5878,7 @@ h4.stat-title, h4.event-data-title {
   text-align: center; }
 
 p {
-  color: #4c4c4c; }
+  color: #262626; }
 
 a:hover {
   background-color: transparent;
@@ -5888,9 +5895,16 @@ a:hover {
 .btn {
   background-color: #19975D;
   border-color: #19975D;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700; }
+  .btn.btn-large {
+    font-size: 1em; }
   .btn:hover {
-    background-color: #19975D; }
+    background-color: #158150;
+    color: #FFFFFF; }
   .btn-outline {
     background-color: transparent;
     border-color: #000000;
@@ -6921,13 +6935,14 @@ table {
   width: 100%; }
   table th, table td {
     border-left: 1px solid #FFFFFF;
-    padding: 5px; }
+    padding: 1rem 1.25rem; }
     table th:first-of-type, table td:first-of-type {
       border: none; }
   table th {
-    background-color: #19975D; }
+    background-color: #19975D;
+    color: #FFFFFF; }
   table tr:nth-of-type(2n) {
-    background-color: #CED2D5; }
+    background-color: #e9ebed; }
   table table > tbody > tr:nth-of-type(2n) {
     background-color: transparent; }
 

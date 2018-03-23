@@ -8,6 +8,7 @@ h1, h2, h3, h4, h5 {
   color: $header-gray;
   font-family: $helvetica;
   margin-top: 0;
+  letter-spacing: -0.02em;
 }
 
 h1 {
@@ -27,7 +28,9 @@ h2.page-title {
 }
 
 h3 {
-  font-size: 1.5em;
+  font-size: 1.75em;
+  font-weight: 400;
+  color: $green;
 }
 
 h3.section-title {
@@ -40,7 +43,11 @@ h3.section-title {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.15em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $gray;
 }
 
 h4.stat-title, h4.event-data-title {
