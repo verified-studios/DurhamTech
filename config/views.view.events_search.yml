@@ -81,12 +81,11 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: search_api
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_modes:
+            'entity:node':
+              event: teaser
       fields:
         field_event_date:
           id: field_event_date
@@ -553,6 +552,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       use_ajax: true
+      css_class: sidebar
     cache_metadata:
       max-age: -1
       contexts:

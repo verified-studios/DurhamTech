@@ -1,0 +1,10 @@
+uuid: 6444dbfd-46dc-4d80-9215-0f9f9ba511e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.column_teaser
+label: 'Column Teaser'
+targetEntityType: node
+cache: true

@@ -1,8 +1,9 @@
-uuid: 8ec749af-5d18-4236-a08b-cbf1037dac50
+uuid: 72ad487b-2fad-4b4b-8ab5-349940baa6b8
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.column_teaser
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
@@ -23,10 +24,10 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-id: node.event.default
+id: node.event.column_teaser
 targetEntityType: node
 bundle: event
-mode: default
+mode: column_teaser
 content:
   field_event_date:
     weight: 0

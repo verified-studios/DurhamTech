@@ -8,3 +8,20 @@ section.container, section.program, section.career {
     padding: $section-spacing-lg 0;
   }
 }
+
+$sidebar-width: 300px;
+
+.filters-wrapper {
+  @media #{$tablet} {
+    display: inline-block;
+    width: $sidebar-width;
+    vertical-align: top;
+  }
+}
+
+.content-wrapper {
+  @media #{$tablet} {
+    display: inline-block;
+    width: calc(100% - #{$sidebar-width + 5});
+  }
+}
