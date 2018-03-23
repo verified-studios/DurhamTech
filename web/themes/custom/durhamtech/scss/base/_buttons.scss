@@ -18,12 +18,13 @@
 
   &-outline {
     background-color: transparent;
-    border-color: $black;
+    border-color: $gray;
     border-width: 2px;
-    color: $black;
+    color: $gray;
 
     &:hover {
-      background-color: $black;
+      background-color: $gray;
+      border-color: $gray;
       color: $white;
     }
   }
