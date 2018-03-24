@@ -1066,6 +1066,7 @@ display:
         row: false
         fields: false
         empty: false
+        css_class: false
       filter_groups:
         operator: AND
         groups:
@@ -1124,8 +1125,11 @@ display:
           row_class_default: true
           row_class_custom: ''
       row:
-        type: fields
-        options: {  }
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              new_article: teaser
       fields:
         field_news_thumbnail:
           id: field_news_thumbnail
@@ -1520,6 +1524,7 @@ display:
             value: 'News not found.'
             format: basic_html
           plugin_id: text
+      css_class: sidebar
     cache_metadata:
       max-age: -1
       contexts:
