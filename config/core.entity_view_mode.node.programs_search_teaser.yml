@@ -1,0 +1,10 @@
+uuid: 1dab2ab8-00c1-4295-aebd-447df0c21530
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.programs_search_teaser
+label: 'Programs Search Teaser'
+targetEntityType: node
+cache: true

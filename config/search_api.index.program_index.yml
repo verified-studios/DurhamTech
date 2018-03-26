@@ -1,0 +1,76 @@
+uuid: b2a58cb0-119a-4dbc-ac68-f8316dbd0aa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_department
+    - field.storage.node.field_degree_option
+    - field.storage.node.field_program_type
+    - search_api.server.durham_tech
+    - core.entity_view_mode.node.teaser
+  module:
+    - search_api
+    - node
+id: program_index
+name: 'Program Index'
+description: ''
+read_only: false
+field_settings:
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        anonymous: anonymous
+      view_mode:
+        'entity:node':
+          program: teaser
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+  field_program_department:
+    label: Department
+    datasource_id: 'entity:node'
+    property_path: field_program_department
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_program_department
+  field_degree_option:
+    label: 'Degree Option'
+    datasource_id: 'entity:node'
+    property_path: field_degree_option
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_degree_option
+  field_program_type:
+    label: 'Program Type'
+    datasource_id: 'entity:node'
+    property_path: field_program_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_program_type
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - program
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  aggregated_field: {  }
+  add_url: {  }
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

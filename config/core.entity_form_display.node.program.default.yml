@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
     - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_department
     - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
     - field.field.node.program.field_program_stats
@@ -85,6 +86,15 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_program_department:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_program_image:
     weight: 1

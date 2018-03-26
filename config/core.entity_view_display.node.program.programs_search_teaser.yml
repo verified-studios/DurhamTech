@@ -1,0 +1,73 @@
+uuid: 39340145-63ff-4112-a32b-e33f7b9a0532
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.programs_search_teaser
+    - field.field.node.program.field_courses
+    - field.field.node.program.field_degree_option
+    - field.field.node.program.field_description
+    - field.field.node.program.field_format
+    - field.field.node.program.field_min_required_credits
+    - field.field.node.program.field_min_required_inst
+    - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_department
+    - field.field.node.program.field_program_id
+    - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_stats
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_statistic
+    - field.field.node.program.field_total_credit_hours
+    - node.type.program
+  module:
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.program.programs_search_teaser
+targetEntityType: node
+bundle: program
+mode: programs_search_teaser
+content:
+  field_degree_option:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_program_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  addtoany: true
+  field_courses: true
+  field_format: true
+  field_min_required_credits: true
+  field_min_required_inst: true
+  field_min_required_inst_gpa: true
+  field_program_department: true
+  field_program_id: true
+  field_program_stats: true
+  field_program_type: true
+  field_statistic: true
+  field_total_credit_hours: true
+  links: true
