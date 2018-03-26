@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.course.field_average_cost
     - field.field.taxonomy_term.course.field_class_format
     - field.field.taxonomy_term.course.field_credits
     - field.field.taxonomy_term.course.field_department
@@ -32,6 +33,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_average_cost:
+    weight: 8
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_class_format:
     weight: 7
     label: hidden
