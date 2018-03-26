@@ -7283,4 +7283,14 @@ section.container, section.program, section.career, .node--type-landing_page {
   .career-stats-top + .career-stats-bottom {
     border-top: 1px solid #000000; } }
 
+.career.teaser {
+  border-bottom: 1px solid #000000;
+  padding: 30px; }
+  .career.teaser .teaser-title {
+    margin-bottom: 15px; }
+  .career.teaser .edu-requirement {
+    margin-bottom: 15px; }
+  .career.teaser .career-teaser-stat {
+    margin-bottom: 15px; }
+
 /*# sourceMappingURL=style.css.map */
