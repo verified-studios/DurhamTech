@@ -12,8 +12,6 @@ dependencies:
     - field.field.node.career.field_title_image
     - node.type.career
   module:
-    - entity_browser_entity_form
-    - inline_entity_form
     - paragraphs
     - path
 id: node.career.default
@@ -23,28 +21,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_banner_image:
-    weight: 1
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: banner_image_browser
-    type: inline_entity_form_complex
-    region: content
   field_career_statistics:
     type: paragraphs
-    weight: 4
+    weight: 2
     settings:
       title: Statistic
       title_plural: Statistics
@@ -57,13 +40,13 @@ content:
     third_party_settings: {  }
     region: content
   field_degree_option:
-    weight: 5
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_description:
-    weight: 3
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
@@ -72,7 +55,7 @@ content:
     region: content
   field_percentage_infographic:
     type: paragraphs
-    weight: 6
+    weight: 4
     settings:
       title: Infographic
       title_plural: Infographics
@@ -85,7 +68,7 @@ content:
     third_party_settings: {  }
     region: content
   field_related_programs:
-    weight: 7
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -93,30 +76,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_title_image:
-    weight: 2
-    settings:
-      form_mode: default
-      label_singular: ''
-      label_plural: ''
-      allow_new: true
-      allow_existing: true
-      match_operator: CONTAINS
-      override_labels: false
-    third_party_settings:
-      entity_browser_entity_form:
-        entity_browser_id: image_browser
-    type: inline_entity_form_complex
-    region: content
   path:
     type: path
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
+    weight: 9
     region: content
     settings:
       display_label: true
@@ -131,7 +99,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -140,5 +108,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_average_salary: true
+  field_banner_image: true
+  field_title_image: true
   promote: true
   sticky: true

@@ -10,11 +10,9 @@ dependencies:
     - field.field.node.event.field_feature_event_image
     - field.field.node.event.field_featured
     - field.field.node.event.field_rich_text
-    - image.style.thumbnail
     - node.type.event
   module:
     - datetime
-    - image
     - path
     - text
 id: node.event.default
@@ -56,14 +54,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_feature_event_image:
-    weight: 26
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_featured:
     weight: 10
@@ -111,5 +101,6 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
+  field_feature_event_image: true
   promote: true
   sticky: true

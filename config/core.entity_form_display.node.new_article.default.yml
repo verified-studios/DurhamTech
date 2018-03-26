@@ -10,11 +10,9 @@ dependencies:
     - field.field.node.new_article.field_news_thumbnail
     - field.field.node.new_article.field_news_type
     - field.field.node.new_article.field_publish_date
-    - image.style.thumbnail
     - node.type.new_article
   module:
     - datetime
-    - image
     - paragraphs
     - path
 id: node.new_article.default
@@ -57,14 +55,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_news_thumbnail:
-    weight: 26
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_news_type:
     type: options_select
     weight: 5
@@ -100,6 +90,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_news_thumbnail: true
   promote: true
   sticky: true
   uid: true
