@@ -132,3 +132,26 @@
     }
   }
 }
+
+//Program landing
+.view-id-programs_search {
+  .view-filters {
+    text-align: center;
+
+    .bef-exposed-form .form--inline > .form-item {
+      float: none;
+      margin-bottom: 15px;
+    }
+
+    .form-item-search-api-fulltext {
+      display: none;
+    }
+
+    .form-actions {
+      display: inline-block;
+      margin-bottom: 15px;
+      vertical-align: middle;
+      width: auto;
+    }
+  }
+}

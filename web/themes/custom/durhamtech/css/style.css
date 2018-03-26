@@ -7185,6 +7185,19 @@ section.container, section.program, section.career, .node--type-landing_page {
 .program.teaser:last-of-type .content {
   margin-bottom: 0; }
 
+.view-id-programs_search .view-filters {
+  text-align: center; }
+  .view-id-programs_search .view-filters .bef-exposed-form .form--inline > .form-item {
+    float: none;
+    margin-bottom: 15px; }
+  .view-id-programs_search .view-filters .form-item-search-api-fulltext {
+    display: none; }
+  .view-id-programs_search .view-filters .form-actions {
+    display: inline-block;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    width: auto; }
+
 .page-node-type-event .page-title {
   margin-bottom: 30px; }
 

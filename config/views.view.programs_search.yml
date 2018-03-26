@@ -109,7 +109,7 @@ display:
         options:
           view_modes:
             'entity:node':
-              program: programs_search_teaser
+              program: teaser
       fields:
         rendered_item:
           table: search_api_index_program_index
