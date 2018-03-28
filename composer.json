@@ -20,7 +20,7 @@
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",
-    "drupal/core": "^8",
+    "drupal/core": "~8.5",
     "drupal/devel": "^1.2",
     "drupal/entity_browser": "^1.4",
     "drupal/facets": "^1.0@beta",
@@ -133,7 +133,7 @@
     "preferred-install": "dist",
     "sort-packages": true,
     "platform": {
-      "php": "7.0"
+      "php": "7.0.22"
     }
   }
 }
