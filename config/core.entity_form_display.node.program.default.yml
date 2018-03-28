@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.program.field_accredited
     - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
+    - field.field.node.program.field_fin_aid
     - field.field.node.program.field_format
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
@@ -34,8 +36,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_accredited:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
   field_courses:
-    weight: 31
+    weight: 19
     settings:
       match_operator: CONTAINS
       size: 60
@@ -56,6 +65,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_fin_aid:
+    weight: 16
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_format:
     weight: 5
@@ -88,7 +104,7 @@ content:
     type: string_textfield
     region: content
   field_program_department:
-    weight: 32
+    weight: 14
     settings:
       match_operator: CONTAINS
       size: 60
@@ -163,7 +179,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 17
     region: content
     third_party_settings: {  }
   title:
@@ -176,7 +192,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 18
     settings:
       match_operator: CONTAINS
       size: 60

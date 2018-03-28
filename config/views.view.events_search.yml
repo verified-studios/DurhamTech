@@ -13,7 +13,6 @@ dependencies:
     - datetime
     - image
     - search_api
-    - search_api_views_taxonomy
 id: events_search
 label: 'Events Search'
 module: views

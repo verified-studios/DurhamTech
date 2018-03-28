@@ -7115,6 +7115,9 @@ section.container, section.program, section.career, .node--type-landing_page {
   .program .field--name-field-program-image img {
     width: 100%; }
 
+.program .accredited {
+  margin-top: 30px; }
+
 .program .apply-row {
   margin-top: 30px;
   max-width: 400px; }

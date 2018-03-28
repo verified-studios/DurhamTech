@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.program.field_accredited
     - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
+    - field.field.node.program.field_fin_aid
     - field.field.node.program.field_format
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
@@ -33,8 +35,18 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
+  field_accredited:
+    weight: 12
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_courses:
-    weight: 116
+    weight: 14
     label: above
     settings:
       link: true
@@ -42,7 +54,7 @@ content:
     type: entity_reference_label
     region: content
   field_degree_option:
-    weight: 103
+    weight: 3
     label: hidden
     settings:
       link: true
@@ -50,14 +62,24 @@ content:
     type: entity_reference_label
     region: content
   field_description:
-    weight: 102
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
+  field_fin_aid:
+    weight: 13
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_format:
-    weight: 106
+    weight: 5
     label: hidden
     settings:
       link: true
@@ -65,7 +87,7 @@ content:
     type: entity_reference_label
     region: content
   field_min_required_credits:
-    weight: 111
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
@@ -73,7 +95,7 @@ content:
     type: string
     region: content
   field_min_required_inst:
-    weight: 112
+    weight: 8
     label: hidden
     settings:
       link_to_entity: false
@@ -81,7 +103,7 @@ content:
     type: string
     region: content
   field_min_required_inst_gpa:
-    weight: 113
+    weight: 9
     label: hidden
     settings:
       link_to_entity: false
@@ -89,7 +111,7 @@ content:
     type: string
     region: content
   field_program_department:
-    weight: 117
+    weight: 16
     label: above
     settings:
       link: true
@@ -97,7 +119,7 @@ content:
     type: entity_reference_label
     region: content
   field_program_id:
-    weight: 114
+    weight: 10
     label: hidden
     settings:
       link_to_entity: false
@@ -105,7 +127,7 @@ content:
     type: string
     region: content
   field_program_image:
-    weight: 101
+    weight: 1
     label: hidden
     settings:
       link: true
@@ -115,7 +137,7 @@ content:
     region: content
   field_program_stats:
     type: entity_reference_revisions_entity_view
-    weight: 116
+    weight: 15
     label: above
     settings:
       view_mode: default
@@ -123,7 +145,7 @@ content:
     third_party_settings: {  }
     region: content
   field_program_type:
-    weight: 110
+    weight: 6
     label: hidden
     settings:
       link: true
@@ -132,7 +154,7 @@ content:
     region: content
   field_statistic:
     type: entity_reference_revisions_entity_view
-    weight: 115
+    weight: 11
     label: hidden
     settings:
       view_mode: default
@@ -140,7 +162,7 @@ content:
     third_party_settings: {  }
     region: content
   field_total_credit_hours:
-    weight: 105
+    weight: 4
     label: hidden
     settings:
       link_to_entity: false
@@ -148,7 +170,7 @@ content:
     type: string
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

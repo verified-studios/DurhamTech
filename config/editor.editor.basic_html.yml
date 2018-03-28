@@ -20,6 +20,9 @@ settings:
             - Bold
             - Italic
             - Underline
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
         -
           name: Linking
           items:
@@ -47,12 +50,14 @@ settings:
         -
           name: Tools
           items:
+            - PasteFromWord
+            - PasteText
             - Source
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
 image_upload:
   status: true
   scheme: public

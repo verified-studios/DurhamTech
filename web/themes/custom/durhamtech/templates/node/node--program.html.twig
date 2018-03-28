@@ -123,6 +123,12 @@
         </div>
         <div class="col-sm-6">
           {{ content.field_description }}
+
+          {% if content.field_accredited.0['#markup'] == 'Yes' %}
+            <div class="green accredited">This program is accredited {{ content.field_fin_aid.0['#markup'] == 'Yes' ? 'and financial aid eligible' }}</div>
+          {% elseif content.field_fin_aid.0['#markup'] == 'Yes' %}
+            <div class="green accredited">This program is financial aid eligible</div>
+          {% endif %}
           {# application deadline and apply btn here #}
           <div class="row apply-row">
             <div class="app-deadline green col-sm-6">Next Application Deadline is <strong>July 1</strong></div>

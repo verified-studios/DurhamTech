@@ -89,3 +89,4 @@ content:
     third_party_settings: {  }
 hidden:
   description: true
+  field_average_cost: true

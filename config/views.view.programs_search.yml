@@ -10,7 +10,6 @@ dependencies:
   module:
     - better_exposed_filters
     - search_api
-    - search_api_views_taxonomy
 id: programs_search
 label: 'Programs Search'
 module: views

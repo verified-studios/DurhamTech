@@ -28,7 +28,7 @@ settings:
   title_field: false
   title_field_required: false
   default_image:
-    uuid: f9511e33-d0ff-4779-b46b-2f26e39e249e
+    uuid: ''
     alt: News
     title: News
     width: 2362
