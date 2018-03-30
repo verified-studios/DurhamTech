@@ -5853,11 +5853,11 @@ h3 {
   font-size: 1.75em;
   font-weight: 400; }
 
-h3.section-title, .block-views .block-title {
+h3.section-title, .block-views .block-title, .node--type-landing_page .block-title {
   font-size: 3rem;
   margin-bottom: 30px; }
   @media screen and (min-width: 768px) {
-    h3.section-title, .block-views .block-title {
+    h3.section-title, .block-views .block-title, .node--type-landing_page .block-title {
       margin-bottom: 60px; } }
 
 .block-views .block-title {
@@ -7087,6 +7087,9 @@ table {
   0% {
     stroke-dasharray: 0 100; } }
 
+.block--type-text-with-image .field--name-field-image img {
+  width: 100%; }
+
 section.container, section.program, section.career, .node--type-landing_page {
   padding: 30px 0; }
   @media screen and (min-width: 768px) {
@@ -7103,6 +7106,17 @@ section.container, section.program, section.career, .node--type-landing_page {
   .view.sidebar .content-wrapper {
     display: inline-block;
     width: calc(100% - 305px); } }
+
+.node--type-landing_page .block-region-content section {
+  margin-bottom: 30px; }
+  .node--type-landing_page .block-region-content section:last-of-type {
+    margin-bottom: 0; }
+
+@media screen and (min-width: 768px) {
+  .node--type-landing_page .block-region-content section {
+    margin-bottom: 60px; }
+    .node--type-landing_page .block-region-content section:last-of-type {
+      margin-bottom: 0; } }
 
 .program .program-header {
   padding-bottom: 30px;

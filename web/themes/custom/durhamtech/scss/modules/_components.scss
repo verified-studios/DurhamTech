@@ -163,3 +163,11 @@ $banner-menu-orange-hover: #f27604;
     stroke-dasharray: 0 100;
   }
 }
+
+.block--type-text-with-image {
+  .field--name-field-image {
+    img {
+      width: 100%;
+    }
+  }
+}

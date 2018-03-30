@@ -28,3 +28,27 @@ $sidebar-width: 300px;
     }
   }
 }
+
+.node--type-landing_page {
+  .block-region-content {
+    section {
+      margin-bottom: $section-spacing-sm;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    .block-region-content {
+      section {
+        margin-bottom: $section-spacing-lg;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
