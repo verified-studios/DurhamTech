@@ -7322,4 +7322,37 @@ section.container, section.program, section.career, .node--type-landing_page {
   .career.teaser .career-teaser-stat {
     margin-bottom: 15px; }
 
+.person.teaser .person-image {
+  width: 100%; }
+
+.person.teaser .person-details i, .person.teaser .person-details svg {
+  display: inline-block;
+  font-size: 26px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 28px; }
+
+.person.teaser .person-details .field {
+  display: inline-block;
+  margin-bottom: 5px;
+  vertical-align: middle; }
+
+.person.teaser .person-details .person-name {
+  margin-bottom: 0; }
+
+.person.teaser .person-details .person-title {
+  margin-bottom: 5px; }
+
+@media screen and (min-width: 768px) {
+  .person.teaser .person-image {
+    display: inline-block;
+    margin-right: 1%;
+    width: 33%;
+    vertical-align: middle; }
+  .person.teaser .person-details {
+    display: inline-block;
+    width: 63%;
+    vertical-align: middle; } }
+
 /*# sourceMappingURL=style.css.map */

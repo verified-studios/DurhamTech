@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.person.field_department
     - field.field.node.person.field_e_mail
+    - field.field.node.person.field_office_location
     - field.field.node.person.field_person_image
     - field.field.node.person.field_phone_number
     - field.field.node.person.field_position_title
@@ -37,6 +38,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_office_location:
+    weight: 106
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_person_image:
     weight: 101

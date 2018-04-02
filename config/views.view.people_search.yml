@@ -85,6 +85,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: col-sm-4
+          default_row_class: true
+          uses_fields: false
       row:
         type: search_api
         options:

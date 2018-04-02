@@ -4,21 +4,68 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.person.field_department
+    - field.field.node.person.field_e_mail
+    - field.field.node.person.field_office_location
+    - field.field.node.person.field_person_image
+    - field.field.node.person.field_phone_number
+    - field.field.node.person.field_position_title
     - node.type.person
   module:
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.person.teaser
 targetEntityType: node
 bundle: person
 mode: teaser
 content:
-  links:
-    weight: 100
+  field_e_mail:
+    type: basic_string
+    weight: 3
     region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_office_location:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_person_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_phone_number:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_position_title:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
 hidden:
   addtoany: true
   field_department: true
-  field_e_mail: true
-  field_person_image: true
-  field_phone_number: true
-  field_position_title: true
+  links: true
