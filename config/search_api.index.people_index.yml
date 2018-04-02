@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_department
+    - field.storage.node.field_phone_number
+    - field.storage.node.field_position_title
     - search_api.server.durham_tech
   module:
     - search_api
@@ -11,11 +14,44 @@ id: people_index
 name: 'People Index'
 description: ''
 read_only: false
-field_settings: {  }
+field_settings:
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  field_department:
+    label: Department
+    datasource_id: 'entity:node'
+    property_path: field_department
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_department
+  field_phone_number:
+    label: 'Phone Number'
+    datasource_id: 'entity:node'
+    property_path: field_phone_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_phone_number
+  field_position_title:
+    label: Position/Title
+    datasource_id: 'entity:node'
+    property_path: field_position_title
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_position_title
 datasource_settings:
   'entity:node':
     bundles:
-      default: true
+      default: false
       selected:
         - person
     languages:
@@ -26,7 +62,8 @@ processor_settings:
   add_url: {  }
   aggregated_field: {  }
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
   cron_limit: 50
