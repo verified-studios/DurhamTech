@@ -1,9 +1,16 @@
 .person.teaser {
   .person-image {
+    margin-bottom: 20px;
     width: 100%;
+
+    img {
+      margin: 0 auto;
+      width: 50%;
+    }
   }
 
   .person-details {
+    margin-bottom: 20px;
 
     i, svg {
       display: inline-block;
@@ -15,7 +22,7 @@
     }
 
     .field {
-      display: inline-block;
+      display: inline;
       margin-bottom: 5px;
       vertical-align: middle;
     }
@@ -29,12 +36,16 @@
     }
   }
 
-  @media #{$tablet} {
+  @media #{$normal} {
     .person-image {
       display: inline-block;
       margin-right: 1%;
       width: 33%;
       vertical-align: middle;
+      
+      img {
+        width: 100%;
+      }
     }
 
     .person-details {
