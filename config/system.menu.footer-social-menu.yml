@@ -1,0 +1,8 @@
+uuid: 646464a9-ca0c-4e59-a5c2-e42add5bbe8f
+langcode: en
+status: true
+dependencies: {  }
+id: footer-social-menu
+label: 'Footer social menu'
+description: 'Footer menu for social media icons'
+locked: false

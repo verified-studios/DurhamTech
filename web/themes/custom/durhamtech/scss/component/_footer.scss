@@ -32,6 +32,18 @@
         }
       }
     }
+
+    .footer-bottom-social {
+      ul {
+        text-align: center;
+
+        > li {
+          display: inline-block;
+          float: none;
+          text-align: center;
+        }
+      }
+    }
   }
 
   @media #{$tablet} {

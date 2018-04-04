@@ -6903,6 +6903,12 @@ p:last-child,
           color: #FFFFFF;
           font-size: 0.875em;
           padding: 5px 10px; }
+    .footer .footer-bottom .footer-bottom-social ul {
+      text-align: center; }
+      .footer .footer-bottom .footer-bottom-social ul > li {
+        display: inline-block;
+        float: none;
+        text-align: center; }
   @media screen and (min-width: 768px) {
     .footer .footer-top {
       padding: 25px 0; }
