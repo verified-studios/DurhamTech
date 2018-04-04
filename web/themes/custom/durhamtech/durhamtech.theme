@@ -33,6 +33,13 @@ function durhamtech_preprocess_page(&$variables) {
     $variables['banner_img'] = $entity->field_banner_image->entity->getFileUri();
   }
 
+  if($node = \Drupal::request()->attributes->get('node')) {
+    $variables['node_title'] = $node->getTitle();
+  } else if ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    $title = $taxonomy->get('field_title')->getString();
+    $variables['node_title'] = $title;
+  }
+
   //kint($variables);
 }
 

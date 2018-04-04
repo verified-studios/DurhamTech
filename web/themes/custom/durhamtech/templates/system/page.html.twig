@@ -108,6 +108,12 @@
       </div>
     {% endblock %}
     <div class="banner" style="background-image: url('{{ file_url(banner_img) }}')">
+      <div class="banner-text-wrapper">
+        <div class="container">
+          <div class="breadcrumb"><a href="/">Home</a><span>{{ node_title }}</span></div>
+          <div class="banner-title"><h1 class="white">{{ node_title }}</h1></div>
+        </div>
+      </div>
       {{ page.secondary_nav|without('secondary_menu') }}
     </div>
   </div>
