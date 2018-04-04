@@ -1,0 +1,8 @@
+uuid: 9c7a879e-3cd4-44cb-9acd-d098abcb0e34
+langcode: en
+status: true
+dependencies: {  }
+id: footer-bottom-menu
+label: 'Footer bottom menu'
+description: 'Menu for Privacy Policy, accessibility, etc'
+locked: false

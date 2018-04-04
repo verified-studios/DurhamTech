@@ -200,12 +200,7 @@
         <div class="{{ container }}">
           <div class="row">
             <div class="col-sm-6 footer-bottom-menu bottom-footer-menu-placeholder">
-              <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Accessibility</a></li>
-                <li><a href="#">Conditions of Use</a></li>
-                <li><a href="#">Copyright</a></li>
-              </ul>
+              {{ drupal_block('footer_bottom_menu') }}
             </div>
             <div class="col-sm-6 footer-bottom-social">
               {{ drupal_block('footer_social_menu') }}

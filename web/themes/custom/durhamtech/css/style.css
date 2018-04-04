@@ -6916,7 +6916,9 @@ p:last-child,
       float: left;
       text-align: left; }
       .footer .footer-bottom ul > li:first-of-type a {
-        padding-left: 0; } }
+        padding-left: 0; }
+    .footer .footer-bottom .footer-bottom-social ul {
+      text-align: right; } }
 
 #block-footerinformationalblock p {
   color: #FFFFFF;
