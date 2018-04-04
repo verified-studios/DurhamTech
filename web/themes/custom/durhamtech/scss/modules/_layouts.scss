@@ -2,10 +2,12 @@ $section-spacing-sm: 30px;
 $section-spacing-lg: 60px;
 
 section.container, section.program, section.career, .node--type-landing_page {
-  padding: $section-spacing-sm 0;
+  padding-bottom: $section-spacing-sm;
+  padding-top: $section-spacing-sm;
 
   @media #{$tablet} {
-    padding: $section-spacing-lg 0;
+    padding-bottom: $section-spacing-lg;
+    padding-top: $section-spacing-lg;
   }
 }
 
