@@ -7,16 +7,16 @@ dependencies:
 id: career
 label: Career
 type: 'canonical_entities:node'
-pattern: 'career/[node:title]'
+pattern: 'careers/[node:title]'
 selection_criteria:
-  46044f40-1f0a-4cea-b316-5d4b35623055:
+  af672b6e-8645-4cdc-8e72-07abaa3942a5:
     id: node_type
     bundles:
       career: career
     negate: false
     context_mapping:
       node: node
-    uuid: 46044f40-1f0a-4cea-b316-5d4b35623055
+    uuid: af672b6e-8645-4cdc-8e72-07abaa3942a5
 selection_logic: and
 weight: -5
 relationships: {  }

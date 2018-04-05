@@ -1,22 +1,22 @@
-uuid: 2c2adc96-aee1-4ac6-b486-69401c940cc6
+uuid: b45652be-9897-475b-9c75-148907b2486e
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: program
-label: Program
+id: basic_page
+label: 'Basic page'
 type: 'canonical_entities:node'
-pattern: 'academic-programs/[node:title]'
+pattern: '[node:title]'
 selection_criteria:
-  c64ece0d-618c-4d4c-a541-b6dfb43e03ec:
+  d4d1c709-08bd-4c39-9934-21a753761155:
     id: node_type
     bundles:
-      program: program
+      page: page
     negate: false
     context_mapping:
       node: node
-    uuid: c64ece0d-618c-4d4c-a541-b6dfb43e03ec
+    uuid: d4d1c709-08bd-4c39-9934-21a753761155
 selection_logic: and
 weight: -5
 relationships: {  }

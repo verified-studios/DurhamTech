@@ -1,22 +1,22 @@
-uuid: 2c2adc96-aee1-4ac6-b486-69401c940cc6
+uuid: d4c79ea8-828f-4967-a8fe-321f0b10b30f
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: program
-label: Program
+id: events
+label: Events
 type: 'canonical_entities:node'
-pattern: 'academic-programs/[node:title]'
+pattern: 'events/[node:title]'
 selection_criteria:
-  c64ece0d-618c-4d4c-a541-b6dfb43e03ec:
+  9b1d7bd1-fa16-4c2c-a83c-23219d8aeb22:
     id: node_type
     bundles:
-      program: program
+      event: event
     negate: false
     context_mapping:
       node: node
-    uuid: c64ece0d-618c-4d4c-a541-b6dfb43e03ec
+    uuid: 9b1d7bd1-fa16-4c2c-a83c-23219d8aeb22
 selection_logic: and
 weight: -5
 relationships: {  }

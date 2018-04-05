@@ -8,16 +8,16 @@ dependencies:
 id: class
 label: Class
 type: 'canonical_entities:taxonomy_term'
-pattern: 'class/[term:field_title:value]'
+pattern: 'courses/[term:field_title:value]'
 selection_criteria:
-  91c58bc4-6e39-47e9-9f13-0436ea9acb3c:
+  4335143e-e223-4846-b3e3-aa3edae906a3:
     id: 'entity_bundle:taxonomy_term'
     bundles:
       course: course
     negate: false
     context_mapping:
       taxonomy_term: taxonomy_term
-    uuid: 91c58bc4-6e39-47e9-9f13-0436ea9acb3c
+    uuid: 4335143e-e223-4846-b3e3-aa3edae906a3
 selection_logic: and
 weight: -5
 relationships: {  }
