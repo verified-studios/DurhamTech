@@ -7101,11 +7101,11 @@ table {
 .block--type-text-with-image .field--name-field-image img {
   width: 100%; }
 
-section.container, section.program, section.career, .node--type-landing_page {
+section.container, section.program, section.career, .node--type-landing_page, .page.full {
   padding-bottom: 30px;
   padding-top: 30px; }
   @media screen and (min-width: 768px) {
-    section.container, section.program, section.career, .node--type-landing_page {
+    section.container, section.program, section.career, .node--type-landing_page, .page.full {
       padding-bottom: 60px;
       padding-top: 60px; } }
 
