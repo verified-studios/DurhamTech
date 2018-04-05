@@ -467,11 +467,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Learn More'
+          label: 'View Course'
           exclude: false
           alter:
             alter_text: true
-            text: Learn
+            text: 'Learn More'
             make_link: false
             path: ''
             absolute: false
@@ -509,6 +509,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           link_to_item: true
+          use_highlighting: false
           multi_type: separator
           multi_separator: ', '
           plugin_id: search_api
