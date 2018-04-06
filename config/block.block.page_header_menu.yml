@@ -1,0 +1,33 @@
+uuid: f32b2a36-8e6b-4c6d-bbca-d5407af4bb76
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.page-header-menu
+  module:
+    - menu_block
+    - system
+  theme:
+    - durhamtech
+id: page_header_menu
+theme: durhamtech
+region: header
+weight: 0
+provider: null
+plugin: 'menu_block:page-header-menu'
+settings:
+  id: 'menu_block:page-header-menu'
+  label: 'Page Header menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'page-header-menu:'
+  suggestion: page_header_menu
+visibility:
+  request_path:
+    id: request_path
+    pages: "/careers\r\n/careers/*\r\n/academic-programs/*\r\n/academic-programs\r\n/courses\r\n/courses/*"
+    negate: false
+    context_mapping: {  }
