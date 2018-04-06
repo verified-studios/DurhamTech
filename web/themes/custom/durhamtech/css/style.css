@@ -6607,6 +6607,24 @@ body {
   .navbar-toggle .icon-bar {
     background-color: #000000; }
 
+.page-header-wrapper {
+  background-color: #19975D; }
+  .page-header-wrapper nav ul > li {
+    display: inline-block; }
+    .page-header-wrapper nav ul > li a {
+      color: #FFFFFF;
+      display: inline-block; }
+    .page-header-wrapper nav ul > li.active {
+      background-color: #FFFFFF; }
+      .page-header-wrapper nav ul > li.active a {
+        color: #000000; }
+  .page-header-wrapper nav ul.second-tier {
+    display: inline-block; }
+    .page-header-wrapper nav ul.second-tier li {
+      background-color: #FFFFFF; }
+      .page-header-wrapper nav ul.second-tier li a {
+        color: #000000; }
+
 /**
  * Node styling.
  */

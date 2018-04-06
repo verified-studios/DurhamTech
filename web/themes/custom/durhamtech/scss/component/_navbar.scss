@@ -1,11 +1,6 @@
 /**
  * Navbar styling.
  */
-$mobile:          "screen and (max-width: #{$screen-xs-max})";
-$tablet:          "screen and (min-width: #{$screen-sm-min})";
-$normal:          "screen and (min-width: #{$screen-md-min})";
-$wide:            "screen and (min-width: #{$screen-lg-min})";
-$grid-breakpoint: "screen and (min-width: #{$grid-float-breakpoint})";
 
 body {
   // Fix horizontal scrolling on iOS devices.
@@ -188,3 +183,39 @@ $main-nav-height: 60px;
   }
 }
 
+.page-header-wrapper {
+  background-color: $green;
+
+  nav {
+    ul {
+      > li {
+        display: inline-block;
+
+        a {
+          color: $white;
+          display: inline-block;
+        }
+
+        &.active {
+          background-color: $white;
+
+          a {
+            color: $black;
+          }
+        }
+      }
+
+      &.second-tier {
+        display: inline-block;
+
+        li {
+          background-color: $white;
+
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}

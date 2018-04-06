@@ -119,22 +119,22 @@
   </div>
 {% endif %}
 
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    <div class="page-header-wrapper">
+      <div class="container">
+        <div class="col-sm-12" role="heading">
+          {{ page.header }}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
 {# Main #}
 {% block main %}
   <div role="main" class="main-container js-quickedit-main-content">
-
-    {# Header #}
-    {% if page.header %}
-      {% block header %}
-        <div class="{{ container }}">
-          <div class="row">
-            <div class="col-sm-12" role="heading">
-              {{ page.header }}
-            </div>
-          </div>
-        </div>
-      {% endblock %}
-    {% endif %}
 
     {# Sidebar First #}
     {#% if page.sidebar_first %}
