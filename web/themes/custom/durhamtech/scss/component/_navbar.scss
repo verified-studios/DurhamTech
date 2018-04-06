@@ -184,7 +184,7 @@ $main-nav-height: 60px;
 }
 
 .page-header-wrapper {
-  background-color: $green;
+  background-color: $medium-green;
 
   nav {
     ul {
@@ -194,12 +194,18 @@ $main-nav-height: 60px;
         a {
           color: $white;
           display: inline-block;
+          padding: 5px 15px;  
+
+          &:hover {
+            background-color: $white;
+            color: $black;
+          }
         }
 
         &.active {
-          background-color: $white;
 
           a {
+            background-color: $white;
             color: $black;
           }
         }
@@ -209,9 +215,9 @@ $main-nav-height: 60px;
         display: inline-block;
 
         li {
-          background-color: $white;
 
           a {
+            background-color: $white;
             color: $black;
           }
         }

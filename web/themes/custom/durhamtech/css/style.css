@@ -6608,22 +6608,24 @@ body {
     background-color: #000000; }
 
 .page-header-wrapper {
-  background-color: #19975D; }
+  background-color: #81BE41; }
   .page-header-wrapper nav ul > li {
     display: inline-block; }
     .page-header-wrapper nav ul > li a {
       color: #FFFFFF;
-      display: inline-block; }
-    .page-header-wrapper nav ul > li.active {
-      background-color: #FFFFFF; }
-      .page-header-wrapper nav ul > li.active a {
+      display: inline-block;
+      padding: 5px 15px; }
+      .page-header-wrapper nav ul > li a:hover {
+        background-color: #FFFFFF;
         color: #000000; }
+    .page-header-wrapper nav ul > li.active a {
+      background-color: #FFFFFF;
+      color: #000000; }
   .page-header-wrapper nav ul.second-tier {
     display: inline-block; }
-    .page-header-wrapper nav ul.second-tier li {
-      background-color: #FFFFFF; }
-      .page-header-wrapper nav ul.second-tier li a {
-        color: #000000; }
+    .page-header-wrapper nav ul.second-tier li a {
+      background-color: #FFFFFF;
+      color: #000000; }
 
 /**
  * Node styling.
