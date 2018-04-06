@@ -26,12 +26,34 @@ function durhamtech_preprocess_block(&$variables) {
  */
 function durhamtech_preprocess_page(&$variables) {
 
-  // Gets a media image - currently hardcoded to media id 1.
+  // Get current url and split on arguments.
+  $current_path = \Drupal::service('path.current')->getPath();
+  $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+  $url_arr = explode('/', $result);
+
+  // Gets banner images by media name. reset() needed to strip entity from array.
   $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
-  if(isset($entity)) {
-    // Add page template variable with uri of media item.
-    $variables['banner_img'] = $entity->field_banner_image->entity->getFileUri();
+  $program_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Programs Banner']);
+  $program_banner = reset($program_banner);
+  $course_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Courses Banner']);
+  $course_banner = reset($course_banner);
+  $careers_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Careers Banner']);
+  $careers_banner = reset($careers_banner);
+
+  // Load entity based on url.
+  if($url_arr[1] == 'academic-programs' && $program_banner) {
+    $banner = $program_banner;
+  } else if($url_arr[1] == 'courses' && $course_banner) {
+    $banner = reset($course_banner);
+  } else if($url_arr[1] == 'careers' && $careers_banner) {
+    $banner = reset($course_banner);
+  } else if(isset($entity)) {
+    $banner = $entity;
   }
+
+  // Use loaded entity to generate uri of banner image.
+  $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
+
 
   if($node = \Drupal::request()->attributes->get('node')) {
     $variables['node_title'] = $node->getTitle();
