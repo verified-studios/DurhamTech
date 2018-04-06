@@ -46,7 +46,7 @@ function durhamtech_preprocess_page(&$variables) {
   } else if($url_arr[1] == 'courses' && $course_banner) {
     $banner = $course_banner;
   } else if($url_arr[1] == 'careers' && $careers_banner) {
-    $banner = $course_banner;
+    $banner = $careers_banner;
   } else if(isset($entity)) {
     $banner = $entity;
   }
