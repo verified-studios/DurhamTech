@@ -26,26 +26,33 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     $source = $row->getSource();
 
     // Prepare Meeting days data.
-    $days_value = $source['Meeting Days'];
-    $day_rows = explode(PHP_EOL, $days_value);
-    $day_rows = array_filter($day_rows, function ($value) {
-      return $value !== '';
-    });
-    foreach ($day_rows as $row_key => $day_row) {
-      if (strpos($day_row, 'ü')) {
-        $class_data_items[$row_key]['field_meeting_days'] = explode('ü', $day_row);
-      }
-      else {
-        $class_data_items[$row_key]['field_meeting_days'] = $day_row;
+    $days_value = $source['MeetDays'];
+    if (strpos($days_value, ',')) {
+      $day_rows = explode(' ', $days_value);
+      $day_rows = array_filter($day_rows, function ($value) {
+        return $value !== '';
+      });
+      foreach ($day_rows as $row_key => $day_row) {
+        if (strpos($day_row, ',')) {
+          $class_data_items[$row_key]['field_meeting_days'] = explode(',', $day_row);
+        }
+        else {
+          $class_data_items[$row_key]['field_meeting_days'] = $day_row;
+        }
       }
     }
+    else {
+      $row_key = 0;
+      $class_data_items[$row_key]['field_meeting_days'] = explode(' ', $days_value);
+    }
+
 
     // Prepare rooms data.
     $room_value = $source['Room'];
     if (!is_string($room_value)) {
       throw new MigrateException(sprintf('%s is not a string', var_export($room_value, TRUE)));
     }
-    $rooms_row = explode(PHP_EOL, $room_value);
+    $rooms_row = explode(' ', $room_value);
     foreach ($rooms_row as $room_key => $room) {
       $class_data_items[$room_key]['field_room'] = $room;
     }
@@ -63,12 +70,10 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     }
 
     // Prepare Start Time.
+    $start_time_row = [];
     $start_time_value = $source['Start Time'];
-    $start_time_row = explode(PHP_EOL, $start_time_value);
-    $start_time_row = array_filter($start_time_row, function ($value) {
-      return $value !== '';
-    });
-    foreach ($start_time_row as $start_time_key => $start_time) {
+    preg_match_all('/[0-9]{1,2}:[0-9]{2} [A-Z]{2}/', $start_time_value, $start_time_row);
+    foreach ($start_time_row[0] as $start_time_key => $start_time) {
       $class_data_items[$start_time_key]['field_start_time'] = $start_time;
     }
 
@@ -85,12 +90,10 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     }
 
     // Prepare End Time.
+    $end_time_row = [];
     $end_time_value = $source['End Time'];
-    $end_time_row = explode(PHP_EOL, $end_time_value);
-    $end_time_row = array_filter($end_time_row, function ($value) {
-      return $value !== '';
-    });
-    foreach ($end_time_row as $end_time_key => $end_time) {
+    preg_match_all('/[0-9]{1,2}:[0-9]{2} [A-Z]{2}/', $end_time_value, $end_time_row);
+    foreach ($end_time_row[0] as $end_time_key => $end_time) {
       $class_data_items[$end_time_key]['field_end_time'] = $end_time;
     }
 

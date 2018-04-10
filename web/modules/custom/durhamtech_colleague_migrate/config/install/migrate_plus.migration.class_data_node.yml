@@ -10,7 +10,7 @@ dependencies:
       - durhamtech_colleague_migrate
 source:
   plugin: csv
-  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  path: 'public://import/course/WebsiteData - Courses TEST ALL SP1.csv'
   header_row_count: 1
   keys:
     - Id
@@ -20,7 +20,7 @@ source:
     Title: Title of class.
     Type: Type of class.
     Delivery Method: How the course will be presented.
-    Meeting Days: Days of the week the class meets.
+    MeetDays: Days of the week the class meets.
     Start Date: Starting date of the class.
     End Date: Ending date of the class.
     Start Time: Starting time of the class.
@@ -93,6 +93,46 @@ process:
       OL: Online
       CLIN: Clinical
       TBA: TBA
+      SOUT: SOUT
+      OCSD: OCSD
+      AUGC: AUGC
+      BAH: BAH
+      CFD: CFD
+      CFLR: CFLR
+      CJRC: CJRC
+      CLIN: CLIN
+      CREE: CREE
+      DADM: DADM
+      DCAO: DCAO
+      DCCR: DCCR
+      DDFS: DDFS
+      DECI: DECI
+      DLOD: DLOD
+      DRES: DRES
+      ECH: ECH
+      ECHC: ECHC
+      EFLA: EFLA
+      FWRK: FWRK
+      HDSS: HDSS
+      HILL: HILL
+      HOLD: HOLD
+      IC: IC
+      MERC: MERC
+      MTOL: MTOL
+      NDC: NDC
+      NDC2: NDC2
+      OCC: OCC
+      OCC1: OCC1
+      OCCC: OCCC
+      OCSD: OCSD
+      ORGG: ORGG
+      PGDS: PGDS
+      R66: R66
+      SORS: SORS
+      SOUT: SOUT
+      TROS: TROS
+      UMC: UMC
+      WCRS: WCRS
   field_location:
     -
       plugin: callback

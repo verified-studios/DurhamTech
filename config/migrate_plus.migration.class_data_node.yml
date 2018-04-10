@@ -1,4 +1,4 @@
-uuid: 326b2e15-e3c1-4254-80f7-0db4647f3f14
+uuid: 18a6308e-4a49-466e-a6c6-a4cbc3b13279
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: vDCbMum7ZXWhknipScLNBL5tF427w9yBrUZgdgt42YQ
+  default_config_hash: dmf7c7yfjqyNSCOpUchVI_xmRdWYaRGSiMV_Gv7NgVM
 id: class_data_node
 migration_tags:
   - classes
@@ -15,7 +15,7 @@ migration_group: durhamtech_colleague_migrate
 label: 'Individual class data for nodes.'
 source:
   plugin: csv
-  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  path: 'public://import/course/WebsiteData - Courses TEST ALL SP1.csv'
   header_row_count: 1
   keys:
     - Id
@@ -25,7 +25,7 @@ source:
     Title: 'Title of class.'
     Type: 'Type of class.'
     'Delivery Method': 'How the course will be presented.'
-    'Meeting Days': 'Days of the week the class meets.'
+    MeetDays: 'Days of the week the class meets.'
     'Start Date': 'Starting date of the class.'
     'End Date': 'Ending date of the class.'
     'Start Time': 'Starting time of the class.'
@@ -92,6 +92,8 @@ process:
       OL: Online
       CLIN: Clinical
       TBA: TBA
+      SOUT: SOUT
+      OCSD: OCSD
   field_location:
     -
       plugin: callback

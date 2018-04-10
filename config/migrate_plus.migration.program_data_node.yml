@@ -1,4 +1,4 @@
-uuid: 7b7542ee-e8cf-4ec1-b267-0f1247a51250
+uuid: b21101b5-e719-4744-be3b-420c818bef76
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: _rvGk-NFmxikY_7vd2cRSt-xvPM5zNx-mpDqr7mWyTI
+  default_config_hash: BGbKp-PT2DUrrjH_jrHYQtQu_7V5iRlUdWrIk-2cKl8
 id: program_data_node
 migration_tags:
   - classes

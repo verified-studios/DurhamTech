@@ -23,6 +23,8 @@ source:
     Department: Specific category of the course.
     Credits: How many credits the course is worth.
     Delivery Method: How the course will be presented.
+    Acad Level: This field indicates the academic area of the course.
+    Xcrs Local Description: Description that can be entered locally by DT Personnel.
 migration_dependencies:
   optional: {}
   required: {}
@@ -62,4 +64,25 @@ process:
     bundle: Department
     value_key: name
     source: Division
-
+  field_academic_level:
+    -
+      plugin: static_map
+      source: Acad Level
+      map:
+        CU: Curriculum
+        CE: ConEd
+        BSP: Basic Skills
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: academic_level
+      value_key: name
+  field_local_description:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Xcrs Local Description
+    -
+      plugin: durhamtech_course_strip_tags
+      source: Xcrs Local Description

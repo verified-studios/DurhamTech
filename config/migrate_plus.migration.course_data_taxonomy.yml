@@ -1,4 +1,4 @@
-uuid: 70ad3d26-dd54-457c-82ff-098dd01989e7
+uuid: 3ae1a412-c94c-45b4-b141-18477a66b2d7
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: LjNn_d9TLCmvP8AT57Tp6rpWqQvyqQggZjeNTzwm3H4
+  default_config_hash: 2ztQTnnGjUrBlFzP8Qy1VguWMmjtI5P5BZP7VAwlfDg
 id: course_data_taxonomy
 migration_tags:
   - courses
@@ -15,7 +15,7 @@ migration_group: durhamtech_colleague_migrate
 label: 'Course program data for taxonomy terms'
 source:
   plugin: csv
-  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  path: 'public://import/course/WebsiteData - Courses TEST AUT- 3129A.csv'
   header_row_count: 1
   keys:
     - Name
@@ -28,6 +28,8 @@ source:
     Department: 'Specific category of the course.'
     Credits: 'How many credits the course is worth.'
     'Delivery Method': 'How the course will be presented.'
+    'Acad Level': 'This field indicates the academic area of the course.'
+    'Xcrs Local Description': 'Description that can be entered locally by DT Personnel.'
 process:
   name: Name
   field_title: Title
@@ -61,6 +63,28 @@ process:
     bundle: Department
     value_key: name
     source: Division
+  field_academic_level:
+    -
+      plugin: static_map
+      source: 'Acad Level'
+      map:
+        CU: Curriculum
+        CE: ConEd
+        BSP: 'Basic Skills'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: academic_level
+      value_key: name
+  field_local_description:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: 'Xcrs Local Description'
+    -
+      plugin: durhamtech_course_strip_tags
+      source: 'Xcrs Local Description'
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: course
