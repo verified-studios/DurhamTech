@@ -1,0 +1,20 @@
+uuid: 75aa03fb-93bd-4ecc-80b1-c6b92ffead3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+    - node
+id: node.field_quote_image
+field_name: field_quote_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

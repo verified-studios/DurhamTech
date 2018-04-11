@@ -171,3 +171,53 @@ $banner-menu-orange-hover: #f27604;
     }
   }
 }
+
+// quote slideshow
+.slick {
+  .slick-next, .slick-prev {
+    color: $white;
+    font-size: 5em;
+    height: auto;
+  }
+}
+.slick-list {
+
+  .quote.teaser {
+    .content {
+      background-size: cover!important;
+      min-height: 550px;
+
+      .quote-wrapper {
+        background-color: $transparent-black;
+        color: white;
+
+        p {
+          color: $white;
+          line-height: 1.2;
+        }
+
+        .large {
+          font-size: em(30);
+          font-weight: 600;
+        }
+
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    .quote.teaser {
+      .content {
+        .quote-wrapper {
+          max-width: 50%;
+          padding: 60px;
+          padding-right: 100px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}

@@ -54,7 +54,6 @@ function durhamtech_preprocess_page(&$variables) {
   // Use loaded entity to generate uri of banner image.
   $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
 
-
   if($node = \Drupal::request()->attributes->get('node')) {
     $variables['node_title'] = $node->getTitle();
   } else if ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
@@ -63,6 +62,23 @@ function durhamtech_preprocess_page(&$variables) {
   }
 
   //kint($variables);
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function durhamtech_preprocess_node(&$variables) {
+  if($variables['node']->bundle() == 'quote') {
+
+    // Get image field value to get media id.
+    $image_field = $variables['node']->get('field_quote_image')->getValue();
+
+    if(!empty($image_field)) {
+      // Get media entity from id.
+      $entity = \Drupal::entityTypeManager()->getStorage("media")->load($image_field[0]['target_id']);
+      $variables['content']['quote_image_uri'] = $entity->field_image->entity->getFileUri();
+    }
+  }
 }
 
 /**

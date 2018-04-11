@@ -1,0 +1,17 @@
+uuid: ba53f771-e39a-4b35-a6c3-222b1d3b3a13
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Quote
+type: quote
+description: 'Content to build quotes slideshow.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
