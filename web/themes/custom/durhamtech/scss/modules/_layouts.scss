@@ -54,3 +54,18 @@ $sidebar-width: 300px;
     }
   }
 }
+
+.field--name-field-sidebar-elements {
+  > .field--item {
+    margin-bottom: 20px;
+
+  }
+
+  @media #{$tablet} {
+    > .field--item {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
