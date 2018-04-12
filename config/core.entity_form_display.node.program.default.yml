@@ -3,11 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.program.field_accredited
     - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
-    - field.field.node.program.field_fin_aid
     - field.field.node.program.field_format
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
@@ -18,6 +16,7 @@ dependencies:
     - field.field.node.program.field_program_image
     - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
+    - field.field.node.program.field_rich_text
     - field.field.node.program.field_statistic
     - field.field.node.program.field_total_credit_hours
     - node.type.program
@@ -26,6 +25,7 @@ dependencies:
     - inline_entity_form
     - paragraphs
     - path
+    - text
 id: node.program.default
 targetEntityType: node
 bundle: program
@@ -33,19 +33,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_accredited:
-    weight: 16
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_courses:
-    weight: 20
+    weight: 19
     settings:
       match_operator: CONTAINS
       size: 60
@@ -54,7 +47,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_degree_option:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -67,28 +60,13 @@ content:
     third_party_settings: {  }
     type: string_textarea
     region: content
-  field_fin_aid:
-    weight: 17
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   field_format:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_min_required_credits:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_min_required_inst:
     weight: 12
     settings:
       size: 60
@@ -96,7 +74,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_min_required_inst_gpa:
+  field_min_required_inst:
     weight: 13
     settings:
       size: 60
@@ -104,8 +82,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_min_required_inst_gpa:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_program_cost:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -113,7 +99,7 @@ content:
     type: string_textfield
     region: content
   field_program_department:
-    weight: 15
+    weight: 16
     settings:
       match_operator: CONTAINS
       size: 60
@@ -138,7 +124,7 @@ content:
     region: content
   field_program_stats:
     type: paragraphs
-    weight: 14
+    weight: 15
     settings:
       title: 'Statistic with icon'
       title_plural: 'Statistics with icons'
@@ -151,14 +137,22 @@ content:
     third_party_settings: {  }
     region: content
   field_program_type:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_rich_text:
+    weight: 3
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_statistic:
     type: paragraphs
-    weight: 8
+    weight: 9
     settings:
       title: Statistic
       title_plural: Statistics
@@ -171,7 +165,7 @@ content:
     third_party_settings: {  }
     region: content
   field_total_credit_hours:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -180,7 +174,7 @@ content:
     region: content
   path:
     type: path
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -188,7 +182,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 17
     region: content
     third_party_settings: {  }
   title:
@@ -201,7 +195,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 19
+    weight: 18
     settings:
       match_operator: CONTAINS
       size: 60

@@ -1,0 +1,21 @@
+uuid: 1b5d5a39-623e-47e9-82fb-48c4d9e8fdd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rich_text
+    - node.type.program
+  module:
+    - text
+id: node.program.field_rich_text
+field_name: field_rich_text
+entity_type: node
+bundle: program
+label: 'Additional Info'
+description: 'Additional info relating to the program.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

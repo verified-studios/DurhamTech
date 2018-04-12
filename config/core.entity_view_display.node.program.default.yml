@@ -3,11 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.program.field_accredited
     - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
-    - field.field.node.program.field_fin_aid
     - field.field.node.program.field_format
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
@@ -18,12 +16,14 @@ dependencies:
     - field.field.node.program.field_program_image
     - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
+    - field.field.node.program.field_rich_text
     - field.field.node.program.field_statistic
     - field.field.node.program.field_total_credit_hours
     - node.type.program
   module:
     - entity_reference_revisions
     - panelizer
+    - text
     - user
 third_party_settings:
   panelizer:
@@ -36,19 +36,9 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
-  field_accredited:
-    weight: 13
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_courses:
     weight: 15
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -68,16 +58,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
-    region: content
-  field_fin_aid:
-    weight: 14
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_format:
     weight: 5
@@ -121,7 +101,7 @@ content:
     region: content
   field_program_department:
     weight: 17
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -147,7 +127,7 @@ content:
   field_program_stats:
     type: entity_reference_revisions_entity_view
     weight: 16
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -160,6 +140,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_rich_text:
+    weight: 18
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
     region: content
   field_statistic:
     type: entity_reference_revisions_entity_view
