@@ -1,0 +1,22 @@
+uuid: ff2c6199-cbda-4e6a-a83d-88e66cb6974f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_text.field_body
+    - paragraphs.paragraphs_type.sidebar_text
+  module:
+    - text
+id: paragraph.sidebar_text.default
+targetEntityType: paragraph
+bundle: sidebar_text
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }
