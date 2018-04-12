@@ -1,0 +1,9 @@
+uuid: b14572b8-9051-4c8d-bf72-a0d71847376f
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_links
+label: 'Sidebar Links'
+icon_uuid: null
+description: 'List of links to be placed in the sidebar.'
+behavior_plugins: {  }
