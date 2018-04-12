@@ -9,13 +9,18 @@ dependencies:
     - field.field.node.class.field_course
     - field.field.node.class.field_delivery_method
     - field.field.node.class.field_end_date
+    - field.field.node.class.field_end_time
     - field.field.node.class.field_location
+    - field.field.node.class.field_meeting_days
+    - field.field.node.class.field_room
     - field.field.node.class.field_start_date
+    - field.field.node.class.field_start_time
     - node.type.class
   module:
     - datetime
     - entity_reference_revisions
     - options
+    - panelizer
     - user
 third_party_settings:
   panelizer:
@@ -97,6 +102,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   field_end_time: true
