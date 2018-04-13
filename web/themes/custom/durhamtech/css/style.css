@@ -5880,7 +5880,8 @@ h4.stat-title, h4.event-data-title {
   text-align: center; }
 
 p {
-  color: #262626; }
+  color: #262626;
+  line-height: 1.5; }
 
 a:hover {
   background-color: transparent;
