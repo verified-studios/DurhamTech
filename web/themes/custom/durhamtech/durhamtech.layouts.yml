@@ -15,4 +15,12 @@ one_column_mixed:
       label: Full Width
     fixed_3:
       label: Container Width
-
+one_column_sidebar:
+  label: One column with sidebar left
+  category: Panelizer
+  template: templates/panelizer/one-col-sidebar
+  regions:
+    sidebar:
+      label: Left Sidebar
+    content:
+      label: Content
