@@ -29,7 +29,7 @@ function durhamtech_preprocess_page(&$variables) {
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
 
     // Check if overriding banner image exists for node.
-    if(!$node->get('field_banner_image')->isEmpty()) {
+    if($node->hasField('field_banner_image') && !$node->get('field_banner_image')->isEmpty()) {
       $banner_image_field = $node->get('field_banner_image')->getValue();
       if(!empty($banner_image_field)) {
         // Get media entity from id.
@@ -45,6 +45,10 @@ function durhamtech_preprocess_page(&$variables) {
       $url_arr = explode('/', $result);
 
       $url_first_arg = $url_arr[1];
+
+      if(isset($url_first_arg)) {
+        $variables['url_first_arg'] = $url_first_arg;
+      }
 
       // Gets banner images by media name. reset() needed to strip entity from array.
       $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
