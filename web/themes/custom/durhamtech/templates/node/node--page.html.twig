@@ -86,7 +86,6 @@
   {{ title_suffix }}
 
   <div{{ content_attributes.addClass('content') }}>
-    {{ kint(content|keys) }}
     {% if content.field_sidebar_elements.0 %}
       <div class="col-sm-3">
         {{ content.field_sidebar_elements }}
