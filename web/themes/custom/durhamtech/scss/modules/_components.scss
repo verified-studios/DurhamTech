@@ -226,17 +226,10 @@ $banner-menu-orange-hover: #f27604;
 .paragraph--type--sidebar-links {
   .field--item {
     a {
-      background-color: $green;
-      color: $white;
       display: block;
       margin-bottom: 2px;
-      padding: 15px 20px;
+      padding: 10px 15px;
       width: 100%;
-
-      &:hover {
-        background-color: $light-gray;
-        color: $black;
-      }
     }
   }
 }

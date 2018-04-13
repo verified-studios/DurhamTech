@@ -7151,15 +7151,10 @@ table {
     transform: translateY(-50%); } }
 
 .paragraph--type--sidebar-links .field--item a {
-  background-color: #19975D;
-  color: #FFFFFF;
   display: block;
   margin-bottom: 2px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   width: 100%; }
-  .paragraph--type--sidebar-links .field--item a:hover {
-    background-color: #CED2D5;
-    color: #000000; }
 
 section.container, section.program, section.career, .node--type-landing_page, .page.full {
   padding-bottom: 30px;

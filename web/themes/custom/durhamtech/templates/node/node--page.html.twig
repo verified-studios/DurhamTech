@@ -88,10 +88,10 @@
   <div{{ content_attributes.addClass('content') }}>
     {{ kint(content|keys) }}
     {% if content.field_sidebar_elements.0 %}
-      <div class="col-sm-3 col-md-2">
+      <div class="col-sm-3">
         {{ content.field_sidebar_elements }}
       </div>
-      <div class="col-sm-9 col-md-10">
+      <div class="col-sm-9">
         {{ content.field_body }}
       </div>
     {% else %}
