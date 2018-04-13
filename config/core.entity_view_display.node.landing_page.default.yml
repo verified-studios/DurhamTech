@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
@@ -19,43 +20,6 @@ third_party_settings:
     displays:
       default:
         blocks:
-          68d30655-a7ab-48d6-9b8b-b67c0b2e3c9b:
-            id: 'entity_field:node:uid'
-            label: 'Authored by'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: author
-              settings: {  }
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            region: content
-            weight: 0
-            uuid: 68d30655-a7ab-48d6-9b8b-b67c0b2e3c9b
-          055ec2ab-b32c-438b-9a58-be1704e6ba44:
-            id: 'entity_field:node:created'
-            label: 'Authored on'
-            provider: ctools_block
-            label_display: '0'
-            formatter:
-              label: hidden
-              type: timestamp
-              settings:
-                date_format: medium
-                custom_date_format: ''
-                timezone: ''
-              third_party_settings: {  }
-              weight: 0
-              region: content
-            context_mapping:
-              entity: '@panelizer.entity_context:entity'
-            region: content
-            weight: 0
-            uuid: 055ec2ab-b32c-438b-9a58-be1704e6ba44
           cb63d5f5-3071-4b9f-88f0-8bc8d0c48cb6:
             id: 'entity_field:node:body'
             label: Body
@@ -66,11 +30,12 @@ third_party_settings:
               type: text_default
               settings: {  }
               third_party_settings: {  }
+              weight: 0
               region: content
+            region: content
+            weight: -10
             context_mapping:
               entity: '@panelizer.entity_context:entity'
-            region: content
-            weight: 101
             uuid: cb63d5f5-3071-4b9f-88f0-8bc8d0c48cb6
         id: panels_variant
         label: Default
@@ -78,11 +43,12 @@ third_party_settings:
         weight: 0
         layout: layout_onecol
         layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: ''
-        storage_id: ''
+        page_title: null
+        storage_type: panelizer_default
+        storage_id: 'node:landing_page:default:default'
         builder: ipe
         pattern: panelizer
+        static_context: {  }
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -94,6 +60,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   links:
     weight: 100

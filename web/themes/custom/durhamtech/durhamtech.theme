@@ -26,33 +26,52 @@ function durhamtech_preprocess_block(&$variables) {
  */
 function durhamtech_preprocess_page(&$variables) {
 
-  // Get current url and split on arguments.
-  $current_path = \Drupal::service('path.current')->getPath();
-  $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-  $url_arr = explode('/', $result);
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
 
-  // Gets banner images by media name. reset() needed to strip entity from array.
-  $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
-  $program_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Programs Banner']);
-  $program_banner = reset($program_banner);
-  $course_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Courses Banner']);
-  $course_banner = reset($course_banner);
-  $careers_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Careers Banner']);
-  $careers_banner = reset($careers_banner);
+    // Check if overriding banner image exists for node.
+    if(!$node->get('field_banner_image')->isEmpty()) {
+      $banner_image_field = $node->get('field_banner_image')->getValue();
+      if(!empty($banner_image_field)) {
+        // Get media entity from id.
+        $entity = \Drupal::entityTypeManager()->getStorage("media")->load($banner_image_field[0]['target_id']);
+        $banner = $entity;
+      }
 
-  // Load entity based on url.
-  if($url_arr[1] == 'academic-programs' && $program_banner) {
-    $banner = $program_banner;
-  } else if($url_arr[1] == 'courses' && $course_banner) {
-    $banner = $course_banner;
-  } else if($url_arr[1] == 'careers' && $careers_banner) {
-    $banner = $careers_banner;
-  } else if(isset($entity)) {
-    $banner = $entity;
+    } else {
+      // Load a default based on url pattern.
+      // Get current url and split on arguments.
+      $current_path = \Drupal::service('path.current')->getPath();
+      $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+      $url_arr = explode('/', $result);
+
+      $url_first_arg = $url_arr[1];
+
+      // Gets banner images by media name. reset() needed to strip entity from array.
+      $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
+      $program_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Programs Banner']);
+      $program_banner = reset($program_banner);
+      $course_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Courses Banner']);
+      $course_banner = reset($course_banner);
+      $careers_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Careers Banner']);
+      $careers_banner = reset($careers_banner);
+
+      // Load entity based on url.
+      if($url_arr[1] == 'academic-programs' && $program_banner) {
+        $banner = $program_banner;
+      } else if($url_arr[1] == 'courses' && $course_banner) {
+        $banner = $course_banner;
+      } else if($url_arr[1] == 'careers' && $careers_banner) {
+        $banner = $careers_banner;
+      } else if(isset($entity)) {
+        $banner = $entity;
+      }
+    }
   }
 
-  // Use loaded entity to generate uri of banner image.
-  $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
+  if(isset($banner)) {
+    // Use loaded entity to generate uri of banner image.
+    $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
+  }
 
   if($node = \Drupal::request()->attributes->get('node')) {
     $variables['node_title'] = $node->getTitle();

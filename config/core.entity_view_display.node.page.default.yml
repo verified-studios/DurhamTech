@@ -24,18 +24,9 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
-  field_banner_image:
-    weight: 0
-    label: hidden
-    settings:
-      link: true
-      view_mode: default
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: content
   field_body:
     type: entity_reference_revisions_entity_view
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -44,7 +35,7 @@ content:
     region: content
   field_sidebar_elements:
     type: entity_reference_revisions_entity_view
-    weight: 2
+    weight: 1
     label: hidden
     settings:
       view_mode: default
@@ -52,9 +43,10 @@ content:
     third_party_settings: {  }
     region: content
   links:
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   addtoany: true
+  field_banner_image: true

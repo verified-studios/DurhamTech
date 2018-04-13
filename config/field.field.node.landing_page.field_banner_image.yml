@@ -1,19 +1,19 @@
-uuid: 5ce9a5a5-fd72-492e-b65e-1bc5664b7e54
+uuid: a03b280a-0656-45f7-8bce-ed3546f63a47
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_banner_image
     - media_entity.bundle.banner_image
-    - node.type.page
-id: node.page.field_banner_image
+    - node.type.landing_page
+id: node.landing_page.field_banner_image
 field_name: field_banner_image
 entity_type: node
-bundle: page
+bundle: landing_page
 label: 'Banner Image'
-description: 'Banner image override for this specific page. If not image is supplied, a default will be used.'
+description: 'Override banner image for this page. Default will be used is no image is supplied.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

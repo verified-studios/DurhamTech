@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.page.field_sidebar_elements
     - node.type.page
   module:
+    - entity_browser_entity_form
+    - inline_entity_form
     - paragraphs
     - path
 _core:
@@ -17,6 +19,21 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  field_banner_image:
+    type: inline_entity_form_complex
+    weight: 3
+    region: content
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: banner_image_browser
   field_body:
     type: paragraphs
     weight: 1
@@ -47,7 +64,7 @@ content:
     region: content
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -55,7 +72,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -68,7 +85,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -77,6 +94,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_banner_image: true
   promote: true
   sticky: true
