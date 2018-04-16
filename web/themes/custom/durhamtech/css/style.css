@@ -5834,12 +5834,13 @@ body {
 
 h1, h2, h3, h4, h5 {
   color: #4c4c4c;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   margin-top: 0;
   letter-spacing: -0.02em; }
 
 h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  font-weight: 600; }
 
 h2 {
   font-size: 2em; }
@@ -7103,11 +7104,9 @@ table {
       .banner-text-wrapper .breadcrumb a:hover {
         text-decoration: none; }
   .banner-text-wrapper .banner-title {
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     display: inline-block;
     padding: 0 20px; }
-    .banner-text-wrapper .banner-title h1 {
-      font-weight: 800; }
 
 .circular-chart {
   display: block;
