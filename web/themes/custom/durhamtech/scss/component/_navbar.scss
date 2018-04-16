@@ -46,6 +46,11 @@ body {
       &:hover {
         background-color: transparent;
       }
+
+      &:focus {
+        background-color: transparent;
+        outline-color: $green;
+      }
     }
   }
 }

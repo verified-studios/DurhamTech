@@ -6526,6 +6526,10 @@ body {
 .nav > li > a:hover {
   background-color: transparent; }
 
+.nav > li > a:focus {
+  background-color: transparent;
+  outline-color: #19975D; }
+
 @media screen and (min-width: 768px) {
   .navbar.container {
     max-width: 720px; } }
