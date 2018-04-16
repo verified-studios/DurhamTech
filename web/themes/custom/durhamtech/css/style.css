@@ -5895,6 +5895,9 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase; }
 
+ul, ol {
+  margin-left: 20px; }
+
 .btn, .btn-primary {
   background-color: #19975D;
   border-color: #19975D;
