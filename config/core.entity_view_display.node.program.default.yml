@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.program.field_program_department
     - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_printable
     - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
     - field.field.node.program.field_rich_text
@@ -22,6 +23,7 @@ dependencies:
     - node.type.program
   module:
     - entity_reference_revisions
+    - file
     - panelizer
     - text
     - user
@@ -123,6 +125,14 @@ content:
       view_mode: default
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_program_printable:
+    weight: 19
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_program_stats:
     type: entity_reference_revisions_entity_view

@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.program.field_program_department
     - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_printable
     - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
     - field.field.node.program.field_rich_text
@@ -22,6 +23,7 @@ dependencies:
     - node.type.program
   module:
     - entity_browser_entity_form
+    - file
     - inline_entity_form
     - paragraphs
     - path
@@ -121,6 +123,13 @@ content:
       entity_browser_entity_form:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
+    region: content
+  field_program_printable:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
     region: content
   field_program_stats:
     type: paragraphs
