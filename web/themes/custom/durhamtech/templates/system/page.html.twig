@@ -83,6 +83,9 @@
         {% if page.navigation_collapsible %}
           <div id="navbar-collapse" class="navbar-collapse collapse">
             {{ page.navigation_collapsible }}
+            <div class="js-search-trigger">
+              <i class="fas fa-search"></i>
+            </div>
           </div>
         {% endif %}
         {% if not navbar_attributes.hasClass(container) %}
@@ -114,10 +117,16 @@
             <a href="/">Home</a>
             {% if url_first_arg and url_first_arg|lower != node_title|trim|lower|replace({' ': '-'}) %}
               <a href="/{{ url_first_arg }}">{{ url_first_arg|capitalize }}</a>
+            {% elseif url_first_arg and url_first_arg|lower != page['#title']|trim|lower|replace({' ': '-'}) %}
+              <a href="/{{ url_first_arg }}">{{ page['#title']|capitalize }}</a>
             {% endif %}
-            <span>{{ node_title }}</span>
+            {% if node_title %}
+              <span>{{ node_title }}</span>
+            {% elseif page['#title'] %}
+              <span>{{ page['#title'] }}</span>
+            {% endif %}
           </div>
-          <div class="banner-title"><h1 class="white">{{ node_title }}</h1></div>
+          <div class="banner-title"><h1 class="white">{{ node_title ? node_title : page['#title'] }}</h1></div>
         </div>
       </div>
       {{ page.secondary_nav|without('secondary_menu') }}

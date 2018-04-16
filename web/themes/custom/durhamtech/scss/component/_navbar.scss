@@ -225,3 +225,22 @@ $main-nav-height: 60px;
     }
   }
 }
+
+// Search Form
+
+.navbar-collapse {
+  .js-search-trigger {
+    cursor: pointer;
+    display: inline-block;
+    margin: 6px;
+    padding: 15px 0;
+
+    svg, i {
+
+    }
+  }
+}
+.block-views-exposed-filter-blocksearch-page-1 {
+  float: right;
+  display: none;
+}

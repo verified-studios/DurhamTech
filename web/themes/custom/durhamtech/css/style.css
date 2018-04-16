@@ -5895,7 +5895,7 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase; }
 
-.btn {
+.btn, .btn-primary {
   background-color: #19975D;
   border-color: #19975D;
   color: #FFFFFF;
@@ -5903,31 +5903,31 @@ a:hover {
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 700; }
-  .btn.btn-large {
+  .btn.btn-large, .btn-primary.btn-large {
     font-size: 1em; }
-  .btn:hover {
+  .btn:hover, .btn-primary:hover {
     background-color: #158150;
     color: #FFFFFF; }
-  .btn-outline {
+  .btn-outline, .btn-primary-outline {
     background-color: transparent;
     border-color: #262626;
     border-width: 2px;
     color: #262626; }
-    .btn-outline:hover {
+    .btn-outline:hover, .btn-primary-outline:hover {
       background-color: #262626;
       border-color: #262626;
       color: #FFFFFF; }
-  .btn-large {
+  .btn-large, .btn-primary-large {
     padding: 10px 20px; }
-  .btn-full {
+  .btn-full, .btn-primary-full {
     display: block;
     width: 100%; }
-  .btn-white {
+  .btn-white, .btn-primary-white {
     background-color: transparent;
     border-color: #FFFFFF;
     border-width: 2px;
     color: #FFFFFF; }
-    .btn-white:hover {
+    .btn-white:hover, .btn-primary-white:hover {
       background-color: #FFFFFF;
       color: #000000; }
 
@@ -6627,6 +6627,16 @@ body {
     .page-header-wrapper nav ul.second-tier li a {
       background-color: #FFFFFF;
       color: #000000; }
+
+.navbar-collapse .js-search-trigger {
+  cursor: pointer;
+  display: inline-block;
+  margin: 6px;
+  padding: 15px 0; }
+
+.block-views-exposed-filter-blocksearch-page-1 {
+  float: right;
+  display: none; }
 
 /**
  * Node styling.

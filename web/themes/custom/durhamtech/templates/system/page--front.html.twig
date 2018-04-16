@@ -83,6 +83,9 @@
         {% if page.navigation_collapsible %}
           <div id="navbar-collapse" class="navbar-collapse collapse">
             {{ page.navigation_collapsible }}
+            <div class="js-search-trigger">
+              <i class="fas fa-search"></i>
+            </div>
           </div>
         {% endif %}
         {% if not navbar_attributes.hasClass(container) %}
