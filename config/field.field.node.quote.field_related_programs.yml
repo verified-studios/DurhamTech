@@ -1,0 +1,28 @@
+uuid: 161adf06-edc4-4f52-9bf3-831394b42d6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_programs
+    - node.type.program
+    - node.type.quote
+id: node.quote.field_related_programs
+field_name: field_related_programs
+entity_type: node
+bundle: quote
+label: 'Related Programs'
+description: 'Program that the quote is related to.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

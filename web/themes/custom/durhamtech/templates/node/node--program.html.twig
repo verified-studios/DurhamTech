@@ -163,7 +163,10 @@
       {% endif %}
     </section>
 
-    {# slideshow here #}
+    {% set program_quotes = drupal_view('quotes_slideshow', 'quotes_block') %}
+    {% if program_quotes|render|striptags|trim != '' %}
+      {{ drupal_view('quotes_slideshow', 'quotes_block') }}
+    {% endif %}
 
     {% if program_stats_count > 0 %}
       <section class="program-stats-wrapper program">

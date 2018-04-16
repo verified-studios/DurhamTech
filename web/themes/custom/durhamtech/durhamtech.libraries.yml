@@ -6,7 +6,7 @@ global-styling:
     js/script.js: {}
   dependencies:
     - core/jquery
-    - core/jquery.once  
+    - core/jquery.once
 
 bootstrap-scripts:
   js:

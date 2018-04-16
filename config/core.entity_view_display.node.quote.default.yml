@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.quote.field_author
     - field.field.node.quote.field_description
     - field.field.node.quote.field_quote_image
+    - field.field.node.quote.field_related_programs
     - node.type.quote
   module:
     - panelizer
@@ -47,4 +48,5 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_related_programs: true
   links: true

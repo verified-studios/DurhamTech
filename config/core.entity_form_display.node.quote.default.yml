@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.quote.field_author
     - field.field.node.quote.field_description
     - field.field.node.quote.field_quote_image
+    - field.field.node.quote.field_related_programs
     - node.type.quote
   module:
     - entity_browser_entity_form
@@ -52,6 +53,15 @@ content:
       entity_browser_entity_form:
         entity_browser_id: image_browser
     type: inline_entity_form_complex
+    region: content
+  field_related_programs:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path
