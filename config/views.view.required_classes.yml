@@ -372,7 +372,7 @@ display:
           entity_field: vid
           plugin_id: bundle
       sorts: {  }
-      title: 'Required Classes'
+      title: 'Required Courses'
       header: {  }
       footer: {  }
       empty: {  }
@@ -439,11 +439,11 @@ display:
   required_classes:
     display_plugin: block
     id: required_classes
-    display_title: 'Required Classes'
+    display_title: 'Required Courses'
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Required Classes'
+      block_description: 'Required Courses'
       display_description: ''
     cache_metadata:
       max-age: -1
