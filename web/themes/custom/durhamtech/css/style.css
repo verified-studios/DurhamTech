@@ -6001,6 +6001,12 @@ ul, ol {
 .brand-gray {
   color: #808990; }
 
+.bg-alert-orange {
+  background-color: #fdc504; }
+
+.alert-orange {
+  color: #fdc504; }
+
 .margin-5 {
   margin: 5px; }
 
@@ -7024,6 +7030,18 @@ table {
 .path-frontpage .secondary-page-header .banner {
   min-height: 650px; }
 
+.alert.teaser {
+  margin-bottom: 0; }
+  .alert.teaser .field, .alert.teaser svg, .alert.teaser i {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle; }
+  .alert.teaser .js-close-alert {
+    cursor: pointer;
+    float: right;
+    height: 45px;
+    margin-right: 0; }
+
 #block-get-started {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
@@ -7171,6 +7189,15 @@ table {
   margin-bottom: 2px;
   padding: 10px 15px;
   width: 100%; }
+
+.region-alerts {
+  background-color: #fdc504; }
+
+body {
+  margin-top: 0; }
+
+header {
+  margin-top: 15px; }
 
 section.container, section.program, section.career, .node--type-landing_page, .page.full {
   padding-bottom: 30px;

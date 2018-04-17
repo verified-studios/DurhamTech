@@ -13,4 +13,12 @@
       });
     }
   };
+
+  Drupal.behaviors.alerts = {
+    attach: function (context, settings) {
+      $('.region-alerts .js-close-alert').once().click(function() {
+        $('.region-alerts').empty();
+      });
+    }
+  };
 })(jQuery, Drupal);

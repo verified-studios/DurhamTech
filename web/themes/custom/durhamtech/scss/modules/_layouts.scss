@@ -1,6 +1,19 @@
 $section-spacing-sm: 30px;
 $section-spacing-lg: 60px;
 
+// Alerts region
+.region-alerts {
+  background-color: $alert-orange;
+}
+
+body {
+  margin-top: 0;
+}
+
+header {
+  margin-top: 15px;
+}
+
 section.container, section.program, section.career, .node--type-landing_page, .page.full {
   padding-bottom: $section-spacing-sm;
   padding-top: $section-spacing-sm;
