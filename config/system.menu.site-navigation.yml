@@ -1,0 +1,8 @@
+uuid: e8d53d21-cc90-463a-ad22-354ee9681c0f
+langcode: en
+status: true
+dependencies: {  }
+id: site-navigation
+label: 'Site Navigation'
+description: 'Menu used for sidebars'
+locked: false

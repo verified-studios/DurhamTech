@@ -119,7 +119,7 @@
           <div class="breadcrumb">
             <a href="/">Home</a>
             {% if url_first_arg and url_first_arg|lower != node_title|trim|lower|replace({' ': '-'}) %}
-              <a href="/{{ url_first_arg }}">{{ url_first_arg|capitalize }}</a>
+              <a href="/{{ url_first_arg }}">{{ node_title|capitalize }}</a>
             {% elseif url_first_arg and url_first_arg|lower != page['#title']|trim|lower|replace({' ': '-'}) %}
               <a href="/{{ url_first_arg }}">{{ page['#title'].value|capitalize }}</a>
             {% endif %}

@@ -88,6 +88,10 @@
   <div{{ content_attributes.addClass('content') }}>
     {% if content.field_sidebar_elements.0 %}
       <div class="col-sm-3">
+        {% set site_nav = drupal_menu('site-navigation') %}
+        {% if site_nav|render is not empty %}
+          {{ site_nav }}
+        {% endif %}
         {{ content.field_sidebar_elements }}
       </div>
       <div class="col-sm-9">

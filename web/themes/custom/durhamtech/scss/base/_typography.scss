@@ -89,6 +89,37 @@ a {
   text-transform: uppercase;
 }
 
-ul, ol {
+ul:not(.menu), ol:not(.menu) {
   margin-left: 20px;
+}
+
+.menu {
+  .menu {
+    list-style-type: none;
+  }
+
+  &.site-navigation {
+
+    &.nav {
+      > li {
+        > a {
+          font-size: em(20);
+          font-weight: 600;
+        }
+
+        > .menu {
+          padding-left: 0;
+        }
+      }
+    }
+    a {
+      padding-left: 0;
+    }
+
+    .active {
+      > a {
+        color: $black;
+      }
+    }
+  }
 }

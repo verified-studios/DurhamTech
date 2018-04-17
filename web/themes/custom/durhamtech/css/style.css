@@ -5896,8 +5896,24 @@ a:hover {
   font-weight: 400;
   text-transform: uppercase; }
 
-ul, ol {
+ul:not(.menu), ol:not(.menu) {
   margin-left: 20px; }
+
+.menu .menu {
+  list-style-type: none; }
+
+.menu.site-navigation.nav > li > a {
+  font-size: 1.25em;
+  font-weight: 600; }
+
+.menu.site-navigation.nav > li > .menu {
+  padding-left: 0; }
+
+.menu.site-navigation a {
+  padding-left: 0; }
+
+.menu.site-navigation .active > a {
+  color: #000000; }
 
 .btn, .btn-primary {
   background-color: #19975D;
