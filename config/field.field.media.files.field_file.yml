@@ -1,0 +1,27 @@
+uuid: f3ee38a1-52a5-43e8-9ec5-e0a2465fa403
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_file
+    - media_entity.bundle.files
+  module:
+    - file
+id: media.files.field_file
+field_name: field_file
+entity_type: media
+bundle: files
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: media-files
+  file_extensions: 'txt html pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

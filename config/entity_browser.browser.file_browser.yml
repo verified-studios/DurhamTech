@@ -1,0 +1,31 @@
+uuid: 67387bd3-34b5-4acb-b396-7de6d896fbec
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.entity_browser
+  module:
+    - views
+name: file_browser
+label: 'File Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select files'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  48844dad-d6ac-4a29-b537-5e725823396c:
+    settings:
+      view: entity_browser
+      view_display: entity_browser_4
+      submit_text: 'Select file'
+      auto_select: false
+    uuid: 48844dad-d6ac-4a29-b537-5e725823396c
+    weight: 1
+    label: Files
+    id: view
