@@ -3,98 +3,195 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_course
     - field.storage.taxonomy_term.field_title
-    - field.storage.taxonomy_term.field_description
     - field.storage.taxonomy_term.field_credits
     - field.storage.taxonomy_term.field_class_format
-    - field.storage.taxonomy_term.field_average_cost
+    - field.storage.node.field_end_date
+    - field.storage.node.field_start_date
+    - field.storage.node.field_class_item
+    - field.storage.paragraph.field_start_time
+    - field.storage.paragraph.field_end_time
+    - field.storage.paragraph.field_meeting_days
+    - field.storage.node.field_building
+    - field.storage.node.field_location
     - search_api.server.durham_tech
   module:
-    - search_api
     - taxonomy
+    - paragraphs
+    - search_api
+    - node
 id: courses_index
 name: 'Courses Index'
 description: ''
 read_only: false
 field_settings:
-  rendered_item:
-    label: 'Rendered HTML output'
-    property_path: rendered_item
-    type: integer
-    configuration:
-      roles:
-        - anonymous
-      view_mode: {  }
-  url:
-    label: URI
-    property_path: search_api_url
-    type: string
-  name:
-    label: Name
-    datasource_id: 'entity:taxonomy_term'
-    property_path: name
-    type: text
   field_title:
-    label: Title
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_title
+    label: 'Course » Taxonomy term » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_title'
     type: text
     dependencies:
       config:
+        - field.storage.node.field_course
         - field.storage.taxonomy_term.field_title
-  field_description:
-    label: Description
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_description
-    type: integer
+      module:
+        - taxonomy
+  name:
+    label: 'Course » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:name'
+    type: text
     dependencies:
       config:
-        - field.storage.taxonomy_term.field_description
-  description:
-    label: Description
-    datasource_id: 'entity:taxonomy_term'
-    property_path: description
-    type: integer
+        - field.storage.node.field_course
+      module:
+        - taxonomy
   field_credits:
-    label: Credits
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_credits
+    label: 'Course » Taxonomy term » Credits'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_credits'
     type: string
     dependencies:
       config:
+        - field.storage.node.field_course
         - field.storage.taxonomy_term.field_credits
+      module:
+        - taxonomy
   field_class_format:
-    label: 'Class Format'
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_class_format
+    label: 'Course » Taxonomy term » Class Format'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_class_format'
     type: integer
     dependencies:
       config:
+        - field.storage.node.field_course
         - field.storage.taxonomy_term.field_class_format
-  field_average_cost:
-    label: 'Average cost'
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_average_cost
+      module:
+        - taxonomy
+  path:
+    label: 'Course » Taxonomy term » URL alias'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:path'
     type: string
     dependencies:
       config:
-        - field.storage.taxonomy_term.field_average_cost
+        - field.storage.node.field_course
+      module:
+        - taxonomy
+  field_end_date:
+    label: 'End Date'
+    datasource_id: 'entity:node'
+    property_path: field_end_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_end_date
+  field_start_date:
+    label: 'Start Date'
+    datasource_id: 'entity:node'
+    property_path: field_start_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_start_date
+  field_start_time:
+    label: 'Class item » Paragraph » Start Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_class_item:entity:field_start_time'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_start_time
+      module:
+        - paragraphs
+  field_end_time:
+    label: 'Class item » Paragraph » End Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_class_item:entity:field_end_time'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_end_time
+      module:
+        - paragraphs
+  field_meeting_days:
+    label: 'Class item » Paragraph » Meeting Days'
+    datasource_id: 'entity:node'
+    property_path: 'field_class_item:entity:field_meeting_days'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_meeting_days
+      module:
+        - paragraphs
+  tid:
+    label: 'Course » Taxonomy term » Term ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:tid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course
+      module:
+        - taxonomy
+  field_building:
+    label: Building
+    datasource_id: 'entity:node'
+    property_path: field_building
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_building
+  field_location:
+    label: Location
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
 datasource_settings:
-  'entity:taxonomy_term':
+  'entity:node':
     bundles:
       default: false
       selected:
-        - course
+        - class
     languages:
       default: true
       selected: {  }
 processor_settings:
   aggregated_field: {  }
+  highlight:
+    highlight: always
+    highlight_partial: false
+    excerpt: true
+    excerpt_length: 256
+    exclude_fields: {  }
+    prefix: '<strong>'
+    suffix: '</strong>'
+    weights:
+      postprocess_query: 0
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_title
+      - name
+      - field_credits
+      - path
+      - field_meeting_days
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
   add_url: {  }
   rendered_item: {  }
 tracker_settings:
-  default: {  }
+  default:
+    indexing_order: fifo
 options:
   index_directly: true
-  cron_limit: 50
+  cron_limit: 100
 server: durham_tech
