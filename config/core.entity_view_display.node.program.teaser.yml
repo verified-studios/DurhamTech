@@ -7,14 +7,17 @@ dependencies:
     - field.field.node.program.field_courses
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
-    - field.field.node.program.field_format
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
     - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_cost
+    - field.field.node.program.field_program_department
     - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_printable
     - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
+    - field.field.node.program.field_rich_text
     - field.field.node.program.field_statistic
     - field.field.node.program.field_total_credit_hours
     - node.type.program
@@ -39,14 +42,6 @@ content:
     region: content
     label: hidden
     settings: {  }
-    third_party_settings: {  }
-  field_format:
-    type: entity_reference_label
-    weight: 4
-    region: content
-    label: hidden
-    settings:
-      link: false
     third_party_settings: {  }
   field_program_image:
     type: entity_reference_entity_view
@@ -85,7 +80,11 @@ hidden:
   field_min_required_credits: true
   field_min_required_inst: true
   field_min_required_inst_gpa: true
+  field_program_cost: true
+  field_program_department: true
   field_program_id: true
+  field_program_printable: true
+  field_rich_text: true
   field_statistic: true
   field_total_credit_hours: true
   links: true

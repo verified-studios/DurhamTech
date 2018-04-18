@@ -1,16 +1,14 @@
-uuid: 2639fb27-b104-42dd-9ff6-2efd8adcf41b
+uuid: 0ca9f173-2a8e-4238-b338-1833c48d2b76
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - taxonomy
-id: node.field_format
-field_name: field_format
+id: node.field_financial_aid_eligible
+field_name: field_financial_aid_eligible
 entity_type: node
-type: entity_reference
-settings:
-  target_type: taxonomy_term
+type: boolean
+settings: {  }
 module: core
 locked: false
 cardinality: 1

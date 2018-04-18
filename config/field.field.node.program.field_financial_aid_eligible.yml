@@ -1,0 +1,23 @@
+uuid: 65d91dac-ccc1-483e-9615-f7d9cf68b8a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financial_aid_eligible
+    - node.type.program
+id: node.program.field_financial_aid_eligible
+field_name: field_financial_aid_eligible
+entity_type: node
+bundle: program
+label: 'Financial Aid Eligible'
+description: 'Whether program is financial aid eligible.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
