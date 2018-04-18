@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_banner_image
     - field.field.node.page.field_body
+    - field.field.node.page.field_menu
     - field.field.node.page.field_sidebar_elements
     - node.type.page
   module:
@@ -32,6 +33,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_menu:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: entity_reference_entity_id
     region: content
   field_sidebar_elements:
     type: entity_reference_revisions_entity_view

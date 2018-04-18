@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.field_banner_image
     - field.field.node.page.field_body
+    - field.field.node.page.field_menu
     - field.field.node.page.field_sidebar_elements
     - node.type.page
   module:
@@ -47,6 +48,12 @@ content:
       form_display_mode: default
       default_paragraph_type: body
     third_party_settings: {  }
+    region: content
+  field_menu:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_sidebar_elements:
     type: paragraphs

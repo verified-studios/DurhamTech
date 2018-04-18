@@ -86,9 +86,10 @@
   {{ title_suffix }}
 
   <div{{ content_attributes.addClass('content') }}>
-    {% if content.field_sidebar_elements.0 %}
+    {% if content.field_sidebar_elements.0 or content.field_menu %}
       <div class="col-sm-3">
-        {% set site_nav = drupal_menu('site-navigation') %}
+        {% set menu_name = content.field_menu.0['#plain_text'] %}
+        {% set site_nav = drupal_menu(menu_name) %}
         {% if site_nav|render is not empty %}
           {{ site_nav }}
         {% endif %}
