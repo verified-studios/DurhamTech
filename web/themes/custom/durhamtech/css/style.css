@@ -7039,11 +7039,13 @@ table {
   position: relative; }
   .secondary-page-header .banner {
     background-repeat: no-repeat;
+    background-position: 0% 50% !important;
     background-size: cover !important;
     min-height: 400px;
     padding-top: 70px; }
 
 .path-frontpage .secondary-page-header .banner {
+  background-position: 0% 50% !important;
   min-height: 650px; }
 
 .alert.teaser {
