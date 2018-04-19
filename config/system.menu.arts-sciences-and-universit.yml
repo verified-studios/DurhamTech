@@ -1,0 +1,8 @@
+uuid: e042a15e-5c6c-4a31-be79-d419f8fb5e01
+langcode: en
+status: true
+dependencies: {  }
+id: arts-sciences-and-universit
+label: 'Arts, Sciences, and University Transfer Department'
+description: 'Useful links for the ASUT page '
+locked: false

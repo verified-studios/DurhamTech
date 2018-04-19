@@ -1,0 +1,8 @@
+uuid: 9097fde4-b2e2-4433-8cad-ac82bc686469
+langcode: en
+status: true
+dependencies: {  }
+id: library-menu
+label: 'Library Menu'
+description: ''
+locked: false
