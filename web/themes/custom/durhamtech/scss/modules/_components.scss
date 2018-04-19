@@ -190,12 +190,21 @@ $banner-menu-orange-hover: #f27604;
 // quote slideshow
 .slick {
   .slick-next, .slick-prev {
-    color: $white;
-    font-size: 5em;
-    height: auto;
+    font-size: inherit;
+    width: 70px;
+
+    &::before {
+      content: none;
+    }
+
+    svg {
+      color: $white;
+      font-size: 5em;
+      height: auto;
+    }
   }
 }
-.slick-list {
+.slick--view--quotes-slideshow {
 
   .quote.teaser {
     .content {

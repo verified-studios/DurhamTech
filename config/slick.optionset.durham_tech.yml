@@ -7,7 +7,7 @@ name: durham_tech
 label: 'Durham Tech'
 weight: 0
 group: ''
-skin: ''
+skin: fullwidth
 breakpoints: 0
 optimized: false
 options:
@@ -22,8 +22,8 @@ options:
     pauseOnHover: true
     pauseOnDotsHover: false
     arrows: true
-    prevArrow: '<span class="fas fa-angle-double-left fa-5x slick-prev">Prev</span>'
-    nextArrow: '<span class="fas fa-angle-double-right fa-5x slick-next">Next</span>'
+    prevArrow: '<div class="slick-prev"><span class="fas fa-angle-double-left fa-5x">Prev</span></div>'
+    nextArrow: '<div class="slick-next"><span class="fas fa-angle-double-right fa-5x">Next</span></div>'
     downArrow: false
     downArrowTarget: ''
     downArrowOffset: 0
@@ -48,10 +48,10 @@ options:
     slidesToShow: 1
     slidesToScroll: 1
     speed: 500
-    swipe: true
+    swipe: false
     swipeToSlide: true
     edgeFriction: 0.35
-    touchMove: true
+    touchMove: false
     touchThreshold: 5
     useCSS: true
     cssEase: ease
