@@ -81,17 +81,6 @@
     </tbody></table>
   </td>
   <td>
-    <table><tbody>
-      {% for key, paragraph in content.field_class_item if key|first!='#' %}
-        {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
-        {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
-        <tr><td>
-          {{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}
-        </td></tr>
-      {% endfor %}
-    </tbody></table>
-  </td>
-  <td>
     {% if content.field_class_item %}
       <table><tbody>
         {% for key, paragraph in content.field_class_item if key|first!='#' %}
@@ -102,7 +91,17 @@
       </tbody></table>
     {% endif %}
   </td>
-  <td>Instructor</td>
+  <td>
+    <table><tbody>
+      {% for key, paragraph in content.field_class_item if key|first!='#' %}
+        {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
+        {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
+        <tr><td>
+          {{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}
+        </td></tr>
+      {% endfor %}
+    </tbody></table>
+  </td>
   <td>{{ content.field_delivery_method.0|render }}</td>
 
 </tr>

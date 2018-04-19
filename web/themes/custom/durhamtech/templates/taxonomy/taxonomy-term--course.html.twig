@@ -36,7 +36,7 @@
 
   <h2 class="center course-title">{{ name|render|striptags }} {{ content.field_title|render|striptags }}</h2>
 
-  <div class="text-center">
+  <div class="description">
     {{ content.field_description.0|render|replace({"\n": "", "\r\n": "", "\t": "", "\n\r": "", "<br />": ""}) }}
   </div>
   {#{{ content }}#}
