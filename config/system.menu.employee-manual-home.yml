@@ -1,0 +1,8 @@
+uuid: c2a4a9c9-8a63-4889-9c9f-1962c460aea6
+langcode: en
+status: true
+dependencies: {  }
+id: employee-manual-home
+label: 'Employee Handbook'
+description: 'menu for the employee handbook'
+locked: false
