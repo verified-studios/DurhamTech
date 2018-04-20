@@ -1,29 +1,29 @@
-uuid: 0f37d8c6-fe36-4045-998c-3fd7d4f0cceb
+uuid: 9206ce6d-d92f-41b0-ac86-ee05879ca257
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.search
+    - views.view.programs_search
   module:
     - system
     - views
   theme:
     - durhamtech
-id: exposedformsearchpage_1
+id: exposedformprograms_searchpage_1
 theme: durhamtech
 region: content
-weight: -10
+weight: -9
 provider: null
-plugin: 'views_exposed_filter_block:search-page_1'
+plugin: 'views_exposed_filter_block:programs_search-page_1'
 settings:
-  id: 'views_exposed_filter_block:search-page_1'
+  id: 'views_exposed_filter_block:programs_search-page_1'
   label: ''
   provider: views
   label_display: visible
-  views_label: Search
+  views_label: 'Programs Search'
 visibility:
   request_path:
     id: request_path
-    pages: '/search*'
+    pages: /academic-programs
     negate: false
     context_mapping: {  }

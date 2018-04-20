@@ -12,7 +12,7 @@ dependencies:
 id: get_started
 theme: durhamtech
 region: secondary_nav
-weight: 0
+weight: -9
 provider: null
 plugin: 'block_content:c61c846b-b51f-44cd-bdd2-b0120d69111d'
 settings:

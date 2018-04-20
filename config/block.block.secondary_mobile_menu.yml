@@ -11,7 +11,7 @@ dependencies:
 id: secondary_mobile_menu
 theme: durhamtech
 region: navigation_collapsible
-weight: 0
+weight: -10
 provider: null
 plugin: 'menu_block:secondary-menu'
 settings:

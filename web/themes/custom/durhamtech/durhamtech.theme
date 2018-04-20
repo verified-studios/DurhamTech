@@ -181,3 +181,23 @@ function durhamtech_theme_suggestions_block_alter(array &$suggestions, array $va
     array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
   }
 }
+
+/**
+ * Implements hook_form_views_exposed_form_alter() for form templates.
+ */
+function durhamtech_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $view = $form_state->getStorage('view');
+  if ($form_id == 'views_exposed_form' && $view['view']->id() == 'programs_search') {
+    if(\Drupal::service('path.matcher')->isFrontPage()) {
+      $form['actions']['submit']['#value'] = t('Search');
+      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-green btn-lg';
+      $form['actions']['submit']['#prefix'] = '<div class="action">';
+      $form['actions']['submit']['#suffix'] = '<a class="white" href="#">Still need help?</a></div>';
+      $form['search_api_fulltext']['#access'] = FALSE;
+      $form['field_degree_option']['#options']['All'] = t('I\'m interested in');
+      $form['field_program_department']['#options']['All'] = t('I want to learn about ');
+      unset($form['#info']['filter-field_program_department']['label']);
+      unset($form['#info']['filter-field_degree_option']['label']);
+    }
+  }
+}

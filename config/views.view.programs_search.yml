@@ -6,10 +6,10 @@ dependencies:
     - search_api.index.program_index
     - taxonomy.vocabulary.degree_options
     - taxonomy.vocabulary.department
-    - taxonomy.vocabulary.program_type
   module:
     - better_exposed_filters
     - search_api
+    - user
 id: programs_search
 label: 'Programs Search'
 module: views
@@ -26,8 +26,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -165,51 +166,6 @@ display:
           multi_type: separator
           multi_separator: ', '
       filters:
-        field_program_type:
-          id: field_program_type
-          table: search_api_index_program_index
-          field: field_program_type
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_program_type_op
-            label: 'Program Type'
-            description: ''
-            use_operator: false
-            operator: field_program_type_op
-            identifier: field_program_type
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: program_type
-          hierarchy: false
-          error_message: true
-          plugin_id: search_api_term
         field_degree_option:
           id: field_degree_option
           table: search_api_index_program_index
@@ -361,6 +317,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags: {  }
   block_1:
     display_plugin: block
@@ -376,4 +333,26 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
+      tags: {  }
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
+    display_options:
+      display_extenders: {  }
+      path: academic-programs
+      exposed_block: true
+      title: Academic-programs
+      defaults:
+        title: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.permissions
       tags: {  }

@@ -11,7 +11,7 @@ dependencies:
 id: secondary_menu
 theme: durhamtech
 region: secondary_nav
-weight: -5
+weight: -11
 provider: null
 plugin: 'menu_block:secondary-menu'
 settings:
