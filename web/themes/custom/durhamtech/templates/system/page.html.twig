@@ -133,7 +133,7 @@
               {% endif %}
             {% endif %}
           </div>
-          <div class="banner-title"><h1 class="white">{{ url_first_arg ? url_first_arg|capitalize : page['#title'] }}</h1></div>
+          <div class="banner-title"><h1 class="white">{{ parent_title ? parent_title : page['#title'] }}</h1></div>
         </div>
       </div>
       {{ page.secondary_nav|without('secondary_menu', 'breadcrumbs') }}

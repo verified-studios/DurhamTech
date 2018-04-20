@@ -28,6 +28,29 @@ function durhamtech_preprocess_page(&$variables) {
 
   if ($node = \Drupal::routeMatch()->getParameter('node')) {
 
+    // Load a default based on url pattern.
+    // Get current url and split on arguments.
+    $current_path = \Drupal::service('path.current')->getPath();
+    $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+    $url_arr = explode('/', $result);
+
+    $url_first_arg = $url_arr[1];
+
+    if(isset($url_first_arg)) {
+      $variables['url_first_arg'] = $url_first_arg;
+    }
+
+    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+    $links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $node->id()));
+    if ($link = reset($links)) {
+      if ($parent = $link->getParent()) {
+        $parent = $menu_link_manager->createInstance($parent);
+        $parent_title = $parent->getTitle();
+        $parent_url = $parent->getUrlObject()->toString();
+        $variables['parent_title'] = $parent_title;
+      }
+    }
+
     // Check if overriding banner image exists for node.
     if($node->hasField('field_banner_image') && !$node->get('field_banner_image')->isEmpty()) {
       $banner_image_field = $node->get('field_banner_image')->getValue();
@@ -38,17 +61,6 @@ function durhamtech_preprocess_page(&$variables) {
       }
 
     } else {
-      // Load a default based on url pattern.
-      // Get current url and split on arguments.
-      $current_path = \Drupal::service('path.current')->getPath();
-      $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-      $url_arr = explode('/', $result);
-
-      $url_first_arg = $url_arr[1];
-
-      if(isset($url_first_arg)) {
-        $variables['url_first_arg'] = $url_first_arg;
-      }
 
       // Gets banner images by media name. reset() needed to strip entity from array.
       $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
