@@ -6,8 +6,13 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus: {  }
-    parent: ''
+    available_menus:
+      - arts-sciences-and-universit
+      - center-for-the-global-learn
+      - community-engagement-menu
+      - library-menu
+      - the-transfer-center-
+    parent: 'community-engagement-menu:'
 _core:
   default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
 name: 'Basic page'

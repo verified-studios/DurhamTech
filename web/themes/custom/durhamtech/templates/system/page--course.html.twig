@@ -114,10 +114,10 @@
       <div class="banner-text-wrapper">
         <div class="container">
           <div class="breadcrumb"><a href="/">Home</a><a href="/courses">Courses</a><span>{{ node_title }}</span></div>
-          <div class="banner-title"><h1 class="white">Academic Programs</h1></div>
+          <div class="banner-title"><h1 class="white">Courses</h1></div>
         </div>
       </div>
-      {{ page.secondary_nav|without('secondary_menu') }}
+      {{ page.secondary_nav|without('secondary_menu', 'breadcrumbs') }}
     </div>
   </div>
 {% endif %}

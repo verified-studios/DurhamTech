@@ -76,6 +76,7 @@ hidden:
   field_average_salary: true
   field_courses: true
   field_degree_option: true
+  field_financial_aid_eligible: true
   field_licensure_pass_rate: true
   field_min_required_credits: true
   field_min_required_inst: true
