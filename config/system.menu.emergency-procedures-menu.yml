@@ -1,0 +1,8 @@
+uuid: 4db00a7d-8076-4fcc-ada0-59d54a98f1c4
+langcode: en
+status: true
+dependencies: {  }
+id: emergency-procedures-menu
+label: 'Emergency Procedures Menu'
+description: 'Emergency Procedures Menu'
+locked: false

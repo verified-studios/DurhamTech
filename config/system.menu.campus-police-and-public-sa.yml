@@ -1,0 +1,8 @@
+uuid: 22ff089b-3a30-40e7-bc25-56f382fdf5a4
+langcode: en
+status: true
+dependencies: {  }
+id: campus-police-and-public-sa
+label: 'Campus Police and Public Safety Menu'
+description: 'Menu for the Campus Police and Public Safety department pages'
+locked: false
