@@ -22,6 +22,7 @@
     "drupal/console": "^1",
     "drupal/core": "~8.5",
     "drupal/devel": "^1.2",
+    "drupal/editor_advanced_link": "^1.4",
     "drupal/entity_browser": "^1.4",
     "drupal/facets": "^1.0@beta",
     "drupal/fitvids": "^1.0",
