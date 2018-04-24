@@ -1950,6 +1950,60 @@
         }
     },
     {
+        "name": "drupal/ckeditor_youtube",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://git.drupal.org/project/ckeditor_youtube",
+            "reference": "8.x-1.1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://ftp.drupal.org/files/projects/ckeditor_youtube-8.x-1.1.zip",
+            "reference": "8.x-1.1",
+            "shasum": "3629836974a5dd776c7fd2239be87e3598efc77a"
+        },
+        "require": {
+            "drupal/core": "*"
+        },
+        "type": "drupal-module",
+        "extra": {
+            "branch-alias": {
+                "dev-1.x": "1.x-dev"
+            },
+            "drupal": {
+                "version": "8.x-1.1",
+                "datestamp": "1494799320",
+                "security-coverage": {
+                    "status": "covered",
+                    "message": "Covered by Drupal's security advisory policy"
+                }
+            }
+        },
+        "installation-source": "dist",
+        "notification-url": "https://packages.drupal.org/8/downloads",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Mauricio Dinarte (dinarcon)",
+                "homepage": "https://www.drupal.org/u/dinarcon",
+                "role": "Maintainer"
+            }
+        ],
+        "description": "Adds the Youtube plugin to CKEditor.",
+        "homepage": "http://drupal.org/project/ckeditor_youtube",
+        "keywords": [
+            "Drupal"
+        ],
+        "support": {
+            "source": "http://cgit.drupalcode.org/ckeditor_youtube",
+            "issues": "http://drupal.org/project/issues/ckeditor_youtube"
+        }
+    },
+    {
         "name": "drupal/colorbox",
         "version": "1.4.0",
         "version_normalized": "1.4.0.0",

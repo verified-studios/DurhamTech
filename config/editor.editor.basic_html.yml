@@ -30,6 +30,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - Youtube
         -
           name: Lists
           items:
