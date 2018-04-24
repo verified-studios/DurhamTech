@@ -114,7 +114,7 @@
           <div class="banner-title"><h1 class="white">Academic Programs</h1></div>
         </div>
       </div>
-      {{ page.secondary_nav|without('secondary_menu') }}
+      {{ page.secondary_nav|without('secondary_menu', 'breadcrumbs') }}
     </div>
   </div>
 {% endif %}
