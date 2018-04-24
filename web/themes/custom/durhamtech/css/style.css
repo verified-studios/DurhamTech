@@ -7145,7 +7145,6 @@ table {
       .banner-text-wrapper .breadcrumb a:hover {
         text-decoration: none; }
   .banner-text-wrapper .banner-title {
-    background-color: rgba(0, 0, 0, 0.1);
     display: inline-block;
     padding: 0 20px; }
 
