@@ -257,3 +257,17 @@ $banner-menu-orange-hover: #f27604;
     }
   }
 }
+
+.sidebar .menu {
+  .menu {
+    li {
+      padding: 5px 0;
+    }
+  }
+  .active {
+    > a {
+      color: $black;
+      font-weight: 600;
+    }
+  }
+}

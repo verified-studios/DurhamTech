@@ -7213,6 +7213,13 @@ table {
   padding: 10px 15px;
   width: 100%; }
 
+.sidebar .menu .menu li {
+  padding: 5px 0; }
+
+.sidebar .menu .active > a {
+  color: #000000;
+  font-weight: 600; }
+
 .region-alerts {
   background-color: #fdc504; }
 
