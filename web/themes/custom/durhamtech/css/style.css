@@ -7324,6 +7324,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .program-stats-wrapper .paragraph--type--statistic-with-icon {
       padding: 0; } }
 
+.plan-of-study {
+  margin-bottom: 20px; }
+
 .required-classes {
   border-top: 1px solid #000000; }
   .required-classes .section-title {

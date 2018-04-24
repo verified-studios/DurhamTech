@@ -197,17 +197,18 @@
       </section>
     {% endif %}
 
-    {% if content.field_program_printable.0 %}
-      <div class="container printable">
-        <h3 class="section-title">Printable</h3>
-        {{ content.field_program_printable }}
-      </div>
-    {% endif %}
-
     {% set required_classes = drupal_view('required_classes', 'required_classes') %}
     {% if required_classes|render|striptags|trim != '' %}
       <section class="container required-classes">
         <h3 class="section-title">Required <span class="green">Courses</span></h3>
+
+        {% if content.field_program_printable.0 %}
+          <div class="plan-of-study">
+            {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
+            <a href="{{ file_url(printable_uri) }}" target="_blank">Plan of Study</a>
+          </div>
+        {% endif %}
+
         {{ required_classes }}
       </div>
     {% endif %}
