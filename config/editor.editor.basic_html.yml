@@ -39,7 +39,6 @@ settings:
         -
           name: Components
           items:
-            - Table
             - HorizontalRule
         -
           name: Media
@@ -56,6 +55,28 @@ settings:
             - PasteFromWord
             - PasteText
             - Source
+      -
+        -
+          name: Tables
+          items:
+            - tableinsert
+            - tabledelete
+            - tableproperties
+            - tablerowinsertbefore
+            - tablerowinsertafter
+            - tablerowdelete
+            - tablecolumninsertbefore
+            - tablecolumninsertafter
+            - tablecolumndelete
+            - tablecellinsertbefore
+            - tablecellinsertafter
+            - tablecelldelete
+            - tablecellproperties
+            - tablecellsmerge
+            - tablecellmergeright
+            - tablecellmergedown
+            - tablecellsplithorizontal
+            - tablecellsplitvertical
   plugins:
     stylescombo:
       styles: ''
