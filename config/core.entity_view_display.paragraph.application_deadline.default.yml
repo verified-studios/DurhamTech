@@ -15,23 +15,23 @@ bundle: application_deadline
 mode: default
 content:
   field_app_deadline_date:
-    weight: 1
-    label: above
+    weight: 0
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: month_day
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_app_deadline_description:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_term:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       link_to_entity: false
