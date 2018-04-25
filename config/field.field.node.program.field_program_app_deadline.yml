@@ -7,7 +7,7 @@ dependencies:
     - node.type.application_deadlines
     - node.type.program
   content:
-    - 'node:application_deadlines:4fc5007c-678d-437f-98a7-bdbb8aa9e777'
+    - 'node:application_deadlines:c163263f-3f2b-48b6-8e6b-c8d4d00ab0b6'
 id: node.program.field_program_app_deadline
 field_name: field_program_app_deadline
 entity_type: node
@@ -18,7 +18,7 @@ required: false
 translatable: false
 default_value:
   -
-    target_uuid: 4fc5007c-678d-437f-98a7-bdbb8aa9e777
+    target_uuid: c163263f-3f2b-48b6-8e6b-c8d4d00ab0b6
 default_value_callback: ''
 settings:
   handler: 'default:node'

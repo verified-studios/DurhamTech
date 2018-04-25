@@ -199,6 +199,16 @@
       </section>
     {% endif %}
 
+    {% set upcoming_app_deadline = drupal_view('upcoming_application_deadlines', 'block_1') %}
+    {% if upcoming_app_deadline|render|striptags|trim != '' %}
+      <section {{ content_attributes }}>
+        <h3 class="section-title">Upcoming <span class="green">Application Deadlines</span></h3>
+        <div class="row">
+          {{ upcoming_app_deadline }}
+        </div>
+      </section>
+    {% endif %}
+
     {% set required_classes = drupal_view('required_classes', 'required_classes') %}
     {% if required_classes|render|striptags|trim != '' %}
       <section class="container required-classes">
