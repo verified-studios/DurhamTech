@@ -4,25 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.application_deadline
-    - field.field.paragraph.application_deadline.field_app_deadline_date
     - field.field.paragraph.application_deadline.field_term
     - paragraphs.paragraphs_type.application_deadline
-  module:
-    - datetime_range
 id: paragraph.application_deadline.application_deadline
 targetEntityType: paragraph
 bundle: application_deadline
 mode: application_deadline
-content:
-  field_app_deadline_date:
-    weight: 0
-    label: hidden
-    settings:
-      timezone_override: ''
-      format_type: month_day
-      separator: '-'
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
+content: {  }
 hidden:
   field_term: true

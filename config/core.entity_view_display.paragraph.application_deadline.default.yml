@@ -4,10 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.application_deadline.field_app_deadline_date
+    - field.field.paragraph.application_deadline.field_app_deadline_description
     - field.field.paragraph.application_deadline.field_term
     - paragraphs.paragraphs_type.application_deadline
   module:
-    - datetime_range
+    - datetime
 id: paragraph.application_deadline.default
 targetEntityType: paragraph
 bundle: application_deadline
@@ -15,13 +16,19 @@ mode: default
 content:
   field_app_deadline_date:
     weight: 1
-    label: hidden
+    label: above
     settings:
-      separator: '-'
       format_type: medium
       timezone_override: ''
     third_party_settings: {  }
-    type: daterange_default
+    type: datetime_default
+    region: content
+  field_app_deadline_description:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   field_term:
     weight: 0

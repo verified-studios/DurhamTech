@@ -1,17 +1,16 @@
-uuid: e4e5a3a3-5919-4cac-8a26-1d51537e29f8
+uuid: aa0ca63d-44f2-4d07-8949-694b9760c84d
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime
     - paragraphs
-id: paragraph.field_app_deadline_date
-field_name: field_app_deadline_date
+id: paragraph.field_app_deadline_description
+field_name: field_app_deadline_description
 entity_type: paragraph
-type: datetime
+type: string_long
 settings:
-  datetime_type: date
-module: datetime
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

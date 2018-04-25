@@ -130,14 +130,13 @@ function durhamtech_preprocess_node(&$variables) {
     foreach ($field_application_deadline as $item) {
       $paragraph = \Drupal\paragraphs\Entity\Paragraph::load($item['target_id']);
       $date = $paragraph->get('field_app_deadline_date')->getValue();
-      foreach ($date[0] as $value) {
-        if ($now > strtotime($value)) {
-          continue;
-        }
-        if (empty($next_date) || strtotime($next_date) > strtotime($value)) {
-          $next_date = $value;
-          $next_period = date('d M', strtotime($date[0]['value'])) . ' - ' . date('d M', strtotime($date[0]['end_value']));
-        }
+      $timestamp = strtotime($date[0]['value']);
+      if ($now > $timestamp) {
+        continue;
+      }
+      if (empty($next_date) || $next_date > $timestamp) {
+        $next_date = $timestamp;
+        $next_period = date('d M', $next_date);
       }
 
     }

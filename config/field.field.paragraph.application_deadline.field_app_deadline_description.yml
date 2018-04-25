@@ -1,21 +1,19 @@
-uuid: 4be5afea-90a4-430e-8021-91d0716a57d4
+uuid: 237fc8a5-7586-4125-80a3-1d6023d26522
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_app_deadline_date
+    - field.storage.paragraph.field_app_deadline_description
     - paragraphs.paragraphs_type.application_deadline
-  module:
-    - datetime
-id: paragraph.application_deadline.field_app_deadline_date
-field_name: field_app_deadline_date
+id: paragraph.application_deadline.field_app_deadline_description
+field_name: field_app_deadline_description
 entity_type: paragraph
 bundle: application_deadline
-label: Date
+label: Description
 description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
-field_type: datetime
+field_type: string_long
