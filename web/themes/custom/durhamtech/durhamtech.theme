@@ -108,16 +108,40 @@ function durhamtech_preprocess_page(&$variables) {
  * Implements hook_preprocess_node().
  */
 function durhamtech_preprocess_node(&$variables) {
-  if($variables['node']->bundle() == 'quote') {
+  if ($variables['node']->bundle() == 'quote') {
 
     // Get image field value to get media id.
     $image_field = $variables['node']->get('field_quote_image')->getValue();
 
-    if(!empty($image_field)) {
+    if (!empty($image_field)) {
       // Get media entity from id.
       $entity = \Drupal::entityTypeManager()->getStorage("media")->load($image_field[0]['target_id']);
       $variables['content']['quote_image_uri'] = $entity->field_image->entity->getFileUri();
     }
+  }
+
+  if ($variables['node']->bundle() == 'program') {
+    $now = time();
+    $next_date = '';
+    // Get field_application_deadline field value.
+    $app_deadline_node_id = $variables['node']->get('field_program_app_deadline')->getValue()[0]['target_id'];
+    $app_deadline_node = \Drupal\node\Entity\Node::load($app_deadline_node_id);
+    $field_application_deadline = $app_deadline_node->get('field_application_deadline')->getValue();
+    foreach ($field_application_deadline as $item) {
+      $paragraph = \Drupal\paragraphs\Entity\Paragraph::load($item['target_id']);
+      $date = $paragraph->get('field_app_deadline_date')->getValue();
+      foreach ($date[0] as $value) {
+        if ($now > strtotime($value)) {
+          continue;
+        }
+        if (empty($next_date) || strtotime($next_date) > strtotime($value)) {
+          $next_date = $value;
+          $next_period = date('d M', strtotime($date[0]['value'])) . ' - ' . date('d M', strtotime($date[0]['end_value']));
+        }
+      }
+
+    }
+    $variables['content']['next_app_deadline'] = !empty($next_period) ? $next_period : NULL;
   }
 }
 

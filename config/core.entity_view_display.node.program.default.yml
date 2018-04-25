@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
     - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_app_deadline
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_department
     - field.field.node.program.field_program_id
@@ -94,6 +95,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_program_app_deadline:
+    weight: 21
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_program_cost:
     weight: 11

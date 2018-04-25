@@ -27,6 +27,7 @@
     "drupal/editor_advanced_link": "^1.4",
     "drupal/entity_browser": "^1.4",
     "drupal/facets": "^1.0@beta",
+    "drupal/field_defaults": "1.*",
     "drupal/fitvids": "^1.0",
     "drupal/fontawesome": "^2.0",
     "drupal/inline_entity_form": "^1.0@beta",

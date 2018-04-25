@@ -1,0 +1,18 @@
+uuid: 21cb3a01-dc0a-4aeb-ae84-d045fb9dee98
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Application Deadlines'
+type: application_deadlines
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

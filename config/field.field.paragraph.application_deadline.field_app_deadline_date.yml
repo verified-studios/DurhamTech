@@ -1,0 +1,21 @@
+uuid: a078c10b-be11-4163-8f20-e0ed548a261f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_app_deadline_date
+    - paragraphs.paragraphs_type.application_deadline
+  module:
+    - datetime_range
+id: paragraph.application_deadline.field_app_deadline_date
+field_name: field_app_deadline_date
+entity_type: paragraph
+bundle: application_deadline
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange
