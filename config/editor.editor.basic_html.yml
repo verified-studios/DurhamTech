@@ -45,6 +45,7 @@ settings:
           items:
             - Blockquote
             - DrupalImage
+            - file
         -
           name: 'Block Formatting'
           items:

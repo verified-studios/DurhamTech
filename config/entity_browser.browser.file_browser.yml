@@ -8,7 +8,7 @@ dependencies:
     - views
 name: file_browser
 label: 'File Browser'
-display: modal
+display: iframe
 display_configuration:
   width: '650'
   height: '500'
@@ -22,7 +22,7 @@ widgets:
   48844dad-d6ac-4a29-b537-5e725823396c:
     settings:
       view: entity_browser
-      view_display: entity_browser_4
+      view_display: file_browser
       submit_text: 'Select file'
       auto_select: false
     uuid: 48844dad-d6ac-4a29-b537-5e725823396c

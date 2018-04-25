@@ -1,0 +1,26 @@
+uuid: bafba279-2c3d-4479-9db1-4dbcc90d5d5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.files
+  module:
+    - entity_embed
+    - media_entity
+label: File
+id: file
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - files
+  display_plugins:
+    - 'view_mode:media.direct_link'
+    - 'view_mode:media.token'
+    - 'entity_reference:entity_reference_entity_id'
+    - 'entity_reference:entity_reference_label'
+    - 'entity_reference:media_thumbnail'
+  entity_browser: file_browser
+  entity_browser_settings:
+    display_review: true
+icon_uuid: null

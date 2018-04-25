@@ -1,0 +1,36 @@
+uuid: 140e6a86-29a2-422d-9e83-559b6c2ded74
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.direct_link
+    - field.field.media.files.field_file
+    - media_entity.bundle.files
+  module:
+    - file
+id: media.files.direct_link
+targetEntityType: media
+bundle: files
+mode: direct_link
+content:
+  field_file:
+    weight: 1
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  thumbnail: true
+  uid: true
