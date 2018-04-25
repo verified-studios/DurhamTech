@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: career-services-
 label: 'Career Services '
-description: 'Links for Career Services'' home page '
+description: 'Links for Career Services '
 locked: false
