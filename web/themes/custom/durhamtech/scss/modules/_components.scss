@@ -269,9 +269,23 @@ $banner-menu-orange-hover: #f27604;
 }
 
 .sidebar .menu {
+  a {
+    font-size: rem(18);
+  }
+
   .menu {
     li {
       padding: 5px 0;
+
+      a {
+        font-size: rem(16);
+      }
+    }
+
+    .menu {
+      a {
+        font-size: rem(14);
+      }
     }
   }
   .active {

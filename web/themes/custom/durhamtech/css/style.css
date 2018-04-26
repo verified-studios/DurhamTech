@@ -7220,8 +7220,16 @@ table {
   padding: 10px 15px;
   width: 100%; }
 
+.sidebar .menu a {
+  font-size: 1.8rem; }
+
 .sidebar .menu .menu li {
   padding: 5px 0; }
+  .sidebar .menu .menu li a {
+    font-size: 1.6rem; }
+
+.sidebar .menu .menu .menu a {
+  font-size: 1.4rem; }
 
 .sidebar .menu .active > a {
   color: #000000;
