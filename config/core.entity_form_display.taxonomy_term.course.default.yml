@@ -12,6 +12,7 @@ dependencies:
     - field.field.taxonomy_term.course.field_division
     - field.field.taxonomy_term.course.field_local_description
     - field.field.taxonomy_term.course.field_requisites
+    - field.field.taxonomy_term.course.field_seats
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
@@ -83,6 +84,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_seats:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_title:
     weight: 1

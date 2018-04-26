@@ -12,4 +12,6 @@ bundle: application_deadline
 mode: application_deadline
 content: {  }
 hidden:
+  field_app_deadline_date: true
+  field_app_deadline_description: true
   field_term: true
