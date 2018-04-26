@@ -1,6 +1,6 @@
 uuid: 61513a86-f727-44ac-bf77-d45bd07f489a
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.programs_search
