@@ -5885,9 +5885,11 @@ p {
   line-height: 1.5;
   margin: 0 0 20px; }
 
-a:hover {
-  background-color: transparent;
-  color: #B75A13; }
+a {
+  color: #262626; }
+  a:hover {
+    background-color: transparent;
+    color: #CC4700; }
 
 .stat .field--name-field-data {
   font-size: 1.5em;
@@ -5983,10 +5985,10 @@ ul:not(.menu), ol:not(.menu) {
   color: #4c4c4c; }
 
 .bg-dark-orange {
-  background-color: #B75A13; }
+  background-color: #CC4700; }
 
 .dark-orange {
-  color: #B75A13; }
+  color: #CC4700; }
 
 .bg-transparent-black {
   background-color: rgba(0, 0, 0, 0.7); }
@@ -7193,26 +7195,33 @@ table {
 
 .slick--view--quotes-slideshow .quote.teaser .content {
   background-size: cover !important;
+  background-position: 50% 50% !important;
   min-height: 550px; }
   .slick--view--quotes-slideshow .quote.teaser .content .quote-wrapper {
     background-color: rgba(0, 0, 0, 0.7);
-    color: white; }
+    bottom: 0;
+    color: white;
+    padding: 30px;
+    position: absolute; }
     .slick--view--quotes-slideshow .quote.teaser .content .quote-wrapper p {
       color: #FFFFFF;
       line-height: 1.2; }
     .slick--view--quotes-slideshow .quote.teaser .content .quote-wrapper .large {
-      font-size: 1.875em;
+      font-size: 1.125em;
       font-weight: 600; }
 
 @media screen and (min-width: 768px) {
   .slick--view--quotes-slideshow .quote.teaser .content .quote-wrapper {
+    bottom: auto;
     max-width: 50%;
     padding: 60px;
     padding-right: 100px;
     position: absolute;
     right: 0;
     top: 50%;
-    transform: translateY(-50%); } }
+    transform: translateY(-50%); }
+    .slick--view--quotes-slideshow .quote.teaser .content .quote-wrapper .large {
+      font-size: 1.5625em; } }
 
 .paragraph--type--sidebar-links .field--item a {
   display: block;
@@ -7234,6 +7243,8 @@ table {
 .sidebar .menu .active > a {
   color: #000000;
   font-weight: 600; }
+  .sidebar .menu .active > a:hover {
+    color: #CC4700; }
 
 .region-alerts {
   background-color: #fdc504; }

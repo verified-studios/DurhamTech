@@ -169,9 +169,9 @@
       {% endif %}
     </section>
 
-    {% set program_quotes = drupal_view('quotes_slideshow', 'quotes_block') %}
+    {% set program_quotes = drupal_view('quotes_slideshow', 'program_quotes_block') %}
     {% if program_quotes|render|striptags|trim != '' %}
-      {{ drupal_view('quotes_slideshow', 'quotes_block') }}
+      {{ drupal_view('quotes_slideshow', 'program_quotes_block') }}
     {% endif %}
 
     {% if program_stats_count > 0 %}

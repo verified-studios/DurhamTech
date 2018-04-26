@@ -219,11 +219,15 @@ $banner-menu-orange-hover: #f27604;
   .quote.teaser {
     .content {
       background-size: cover!important;
+      background-position: 50% 50%!important;
       min-height: 550px;
 
       .quote-wrapper {
         background-color: $transparent-black;
+        bottom: 0;
         color: white;
+        padding: 30px;
+        position: absolute;
 
         p {
           color: $white;
@@ -231,7 +235,7 @@ $banner-menu-orange-hover: #f27604;
         }
 
         .large {
-          font-size: em(30);
+          font-size: em(18);
           font-weight: 600;
         }
 
@@ -243,6 +247,7 @@ $banner-menu-orange-hover: #f27604;
     .quote.teaser {
       .content {
         .quote-wrapper {
+          bottom: auto;
           max-width: 50%;
           padding: 60px;
           padding-right: 100px;
@@ -250,6 +255,10 @@ $banner-menu-orange-hover: #f27604;
           right: 0;
           top: 50%;
           transform: translateY(-50%);
+
+          .large {
+            font-size: em(25);
+          }
         }
       }
     }
@@ -292,6 +301,10 @@ $banner-menu-orange-hover: #f27604;
     > a {
       color: $black;
       font-weight: 600;
+
+      &:hover {
+        color: $dark-orange;
+      }
     }
   }
 }
