@@ -1,0 +1,9 @@
+uuid: a086080b-57f0-45c1-bb2b-c3c8244931da
+langcode: en
+status: true
+dependencies: {  }
+name: 'Continuing education category'
+vid: continuing_education_category
+description: ''
+hierarchy: 0
+weight: 0
