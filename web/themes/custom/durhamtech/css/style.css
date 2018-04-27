@@ -7183,6 +7183,19 @@ table {
     transform: translateY(-50%);
     width: 30%; }
 
+.view-id-homepage.view-display-id-homepage_events {
+  margin-left: 10%; }
+  .view-id-homepage.view-display-id-homepage_events .event {
+    margin: 20px 0 40px; }
+  .view-id-homepage.view-display-id-homepage_events .field--name-field-event-location,
+  .view-id-homepage.view-display-id-homepage_events .event-time {
+    display: none; }
+  .view-id-homepage.view-display-id-homepage_events .view-more {
+    margin-top: 10px; }
+    .view-id-homepage.view-display-id-homepage_events .view-more a {
+      display: inline-block;
+      width: auto; }
+
 .circular-chart {
   display: block;
   height: auto;

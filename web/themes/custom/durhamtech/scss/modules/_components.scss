@@ -195,6 +195,28 @@ $banner-menu-orange-hover: #f27604;
       width: 30%;
     }
   }
+
+  &.view-display-id-homepage_events {
+    margin-left: 10%;
+
+    .event {
+      margin: 20px 0 40px;
+    }
+
+    .field--name-field-event-location,
+    .event-time {
+      display: none;
+    }
+
+    .view-more {
+      margin-top: 10px;
+
+      a {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
 }
 
 // Circle infographic
