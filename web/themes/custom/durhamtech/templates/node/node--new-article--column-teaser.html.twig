@@ -66,29 +66,29 @@
  */
 #}
 {%
-  set classes = [
-    node.bundle|clean_class,
-    node.isPromoted() ? 'is-promoted',
-    node.isSticky() ? 'is-sticky',
-    not node.isPublished() ? 'is-unpublished',
-    view_mode ? view_mode|clean_class,
-    'clearfix',
-  ]
+set classes = [
+node.bundle|clean_class,
+node.isPromoted() ? 'is-promoted',
+node.isSticky() ? 'is-sticky',
+not node.isPublished() ? 'is-unpublished',
+view_mode ? view_mode|clean_class,
+'clearfix',
+]
 %}
 <article{{ attributes.addClass(classes) }}>
-
   <div{{ content_attributes.addClass('content') }}>
-    {% set publish_date = content.field_publish_date.0['#text']|date('U') %}
-    <a href="{{ url }}">
-      <h3 class="news-title">{{ label }}</h3>
-    </a>
-    <div class="news-metadata">
-      {{ content.field_author }}
-      {{ publish_date|format_date('custom', 'M d, Y') }}
+    <div class="news-teaser-thumbnail">
+      {{ content.field_news_thumbnail }}
     </div>
-
-    {{ content.field_body }}
-
+    <a href="{{ url }}">
+      <h4 class="news-teaser-title">{{ label }}</h4>
+    </a>
+    <div class="news-teaser-date">
+      {{ content.field_publish_date }}
+    </div>
+    <div class="news-teaser-author">
+      {{ content.field_author }}
+    </div>
   </div>
 
 </article>

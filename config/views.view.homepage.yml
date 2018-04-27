@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.column_teaser
     - node.type.event
     - node.type.new_article
   module:
@@ -51,7 +52,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 5
+          items_per_page: 3
           offset: 0
       style:
         type: default
@@ -196,6 +197,8 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      link_url: news
+      link_display: custom_url
     cache_metadata:
       max-age: -1
       contexts:
@@ -212,6 +215,27 @@ display:
     display_options:
       display_extenders: {  }
       display_description: ''
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: column_teaser
+      use_more: true
+      use_more_always: true
+      use_more_text: 'See All News'
+      link_display: custom_url
+      link_url: news
     cache_metadata:
       max-age: -1
       contexts:
@@ -233,6 +257,13 @@ display:
         title: false
         filters: false
         filter_groups: false
+        style: false
+        row: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
       filters:
         status:
           value: '1'
@@ -289,6 +320,19 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: column_teaser
+      use_more: true
+      use_more_always: true
+      use_more_text: 'See All Events'
+      link_display: custom_url
+      link_url: events
     cache_metadata:
       max-age: -1
       contexts:
