@@ -15,6 +15,7 @@ dependencies:
     - field.storage.paragraph.field_meeting_days
     - field.storage.node.field_building
     - field.storage.node.field_location
+    - field.storage.taxonomy_term.field_seats
     - search_api.server.durham_tech
   module:
     - taxonomy
@@ -154,6 +155,17 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_location
+  field_seats:
+    label: 'Course » Taxonomy term » Seats'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_seats'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course
+        - field.storage.taxonomy_term.field_seats
+      module:
+        - taxonomy
 datasource_settings:
   'entity:node':
     bundles:
