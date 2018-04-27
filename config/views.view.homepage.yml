@@ -207,46 +207,9 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
+  homepage_events:
     display_plugin: block
-    id: block_1
-    display_title: 'Homepage News Block'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      style:
-        type: default
-        options: {  }
-      defaults:
-        style: false
-        row: false
-        use_more: false
-        use_more_always: false
-        use_more_text: false
-        link_display: false
-        link_url: false
-      row:
-        type: 'entity:node'
-        options:
-          relationship: none
-          view_mode: column_teaser
-      use_more: true
-      use_more_always: true
-      use_more_text: 'See All News'
-      link_display: custom_url
-      link_url: news
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_2:
-    display_plugin: block
-    id: block_2
+    id: homepage_events
     display_title: 'Homepage Events Block'
     position: 2
     display_options:
@@ -333,6 +296,43 @@ display:
       use_more_text: 'See All Events'
       link_display: custom_url
       link_url: events
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  homepage_news:
+    display_plugin: block
+    id: homepage_news
+    display_title: 'Homepage News Block'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      style:
+        type: default
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: column_teaser
+      use_more: true
+      use_more_always: true
+      use_more_text: 'See All News'
+      link_display: custom_url
+      link_url: news
     cache_metadata:
       max-age: -1
       contexts:
