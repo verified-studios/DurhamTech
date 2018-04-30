@@ -7286,6 +7286,16 @@ table {
   .sidebar .menu .active > a:hover {
     color: #CC4700; }
 
+.pagination > li a, .pagination > li span {
+  color: #CC4700; }
+  .pagination > li a:hover, .pagination > li span:hover {
+    color: #CC4700; }
+
+.pagination > li.active a {
+  background-color: #19975D; }
+  .pagination > li.active a:hover {
+    background-color: #CC4700; }
+
 .region-alerts {
   background-color: #fdc504; }
 

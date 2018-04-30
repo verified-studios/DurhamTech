@@ -371,3 +371,26 @@ $banner-menu-orange-hover: #f27604;
     }
   }
 }
+
+// Pagers
+.pagination {
+  > li {
+    a, span {
+      color: $dark-orange;
+
+      &:hover {
+        color: $dark-orange;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $green;
+
+        &:hover {
+          background-color: $dark-orange;
+        }
+      }
+    }
+  }
+}
