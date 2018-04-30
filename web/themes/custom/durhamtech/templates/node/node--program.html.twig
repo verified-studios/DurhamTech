@@ -207,7 +207,7 @@
         {% if content.field_program_printable.0 %}
           <div class="plan-of-study">
             {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
-            <a href="{{ file_url(printable_uri) }}" target="_blank">Plan of Study</a>
+            <a href="{{ file_url(printable_uri) }}" target="_blank"><i class="far fa-file-pdf"></i> Plan of Study</a>
           </div>
         {% endif %}
 

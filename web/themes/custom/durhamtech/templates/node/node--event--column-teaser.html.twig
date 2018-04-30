@@ -96,7 +96,7 @@
     <div class="event-teaser-description">
       {#{ content.field_rich_text }#}
       {% set body = content.field_rich_text.0['#text']|render|striptags %}
-      {{ body|length > 260 ? body|slice(0, 260) ~ '...' : body }}
+      <div class="field--name-field-description">{{ body|length > 160 ? body|slice(0, 160) ~ '...' : body }}</div>
 
       <div class="view-more">
         <a href="{{ url }}" class="btn btn-outline btn-full">Register</a>
