@@ -5886,10 +5886,11 @@ p {
   margin: 0 0 20px; }
 
 a {
-  color: #262626; }
+  color: #CC4700; }
   a:hover {
     background-color: transparent;
-    color: #CC4700; }
+    color: #CC4700;
+    text-decoration: underline; }
 
 .stat .field--name-field-data {
   font-size: 1.5em;

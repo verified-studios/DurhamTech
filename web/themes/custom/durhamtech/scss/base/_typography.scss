@@ -73,11 +73,12 @@ p {
 }
 
 a {
-  color: $gray;
+  color: $dark-orange;
 
   &:hover {
     background-color: transparent;
     color: $hover-color;
+    text-decoration: underline;
   }
 }
 
