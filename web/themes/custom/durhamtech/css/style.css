@@ -7343,6 +7343,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .program .field--name-field-program-image img {
     width: 100%; }
 
+.program .image, .program .description {
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .program .accredited {
   margin-top: 30px; }
 
@@ -7362,6 +7366,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 @media screen and (min-width: 768px) {
   .program .program-header {
     padding-bottom: 60px; }
+  .program .image {
+    float: left;
+    margin-right: 5%;
+    width: 45%; }
   .program .field--name-field-program-image {
     margin-bottom: 0;
     width: calc(100% - 10px); }
