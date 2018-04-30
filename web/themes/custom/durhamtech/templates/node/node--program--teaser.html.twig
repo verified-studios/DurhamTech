@@ -91,13 +91,13 @@
         </h3>
         {% set description = content.field_description.0['#context'].value|render %}
         <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
-        {% if content.field_program_type.0 %}
+        {#% if content.field_program_type.0 %}
           <div class="type">Type: {{ content.field_program_type.0 }}</div>
         {% endif %}
         {% if content.field_program_stats.0 %}
           <div class="format">Format: {{ content.field_format.0 }}</div>
         {% endif %}
-        {{ content.field_program_stats }}
+        {{ content.field_program_stats }#}
       </div>
       <div class="col-sm-2">
         <a href="{{ url }}" class="btn btn-full btn-outline">Learn More</a>
