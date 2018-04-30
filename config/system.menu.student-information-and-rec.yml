@@ -1,0 +1,8 @@
+uuid: c6ebd052-1050-4019-8aac-3f5d9c25a089
+langcode: en
+status: true
+dependencies: {  }
+id: student-information-and-rec
+label: 'Student Information and Records'
+description: 'menu for Student Information and Records'
+locked: false

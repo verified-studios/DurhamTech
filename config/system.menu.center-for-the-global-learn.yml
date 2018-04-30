@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: center-for-the-global-learn
 label: 'Center for the Global Learner '
-description: ''
+description: 'menu for Center for the Global Learner '
 locked: false
