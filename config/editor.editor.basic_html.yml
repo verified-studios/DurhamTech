@@ -6,6 +6,13 @@ dependencies:
     - filter.format.basic_html
   module:
     - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'txt pdf doc docx'
 _core:
   default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
 format: basic_html
@@ -45,6 +52,7 @@ settings:
           items:
             - Blockquote
             - DrupalImage
+            - DrupalFile
             - file
         -
           name: 'Block Formatting'
