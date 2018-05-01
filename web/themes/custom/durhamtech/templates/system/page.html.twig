@@ -133,7 +133,10 @@
               {% endif %}
             {% endif %}
           </div>
-          <div class="banner-title"><h1 class="white">{{ parent_title ? parent_title : page['#title'] }}</h1></div>
+          {% set breadcrumb_args = page.secondary_nav.breadcrumbs|render|striptags|trim|split('\n') %}
+          {% set bc_sec_arg = breadcrumb_args.1|trim %}
+
+          <div class="banner-title"><h1 class="white">{{ bc_sec_arg != parent_title ? bc_sec_arg : parent_title ? parent_title : page['#title'] }}</h1></div>
         </div>
       </div>
       {{ page.secondary_nav|without('secondary_menu', 'breadcrumbs') }}
