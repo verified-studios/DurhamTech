@@ -1,0 +1,8 @@
+uuid: 77508adf-ae0e-4960-b1db-58c8aad0d175
+langcode: en
+status: true
+dependencies: {  }
+id: corporate-education
+label: 'Corporate Education'
+description: 'Links for Corporate Education page '
+locked: false
