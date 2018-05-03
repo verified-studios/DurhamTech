@@ -1,0 +1,56 @@
+.path-frontpage {
+
+  .node {
+    padding-top: 0;
+  }
+
+  #columns-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/themes/custom/durhamtech/images/durham-1280x640.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $white;
+    padding: 60px 0;
+
+    .block-title {
+      color: $white;
+      text-align: left;
+    }
+
+    [class*="teaser-title"] {
+      color: $white;
+    }
+
+    .more-link a {
+      border: 2px solid $white;
+      border-radius: 6px;
+      color: $white;
+      display: block;
+      font-wieght: 600;
+      padding: 6px 12px;
+      text-align: center;
+      width: 100%;
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .event.column-teaser {
+    .content {
+      border-color: $white;
+
+      .btn {
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+  }
+}

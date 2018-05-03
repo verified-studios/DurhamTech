@@ -24,3 +24,20 @@ one_column_sidebar:
       label: Left Sidebar
     content:
       label: Content
+homepage:
+  label: Homepage layout
+  template: templates/panelizer/homepage
+  category: Panelizer
+  regions:
+    columns_1_left:
+      label: First column section left
+    columns_1_right:
+      label: First column section right
+    full_1:
+      label: Full width
+    columns_2_left:
+      label: Second 2 column section left
+    columns_2_right:
+      label: Second 2 column section right
+    full_2:
+      label: Full width

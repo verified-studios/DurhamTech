@@ -7168,9 +7168,12 @@ table {
     padding: 20px 20px 20px 30%;
     margin: 20px 0;
     margin-left: 50px; }
+    .view-id-homepage.view-display-id-homepage_news .content a:hover {
+      color: #FFFFFF; }
     .view-id-homepage.view-display-id-homepage_news .content a .news-teaser-title {
       color: #FFFFFF;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      text-transform: none; }
     .view-id-homepage.view-display-id-homepage_news .content .news-teaser-date,
     .view-id-homepage.view-display-id-homepage_news .content .news-teaser-author {
       color: #FFFFFF; }
@@ -7188,6 +7191,10 @@ table {
   margin-left: 10%; }
   .view-id-homepage.view-display-id-homepage_events .event {
     margin: 20px 0 40px; }
+  .view-id-homepage.view-display-id-homepage_events a:not(.btn):hover {
+    color: #000000; }
+  .view-id-homepage.view-display-id-homepage_events a:not(.btn) .event-teaser-title {
+    text-tranform: none; }
   .view-id-homepage.view-display-id-homepage_events .field--name-field-event-location,
   .view-id-homepage.view-display-id-homepage_events .event-time {
     display: none; }
@@ -7594,5 +7601,42 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     display: inline-block;
     width: 63%;
     vertical-align: middle; } }
+
+.path-frontpage .node {
+  padding-top: 0; }
+
+.path-frontpage #columns-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/themes/custom/durhamtech/images/durham-1280x640.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  padding: 60px 0; }
+  .path-frontpage #columns-1 .block-title {
+    color: #FFFFFF;
+    text-align: left; }
+  .path-frontpage #columns-1 [class*="teaser-title"] {
+    color: #FFFFFF; }
+  .path-frontpage #columns-1 .more-link a {
+    border: 2px solid #FFFFFF;
+    border-radius: 6px;
+    color: #FFFFFF;
+    display: block;
+    font-wieght: 600;
+    padding: 6px 12px;
+    text-align: center;
+    width: 100%; }
+    .path-frontpage #columns-1 .more-link a:hover {
+      background-color: #FFFFFF;
+      color: #000000;
+      text-decoration: none; }
+
+.path-frontpage .event.column-teaser .content {
+  border-color: #FFFFFF; }
+  .path-frontpage .event.column-teaser .content .btn {
+    border-color: #FFFFFF;
+    color: #FFFFFF; }
+    .path-frontpage .event.column-teaser .content .btn:hover {
+      background-color: #FFFFFF;
+      color: #000000; }
 
 /*# sourceMappingURL=style.css.map */

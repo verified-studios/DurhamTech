@@ -172,9 +172,16 @@ $banner-menu-orange-hover: #f27604;
       margin: 20px 0;
       margin-left: 50px;
 
-      a .news-teaser-title {
-        color: $white;
-        margin-bottom: 40px;
+      a {
+        &:hover {
+          color: $white;
+        }
+
+        .news-teaser-title {
+          color: $white;
+          margin-bottom: 40px;
+          text-transform: none;
+        }
       }
 
       .news-teaser-date,
@@ -201,6 +208,16 @@ $banner-menu-orange-hover: #f27604;
 
     .event {
       margin: 20px 0 40px;
+    }
+
+    a:not(.btn) {
+      &:hover {
+        color: $black;
+      }
+
+      .event-teaser-title {
+        text-tranform: none;
+      }
     }
 
     .field--name-field-event-location,
