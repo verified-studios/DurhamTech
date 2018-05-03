@@ -6,6 +6,7 @@ dependencies:
     - field.field.taxonomy_term.course.field_academic_level
     - field.field.taxonomy_term.course.field_average_cost
     - field.field.taxonomy_term.course.field_class_format
+    - field.field.taxonomy_term.course.field_course_outline
     - field.field.taxonomy_term.course.field_credits
     - field.field.taxonomy_term.course.field_department
     - field.field.taxonomy_term.course.field_description
@@ -16,6 +17,7 @@ dependencies:
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
+    - file
     - panelizer
     - text
 third_party_settings:
@@ -59,6 +61,14 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_course_outline:
+    weight: 12
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
     region: content
   field_credits:
     weight: 5

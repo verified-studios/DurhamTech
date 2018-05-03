@@ -4,14 +4,21 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.course.field_academic_level
+    - field.field.taxonomy_term.course.field_average_cost
     - field.field.taxonomy_term.course.field_class_format
+    - field.field.taxonomy_term.course.field_course_outline
     - field.field.taxonomy_term.course.field_credits
     - field.field.taxonomy_term.course.field_department
     - field.field.taxonomy_term.course.field_description
     - field.field.taxonomy_term.course.field_division
+    - field.field.taxonomy_term.course.field_local_description
+    - field.field.taxonomy_term.course.field_requisites
+    - field.field.taxonomy_term.course.field_seats
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
+    - file
     - panelizer
     - text
 third_party_settings:
@@ -40,6 +47,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_course_outline:
+    type: file_default
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
   field_credits:
     weight: 5
     label: hidden
@@ -79,4 +94,9 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_academic_level: true
+  field_average_cost: true
+  field_local_description: true
+  field_requisites: true
+  field_seats: true

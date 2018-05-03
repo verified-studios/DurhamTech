@@ -38,6 +38,13 @@
 
   <div class="description">
     {{ content.field_description.0|render|replace({"\n": "", "\r\n": "", "\t": "", "\n\r": "", "<br />": ""}) }}
+
+    {% if content.field_course_outline.0 %}
+      <div class="course-outline">
+        {% set course_outline_uri = content.field_course_outline.0['#file'].uri.0.value %}
+        <a href="{{ file_url(course_outline_uri) }}" target="_blank"><i class="far fa-file-pdf"></i> Course Outline<span class="ext" aria-label="(link opens in new window)"></span></a>
+      </div>
+    {% endif %}
   </div>
   {#{{ content }}#}
 
