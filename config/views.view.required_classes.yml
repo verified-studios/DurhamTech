@@ -308,8 +308,8 @@ display:
           label: 'Class Format'
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if field_class_format == 'Online' or field_class_format == 'Hybrid' %}\n<a href=\"/distance-learning\">{{ field_class_format }}</a>\n{% else %}\n{{ field_class_format }}\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
