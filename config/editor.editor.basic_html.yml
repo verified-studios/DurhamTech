@@ -12,7 +12,7 @@ third_party_settings:
     status: true
     scheme: public
     directory: inline-files
-    extensions: 'txt pdf doc docx'
+    extensions: 'txt pdf doc docx html'
 _core:
   default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
 format: basic_html
@@ -87,10 +87,10 @@ settings:
             - tablecellsplithorizontal
             - tablecellsplitvertical
   plugins:
-    stylescombo:
-      styles: ''
     language:
       language_list: un
+    stylescombo:
+      styles: ''
 image_upload:
   status: true
   scheme: public
