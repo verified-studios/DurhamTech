@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.application_deadlines.field_application_deadline
+    - field.field.node.application_deadlines.field_related_programs
     - node.type.application_deadlines
   module:
     - entity_reference_revisions
@@ -28,6 +29,14 @@ content:
       view_mode: application_deadline
       link: ''
     third_party_settings: {  }
+    region: content
+  field_related_programs:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden:
   addtoany: true

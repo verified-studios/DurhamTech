@@ -1,0 +1,28 @@
+uuid: ce67e212-8b7b-4291-a57a-a7ef972cc61f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_programs
+    - node.type.application_deadlines
+    - node.type.program
+id: node.application_deadlines.field_related_programs
+field_name: field_related_programs
+entity_type: node
+bundle: application_deadlines
+label: 'Related Programs'
+description: 'Program relating to the application deadline.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
