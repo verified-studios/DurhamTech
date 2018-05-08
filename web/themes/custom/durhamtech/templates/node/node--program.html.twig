@@ -137,9 +137,15 @@
           {% endif %}
           {# application deadline and apply btn here #}
           <div class="row apply-row">
-            {% if content.next_app_deadline %}
-              <div class="app-deadline green col-sm-6">Next Application Deadline is <strong>{{ content.next_app_deadline }}</strong></div>
+            {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
+            {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
+            {% set deadline = '' %}
+            {% if override_app_deadline|render|striptags|trim != '' %}
+              {% set deadline = override_app_deadline|render|striptags|trim %}
+            {% else %}
+              {% set deadline = default_app_deadline|render|striptags|trim %}
             {% endif %}
+            <div class="app-deadline green col-sm-6">Next Application Deadline is <strong>{{ deadline }}</strong></div>
             <div class="apply col-sm-6">
               <a class="apply-btn btn btn-lg">Apply Now</a>
             </div>
