@@ -89,16 +89,19 @@ function durhamtech_preprocess_page(&$variables) {
     }
   }
 
-  if(isset($banner)) {
+  if (isset($banner)) {
     // Use loaded entity to generate uri of banner image.
     $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
   }
 
-  if($node = \Drupal::request()->attributes->get('node')) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
     $variables['node_title'] = $node->getTitle();
-  } else if ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
-    $title = $taxonomy->get('field_title')->getString();
-    $variables['node_title'] = $title;
+  }
+  elseif ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+    if (!empty($taxonomy->fields['field_title'])) {
+      $title = $taxonomy->get('field_title')->getString();
+      $variables['node_title'] = $title;
+    }
   }
 
   //kint($variables);
