@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.course_browser
     - field.field.taxonomy_term.course.field_academic_level
     - field.field.taxonomy_term.course.field_average_cost
     - field.field.taxonomy_term.course.field_class_format
@@ -17,7 +18,7 @@ dependencies:
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
-    - file
+    - entity_browser
     - path
 id: taxonomy_term.course.default
 targetEntityType: taxonomy_term
@@ -42,9 +43,15 @@ content:
   field_course_outline:
     weight: 3
     settings:
-      progress_indicator: throbber
+      entity_browser: course_browser
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_edit: true
+      open: false
+      view_mode: default
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: file_generic
+    type: entity_browser_file
     region: content
   field_credits:
     weight: 6
