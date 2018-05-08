@@ -8,6 +8,12 @@ dependencies:
   module:
     - image
     - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.continuing_education_category.default
 targetEntityType: taxonomy_term
 bundle: continuing_education_category

@@ -8,11 +8,11 @@ dependencies:
     - views
 name: course_browser
 label: 'Course Browser'
-display: modal
+display: iframe
 display_configuration:
   width: '650'
   height: '500'
-  link_text: 'Select entities'
+  link_text: 'Select Course Outline'
   auto_open: true
 selection_display: no_display
 selection_display_configuration: {  }

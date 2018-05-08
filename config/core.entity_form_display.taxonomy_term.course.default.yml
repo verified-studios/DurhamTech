@@ -45,9 +45,9 @@ content:
     settings:
       entity_browser: course_browser
       field_widget_remove: true
+      open: true
       selection_mode: selection_append
       field_widget_edit: true
-      open: false
       view_mode: default
       preview_image_style: thumbnail
     third_party_settings: {  }
