@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_subtype
     - field.field.node.event.field_event_type
     - field.field.node.event.field_feature_event_image
     - field.field.node.event.field_featured
@@ -22,12 +23,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_associated_program:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -49,14 +50,20 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_event_subtype:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_event_type:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_featured:
-    weight: 10
+    weight: 11
     settings:
       display_label: true
     third_party_settings: {  }
@@ -72,7 +79,7 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -80,7 +87,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -93,7 +100,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60

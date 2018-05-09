@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
+    - field.field.node.event.field_event_subtype
     - field.field.node.event.field_event_type
     - field.field.node.event.field_feature_event_image
     - field.field.node.event.field_featured
@@ -14,6 +15,7 @@ dependencies:
   module:
     - datetime
     - image
+    - options
     - panelizer
     - text
     - user
@@ -44,6 +46,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_event_subtype:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_event_type:
     weight: 3

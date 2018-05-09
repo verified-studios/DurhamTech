@@ -195,6 +195,21 @@ function durhamtech_preprocess_menu(array &$variables) {
 }
 
 /**
+ * Implements template_preprocess_views_view()
+ * @param array $vars
+ */
+function durhamtech_preprocess_views_view(&$vars){
+
+  if($vars['id'] == 'events') {
+    $vars['more']['#options']['attributes']['class'] = array(
+      'btn' => 'btn',
+      'btn-outline' => 'btn-outline',
+      'padding' => 'padding-lr-30'
+    );
+  }
+}
+
+/**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function durhamtech_theme_suggestions_page_alter(array &$suggestions, array $variables) {

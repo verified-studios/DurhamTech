@@ -220,6 +220,12 @@ display:
           entity_field: nid
           plugin_id: node_nid
       display_extenders: {  }
+      use_more: true
+      use_more_always: true
+      use_more_text: 'See All'
+      link_url: events
+      link_display: custom_url
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
