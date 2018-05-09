@@ -1,29 +1,30 @@
-uuid: 0f37d8c6-fe36-4045-998c-3fd7d4f0cceb
+uuid: b3955065-921d-4861-9aec-45b5e54a9962
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.search
+    - views.view.events
   module:
     - system
     - views
   theme:
     - durhamtech
-id: exposedformsearchpage_1
+id: views_block__careers_events
 theme: durhamtech
 region: content
-weight: -12
+weight: 0
 provider: null
-plugin: 'views_exposed_filter_block:search-page_1'
+plugin: 'views_block:events-block_3'
 settings:
-  id: 'views_exposed_filter_block:search-page_1'
+  id: 'views_block:events-block_3'
   label: ''
   provider: views
-  label_display: visible
-  views_label: Search
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '/search*'
+    pages: /careers
     negate: false
     context_mapping: {  }
