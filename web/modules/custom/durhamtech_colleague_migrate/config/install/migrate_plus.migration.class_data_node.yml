@@ -20,7 +20,7 @@ source:
     Title: Title of class.
     Type: Type of class.
     Delivery Method: How the course will be presented.
-    MeetDays: Days of the week the class meets.
+    Meeting Days: Days of the week the class meets.
     Start Date: Starting date of the class.
     End Date: Ending date of the class.
     Start Time: Starting time of the class.
