@@ -5884,6 +5884,12 @@ p {
   color: #262626;
   line-height: 1.5;
   margin: 0 0 20px; }
+  p img.align-left {
+    margin-right: 15px;
+    margin-bottom: 15px; }
+  p img.align-right {
+    margin-left: 15px;
+    margin-bottom: 15px; }
 
 a {
   color: #CC4700; }
