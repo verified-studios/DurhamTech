@@ -101,24 +101,25 @@
     {#{ kint(content|keys) }#}
     <h2 class="page-title">{{ label }}</h2>
     {% if event_date or content.field_event_location.0 %}
-    <div class="event-data text-center clearfix">
-      <div class="row">
-        <div class="event-date col-sm-4">
-          <h4 class="event-data-title">Date</h4>
-          {{ event_date|format_date('custom', 'F d, Y') }}
-        </div>
-        <div class="event-time col-sm-4">
-          <h4 class="event-data-title">Time</h4>
-          {{ event_date|format_date('custom', 'g:i a') }}
-        </div>
-        {% if content.field_event_location.0 %}
-          <div class="event-location col-sm-4">
-            <h4 class="event-data-title">Location</h4>
-            {{ content.field_event_location }}
+      <div class="event-data text-center clearfix">
+        <div class="row">
+          <div class="event-date col-sm-4">
+            <h4 class="event-data-title">Date</h4>
+            {{ event_date|format_date('custom', 'F d, Y') }}
           </div>
-        {% endif %}
+          <div class="event-time col-sm-4">
+            <h4 class="event-data-title">Time</h4>
+            {{ event_date|format_date('custom', 'g:i a') }}
+          </div>
+          {% if content.field_event_location.0 %}
+            <div class="event-location col-sm-4">
+              <h4 class="event-data-title">Location</h4>
+              {{ content.field_event_location }}
+            </div>
+          {% endif %}
+        </div>
       </div>
-    </div>
+    {% endif %}
     {{ content.field_rich_text }}
   </div>
 
