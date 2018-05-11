@@ -19,6 +19,7 @@
     "drupal/ckeditor_tabletoolstoolbar": "^1.0",
     "drupal/ckeditor_youtube": "^1.1",
     "drupal/colorbox": "^1.4",
+    "drupal/colorbutton": "^1.1",
     "drupal/config_direct_save": "^1.0",
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",

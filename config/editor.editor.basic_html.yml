@@ -33,6 +33,11 @@ settings:
             - Outdent
             - Indent
         -
+          name: Styling
+          items:
+            - TextColor
+            - BGColor
+        -
           name: Linking
           items:
             - DrupalLink
@@ -91,6 +96,8 @@ settings:
       styles: ''
     language:
       language_list: un
+    colorbutton:
+      colors: 'FFFFFF,000000,CED2D5,262626,4C4C4C,CC4700,19975D,81BE41,99C221,E87722,808990,FDC504'
 image_upload:
   status: true
   scheme: public
