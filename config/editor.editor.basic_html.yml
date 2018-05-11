@@ -37,6 +37,7 @@ settings:
           items:
             - TextColor
             - BGColor
+            - Styles
         -
           name: Linking
           items:
@@ -93,7 +94,7 @@ settings:
             - tablecellsplitvertical
   plugins:
     stylescombo:
-      styles: ''
+      styles: "span.btn|Default Button\r\nspan.btn.btn-large|Large Button\r\nspan.btn.btn-outline|Outlined Button\r\nspan.btn.btn-full|Full-width Button\r\n"
     language:
       language_list: un
     colorbutton:

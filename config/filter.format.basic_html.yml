@@ -17,7 +17,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<a href hreflang title class id target rel data-entity-type data-entity-uuid> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span style> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr><drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button><iframe width height src frameborder allowfullscreen>'
+      allowed_html: '<a href hreflang title class id target rel data-entity-type data-entity-uuid> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span class style> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <u> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr><drupal-entity data-entity-type data-entity-uuid data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button><iframe width height src frameborder allowfullscreen>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
