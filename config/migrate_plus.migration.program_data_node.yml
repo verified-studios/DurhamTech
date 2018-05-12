@@ -29,6 +29,7 @@ source:
     'Minimum Required Institutional Credits': 'Minimum Required Institutional Credits.'
     'Minimum Required Institutional GPA': 'Minimum Required Institutional GPA.'
     'Course Outline': 'Course Outline.'
+    'Cred Type': 'Cred Type.'
   constants:
     bool_0: 0
     uid_root: 1
@@ -61,6 +62,13 @@ process:
       plugin: iterator
       process:
         target_id: '0'
+  field_cred_type:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: 'Cred Type'
+    value_key: name
+    source: 'Cred Type'
 destination:
   plugin: 'entity:node'
   default_bundle: program

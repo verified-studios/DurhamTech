@@ -1,0 +1,9 @@
+uuid: cbb8fc76-1492-485b-bb20-991fdab35048
+langcode: en
+status: true
+dependencies: {  }
+name: 'Cred Type'
+vid: cred_type
+description: ''
+hierarchy: 0
+weight: 0

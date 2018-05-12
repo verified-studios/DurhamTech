@@ -10,7 +10,7 @@ dependencies:
       - durhamtech_colleague_migrate
 source:
   plugin: csv
-  path: 'public://import/course/WebsiteData - Courses TEST ALL SP1.csv'
+  path: 'public://import/course/WebsiteData - Courses Export_050718.csv'
   header_row_count: 1
   keys:
     - Id
