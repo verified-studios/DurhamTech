@@ -38,7 +38,7 @@ process:
   title: Program Title
   promote: constants/bool_0
   uid: constants/uid_root
-  field_description: Description
+  field_description: Description_BR
   field_program_type:
     -
       plugin: skip_on_empty
