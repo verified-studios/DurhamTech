@@ -17,7 +17,7 @@ source:
   fields:
     Program ID: Id of the program.
     Program Title: Title of program.
-    Description: Description of program.
+    Description_BR: Description of program.
     Program Types: Type of program.
     Academic Level: Academic Level of the program.
     Minimum Required Credits: Minimum Required Credits.
