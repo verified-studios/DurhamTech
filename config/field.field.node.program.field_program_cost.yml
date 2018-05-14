@@ -9,7 +9,7 @@ id: node.program.field_program_cost
 field_name: field_program_cost
 entity_type: node
 bundle: program
-label: 'Program Cost'
+label: 'Estimated Cost'
 description: 'Cost of the program. Please only use the number value, dollar symbol ($) will be added automatically.'
 required: false
 translatable: false
