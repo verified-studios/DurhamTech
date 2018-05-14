@@ -5884,6 +5884,12 @@ p {
   color: #262626;
   line-height: 1.5;
   margin: 0 0 20px; }
+  p img.align-left {
+    margin-right: 15px;
+    margin-bottom: 15px; }
+  p img.align-right {
+    margin-left: 15px;
+    margin-bottom: 15px; }
 
 a {
   color: #CC4700; }
@@ -5927,6 +5933,10 @@ ul:not(.menu), ol:not(.menu) {
   text-transform: uppercase;
   font-size: 0.8em;
   font-weight: 700; }
+  .btn > a, .btn-primary > a {
+    color: #FFFFFF; }
+    .btn > a:hover, .btn-primary > a:hover {
+      text-decoration: none; }
   .btn.btn-large, .btn-primary.btn-large {
     font-size: 1em; }
   .btn:hover, .btn-primary:hover {
@@ -5937,6 +5947,8 @@ ul:not(.menu), ol:not(.menu) {
     border-color: #262626;
     border-width: 2px;
     color: #262626; }
+    .btn-outline > a, .btn-primary-outline > a {
+      color: #262626; }
     .btn-outline:hover, .btn-primary-outline:hover {
       background-color: #262626;
       border-color: #262626;
@@ -5951,6 +5963,10 @@ ul:not(.menu), ol:not(.menu) {
     border-color: #FFFFFF;
     border-width: 2px;
     color: #FFFFFF; }
+    .btn-white > a, .btn-primary-white > a {
+      color: #FFFFFF; }
+      .btn-white > a:hover, .btn-primary-white > a:hover {
+        color: #000000; }
     .btn-white:hover, .btn-primary-white:hover {
       background-color: #FFFFFF;
       color: #000000; }

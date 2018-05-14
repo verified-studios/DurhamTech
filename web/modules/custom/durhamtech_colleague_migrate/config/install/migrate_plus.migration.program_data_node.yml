@@ -10,20 +10,21 @@ dependencies:
       - durhamtech_colleague_migrate
 source:
   plugin: csv
-  path: 'public://import/program/WebsiteData_ProgramTest.csv'
+  path: 'public://import/program/WebsiteData - Programs Export_050718.csv'
   header_row_count: 1
   keys:
     - Program ID
   fields:
     Program ID: Id of the program.
     Program Title: Title of program.
-    Description: Description of program.
+    Description_BR: Description of program.
     Program Types: Type of program.
     Academic Level: Academic Level of the program.
     Minimum Required Credits: Minimum Required Credits.
     Minimum Required Institutional Credits: Minimum Required Institutional Credits.
     Minimum Required Institutional GPA: Minimum Required Institutional GPA.
-    Course Outline: Course Outline.
+    Program Outline 2: Course Outline.
+    Cred Type: Cred Type.
   constants:
     bool_0: 0
     uid_root: 1
@@ -37,7 +38,7 @@ process:
   title: Program Title
   promote: constants/bool_0
   uid: constants/uid_root
-  field_description: Description
+  field_description: Description_BR
   field_program_type:
     -
       plugin: skip_on_empty
@@ -57,8 +58,15 @@ process:
   field_courses:
     -
       plugin: durhamtech_course_outline
-      source: Course Outline
+      source: Program Outline 2
     -
       plugin: iterator
       process:
         target_id: '0'
+  field_cred_type:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: Cred Type
+    value_key: name
+    source: Cred Type

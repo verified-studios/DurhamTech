@@ -7,6 +7,14 @@
   font-size: 0.8em;
   font-weight: 700;
 
+  > a {
+    color: $white;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   &.btn-large {
     font-size: 1em;
   }
@@ -21,6 +29,10 @@
     border-color: $gray;
     border-width: 2px;
     color: $gray;
+
+    > a {
+      color: $gray;
+    }
 
     &:hover {
       background-color: $gray;
@@ -44,9 +56,18 @@
     border-width: 2px;
     color: $white;
 
+    > a {
+      color: $white;
+
+      &:hover {
+        color: $black;
+      }
+    }
+
     &:hover {
       background-color: $white;
       color: $black;
+
     }
   }
 }

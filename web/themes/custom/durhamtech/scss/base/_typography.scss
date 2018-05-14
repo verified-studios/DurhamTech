@@ -70,6 +70,19 @@ p {
   color: $body-gray;
   line-height: 1.5;
   margin: 0 0 20px;
+
+  img {
+
+    &.align-left {
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+
+    &.align-right {
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
 }
 
 a {

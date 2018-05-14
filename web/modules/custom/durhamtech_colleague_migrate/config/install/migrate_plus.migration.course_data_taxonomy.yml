@@ -10,7 +10,7 @@ dependencies:
       - durhamtech_colleague_migrate
 source:
   plugin: csv
-  path: 'public://import/course/WebsiteData_CoursesTest.csv'
+  path: 'public://import/course/WebsiteData - Courses Export_050718.csv'
   header_row_count: 1
   keys:
     - Name
@@ -18,13 +18,16 @@ source:
     Name: Unique identifier for the course as in the data source.
     Title: Name of the course.
     Type: Type of course.
-    Description: Description of the course.
+    Description_BR: Description of the course.
     Division: Broad category of the course.
     Department: Specific category of the course.
     Credits: How many credits the course is worth.
     Delivery Method: How the course will be presented.
-    Acad Level: This field indicates the academic area of the course.
+    Sec Acad Level: This field indicates the academic area of the course.
     Xcrs Local Description: Description that can be entered locally by DT Personnel.
+    Requisite Courses: Requisite classes required before taking this course.
+    Seats Available: Seats Available.
+    Course Cost: Course Cost.
 migration_dependencies:
   optional: {}
   required: {}
@@ -34,7 +37,7 @@ destination:
 process:
   name: Name
   field_title: Title
-  field_description: Description
+  field_description: Description_BR
   field_credits: Credits
   field_class_format:
     -
@@ -67,7 +70,7 @@ process:
   field_academic_level:
     -
       plugin: static_map
-      source: Acad Level
+      source: Sec Acad Level
       map:
         CU: Curriculum
         CE: ConEd
@@ -86,3 +89,13 @@ process:
     -
       plugin: durhamtech_course_strip_tags
       source: Xcrs Local Description
+  field_requisites:
+    -
+      plugin: durhamtech_course_outline
+      source: Requisite Courses
+    -
+      plugin: iterator
+      process:
+        target_id: '0'
+  field_seats: Seats Available
+  field_average_cost: Course Cost
