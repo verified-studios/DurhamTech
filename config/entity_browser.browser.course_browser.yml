@@ -10,8 +10,8 @@ name: course_browser
 label: 'Course Browser'
 display: iframe
 display_configuration:
-  width: '650'
-  height: '500'
+  width: 100%
+  height: '600'
   link_text: 'Select Course Outline'
   auto_open: true
 selection_display: no_display
