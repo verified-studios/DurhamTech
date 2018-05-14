@@ -1,4 +1,4 @@
-uuid: 18a6308e-4a49-466e-a6c6-a4cbc3b13279
+uuid: 0401739f-e9e6-4f0d-b86f-fe2ed746883a
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: dmf7c7yfjqyNSCOpUchVI_xmRdWYaRGSiMV_Gv7NgVM
+  default_config_hash: BxiKfqQId6DqYceyUJq4rr0QefnSRjky1Hh7hJuIfh8
 id: class_data_node
 migration_tags:
   - classes
@@ -15,7 +15,7 @@ migration_group: durhamtech_colleague_migrate
 label: 'Individual class data for nodes.'
 source:
   plugin: csv
-  path: 'public://import/course/WebsiteData - Courses TEST ALL SP1.csv'
+  path: 'public://import/course/WebsiteData - Courses Export_050718.csv'
   header_row_count: 1
   keys:
     - Id
@@ -25,7 +25,7 @@ source:
     Title: 'Title of class.'
     Type: 'Type of class.'
     'Delivery Method': 'How the course will be presented.'
-    MeetDays: 'Days of the week the class meets.'
+    'Meeting Days': 'Days of the week the class meets.'
     'Start Date': 'Starting date of the class.'
     'End Date': 'Ending date of the class.'
     'Start Time': 'Starting time of the class.'
@@ -94,6 +94,41 @@ process:
       TBA: TBA
       SOUT: SOUT
       OCSD: OCSD
+      AUGC: AUGC
+      BAH: BAH
+      CFD: CFD
+      CFLR: CFLR
+      CJRC: CJRC
+      CREE: CREE
+      DADM: DADM
+      DCAO: DCAO
+      DCCR: DCCR
+      DDFS: DDFS
+      DECI: DECI
+      DLOD: DLOD
+      DRES: DRES
+      ECH: ECH
+      ECHC: ECHC
+      EFLA: EFLA
+      FWRK: FWRK
+      HDSS: HDSS
+      HILL: HILL
+      HOLD: HOLD
+      IC: IC
+      MERC: MERC
+      MTOL: MTOL
+      NDC: NDC
+      NDC2: NDC2
+      OCC: OCC
+      OCC1: OCC1
+      OCCC: OCCC
+      ORGG: ORGG
+      PGDS: PGDS
+      R66: R66
+      SORS: SORS
+      TROS: TROS
+      UMC: UMC
+      WCRS: WCRS
   field_location:
     -
       plugin: callback

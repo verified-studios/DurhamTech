@@ -33,6 +33,12 @@ settings:
             - Outdent
             - Indent
         -
+          name: Styling
+          items:
+            - TextColor
+            - BGColor
+            - Styles
+        -
           name: Linking
           items:
             - DrupalLink
@@ -87,10 +93,12 @@ settings:
             - tablecellsplithorizontal
             - tablecellsplitvertical
   plugins:
+    stylescombo:
+      styles: "span.btn|Default Button\r\nspan.btn.btn-large|Large Button\r\nspan.btn.btn-outline|Outlined Button\r\nspan.btn.btn-full|Full-width Button\r\n"
     language:
       language_list: un
-    stylescombo:
-      styles: ''
+    colorbutton:
+      colors: 'FFFFFF,000000,CED2D5,262626,4C4C4C,CC4700,19975D,81BE41,99C221,E87722,808990,FDC504'
 image_upload:
   status: true
   scheme: public
