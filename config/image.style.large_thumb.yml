@@ -1,0 +1,14 @@
+uuid: ec79455c-0995-4768-a84e-6e1ac99d998d
+langcode: en
+status: true
+dependencies: {  }
+name: large_thumb
+label: 'Large Thumb'
+effects:
+  1048f8c4-830f-463b-ab38-660f65bb15fc:
+    uuid: 1048f8c4-830f-463b-ab38-660f65bb15fc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 500

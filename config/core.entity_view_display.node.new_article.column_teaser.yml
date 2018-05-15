@@ -11,7 +11,7 @@ dependencies:
     - field.field.node.new_article.field_news_thumbnail
     - field.field.node.new_article.field_news_type
     - field.field.node.new_article.field_publish_date
-    - image.style.medium
+    - image.style.large_thumb
     - node.type.new_article
   module:
     - datetime
@@ -51,7 +51,7 @@ content:
     weight: 4
     label: hidden
     settings:
-      image_style: medium
+      image_style: large_thumb
       image_link: content
     third_party_settings: {  }
     type: image
