@@ -73,8 +73,8 @@ process:
       source: Sec Acad Level
       map:
         CU: Curriculum
-        CE: ConEd
-        BSP: Basic Skills
+        CE: Continuing Education
+        BSP: ESL
     -
       plugin: entity_generate
       entity_type: taxonomy_term
