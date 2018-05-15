@@ -7068,6 +7068,26 @@ table {
   background-position: 0% 50% !important;
   min-height: 650px; }
 
+.sidebar .menu {
+  margin: 0;
+  padding: 0;
+  padding-right: 0.5rem; }
+  .sidebar .menu li {
+    margin: 0;
+    padding: 0; }
+    .sidebar .menu li a,
+    .sidebar .menu li a:visited {
+      padding: 0;
+      color: #262626; }
+      .sidebar .menu li a:hover, .sidebar .menu li a:focus,
+      .sidebar .menu li a:visited:hover,
+      .sidebar .menu li a:visited:focus {
+        color: #E87722; }
+    .sidebar .menu li > ul {
+      margin-top: 1rem; }
+      .sidebar .menu li > ul li a {
+        font-weight: 300 !important; }
+
 .alert.teaser {
   margin-bottom: 0; }
   .alert.teaser .field, .alert.teaser svg, .alert.teaser i {
