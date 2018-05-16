@@ -73,7 +73,7 @@ content:
           settings:
             state: visible
             condition: checked
-            grouping: AND
+            grouping: OR
             values_set: 1
             value: ''
             values: {  }
