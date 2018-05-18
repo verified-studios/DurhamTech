@@ -21,4 +21,15 @@
       });
     }
   };
+
+  Drupal.behaviors.zendesk = {
+    attach: function () {
+      $('a[href^="#javascript"]').each(function(){
+          var oldUrl = $(this).attr("href"); // Get current url
+          var newUrl = oldUrl.replace("#javascript", "javascript:$zopim.livechat.window.show()"); // Create new url
+          $(this).attr("href", newUrl); // Set herf value
+      });
+    }
+  };
+
 })(jQuery, Drupal);
