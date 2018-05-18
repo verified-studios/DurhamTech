@@ -654,6 +654,8 @@ display:
         filter_groups: false
         fields: false
         title: false
+        style: false
+        row: false
       filter_groups:
         operator: AND
         groups:
@@ -1122,6 +1124,15 @@ display:
         options:
           items_per_page: 1
           offset: 0
+      style:
+        type: default
+        options: {  }
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              event: featured
     cache_metadata:
       max-age: -1
       contexts:

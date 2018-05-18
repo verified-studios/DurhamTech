@@ -11,9 +11,12 @@ dependencies:
     - field.field.node.event.field_feature_event_image
     - field.field.node.event.field_featured
     - field.field.node.event.field_rich_text
+    - image.style.thumbnail
     - node.type.event
   module:
+    - conditional_fields
     - datetime
+    - image
     - path
     - text
 id: node.event.default
@@ -62,6 +65,31 @@ content:
     third_party_settings: {  }
     type: options_buttons
     region: content
+  field_feature_event_image:
+    third_party_settings:
+      conditional_fields:
+        77dd7444-7af6-40d2-805a-a0c105bf8a6c:
+          dependee: field_featured
+          settings:
+            state: visible
+            condition: checked
+            grouping: OR
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: event
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    type: image_image
+    region: content
   field_featured:
     weight: 11
     settings:
@@ -108,6 +136,5 @@ content:
     region: content
     third_party_settings: {  }
 hidden:
-  field_feature_event_image: true
   promote: true
   sticky: true
