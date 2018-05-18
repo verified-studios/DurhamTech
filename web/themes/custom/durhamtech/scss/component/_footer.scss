@@ -7,6 +7,12 @@
 
     .row {
       margin: 0;
+
+      a {
+        &:focus {
+          outline-color: lighten($brand-orange, 40%);
+        }
+      }
     }
   }
 

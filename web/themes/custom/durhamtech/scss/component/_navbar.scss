@@ -79,6 +79,10 @@ body {
 
 // Branding
 .logo {
+  &:focus {
+    outline-color: $green;
+  }
+
   img {
     width: 283px;
 
@@ -165,6 +169,10 @@ $main-nav-height: 60px;
 
         a {
           color: $white;
+
+          &:focus {
+            outline-color: $brand-orange;
+          }
         }
 
         &:first-of-type a {

@@ -6593,6 +6593,9 @@ body {
       margin-right: 0;
       padding-left: 0; } }
 
+.logo:focus {
+  outline-color: #19975D; }
+
 .logo img {
   width: 283px; }
   @media screen and (min-width: 768px) {
@@ -6648,6 +6651,8 @@ body {
           flex-basis: 14%; }
           #secondary-nav .secondary-menu > li a {
             color: #FFFFFF; }
+            #secondary-nav .secondary-menu > li a:focus {
+              outline-color: #E87722; }
           #secondary-nav .secondary-menu > li:first-of-type a {
             padding-left: 0; }
           #secondary-nav .secondary-menu > li:last-of-type a {
@@ -6970,6 +6975,8 @@ p:last-child,
     padding: 15px 0; }
     .footer .footer-top .row {
       margin: 0; }
+      .footer .footer-top .row a:focus {
+        outline-color: #fbe9db; }
   .footer .footer-bottom {
     background-color: #000000;
     padding: 15px 0; }
