@@ -7,6 +7,8 @@ dependencies:
     - field.field.taxonomy_term.course.field_academic_level
     - field.field.taxonomy_term.course.field_average_cost
     - field.field.taxonomy_term.course.field_class_format
+    - field.field.taxonomy_term.course.field_contact_hours
+    - field.field.taxonomy_term.course.field_corequisites
     - field.field.taxonomy_term.course.field_course_outline
     - field.field.taxonomy_term.course.field_credits
     - field.field.taxonomy_term.course.field_department
@@ -39,6 +41,23 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_contact_hours:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_corequisites:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_course_outline:
     weight: 3

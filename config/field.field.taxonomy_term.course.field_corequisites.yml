@@ -1,16 +1,16 @@
-uuid: 05169e48-605a-4103-8c39-67dd136c1b45
+uuid: 5f9ae333-13db-4dfd-8117-8f90ecc6c0fe
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.taxonomy_term.field_requisites
+    - field.storage.taxonomy_term.field_corequisites
     - taxonomy.vocabulary.course
-id: taxonomy_term.course.field_requisites
-field_name: field_requisites
+id: taxonomy_term.course.field_corequisites
+field_name: field_corequisites
 entity_type: taxonomy_term
 bundle: course
-label: Prerequisites
-description: 'Requisite classes required before taking this course.'
+label: Corequisites
+description: ''
 required: false
 translatable: false
 default_value: {  }
