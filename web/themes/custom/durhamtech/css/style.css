@@ -7174,6 +7174,8 @@ table {
       min-height: 40px;
       min-width: 40px;
       vertical-align: middle; }
+    #block-banner-menu .menu > li > a .ext {
+      display: none; }
     #block-banner-menu .menu > li > a:hover {
       transition: 0.2s all ease-in;
       background-color: #f27604; }

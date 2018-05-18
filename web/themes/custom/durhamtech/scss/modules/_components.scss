@@ -121,6 +121,10 @@ $banner-menu-orange-hover: #f27604;
         vertical-align: middle;
       }
 
+      .ext {
+        display: none;
+      }
+
       &:hover {
         @include transition();
         background-color: $banner-menu-orange-hover;
