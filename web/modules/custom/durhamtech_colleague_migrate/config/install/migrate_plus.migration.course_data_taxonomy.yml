@@ -25,9 +25,11 @@ source:
     Delivery Method: How the course will be presented.
     Sec Acad Level: This field indicates the academic area of the course.
     Xcrs Local Description: Description that can be entered locally by DT Personnel.
-    Requisite Courses: Requisite classes required before taking this course.
+    Prerequisites: Requisite classes required before taking this course.
+    Corequisites: Corequisites.
     Seats Available: Seats Available.
-    Course Cost: Course Cost.
+    Total Cost: Course Cost.
+    Contact Hours: Contact Hours.
 migration_dependencies:
   optional: {}
   required: {}
@@ -92,10 +94,19 @@ process:
   field_requisites:
     -
       plugin: durhamtech_course_outline
-      source: Requisite Courses
+      source: Prerequisites
+    -
+      plugin: iterator
+      process:
+        target_id: '0'
+  field_corequisites‎:
+    -
+      plugin: durhamtech_course_outline
+      source: Corequisites
     -
       plugin: iterator
       process:
         target_id: '0'
   field_seats: Seats Available
-  field_average_cost: Course Cost
+  field_average_cost: Total Cost
+  field_contact_hours: Contact Hours
