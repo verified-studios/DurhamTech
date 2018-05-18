@@ -23,6 +23,30 @@ settings:
     -
       value: ndc
       label: NDC
+    -
+      value: smt
+      label: SMT
+    -
+      value: rtp
+      label: RTP
+    -
+      value: chur
+      label: CHUR
+    -
+      value: fd
+      label: FD
+    -
+      value: oc
+      label: OC
+    -
+      value: other
+      label: OTHER
+    -
+      value: polic
+      label: POLIC
+    -
+      value: sbb
+      label: SBB
   allowed_values_function: ''
 module: options
 locked: false

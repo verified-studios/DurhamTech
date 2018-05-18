@@ -118,21 +118,30 @@ process:
       HOLD: HOLD
       IC: IC
       MERC: MERC
-      MTOL: MTOL
+      MTOL: RTP
       NDC: NDC
       NDC2: NDC2
       OCC: OCC
       OCC1: OCC1
       OCCC: OCCC
-      OCSD: OCSD
+      OCSD: OCSDC
       ORGG: ORGG
       PGDS: PGDS
       R66: R66
       SORS: SORS
-      SOUT: SOUT
+      SOUT: SBB
       TROS: TROS
       UMC: UMC
       WCRS: WCRS
+      COC: COC
+      DPD: DPD
+      ECH: ECH
+      EFLA: EFLA
+      HDSS: HDSS
+      ROTA: Rotation
+      CHUR: CHUR
+      ORRU: ORRU
+      SMT: SMT
   field_location:
     -
       plugin: callback
