@@ -6688,6 +6688,10 @@ body {
   display: inline-block;
   margin: 6px;
   padding: 15px 0; }
+  .navbar-collapse .js-search-trigger button {
+    background: none;
+    border: none;
+    padding: 0; }
 
 .block-views-exposed-filter-blocksearch-page-1 {
   float: right;

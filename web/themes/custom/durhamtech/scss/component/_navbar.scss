@@ -248,9 +248,15 @@ $main-nav-height: 60px;
     margin: 6px;
     padding: 15px 0;
 
-    svg, i {
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      svg, i {
 
+      }
     }
+
   }
 }
 .block-views-exposed-filter-blocksearch-page-1 {
