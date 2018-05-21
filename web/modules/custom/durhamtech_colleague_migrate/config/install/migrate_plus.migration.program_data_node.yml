@@ -20,9 +20,9 @@ source:
     Description_BR: Description of program.
     Program Types: Type of program.
     Academic Level: Academic Level of the program.
-    Minimum Required Credits: Minimum Required Credits.
-    Minimum Required Institutional Credits: Minimum Required Institutional Credits.
-    Minimum Required Institutional GPA: Minimum Required Institutional GPA.
+    Min Required Credits: Minimum Required Credits.
+    Min Required Institutional Credits: Minimum Required Institutional Credits.
+    Min Required Institutional GPA: Minimum Required Institutional GPA.
     Required Courses: Course Outline.
     Cred Type: Cred Type.
   constants:
@@ -52,9 +52,9 @@ process:
       process:
         target_id: '0'
   field_program_id: Program ID
-  field_min_required_credits: Minimum Required Credits
-  field_min_required_inst: Minimum Required Institutional Credits
-  field_min_required_inst_gpa: Minimum Required Institutional GPA
+  field_min_required_credits: Min Required Credits
+  field_min_required_inst: Min Required Institutional Credits
+  field_min_required_inst_gpa: Min Required Institutional GPA
   field_courses:
     -
       plugin: durhamtech_course_outline
