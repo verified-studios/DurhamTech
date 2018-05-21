@@ -7117,7 +7117,7 @@ a.cta-box:visited {
   color: #FFFFFF;
   height: 150px;
   overflow: hidden;
-  background-color: #E87722;
+  background-color: #808990;
   padding: 2rem;
   position: relative;
   border-radius: 4px;
@@ -7125,7 +7125,7 @@ a.cta-box:visited {
   a.cta-box:hover, a.cta-box:focus,
   a.cta-box:visited:hover,
   a.cta-box:visited:focus {
-    background-color: #CC4700; }
+    background-color: #19975D; }
     a.cta-box:hover .fa,
     a.cta-box:hover .svg-inline--fa, a.cta-box:focus .fa,
     a.cta-box:focus .svg-inline--fa,
@@ -7146,11 +7146,11 @@ a.cta-box:visited {
     a.cta-box:visited:hover .cta-box--inner,
     a.cta-box:visited:focus .cta-box--inner {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
-      background: -moz-linear-gradient(left, rgba(204, 71, 0, 0.92) 0%, rgba(204, 71, 0, 0) 100%);
+      background: -moz-linear-gradient(left, rgba(25, 151, 93, 0.92) 0%, rgba(25, 151, 93, 0) 100%);
       /* FF3.6-15 */
-      background: -webkit-linear-gradient(left, rgba(204, 71, 0, 0.92) 0%, rgba(204, 71, 0, 0) 100%);
+      background: -webkit-linear-gradient(left, rgba(25, 151, 93, 0.92) 0%, rgba(25, 151, 93, 0) 100%);
       /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, rgba(204, 71, 0, 0.92) 0%, rgba(204, 71, 0, 0) 100%);
+      background: linear-gradient(to right, rgba(25, 151, 93, 0.92) 0%, rgba(25, 151, 93, 0) 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   a.cta-box .ext,
   a.cta-box:visited .ext {
@@ -7183,30 +7183,31 @@ a.cta-box:visited {
     left: 0;
     z-index: 2;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
-    background: -moz-linear-gradient(left, rgba(232, 119, 34, 0.8) 0%, rgba(232, 119, 34, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(128, 137, 144, 0.8) 0%, rgba(128, 137, 144, 0) 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(232, 119, 34, 0.8) 0%, rgba(232, 119, 34, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(128, 137, 144, 0.8) 0%, rgba(128, 137, 144, 0) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(232, 119, 34, 0.8) 0%, rgba(232, 119, 34, 0) 100%);
+    background: linear-gradient(to right, rgba(128, 137, 144, 0.8) 0%, rgba(128, 137, 144, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     transition: all 300ms ease-in-out; }
     a.cta-box .cta-box--inner h3,
     a.cta-box:visited .cta-box--inner h3 {
       color: #FFFFFF !important;
-      font-weight: 400 !important;
+      font-weight: 300 !important;
       margin: 0;
       padding: 0;
       width: 160%;
-      font-size: 2.5rem;
-      letter-spacing: 0.01em; }
+      font-size: 2.5rem; }
     a.cta-box .cta-box--inner p,
     a.cta-box:visited .cta-box--inner p {
       margin: 0;
       padding: 0;
       margin-top: 0.5rem;
       color: #FFFFFF !important;
-      font-weight: 300;
-      font-size: 1.5rem; }
+      font-weight: 700 !important;
+      font-size: 1.25rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase; }
 
 .alert.teaser {
   margin-bottom: 0; }
