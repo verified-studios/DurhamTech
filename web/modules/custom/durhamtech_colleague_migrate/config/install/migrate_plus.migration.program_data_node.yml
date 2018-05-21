@@ -23,7 +23,7 @@ source:
     Minimum Required Credits: Minimum Required Credits.
     Minimum Required Institutional Credits: Minimum Required Institutional Credits.
     Minimum Required Institutional GPA: Minimum Required Institutional GPA.
-    Program Outline 2: Course Outline.
+    Required Courses: Course Outline.
     Cred Type: Cred Type.
   constants:
     bool_0: 0
@@ -58,15 +58,20 @@ process:
   field_courses:
     -
       plugin: durhamtech_course_outline
-      source: Program Outline 2
+      source: Required Courses
     -
       plugin: iterator
       process:
         target_id: '0'
   field_cred_type:
-    plugin: entity_generate
-    entity_type: taxonomy_term
-    bundle_key: vid
-    bundle: Cred Type
-    value_key: name
-    source: Cred Type
+      -
+        plugin: skip_on_empty
+        method: process
+        source: Cred Type
+      -
+        plugin: entity_generate
+        entity_type: taxonomy_term
+        bundle_key: vid
+        bundle: Cred Type
+        value_key: name
+        source: Cred Type
