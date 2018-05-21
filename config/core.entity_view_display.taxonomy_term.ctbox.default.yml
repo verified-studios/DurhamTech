@@ -1,0 +1,35 @@
+uuid: 6d173b11-812b-4be0-a281-ca1d41f9822f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.ctbox.field_link
+    - taxonomy.vocabulary.ctbox
+  module:
+    - link
+    - text
+id: taxonomy_term.ctbox.default
+targetEntityType: taxonomy_term
+bundle: ctbox
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

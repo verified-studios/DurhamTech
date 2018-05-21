@@ -1,3 +1,20 @@
+library:
+  label: Library
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/library
+  regions:
+    masthead:
+      label: Call to Action
+    information:
+      label: Information
+    policies:
+      label: Policies
+    resources:
+      label: Resources
+    blog:
+      label: Blog
+    events:
+      label: Events
 one_column_mixed:
   label: One column mixed
   category: Panelizer
