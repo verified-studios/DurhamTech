@@ -1,4 +1,4 @@
-uuid: 0401739f-e9e6-4f0d-b86f-fe2ed746883a
+uuid: 3ff6ce2b-c0fc-4e89-b99a-6b8d80cdd0dc
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: BxiKfqQId6DqYceyUJq4rr0QefnSRjky1Hh7hJuIfh8
+  default_config_hash: NvWTHTxt1ZxvxjmDnEbNyAHbf8PigQOtTncD9cluZ5U
 id: class_data_node
 migration_tags:
   - classes
@@ -64,12 +64,12 @@ process:
     source: 'Delivery Method'
   field_start_date:
     plugin: format_date
-    from_format: Y-m-d
+    from_format: n/j/Y
     to_format: Y-m-d
     source: 'Start Date'
   field_end_date:
     plugin: format_date
-    from_format: Y-m-d
+    from_format: n/j/Y
     to_format: Y-m-d
     source: 'End Date'
   field_building:
@@ -116,7 +116,7 @@ process:
       HOLD: HOLD
       IC: IC
       MERC: MERC
-      MTOL: MTOL
+      MTOL: RTP
       NDC: NDC
       NDC2: NDC2
       OCC: OCC
@@ -129,6 +129,12 @@ process:
       TROS: TROS
       UMC: UMC
       WCRS: WCRS
+      COC: COC
+      DPD: DPD
+      ROTA: Rotation
+      CHUR: CHUR
+      ORRU: ORRU
+      SMT: SMT
   field_location:
     -
       plugin: callback

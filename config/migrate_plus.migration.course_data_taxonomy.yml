@@ -1,4 +1,4 @@
-uuid: c3b4f16b-3420-4c67-a602-cb70d6b714df
+uuid: 644f11cf-a759-49c0-96e4-09461166e1a1
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: sAVz6_ocPCokxhibW27RpDM2CkJZEj7RCog7GNJLnbk
+  default_config_hash: AqVlo9aEpJJGxk8QoxysAePuzM3tgKJYoaU4ELVZkZg
 id: course_data_taxonomy
 migration_tags:
   - courses
@@ -30,9 +30,11 @@ source:
     'Delivery Method': 'How the course will be presented.'
     'Sec Acad Level': 'This field indicates the academic area of the course.'
     'Xcrs Local Description': 'Description that can be entered locally by DT Personnel.'
-    'Requisite Courses': 'Requisite classes required before taking this course.'
+    Prerequisites: 'Requisite classes required before taking this course.'
+    Corequisites: Corequisites.
     'Seats Available': 'Seats Available.'
-    'Course Cost': 'Course Cost.'
+    'Total Cost': 'Course Cost.'
+    'Contact Hours': 'Contact Hours.'
 process:
   name: Name
   field_title: Title
@@ -46,6 +48,8 @@ process:
         HY: Hybrid
         TR: 'In Class'
         IN: Online
+        DL: DL
+        CP: CP
     -
       plugin: entity_generate
       entity_type: taxonomy_term
@@ -56,14 +60,14 @@ process:
     plugin: entity_generate
     entity_type: taxonomy_term
     bundle_key: vid
-    bundle: Department
+    bundle: department
     value_key: name
     source: Department
   field_division:
     plugin: entity_generate
     entity_type: taxonomy_term
     bundle_key: vid
-    bundle: Department
+    bundle: department
     value_key: name
     source: Division
   field_academic_level:
@@ -72,8 +76,8 @@ process:
       source: 'Sec Acad Level'
       map:
         CU: Curriculum
-        CE: ConEd
-        BSP: 'Basic Skills'
+        CE: 'Continuing Education'
+        BSP: ESL
     -
       plugin: entity_generate
       entity_type: taxonomy_term
@@ -91,13 +95,22 @@ process:
   field_requisites:
     -
       plugin: durhamtech_course_outline
-      source: 'Requisite Courses'
+      source: Prerequisites
+    -
+      plugin: iterator
+      process:
+        target_id: '0'
+  field_corequisites‎:
+    -
+      plugin: durhamtech_course_outline
+      source: Corequisites
     -
       plugin: iterator
       process:
         target_id: '0'
   field_seats: 'Seats Available'
-  field_average_cost: 'Course Cost'
+  field_average_cost: 'Total Cost'
+  field_contact_hours: 'Contact Hours'
 destination:
   plugin: 'entity:taxonomy_term'
   default_bundle: course
