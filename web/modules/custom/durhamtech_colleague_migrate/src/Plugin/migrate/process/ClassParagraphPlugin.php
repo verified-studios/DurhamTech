@@ -27,7 +27,7 @@ class ClassParagraphPlugin extends ProcessPluginBase {
 
     // Prepare Meeting days data.
     $days_value = $source['Meeting Days'];
-    $day_rows = explode(PHP_EOL, $days_value);
+    $day_rows = explode(', ', $days_value);
     $day_rows = array_filter($day_rows, function ($value) {
       return $value !== '';
     });
@@ -45,7 +45,7 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     if (!is_string($room_value)) {
       throw new MigrateException(sprintf('%s is not a string', var_export($room_value, TRUE)));
     }
-    $rooms_row = explode(PHP_EOL, $room_value);
+    $rooms_row = explode(', ', $room_value);
     foreach ($rooms_row as $room_key => $room) {
       $class_data_items[$room_key]['field_room'] = $room;
     }
@@ -64,7 +64,7 @@ class ClassParagraphPlugin extends ProcessPluginBase {
 
     // Prepare Start Time.
     $start_time_value = $source['Start Time'];
-    $start_time_row = explode(PHP_EOL, $start_time_value);
+    $start_time_row = explode(', ', $start_time_value);
     $start_time_row = array_filter($start_time_row, function ($value) {
       return $value !== '';
     });
@@ -86,7 +86,7 @@ class ClassParagraphPlugin extends ProcessPluginBase {
 
     // Prepare End Time.
     $end_time_value = $source['End Time'];
-    $end_time_row = explode(PHP_EOL, $end_time_value);
+    $end_time_row = explode(', ', $end_time_value);
     $end_time_row = array_filter($end_time_row, function ($value) {
       return $value !== '';
     });

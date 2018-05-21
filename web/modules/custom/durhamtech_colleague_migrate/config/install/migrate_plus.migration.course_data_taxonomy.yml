@@ -49,6 +49,8 @@ process:
         HY: Hybrid
         TR: In Class
         IN: Online
+        DL: DL
+        CP: CP
     -
       plugin: entity_generate
       entity_type: taxonomy_term
@@ -59,14 +61,14 @@ process:
     plugin: entity_generate
     entity_type: taxonomy_term
     bundle_key: vid
-    bundle: Department
+    bundle: department
     value_key: name
     source: Department
   field_division:
     plugin: entity_generate
     entity_type: taxonomy_term
     bundle_key: vid
-    bundle: Department
+    bundle: department
     value_key: name
     source: Division
   field_academic_level:
