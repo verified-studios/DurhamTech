@@ -7072,7 +7072,7 @@ table {
   .secondary-page-header .banner {
     background-position: 0% 50% !important;
     background-size: cover !important;
-    min-height: 400px;
+    min-height: 360px;
     padding-top: 50px;
     position: relative; }
     .secondary-page-header .banner .banner-text-wrapper {
