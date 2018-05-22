@@ -12,12 +12,8 @@
 function durhamtech_preprocess_block(&$variables) {
   switch ($variables['base_plugin_id']) {
     case 'system_branding_block':
-      $variables['site_logo'] = '';
-      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
-        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
-      }
+      $variables['site_logo'] = '/' . drupal_get_path('theme','durhamtech') . '/images/durham-tech-logo-web.svg';
       break;
-
   }
 }
 
