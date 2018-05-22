@@ -92,7 +92,6 @@
 $banner-menu-orange: #ff9000;
 $banner-menu-orange-hover: #f27604;
 #block-banner-menu {
-  bottom: 2rem;
   position: absolute;
   right: 0;
   top: 50%;
@@ -103,8 +102,8 @@ $banner-menu-orange-hover: #f27604;
 
     > li > a {
       @include transition();
-      background-color: $banner-menu-orange;
-      border-left: 3px solid $brand-orange;
+      background-color: $white;
+      border-left: 10px solid $brand-orange;
       box-shadow: 2px 2px 5px rgba($black, 0.25);
       border-radius: 5px;
       border-top-right-radius: 0;
@@ -125,6 +124,7 @@ $banner-menu-orange-hover: #f27604;
       }
 
       svg {
+        color: $dark-orange;
         float: left;
         margin-right: 10px;
         min-height: 35px;
@@ -139,9 +139,15 @@ $banner-menu-orange-hover: #f27604;
         display: none;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         @include transition();
-        background-color: $banner-menu-orange-hover;
+        background-color: $white;
+        border-color: $dark-orange;
+        
+        svg {
+          transform: rotate(-10deg);
+        }
       }
     }
   }

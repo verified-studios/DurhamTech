@@ -2,11 +2,13 @@
   position: relative;
 
   .banner {
+    box-shadow: inset 2px 2px 20px rgba($black, 0.1);
     background-position: 0% 50%!important;
     background-size: cover!important;
     min-height: 360px;
     padding-top: 50px;
     position: relative;
+    background-color: $gray;
 
     // Banner text/header
     .banner-text-wrapper {
@@ -14,7 +16,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      padding: 15rem 0 2rem;
+      padding: 15rem 0 4rem;
       text-shadow: 2px 2px 5px rgba($black, 0.25);
       background: -moz-linear-gradient(bottom, rgba($black, 0.82) 20%, rgba($brand-gray, 0) 100%); /* FF3.6-15 */
       background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 100%); /* Chrome10-25,Safari5.1-6 */

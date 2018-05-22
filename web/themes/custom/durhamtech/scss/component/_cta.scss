@@ -34,7 +34,7 @@ a.cta-box:visited {
 
   &:hover,
   &:focus {
-    background-color: $brand-orange;
+    background-color: darken($dark-orange, 10);
 
     .fa,
     .svg-inline--fa {
@@ -48,14 +48,13 @@ a.cta-box:visited {
 
     img {
       opacity: 0.25;
-      filter: blur(2px) grayscale(67%);
     }
 
     .cta-box--inner {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
-      background: -moz-linear-gradient(left, rgba($brand-orange, 1) 15%, rgba($brand-orange, 0) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(left, rgba($brand-orange, 1) 15%,rgba($brand-orange, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, rgba($brand-orange, 1) 15%,rgba($brand-orange, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      background: -moz-linear-gradient(left, darken(rgba($dark-orange, 1), 10) 0%, darken(rgba($gray, 0), 10)  100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, darken(rgba($dark-orange, 1), 10)  0%, darken(rgba($gray, 0), 10) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, darken(rgba($dark-orange, 1), 10)  0%, darken(rgba($gray, 0), 10) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
     }
   }
@@ -71,7 +70,7 @@ a.cta-box:visited {
     right: 50%;
     opacity: 0;
     transition: all 300ms ease-in-out;
-    z-index: 1;
+    z-index: 3;
   }
 
   img {
@@ -80,7 +79,7 @@ a.cta-box:visited {
     top: 0;
     z-index: 0;
     opacity: 0.25;
-    filter: blur(2px) grayscale(67%);
+    filter: blur(3px) grayscale(75%);
     transition: all 300ms ease-in-out;
   }
 
@@ -92,9 +91,9 @@ a.cta-box:visited {
     left: 0;
     z-index: 2;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
-    background: -moz-linear-gradient(left, rgba($dark-orange, 0.8) 0%, rgba($dark-orange, 0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba($dark-orange, 0.8) 0%,rgba($dark-orange, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba($dark-orange, 0.8) 0%,rgba($dark-orange, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(left, rgba($dark-orange, 0.98) 0%, rgba($dark-orange, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba($dark-orange, 0.98) 0%,rgba($dark-orange, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba($dark-orange, 0.98) 0%,rgba($dark-orange, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     transition: all 300ms ease-in-out;
 
     h3 {
