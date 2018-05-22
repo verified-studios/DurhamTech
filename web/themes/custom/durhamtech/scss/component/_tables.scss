@@ -13,16 +13,17 @@ table {
     background-color: $green;
     border-left: 2px solid darken($green, 5);
     color: $white;
+    font-weight: 600;
   }
 
   tr {
     &:nth-of-type(2n) {
-      background-color: lighten($brand-gray, 42);
+      background-color: $offwhite;
     }
 
     td {
       color: $gray;
-      border-left: 2px solid lighten($brand-gray, 35);
+      border-left: 2px solid darken($offwhite, 5);
     }
   }
   // nested table

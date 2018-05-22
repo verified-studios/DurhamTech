@@ -7057,9 +7057,10 @@ table {
   table th {
     background-color: #19975D;
     border-left: 2px solid #158150;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    font-weight: 600; }
   table tr:nth-of-type(2n) {
-    background-color: #f2f3f4; }
+    background-color: #edeeef; }
   table tr td {
     color: #262626;
     border-left: 2px solid #dfe2e3; }
@@ -7108,9 +7109,8 @@ table {
     min-width: 33.33333%;
     margin: auto; }
 
-.masthead {
-  background-color: #edeeef;
-  margin-top: -60px; }
+.block-broken {
+  display: none; }
 
 .cta-box-wrapper {
   padding: 2rem; }
@@ -7121,7 +7121,7 @@ a.cta-box:visited {
   color: #FFFFFF;
   height: 150px;
   overflow: hidden;
-  background-color: #808990;
+  background-color: #CC4700;
   padding: 2rem;
   position: relative;
   border-radius: 4px;
@@ -7129,7 +7129,7 @@ a.cta-box:visited {
   a.cta-box:hover, a.cta-box:focus,
   a.cta-box:visited:hover,
   a.cta-box:visited:focus {
-    background-color: #19975D; }
+    background-color: #E87722; }
     a.cta-box:hover .fa,
     a.cta-box:hover .svg-inline--fa, a.cta-box:focus .fa,
     a.cta-box:focus .svg-inline--fa,
@@ -7144,17 +7144,17 @@ a.cta-box:visited {
     a.cta-box:hover img, a.cta-box:focus img,
     a.cta-box:visited:hover img,
     a.cta-box:visited:focus img {
-      opacity: 0.4;
+      opacity: 0.25;
       filter: blur(2px) grayscale(67%); }
     a.cta-box:hover .cta-box--inner, a.cta-box:focus .cta-box--inner,
     a.cta-box:visited:hover .cta-box--inner,
     a.cta-box:visited:focus .cta-box--inner {
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
-      background: -moz-linear-gradient(left, #19975d 15%, rgba(25, 151, 93, 0) 100%);
+      background: -moz-linear-gradient(left, #e87722 15%, rgba(232, 119, 34, 0) 100%);
       /* FF3.6-15 */
-      background: -webkit-linear-gradient(left, #19975d 15%, rgba(25, 151, 93, 0) 100%);
+      background: -webkit-linear-gradient(left, #e87722 15%, rgba(232, 119, 34, 0) 100%);
       /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to right, #19975d 15%, rgba(25, 151, 93, 0) 100%);
+      background: linear-gradient(to right, #e87722 15%, rgba(232, 119, 34, 0) 100%);
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   a.cta-box .ext,
   a.cta-box:visited .ext {
@@ -7175,7 +7175,7 @@ a.cta-box:visited {
     left: 0;
     top: 0;
     z-index: 0;
-    opacity: 0.4;
+    opacity: 0.25;
     filter: blur(2px) grayscale(67%);
     transition: all 300ms ease-in-out; }
   a.cta-box .cta-box--inner,
@@ -7187,11 +7187,11 @@ a.cta-box:visited {
     left: 0;
     z-index: 2;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
-    background: -moz-linear-gradient(left, rgba(128, 137, 144, 0.8) 0%, rgba(128, 137, 144, 0) 100%);
+    background: -moz-linear-gradient(left, rgba(204, 71, 0, 0.8) 0%, rgba(204, 71, 0, 0) 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(128, 137, 144, 0.8) 0%, rgba(128, 137, 144, 0) 100%);
+    background: -webkit-linear-gradient(left, rgba(204, 71, 0, 0.8) 0%, rgba(204, 71, 0, 0) 100%);
     /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(128, 137, 144, 0.8) 0%, rgba(128, 137, 144, 0) 100%);
+    background: linear-gradient(to right, rgba(204, 71, 0, 0.8) 0%, rgba(204, 71, 0, 0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     transition: all 300ms ease-in-out; }
     a.cta-box .cta-box--inner h3,
@@ -7803,5 +7803,45 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .path-frontpage .event.column-teaser .content .btn:hover {
       background-color: #FFFFFF;
       color: #000000; }
+
+.node--type-landing_page {
+  padding: 0; }
+
+.page-node-type-landing-page .footer {
+  margin-top: 0 !important; }
+
+.landing-page section {
+  padding: 3rem 0; }
+
+.landing-page .lp-masthead {
+  background-color: #edeeef;
+  padding: 0 0 2rem; }
+
+.landing-page .lp-policies {
+  padding: 1rem 0;
+  background-color: #81BE41; }
+  .landing-page .lp-policies .btn {
+    font-weight: 300;
+    text-transform: none;
+    font-size: 2rem; }
+
+.landing-page .lp-events {
+  background-color: #CED2D5; }
+
+.landing-page h2.block-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0 0 3rem; }
+
+.landing-page .block h3 {
+  font-weight: 300;
+  color: #808990;
+  font-size: 2.15rem; }
+
+.landing-page .block ul {
+  margin-top: 2rem;
+  margin-left: 0.5rem; }
+  .landing-page .block ul li {
+    margin-bottom: 0.5rem; }
 
 /*# sourceMappingURL=style.css.map */
