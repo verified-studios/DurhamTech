@@ -7108,6 +7108,10 @@ table {
     min-width: 33.33333%;
     margin: auto; }
 
+.masthead {
+  background-color: #edeeef;
+  margin-top: -60px; }
+
 .cta-box-wrapper {
   padding: 2rem; }
 

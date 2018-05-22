@@ -22,6 +22,9 @@ $brand-orange: #E87722;
 $brand-gray: #808990;
 $alert-orange: #fdc504;
 
+
+$offwhite: lighten($brand-gray, 40);
+
 // Colors array
 $colors: (
   'white': $white,

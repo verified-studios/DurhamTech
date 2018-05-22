@@ -32,8 +32,6 @@
     {% set ctaTitle = name.0 %}
 {% endif %}
 
-{{ kint(content) }}
-
 <div{{ attributes }}>
     <div class="cta-box-wrapper">
         <a class="cta-box" href="{{ content.field_link.0['#url'] }}" aria-label="{{  ctaTitle }}">
