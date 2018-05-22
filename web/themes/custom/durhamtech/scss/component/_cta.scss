@@ -43,8 +43,8 @@ a.cta-box:visited {
 
 
     img {
-      opacity: 0.35;
-      filter: blur(1px) grayscale(67%);
+      opacity: 0.4;
+      filter: blur(2px) grayscale(67%);
     }
 
     .cta-box--inner {
@@ -75,8 +75,8 @@ a.cta-box:visited {
     left: 0;
     top: 0;
     z-index: 0;
-    opacity: 0.2;
-    filter: blur(5px) grayscale(67%);
+    opacity: 0.4;
+    filter: blur(2px) grayscale(67%);
     transition: all 300ms ease-in-out;
   }
 
