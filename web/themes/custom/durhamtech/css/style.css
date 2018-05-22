@@ -7070,11 +7070,43 @@ table {
 .secondary-page-header {
   position: relative; }
   .secondary-page-header .banner {
-    background-repeat: no-repeat;
     background-position: 0% 50% !important;
     background-size: cover !important;
     min-height: 400px;
-    padding-top: 70px; }
+    padding-top: 50px;
+    position: relative; }
+    .secondary-page-header .banner .banner-text-wrapper {
+      margin-top: 5%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15rem 0 2rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.92) 20%, rgba(128, 137, 144, 0) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.92) 20%, rgba(128, 137, 144, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 20%, rgba(128, 137, 144, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      .secondary-page-header .banner .banner-text-wrapper .breadcrumb {
+        background-color: transparent;
+        color: #FFFFFF;
+        font-weight: 300;
+        padding-left: 0; }
+        .secondary-page-header .banner .banner-text-wrapper .breadcrumb a {
+          color: #CED2D5;
+          margin-right: 10px;
+          text-decoration: underline; }
+          .secondary-page-header .banner .banner-text-wrapper .breadcrumb a:hover {
+            color: #E87722;
+            text-decoration: none; }
+        .secondary-page-header .banner .banner-text-wrapper .breadcrumb span {
+          color: #CED2D5;
+          font-weight: 600; }
+      .secondary-page-header .banner .banner-text-wrapper .banner-title {
+        display: inline-block;
+        padding: 0;
+        margin: 0; }
 
 .path-frontpage .secondary-page-header .banner {
   background-position: 0% 50% !important;
@@ -7275,7 +7307,7 @@ a.cta-box:visited {
       margin-top: 30px; }
 
 #block-banner-menu {
-  bottom: 0;
+  bottom: 2rem;
   position: absolute;
   right: 0;
   top: 50%;
@@ -7283,41 +7315,34 @@ a.cta-box:visited {
   #block-banner-menu .menu > li > a {
     transition: 0.2s all ease-in;
     background-color: #ff9000;
+    border-left: 3px solid #E87722;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     color: #000000;
     margin-bottom: 10px;
-    max-width: 160px;
+    max-width: 200px;
+    font-weight: 600;
+    line-height: 35px;
     overflow: hidden;
     padding: 7px 30px 7px 7px; }
+    #block-banner-menu .menu > li > a:hover svg, #block-banner-menu .menu > li > a:focus svg {
+      opacity: 1; }
     #block-banner-menu .menu > li > a svg {
       float: left;
       margin-right: 10px;
-      min-height: 40px;
-      min-width: 40px;
-      vertical-align: middle; }
+      min-height: 35px;
+      min-width: 35px;
+      vertical-align: middle;
+      opacity: 0.5;
+      padding: 5px;
+      transition: all 160ms ease-in-out; }
     #block-banner-menu .menu > li > a .ext {
       display: none; }
     #block-banner-menu .menu > li > a:hover {
       transition: 0.2s all ease-in;
       background-color: #f27604; }
-
-.banner-text-wrapper {
-  margin-top: 5%; }
-  .banner-text-wrapper .breadcrumb {
-    background-color: transparent;
-    color: #FFFFFF;
-    font-weight: 600; }
-    .banner-text-wrapper .breadcrumb a {
-      color: #FFFFFF;
-      margin-right: 10px;
-      text-decoration: underline; }
-      .banner-text-wrapper .breadcrumb a:hover {
-        text-decoration: none; }
-  .banner-text-wrapper .banner-title {
-    display: inline-block;
-    padding: 0 20px; }
 
 .view-id-homepage.view-display-id-homepage_news {
   margin-right: 10%; }

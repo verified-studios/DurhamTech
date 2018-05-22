@@ -92,7 +92,7 @@
 $banner-menu-orange: #ff9000;
 $banner-menu-orange-hover: #f27604;
 #block-banner-menu {
-  bottom: 0;
+  bottom: 2rem;
   position: absolute;
   right: 0;
   top: 50%;
@@ -104,21 +104,35 @@ $banner-menu-orange-hover: #f27604;
     > li > a {
       @include transition();
       background-color: $banner-menu-orange;
+      border-left: 3px solid $brand-orange;
+      box-shadow: 2px 2px 5px rgba($black, 0.25);
       border-radius: 5px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       color: $black;
       margin-bottom: 10px;
-      max-width: 160px;
+      max-width: 200px;
+      font-weight: 600;
+      line-height: 35px;
       overflow: hidden;
       padding: 7px 30px 7px 7px;
+
+      &:hover,
+      &:focus {
+        svg {
+          opacity: 1;
+        }
+      }
 
       svg {
         float: left;
         margin-right: 10px;
-        min-height: 40px;
-        min-width: 40px;
+        min-height: 35px;
+        min-width: 35px;
         vertical-align: middle;
+        opacity: 0.5;
+        padding: 5px;
+        transition: all 160ms ease-in-out;
       }
 
       .ext {
@@ -130,33 +144,6 @@ $banner-menu-orange-hover: #f27604;
         background-color: $banner-menu-orange-hover;
       }
     }
-  }
-}
-
-// Banner text/header
-.banner-text-wrapper {
-  margin-top: 5%;
-
-  .breadcrumb {
-    background-color: transparent;
-    color: $white;
-    font-weight: 600;
-
-    a {
-      color: $white;
-      margin-right: 10px;
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .banner-title {
-    display: inline-block;
-    padding: 0 20px;
-
   }
 }
 
