@@ -46,5 +46,8 @@
                 {{ content.field_background_image.0 }}
             {% endif %}
         </a>
+        {% if user.hasPermission('administer nodes') %}
+            <a href="/taxonomy/term/{{ term.id }}/edit?destination={{ path('<current>') }}">Edit</a>
+        {% endif %}
     </div>
 </div>
