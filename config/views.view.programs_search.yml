@@ -40,7 +40,7 @@ display:
       exposed_form:
         type: bef
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -72,11 +72,9 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            field_program_type:
+            search_api_fulltext:
               bef_format: default
               more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''

@@ -1,4 +1,4 @@
-uuid: 328eee36-c660-4da8-86df-c1e1ff454c9f
+uuid: 23b7969a-5fc2-4392-956e-6f7c954efebd
 langcode: en
 status: true
 dependencies:
@@ -21,8 +21,8 @@ settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
   max_filesize: ''
-  max_resolution: ''
-  min_resolution: ''
+  max_resolution: 1500x1500
+  min_resolution: 500x500
   alt_field: true
   alt_field_required: true
   title_field: false

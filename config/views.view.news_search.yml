@@ -368,7 +368,19 @@ display:
           table: search_api_index_news_index
           field: field_featured
           plugin_id: search_api_boolean
-      sorts: {  }
+      sorts:
+        field_publish_date:
+          id: field_publish_date
+          table: search_api_index_news_index
+          field: field_publish_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: 'News Search'
       header:
         result:

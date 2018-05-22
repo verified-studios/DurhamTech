@@ -4,12 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_continuing_education_cat
     - field.field.node.program.field_courses
+    - field.field.node.program.field_cred_type
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
+    - field.field.node.program.field_financial_aid_eligible
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
     - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_app_deadline
     - field.field.node.program.field_program_cost
     - field.field.node.program.field_program_department
     - field.field.node.program.field_program_id
@@ -69,23 +73,33 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  field_total_credit_hours:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   addtoany: true
   field_average_completion: true
   field_average_cost: true
   field_average_salary: true
+  field_continuing_education_cat: true
   field_courses: true
+  field_cred_type: true
   field_degree_option: true
   field_financial_aid_eligible: true
   field_licensure_pass_rate: true
   field_min_required_credits: true
   field_min_required_inst: true
   field_min_required_inst_gpa: true
+  field_program_app_deadline: true
   field_program_cost: true
   field_program_department: true
   field_program_id: true
   field_program_printable: true
   field_rich_text: true
   field_statistic: true
-  field_total_credit_hours: true
   links: true
