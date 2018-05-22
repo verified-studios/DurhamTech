@@ -7259,54 +7259,68 @@ a.cta-box:visited {
 
 #block-get-started {
   background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 10px;
-  bottom: 0;
+  border-radius: 4px;
+  bottom: 4rem;
   left: 0;
   margin: 0 auto;
+  width: 60vw;
+  min-width: 500px;
   max-width: 900px;
-  padding: 30px 40px;
+  padding: 3rem;
   position: absolute;
   right: 0; }
   #block-get-started .title {
     color: #FFFFFF;
     display: inline-block;
-    font-size: 5.625em;
+    font-size: 3.4375em;
+    font-weight: 700;
     line-height: 1;
+    letter-spacing: 0.07em;
     text-align: center;
     text-transform: uppercase;
-    width: 25%;
-    vertical-align: middle; }
+    width: auto;
+    vertical-align: middle;
+    position: absolute;
+    margin-top: -2px; }
     #block-get-started .title .small {
+      margin-top: 0.5rem;
       display: block;
-      font-size: 4rem; }
+      font-weight: 700;
+      font-size: 2.2rem;
+      letter-spacing: 0.07em; }
   #block-get-started form {
-    display: inline-block;
-    width: 73%;
-    vertical-align: middle; }
+    position: relative;
+    width: 80%;
+    margin-left: 20%; }
     #block-get-started form .form-item {
       display: inline-block;
       font-size: 1.25em;
       height: 30px;
-      margin-bottom: 10px;
-      width: 80%; }
-      #block-get-started form .form-item:last-of-type {
-        margin-bottom: 0; }
+      margin-top: 2rem;
+      width: 75%; }
+      #block-get-started form .form-item:first-of-type {
+        margin-top: 0; }
       #block-get-started form .form-item .select-wrapper {
         width: 100%; }
         #block-get-started form .form-item .select-wrapper select {
           width: 100%; }
   #block-get-started .form-actions {
-    display: inline-block;
-    float: right;
-    margin-top: -40px;
-    text-align: right;
-    width: 19%;
-    vertical-align: middle; }
+    padding-left: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22%;
+    margin-left: 3%;
+    text-align: center; }
     #block-get-started .form-actions a.btn-lg, #block-get-started .form-actions .btn-group-lg > a.btn {
       font-size: 2.5rem; }
     #block-get-started .form-actions a:not(.btn) {
       display: block;
-      margin-top: 30px; }
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 18px; }
+      #block-get-started .form-actions a:not(.btn):hover {
+        color: #fdc504; }
 
 #block-banner-menu {
   position: absolute;

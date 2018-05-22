@@ -239,7 +239,7 @@ function durhamtech_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\Form
   if ($form_id == 'views_exposed_form' && $view['view']->id() == 'programs_search') {
     if(\Drupal::service('path.matcher')->isFrontPage()) {
       $form['actions']['submit']['#value'] = t('Search');
-      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-green btn-lg';
+      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-block btn-green btn-lg';
       $form['actions']['submit']['#prefix'] = '<div class="action">';
       $form['actions']['submit']['#suffix'] = '<a class="white" href="#">Still need help?</a></div>';
       $form['search_api_fulltext']['#access'] = FALSE;
