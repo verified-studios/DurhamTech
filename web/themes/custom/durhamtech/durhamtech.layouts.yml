@@ -15,6 +15,25 @@ library:
       label: Blog
     events:
       label: Events
+employees:
+  label: Employees
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/employees
+  regions:
+    masthead:
+      label: Call to Action
+    information:
+      label: Information
+    news-header:
+      label: News Header
+    news:
+      label: News
+    events-header:
+      label: Events Header
+    events:
+      label: Events
+    social:
+      label: Social Media
 one_column_mixed:
   label: One column mixed
   category: Panelizer

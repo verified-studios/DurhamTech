@@ -1,3 +1,30 @@
+.program-search-buttons {
+  padding: 3rem 0;
+  text-align: center;
+
+  .buttons {
+    padding-bottom: 1rem;
+
+    button.btn {
+      padding: 1.5rem;
+
+      &:first-of-type {
+        margin-right: 1.5rem;
+      }
+
+      &:last-of-type {
+        margin-left: 1.5rem;
+      }
+
+      &:active,
+      &:hover,
+      &:focus {
+        background-color: $brand-orange;
+      }
+    }
+  }
+}
+
 .program {
 
   .program-header {
