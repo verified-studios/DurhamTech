@@ -1,20 +1,46 @@
-<div class="container">
-  <div class="row">
-    {{ content.masthead }}
-  </div>
-  <div class="row">
-      {{ content.information }}
-  </div>
-  <div class="row">
-      {{ content.policies }}
-  </div>
-  <div class="row">
-      {{ content.resources }}
-  </div>
-  <div class="row">
-      {{ content.blog }}
-  </div>
-  <div class="row">
-      {{ content.events }}
-  </div>
+<div class="landing-page">
+  <section class="lp-masthead">
+    <div class="container">
+      <div class="row">
+        <div class="cta flex-view">
+            {{ content.masthead }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+          {{ content.information }}
+      </div>
+    </div>
+  </section>
+  <section class="lp-policies">
+    <div class="container">
+      <div class="row">
+          {{ content.policies }}
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+          {{ content.resources }}
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="row">
+          {{ content.blog }}
+      </div>
+    </div>
+  </section>
+  <section class="lp-events">
+    <div class="container">
+      <div class="row">
+          {{ content.events }}
+      </div>
+    </div>
+  </section>
 </div>

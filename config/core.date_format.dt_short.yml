@@ -1,0 +1,8 @@
+uuid: f8525986-8d31-4523-bebf-aaa77d62d081
+langcode: en
+status: true
+dependencies: {  }
+id: dt_short
+label: 'Durham Tech Short'
+locked: false
+pattern: 'n/j @ g:ia'

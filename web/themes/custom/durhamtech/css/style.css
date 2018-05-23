@@ -5843,7 +5843,8 @@ h1 {
   font-weight: 600; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 2em;
+  color: #262626; }
 
 h2.page-title {
   text-align: center; }
@@ -5851,8 +5852,8 @@ h2.page-title {
     text-align: left; }
 
 h3 {
-  font-size: 1.75em;
-  font-weight: 400; }
+  font-size: 1.5em;
+  font-weight: 300; }
 
 h3.section-title, .block-views .block-title, .node--type-landing_page .block-title {
   font-size: 3rem;
@@ -5926,8 +5927,8 @@ ul:not(.menu), ol:not(.menu) {
   color: #000000; }
 
 .btn, .btn-primary {
-  background-color: #19975D;
-  border-color: #19975D;
+  background-color: #00843D;
+  border-color: #00843D;
   color: #FFFFFF;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -5940,7 +5941,7 @@ ul:not(.menu), ol:not(.menu) {
   .btn.btn-large, .btn-primary.btn-large {
     font-size: 1em; }
   .btn:hover, .btn-primary:hover {
-    background-color: #158150;
+    background-color: #006b31;
     color: #FFFFFF; }
   .btn-outline, .btn-primary-outline {
     background-color: transparent;
@@ -6014,16 +6015,16 @@ ul:not(.menu), ol:not(.menu) {
   color: rgba(0, 0, 0, 0.85); }
 
 .bg-green {
-  background-color: #19975D; }
+  background-color: #00843D; }
 
 .green {
-  color: #19975D; }
+  color: #00843D; }
 
 .bg-light-green {
-  background-color: #99C221; }
+  background-color: #84BD00; }
 
 .light-green {
-  color: #99C221; }
+  color: #84BD00; }
 
 .bg-orange {
   background-color: #E87722; }
@@ -6570,7 +6571,7 @@ body {
 
 .nav > li > a:focus {
   background-color: transparent;
-  outline-color: #19975D; }
+  outline-color: #00843D; }
 
 @media screen and (min-width: 768px) {
   .navbar.container {
@@ -6594,7 +6595,7 @@ body {
       padding-left: 0; } }
 
 .logo:focus {
-  outline-color: #19975D; }
+  outline-color: #00843D; }
 
 .logo img {
   width: 283px; }
@@ -6664,7 +6665,7 @@ body {
     background-color: #000000; }
 
 .page-header-wrapper {
-  background-color: #81BE41; }
+  background-color: #84BD00; }
   .page-header-wrapper nav ul > li {
     display: inline-block; }
     .page-header-wrapper nav ul > li a {
@@ -7055,11 +7056,12 @@ table {
     table th:first-of-type, table td:first-of-type {
       border: none; }
   table th {
-    background-color: #19975D;
-    border-left: 2px solid #158150;
-    color: #FFFFFF; }
+    background-color: #00843D;
+    border-left: 2px solid #006b31;
+    color: #FFFFFF;
+    font-weight: 600; }
   table tr:nth-of-type(2n) {
-    background-color: #f2f3f4; }
+    background-color: #edeeef; }
   table tr td {
     color: #262626;
     border-left: 2px solid #dfe2e3; }
@@ -7069,11 +7071,45 @@ table {
 .secondary-page-header {
   position: relative; }
   .secondary-page-header .banner {
-    background-repeat: no-repeat;
+    box-shadow: inset 2px 2px 20px rgba(0, 0, 0, 0.1);
     background-position: 0% 50% !important;
     background-size: cover !important;
-    min-height: 400px;
-    padding-top: 70px; }
+    min-height: 360px;
+    padding-top: 50px;
+    position: relative;
+    background-color: #262626; }
+    .secondary-page-header .banner .banner-text-wrapper {
+      margin-top: 5%;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 15rem 0 4rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.82) 20%, rgba(128, 137, 144, 0) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.82) 20%, rgba(128, 137, 144, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 20%, rgba(128, 137, 144, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+      .secondary-page-header .banner .banner-text-wrapper .breadcrumb {
+        background-color: transparent;
+        color: #FFFFFF;
+        font-weight: 300;
+        padding-left: 0; }
+        .secondary-page-header .banner .banner-text-wrapper .breadcrumb a {
+          color: #CED2D5;
+          margin-right: 10px;
+          text-decoration: underline; }
+          .secondary-page-header .banner .banner-text-wrapper .breadcrumb a:hover {
+            color: #E87722;
+            text-decoration: none; }
+        .secondary-page-header .banner .banner-text-wrapper .breadcrumb span {
+          color: #CED2D5;
+          font-weight: 600; }
+      .secondary-page-header .banner .banner-text-wrapper .banner-title {
+        display: inline-block;
+        padding: 0;
+        margin: 0; }
 
 .path-frontpage .secondary-page-header .banner {
   background-position: 0% 50% !important;
@@ -7099,6 +7135,116 @@ table {
       .sidebar .menu li > ul li a {
         font-weight: 300 !important; }
 
+.flex-view .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem -2rem; }
+  .flex-view .view-content .views-row {
+    width: 33.33333%;
+    min-width: 33.33333%;
+    margin: auto; }
+
+.block-broken {
+  display: none; }
+
+.cta-box-wrapper {
+  padding: 2rem; }
+
+a.cta-box,
+a.cta-box:visited {
+  display: block;
+  color: #FFFFFF;
+  height: 150px;
+  overflow: hidden;
+  background-color: #CC4700;
+  padding: 2rem;
+  position: relative;
+  border-radius: 4px;
+  transition: all 300ms ease-in-out; }
+  a.cta-box:hover, a.cta-box:focus,
+  a.cta-box:visited:hover,
+  a.cta-box:visited:focus {
+    background-color: #993500; }
+    a.cta-box:hover .fa,
+    a.cta-box:hover .svg-inline--fa, a.cta-box:focus .fa,
+    a.cta-box:focus .svg-inline--fa,
+    a.cta-box:visited:hover .fa,
+    a.cta-box:visited:hover .svg-inline--fa,
+    a.cta-box:visited:focus .fa,
+    a.cta-box:visited:focus .svg-inline--fa {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      opacity: 1; }
+    a.cta-box:hover img, a.cta-box:focus img,
+    a.cta-box:visited:hover img,
+    a.cta-box:visited:focus img {
+      opacity: 0.25; }
+    a.cta-box:hover .cta-box--inner, a.cta-box:focus .cta-box--inner,
+    a.cta-box:visited:hover .cta-box--inner,
+    a.cta-box:visited:focus .cta-box--inner {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
+      background: -moz-linear-gradient(left, #993500 0%, rgba(13, 13, 13, 0) 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, #993500 0%, rgba(13, 13, 13, 0) 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, #993500 0%, rgba(13, 13, 13, 0) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  a.cta-box .ext,
+  a.cta-box:visited .ext {
+    display: none !important; }
+  a.cta-box .fa,
+  a.cta-box .svg-inline--fa,
+  a.cta-box:visited .fa,
+  a.cta-box:visited .svg-inline--fa {
+    position: absolute;
+    bottom: 2rem;
+    right: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    z-index: 3; }
+  a.cta-box img,
+  a.cta-box:visited img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    opacity: 0.25;
+    filter: blur(3px) grayscale(75%);
+    transition: all 300ms ease-in-out; }
+  a.cta-box .cta-box--inner,
+  a.cta-box:visited .cta-box--inner {
+    display: block;
+    position: absolute;
+    padding: 100% 50% 2rem 2rem;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
+    background: -moz-linear-gradient(left, rgba(204, 71, 0, 0.98) 0%, rgba(204, 71, 0, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(204, 71, 0, 0.98) 0%, rgba(204, 71, 0, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(204, 71, 0, 0.98) 0%, rgba(204, 71, 0, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: all 300ms ease-in-out; }
+    a.cta-box .cta-box--inner h3,
+    a.cta-box:visited .cta-box--inner h3 {
+      color: #FFFFFF !important;
+      font-weight: 400 !important;
+      margin: 0;
+      padding: 0;
+      width: 160%;
+      font-size: 2.5rem; }
+    a.cta-box .cta-box--inner p,
+    a.cta-box:visited .cta-box--inner p {
+      margin: 0;
+      padding: 0;
+      margin-top: 0.5rem;
+      color: #FFFFFF !important;
+      font-weight: 300 !important;
+      font-size: 1.5rem; }
+
 .alert.teaser {
   margin-bottom: 0; }
   .alert.teaser .field, .alert.teaser svg, .alert.teaser i {
@@ -7113,106 +7259,116 @@ table {
 
 #block-get-started {
   background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 10px;
-  bottom: 0;
+  border-radius: 4px;
+  bottom: 4rem;
   left: 0;
   margin: 0 auto;
+  width: 60vw;
+  min-width: 500px;
   max-width: 900px;
-  padding: 30px 40px;
+  padding: 3rem;
   position: absolute;
   right: 0; }
   #block-get-started .title {
     color: #FFFFFF;
     display: inline-block;
-    font-size: 5.625em;
+    font-size: 3.4375em;
+    font-weight: 700;
     line-height: 1;
+    letter-spacing: 0.07em;
     text-align: center;
     text-transform: uppercase;
-    width: 25%;
-    vertical-align: middle; }
+    width: auto;
+    vertical-align: middle;
+    position: absolute;
+    margin-top: -2px; }
     #block-get-started .title .small {
+      margin-top: 0.5rem;
       display: block;
-      font-size: 4rem; }
+      font-weight: 700;
+      font-size: 2.2rem;
+      letter-spacing: 0.07em; }
   #block-get-started form {
-    display: inline-block;
-    width: 73%;
-    vertical-align: middle; }
+    position: relative;
+    width: 80%;
+    margin-left: 20%; }
     #block-get-started form .form-item {
       display: inline-block;
       font-size: 1.25em;
       height: 30px;
-      margin-bottom: 10px;
-      width: 80%; }
-      #block-get-started form .form-item:last-of-type {
-        margin-bottom: 0; }
+      margin-top: 2rem;
+      width: 75%; }
+      #block-get-started form .form-item:first-of-type {
+        margin-top: 0; }
       #block-get-started form .form-item .select-wrapper {
         width: 100%; }
         #block-get-started form .form-item .select-wrapper select {
           width: 100%; }
   #block-get-started .form-actions {
-    display: inline-block;
-    float: right;
-    margin-top: -40px;
-    text-align: right;
-    width: 19%;
-    vertical-align: middle; }
+    padding-left: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22%;
+    margin-left: 3%;
+    text-align: center; }
     #block-get-started .form-actions a.btn-lg, #block-get-started .form-actions .btn-group-lg > a.btn {
       font-size: 2.5rem; }
     #block-get-started .form-actions a:not(.btn) {
       display: block;
-      margin-top: 30px; }
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 18px; }
+      #block-get-started .form-actions a:not(.btn):hover {
+        color: #fdc504; }
 
 #block-banner-menu {
-  bottom: 0;
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%); }
   #block-banner-menu .menu > li > a {
     transition: 0.2s all ease-in;
-    background-color: #ff9000;
+    background-color: #FFFFFF;
+    border-left: 10px solid #E87722;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     color: #000000;
     margin-bottom: 10px;
-    max-width: 160px;
+    max-width: 200px;
+    font-weight: 600;
+    line-height: 35px;
     overflow: hidden;
     padding: 7px 30px 7px 7px; }
+    #block-banner-menu .menu > li > a:hover svg, #block-banner-menu .menu > li > a:focus svg {
+      opacity: 1; }
     #block-banner-menu .menu > li > a svg {
+      color: #CC4700;
       float: left;
       margin-right: 10px;
-      min-height: 40px;
-      min-width: 40px;
-      vertical-align: middle; }
+      min-height: 35px;
+      min-width: 35px;
+      vertical-align: middle;
+      opacity: 0.5;
+      padding: 5px;
+      transition: all 160ms ease-in-out; }
     #block-banner-menu .menu > li > a .ext {
       display: none; }
-    #block-banner-menu .menu > li > a:hover {
+    #block-banner-menu .menu > li > a:hover, #block-banner-menu .menu > li > a:focus {
       transition: 0.2s all ease-in;
-      background-color: #f27604; }
-
-.banner-text-wrapper {
-  margin-top: 5%; }
-  .banner-text-wrapper .breadcrumb {
-    background-color: transparent;
-    color: #FFFFFF;
-    font-weight: 600; }
-    .banner-text-wrapper .breadcrumb a {
-      color: #FFFFFF;
-      margin-right: 10px;
-      text-decoration: underline; }
-      .banner-text-wrapper .breadcrumb a:hover {
-        text-decoration: none; }
-  .banner-text-wrapper .banner-title {
-    display: inline-block;
-    padding: 0 20px; }
+      background-color: #FFFFFF;
+      border-color: #CC4700; }
+      #block-banner-menu .menu > li > a:hover svg, #block-banner-menu .menu > li > a:focus svg {
+        transform: rotate(-10deg); }
 
 .view-id-homepage.view-display-id-homepage_news {
   margin-right: 10%; }
   .view-id-homepage.view-display-id-homepage_news .new-article {
     position: relative; }
   .view-id-homepage.view-display-id-homepage_news .content {
-    background-color: #19975D;
+    background-color: #00843D;
     border-radius: 10px;
     padding: 20px 20px 20px 30%;
     margin: 20px 0;
@@ -7259,13 +7415,13 @@ table {
   margin: 10px auto;
   width: 140px; }
   .circular-chart .circle {
-    stroke: #99C221;
+    stroke: #84BD00;
     fill: none;
     stroke-width: 2.8;
     stroke-linecap: square;
     animation: progress 1s ease-out forwards; }
   .circular-chart .circle-bg {
-    fill: #19975D; }
+    fill: #00843D; }
   .circular-chart .percentage {
     fill: #FFFFFF;
     font-size: 0.5em;
@@ -7348,7 +7504,7 @@ table {
     color: #CC4700; }
 
 .pagination > li.active a {
-  background-color: #19975D; }
+  background-color: #00843D; }
   .pagination > li.active a:hover {
     background-color: #CC4700; }
 
@@ -7669,11 +7825,21 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding-top: 0; }
 
 .path-frontpage #columns-1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/themes/custom/durhamtech/images/durham-1280x640.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #FFFFFF;
-  padding: 60px 0; }
+  padding: 60px 0;
+  position: relative;
+  background-color: #262626;
+  overflow: hidden; }
+  .path-frontpage #columns-1 .columns-1--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/themes/custom/durhamtech/images/durham-1280x640.jpg");
+    filter: blur(5px);
+    background-repeat: no-repeat;
+    background-size: cover; }
   .path-frontpage #columns-1 .block-title {
     color: #FFFFFF;
     text-align: left; }
@@ -7705,5 +7871,38 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .path-frontpage .event.column-teaser .content .btn:hover {
       background-color: #FFFFFF;
       color: #000000; }
+
+.node--type-landing_page {
+  padding: 0; }
+
+.page-node-type-landing-page .footer {
+  margin-top: 0 !important; }
+
+.landing-page section {
+  padding: 3rem 0; }
+
+.landing-page .lp-masthead {
+  background-color: #edeeef;
+  padding: 0 0 2rem; }
+
+.landing-page .lp-policies {
+  padding: 1rem 0;
+  background-color: #84BD00; }
+  .landing-page .lp-policies .btn {
+    font-weight: 300;
+    text-transform: none;
+    font-size: 2rem; }
+
+.landing-page .lp-events {
+  background-color: #CED2D5; }
+
+.landing-page h2.block-title {
+  margin: 0 0 3rem; }
+
+.landing-page .block ul {
+  margin-top: 2rem;
+  margin-left: 0.5rem; }
+  .landing-page .block ul li {
+    margin-bottom: 0.5rem; }
 
 /*# sourceMappingURL=style.css.map */

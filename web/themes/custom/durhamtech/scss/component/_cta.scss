@@ -1,0 +1,117 @@
+.flex-view {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem -2rem;
+
+    .views-row {
+      width: 33.33333%;
+      min-width: 33.33333%;
+      margin: auto;
+    }
+  }
+}
+
+.block-broken {
+  display: none;
+}
+
+.cta-box-wrapper {
+  padding: 2rem;
+}
+
+a.cta-box,
+a.cta-box:visited {
+  display: block;
+  color: $white;
+  height: 150px;
+  overflow: hidden;
+  background-color: $dark-orange;
+  padding: 2rem;
+  position: relative;
+  border-radius: 4px;
+  transition: all 300ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: darken($dark-orange, 10);
+
+    .fa,
+    .svg-inline--fa {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+      opacity: 1;
+    }
+
+
+
+    img {
+      opacity: 0.25;
+    }
+
+    .cta-box--inner {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
+      background: -moz-linear-gradient(left, darken(rgba($dark-orange, 1), 10) 0%, darken(rgba($gray, 0), 10)  100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, darken(rgba($dark-orange, 1), 10)  0%, darken(rgba($gray, 0), 10) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, darken(rgba($dark-orange, 1), 10)  0%, darken(rgba($gray, 0), 10) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    }
+  }
+
+  .ext {
+    display: none !important;
+  }
+
+  .fa,
+  .svg-inline--fa {
+    position: absolute;
+    bottom: 2rem;
+    right: 50%;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+    z-index: 3;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    opacity: 0.25;
+    filter: blur(3px) grayscale(75%);
+    transition: all 300ms ease-in-out;
+  }
+
+  .cta-box--inner {
+    display: block;
+    position: absolute;
+    padding: 100% 50% 2rem 2rem;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e87722+0,e87722+100&1+0,0+100 */
+    background: -moz-linear-gradient(left, rgba($dark-orange, 0.98) 0%, rgba($dark-orange, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba($dark-orange, 0.98) 0%,rgba($dark-orange, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba($dark-orange, 0.98) 0%,rgba($dark-orange, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    transition: all 300ms ease-in-out;
+
+    h3 {
+      color: $white !important;
+      font-weight: 400 !important;
+      margin: 0;
+      padding: 0;
+      width: 160%;
+      font-size: 2.5rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      margin-top: 0.5rem;
+      color: $white !important;
+      font-weight: 300 !important;
+      font-size: 1.5rem;
+    }
+  }
+}

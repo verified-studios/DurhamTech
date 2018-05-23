@@ -18,45 +18,54 @@
 
 #block-get-started {
   background-color: $transparent-black;
-  border-radius: 10px;
-  bottom: 0;
+  border-radius: 4px;
+  bottom: 4rem;
   left: 0;
   margin: 0 auto;
+  width: 60vw;
+  min-width: 500px;
   max-width: 900px;
-  padding: 30px 40px;
+  padding: 3rem;
   position: absolute;
   right: 0;
 
   .title {
     color: $white;
     display: inline-block;
-    font-size: em(90);
+    font-size: em(55);
+    font-weight: 700;
     line-height: 1;
+    letter-spacing: 0.07em;
     text-align: center;
     text-transform: uppercase;
-    width: 25%;
+    width: auto;
     vertical-align: middle;
+    position: absolute;
+    margin-top: -2px;
 
     .small {
+      margin-top: 0.5rem;
       display: block;
-      font-size: rem(40);
+      font-weight: 700;
+      font-size: rem(22);
+      letter-spacing: 0.07em;
     }
   }
 
   form {
-    display: inline-block;
-    width: 73%;
-    vertical-align: middle;
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
 
     .form-item {
       display: inline-block;
       font-size: em(20);
       height: 30px;
-      margin-bottom: 10px;
-      width: 80%;
+      margin-top: 2rem;
+      width: 75%;
 
-      &:last-of-type {
-        margin-bottom: 0;
+      &:first-of-type {
+        margin-top: 0;
       }
 
       .select-wrapper {
@@ -70,12 +79,13 @@
   }
 
   .form-actions {
-    display: inline-block;
-    float: right;
-    margin-top: -40px;
-    text-align: right;
-    width: 19%;
-    vertical-align: middle;
+    padding-left: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 22%;
+    margin-left: 3%;
+    text-align: center;
 
     a.btn-lg {
       font-size: rem(25);
@@ -83,7 +93,13 @@
 
     a:not(.btn) {
       display: block;
-      margin-top: 30px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 18px;
+
+      &:hover {
+        color: $alert-orange;
+      }
     }
   }
 
@@ -92,7 +108,6 @@
 $banner-menu-orange: #ff9000;
 $banner-menu-orange-hover: #f27604;
 #block-banner-menu {
-  bottom: 0;
   position: absolute;
   right: 0;
   top: 50%;
@@ -103,60 +118,54 @@ $banner-menu-orange-hover: #f27604;
 
     > li > a {
       @include transition();
-      background-color: $banner-menu-orange;
+      background-color: $white;
+      border-left: 10px solid $brand-orange;
+      box-shadow: 2px 2px 5px rgba($black, 0.25);
       border-radius: 5px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       color: $black;
       margin-bottom: 10px;
-      max-width: 160px;
+      max-width: 200px;
+      font-weight: 600;
+      line-height: 35px;
       overflow: hidden;
       padding: 7px 30px 7px 7px;
 
+      &:hover,
+      &:focus {
+        svg {
+          opacity: 1;
+        }
+      }
+
       svg {
+        color: $dark-orange;
         float: left;
         margin-right: 10px;
-        min-height: 40px;
-        min-width: 40px;
+        min-height: 35px;
+        min-width: 35px;
         vertical-align: middle;
+        opacity: 0.5;
+        padding: 5px;
+        transition: all 160ms ease-in-out;
       }
 
       .ext {
         display: none;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
         @include transition();
-        background-color: $banner-menu-orange-hover;
+        background-color: $white;
+        border-color: $dark-orange;
+        
+        svg {
+          transform: rotate(-10deg);
+        }
       }
     }
-  }
-}
-
-// Banner text/header
-.banner-text-wrapper {
-  margin-top: 5%;
-
-  .breadcrumb {
-    background-color: transparent;
-    color: $white;
-    font-weight: 600;
-
-    a {
-      color: $white;
-      margin-right: 10px;
-      text-decoration: underline;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .banner-title {
-    display: inline-block;
-    padding: 0 20px;
-
   }
 }
 

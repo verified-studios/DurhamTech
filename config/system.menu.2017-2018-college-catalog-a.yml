@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: 2017-2018-college-catalog-a
-label: '2017-2018 College Catalog and Student Handbook'
-description: 'Links for 2017-2018 College Catalog and Student Handbook page'
+label: 'College Catalog and Student Handbook'
+description: 'Links for College Catalog and Student Handbook page'
 locked: false

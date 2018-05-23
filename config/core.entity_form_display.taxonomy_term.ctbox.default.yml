@@ -3,9 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.ctbox.field_background_image
     - field.field.taxonomy_term.ctbox.field_link
+    - image.style.thumbnail
     - taxonomy.vocabulary.ctbox
   module:
+    - image
     - link
     - path
     - text
@@ -22,8 +25,16 @@ content:
       placeholder: ''
       rows: 5
     third_party_settings: {  }
-  field_link:
+  field_background_image:
     weight: 2
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_link:
+    weight: 1
     settings:
       placeholder_url: ''
       placeholder_title: ''
