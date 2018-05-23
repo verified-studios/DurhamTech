@@ -24,11 +24,11 @@ employees:
       label: Call to Action
     information:
       label: Information
-    news-header:
+    news_header:
       label: News Header
     news:
       label: News
-    events-header:
+    events_header:
       label: Events Header
     events:
       label: Events
