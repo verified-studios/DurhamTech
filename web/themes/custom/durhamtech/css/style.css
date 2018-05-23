@@ -7398,6 +7398,20 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .field--name-field-sidebar-elements > .field--item:last-of-type {
     margin-bottom: 0; } }
 
+.program-search-buttons {
+  padding: 3rem 0;
+  text-align: center; }
+  .program-search-buttons .buttons {
+    padding-bottom: 1rem; }
+    .program-search-buttons .buttons button.btn {
+      padding: 1.5rem; }
+      .program-search-buttons .buttons button.btn:first-of-type {
+        margin-right: 1.5rem; }
+      .program-search-buttons .buttons button.btn:last-of-type {
+        margin-left: 1.5rem; }
+      .program-search-buttons .buttons button.btn:active, .program-search-buttons .buttons button.btn:hover, .program-search-buttons .buttons button.btn:focus {
+        background-color: #E87722; }
+
 .program .program-header {
   padding-bottom: 30px;
   text-align: center; }
