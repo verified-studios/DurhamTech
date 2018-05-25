@@ -32,6 +32,26 @@
     background-color: $light-gray;
   }
 
+  .col-no-padding {
+    padding: 0;
+  }
+
+  .news-header {
+    background: $medium-green;
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  .news-grid {
+    .views-row {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   h2.block-title {
     margin: 0 0 3rem;
   }
