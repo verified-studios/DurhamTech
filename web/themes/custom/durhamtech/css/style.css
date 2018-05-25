@@ -7910,7 +7910,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding: 3rem 0; }
 
 .employees .col-no-padding {
-  padding: 0; }
+  padding: 0;
+  background: #000000; }
 
 .employees .news-header {
   background: #84BD00;
@@ -7926,6 +7927,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     padding: 0; }
     .employees .news-grid section .views-row img {
       width: 100%; }
+      .employees .news-grid section .views-row img:hover {
+        opacity: .75; }
     .employees .news-grid section .views-row .search-news-title {
       position: absolute;
       bottom: 0;
