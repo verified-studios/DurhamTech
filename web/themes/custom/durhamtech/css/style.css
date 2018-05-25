@@ -7876,7 +7876,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding: 0; }
 
 .page-node-type-landing-page .footer {
-  margin-top: 0 !important; }
+  margin-top: 0 !important;
+  border-top: none; }
 
 .landing-page section {
   padding: 3rem 0; }
@@ -7896,44 +7897,6 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .landing-page .lp-events {
   background-color: #CED2D5; }
 
-.landing-page .col-no-padding {
-  padding: 0; }
-
-.landing-page .news-header {
-  background: #84BD00;
-  padding: 0; }
-  .landing-page .news-header h2 {
-    color: #FFFFFF; }
-
-.landing-page .news-grid {
-  padding: 0; }
-  .landing-page .news-grid section {
-    padding: 0; }
-    .landing-page .news-grid section .views-row img {
-      width: 100%; }
-
-.landing-page .events-header {
-  padding: 0;
-  background: #CED2D5; }
-  .landing-page .events-header h2 {
-    color: #FFFFFF; }
-
-.landing-page .social-media {
-  padding: 0; }
-  .landing-page .social-media section {
-    padding: 0; }
-    .landing-page .social-media section .col-sm-4 {
-      padding: 0; }
-      .landing-page .social-media section .col-sm-4 .social-media {
-        padding: 3rem 0;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 5rem;
-        transition: all .3s ease-in-out;
-        background: #00843D; }
-        .landing-page .social-media section .col-sm-4 .social-media:hover {
-          background: #84BD00; }
-
 .landing-page h2.block-title {
   margin: 0 0 3rem; }
 
@@ -7942,5 +7905,49 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   margin-left: 0.5rem; }
   .landing-page .block ul li {
     margin-bottom: 0.5rem; }
+
+.employees {
+  padding: 3rem 0; }
+  .employees .col-no-padding {
+    padding: 0; }
+  .employees .news-header {
+    background: #84BD00;
+    padding: 0; }
+    .employees .news-header h2 {
+      color: #FFFFFF; }
+  .employees .news-grid {
+    padding: 0; }
+    .employees .news-grid section {
+      padding: 0; }
+      .employees .news-grid section .views-row img {
+        width: 100%; }
+      .employees .news-grid section .views-row .search-news-title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #FFFFFF;
+        padding-left: 2rem;
+        font-size: 2.5rem;
+        text-shadow: 0px 1px 1px #4c4c4c; }
+  .employees .events-header {
+    padding: 0;
+    background: #CED2D5; }
+    .employees .events-header h2 {
+      color: #FFFFFF; }
+  .employees .social-media {
+    padding: 0; }
+    .employees .social-media section {
+      padding: 0; }
+      .employees .social-media section .col-sm-4 {
+        padding: 0; }
+        .employees .social-media section .col-sm-4 .social-media {
+          padding: 3rem 0;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 5rem;
+          transition: all .3s ease-in-out;
+          background: #00843D; }
+          .employees .social-media section .col-sm-4 .social-media:hover {
+            background: #84BD00; }
 
 /*# sourceMappingURL=style.css.map */
