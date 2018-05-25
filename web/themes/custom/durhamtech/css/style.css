@@ -7918,6 +7918,22 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .landing-page .events-header h2 {
     color: #FFFFFF; }
 
+.landing-page .social-media {
+  padding: 0; }
+  .landing-page .social-media section {
+    padding: 0; }
+    .landing-page .social-media section .col-sm-4 {
+      padding: 0; }
+      .landing-page .social-media section .col-sm-4 .social-media {
+        padding: 3rem 0;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 5rem;
+        transition: all .3s ease-in-out;
+        background: #00843D; }
+        .landing-page .social-media section .col-sm-4 .social-media:hover {
+          background: #84BD00; }
+
 .landing-page h2.block-title {
   margin: 0 0 3rem; }
 

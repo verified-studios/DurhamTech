@@ -72,6 +72,31 @@
 
   }
 
+  .social-media {
+    padding: 0;
+
+    section {
+      padding: 0;
+
+      .col-sm-4 {
+        padding: 0;
+
+        .social-media {
+          padding: 3rem 0;
+          color: $white;
+          text-align: center;
+          font-size: 5rem;
+          transition: all .3s ease-in-out;
+          background: $green;
+
+          &:hover {
+            background: $medium-green;
+          }
+        }
+      }
+    }
+  }
+
   h2.block-title {
     margin: 0 0 3rem;
   }
