@@ -7896,6 +7896,17 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .landing-page .lp-events {
   background-color: #CED2D5; }
 
+.landing-page .col-no-padding {
+  padding: 0; }
+
+.landing-page .news-header {
+  background: #84BD00; }
+  .landing-page .news-header h2 {
+    color: #FFFFFF; }
+
+.landing-page .news-grid .views-row img {
+  width: 100%; }
+
 .landing-page h2.block-title {
   margin: 0 0 3rem; }
 
