@@ -7900,12 +7900,23 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding: 0; }
 
 .landing-page .news-header {
-  background: #84BD00; }
+  background: #84BD00;
+  padding: 0; }
   .landing-page .news-header h2 {
     color: #FFFFFF; }
 
-.landing-page .news-grid .views-row img {
-  width: 100%; }
+.landing-page .news-grid {
+  padding: 0; }
+  .landing-page .news-grid section {
+    padding: 0; }
+    .landing-page .news-grid section .views-row img {
+      width: 100%; }
+
+.landing-page .events-header {
+  padding: 0;
+  background: #CED2D5; }
+  .landing-page .events-header h2 {
+    color: #FFFFFF; }
 
 .landing-page h2.block-title {
   margin: 0 0 3rem; }

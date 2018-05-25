@@ -31,13 +31,14 @@
   .lp-events {
     background-color: $light-gray;
   }
-  
+
   .col-no-padding {
     padding: 0;
   }
 
   .news-header {
     background: $medium-green;
+    padding: 0;
 
     h2 {
       color: $white;
@@ -45,11 +46,30 @@
   }
 
   .news-grid {
-    .views-row {
-      img {
-        width: 100%;
+    padding: 0;
+
+    section {
+      padding: 0;
+
+      .views-row {
+        img {
+          width: 100%;
+        }
       }
     }
+  }
+
+  .events-header {
+    padding: 0;
+    background: $light-gray;
+
+    h2 {
+      color: $white;
+    }
+  }
+
+  .events-grid {
+
   }
 
   h2.block-title {
