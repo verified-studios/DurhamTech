@@ -7916,7 +7916,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   background: #84BD00;
   padding: 0; }
   .employees .news-header h2 {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: center; }
 
 .employees .news-grid {
   padding: 0; }
@@ -7937,7 +7939,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding: 0;
   background: #CED2D5; }
   .employees .events-header h2 {
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: center; }
 
 .employees .social-media {
   padding: 0; }
