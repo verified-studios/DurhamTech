@@ -5883,7 +5883,7 @@ h4.stat-title, h4.event-data-title {
 
 h5 {
   font-family: "Open Sans", sans-serif;
-  font-size: 1em;
+  font-size: 1.05em;
   color: #4c4c4c;
   font-weight: 700; }
 
@@ -7139,7 +7139,7 @@ table {
     .sidebar .menu li > ul {
       margin-top: 1rem; }
       .sidebar .menu li > ul li a {
-        font-weight: 300 !important; }
+        font-weight: 400 !important; }
 
 .flex-view .view-content {
   display: flex;
