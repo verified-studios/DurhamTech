@@ -7245,6 +7245,9 @@ a.cta-box:visited {
       font-weight: 300 !important;
       font-size: 1.5rem; }
 
+.cta-lg {
+  font-size: 3rem; }
+
 .alert.teaser {
   margin-bottom: 0; }
   .alert.teaser .field, .alert.teaser svg, .alert.teaser i {
@@ -7893,6 +7896,14 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     font-weight: 300;
     text-transform: none;
     font-size: 2rem; }
+  .landing-page .lp-policies .cta {
+    font-weight: 700; }
+  .landing-page .lp-policies a,
+  .landing-page .lp-policies a:visited {
+    color: #000000; }
+  .landing-page .lp-policies a:hover,
+  .landing-page .lp-policies a:focus {
+    text-decoration: underline; }
 
 .landing-page .lp-events {
   background-color: #CED2D5; }
