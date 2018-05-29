@@ -27,6 +27,20 @@
       text-transform: none;
       font-size: 2rem;
     }
+
+    .cta {
+      font-weight: 700;
+    }
+
+    a,
+    a:visited {
+      color: $black;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
   }
 
   .lp-events {

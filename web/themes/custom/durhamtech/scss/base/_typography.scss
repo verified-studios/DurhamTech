@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5 {
   font-family: $helvetica;
   margin-top: 0;
   letter-spacing: -0.02em;
+  font-family: $open-sans;
 }
 
 h1 {
@@ -51,9 +52,8 @@ h3.section-title, .block-views .block-title, .node--type-landing_page .block-tit
 h4 {
   font-size: 1.15em;
   letter-spacing: -0.02em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: $gray;
+  font-weight: 600;
+  color: $black;
 }
 
 h4.stat-title, h4.event-data-title {
@@ -65,6 +65,13 @@ h4.stat-title, h4.event-data-title {
 
 .section-title, .course-title {
   text-align: center;
+}
+
+h5 {
+  font-family: $open-sans;
+  font-size: 1.05em;
+  color: $dark-gray;
+  font-weight: 700;
 }
 
 p {
