@@ -34,6 +34,23 @@ employees:
       label: Events
     social:
       label: Social Media
+students:
+  label: Students
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/students
+  regions:
+    masthead:
+      label: Call to Action
+    information:
+      label: Information
+    news:
+      label: News
+    events:
+      label: Events
+    policies_procedures:
+      label: Policies & Procedures
+    social:
+      label: Social Media
 one_column_mixed:
   label: One column mixed
   category: Panelizer
