@@ -7891,13 +7891,53 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .landing-page section {
   padding: 3rem 0; }
 
+.landing-page .col-no-padding {
+  padding: 0;
+  background: #000000; }
+
 .landing-page .lp-masthead {
   background-color: #edeeef;
   padding: 0 0 2rem; }
 
+.landing-page .lp-news-header {
+  background: #84BD00;
+  padding: 0; }
+  .landing-page .lp-news-header h2 {
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: center; }
+
+.landing-page .lp-events-header {
+  padding: 0;
+  background: #CED2D5; }
+  .landing-page .lp-events-header h2 {
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: center; }
+
+.landing-page .lp-news-grid {
+  padding: 0; }
+  .landing-page .lp-news-grid section {
+    padding: 0; }
+    .landing-page .lp-news-grid section .views-row img {
+      width: 100%; }
+      .landing-page .lp-news-grid section .views-row img:hover {
+        opacity: .75; }
+    .landing-page .lp-news-grid section .views-row .search-news-title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: #FFFFFF;
+      padding-left: 2rem;
+      font-size: 2.5rem;
+      text-shadow: 0px 1px 1px #4c4c4c; }
+
 .landing-page .lp-policies {
   padding: 1rem 0;
   background-color: #84BD00; }
+  .landing-page .lp-policies h2 {
+    text-align: center;
+    color: #FFFFFF; }
   .landing-page .lp-policies .btn {
     font-weight: 300;
     text-transform: none;
@@ -7914,6 +7954,22 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .landing-page .lp-events {
   background-color: #CED2D5; }
 
+.landing-page .lp-social-media {
+  padding: 0; }
+  .landing-page .lp-social-media section {
+    padding: 0; }
+    .landing-page .lp-social-media section .col-sm-4 {
+      padding: 0; }
+      .landing-page .lp-social-media section .col-sm-4 .social-media {
+        padding: 3rem 0;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 5rem;
+        transition: all .3s ease-in-out;
+        background: #00843D; }
+        .landing-page .lp-social-media section .col-sm-4 .social-media:hover {
+          background: #84BD00; }
+
 .landing-page h2.block-title {
   margin: 0 0 3rem; }
 
@@ -7922,61 +7978,5 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   margin-left: 0.5rem; }
   .landing-page .block ul li {
     margin-bottom: 0.5rem; }
-
-.employees section {
-  padding: 3rem 0; }
-
-.employees .col-no-padding {
-  padding: 0;
-  background: #000000; }
-
-.employees .news-header {
-  background: #84BD00;
-  padding: 0; }
-  .employees .news-header h2 {
-    color: #FFFFFF;
-    margin-bottom: 0;
-    text-align: center; }
-
-.employees .news-grid {
-  padding: 0; }
-  .employees .news-grid section {
-    padding: 0; }
-    .employees .news-grid section .views-row img {
-      width: 100%; }
-      .employees .news-grid section .views-row img:hover {
-        opacity: .75; }
-    .employees .news-grid section .views-row .search-news-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: #FFFFFF;
-      padding-left: 2rem;
-      font-size: 2.5rem;
-      text-shadow: 0px 1px 1px #4c4c4c; }
-
-.employees .events-header {
-  padding: 0;
-  background: #CED2D5; }
-  .employees .events-header h2 {
-    color: #FFFFFF;
-    margin-bottom: 0;
-    text-align: center; }
-
-.employees .social-media {
-  padding: 0; }
-  .employees .social-media section {
-    padding: 0; }
-    .employees .social-media section .col-sm-4 {
-      padding: 0; }
-      .employees .social-media section .col-sm-4 .social-media {
-        padding: 3rem 0;
-        color: #FFFFFF;
-        text-align: center;
-        font-size: 5rem;
-        transition: all .3s ease-in-out;
-        background: #00843D; }
-        .employees .social-media section .col-sm-4 .social-media:hover {
-          background: #84BD00; }
 
 /*# sourceMappingURL=style.css.map */

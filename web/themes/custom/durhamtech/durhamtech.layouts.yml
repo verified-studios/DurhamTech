@@ -53,6 +53,19 @@ students:
       label: Policies & Procedures
     social:
       label: Social Media
+about:
+  label: About
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/about
+  regions:
+    masthead:
+      label: Call to Action
+    locations:
+      label: Campus Locatioins
+    about:
+      label: About Information
+    related:
+      label: Related Links
 one_column_mixed:
   label: One column mixed
   category: Panelizer
