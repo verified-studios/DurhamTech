@@ -43,10 +43,12 @@ students:
       label: Call to Action
     information:
       label: Information
-    news:
-      label: News
     events:
       label: Events
+    news_header:
+      label: News Header
+    news:
+      label: News
     policies_procedures:
       label: Policies & Procedures
     social:
