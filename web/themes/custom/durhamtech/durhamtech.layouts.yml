@@ -66,6 +66,19 @@ about:
       label: About Information
     related:
       label: Related Links
+admissions_enrollment:
+  label: Admissions & Enrollment
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/admissions-enrollment
+  regions:
+    masthead:
+      label: Call to Action
+    three_column:
+      label: 3 Column Region
+    admissions:
+      label: Admissions
+    related:
+      label: Related Links
 one_column_mixed:
   label: One column mixed
   category: Panelizer

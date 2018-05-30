@@ -18,20 +18,11 @@
     background: $black;
   }
 
-  .lp-masthead {
-    background-color: $offwhite;
-    padding: 0 0 2rem;
+  .lp-about {
+    background: $light-gray;
   }
-
-  .lp-news-header {
-    background: $medium-green;
-    padding: 0;
-
-    h2 {
-      color: $white;
-      margin-bottom: 0;
-      text-align: center;
-    }
+  .lp-events {
+    background-color: $light-gray;
   }
 
   .lp-events-header {
@@ -43,6 +34,23 @@
       margin-bottom: 0;
       text-align: center;
     }
+  }
+
+  .lp-locations {
+    padding: 0;
+
+    section {
+      padding: 0;
+
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+
+  .lp-masthead {
+    background-color: $offwhite;
+    padding: 0 0 2rem;
   }
 
   .lp-news-grid {
@@ -70,6 +78,17 @@
           text-shadow: 0px 1px 1px $dark-gray;
         }
       }
+    }
+  }
+
+  .lp-news-header {
+    background: $medium-green;
+    padding: 0;
+
+    h2 {
+      color: $white;
+      margin-bottom: 0;
+      text-align: center;
     }
   }
 
@@ -103,8 +122,13 @@
     }
   }
 
-  .lp-events {
-    background-color: $light-gray;
+  .lp-related-links {
+    background: $medium-green;
+    ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
   }
 
   .lp-social-media {

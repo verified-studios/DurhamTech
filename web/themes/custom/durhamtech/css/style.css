@@ -7895,17 +7895,11 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding: 0;
   background: #000000; }
 
-.landing-page .lp-masthead {
-  background-color: #edeeef;
-  padding: 0 0 2rem; }
+.landing-page .lp-about {
+  background: #CED2D5; }
 
-.landing-page .lp-news-header {
-  background: #84BD00;
-  padding: 0; }
-  .landing-page .lp-news-header h2 {
-    color: #FFFFFF;
-    margin-bottom: 0;
-    text-align: center; }
+.landing-page .lp-events {
+  background-color: #CED2D5; }
 
 .landing-page .lp-events-header {
   padding: 0;
@@ -7914,6 +7908,17 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     color: #FFFFFF;
     margin-bottom: 0;
     text-align: center; }
+
+.landing-page .lp-locations {
+  padding: 0; }
+  .landing-page .lp-locations section {
+    padding: 0; }
+    .landing-page .lp-locations section iframe {
+      width: 100%; }
+
+.landing-page .lp-masthead {
+  background-color: #edeeef;
+  padding: 0 0 2rem; }
 
 .landing-page .lp-news-grid {
   padding: 0; }
@@ -7931,6 +7936,14 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       padding-left: 2rem;
       font-size: 2.5rem;
       text-shadow: 0px 1px 1px #4c4c4c; }
+
+.landing-page .lp-news-header {
+  background: #84BD00;
+  padding: 0; }
+  .landing-page .lp-news-header h2 {
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: center; }
 
 .landing-page .lp-policies {
   padding: 1rem 0;
@@ -7951,8 +7964,12 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .landing-page .lp-policies a:focus {
     text-decoration: underline; }
 
-.landing-page .lp-events {
-  background-color: #CED2D5; }
+.landing-page .lp-related-links {
+  background: #84BD00; }
+  .landing-page .lp-related-links ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2; }
 
 .landing-page .lp-social-media {
   padding: 0; }
