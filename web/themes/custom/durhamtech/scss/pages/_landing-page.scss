@@ -51,6 +51,12 @@
     padding: 3rem 0;
   }
 
+  h2 {
+    svg {
+      margin-left: 1rem;
+    }
+  }
+
   .col-no-padding {
     padding: 0;
     background: $black;
