@@ -3,6 +3,8 @@
 namespace Drupal\durhamtech_colleague_migrate\Form;
 
 use Drupal;
+use Drupal\Component\Datetime\Time;
+use Drupal\Core\Datetime\DateFormatter;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\file\Entity\File;
@@ -60,6 +62,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       '#type' => 'submit',
       '#value' => t('Run Courses migrate'),
       '#submit' => array('::runCourses'),
+      '#suffix' => 'Last Updated Date: ' . $this->migrateLastImported('course_data_taxonomy'),
     );
 
     $form['class_fieldset'] = [
@@ -81,6 +84,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       '#type' => 'submit',
       '#value' => t('Run Class migrate'),
       '#submit' => array('::runClass'),
+      '#suffix' => 'Last Updated Date: ' . $this->migrateLastImported('class_data_node'),
     );
 
     $form['programs_fieldset'] = [
@@ -102,6 +106,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       '#type' => 'submit',
       '#value' => t('Run Programs migrate'),
       '#submit' => array('::runPrograms'),
+      '#suffix' => 'Last Updated Date: ' . $this->migrateLastImported('program_data_node'),
     );
 
     return parent::buildForm($form, $form_state);
@@ -123,6 +128,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       $file = File::load($fid_courses_data);
       $file->setPermanent();
       $file->save();
+      \Drupal::logger('durhamtech_colleague_migrate')->info('A new file was uploaded for the migration of the Courses. File name: @file', ['@file' => $file->getFilename()]);
     }
 
     $fid_class_data = $form_state->getValue(['dtech_class_data', 0]);
@@ -130,6 +136,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       $file = File::load($fid_class_data);
       $file->setPermanent();
       $file->save();
+      \Drupal::logger('durhamtech_colleague_migrate')->info('A new file was uploaded for the migration of the Classes. File name: @file', ['@file' => $file->getFilename()]);
     }
 
     $fid_programs_data = $form_state->getValue(['dtech_programs_data', 0]);
@@ -137,6 +144,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       $file = File::load($fid_programs_data);
       $file->setPermanent();
       $file->save();
+      \Drupal::logger('durhamtech_colleague_migrate')->info('A new file was uploaded for the migration of the Programs. File name: @file', ['@file' => $file->getFilename()]);
     }
   }
 
@@ -144,6 +152,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
    * Run Courses migrate.
    */
   function runCourses() {
+    $operations = [];
     $config = $this->config('durhamtech_colleague_migrate.settings');
     $fid = $config->get('dtech_courses_data');
     if (empty($fid)) {
@@ -151,24 +160,27 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
     }
     $file = File::load($fid[0]);
     $uri = $file->getFileUri();
-
-    /** @var \Drupal\migrate\Plugin\Migration $migration */
-    $plugin = Drupal::service('plugin.manager.migration');
-    $migration = $plugin->createInstance('course_data_taxonomy', [
-      'source' => [
-        'path' => $uri,
-      ],
-    ]);
-    $migration->getIdMap()->prepareUpdate();
-    $executable = new MigrateExecutable($migration, new MigrateMessage());
-    $executable->import();
-
+    $data = $this->parseCSV($uri, 'Courses');
+    foreach ($data as $key => $row) {
+      $operations[$key] = [
+        'runCoursesBatch',
+        [implode(',', $row), $uri],
+      ];
+    }
+    $batch = array(
+      'title' => t('Migrating...'),
+      'operations' => $operations,
+      'finished' => 'migrateFinishedCallback',
+      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/migration_batch.dtech_batch.inc',
+    );
+    batch_set($batch);
   }
 
   /**
    * Run Class migrate.
    */
   function runClass() {
+    $operations = [];
     $config = $this->config('durhamtech_colleague_migrate.settings');
     $fid = $config->get('dtech_class_data');
     if (empty($fid)) {
@@ -176,41 +188,87 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
     }
     $file = File::load($fid[0]);
     $uri = $file->getFileUri();
-
-    /** @var \Drupal\migrate\Plugin\Migration $migration */
-    $plugin = Drupal::service('plugin.manager.migration');
-    $migration = $plugin->createInstance('class_data_node', [
-      'source' => [
-        'path' => $uri,
-      ],
-    ]);
-    $migration->getIdMap()->prepareUpdate();
-    $executable = new MigrateExecutable($migration, new MigrateMessage());
-    $executable->import();
+    $data = $this->parseCSV($uri);
+    foreach ($data as $key => $row) {
+      $operations[$key] = [
+        'runClassBatch',
+        [implode(',', $row), $uri],
+      ];
+    }
+    $batch = array(
+      'title' => t('Migrating...'),
+      'operations' => $operations,
+      'finished' => 'migrateFinishedCallback',
+      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/migration_batch.dtech_batch.inc',
+    );
+    batch_set($batch);
   }
 
   /**
    * Run Programs migrate.
    */
   function runPrograms() {
-    $config = $this->config('durhamtech_colleague_migrate.settings');
+    $operations = [];
+    $config = \Drupal::config('durhamtech_colleague_migrate.settings');
     $fid = $config->get('dtech_programs_data');
     if (empty($fid)) {
       return FALSE;
     }
     $file = File::load($fid[0]);
     $uri = $file->getFileUri();
+    $data = $this->parseCSV($uri);
+    foreach ($data as $key => $row) {
+      $operations[$key] = [
+        'runProgramsBatch',
+        [implode(',', $row), $uri],
+      ];
+    }
+    $batch = array(
+      'title' => t('Migrating...'),
+      'operations' => $operations,
+      'finished' => 'migrateFinishedCallback',
+      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/migration_batch.dtech_batch.inc',
+    );
+    batch_set($batch);
+  }
 
-    /** @var \Drupal\migrate\Plugin\Migration $migration */
-    $plugin = Drupal::service('plugin.manager.migration');
-    $migration = $plugin->createInstance('program_data_node', [
-      'source' => [
-        'path' => $uri,
-      ],
-    ]);
-    $migration->getIdMap()->prepareUpdate();
-    $executable = new MigrateExecutable($migration, new MigrateMessage());
-    $executable->import();
+  /**
+   * Gets migrate last imported.
+   */
+  function migrateLastImported($migrate_id) {
+    $migrate_last_imported_store = \Drupal::keyValue('migrate_last_imported');
+    $last_imported = $migrate_last_imported_store->get($migrate_id, FALSE);
+    if ($last_imported) {
+      /** @var DateFormatter $date_formatter */
+      $date_formatter = \Drupal::service('date.formatter');
+      $result = $date_formatter->format($last_imported / 1000,
+        'custom', 'Y-m-d H:i:s');
+    }
+    else {
+      $result = 'Never started';
+    }
+    return $result;
+  }
+
+  /**
+   * Parse CSV.
+   */
+  function parseCSV($uri, $id = NULL) {
+    $data = [];
+    $rows = array_map('str_getcsv', file($uri));
+    array_shift($rows);
+    foreach ($rows as $key => $row) {
+      if (!empty($id)) {
+        $needed_id = array_slice($row, 1, 1);
+        $data[$key] = array_shift($needed_id);
+      }
+      else {
+        $data[$key] = array_shift($row);
+      }
+    }
+
+    return $data;
+
   }
 
 }
