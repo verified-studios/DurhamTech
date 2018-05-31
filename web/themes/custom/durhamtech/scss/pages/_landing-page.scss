@@ -26,6 +26,7 @@
     }
 
     ul {
+      list-style-type: none;
       text-align: center;
       columns: 2;
       -webkit-columns: 2;
@@ -37,6 +38,11 @@
 
   .related-links {
     background: $offwhite;
+      ul {
+        columns: 3;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
   }
 }
 
