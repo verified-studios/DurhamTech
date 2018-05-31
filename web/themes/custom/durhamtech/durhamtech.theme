@@ -99,8 +99,10 @@ function durhamtech_preprocess_page(&$variables) {
       $variables['node_title'] = $title;
     }
   }
-
-  //kint($variables);
+  if ($variables['node']->type == 'program') {
+      echo "true";
+  }
+ // kint($variables['node']->type);
 }
 
 /**
@@ -149,6 +151,12 @@ function durhamtech_preprocess_node(&$variables) {
 function durhamtech_preprocess_menu(array &$variables) {
 
   if($variables['menu_name'] == 'page-header-menu') {
+      // Set program overview tab to active
+      foreach ($variables['items'] as $item) {
+          if ($item['title'] == 'Program Overview') {
+              $item['attributes']['class'] = ['active'];
+          }
+      }
 
     // Get current url and split on arguments.
     $current_path = \Drupal::service('path.current')->getPath();
