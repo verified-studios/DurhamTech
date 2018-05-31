@@ -171,7 +171,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       'title' => t('Migrating...'),
       'operations' => $operations,
       'finished' => 'migrateFinishedCallback',
-      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/migration_batch.dtech_batch.inc',
+      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/durhamtech_colleague_migrate.batch.inc',
     );
     batch_set($batch);
   }
@@ -199,7 +199,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       'title' => t('Migrating...'),
       'operations' => $operations,
       'finished' => 'migrateFinishedCallback',
-      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/migration_batch.dtech_batch.inc',
+      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/durhamtech_colleague_migrate.batch.inc',
     );
     batch_set($batch);
   }
@@ -227,7 +227,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
       'title' => t('Migrating...'),
       'operations' => $operations,
       'finished' => 'migrateFinishedCallback',
-      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/migration_batch.dtech_batch.inc',
+      'file' => drupal_get_path('module', 'durhamtech_colleague_migrate') . '/durhamtech_colleague_migrate.batch.inc',
     );
     batch_set($batch);
   }
