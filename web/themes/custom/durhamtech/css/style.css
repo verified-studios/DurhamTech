@@ -7888,6 +7888,26 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   margin-top: 0 !important;
   border-top: none; }
 
+.landing-page.admissions-enrollment .lp-masthead .views-row {
+  width: 50%; }
+  .landing-page.admissions-enrollment .lp-masthead .views-row .cta-box {
+    height: 200px; }
+
+.landing-page.admissions-enrollment .admissions {
+  background: #84BD00; }
+  .landing-page.admissions-enrollment .admissions h3 {
+    text-align: center; }
+  .landing-page.admissions-enrollment .admissions ul {
+    text-align: center;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    margin: 0 auto;
+    max-width: 450px; }
+
+.landing-page.admissions-enrollment .related-links {
+  background: #edeeef; }
+
 .landing-page section {
   padding: 3rem 0; }
 

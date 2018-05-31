@@ -8,6 +8,38 @@
 }
 
 
+.landing-page.admissions-enrollment {
+  .lp-masthead {
+    .views-row {
+      width: 50%;
+
+      .cta-box {
+        height: 200px;
+      }
+    }
+  }
+
+  .admissions {
+    background: $medium-green;
+    h3 {
+      text-align: center;
+    }
+
+    ul {
+      text-align: center;
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      margin: 0 auto;
+      max-width: 450px;
+    }
+  }
+
+  .related-links {
+    background: $offwhite;
+  }
+}
+
 .landing-page {
   section {
     padding: 3rem 0;
