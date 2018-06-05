@@ -1,0 +1,14 @@
+.field--type-text-long {
+  figure {
+    &.align-right {
+      padding: 0 0 2rem 4rem;
+
+      figcaption {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+        color: $dark-gray;
+      }
+    }
+
+  }
+}

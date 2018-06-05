@@ -7565,6 +7565,13 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .field--name-field-sidebar-elements > .field--item:last-of-type {
     margin-bottom: 0; } }
 
+.field--type-text-long figure.align-right {
+  padding: 0 0 2rem 4rem; }
+  .field--type-text-long figure.align-right figcaption {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #4c4c4c; }
+
 .program-search-buttons {
   padding: 3rem 0;
   text-align: center; }
