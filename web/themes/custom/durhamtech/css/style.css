@@ -7890,6 +7890,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       background-color: #FFFFFF;
       color: #000000; }
 
+#columns-1 .views-row {
+  height: 200px;
+  overflow: hidden; }
+
 .node--type-landing_page {
   padding: 0; }
 
