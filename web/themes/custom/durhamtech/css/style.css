@@ -6645,7 +6645,8 @@ body {
 #secondary-nav {
   background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   #secondary-nav .secondary-menu {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -7898,6 +7899,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .landing-page.admissions-enrollment .admissions h3 {
     text-align: center; }
   .landing-page.admissions-enrollment .admissions ul {
+    list-style-type: none;
     text-align: center;
     columns: 2;
     -webkit-columns: 2;
@@ -7907,9 +7909,16 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 
 .landing-page.admissions-enrollment .related-links {
   background: #edeeef; }
+  .landing-page.admissions-enrollment .related-links ul {
+    columns: 3;
+    -webkit-columns: 2;
+    -moz-columns: 2; }
 
 .landing-page section {
   padding: 3rem 0; }
+
+.landing-page h2 svg {
+  margin-left: 1rem; }
 
 .landing-page .col-no-padding {
   padding: 0;
@@ -7928,6 +7937,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     color: #FFFFFF;
     margin-bottom: 0;
     text-align: center; }
+    .landing-page .lp-events-header h2 svg {
+      margin-left: 1rem; }
 
 .landing-page .lp-locations {
   padding: 0; }
@@ -7964,6 +7975,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     color: #FFFFFF;
     margin-bottom: 0;
     text-align: center; }
+    .landing-page .lp-news-header h2 svg {
+      margin-left: 1rem; }
 
 .landing-page .lp-policies {
   padding: 1rem 0;
