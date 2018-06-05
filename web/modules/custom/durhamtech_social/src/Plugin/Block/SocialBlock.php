@@ -22,7 +22,18 @@ class SocialBlock extends BlockBase
     {
         return array(
             '#type' => 'markup',
-            '#markup' => '{{slider goes here}}',
+            '#attached' => array (
+              'library' => array(
+                  'durhamtech_social/slick'
+              ),
+            ),
+            '#markup' => '
+            <div class="slick">
+                <div>test</div>
+                <div>test</div>
+                <div>test</div>
+            </div>
+            ',
         );
     }
 
