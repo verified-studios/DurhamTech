@@ -26,6 +26,7 @@
     .block-title {
       color: $white;
       text-align: left;
+      margin-bottom: 3rem;
     }
 
     [class*="teaser-title"] {
@@ -69,4 +70,9 @@
       }
     }
   }
+}
+
+#columns-1 .views-row {
+  height: 175px;
+  overflow: hidden;
 }

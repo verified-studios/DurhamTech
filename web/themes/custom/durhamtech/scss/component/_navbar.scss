@@ -154,6 +154,7 @@ $main-nav-height: 60px;
   background-color: $transparent-black;
   position: absolute;
   width: 100%;
+  z-index: 10;
 
   .secondary-menu {
     display: none;

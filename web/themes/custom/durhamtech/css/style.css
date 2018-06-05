@@ -5883,9 +5883,10 @@ h4.stat-title, h4.event-data-title {
 
 h5 {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.05em;
-  color: #4c4c4c;
-  font-weight: 700; }
+  font-size: 1.15em;
+  font-weight: 400;
+  font-style: italic;
+  color: #4c4c4c; }
 
 p {
   color: #262626;
@@ -6645,7 +6646,8 @@ body {
 #secondary-nav {
   background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   #secondary-nav .secondary-menu {
     display: none; }
     @media screen and (min-width: 768px) {
@@ -7374,41 +7376,54 @@ a.cta-box:visited {
 
 .view-id-homepage.view-display-id-homepage_news {
   margin-right: 10%; }
-  .view-id-homepage.view-display-id-homepage_news .new-article {
-    position: relative; }
   .view-id-homepage.view-display-id-homepage_news .content {
     background-color: #00843D;
     border-radius: 10px;
-    padding: 20px 20px 20px 30%;
-    margin: 20px 0;
-    margin-left: 50px; }
+    padding: 20px 20px 20px 31%;
+    margin: 20px 25px;
+    position: relative;
+    overflow: hidden; }
     .view-id-homepage.view-display-id-homepage_news .content a:hover {
       color: #FFFFFF; }
     .view-id-homepage.view-display-id-homepage_news .content a .news-teaser-title {
       color: #FFFFFF;
-      margin-bottom: 40px;
-      text-transform: none; }
+      margin-bottom: 1rem;
+      text-transform: none;
+      font-weight: 700;
+      line-height: 1em; }
+      .view-id-homepage.view-display-id-homepage_news .content a .news-teaser-title span {
+        font-size: 2rem;
+        font-weight: 700; }
     .view-id-homepage.view-display-id-homepage_news .content .news-teaser-date,
     .view-id-homepage.view-display-id-homepage_news .content .news-teaser-author {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      opacity: 0.85; }
     .view-id-homepage.view-display-id-homepage_news .content .news-teaser-date {
       float: left;
       margin-right: 10px; }
   .view-id-homepage.view-display-id-homepage_news .field--name-field-news-thumbnail {
     left: 0;
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
+    top: 50%;
     width: 30%; }
 
 .view-id-homepage.view-display-id-homepage_events {
   margin-left: 10%; }
   .view-id-homepage.view-display-id-homepage_events .event {
-    margin: 20px 0 40px; }
-  .view-id-homepage.view-display-id-homepage_events a:not(.btn):hover {
-    color: #000000; }
-  .view-id-homepage.view-display-id-homepage_events a:not(.btn) .event-teaser-title {
-    text-tranform: none; }
+    margin: 20px 25px; }
+  .view-id-homepage.view-display-id-homepage_events a:not(.btn) {
+    color: #FFFFFF !important; }
+    .view-id-homepage.view-display-id-homepage_events a:not(.btn):hover {
+      color: #000000; }
+    .view-id-homepage.view-display-id-homepage_events a:not(.btn) .event-teaser-title {
+      text-tranform: none;
+      margin-bottom: 1rem;
+      text-transform: none;
+      font-weight: 700; }
+      .view-id-homepage.view-display-id-homepage_events a:not(.btn) .event-teaser-title span {
+        font-size: 2rem;
+        font-weight: 700; }
   .view-id-homepage.view-display-id-homepage_events .field--name-field-event-location,
   .view-id-homepage.view-display-id-homepage_events .event-time {
     display: none; }
@@ -7562,6 +7577,13 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 @media screen and (min-width: 768px) {
   .field--name-field-sidebar-elements > .field--item:last-of-type {
     margin-bottom: 0; } }
+
+.field--type-text-long figure.align-right {
+  padding: 0 0 2rem 4rem; }
+  .field--type-text-long figure.align-right figcaption {
+    font-size: 1.35rem;
+    margin-top: 1rem;
+    color: #4c4c4c; }
 
 .program-search-buttons {
   padding: 3rem 0;
@@ -7851,7 +7873,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     background-size: cover; }
   .path-frontpage #columns-1 .block-title {
     color: #FFFFFF;
-    text-align: left; }
+    text-align: left;
+    margin-bottom: 3rem; }
   .path-frontpage #columns-1 [class*="teaser-title"] {
     color: #FFFFFF;
     font-size: 1.8rem;
@@ -7881,6 +7904,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       background-color: #FFFFFF;
       color: #000000; }
 
+#columns-1 .views-row {
+  height: 175px;
+  overflow: hidden; }
+
 .node--type-landing_page {
   padding: 0; }
 
@@ -7898,6 +7925,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .landing-page.admissions-enrollment .admissions h3 {
     text-align: center; }
   .landing-page.admissions-enrollment .admissions ul {
+    list-style-type: none;
     text-align: center;
     columns: 2;
     -webkit-columns: 2;
@@ -7907,9 +7935,16 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 
 .landing-page.admissions-enrollment .related-links {
   background: #edeeef; }
+  .landing-page.admissions-enrollment .related-links ul {
+    columns: 3;
+    -webkit-columns: 2;
+    -moz-columns: 2; }
 
 .landing-page section {
   padding: 3rem 0; }
+
+.landing-page h2 svg {
+  margin-left: 1rem; }
 
 .landing-page .col-no-padding {
   padding: 0;
@@ -7928,6 +7963,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     color: #FFFFFF;
     margin-bottom: 0;
     text-align: center; }
+    .landing-page .lp-events-header h2 svg {
+      margin-left: 1rem; }
 
 .landing-page .lp-locations {
   padding: 0; }
@@ -7964,6 +8001,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     color: #FFFFFF;
     margin-bottom: 0;
     text-align: center; }
+    .landing-page .lp-news-header h2 svg {
+      margin-left: 1rem; }
 
 .landing-page .lp-policies {
   padding: 1rem 0;
