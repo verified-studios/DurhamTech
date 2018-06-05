@@ -7383,6 +7383,8 @@ a.cta-box:visited {
     margin: 20px 25px;
     position: relative;
     overflow: hidden; }
+    .view-id-homepage.view-display-id-homepage_news .content:hover .field--name-field-news-thumbnail img {
+      opacity: 1; }
     .view-id-homepage.view-display-id-homepage_news .content a:hover {
       color: #FFFFFF; }
     .view-id-homepage.view-display-id-homepage_news .content a .news-teaser-title {
@@ -7404,9 +7406,13 @@ a.cta-box:visited {
   .view-id-homepage.view-display-id-homepage_news .field--name-field-news-thumbnail {
     left: 0;
     position: absolute;
+    background-color: #262626;
     transform: translateY(-50%);
     top: 50%;
     width: 30%; }
+    .view-id-homepage.view-display-id-homepage_news .field--name-field-news-thumbnail img {
+      opacity: 0.72;
+      transition: all 300ms ease-in-out; }
 
 .view-id-homepage.view-display-id-homepage_events {
   margin-left: 10%; }
