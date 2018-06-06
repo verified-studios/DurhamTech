@@ -7904,6 +7904,28 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       background-color: #FFFFFF;
       color: #000000; }
 
+.path-frontpage .block-durhamtech-social .slick {
+  background-color: #84BD00;
+  padding: 10px 0; }
+  .path-frontpage .block-durhamtech-social .slick .slick-slide {
+    border-radius: 20px;
+    height: 450px;
+    background: #edeeef;
+    padding: 1rem 2rem;
+    text-align: center; }
+    .path-frontpage .block-durhamtech-social .slick .slick-slide img {
+      max-width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      padding-bottom: 1rem;
+      display: inline-block; }
+    .path-frontpage .block-durhamtech-social .slick .slick-slide p {
+      color: #00843D; }
+    .path-frontpage .block-durhamtech-social .slick .slick-slide:nth-child(odd) {
+      background: rgba(0, 0, 0, 0.85); }
+      .path-frontpage .block-durhamtech-social .slick .slick-slide:nth-child(odd) p {
+        color: #edeeef; }
+
 #columns-1 .views-row {
   height: 175px;
   overflow: hidden; }
