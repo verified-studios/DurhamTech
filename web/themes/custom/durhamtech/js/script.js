@@ -32,4 +32,15 @@
     }
   };
 
+  Drupal.behaviors.slick = {
+    attach: function() {
+        $('.slick').slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            arrows: true,
+        });
+    }
+  }
 })(jQuery, Drupal);
