@@ -36,8 +36,11 @@
     attach: function() {
         $('.slick').slick({
             infinite: true,
-            speed: 300,
-            slidesToShow: 5,
+            centerMode: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: true,
         });

@@ -7911,14 +7911,15 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       color: #000000; }
 
 .path-frontpage .block-durhamtech-social .slick {
-  background-color: #333333;
+  background-color: #00843D;
   padding: 10px 0; }
   .path-frontpage .block-durhamtech-social .slick .slick-slide {
     border-radius: 20px;
     height: 450px;
     background: #edeeef;
-    padding: 1rem 2rem;
-    text-align: center; }
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 1.5rem; }
     .path-frontpage .block-durhamtech-social .slick .slick-slide img {
       max-width: 100px;
       height: 100px;
