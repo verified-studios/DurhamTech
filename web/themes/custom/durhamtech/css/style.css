@@ -7926,6 +7926,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       border-radius: 50%;
       padding-bottom: 1rem;
       display: inline-block; }
+    .path-frontpage .block-durhamtech-social .slick .slick-slide .social-image {
+      width: 100%;
+      height: 150px; }
     .path-frontpage .block-durhamtech-social .slick .slick-slide p {
       color: #00843D; }
     .path-frontpage .block-durhamtech-social .slick .slick-slide:nth-child(odd) {
