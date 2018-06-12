@@ -27,6 +27,7 @@ module:
   dblog: 0
   devel: 0
   durhamtech_colleague_migrate: 0
+  durhamtech_social: 0
   dynamic_page_cache: 0
   editor: 0
   editor_advanced_link: 0

@@ -1,4 +1,6 @@
-dtech_courses_data: {  }
+dtech_courses_data:
+  - '1033'
 dtech_class_data:
   - '1018'
-dtech_programs_data: {  }
+dtech_programs_data:
+  - '1050'

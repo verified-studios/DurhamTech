@@ -1,0 +1,14 @@
+uuid: 01dd774b-e24d-426a-b2c6-6d497dfc0463
+langcode: en
+status: true
+dependencies: {  }
+name: image_grid
+label: 'Image Grid'
+effects:
+  49c03795-212e-4068-bd56-f399f6befa6d:
+    uuid: 49c03795-212e-4068-bd56-f399f6befa6d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 300

@@ -1,0 +1,26 @@
+uuid: 368ac022-d356-4ee5-8ab9-8b29db827f94
+langcode: en
+status: true
+dependencies:
+  module:
+    - durhamtech_social
+    - system
+  theme:
+    - durhamtech
+id: durhamtechsocialmediaslider
+theme: durhamtech
+region: content
+weight: -3
+provider: null
+plugin: durhamtech_social_block
+settings:
+  id: durhamtech_social_block
+  label: 'Durham Tech Social Media Slider'
+  provider: durhamtech_social
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
