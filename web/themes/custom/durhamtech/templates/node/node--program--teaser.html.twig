@@ -92,20 +92,21 @@
             <h3 class="program-teaser-title">
               <a href="{{ url }}" class="green">{{ label }}</a>
             </h3>
+              {#{{ kint(content.field_degree_option) }}#}
               {% set description = content.field_description.0['#context'].value|render %}
             <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
             <table>
               <tr>
-                <td>Certificate</td>
-                <td>Average Cost</td>
+                <td>Certificate {{ content.field_degree_option }}</td>
+                <td>Average Cost: {{ content.field_program_cost }}</td>
               </tr>
               <tr>
                 <td>Online Option</td>
-                <td>Average Salary Upon Completion</td>
+                <td>Average Salary Upon Completion: </td>
               </tr>
               <tr>
                 <td>Main Campus</td>
-                <td>Next Application Date</td>
+                <td>Next Application Date: </td>
               </tr>
             </table>
           </div>
