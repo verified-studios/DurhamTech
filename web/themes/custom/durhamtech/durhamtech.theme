@@ -99,8 +99,10 @@ function durhamtech_preprocess_page(&$variables) {
       $variables['node_title'] = $title;
     }
   }
-  if ($variables['node']->type == 'program') {
-      echo "true";
+  if (isset($variables['node'])) {
+      if ($variables['node']->type == 'program') {
+          echo "true";
+      }
   }
  // kint($variables['node']->type);
 }

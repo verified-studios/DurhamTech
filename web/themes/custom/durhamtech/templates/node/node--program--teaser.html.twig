@@ -76,21 +76,57 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-
-
   <div{{ content_attributes.addClass('content', 'bg-white') }}>
     {#{ content }#}
     <div class="row teaser-row">
-      <div class="col-sm-2">
-        {{ content.field_program_image }}
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="program-teaser-image-container">
+              <div class="program-teaser-image">
+                  {{ content.field_program_image }}
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-9">
+            <h3 class="program-teaser-title">
+              <a href="{{ url }}" class="green">{{ label }}</a>
+            </h3>
+              {% set description = content.field_description.0['#context'].value|render %}
+            <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
+            <table>
+              <tr>
+                <td>Certificate</td>
+                <td>Average Cost</td>
+              </tr>
+              <tr>
+                <td>Online Option</td>
+                <td>Average Salary Upon Completion</td>
+              </tr>
+              <tr>
+                <td>Main Campus</td>
+                <td>Next Application Date</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 program-teaser-buttons-container">
+        <div class="program-teaser-buttons">
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
+          </div>
+          <div class="col-sm-12">
+            <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
+          </div>
+          <div class="col-sm-12">
+            <a href="{{ url }}" class="btn btn-full btn-outline">Apply Now</a>
+          </div>
+        </div>
+        </div>
       </div>
 
-      <div class="col-sm-8">
-        <h3 class="program-teaser-title">
-          <a href="{{ url }}" class="green">{{ label }}</a>
-        </h3>
-        {% set description = content.field_description.0['#context'].value|render %}
-        <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
         {#% if content.field_program_type.0 %}
           <div class="type">Type: {{ content.field_program_type.0 }}</div>
         {% endif %}
@@ -98,11 +134,6 @@
           <div class="format">Format: {{ content.field_format.0 }}</div>
         {% endif %}
         {{ content.field_program_stats }#}
-      </div>
-      <div class="col-sm-2">
-        <a href="{{ url }}" class="btn btn-full btn-outline">Learn More</a>
-      </div>
     </div>
   </div>
-
 </article>
