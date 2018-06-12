@@ -6679,13 +6679,14 @@ body {
     .page-header-wrapper nav ul > li a {
       color: #000000;
       display: inline-block;
-      padding: 5px 15px; }
+      padding: 1rem 1.5rem; }
       .page-header-wrapper nav ul > li a:hover {
         background-color: #FFFFFF;
         color: #000000; }
     .page-header-wrapper nav ul > li.active a {
       background-color: #FFFFFF;
-      color: #000000; }
+      color: #000000;
+      font-weight: 700; }
   .page-header-wrapper nav ul.second-tier {
     display: inline-block; }
     .page-header-wrapper nav ul.second-tier li a {
@@ -7706,7 +7707,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .program.teaser .program-teaser-buttons-container .program-teaser-buttons .btn {
       margin-bottom: 2rem; }
   .program.teaser .program-teaser-title {
-    margin: 2rem 0 1rem; }
+    margin: 2rem 0 1rem;
+    font-weight: 600; }
   .program.teaser .content {
     border-radius: 8px;
     margin-bottom: 15px;

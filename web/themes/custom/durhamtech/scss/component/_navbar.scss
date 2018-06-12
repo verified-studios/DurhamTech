@@ -208,7 +208,7 @@ $main-nav-height: 60px;
         a {
           color: $black;
           display: inline-block;
-          padding: 5px 15px;  
+          padding: 1rem 1.5rem;
 
           &:hover {
             background-color: $white;
@@ -221,6 +221,7 @@ $main-nav-height: 60px;
           a {
             background-color: $white;
             color: $black;
+            font-weight: 700;
           }
         }
       }
