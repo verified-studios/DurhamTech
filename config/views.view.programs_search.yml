@@ -342,7 +342,7 @@ display:
       display_extenders: {  }
       path: academic-programs
       exposed_block: true
-      title: Academic-programs
+      title: 'Academic Programs'
       defaults:
         title: false
     cache_metadata:
