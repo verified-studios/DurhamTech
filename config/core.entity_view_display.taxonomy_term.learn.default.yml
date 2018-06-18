@@ -1,0 +1,29 @@
+uuid: e11d6639-0b6a-463d-9ea3-7fba30d1dcba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.learn.field_description
+    - taxonomy.vocabulary.learn
+  module:
+    - text
+id: taxonomy_term.learn.default
+targetEntityType: taxonomy_term
+bundle: learn
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden: {  }

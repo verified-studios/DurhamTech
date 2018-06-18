@@ -7825,6 +7825,14 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       opacity: 0.5;
       margin-right: 1rem; }
 
+#block-views-block-program-search-by-category-block-1 {
+  margin-bottom: 2rem; }
+
+.program-search--category {
+  min-height: 240px;
+  background-color: #FFFFFF;
+  margin-bottom: 2.5rem; }
+
 .page-node-type-event .page-title {
   margin-bottom: 30px; }
 

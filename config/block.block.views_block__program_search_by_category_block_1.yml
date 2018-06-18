@@ -1,0 +1,30 @@
+uuid: baf1bf77-b035-44f2-80bf-610b97b525dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.program_search_by_category
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: views_block__program_search_by_category_block_1
+theme: durhamtech
+region: content
+weight: -13
+provider: null
+plugin: 'views_block:program_search_by_category-block_1'
+settings:
+  id: 'views_block:program_search_by_category-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /academic-programs
+    negate: false
+    context_mapping: {  }

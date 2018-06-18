@@ -1,0 +1,46 @@
+uuid: 1d5410c1-f9bf-48fa-b01a-2abbc8334f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.learn.field_description
+    - taxonomy.vocabulary.learn
+  module:
+    - path
+    - text
+id: taxonomy_term.learn.default
+targetEntityType: taxonomy_term
+bundle: learn
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_description:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
