@@ -6876,6 +6876,61 @@ body {
   .tabs-right > .nav-tabs > .active > a:focus {
     border-color: #ddd #ddd #ddd transparent; }
 
+.tabs--primary.nav-tabs {
+  margin: 0 2rem;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    .tabs--primary.nav-tabs {
+      margin: 2rem 2rem 6rem;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08); }
+      .tabs--primary.nav-tabs li {
+        float: none; }
+        .tabs--primary.nav-tabs li a,
+        .tabs--primary.nav-tabs li a:visited,
+        .tabs--primary.nav-tabs li a:hover,
+        .tabs--primary.nav-tabs li a:focus {
+          border: 1px solid #ddd;
+          border-radius: 0 !important;
+          margin: 0 !important;
+          font-size: 1.5rem;
+          background-color: #FFFFFF !important; }
+        .tabs--primary.nav-tabs li.active a,
+        .tabs--primary.nav-tabs li.active a:visited,
+        .tabs--primary.nav-tabs li.active a:hover,
+        .tabs--primary.nav-tabs li.active a:focus {
+          margin: 0 !important;
+          background-color: #edeeef !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .tabs--primary.nav-tabs {
+      margin: 2rem 2rem 6rem;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.08); }
+      .tabs--primary.nav-tabs li {
+        float: none; }
+        .tabs--primary.nav-tabs li a,
+        .tabs--primary.nav-tabs li a:visited,
+        .tabs--primary.nav-tabs li a:hover,
+        .tabs--primary.nav-tabs li a:focus {
+          border: 1px solid #ddd;
+          border-radius: 0 !important;
+          margin: 0 !important;
+          font-size: 1.5rem;
+          background-color: #FFFFFF !important; }
+        .tabs--primary.nav-tabs li.active a,
+        .tabs--primary.nav-tabs li.active a:visited,
+        .tabs--primary.nav-tabs li.active a:hover,
+        .tabs--primary.nav-tabs li.active a:focus {
+          margin: 0 !important;
+          background-color: #edeeef !important; } }
+
 /**
  * Toolbar module styling.
  */
@@ -8143,5 +8198,49 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   margin-left: 0.5rem; }
   .landing-page .block ul li {
     margin-bottom: 0.5rem; }
+
+body.path-user .main-container {
+  padding: 5rem;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+  @media (max-width: 767px) {
+    body.path-user .main-container {
+      padding: 3rem 1rem; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    body.path-user .main-container {
+      padding: 3rem 1rem; } }
+
+body.path-user nav.tabs {
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
+
+body.path-user .user-login-form {
+  margin: 2rem;
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */
+  /* Mobile Devices for Mice */
+  /* Landscape phones and down */
+  /* Landscape phone to portrait tablet */
+  /* Portrait tablet to landscape and desktop */
+  /* desktop and large desktop */ }
 
 /*# sourceMappingURL=style.css.map */

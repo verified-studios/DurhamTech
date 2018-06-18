@@ -128,3 +128,36 @@
     }
   }
 }
+
+.tabs--primary.nav-tabs {
+  margin: 0 2rem;
+  @include respondto(xs, sm) {
+    margin: 2rem 2rem 6rem;
+    box-shadow: 1px 1px 5px rgba($black, 0.08);
+
+    li {
+      float: none;
+
+      a,
+      a:visited,
+      a:hover,
+      a:focus {
+        border: 1px solid #ddd;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        font-size: 1.5rem;
+        background-color: $white !important;
+      }
+
+      &.active {
+        a,
+        a:visited,
+        a:hover,
+        a:focus {
+          margin: 0 !important;
+          background-color: $offwhite !important;
+        }
+      }
+    }
+  }
+}
