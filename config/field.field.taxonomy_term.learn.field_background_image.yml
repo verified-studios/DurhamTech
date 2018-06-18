@@ -1,0 +1,38 @@
+uuid: ac23f215-fbf4-46fe-9f0e-2254433a39da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_background_image
+    - taxonomy.vocabulary.learn
+  module:
+    - image
+id: taxonomy_term.learn.field_background_image
+field_name: field_background_image
+entity_type: taxonomy_term
+bundle: learn
+label: 'Background Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -7829,9 +7829,46 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   margin-bottom: 2rem; }
 
 .program-search--category {
-  min-height: 240px;
+  min-height: 300px;
+  margin-bottom: 2.5rem;
   background-color: #FFFFFF;
-  margin-bottom: 2.5rem; }
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(38, 38, 38, 0.08); }
+  .program-search--category a,
+  .program-search--category a:visited,
+  .program-search--category a:hover,
+  .program-search--category a:focus {
+    color: #CC4700; }
+  .program-search--category h3 {
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: #CC4700; }
+
+.program-search--category--btn .btn {
+  position: absolute;
+  bottom: 3rem;
+  left: 10%;
+  width: 80%;
+  z-index: 3; }
+
+.program-search--category--btn a,
+.program-search--category--btn a:visited,
+.program-search--category--btn a:hover,
+.program-search--category--btn a:focus {
+  color: #FFFFFF; }
+
+.program-search--category--image {
+  background-color: #CED2D5 !important;
+  background-position: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  left: 0;
+  margin-bottom: 1rem; }
 
 .page-node-type-event .page-title {
   margin-bottom: 30px; }

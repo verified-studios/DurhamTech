@@ -3,27 +3,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.learn.field_description
+    - field.field.taxonomy_term.learn.field_background_image
     - taxonomy.vocabulary.learn
   module:
-    - text
+    - panelizer
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: taxonomy_term.learn.default
 targetEntityType: taxonomy_term
 bundle: learn
 mode: default
-content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_description:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-hidden: {  }
+content: {  }
+hidden:
+  description: true
+  field_background_image: true
