@@ -273,11 +273,12 @@
       background-color: $light-gray;
       padding: 2rem 3rem;
       border-radius: 1rem;
+      max-width: 100%;
     }
 
     #edit-search-api-fulltext {
-      width: 50vw;
-      max-width: 100%;
+      width: 500px;
+      max-width: 80%;
     }
     #edit-submit-programs-search {
       font-size: 2rem;

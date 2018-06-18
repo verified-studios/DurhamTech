@@ -7061,7 +7061,8 @@ p:last-child,
 table {
   width: 100%; }
   table th, table td {
-    padding: 1.25rem; }
+    padding: 1.25rem;
+    vertical-align: top; }
     table th:first-of-type, table td:first-of-type {
       border: none; }
   table th {
@@ -7757,10 +7758,11 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   #views-exposed-form-programs-search-page-1 .form--inline .form-item-search-api-fulltext {
     background-color: #CED2D5;
     padding: 2rem 3rem;
-    border-radius: 1rem; }
-  #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext {
-    width: 50vw;
+    border-radius: 1rem;
     max-width: 100%; }
+  #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext {
+    width: 500px;
+    max-width: 80%; }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search {
     font-size: 2rem;
     padding: 1rem 2rem; }
