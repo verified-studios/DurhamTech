@@ -7861,7 +7861,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 
 .program-search--category--image {
   background-color: #CED2D5 !important;
-  background-position: cover;
+  background-size: cover;
   background-position: 50% 50%;
   position: absolute;
   height: 100%;

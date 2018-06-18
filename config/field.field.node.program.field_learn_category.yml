@@ -1,0 +1,29 @@
+uuid: f71d87c6-0f71-45ff-a156-228edfb985f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_learn_category
+    - node.type.program
+    - taxonomy.vocabulary.learn
+id: node.program.field_learn_category
+field_name: field_learn_category
+entity_type: node
+bundle: program
+label: 'Learn Category'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      learn: learn
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
