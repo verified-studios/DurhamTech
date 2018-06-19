@@ -179,12 +179,6 @@ function durhamtech_preprocess_menu(array &$variables)
 {
 
     if ($variables['menu_name'] == 'page-header-menu') {
-        // Set program overview tab to active
-        foreach ($variables['items'] as $item) {
-            if ($item['title'] == 'Program Overview') {
-                $item['attributes']['class'] = ['active'];
-            }
-        }
 
         // Get current url and split on arguments.
         $current_path = \Drupal::service('path.current')->getPath();
@@ -192,6 +186,15 @@ function durhamtech_preprocess_menu(array &$variables)
         $url_arr = explode('/', $result);
 
         $menu = $variables['items'];
+
+        // Set program overview tab to active
+        foreach ($menu as $item_key => $menu_item) {
+            if ($menu_item['title'] == 'Program Overview') {
+                if ($url_arr[1] == 'academic-programs') {
+                    $menu_item['attributes']['class'] = ['active'];
+                }
+            }
+        }
 
         // Unset certain menu items depending on route.
         if (isset($url_arr[1])) {
