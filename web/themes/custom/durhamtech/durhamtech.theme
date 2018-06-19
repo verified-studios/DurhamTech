@@ -9,224 +9,238 @@
 /**
  * Implements hook_preprocess_HOOK() for block templates.
  */
-function durhamtech_preprocess_block(&$variables) {
-  switch ($variables['base_plugin_id']) {
-    case 'system_branding_block':
-      $variables['site_logo'] = '/' . drupal_get_path('theme','durhamtech') . '/images/durham-tech-logo-web.svg';
-      break;
-  }
+function durhamtech_preprocess_block(&$variables)
+{
+    switch ($variables['base_plugin_id']) {
+        case 'system_branding_block':
+            $variables['site_logo'] = '/' . drupal_get_path('theme', 'durhamtech') . '/images/durham-tech-logo-web.svg';
+            break;
+    }
 }
 
 /**
  * Implements hook_preprocess_page().
  */
-function durhamtech_preprocess_page(&$variables) {
-
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-
-    // Load a default based on url pattern.
-    // Get current url and split on arguments.
-    $current_path = \Drupal::service('path.current')->getPath();
-    $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-    $url_arr = explode('/', $result);
-
-    $url_first_arg = $url_arr[1];
-
-    if(isset($url_first_arg)) {
-      $variables['url_first_arg'] = $url_first_arg;
+function durhamtech_preprocess_page(&$variables)
+{
+    /*
+     * all the things for academic programs
+     */
+    if (\Drupal::service('path.alias_manager')->getAliasByPath('/academic-programs')) {
+        if ( \Drupal::request()->query->get('field_degree_option') !== null || \Drupal::request()->query->get('field_learn_category') !== null ) {
+            unset($variables['page']['content']['views_block__program_search_by_category_block_1']);
+        }
     }
 
-    $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
-    $links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $node->id()));
-    if ($link = reset($links)) {
-      if ($parent = $link->getParent()) {
-        $parent = $menu_link_manager->createInstance($parent);
-        $parent_title = $parent->getTitle();
-        $parent_url = $parent->getUrlObject()->toString();
-        $variables['parent_title'] = $parent_title;
-      }
-    }
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
 
-    // Check if overriding banner image exists for node.
-    if($node->hasField('field_banner_image') && !$node->get('field_banner_image')->isEmpty()) {
-      $banner_image_field = $node->get('field_banner_image')->getValue();
-      if(!empty($banner_image_field)) {
-        // Get media entity from id.
-        $entity = \Drupal::entityTypeManager()->getStorage("media")->load($banner_image_field[0]['target_id']);
-        $banner = $entity;
-      }
+        // Load a default based on url pattern.
+        // Get current url and split on arguments.
+        $current_path = \Drupal::service('path.current')->getPath();
+        $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+        $url_arr = explode('/', $result);
 
+        $url_first_arg = $url_arr[1];
+
+        if (isset($url_first_arg)) {
+            $variables['url_first_arg'] = $url_first_arg;
+        }
+
+        $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+        $links = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $node->id()));
+        if ($link = reset($links)) {
+            if ($parent = $link->getParent()) {
+                $parent = $menu_link_manager->createInstance($parent);
+                $parent_title = $parent->getTitle();
+                $parent_url = $parent->getUrlObject()->toString();
+                $variables['parent_title'] = $parent_title;
+            }
+        }
+
+        // Check if overriding banner image exists for node.
+        if ($node->hasField('field_banner_image') && !$node->get('field_banner_image')->isEmpty()) {
+            $banner_image_field = $node->get('field_banner_image')->getValue();
+            if (!empty($banner_image_field)) {
+                // Get media entity from id.
+                $entity = \Drupal::entityTypeManager()->getStorage("media")->load($banner_image_field[0]['target_id']);
+                $banner = $entity;
+            }
+
+        } else {
+
+            // Gets banner images by media name. reset() needed to strip entity from array.
+            $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
+            $program_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Programs Banner']);
+            $program_banner = reset($program_banner);
+            $course_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Courses Banner']);
+            $course_banner = reset($course_banner);
+            $careers_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Careers Banner']);
+            $careers_banner = reset($careers_banner);
+
+            // Load entity based on url.
+            if ($url_arr[1] == 'academic-programs' && $program_banner) {
+                $banner = $program_banner;
+            } else if ($url_arr[1] == 'courses' && $course_banner) {
+                $banner = $course_banner;
+            } else if ($url_arr[1] == 'careers' && $careers_banner) {
+                $banner = $careers_banner;
+            } else if (isset($entity)) {
+                $banner = $entity;
+            }
+        }
     } else {
-
-      // Gets banner images by media name. reset() needed to strip entity from array.
-      $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
-      $program_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Programs Banner']);
-      $program_banner = reset($program_banner);
-      $course_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Courses Banner']);
-      $course_banner = reset($course_banner);
-      $careers_banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Careers Banner']);
-      $careers_banner = reset($careers_banner);
-
-      // Load entity based on url.
-      if($url_arr[1] == 'academic-programs' && $program_banner) {
-        $banner = $program_banner;
-      } else if($url_arr[1] == 'courses' && $course_banner) {
-        $banner = $course_banner;
-      } else if($url_arr[1] == 'careers' && $careers_banner) {
-        $banner = $careers_banner;
-      } else if(isset($entity)) {
-        $banner = $entity;
-      }
+        $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
+        if (isset($entity)) {
+            $banner = $entity;
+        }
     }
-  } else {
-    $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
-    if(isset($entity)) {
-      $banner = $entity;
-    }
-  }
 
-  if (isset($banner)) {
-    // Use loaded entity to generate uri of banner image.
-    $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
-  }
-
-  if ($node = \Drupal::request()->attributes->get('node')) {
-    $variables['node_title'] = $node->getTitle();
-  }
-  elseif ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
-    if (!empty($taxonomy->fields['field_title'])) {
-      $title = $taxonomy->get('field_title')->getString();
-      $variables['node_title'] = $title;
+    if (isset($banner)) {
+        // Use loaded entity to generate uri of banner image.
+        $variables['banner_img'] = $banner->field_banner_image->entity->getFileUri();
     }
-  }
-  if (isset($variables['node'])) {
-      if ($variables['node']->type == 'program') {
-          echo "true";
-      }
-  }
- // kint($variables['node']->type);
+
+    if ($node = \Drupal::request()->attributes->get('node')) {
+        $variables['node_title'] = $node->getTitle();
+    } elseif ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+        if (!empty($taxonomy->fields['field_title'])) {
+            $title = $taxonomy->get('field_title')->getString();
+            $variables['node_title'] = $title;
+        }
+    }
+    if (isset($variables['node'])) {
+        if ($variables['node']->type == 'program') {
+            echo "true";
+        }
+    }
+    // kint($variables['node']->type);
 }
 
 /**
  * Implements hook_preprocess_node().
  */
-function durhamtech_preprocess_node(&$variables) {
-  if ($variables['node']->bundle() == 'quote') {
+function durhamtech_preprocess_node(&$variables)
+{
+    if ($variables['node']->bundle() == 'quote') {
 
-    // Get image field value to get media id.
-    $image_field = $variables['node']->get('field_quote_image')->getValue();
+        // Get image field value to get media id.
+        $image_field = $variables['node']->get('field_quote_image')->getValue();
 
-    if (!empty($image_field)) {
-      // Get media entity from id.
-      $entity = \Drupal::entityTypeManager()->getStorage("media")->load($image_field[0]['target_id']);
-      $variables['content']['quote_image_uri'] = $entity->field_image->entity->getFileUri();
+        if (!empty($image_field)) {
+            // Get media entity from id.
+            $entity = \Drupal::entityTypeManager()->getStorage("media")->load($image_field[0]['target_id']);
+            $variables['content']['quote_image_uri'] = $entity->field_image->entity->getFileUri();
+        }
     }
-  }
 
-  if ($variables['node']->bundle() == 'program') {
-    $now = time();
-    $next_date = '';
-    // Get field_application_deadline field value.
-    $app_deadline_node_id = $variables['node']->get('field_program_app_deadline')->getValue()[0]['target_id'];
-    $app_deadline_node = \Drupal\node\Entity\Node::load($app_deadline_node_id);
-    $field_application_deadline = $app_deadline_node->get('field_application_deadline')->getValue();
-    foreach ($field_application_deadline as $item) {
-      $paragraph = \Drupal\paragraphs\Entity\Paragraph::load($item['target_id']);
-      $date = $paragraph->get('field_app_deadline_date')->getValue();
-      $timestamp = strtotime($date[0]['value']);
-      if ($now > $timestamp) {
-        continue;
-      }
-      if (empty($next_date) || $next_date > $timestamp) {
-        $next_date = $timestamp;
-        $next_period = date('d M', $next_date);
-      }
-
+    if ($variables['node']->bundle() == 'program') {
+        $now = time();
+        $next_date = '';
+        // Get field_application_deadline field value.
+        if ($variables['node']->get('field_program_app_deadline')->getValue()) {
+            $app_deadline_node_id = $variables['node']->get('field_program_app_deadline')->getValue()[0]['target_id'];
+            $app_deadline_node = \Drupal\node\Entity\Node::load($app_deadline_node_id);
+            $field_application_deadline = $app_deadline_node->get('field_application_deadline')->getValue();
+            foreach ($field_application_deadline as $item) {
+                $paragraph = \Drupal\paragraphs\Entity\Paragraph::load($item['target_id']);
+                $date = $paragraph->get('field_app_deadline_date')->getValue();
+                $timestamp = strtotime($date[0]['value']);
+                if ($now > $timestamp) {
+                    continue;
+                }
+                if (empty($next_date) || $next_date > $timestamp) {
+                    $next_date = $timestamp;
+                    $next_period = date('d M', $next_date);
+                }
+            }
+        }
+        $variables['content']['next_app_deadline'] = !empty($next_period) ? $next_period : NULL;
     }
-    $variables['content']['next_app_deadline'] = !empty($next_period) ? $next_period : NULL;
-  }
 }
 
 /**
  * Implements hook_preprocess_menu().
  */
-function durhamtech_preprocess_menu(array &$variables) {
+function durhamtech_preprocess_menu(array &$variables)
+{
 
-  if($variables['menu_name'] == 'page-header-menu') {
-      // Set program overview tab to active
-      foreach ($variables['items'] as $item) {
-          if ($item['title'] == 'Program Overview') {
-              $item['attributes']['class'] = ['active'];
-          }
-      }
-
-    // Get current url and split on arguments.
-    $current_path = \Drupal::service('path.current')->getPath();
-    $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-    $url_arr = explode('/', $result);
-
-    $menu = $variables['items'];
-
-    // Unset certain menu items depending on route.
-    if(isset($url_arr[1])) {
-      foreach($menu as $item_key => $menu_item) {
-        if( $menu_item['title'] == 'Search Courses') {
-          if($url_arr[1] == 'academic-programs' || $url_arr[1] == 'careers') {
-            unset($variables['items'][$item_key]);
-          }
-
-          if(!isset($url_arr[2])) {
-            unset($variables['items'][$item_key]['below']);
-          }
-        } else if($menu_item['title'] == 'Search Programs') {
-          if($url_arr[1] == 'courses' || $url_arr[1] == 'careers') {
-            unset($variables['items'][$item_key]);
-          }
-
-          if(!isset($url_arr[2])) {
-            unset($variables['items'][$item_key]['below']);
-          }
-        } else if($menu_item['title'] == 'Search Careers') {
-          if($url_arr[1] == 'courses' || $url_arr[1] == 'academic-programs') {
-            unset($variables['items'][$item_key]);
-          }
-
-          if(!isset($url_arr[2])) {
-            unset($variables['items'][$item_key]['below']);
-          }
+    if ($variables['menu_name'] == 'page-header-menu') {
+        // Set program overview tab to active
+        foreach ($variables['items'] as $item) {
+            if ($item['title'] == 'Program Overview') {
+                $item['attributes']['class'] = ['active'];
+            }
         }
-      }
+
+        // Get current url and split on arguments.
+        $current_path = \Drupal::service('path.current')->getPath();
+        $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+        $url_arr = explode('/', $result);
+
+        $menu = $variables['items'];
+
+        // Unset certain menu items depending on route.
+        if (isset($url_arr[1])) {
+            foreach ($menu as $item_key => $menu_item) {
+                if ($menu_item['title'] == 'Search Courses') {
+                    if ($url_arr[1] == 'academic-programs' || $url_arr[1] == 'careers') {
+                        unset($variables['items'][$item_key]);
+                    }
+
+                    if (!isset($url_arr[2])) {
+                        unset($variables['items'][$item_key]['below']);
+                    }
+                } else if ($menu_item['title'] == 'Search Programs') {
+                    if ($url_arr[1] == 'courses' || $url_arr[1] == 'careers') {
+                        unset($variables['items'][$item_key]);
+                    }
+
+                    if (!isset($url_arr[2])) {
+                        unset($variables['items'][$item_key]['below']);
+                    }
+                } else if ($menu_item['title'] == 'Search Careers') {
+                    if ($url_arr[1] == 'courses' || $url_arr[1] == 'academic-programs') {
+                        unset($variables['items'][$item_key]);
+                    }
+
+                    if (!isset($url_arr[2])) {
+                        unset($variables['items'][$item_key]['below']);
+                    }
+                }
+            }
+        }
     }
-  }
 }
 
 /**
  * Implements template_preprocess_views_view()
  * @param array $vars
  */
-function durhamtech_preprocess_views_view(&$vars){
+function durhamtech_preprocess_views_view(&$vars)
+{
 
-  if($vars['id'] == 'events') {
-    $vars['more']['#options']['attributes']['class'] = array(
-      'btn' => 'btn',
-      'btn-outline' => 'btn-outline',
-      'padding' => 'padding-lr-30'
-    );
-  }
+    if ($vars['id'] == 'events') {
+        $vars['more']['#options']['attributes']['class'] = array(
+            'btn' => 'btn',
+            'btn-outline' => 'btn-outline',
+            'padding' => 'padding-lr-30'
+        );
+    }
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function durhamtech_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+function durhamtech_theme_suggestions_page_alter(array &$suggestions, array $variables)
+{
 
-  if ($node = \Drupal::routeMatch()->getParameter('node')) {
-    $content_type = $node->bundle();
-    $suggestions[] = 'page__'.$content_type;
-  } else if ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
-    $taxonomy_type = $taxonomy->bundle();
-    $suggestions[] = 'page__'.$taxonomy_type;
-  }
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__' . $content_type;
+    } else if ($taxonomy = \Drupal::routeMatch()->getParameter('taxonomy_term')) {
+        $taxonomy_type = $taxonomy->bundle();
+        $suggestions[] = 'page__' . $taxonomy_type;
+    }
 }
 
 /**
@@ -234,29 +248,33 @@ function durhamtech_theme_suggestions_page_alter(array &$suggestions, array $var
  * @param array $suggestions
  * @param array $variables
  */
-function durhamtech_theme_suggestions_block_alter(array &$suggestions, array $variables) {
-  // Block suggestions for custom block bundles.
-  if (isset($variables['elements']['content']['#block_content'])) {
-    array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
-  }
+function durhamtech_theme_suggestions_block_alter(array &$suggestions, array $variables)
+{
+    // Block suggestions for custom block bundles.
+    if (isset($variables['elements']['content']['#block_content'])) {
+        array_splice($suggestions, 1, 0, 'block__bundle__' . $variables['elements']['content']['#block_content']->bundle());
+    }
 }
 
 /**
  * Implements hook_form_views_exposed_form_alter() for form templates.
  */
-function durhamtech_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  $view = $form_state->getStorage('view');
-  if ($form_id == 'views_exposed_form' && $view['view']->id() == 'programs_search') {
-    if(\Drupal::service('path.matcher')->isFrontPage()) {
-      $form['actions']['submit']['#value'] = t('Search');
-      $form['actions']['submit']['#attributes']['class'][] = 'btn btn-block btn-green btn-lg';
-      $form['actions']['submit']['#prefix'] = '<div class="action">';
-      $form['actions']['submit']['#suffix'] = '<a class="white" href="#">Still need help?</a></div>';
-      $form['search_api_fulltext']['#access'] = FALSE;
-      $form['field_degree_option']['#options']['All'] = t('I\'m interested in');
-      $form['field_program_department']['#options']['All'] = t('I want to learn about ');
-      unset($form['#info']['filter-field_program_department']['label']);
-      unset($form['#info']['filter-field_degree_option']['label']);
+function durhamtech_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+    $view = $form_state->getStorage('view');
+    if ($form_id == 'views_exposed_form' && $view['view']->id() == 'programs_search') {
+        if (\Drupal::service('path.matcher')->isFrontPage()) {
+            $form['actions']['submit']['#value'] = t('Search');
+            $form['actions']['submit']['#attributes']['class'][] = 'btn btn-block btn-green btn-lg';
+            $form['actions']['submit']['#prefix'] = '<div class="action">';
+            $form['actions']['submit']['#suffix'] = '<a class="white" href="#">Still need help?</a></div>';
+            $form['search_api_fulltext']['#access'] = FALSE;
+            $form['field_degree_option']['#options']['All'] = t('I\'m interested in');
+//            $form['field_program_department']['#options']['All'] = t('I want to learn about ');
+            $form['field_learn_category']['#options']['All'] = t('I want to learn about ');
+            unset($form['#info']['filter-field_program_department']['label']);
+//            unset($form['#info']['filter-field_degree_option']['label']);
+            unset($form['#info']['filter-field_degree_option']['label']);
+        }
     }
-  }
 }

@@ -7870,6 +7870,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   left: 0;
   margin-bottom: 1rem; }
 
+.view-display-id-page_1 {
+  padding-bottom: 5rem; }
+
 .page-node-type-event .page-title {
   margin-bottom: 30px; }
 
@@ -8096,6 +8099,20 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 #columns-1 .views-row {
   height: 175px;
   overflow: hidden; }
+
+.path-frontpage #views-exposed-form-programs-search-page-1 .form--inline {
+  text-align: left;
+  padding-right: 4rem; }
+
+.path-frontpage #views-exposed-form-programs-search-page-1 .form--inline .form-item label {
+  display: none !important; }
+
+.path-frontpage #views-exposed-form-programs-search-page-1 #edit-submit-programs-search {
+  font-size: 1.5rem;
+  padding: 1rem 2rem; }
+  .path-frontpage #views-exposed-form-programs-search-page-1 #edit-submit-programs-search .glyphicon {
+    opacity: 0.5;
+    margin-right: 1rem; }
 
 .node--type-landing_page {
   padding: 0; }
