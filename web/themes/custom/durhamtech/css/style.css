@@ -7198,7 +7198,7 @@ table {
     .sidebar .menu li > ul {
       margin-top: 1rem; }
       .sidebar .menu li > ul li a {
-        font-weight: 400 !important; }
+        font-weight: 400; }
 
 .flex-view .view-content {
   display: flex;
