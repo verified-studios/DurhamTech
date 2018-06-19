@@ -20,9 +20,26 @@
  * @ingroup themeable
  */
 #}
-<a href="#"><h3>{{ view.field.name.original_value }}</h3></a>
-<a href="#" class="program-search--category--image"
-   style="background-image: url({{ view.field.field_background_image.original_value }})"></a>
-<div class="program-search--category--btn">
-    <a href="#" class="btn btn-default btn-block">Find Programs</a>
-</div>
+{% set pathinfo =  view.request.pathinfo %}
+
+{% if pathinfo == "/continuing-education" %}
+
+    {% set link =  view.field.view_taxonomy_term.original_value %}
+
+    <a href="{{ link }}"><h3>{{ view.field.name.original_value }}</h3></a>
+    <a href="{{ link }}" class="program-search--category--image"
+       style="background-image: url({{ view.field.field_background_image.original_value }})"></a>
+    <div class="program-search--category--btn">
+        <a href="{{ link }}" class="btn btn-default btn-block">Find Programs</a>
+    </div>
+
+{% else %}
+
+    <a href="#"><h3>{{ view.field.name.original_value }}</h3></a>
+    <a href="#" class="program-search--category--image"
+       style="background-image: url({{ view.field.field_background_image.original_value }})"></a>
+    <div class="program-search--category--btn">
+        <a href="#" class="btn btn-default btn-block">Find Programs</a>
+    </div>
+    
+{% endif %}

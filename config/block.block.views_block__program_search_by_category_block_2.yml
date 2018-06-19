@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/continuing-education\r\n/continuing-education/*"
+    pages: /continuing-education
     negate: false
     context_mapping: {  }
