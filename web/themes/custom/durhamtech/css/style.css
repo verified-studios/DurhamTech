@@ -7739,10 +7739,12 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .required-classes .section-title {
       margin-top: 60px; } }
 
-.path-academic-programs .main-container {
+.path-academic-programs .main-container,
+.path-continuing-education .main-container {
   background-color: #edeeef; }
 
-.path-academic-programs footer {
+.path-academic-programs footer,
+.path-continuing-education footer {
   margin-top: 0; }
 
 #block-exposedformprograms-searchpage-1 {
