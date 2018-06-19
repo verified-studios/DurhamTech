@@ -1,22 +1,22 @@
-uuid: 1f5602d8-c6b2-4558-85b2-864948df8e67
+uuid: 0fd55abe-a538-40b5-aa86-12a2052e69ae
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.events
+    - views.view.program_search_by_category
   module:
     - system
     - views
   theme:
     - durhamtech
-id: views_block__cgl_events
+id: views_block__program_search_by_category_block_2
 theme: durhamtech
 region: content
-weight: -6
+weight: -12
 provider: null
-plugin: 'views_block:events-block_2'
+plugin: 'views_block:program_search_by_category-block_2'
 settings:
-  id: 'views_block:events-block_2'
+  id: 'views_block:program_search_by_category-block_2'
   label: ''
   provider: views
   label_display: '0'
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /cgl
+    pages: "/continuing-education\r\n/continuing-education/*"
     negate: false
     context_mapping: {  }

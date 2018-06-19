@@ -12,7 +12,7 @@ dependencies:
 id: views_block__community_service_events
 theme: durhamtech
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'views_block:events-block_4'
 settings:

@@ -10,7 +10,7 @@ dependencies:
 id: durhamtechsocialmediaslider
 theme: durhamtech
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: durhamtech_social_block
 settings:
