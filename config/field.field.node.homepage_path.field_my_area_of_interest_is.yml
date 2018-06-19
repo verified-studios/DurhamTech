@@ -1,0 +1,29 @@
+uuid: 92fe919d-5aed-4db1-8bfe-c573490fa1b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_my_area_of_interest_is
+    - node.type.homepage_path
+    - taxonomy.vocabulary.learn
+id: node.homepage_path.field_my_area_of_interest_is
+field_name: field_my_area_of_interest_is
+entity_type: node
+bundle: homepage_path
+label: 'My Area of Interest Is'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      learn: learn
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,43 @@
+uuid: 80956f81-f9dd-49b5-bdb0-27f101182e5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homepage_path.field_i_have_a
+    - field.field.node.homepage_path.field_i_m_interested_in
+    - field.field.node.homepage_path.field_my_area_of_interest_is
+    - field.field.node.homepage_path.field_redirect_page
+    - node.type.homepage_path
+  module:
+    - link
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.homepage_path.default
+targetEntityType: node
+bundle: homepage_path
+mode: default
+content:
+  field_redirect_page:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  addtoany: true
+  field_i_have_a: true
+  field_i_m_interested_in: true
+  field_my_area_of_interest_is: true
+  links: true

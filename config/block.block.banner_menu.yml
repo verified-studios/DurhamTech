@@ -11,7 +11,7 @@ dependencies:
 id: banner_menu
 theme: durhamtech
 region: secondary_nav
-weight: -10
+weight: -15
 provider: null
 plugin: 'menu_block:banner-menu'
 settings:

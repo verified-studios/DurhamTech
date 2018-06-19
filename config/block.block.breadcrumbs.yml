@@ -9,7 +9,7 @@ dependencies:
 id: breadcrumbs
 theme: durhamtech
 region: secondary_nav
-weight: 0
+weight: -12
 provider: null
 plugin: system_breadcrumb_block
 settings:

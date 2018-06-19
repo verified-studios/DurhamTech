@@ -1,0 +1,29 @@
+uuid: afe9c86f-5ba9-4a5e-a9a3-e10557659ae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_i_have_a
+    - node.type.homepage_path
+    - taxonomy.vocabulary.academic_level_basic
+id: node.homepage_path.field_i_have_a
+field_name: field_i_have_a
+entity_type: node
+bundle: homepage_path
+label: 'I Have a'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_level_basic: academic_level_basic
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
