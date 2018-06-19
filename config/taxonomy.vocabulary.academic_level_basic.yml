@@ -1,0 +1,9 @@
+uuid: d6462098-0328-4d3e-a48e-2ec9ae91c3e8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Level (Basic)'
+vid: academic_level_basic
+description: 'For use on homepage and general data analysis.'
+hierarchy: 0
+weight: 0

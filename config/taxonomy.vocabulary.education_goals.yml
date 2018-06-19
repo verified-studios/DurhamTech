@@ -1,0 +1,9 @@
+uuid: 6ed9a4da-b6ab-482b-8cd3-5c4df5c811ad
+langcode: en
+status: true
+dependencies: {  }
+name: 'Education Goals'
+vid: education_goals
+description: ''
+hierarchy: 0
+weight: 0
