@@ -289,7 +289,7 @@ function durhamtech_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\Form
             $form['search_api_fulltext']['#access'] = FALSE;
 
             $form['field_i_have_a_target_id']['#options']['All'] = t('I Have a');
-            $form['field_i_m_interested_in_target_id']['#options']['All'] = t('I\'m interested in');
+            $form['field_i_m_interested_in_target_id']['#options']['All'] = t('I\'m Interested in');
             $form['field_learn_category_target_id']['#options']['All'] = t('My Area of Interest Is');
             unset($form['#info']['filter-field_i_have_a_target_id']['label']);
             unset($form['#info']['filter-field_i_m_interested_in_target_id']['label']);
