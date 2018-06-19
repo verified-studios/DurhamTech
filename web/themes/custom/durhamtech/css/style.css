@@ -7697,9 +7697,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .program .program-header {
     padding-bottom: 60px; }
   .program .image {
-    float: left;
-    margin-right: 5%;
-    width: 45%; }
+    float: right;
+    margin-left: 2rem;
+    width: 42%; }
   .program .field--name-field-program-image {
     margin-bottom: 0;
     width: calc(100% - 10px); }

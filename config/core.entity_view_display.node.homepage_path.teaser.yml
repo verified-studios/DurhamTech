@@ -17,3 +17,7 @@ content:
     region: content
 hidden:
   addtoany: true
+  field_i_have_a: true
+  field_i_m_interested_in: true
+  field_my_area_of_interest_is: true
+  field_redirect_page: true

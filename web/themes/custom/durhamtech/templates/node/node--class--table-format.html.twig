@@ -66,6 +66,7 @@
  */
 #}
 
+{% if view.current_display != 'course_offering' %}
 <tr{{ attributes.addClass(classes) }}>
   {% set start_date = content.field_start_date.0['#text']|date('U') %}
   {% set end_date = content.field_end_date.0['#text']|date('U') %}
@@ -113,3 +114,47 @@
   </td>
 
 </tr>
+{% else %}
+    <tr{{ attributes.addClass(classes) }}>
+        <td><a href="{{ view.args.3 }}">{{ view.args.2 }}</a></td>
+        <td>{{ view.args.1 }}</td>
+        {% set start_date = content.field_start_date.0['#text']|date('U') %}
+        {% set end_date = content.field_end_date.0['#text']|date('U') %}
+        <td>{{ start_date|format_date('custom', 'M d') }} - {{ end_date|format_date('custom', 'M d Y') }}</td>
+        <td>
+            <table><tbody>
+                {% if content.field_location or content.field_building %}
+                    <tr><td>
+                            {{ content.field_location.0 }}
+                        </td></tr>
+                    <tr><td>
+                            {{ content.field_building.0 }}
+                        </td></tr>
+                {% endif %}
+                </tbody></table>
+        </td>
+        <td>
+            {% if content.field_class_item %}
+                <table><tbody>
+                    {% for key, paragraph in content.field_class_item if key|first!='#' %}
+                        <tr><td>
+                                {{ paragraph['#paragraph'].get('field_room').value }}
+                            </td></tr>
+                    {% endfor %}
+                    </tbody></table>
+            {% endif %}
+        </td>
+        <td>
+            <table><tbody>
+                {% for key, paragraph in content.field_class_item if key|first!='#' %}
+                    {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
+                    {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
+                    <tr><td>
+                            {{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}
+                        </td></tr>
+                {% endfor %}
+                </tbody></table>
+        </td>
+
+    </tr>
+{% endif %}

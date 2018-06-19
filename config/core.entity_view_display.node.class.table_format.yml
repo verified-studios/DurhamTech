@@ -59,6 +59,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_course:
+    type: entity_reference_entity_id
+    weight: 7
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
   field_delivery_method:
     weight: 5
     label: hidden
@@ -94,7 +101,6 @@ content:
     region: content
 hidden:
   addtoany: true
-  field_course: true
   field_end_time: true
   field_meeting_days: true
   field_room: true

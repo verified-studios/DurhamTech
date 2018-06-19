@@ -121,6 +121,20 @@ function durhamtech_preprocess_page(&$variables)
  */
 function durhamtech_preprocess_node(&$variables)
 {
+
+    if ($variables['node']->bundle() == 'program') {
+
+        $courses = $variables['node']->get('field_courses')->getValue();
+        foreach ($courses as $k => $course) {
+            $course_id = $course['target_id'];
+            $term = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($course_id);
+            $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/'.$course_id);
+            $variables['node']->field_courses[$k]->course_name = $term->field_title[0]->value;
+            $variables['node']->field_courses[$k]->course_number = $term->name[0]->value;
+            $variables['node']->field_courses[$k]->course_path = $alias;
+        }
+    }
+
     if ($variables['node']->bundle() == 'quote') {
 
         // Get image field value to get media id.

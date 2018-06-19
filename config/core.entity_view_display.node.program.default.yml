@@ -23,11 +23,13 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_rich_text
     - field.field.node.program.field_statistic
+    - field.field.node.program.field_teaser_layout
     - field.field.node.program.field_total_credit_hours
     - node.type.program
   module:
     - entity_reference_revisions
     - file
+    - options
     - panelizer
     - text
     - user
@@ -197,6 +199,13 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_teaser_layout:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_total_credit_hours:
     weight: 4
