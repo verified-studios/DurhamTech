@@ -65,12 +65,12 @@ process:
     source: Delivery Method
   field_start_date:
     plugin: format_date
-    from_format: n/j/Y
+    from_format: Y-m-d
     to_format: Y-m-d
     source: Start Date
   field_end_date:
     plugin: format_date
-    from_format: n/j/Y
+    from_format: Y-m-d
     to_format: Y-m-d
     source: End Date
   field_building:
