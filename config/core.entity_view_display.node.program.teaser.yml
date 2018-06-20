@@ -100,6 +100,15 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  field_statistic:
+    type: entity_reference_revisions_entity_view
+    weight: 9
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_teaser_layout:
     type: list_default
     weight: 5
@@ -133,5 +142,4 @@ hidden:
   field_program_id: true
   field_program_printable: true
   field_rich_text: true
-  field_statistic: true
   links: true
