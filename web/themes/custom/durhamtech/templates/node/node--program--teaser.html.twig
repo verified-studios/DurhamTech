@@ -65,94 +65,96 @@
  *   in different view modes.
  */
 #}
-{%
-  set classes = [
+{% set classes = [
     node.bundle|clean_class,
     node.isPromoted() ? 'is-promoted',
     node.isSticky() ? 'is-sticky',
     not node.isPublished() ? 'is-unpublished',
     view_mode ? view_mode|clean_class,
     'clearfix',
-  ]
-%}
+] %}
 
-{% set degreeOption = content.field_degree_option.0['#title'] %}
+{% set degreeOption = content.field_degree_option.0['#plain_text'] %}
 
 <article{{ attributes.addClass(classes) }}>
-  <div{{ content_attributes.addClass('content', 'bg-white') }}>
-    {#{ content }#}
-    <div class="row teaser-row">
-      <div class="col-sm-9">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="program-teaser-image-container">
-              <div class="program-teaser-image">
-                  {{ content.field_program_image }}
-              </div>
+    <div{{ content_attributes.addClass('content', 'bg-white') }}>
+        {#{ content }#}
+        <div class="row teaser-row">
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="program-teaser-image-container">
+                            <div class="program-teaser-image">
+                                {{ content.field_program_image }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-9">
+                        <h3 class="program-teaser-title">
+                            <a href="{{ url }}">{{ label }}</a>
+                        </h3>
+                        {#{{ kint(content.field_degree_option) }}#}
+                        {% set description = content.field_description.0['#context'].value|render %}
+                        <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
+
+                        {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
+                        {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
+                        {% set deadline = '' %}
+                        {% if override_app_deadline|render|striptags|trim != '' %}
+                            {% set deadline = override_app_deadline|render|striptags|trim %}
+                        {% else %}
+                            {% set deadline = default_app_deadline|render|striptags|trim %}
+                        {% endif %}
+
+                        {% if degreeOption == 'Continuing Education' %}
+                        {% else %}
+                            <table class="program-teaser-table">
+                                <tr>
+                                    <td>Type <strong>{{ content.field_degree_option }}</strong></td>
+                                    <td>Estimated Cost <strong>${{ content.field_program_cost.0 }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Location <strong>Main Campus</strong></td>
+                                    <td>Average Salary <strong>${{ content.field_program_cost.0 }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Credit Hours <strong>{{ content.field_total_credit_hours.0 }}</strong></td>
+                                    <td>Next Application Date <strong>{{ deadline }}</strong></td>
+                                </tr>
+                            </table>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="col-sm-9">
-            <h3 class="program-teaser-title">
-                <a href="{{ url }}">{{ label }}</a>
-            </h3>
-              {#{{ kint(content.field_degree_option) }}#}
-              {% set description = content.field_description.0['#context'].value|render %}
-            <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
+            <div class="col-sm-3 program-teaser-buttons-container">
+                <div class="program-teaser-buttons">
+                    <div class="row">
 
-            {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
-            {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
-            {% set deadline = '' %}
-            {% if override_app_deadline|render|striptags|trim != '' %}
-                {% set deadline = override_app_deadline|render|striptags|trim %}
-            {% else %}
-                {% set deadline = default_app_deadline|render|striptags|trim %}
-            {% endif %}
+                        {% if degreeOption == 'Continuing Education' %}
+                            <div class="col-sm-12">
+                                <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
+                            </div>
+                            <div class="col-sm-12">
+                                <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
+                            </div>
+                            <div class="col-sm-12">
+                                <a href="{{ url }}" class="btn btn-full btn-outline">Register</a>
+                            </div>
+                        {% else %}
+                            <div class="col-sm-12">
+                                <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
+                            </div>
+                            <div class="col-sm-12">
+                                <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
+                            </div>
+                            <div class="col-sm-12">
+                                <a href="{{ url }}" class="btn btn-full btn-outline">Apply Now</a>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
 
-            {% if degreeOption == 'Continuing Education' %}
-            {% else %}
-              <table class="program-teaser-table">
-                <tr>
-                  <td>Type <strong>{{ content.field_degree_option }}</strong></td>
-                  <td>Next Application Date <strong>{{ deadline }}</strong></td>
-                </tr>
-                <tr>
-                  <td>Online Option</td>
-                  <td>Estimated Cost <strong>{{ content.field_program_cost }}</strong></td>
-                </tr>
-              </table>
-            {% endif %}
-          </div>
         </div>
-      </div>
-      <div class="col-sm-3 program-teaser-buttons-container">
-        <div class="program-teaser-buttons">
-        <div class="row">
-
-          {% if degreeOption == 'Continuing Education' %}
-            <div class="col-sm-12">
-              <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
-            </div>
-            <div class="col-sm-12">
-              <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
-            </div>
-            <div class="col-sm-12">
-              <a href="{{ url }}" class="btn btn-full btn-outline">Register</a>
-            </div>
-          {% else %}
-            <div class="col-sm-12">
-              <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
-            </div>
-            <div class="col-sm-12">
-              <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
-            </div>
-            <div class="col-sm-12">
-              <a href="{{ url }}" class="btn btn-full btn-outline">Apply Now</a>
-            </div>
-          {% endif %}
-        </div>
-        </div>
-      </div>
-
     </div>
-  </div>
 </article>
