@@ -7757,6 +7757,28 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .path-taxonomy footer {
   margin-top: 0; }
 
+.program-teaser-table {
+  margin-bottom: 2rem;
+  margin-top: 3rem; }
+  .program-teaser-table tr,
+  .program-teaser-table td {
+    font-weight: 600;
+    background-color: transparent !important;
+    border: none !important;
+    color: #4c4c4c !important;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding: 0 0 1.5rem; }
+    .program-teaser-table tr strong,
+    .program-teaser-table td strong {
+      text-transform: none;
+      letter-spacing: 0;
+      display: block;
+      color: #000000;
+      font-weight: 700;
+      font-size: 1.65rem;
+      margin-top: 0.25rem; }
+
 #block-exposedformprograms-searchpage-1 {
   margin: 3rem 0; }
 

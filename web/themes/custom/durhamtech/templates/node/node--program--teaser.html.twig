@@ -99,20 +99,25 @@
               {% set description = content.field_description.0['#context'].value|render %}
             <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
 
+            {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
+            {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
+            {% set deadline = '' %}
+            {% if override_app_deadline|render|striptags|trim != '' %}
+                {% set deadline = override_app_deadline|render|striptags|trim %}
+            {% else %}
+                {% set deadline = default_app_deadline|render|striptags|trim %}
+            {% endif %}
+
             {% if degreeOption == 'Continuing Education' %}
             {% else %}
-              <table>
+              <table class="program-teaser-table">
                 <tr>
-                  <td>Certificate {{ content.field_degree_option }}</td>
-                  <td>Average Cost: {{ content.field_program_cost }}</td>
+                  <td>Type <strong>{{ content.field_degree_option }}</strong></td>
+                  <td>Next Application Date <strong>{{ deadline }}</strong></td>
                 </tr>
                 <tr>
                   <td>Online Option</td>
-                  <td>Average Salary Upon Completion: </td>
-                </tr>
-                <tr>
-                  <td>Main Campus</td>
-                  <td>Next Application Date: </td>
+                  <td>Estimated Cost <strong>{{ content.field_program_cost }}</strong></td>
                 </tr>
               </table>
             {% endif %}

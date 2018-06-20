@@ -139,7 +139,8 @@
                     {% endif %}
                 </div>
                 <div class="description">
-                    {{ content.field_description }}
+                    
+                    {{ content.field_description.0['#context'].value|raw  }}
 
                     {% if content.field_rich_text.0 %}
                         <br/>
