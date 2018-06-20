@@ -7875,6 +7875,12 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .view-display-id-page_1 {
   padding-bottom: 5rem; }
 
+#program-ce .required-classes {
+  padding-top: 0;
+  border-top: none; }
+  #program-ce .required-classes h3 {
+    margin-top: 0; }
+
 .page-node-type-event .page-title {
   margin-bottom: 30px; }
 

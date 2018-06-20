@@ -352,3 +352,13 @@
 .view-display-id-page_1 {
   padding-bottom: 5rem;
 }
+
+#program-ce {
+  .required-classes {
+    padding-top: 0;
+    border-top: none;
+    h3 {
+      margin-top: 0;
+    }
+  }
+}

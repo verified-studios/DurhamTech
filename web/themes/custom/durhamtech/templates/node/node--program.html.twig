@@ -105,7 +105,15 @@
     {% set program_stats_row_class = 'col-sm-3' %}
 {% endif %}
 
-<article{{ attributes.addClass(classes) }}>
+
+
+{% if degreeOption == 'Continuing Education' %}
+    {% set programType = 'program-ce' %}
+{% else %}
+    {% set programType = 'program' %}
+{% endif %}
+
+<article{{ attributes.addClass(classes) }} id="{{ programType }}">
 
     {{ title_prefix }}
     {% if not page %}
