@@ -395,6 +395,9 @@ display:
         options: {  }
       path: taxonomy/term/%
       display_extenders: {  }
+      css_class: course-programs
+      defaults:
+        css_class: false
     cache_metadata:
       contexts:
         - 'languages:language_interface'

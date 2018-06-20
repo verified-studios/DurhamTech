@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
     - field.field.node.program.field_financial_aid_eligible
+    - field.field.node.program.field_learn_category
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
     - field.field.node.program.field_min_required_inst_gpa
@@ -23,10 +24,12 @@ dependencies:
     - field.field.node.program.field_program_type
     - field.field.node.program.field_rich_text
     - field.field.node.program.field_statistic
+    - field.field.node.program.field_teaser_layout
     - field.field.node.program.field_total_credit_hours
     - node.type.program
   module:
     - entity_reference_revisions
+    - options
     - panelizer
     - user
 third_party_settings:
@@ -40,6 +43,14 @@ targetEntityType: node
 bundle: program
 mode: teaser
 content:
+  field_degree_option:
+    type: entity_reference_label
+    weight: 9
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   field_description:
     type: basic_string
     weight: 2
@@ -73,6 +84,13 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  field_teaser_layout:
+    type: list_default
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_total_credit_hours:
     type: string
     weight: 4
@@ -89,8 +107,8 @@ hidden:
   field_continuing_education_cat: true
   field_courses: true
   field_cred_type: true
-  field_degree_option: true
   field_financial_aid_eligible: true
+  field_learn_category: true
   field_licensure_pass_rate: true
   field_min_required_credits: true
   field_min_required_inst: true

@@ -75,6 +75,9 @@
     'clearfix',
   ]
 %}
+
+{% set degreeOption = content.field_degree_option.0['#title'] %}
+
 <article{{ attributes.addClass(classes) }}>
   <div{{ content_attributes.addClass('content', 'bg-white') }}>
     {#{ content }#}
@@ -95,46 +98,56 @@
               {#{{ kint(content.field_degree_option) }}#}
               {% set description = content.field_description.0['#context'].value|render %}
             <p>{{ description|length > 200 ? description|slice(0, 260) ~ '...' : description }}</p>
-            <table>
-              <tr>
-                <td>Certificate {{ content.field_degree_option }}</td>
-                <td>Average Cost: {{ content.field_program_cost }}</td>
-              </tr>
-              <tr>
-                <td>Online Option</td>
-                <td>Average Salary Upon Completion: </td>
-              </tr>
-              <tr>
-                <td>Main Campus</td>
-                <td>Next Application Date: </td>
-              </tr>
-            </table>
+
+            {% if degreeOption == 'Continuing Education' %}
+            {% else %}
+              <table>
+                <tr>
+                  <td>Certificate {{ content.field_degree_option }}</td>
+                  <td>Average Cost: {{ content.field_program_cost }}</td>
+                </tr>
+                <tr>
+                  <td>Online Option</td>
+                  <td>Average Salary Upon Completion: </td>
+                </tr>
+                <tr>
+                  <td>Main Campus</td>
+                  <td>Next Application Date: </td>
+                </tr>
+              </table>
+            {% endif %}
           </div>
         </div>
       </div>
       <div class="col-sm-3 program-teaser-buttons-container">
         <div class="program-teaser-buttons">
         <div class="row">
-          <div class="col-sm-12">
-            <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
-          </div>
-          <div class="col-sm-12">
-            <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
-          </div>
-          <div class="col-sm-12">
-            <a href="{{ url }}" class="btn btn-full btn-outline">Apply Now</a>
-          </div>
+
+          {% if degreeOption == 'Continuing Education' %}
+            <div class="col-sm-12">
+              <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
+            </div>
+            <div class="col-sm-12">
+              <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
+            </div>
+            <div class="col-sm-12">
+              <a href="{{ url }}" class="btn btn-full btn-outline">Register</a>
+            </div>
+          {% else %}
+            <div class="col-sm-12">
+              <a href="{{ url }}" class="btn btn-full btn-primary">Learn More</a>
+            </div>
+            <div class="col-sm-12">
+              <a href="{{ url }}" class="btn btn-full btn-outline">Talk to an Advisor</a>
+            </div>
+            <div class="col-sm-12">
+              <a href="{{ url }}" class="btn btn-full btn-outline">Apply Now</a>
+            </div>
+          {% endif %}
         </div>
         </div>
       </div>
 
-        {#% if content.field_program_type.0 %}
-          <div class="type">Type: {{ content.field_program_type.0 }}</div>
-        {% endif %}
-        {% if content.field_program_stats.0 %}
-          <div class="format">Format: {{ content.field_format.0 }}</div>
-        {% endif %}
-        {{ content.field_program_stats }#}
     </div>
   </div>
 </article>

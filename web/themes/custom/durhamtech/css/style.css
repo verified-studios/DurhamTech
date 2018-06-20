@@ -7747,6 +7747,13 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .path-continuing-education footer {
   margin-top: 0; }
 
+.path-taxonomy .main-container--ce {
+  background-color: #edeeef;
+  padding-bottom: 6rem; }
+
+.path-taxonomy footer {
+  margin-top: 0; }
+
 #block-exposedformprograms-searchpage-1 {
   margin: 3rem 0; }
 
