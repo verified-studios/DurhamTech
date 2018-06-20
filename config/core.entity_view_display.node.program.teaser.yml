@@ -45,11 +45,11 @@ mode: teaser
 content:
   field_degree_option:
     type: entity_reference_label
-    weight: 9
+    weight: 6
     region: content
     label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_description:
     type: basic_string
@@ -57,6 +57,22 @@ content:
     region: content
     label: hidden
     settings: {  }
+    third_party_settings: {  }
+  field_program_app_deadline:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_program_cost:
+    type: string
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
   field_program_image:
     type: entity_reference_entity_view
@@ -113,8 +129,6 @@ hidden:
   field_min_required_credits: true
   field_min_required_inst: true
   field_min_required_inst_gpa: true
-  field_program_app_deadline: true
-  field_program_cost: true
   field_program_department: true
   field_program_id: true
   field_program_printable: true
