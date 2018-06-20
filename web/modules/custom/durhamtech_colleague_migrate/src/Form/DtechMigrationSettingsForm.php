@@ -164,7 +164,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
     foreach ($data as $key => $row) {
       $operations[$key] = [
         'runCoursesBatch',
-        [implode(',', $row), $uri],
+        [count($data) === 1 ? $row : implode(',', $row), $uri],
       ];
     }
     $batch = array(
@@ -192,7 +192,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
     foreach ($data as $key => $row) {
       $operations[$key] = [
         'runClassBatch',
-        [implode(',', $row), $uri],
+        [count($data) === 1 ? $row : implode(',', $row), $uri],
       ];
     }
     $batch = array(
@@ -220,7 +220,7 @@ class DtechMigrationSettingsForm extends ConfigFormBase {
     foreach ($data as $key => $row) {
       $operations[$key] = [
         'runProgramsBatch',
-        [implode(',', $row), $uri],
+        [count($data) === 1 ? $row : implode(',', $row), $uri],
       ];
     }
     $batch = array(
