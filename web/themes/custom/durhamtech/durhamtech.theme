@@ -129,9 +129,11 @@ function durhamtech_preprocess_node(&$variables)
             $course_id = $course['target_id'];
             $term = Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($course_id);
             $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/'.$course_id);
-            $variables['node']->field_courses[$k]->course_name = $term->field_title[0]->value;
-            $variables['node']->field_courses[$k]->course_number = $term->name[0]->value;
-            $variables['node']->field_courses[$k]->course_path = $alias;
+            if (isset($term->field_title[0]->value)) {
+                $variables['node']->field_courses[$k]->course_name = $term->field_title[0]->value;
+                $variables['node']->field_courses[$k]->course_number = $term->name[0]->value;
+                $variables['node']->field_courses[$k]->course_path = $alias;
+            }
         }
 
         foreach ($variables['node']->field_statistic as $k => $stat) {
@@ -143,6 +145,11 @@ function durhamtech_preprocess_node(&$variables)
             if ($paragraphHeader == 'Credit Hours') {
                 $variables['content']['credit_hours'] = $paragraph->field_data[0]->value;
             }
+        }
+
+        foreach ($variables['node']->field_program_stats as $k => $stat) {
+            $paragraph = \Drupal\paragraphs\Entity\Paragraph::load( $stat->target_id );
+            $paragraphHeader = $paragraph->field_header[0]->value;
             if ($paragraphHeader == 'Estimated Completion Time') {
                 $variables['content']['estimated_completion_time'] = $paragraph->field_data[0]->value;
             }
