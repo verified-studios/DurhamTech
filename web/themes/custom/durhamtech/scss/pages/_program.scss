@@ -310,6 +310,12 @@
         font-size: 1.25rem;
         color: $black;
       }
+      select,
+      input {
+        font-weight: 600;
+        font-family: $open-sans;
+        color: $black;
+      }
     }
 
     .form-item-search-api-fulltext {
@@ -323,14 +329,22 @@
       width: 500px;
       max-width: 80%;
     }
-    #edit-submit-programs-search {
-      font-size: 2rem;
+    #edit-submit-programs-search,
+    #edit-reset {
+      font-size: 1.5rem;
       padding: 1rem 2rem;
+      min-width: 150px;
+      border: none;
 
       .glyphicon {
         opacity: 0.5;
         margin-right: 1rem;
       }
+    }
+
+    #edit-reset {
+      min-width: 100px;
+      background-color: $dark-gray;
     }
   }
 }
@@ -402,5 +416,32 @@
     h3 {
       margin-top: 0;
     }
+  }
+}
+
+.durhamtech-noresults,
+.durhamtech-results {
+  display: block;
+  text-align: center;
+  padding: 5rem;
+  font-size: 2rem;
+  font-weight: 600;
+
+  em {
+    font-style: normal;
+  }
+
+  &.durhamtech-results-1 em {
+    display: none !important;
+  }
+}
+
+.pager-nav {
+  margin-top: 3rem;
+}
+
+.view-footer {
+  .durhamtech-results {
+    padding: 2rem 5rem;
   }
 }

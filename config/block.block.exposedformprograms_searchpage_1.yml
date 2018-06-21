@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /academic-programs
+    pages: "/academic-programs\r\n/academic-programs?field_degree_option=All&field_learn_category=All&search_api_fulltext="
     negate: false
     context_mapping: {  }

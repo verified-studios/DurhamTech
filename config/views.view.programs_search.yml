@@ -41,7 +41,7 @@ display:
         type: bef
         options:
           submit_button: Search
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -53,7 +53,7 @@ display:
             general:
               allow_secondary: false
               secondary_label: 'Advanced options'
-              autosubmit: true
+              autosubmit: false
               autosubmit_hide: false
             field_degree_option:
               bef_format: default
@@ -371,6 +371,10 @@ display:
         filters: false
         filter_groups: false
         pager: false
+        use_ajax: false
+        empty: false
+        header: false
+        footer: false
       filters:
         field_degree_option:
           id: field_degree_option
@@ -470,7 +474,7 @@ display:
           group_type: group
           admin_label: ''
           operator: and
-          value: 'Associate in Art'
+          value: ''
           group: 1
           exposed: true
           expose:
@@ -508,15 +512,17 @@ display:
         groups:
           1: AND
       pager:
-        type: mini
+        type: full
         options:
-          items_per_page: 10
+          items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
           tags:
-            previous: ‹‹
-            next: ››
+            previous: '‹‹ Previous'
+            next: 'Next ››'
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -525,6 +531,44 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          quantity: 5
+      use_ajax: false
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<span class="durhamtech-noresults">No programs were found matching your search criteria. Please refine the search parameters.</span>'
+            format: basic_html
+          plugin_id: text
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="durhamtech-results durhamtech-results-@total">We found @total program<em>s</em> matching your search criteria.</span>'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="durhamtech-results durhamtech-results-@total">Showing @start - @end of @total program<em>s</em> matching your search criteria.</span>'
+          plugin_id: result
     cache_metadata:
       max-age: -1
       contexts:

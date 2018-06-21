@@ -7844,6 +7844,11 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       letter-spacing: 0.03em;
       font-size: 1.25rem;
       color: #000000; }
+    #views-exposed-form-programs-search-page-1 .form--inline .form-item select,
+    #views-exposed-form-programs-search-page-1 .form--inline .form-item input {
+      font-weight: 600;
+      font-family: "Open Sans", sans-serif;
+      color: #000000; }
   #views-exposed-form-programs-search-page-1 .form--inline .form-item-search-api-fulltext {
     background-color: #CED2D5;
     padding: 2rem 3rem;
@@ -7852,12 +7857,19 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext {
     width: 500px;
     max-width: 80%; }
-  #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search {
-    font-size: 2rem;
-    padding: 1rem 2rem; }
-    #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search .glyphicon {
+  #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search,
+  #views-exposed-form-programs-search-page-1 .form--inline #edit-reset {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    min-width: 150px;
+    border: none; }
+    #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search .glyphicon,
+    #views-exposed-form-programs-search-page-1 .form--inline #edit-reset .glyphicon {
       opacity: 0.5;
       margin-right: 1rem; }
+  #views-exposed-form-programs-search-page-1 .form--inline #edit-reset {
+    min-width: 100px;
+    background-color: #4c4c4c; }
 
 #block-views-block-program-search-by-category-block-1 {
   margin-bottom: 2rem; }
@@ -7912,6 +7924,26 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   border-top: none; }
   #program-ce .required-classes h3 {
     margin-top: 0; }
+
+.durhamtech-noresults,
+.durhamtech-results {
+  display: block;
+  text-align: center;
+  padding: 5rem;
+  font-size: 2rem;
+  font-weight: 600; }
+  .durhamtech-noresults em,
+  .durhamtech-results em {
+    font-style: normal; }
+  .durhamtech-noresults.durhamtech-results-1 em,
+  .durhamtech-results.durhamtech-results-1 em {
+    display: none !important; }
+
+.pager-nav {
+  margin-top: 3rem; }
+
+.view-footer .durhamtech-results {
+  padding: 2rem 5rem; }
 
 .page-node-type-event .page-title {
   margin-bottom: 30px; }
