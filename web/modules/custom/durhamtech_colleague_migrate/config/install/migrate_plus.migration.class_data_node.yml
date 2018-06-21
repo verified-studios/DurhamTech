@@ -74,74 +74,79 @@ process:
     to_format: Y-m-d
     source: End Date
   field_building:
-    plugin: static_map
-    source: Building
-    map:
-      MC01: White (Building 1)
-      MC02: Collins (Building 2)
-      MC03: Phillips (Building 3)
-      MC04: Newton (Building 4)
-      MC05: ERC (Building 5)
-      MC06: CEC (Building 6)
-      MC07: Facility Services (Building 7)
-      MC08: Building 8
-      MC09: Building 9
-      MC10: Wynn (Building 10)
-      MC20: Bacon (Building 20)
-      OC01: OCC
-      ND01: NDC
-      OL: Online
-      CLIN: Clinical
-      TBA: TBA
-      SOUT: SOUT
-      OCSD: OCSD
-      AUGC: AUGC
-      BAH: BAH
-      CFD: CFD
-      CFLR: CFLR
-      CJRC: CJRC
-      CLIN: CLIN
-      CREE: CREE
-      DADM: DADM
-      DCAO: DCAO
-      DCCR: DCCR
-      DDFS: DDFS
-      DECI: DECI
-      DLOD: DLOD
-      DRES: DRES
-      ECH: ECH
-      ECHC: ECHC
-      EFLA: EFLA
-      FWRK: FWRK
-      HDSS: HDSS
-      HILL: HILL
-      HOLD: HOLD
-      IC: IC
-      MERC: MERC
-      MTOL: RTP
-      NDC: NDC
-      NDC2: NDC2
-      OCC: OCC
-      OCC1: OCC1
-      OCCC: OCCC
-      OCSD: OCSDC
-      ORGG: ORGG
-      PGDS: PGDS
-      R66: R66
-      SORS: SORS
-      SOUT: SBB
-      TROS: TROS
-      UMC: UMC
-      WCRS: WCRS
-      COC: COC
-      DPD: DPD
-      ECH: ECH
-      EFLA: EFLA
-      HDSS: HDSS
-      ROTA: Rotation
-      CHUR: CHUR
-      ORRU: ORRU
-      SMT: SMT
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Building
+    -
+      plugin: static_map
+      source: Building
+      map:
+        MC01: White (Building 1)
+        MC02: Collins (Building 2)
+        MC03: Phillips (Building 3)
+        MC04: Newton (Building 4)
+        MC05: ERC (Building 5)
+        MC06: CEC (Building 6)
+        MC07: Facility Services (Building 7)
+        MC08: Building 8
+        MC09: Building 9
+        MC10: Wynn (Building 10)
+        MC20: Bacon (Building 20)
+        OC01: OCC
+        ND01: NDC
+        OL: Online
+        CLIN: Clinical
+        TBA: TBA
+        OCSD: OCSD
+        AUGC: AUGC
+        BAH: BAH
+        CFD: CFD
+        CFLR: CFLR
+        CJRC: CJRC
+        CREE: CREE
+        DADM: DADM
+        DCAO: DCAO
+        DCCR: DCCR
+        DDFS: DDFS
+        DECI: DECI
+        DLOD: DLOD
+        DRES: DRES
+        ECH: ECH
+        ECHC: ECHC
+        EFLA: EFLA
+        FWRK: FWRK
+        HDSS: HDSS
+        HILL: HILL
+        HOLD: HOLD
+        IC: IC
+        MERC: MERC
+        MTOL: RTP
+        NDC: NDC
+        NDC2: NDC2
+        OCC: OCC
+        OCC1: OCC1
+        OCCC: OCCC
+        OCSD: OCSDC
+        ORGG: ORGG
+        PGDS: PGDS
+        R66: R66
+        SORS: SORS
+        SOUT: SBB
+        TROS: TROS
+        UMC: UMC
+        WCRS: WCRS
+        COC: COC
+        DPD: DPD
+        EFLA: EFLA
+        HDSS: HDSS
+        ROTA: Rotation
+        CHUR: CHUR
+        ORRU: ORRU
+        SMT: SMT
+        DSN: DSN
+        DUFM: DUFM
+        UBC: UBC
   field_location:
     -
       plugin: callback
