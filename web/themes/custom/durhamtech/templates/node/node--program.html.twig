@@ -175,6 +175,7 @@
 
                 </div>
             </div>
+
             {% if stats_count > 0 %}
                 <div class="row stats-row">
                     {% if content.field_program_cost.0 %}
@@ -204,20 +205,23 @@
             {% set required_classes = drupal_view('required_classes', 'required_classes') %}
         {% endif %}
 
+
+        {% if content.field_program_printable.0 %}
+            <section style="background-color: #f2f2f2; padding: 5rem">
+                <div class="plan-of-study text-center">
+                    {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
+                    <a href="{{ file_url(printable_uri) }}" class="btn btn-2x" target="_blank"><i class="far fa-file-pdf"></i> &nbsp; Download Plan of
+                        Study <span class="ext" aria-label="(link opens in new window)"></span></a>
+                </div>
+            </section>
+        {% endif %}
+
         {% if required_classes|render|striptags|trim != '' %}
             <section class="container required-classes">
 
                 {% if degreeOption == 'Continuing Education' %}
                 {% else %}
                     <h3 class="section-title">Required <span class="green">Courses</span></h3>
-                {% endif %}
-
-                {% if content.field_program_printable.0 %}
-                    <div class="plan-of-study">
-                        {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
-                        <a href="{{ file_url(printable_uri) }}" target="_blank"><i class="far fa-file-pdf"></i> Plan of
-                            Study <span class="ext" aria-label="(link opens in new window)"></span></a>
-                    </div>
                 {% endif %}
 
                 {% if degreeOption == 'Continuing Education' %}

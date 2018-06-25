@@ -47,10 +47,10 @@ process:
       source: Delivery Method
       map:
         HY: Hybrid
-        TR: In Class
+        TR: Classroom
         IN: Online
-        DL: DL
-        CP: CP
+        DL: Online
+        CP: Classroom
     -
       plugin: entity_generate
       entity_type: taxonomy_term
