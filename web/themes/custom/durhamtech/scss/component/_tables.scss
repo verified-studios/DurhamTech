@@ -1,8 +1,12 @@
 table {
   width: 100%;
+  border-left: 1px solid darken($offwhite, 5);
+  border-right: 1px solid darken($offwhite, 5);
+  border-bottom: 1px solid darken($offwhite, 5);
+  box-shadow: 5px 5px 15px rgba($gray, 0.08);
 
   th, td {
-    padding: 1.25rem;
+    padding: 1.5rem;
     vertical-align: top;
 
     &:first-of-type {
@@ -12,19 +16,19 @@ table {
 
   th {
     background-color: $green;
-    border-left: 2px solid darken($green, 5);
+    border-left: 1px solid darken($green, 5);
     color: $white;
     font-weight: 600;
   }
 
   tr {
     &:nth-of-type(2n) {
-      background-color: $offwhite;
+      background-color: lighten($offwhite, 1);
     }
 
     td {
       color: $gray;
-      border-left: 2px solid darken($offwhite, 5);
+      border-left: 1px solid darken($offwhite, 5);
     }
   }
   // nested table

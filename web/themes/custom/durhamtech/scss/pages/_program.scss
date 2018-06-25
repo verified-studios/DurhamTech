@@ -148,7 +148,8 @@
 }
 
 .path-academic-programs,
-.path-continuing-education {
+.path-continuing-education,
+.path-courses {
   .main-container {
     background-color: $offwhite;
   }
@@ -160,6 +161,11 @@
 
 
 .path-continuing-education  .main-container {
+  padding-top: 6rem;
+}
+
+
+.path-courses .main-container {
   padding-top: 6rem;
 }
 
@@ -297,7 +303,8 @@
   }
 }
 
-#views-exposed-form-programs-search-page-1 {
+#views-exposed-form-programs-search-page-1,
+#views-exposed-form-courses-search-page-1{
   .form--inline {
     text-align: center;
     .form-item {
