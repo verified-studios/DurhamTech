@@ -11,6 +11,7 @@ dependencies:
     - field.storage.taxonomy_term.field_seats
     - field.storage.taxonomy_term.field_title
     - search_api.index.courses_index
+    - system.menu.secondary-menu
     - taxonomy.vocabulary.class_format
   module:
     - better_exposed_filters
@@ -18,7 +19,7 @@ dependencies:
     - entity_reference_revisions
     - search_api
 id: courses_search
-label: 'Courses Search'
+label: Courses
 module: views
 description: ''
 tag: ''
@@ -91,7 +92,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 25
+          items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
@@ -108,7 +109,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 5
       style:
         type: table
       row:
@@ -307,7 +308,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: true
+            link_to_entity: false
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -377,7 +378,7 @@ display:
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -392,6 +393,7 @@ display:
           fallback_handler: search_api
           fallback_options:
             link_to_item: false
+            use_highlighting: false
             multi_type: separator
             multi_separator: ', '
           plugin_id: search_api_field
@@ -938,10 +940,43 @@ display:
               3: {  }
           plugin_id: search_api_date
       sorts: {  }
-      title: 'Courses Search'
-      header: {  }
-      footer: {  }
-      empty: {  }
+      title: Courses
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="durhamtech-results durhamtech-results-@total">We found @total course<em>s</em> matching your search criteria.</span>'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="durhamtech-results durhamtech-results-@total">Showing @start - @end of @total course<em>s</em> matching your search criteria.</span>'
+          plugin_id: result
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<span class="durhamtech-noresults">No courses were found matching your search criteria. Please refine the search parameters.</span>'
+            format: basic_html
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
@@ -962,13 +997,24 @@ display:
         - 'config:field.storage.taxonomy_term.field_credits'
         - 'config:field.storage.taxonomy_term.field_seats'
         - 'config:field.storage.taxonomy_term.field_title'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 1
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 2
     display_options:
       display_extenders: {  }
+      path: courses
+      exposed_block: true
+      menu:
+        type: normal
+        title: Courses
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -47
+        context: '0'
+        menu_name: secondary-menu
     cache_metadata:
       max-age: -1
       contexts:

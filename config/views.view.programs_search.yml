@@ -348,6 +348,7 @@ display:
           text_input_required_format: basic_html
       defaults:
         exposed_form: false
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

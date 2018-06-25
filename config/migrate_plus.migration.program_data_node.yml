@@ -1,4 +1,4 @@
-uuid: 0d265060-39d6-4e60-a7a3-f5ff6e0202fe
+uuid: f993a3dc-f359-4607-a33e-7a4c6780ad25
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     module:
       - durhamtech_colleague_migrate
 _core:
-  default_config_hash: sCK4vIe07j8xm5cq1t17gQeVBy9xBFlpow95rhT3kek
+  default_config_hash: ys47leZfwUC84mvoDiY3JzwseUSMaktmmYhO0C60_5Q
 id: program_data_node
 migration_tags:
   - classes
@@ -25,10 +25,10 @@ source:
     Description_BR: 'Description of program.'
     'Program Types': 'Type of program.'
     'Academic Level': 'Academic Level of the program.'
-    'Minimum Required Credits': 'Minimum Required Credits.'
-    'Minimum Required Institutional Credits': 'Minimum Required Institutional Credits.'
-    'Minimum Required Institutional GPA': 'Minimum Required Institutional GPA.'
-    'Program Outline 2': 'Course Outline.'
+    'Min Required Credits': 'Minimum Required Credits.'
+    'Min Required Institutional Credits': 'Minimum Required Institutional Credits.'
+    'Min Required Institutional GPA': 'Minimum Required Institutional GPA.'
+    'Required Courses': 'Course Outline.'
     'Cred Type': 'Cred Type.'
   constants:
     bool_0: 0
@@ -51,24 +51,29 @@ process:
       process:
         target_id: '0'
   field_program_id: 'Program ID'
-  field_min_required_credits: 'Minimum Required Credits'
-  field_min_required_inst: 'Minimum Required Institutional Credits'
-  field_min_required_inst_gpa: 'Minimum Required Institutional GPA'
+  field_min_required_credits: 'Min Required Credits'
+  field_min_required_inst: 'Min Required Institutional Credits'
+  field_min_required_inst_gpa: 'Min Required Institutional GPA'
   field_courses:
     -
       plugin: durhamtech_course_outline
-      source: 'Program Outline 2'
+      source: 'Required Courses'
     -
       plugin: iterator
       process:
         target_id: '0'
   field_cred_type:
-    plugin: entity_generate
-    entity_type: taxonomy_term
-    bundle_key: vid
-    bundle: 'Cred Type'
-    value_key: name
-    source: 'Cred Type'
+    -
+      plugin: skip_on_empty
+      method: process
+      source: 'Cred Type'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: 'Cred Type'
+      value_key: name
+      source: 'Cred Type'
 destination:
   plugin: 'entity:node'
   default_bundle: program
