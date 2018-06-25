@@ -19,7 +19,7 @@ dependencies:
     - entity_reference_revisions
     - search_api
 id: courses_search
-label: Courses
+label: Courses View
 module: views
 description: ''
 tag: ''
