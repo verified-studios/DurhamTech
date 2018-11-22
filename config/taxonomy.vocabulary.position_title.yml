@@ -1,0 +1,9 @@
+uuid: 8915cb48-ef5b-4e01-a0ad-d66a0e30d9cd
+langcode: en
+status: true
+dependencies: {  }
+name: Position/Title
+vid: position_title
+description: 'Identification of roles for people working at Durham Tech. Hierarchal structure'
+hierarchy: 0
+weight: 0

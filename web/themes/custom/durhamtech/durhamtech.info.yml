@@ -1,0 +1,29 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Durham Tech'
+description: 'Custom theme for Durham Tech using bootstrap'
+package: 'Bootstrap'
+
+regions:
+  alerts: 'Alerts'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  secondary_nav: 'Secondary Nav'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  above_content: 'Above Content'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  footer_bottom: 'Footer Bottom 1'
+  footer_bottom_2: 'Footer Bottom 2'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'durhamtech/global-styling'
+  - 'durhamtech/bootstrap-scripts'

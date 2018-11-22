@@ -1,0 +1,8 @@
+uuid: f8a240fa-a873-41fb-a604-67c6ad9373fa
+langcode: en
+status: true
+dependencies: {  }
+id: clinical-trials-research-as
+label: 'Clinical Trials Research Associate'
+description: 'menu for additional CTRA pages'
+locked: false

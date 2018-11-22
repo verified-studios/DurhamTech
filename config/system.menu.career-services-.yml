@@ -1,0 +1,8 @@
+uuid: 7c857c20-8719-4aba-81a1-2fcf5afad52e
+langcode: en
+status: true
+dependencies: {  }
+id: career-services-
+label: 'Career Services '
+description: 'Links for Career Services '
+locked: false

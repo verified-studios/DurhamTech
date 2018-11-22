@@ -1,0 +1,23 @@
+uuid: 82f115a6-010f-4780-8593-51a791c63500
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_alignment
+    - paragraphs.paragraphs_type.image_and_text
+  module:
+    - options
+id: paragraph.image_and_text.field_image_alignment
+field_name: field_image_alignment
+entity_type: paragraph
+bundle: image_and_text
+label: 'Image Alignment'
+description: 'Whether the image should be on the left or right of the accompanying text. For mobile, image and text will be stacked (Left will stack image on top, Right will stack image on bottom).'
+required: true
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

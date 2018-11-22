@@ -1,0 +1,6 @@
+durhamtech_colleague_migrate.manage:
+  path: '/admin/structure/migrate/manage'
+  defaults:
+    _form: '\Drupal\durhamtech_colleague_migrate\Form\DtechMigrationManageForm'
+  requirements:
+    _permission: 'administer migrations'

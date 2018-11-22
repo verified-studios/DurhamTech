@@ -1,0 +1,23 @@
+uuid: 82cd913b-6162-4905-90b2-ce2d9f213d28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_percentage
+    - paragraphs.paragraphs_type.statistic_infographic
+id: paragraph.statistic_infographic.field_percentage
+field_name: field_percentage
+entity_type: paragraph
+bundle: statistic_infographic
+label: Percentage
+description: 'Percentage number for infographic.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: 100
+  prefix: ''
+  suffix: ''
+field_type: integer

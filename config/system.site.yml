@@ -1,0 +1,14 @@
+uuid: fad15746-2ac1-4958-bbeb-b236aaee8086
+name: 'Durham Technical Community College'
+mail: mathew@verifiedstudios.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1456
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

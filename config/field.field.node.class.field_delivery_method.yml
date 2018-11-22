@@ -1,0 +1,29 @@
+uuid: 7f890860-37c0-4f79-a3cb-f34f83066494
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_delivery_method
+    - node.type.class
+    - taxonomy.vocabulary.class_format
+id: node.class.field_delivery_method
+field_name: field_delivery_method
+entity_type: node
+bundle: class
+label: 'Delivery Method'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      class_format: class_format
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

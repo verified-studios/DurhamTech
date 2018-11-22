@@ -1,0 +1,8 @@
+uuid: 7afa8b2b-f854-4e33-963d-f05de11c6e1e
+langcode: en
+status: true
+dependencies: {  }
+id: phi-beta-lambda-menu-
+label: 'Phi Beta Lambda menu '
+description: 'For Student Life '
+locked: false

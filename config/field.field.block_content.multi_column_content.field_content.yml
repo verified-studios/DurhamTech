@@ -1,0 +1,21 @@
+uuid: d043863f-faaf-4aed-8ec7-e8a45496dc45
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multi_column_content
+    - field.storage.block_content.field_content
+  module:
+    - text
+id: block_content.multi_column_content.field_content
+field_name: field_content
+entity_type: block_content
+bundle: multi_column_content
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

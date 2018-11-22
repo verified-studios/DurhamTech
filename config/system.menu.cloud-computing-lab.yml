@@ -1,0 +1,8 @@
+uuid: a8daac02-f752-4086-8a29-26d6da1f1057
+langcode: en
+status: true
+dependencies: {  }
+id: cloud-computing-lab
+label: 'Cloud Computing Lab'
+description: ''
+locked: false

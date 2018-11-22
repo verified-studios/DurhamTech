@@ -1,0 +1,8 @@
+uuid: 9af45a73-5065-4237-824c-e1f77faf8d9e
+langcode: en
+status: true
+dependencies: {  }
+id: academic-excellence-awards
+label: 'Academic Excellence Awards'
+description: 'menu for Academic Excellence Awards'
+locked: false

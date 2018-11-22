@@ -1,0 +1,11 @@
+name: Durham Tech Social Media Block
+description: 'Renders Block With Social Media Integration for Durham Tech'
+package: 'Durham Tech'
+
+dependencies:
+- node
+- block
+- slick
+
+type: module
+core: 8.x

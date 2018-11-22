@@ -1,0 +1,8 @@
+uuid: e0194b69-d348-43e9-b453-c2bd7aa699cf
+langcode: en
+status: true
+dependencies: {  }
+id: academic-advising
+label: 'Academic Advising'
+description: 'Academic Advising menu'
+locked: false

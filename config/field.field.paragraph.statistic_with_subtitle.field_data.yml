@@ -1,0 +1,19 @@
+uuid: bb61fa27-6343-433f-9e4d-0fb462656a52
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_data
+    - paragraphs.paragraphs_type.statistic_with_subtitle
+id: paragraph.statistic_with_subtitle.field_data
+field_name: field_data
+entity_type: paragraph
+bundle: statistic_with_subtitle
+label: Data
+description: 'Data relating to the statistic.'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

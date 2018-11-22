@@ -1,0 +1,9 @@
+uuid: 5663aa2d-cf38-43ae-992e-46010bad446d
+langcode: en
+status: true
+dependencies: {  }
+name: Tabs
+vid: tabs
+description: 'for the Apply Now page'
+hierarchy: 1
+weight: 0

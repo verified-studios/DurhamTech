@@ -1,0 +1,8 @@
+uuid: 0d065829-c5df-4e7d-9316-37e411360f88
+langcode: en
+status: true
+dependencies: {  }
+id: admissions-and-enrollment
+label: 'Admissions and Enrollment'
+description: 'Used on Earn a degree, diploma, or certificate page'
+locked: false

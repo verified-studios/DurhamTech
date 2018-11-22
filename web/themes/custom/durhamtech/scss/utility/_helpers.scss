@@ -1,0 +1,70 @@
+@each $key, $color in $colors {
+  .bg-#{$key} {
+    background-color: $color;
+  }
+
+  .#{$key} {
+    color: $color;
+  }
+}
+
+@for $i from 1 through 10 {
+  .margin-#{$i * 5} {
+    margin: #{$i * 5}px;
+  }
+  .margin-lr-#{$i * 5} {
+    margin-left: #{$i * 5}px;
+    margin-right: #{$i * 5}px;
+  }
+
+  .margin-tb-#{$i * 5} {
+    margin-top: #{$i * 5}px;
+    margin-bottom: #{$i * 5}px;
+  }
+
+  .padding-#{$i * 5} {
+    padding: #{$i * 5}px;
+  }
+  .padding-lr-#{$i * 5} {
+    padding-left: #{$i * 5}px;
+    padding-right: #{$i * 5}px;
+  }
+
+  .padding-tb-#{$i * 5} {
+    padding-top: #{$i * 5}px;
+    padding-bottom: #{$i * 5}px;
+  }
+}
+
+// Border helper classes
+$border-color: $black;
+
+.bordered {
+  border: 1px solid $border-color;
+}
+
+.bordered-lr {
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+}
+
+.bordered-left {
+  border-left: 1px solid $border-color;
+}
+
+.bordered-right {
+  border-right: 1px solid $border-color;
+}
+
+.bordered-tb {
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $black;
+}
+
+.bordered-bottom {
+  border-bottom: 1px solid $border-color;
+}
+
+.bordered-top {
+  border-top: 1px solid $border-color;
+}

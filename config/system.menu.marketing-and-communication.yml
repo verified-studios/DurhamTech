@@ -1,0 +1,8 @@
+uuid: fd1b59a4-beed-4c28-bf26-29164c6c9e13
+langcode: en
+status: true
+dependencies: {  }
+id: marketing-and-communication
+label: 'Marketing and Communications'
+description: 'Marketing and Communications menu'
+locked: false

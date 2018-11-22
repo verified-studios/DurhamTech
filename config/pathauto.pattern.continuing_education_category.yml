@@ -1,0 +1,23 @@
+uuid: cdddcbd0-ff08-4d3b-b81d-be3f04a66468
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: continuing_education_category
+label: 'Continuing education category'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'continuing-education/[term:name]'
+selection_criteria:
+  eff83e57-2127-42e6-a096-21b32f7cf115:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      continuing_education_category: continuing_education_category
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: eff83e57-2127-42e6-a096-21b32f7cf115
+selection_logic: and
+weight: -5
+relationships: {  }

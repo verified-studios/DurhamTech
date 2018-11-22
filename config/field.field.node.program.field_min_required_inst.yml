@@ -1,0 +1,19 @@
+uuid: 99eb4f32-edda-4da6-bc13-b04deb2cde4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_min_required_inst
+    - node.type.program
+id: node.program.field_min_required_inst
+field_name: field_min_required_inst
+entity_type: node
+bundle: program
+label: 'Minimum Required Institutional Credits'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

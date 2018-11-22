@@ -1,0 +1,8 @@
+uuid: 8d17bdeb-e604-4a02-b124-f1e395789104
+langcode: en
+status: true
+dependencies: {  }
+id: multi_column_content
+label: 'Multi-column content'
+revision: 0
+description: 'Content that uses multiple columns.'

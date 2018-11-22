@@ -1,0 +1,29 @@
+uuid: 29a5ee87-f4d2-4018-9097-40cca656ee8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage_results
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: exposedformhomepage_resultspage_1
+theme: durhamtech
+region: secondary_nav
+weight: -13
+provider: null
+plugin: 'views_exposed_filter_block:homepage_results-page_1'
+settings:
+  id: 'views_exposed_filter_block:homepage_results-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

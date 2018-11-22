@@ -1,0 +1,38 @@
+.sidebar {
+  .menu {
+    margin: 0;
+    padding: 0;
+    padding-right: 0.5rem;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a,
+      a:visited {
+        padding: 0;
+        color: $gray;
+
+        &:hover,
+        &:focus {
+          color: $brand-orange;
+        }
+      }
+
+      > ul {
+        margin-top: 1rem;
+
+        li {
+
+          a {
+            font-weight: 400;
+          }
+        }
+
+        > li > ul > li > ul { // 4th level menu
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/durham-tech.iml" filepath="$PROJECT_DIR$/.idea/durham-tech.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ibm/ibm_com_drupal/docroot/modules/custom/ibm_content_tree/.idea/ibm_content_tree.iml" filepath="$PROJECT_DIR$/../ibm/ibm_com_drupal/docroot/modules/custom/ibm_content_tree/.idea/ibm_content_tree.iml" />
+    </modules>
+  </component>
+</project>

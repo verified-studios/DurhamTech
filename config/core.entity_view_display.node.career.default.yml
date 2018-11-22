@@ -1,0 +1,107 @@
+uuid: 64b4f50e-728a-407e-ba88-4ad2b517294f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.career.field_banner_image
+    - field.field.node.career.field_career_statistics
+    - field.field.node.career.field_career_url
+    - field.field.node.career.field_degree_option
+    - field.field.node.career.field_description
+    - field.field.node.career.field_learn_category
+    - field.field.node.career.field_percentage_infographic
+    - field.field.node.career.field_related_programs
+    - field.field.node.career.field_title_image
+    - node.type.career
+  module:
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.career.default
+targetEntityType: node
+bundle: career
+mode: default
+content:
+  field_banner_image:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_career_statistics:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_career_url:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_degree_option:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_percentage_infographic:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_related_programs:
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title_image:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_average_salary: true
+  field_learn_category: true

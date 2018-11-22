@@ -1,0 +1,9 @@
+uuid: ef1f575e-1ba1-467f-9551-12ede2cce410
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Type'
+vid: event_type
+description: 'Type of event, used for organizing and filtering events. Flat structure'
+hierarchy: 0
+weight: 0

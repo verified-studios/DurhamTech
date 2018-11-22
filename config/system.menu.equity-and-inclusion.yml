@@ -1,0 +1,8 @@
+uuid: dc424006-beb1-4404-a32b-4a0d9294bee8
+langcode: en
+status: true
+dependencies: {  }
+id: equity-and-inclusion
+label: 'Equity and Inclusion'
+description: 'menu for Office of Instituitional Equity and Inclusion, title ix, sexual misconduct, VAWA'
+locked: false

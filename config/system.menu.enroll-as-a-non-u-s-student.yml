@@ -1,0 +1,8 @@
+uuid: d7e92e50-6bce-462c-85d8-14edc1573eb2
+langcode: en
+status: true
+dependencies: {  }
+id: enroll-as-a-non-u-s-student
+label: 'Enroll as a Non-U.S. Student'
+description: 'Enroll as a Non-U.S. Student menu'
+locked: false

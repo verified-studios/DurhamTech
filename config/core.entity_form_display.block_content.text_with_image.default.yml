@@ -1,0 +1,50 @@
+uuid: b0dc48e5-67c6-489d-af6d-dbc257031b37
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text_with_image
+    - field.field.block_content.text_with_image.body
+    - field.field.block_content.text_with_image.field_image
+  module:
+    - entity_browser_entity_form
+    - inline_entity_form
+    - text
+id: block_content.text_with_image.default
+targetEntityType: block_content
+bundle: text_with_image
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: image_browser
+    type: inline_entity_form_complex
+    region: content
+  info:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

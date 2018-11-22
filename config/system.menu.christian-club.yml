@@ -1,0 +1,8 @@
+uuid: c30a5896-c851-42fc-a2fd-58407dc31b74
+langcode: en
+status: true
+dependencies: {  }
+id: christian-club
+label: 'Christian Club'
+description: 'For Student Life '
+locked: false

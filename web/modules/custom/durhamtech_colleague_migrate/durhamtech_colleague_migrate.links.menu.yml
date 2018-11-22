@@ -1,0 +1,6 @@
+durhamtech_colleague_migrate.settings_page:
+  title: Durhamtech colleague migration settings
+  parent: migrate_tools.menu
+  description: 'Durhamtech colleague migration management'
+  route_name: durhamtech_colleague_migrate.manage
+  weight: 1

@@ -1,0 +1,29 @@
+uuid: 52e1be76-80c8-42fe-8cea-96a12465f6b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icon.field_icon_image
+    - media_entity.bundle.icon
+  module:
+    - image
+id: media.icon.default
+targetEntityType: media
+bundle: icon
+mode: default
+content:
+  field_icon_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

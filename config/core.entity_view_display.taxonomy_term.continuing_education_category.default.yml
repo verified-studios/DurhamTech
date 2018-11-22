@@ -1,0 +1,50 @@
+uuid: b3908615-0e0d-4a9b-8cc9-11a917e03afc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.continuing_education_category.field_continuing_edu_label
+    - field.field.taxonomy_term.continuing_education_category.field_continuing_edu_thumbnail
+    - field.field.taxonomy_term.continuing_education_category.field_link_other_page
+    - field.field.taxonomy_term.continuing_education_category.field_page_link
+    - taxonomy.vocabulary.continuing_education_category
+  module:
+    - link
+    - panelizer
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.continuing_education_category.default
+targetEntityType: taxonomy_term
+bundle: continuing_education_category
+mode: default
+content:
+  field_link_other_page:
+    weight: -4
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_page_link:
+    weight: -3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  description: true
+  field_continuing_edu_label: true
+  field_continuing_edu_thumbnail: true

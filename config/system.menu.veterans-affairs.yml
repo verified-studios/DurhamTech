@@ -1,0 +1,8 @@
+uuid: 98368320-0ce0-4306-a111-af0021531659
+langcode: en
+status: true
+dependencies: {  }
+id: veterans-affairs
+label: 'Veterans Affairs'
+description: 'For Student Services '
+locked: false

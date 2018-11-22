@@ -1,0 +1,81 @@
+uuid: ec4d0d66-84ef-48a1-b8a8-a264f3d8858a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.person.field_department
+    - field.field.node.person.field_e_mail
+    - field.field.node.person.field_office_location
+    - field.field.node.person.field_person_image
+    - field.field.node.person.field_phone_number
+    - field.field.node.person.field_position_title
+    - node.type.person
+  module:
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.person.default
+targetEntityType: node
+bundle: person
+mode: default
+content:
+  field_department:
+    weight: 103
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_e_mail:
+    weight: 105
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_office_location:
+    weight: 106
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_person_image:
+    weight: 101
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_phone_number:
+    weight: 104
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_position_title:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true

@@ -1,0 +1,9 @@
+uuid: a3026ef3-39d8-46d6-95d4-9d71c0bc3213
+langcode: en
+status: true
+dependencies: {  }
+name: 'CTA Box'
+vid: ctbox
+description: ''
+hierarchy: 1
+weight: 0

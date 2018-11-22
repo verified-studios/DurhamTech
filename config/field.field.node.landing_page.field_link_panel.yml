@@ -1,0 +1,70 @@
+uuid: 1392f309-292c-4f7b-b993-9e3072b3b17f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_panel
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.landing_page_panel
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_link_panel
+field_name: field_link_panel
+entity_type: node
+bundle: landing_page
+label: 'Link Panel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      landing_page_panel: landing_page_panel
+    target_bundles_drag_drop:
+      application_deadline:
+        weight: 15
+        enabled: false
+      body:
+        weight: 16
+        enabled: false
+      class:
+        weight: 17
+        enabled: false
+      header:
+        weight: 18
+        enabled: false
+      image_and_text:
+        weight: 19
+        enabled: false
+      landing_page_panel:
+        enabled: true
+        weight: 20
+      link:
+        weight: 21
+        enabled: false
+      quote:
+        weight: 22
+        enabled: false
+      sidebar_links:
+        weight: 23
+        enabled: false
+      sidebar_text:
+        weight: 24
+        enabled: false
+      statistic:
+        weight: 25
+        enabled: false
+      statistic_infographic:
+        weight: 26
+        enabled: false
+      statistic_with_icon:
+        weight: 27
+        enabled: false
+      statistic_with_subtitle:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

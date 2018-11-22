@@ -1,0 +1,8 @@
+uuid: beca86ce-c8d1-467a-a64c-fb90e169bcca
+langcode: en
+status: true
+dependencies: {  }
+id: science-department-menu
+label: 'Science Department Menu'
+description: 'Science Department Menu'
+locked: false

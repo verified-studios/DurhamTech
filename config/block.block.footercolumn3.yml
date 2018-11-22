@@ -1,0 +1,27 @@
+uuid: cce52650-f7c9-4b37-b7c8-7b53dbf7ab4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-3
+  module:
+    - menu_block
+  theme:
+    - durhamtech
+id: footercolumn3
+theme: durhamtech
+region: footer
+weight: -4
+provider: null
+plugin: 'menu_block:footer-column-3'
+settings:
+  id: 'menu_block:footer-column-3'
+  label: 'Footer Column 3'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'footer-column-3:'
+  suggestion: footer_column
+visibility: {  }

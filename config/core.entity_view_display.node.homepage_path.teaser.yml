@@ -1,0 +1,27 @@
+uuid: 0bd23f97-2e47-4835-8dbe-22c8f54e85b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homepage_path.field_i_have_a
+    - field.field.node.homepage_path.field_i_m_interested_in
+    - field.field.node.homepage_path.field_my_area_of_interest_is
+    - field.field.node.homepage_path.field_redirect_page
+    - node.type.homepage_path
+  module:
+    - user
+id: node.homepage_path.teaser
+targetEntityType: node
+bundle: homepage_path
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_i_have_a: true
+  field_i_m_interested_in: true
+  field_my_area_of_interest_is: true
+  field_redirect_page: true

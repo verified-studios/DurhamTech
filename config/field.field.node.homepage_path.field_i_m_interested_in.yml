@@ -1,0 +1,29 @@
+uuid: 786199bb-d6f4-44a2-b26e-818f3671ecae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_i_m_interested_in
+    - node.type.homepage_path
+    - taxonomy.vocabulary.education_goals
+id: node.homepage_path.field_i_m_interested_in
+field_name: field_i_m_interested_in
+entity_type: node
+bundle: homepage_path
+label: 'I''m Interested In'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      education_goals: education_goals
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

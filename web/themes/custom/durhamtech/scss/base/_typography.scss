@@ -1,0 +1,156 @@
+body {
+  font-family: $open-sans;
+  font-size: 16px;
+}
+
+// Headers
+h1, h2, h3, h4, h5 {
+  color: $header-gray;
+  font-family: $helvetica;
+  margin-top: 0;
+  letter-spacing: -0.02em;
+  font-family: $open-sans;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2em;
+  color: $gray;
+}
+
+h2.page-title {
+  text-align: center;
+
+  &.left {
+    text-align: left;
+  }
+}
+
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h3.section-title, .block-views .block-title, .node--type-landing_page .block-title {
+  font-size: rem(30);
+  margin-bottom: 30px;
+
+  @media #{$tablet} {
+    margin-bottom: 60px;
+  }
+}
+
+.block-views .block-title {
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.15em;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  color: $black;
+}
+
+h4.stat-title, h4.event-data-title {
+  color: $black;
+  font-size: rem(16);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.section-title, .course-title {
+  text-align: center;
+}
+
+h5 {
+  font-family: $open-sans;
+  font-size: 1.15em;
+  font-weight: 400;
+  font-style: italic;
+  color: $dark-gray;
+}
+
+p {
+  color: $body-gray;
+  line-height: 1.5;
+  margin: 0 0 20px;
+
+  img {
+
+    &.align-left {
+      margin-right: 15px;
+      margin-bottom: 15px;
+    }
+
+    &.align-right {
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+a {
+  color: $dark-orange;
+
+  &:hover {
+    background-color: transparent;
+    color: $hover-color;
+    text-decoration: underline;
+  }
+}
+
+a.white:focus {
+  background-color: transparent;
+  color: $alert-orange;
+  text-decoration: underline;
+}
+
+.stat .field--name-field-data {
+  font-size: em(24);
+  font-weight: 600;
+}
+
+.field--name-field-subtitle {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+ul:not(.menu), ol:not(.menu) {
+  margin-left: 20px;
+}
+
+.menu {
+  .menu {
+    list-style-type: none;
+  }
+
+  &.site-navigation {
+
+    &.nav {
+      > li {
+        > a {
+          font-size: em(20);
+          font-weight: 600;
+        }
+
+        > .menu {
+          padding-left: 0;
+        }
+      }
+    }
+    a {
+      padding-left: 0;
+    }
+
+    .active {
+      > a {
+        color: $black;
+      }
+    }
+  }
+}

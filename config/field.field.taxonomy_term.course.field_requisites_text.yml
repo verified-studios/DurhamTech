@@ -1,0 +1,21 @@
+uuid: 49b676a5-bfaf-43ae-b517-9a777f7a82af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_requisites_text
+    - taxonomy.vocabulary.course
+  module:
+    - text
+id: taxonomy_term.course.field_requisites_text
+field_name: field_requisites_text
+entity_type: taxonomy_term
+bundle: course
+label: Requisites
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

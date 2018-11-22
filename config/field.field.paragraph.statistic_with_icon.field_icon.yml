@@ -1,0 +1,28 @@
+uuid: 3a217fca-49dd-40be-8514-0190910b26ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon
+    - media_entity.bundle.icon
+    - paragraphs.paragraphs_type.statistic_with_icon
+id: paragraph.statistic_with_icon.field_icon
+field_name: field_icon
+entity_type: paragraph
+bundle: statistic_with_icon
+label: Icon
+description: 'Icon used to accompany statistic'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      icon: icon
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

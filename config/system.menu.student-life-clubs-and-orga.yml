@@ -1,0 +1,8 @@
+uuid: b7cb8919-3ef4-4695-990e-7d276c4081c1
+langcode: en
+status: true
+dependencies: {  }
+id: student-life-clubs-and-orga
+label: 'Student Life/Clubs and Organizations '
+description: 'Links for Clubs/Organizations section of Student Life '
+locked: false

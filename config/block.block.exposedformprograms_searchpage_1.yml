@@ -1,0 +1,29 @@
+uuid: 9206ce6d-d92f-41b0-ac86-ee05879ca257
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.programs_search
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: exposedformprograms_searchpage_1
+theme: durhamtech
+region: content
+weight: -15
+provider: null
+plugin: 'views_exposed_filter_block:programs_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:programs_search-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'Programs Search'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/academic-programs\r\n/academic-programs?field_degree_option=All&field_learn_category=All&search_api_fulltext=\r\n/programs\r\n/programs?field_degree_option=All&field_learn_category=All&search_api_fulltext="
+    negate: false
+    context_mapping: {  }

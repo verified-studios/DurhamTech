@@ -1,0 +1,9 @@
+uuid: c14a89c4-9d30-4b57-bd36-503e75c92ea3
+langcode: en
+status: true
+dependencies: {  }
+id: image_and_text
+label: 'Image and Text'
+icon_uuid: null
+description: 'Displays an inline image and text block.'
+behavior_plugins: {  }

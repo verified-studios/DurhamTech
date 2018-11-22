@@ -1,0 +1,8 @@
+uuid: 60d8de7a-ab82-4470-96f8-d1d566a24e20
+langcode: en
+status: true
+dependencies: {  }
+id: financial-coaching
+label: 'Financial Coaching'
+description: 'For Student Services '
+locked: false

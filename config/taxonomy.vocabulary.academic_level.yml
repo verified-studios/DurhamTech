@@ -1,0 +1,9 @@
+uuid: 36f02e6f-9da4-46b3-9fb6-e504c18198c1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Level (Course)'
+vid: academic_level
+description: 'This vocabulary indicates the academic area.'
+hierarchy: 0
+weight: 0

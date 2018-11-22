@@ -1,0 +1,145 @@
+uuid: d6a76851-d93d-4735-b105-649a0404babb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_continuing_education_cat
+    - field.field.node.program.field_courses
+    - field.field.node.program.field_cred_type
+    - field.field.node.program.field_degree_option
+    - field.field.node.program.field_description
+    - field.field.node.program.field_financial_aid_eligible
+    - field.field.node.program.field_learn_category
+    - field.field.node.program.field_min_required_credits
+    - field.field.node.program.field_min_required_inst
+    - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_app_deadline
+    - field.field.node.program.field_program_cost
+    - field.field.node.program.field_program_department
+    - field.field.node.program.field_program_id
+    - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_printable
+    - field.field.node.program.field_program_stats
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_rich_text
+    - field.field.node.program.field_statistic
+    - field.field.node.program.field_teaser_layout
+    - field.field.node.program.field_total_credit_hours
+    - node.type.program
+  module:
+    - entity_reference_revisions
+    - options
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.program.teaser
+targetEntityType: node
+bundle: program
+mode: teaser
+content:
+  field_degree_option:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_description:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_program_app_deadline:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_program_cost:
+    type: string
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_program_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+  field_program_stats:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+  field_program_type:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_statistic:
+    type: entity_reference_revisions_entity_view
+    weight: 9
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_teaser_layout:
+    type: list_default
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_total_credit_hours:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_average_completion: true
+  field_average_cost: true
+  field_average_salary: true
+  field_continuing_education_cat: true
+  field_courses: true
+  field_cred_type: true
+  field_financial_aid_eligible: true
+  field_learn_category: true
+  field_licensure_pass_rate: true
+  field_min_required_credits: true
+  field_min_required_inst: true
+  field_min_required_inst_gpa: true
+  field_program_department: true
+  field_program_id: true
+  field_program_printable: true
+  field_rich_text: true
+  links: true

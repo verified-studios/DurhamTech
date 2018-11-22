@@ -1,0 +1,112 @@
+$border-color: $black;
+$section-spacing-sm: 15px;
+$section-spacing-lg: 30px;
+
+.page-node-type-career {
+  .page-title {
+    margin-bottom: $section-spacing-sm;
+  }
+
+  @media #{$tablet} {
+    .page-title {
+      margin-bottom: $section-spacing-lg;
+    }
+  }
+}
+
+.career-stats-top, .career-stats-bottom {
+  [class*="stat-col"] {
+    padding: 15px;
+  }
+
+  @media #{$tablet} {
+
+    [class*="stat-col"] {
+      padding: 30px;
+    }
+
+    .stat-col-2, .stat-col-4 {
+      border-left: 1px solid $border-color;
+    }
+  }
+}
+
+.career-infographic [class*="col-"] {
+  padding: 15px;
+}
+
+@media #{$tablet} {
+
+  .career-infographic [class*="col-"] {
+    padding: 30px;
+  }
+  .career-stats-top + .career-infographic {
+    border-top: 1px solid $border-color;
+  }
+
+  .career-infographic + .career-stats-bottom {
+    border-top: 1px solid $border-color;
+  }
+
+  .career-stats-top + .career-stats-bottom {
+    border-top: 1px solid $border-color;
+  }
+}
+
+.career.teaser {
+  background-color: $white;
+  box-shadow: 5px 5px 15px rgba($gray, 0.08);
+  padding: 3rem;
+
+  margin-bottom: 3rem;
+
+  .teaser-title {
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .edu-requirement {
+    margin-bottom: 15px;
+  }
+
+  .career-teaser-stat {
+    margin-bottom: 15px;
+  }
+}
+
+.path-careers {
+  section.above-content {
+    background-color: $white;
+    padding: 6rem 0;
+  }
+
+  .main-container {
+    background-color: $offwhite;
+  }
+
+  .view-careers-search {
+    margin: 6rem 0 2rem;
+  }
+
+  .footer {
+    margin-top: 0;
+  }
+
+  #views-exposed-form-careers-search-page-1{
+    /* see _program.scss */
+
+    margin-bottom: 6rem;
+  }
+}
+
+#edit-submit-careers-search,
+#edit-reset {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  min-width: 150px;
+  border: none;
+
+  .glyphicon {
+    opacity: 0.5;
+    margin-right: 1rem;
+  }
+}

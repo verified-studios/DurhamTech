@@ -1,0 +1,8 @@
+uuid: 10b2e9e8-8621-4e90-abfc-1d3cb683217d
+langcode: en
+status: true
+dependencies: {  }
+id: foundation-menu
+label: 'Foundation Menu'
+description: 'Menu for Foundation'
+locked: false

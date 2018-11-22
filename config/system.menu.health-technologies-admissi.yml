@@ -1,0 +1,8 @@
+uuid: 7364bea3-d571-4dc2-b1bc-0dee11925e27
+langcode: en
+status: true
+dependencies: {  }
+id: health-technologies-admissi
+label: 'Health Technologies Admissions'
+description: 'Admissions and enrollment on health technologies enrollment steps'
+locked: false

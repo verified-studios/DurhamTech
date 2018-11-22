@@ -1,0 +1,8 @@
+uuid: c1ab917f-f32d-4b2b-a806-5b9d51c708b2
+langcode: en
+status: true
+dependencies: {  }
+id: tuition-and-fees
+label: 'Tuition and Fees'
+description: 'menu for Tuition and Fees'
+locked: false

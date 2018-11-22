@@ -1,0 +1,23 @@
+$section-spacing-sm: 30px;
+$section-spacing-lg: 60px;
+
+.course {
+  .view-header {
+    padding: $section-spacing-sm 0;
+
+    .course-metadata {
+      padding-top: $section-spacing-sm;
+    }
+  }
+
+
+  @media #{$tablet} {
+    .view-header {
+      padding: $section-spacing-lg 0;
+
+      .course-metadata {
+        padding-top: $section-spacing-lg;
+      }
+    }
+  }
+}

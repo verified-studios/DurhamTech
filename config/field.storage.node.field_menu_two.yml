@@ -1,0 +1,20 @@
+uuid: c39dbc62-3208-46e3-8fb3-f433fbe8191c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+id: node.field_menu_two
+field_name: field_menu_two
+entity_type: node
+type: entity_reference
+settings:
+  target_type: menu
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

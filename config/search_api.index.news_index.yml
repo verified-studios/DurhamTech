@@ -1,0 +1,131 @@
+uuid: 006435db-f072-43a9-9c47-a7b50b34e949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - field.storage.node.field_news_format
+    - field.storage.node.field_news_thumbnail
+    - field.storage.node.field_news_type
+    - field.storage.node.field_publish_date
+    - field.storage.node.field_featured
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+id: news_index
+name: 'News Index'
+description: ''
+read_only: false
+field_settings:
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+  field_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_author
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_author
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 8
+  field_news_format:
+    label: Format
+    datasource_id: 'entity:node'
+    property_path: field_news_format
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_format
+  field_news_thumbnail:
+    label: 'News Thumbnail'
+    datasource_id: 'entity:node'
+    property_path: field_news_thumbnail
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_thumbnail
+  field_news_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_news_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_type
+  field_publish_date:
+    label: 'Publish Date'
+    datasource_id: 'entity:node'
+    property_path: field_publish_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_publish_date
+  field_featured:
+    label: Featured
+    datasource_id: 'entity:node'
+    property_path: field_featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_featured
+  status:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+  uid:
+    label: null
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - new_article
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  rendered_item: {  }
+  aggregated_field: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - url
+      - field_author
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  content_access:
+    weights:
+      preprocess_query: -30
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

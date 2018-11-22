@@ -1,0 +1,8 @@
+uuid: e397228d-8ccc-4188-bfa5-8bb11552dc22
+langcode: en
+status: true
+dependencies: {  }
+id: opticianry-menu
+label: 'Opticianry Menu'
+description: 'Opticianry program'
+locked: false

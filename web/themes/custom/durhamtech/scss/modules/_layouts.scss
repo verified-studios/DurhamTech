@@ -1,0 +1,84 @@
+$section-spacing-sm: 30px;
+$section-spacing-lg: 60px;
+
+// Alerts region
+.region-alerts {
+  background-color: $alert-orange;
+}
+
+body {
+  margin-top: 0;
+}
+
+header {
+  margin-top: 15px;
+}
+
+section.container, section.program, section.career, .node--type-landing_page, .page.full {
+  padding-bottom: $section-spacing-sm;
+  padding-top: $section-spacing-sm;
+
+  @media #{$tablet} {
+    padding-bottom: $section-spacing-lg;
+    padding-top: $section-spacing-lg;
+  }
+}
+
+$sidebar-width: 300px;
+
+
+.view.sidebar {
+  .filters-wrapper {
+    @media #{$tablet} {
+      display: inline-block;
+      width: $sidebar-width;
+      vertical-align: top;
+    }
+  }
+
+  .content-wrapper {
+    @media #{$tablet} {
+      display: inline-block;
+      width: calc(100% - #{$sidebar-width + 5});
+    }
+  }
+}
+
+.node--type-landing_page {
+  .block-region-content {
+    section {
+      margin-bottom: $section-spacing-sm;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    .block-region-content {
+      section {
+        margin-bottom: $section-spacing-lg;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.field--name-field-sidebar-elements {
+  > .field--item {
+    margin-bottom: 20px;
+
+  }
+
+  @media #{$tablet} {
+    > .field--item {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+uuid: e4e5a3a3-5919-4cac-8a26-1d51537e29f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_app_deadline_date
+field_name: field_app_deadline_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

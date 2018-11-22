@@ -1,0 +1,65 @@
+uuid: f17d726e-41f2-4b8d-b5f8-3f9f20350761
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.career.field_banner_image
+    - field.field.node.career.field_career_statistics
+    - field.field.node.career.field_degree_option
+    - field.field.node.career.field_description
+    - field.field.node.career.field_learn_category
+    - field.field.node.career.field_percentage_infographic
+    - field.field.node.career.field_related_programs
+    - field.field.node.career.field_title_image
+    - node.type.career
+  module:
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.career.teaser
+targetEntityType: node
+bundle: career
+mode: teaser
+content:
+  field_career_statistics:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+  field_degree_option:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_title_image:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_average_salary: true
+  field_banner_image: true
+  field_description: true
+  field_job_growth: true
+  field_learn_category: true
+  field_percentage_infographic: true
+  field_related_programs: true
+  links: true

@@ -1,0 +1,32 @@
+uuid: b2bf6af4-3208-44f9-baa2-fe5d98c209bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistic_infographic.field_percentage
+    - field.field.paragraph.statistic_infographic.field_subtitle
+    - paragraphs.paragraphs_type.statistic_infographic
+id: paragraph.statistic_infographic.default
+targetEntityType: paragraph
+bundle: statistic_infographic
+mode: default
+content:
+  field_percentage:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_subtitle:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

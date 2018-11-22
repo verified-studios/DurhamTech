@@ -1,0 +1,8 @@
+uuid: 42c1948a-e22e-4539-8b6b-0c68fecdf818
+langcode: en
+status: true
+dependencies: {  }
+id: work-based-learning-menu
+label: 'Work-Based Learning Menu'
+description: 'Menu for Work-Based Learning'
+locked: false

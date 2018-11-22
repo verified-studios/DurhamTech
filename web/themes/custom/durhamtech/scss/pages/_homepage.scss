@@ -1,0 +1,209 @@
+.path-frontpage {
+
+  .node {
+    padding-top: 0;
+  }
+
+  #columns-1 {
+    color: $white;
+    padding: 60px 0;
+    position: relative;
+    background-color: $gray;
+    overflow: hidden;
+
+    .columns-1--bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba($black, 0.75), rgba($black, 0.75)), url("/themes/custom/durhamtech/images/durham-1280x640.jpg");
+      filter: blur(5px);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    .block-title {
+      color: $white;
+      text-align: left;
+      margin-bottom: 3rem;
+      margin-left: 2rem;
+    }
+
+    [class*="teaser-title"] {
+      color: $white;
+      font-size: rem(16);
+      font-weight: 600;
+      line-height: 1.5;
+      text-transform: none;
+    }
+
+    .more-link a {
+      border: 2px solid $white;
+      border-radius: 6px;
+      color: $white;
+      display: block;
+      font-wieght: 600;
+      padding: 6px 12px;
+      text-align: center;
+      width: 100%;
+
+      &:hover {
+        background-color: $white;
+        color: $black;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .event.column-teaser {
+    .content {
+      border-color: $white;
+
+      .btn {
+        border-color: $white;
+        color: $white;
+
+        &:hover {
+          background-color: $white;
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.block-durhamtech-social {
+  .slick {
+    background-color: $light-gray;
+    padding: 10px 0;
+
+    .slick-slide {
+      border-radius: 20px;
+      height: 450px;
+      background: $white;
+      text-align: center;
+      margin: 1.5rem;
+      position: relative;
+      box-shadow: 5px 5px 1rem rgba($gray, 0.08);
+      overflow: hidden;
+
+      .social-icon {
+        font-size: 24px;
+        left: 2rem;
+        bottom: 1.5rem;
+        position: absolute;
+        z-index: 1;
+        color: $dark-orange;
+      }
+
+      .img {
+        position: relative;
+        left: 0;
+        top: 0;
+        height: 200px;
+        width: 100%;
+        z-index: 5;
+        overflow: hidden;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        padding-bottom: 1rem;
+        display: block;
+        margin-bottom: 1rem;
+
+        img {
+          position: absolute;
+          width: 100% !important;
+          height: 100% !important;
+          -o-object-fit: cover !important;
+          object-fit: cover !important;
+        }
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 1em;
+        padding: 2rem 3rem;
+      }
+
+      &:nth-child(odd) {
+        background: $white;
+
+      }
+    }
+
+
+  }
+}
+
+a.social-instagram,
+a.social-instagram:visited,
+a.social-instagram:hover,
+a.social-instagram:focus {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $gray;
+  text-decoration: none;
+
+  p {
+    font-weight: 600 !important;
+    color: inherit !important;
+  }
+
+  .ext {
+    display: none !important;
+  }
+}
+
+a.social-twitter,
+a.social-twitter:visited,
+a.social-twitter:hover,
+a.social-twitter:focus  {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $gray;
+  text-decoration: none;
+
+  p {
+    margin-top: 10rem !important;
+    font-weight: 600 !important;
+    color: inherit !important;
+  }
+
+  .ext {
+    display: none !important;
+  }
+}
+
+#columns-1 {
+  .views-row {
+    overflow: hidden;
+  }
+  @media #{$tablet} {
+    .views-row {
+      height: 225px;
+    }
+  }
+}
+
+.path-frontpage #views-exposed-form-programs-search-page-1 .form--inline {
+  text-align: left;
+  padding-right: 4rem;
+}
+
+.path-frontpage #views-exposed-form-programs-search-page-1 .form--inline .form-item label {
+  display: none !important;
+}
+
+
+.path-frontpage #views-exposed-form-programs-search-page-1  #edit-submit-programs-search {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+
+  .glyphicon {
+    opacity: 0.5;
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+uuid: 3b08366d-4478-46ac-b33d-8962201788f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.people.field_person_image
+    - media_entity.bundle.people
+  module:
+    - image
+id: media.people.default
+targetEntityType: media
+bundle: people
+mode: default
+content:
+  field_person_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

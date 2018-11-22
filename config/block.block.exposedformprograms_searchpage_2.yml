@@ -1,0 +1,29 @@
+uuid: 61513a86-f727-44ac-bf77-d45bd07f489a
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.programs_search
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: exposedformprograms_searchpage_2
+theme: durhamtech
+region: secondary_nav
+weight: -14
+provider: null
+plugin: 'views_exposed_filter_block:programs_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:programs_search-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

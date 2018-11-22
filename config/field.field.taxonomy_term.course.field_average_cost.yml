@@ -1,0 +1,19 @@
+uuid: c51024fe-a0fe-41b8-bbcd-33c36125fef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_average_cost
+    - taxonomy.vocabulary.course
+id: taxonomy_term.course.field_average_cost
+field_name: field_average_cost
+entity_type: taxonomy_term
+bundle: course
+label: 'Average cost'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

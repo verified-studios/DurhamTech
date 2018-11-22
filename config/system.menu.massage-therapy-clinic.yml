@@ -1,0 +1,8 @@
+uuid: 3e44293f-0a76-42fc-b2ae-56772b039ac7
+langcode: en
+status: true
+dependencies: {  }
+id: massage-therapy-clinic
+label: 'Massage Therapy Clinic'
+description: 'Massage Therapy Clinic Continuing Education'
+locked: false

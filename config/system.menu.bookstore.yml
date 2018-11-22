@@ -1,0 +1,8 @@
+uuid: c8ddc90a-b65d-422b-ae7d-d35244241f7c
+langcode: en
+status: true
+dependencies: {  }
+id: bookstore
+label: Bookstore
+description: 'Links for Bookstore pages'
+locked: false

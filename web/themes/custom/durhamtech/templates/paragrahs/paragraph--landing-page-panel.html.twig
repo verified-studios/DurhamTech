@@ -1,0 +1,14 @@
+<div class="col-md-4 col-sm-6 col-xs-12 views-row">
+  <div class="program-search--category-wrap">
+    <div class="program-search--category">
+      <div class="program-panel">
+        <a href="{{ content.field_panel_link.0['#url']|render }}"><h3>{{content.field_header.0}}</h3></a>
+        <a href="{{ content.field_panel_link.0['#url']|render }}" class="program-search--category--image" style="background-image: url({{ file_url(content.field_panel_image.0['#item'].entity.uri.value) }})"></a>
+        <div class="program-search--category--btn">
+          {% set link_copy = content.field_panel_link.0['#title'] %}
+          <a href="{{ content.field_panel_link.0['#url']|render }}" class="btn btn-default btn-block"> {{ content.field_panel_link.0['#title']|render }} </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+uuid: e2078004-7055-4355-996c-39561d820207
+langcode: en
+status: true
+dependencies: {  }
+id: early-childhood-education
+label: 'Early Childhood Education'
+description: 'menu for completion rates'
+locked: false

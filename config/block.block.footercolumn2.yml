@@ -1,0 +1,27 @@
+uuid: 3616398c-2da7-49b8-a1ef-c123a797213b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-column-2
+  module:
+    - menu_block
+  theme:
+    - durhamtech
+id: footercolumn2
+theme: durhamtech
+region: footer
+weight: -5
+provider: null
+plugin: 'menu_block:footer-column-2'
+settings:
+  id: 'menu_block:footer-column-2'
+  label: 'Footer Column 2'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'footer-column-2:'
+  suggestion: footer_column
+visibility: {  }

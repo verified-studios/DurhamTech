@@ -1,0 +1,50 @@
+uuid: e0ba3f89-5d0c-4eae-8b8b-c5f91be877f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.class.field_building
+    - field.field.node.class.field_class_id
+    - field.field.node.class.field_class_item
+    - field.field.node.class.field_course
+    - field.field.node.class.field_delivery_method
+    - field.field.node.class.field_end_date
+    - field.field.node.class.field_end_time
+    - field.field.node.class.field_location
+    - field.field.node.class.field_meeting_days
+    - field.field.node.class.field_room
+    - field.field.node.class.field_start_date
+    - field.field.node.class.field_start_time
+    - node.type.class
+  module:
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.class.teaser
+targetEntityType: node
+bundle: class
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_building: true
+  field_class_id: true
+  field_class_item: true
+  field_course: true
+  field_delivery_method: true
+  field_end_date: true
+  field_end_time: true
+  field_location: true
+  field_meeting_days: true
+  field_room: true
+  field_start_date: true
+  field_start_time: true

@@ -1,0 +1,9 @@
+uuid: ded57f86-5455-456f-8e19-32345e96fc79
+langcode: en
+status: true
+dependencies: {  }
+id: quote
+label: Quote
+icon_uuid: null
+description: 'Displays an image with a quote block overlapping.'
+behavior_plugins: {  }

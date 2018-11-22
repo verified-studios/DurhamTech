@@ -1,0 +1,8 @@
+uuid: 1ace32cc-dddd-4571-b033-e56459836022
+langcode: en
+status: true
+dependencies: {  }
+id: employees
+label: 'Employees Instructional'
+description: 'Instructional menu on Employees page'
+locked: false

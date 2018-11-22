@@ -1,0 +1,28 @@
+uuid: 84d09639-6999-4ea1-b6eb-f33a5b36e919
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_programs
+    - node.type.career
+    - node.type.program
+id: node.career.field_related_programs
+field_name: field_related_programs
+entity_type: node
+bundle: career
+label: 'Related Programs'
+description: 'Programs related to obtaining desired career.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      program: program
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

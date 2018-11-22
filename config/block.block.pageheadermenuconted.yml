@@ -1,0 +1,33 @@
+uuid: 8ec13a67-8596-43a0-9c98-38632c2eab49
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.page-header-menu-cont-ed
+  module:
+    - menu_block
+    - system
+  theme:
+    - durhamtech
+id: pageheadermenuconted
+theme: durhamtech
+region: header
+weight: 0
+provider: null
+plugin: 'menu_block:page-header-menu-cont-ed'
+settings:
+  id: 'menu_block:page-header-menu-cont-ed'
+  label: 'Page Header Menu Cont Ed'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'page-header-menu-cont-ed:'
+  suggestion: page_header_menu_cont_ed
+visibility:
+  request_path:
+    id: request_path
+    pages: "/continuing-education/*\r\n/continuing-education\r\n/academic-programs/*\r\n/academic-programs"
+    negate: false
+    context_mapping: {  }

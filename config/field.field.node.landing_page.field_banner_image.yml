@@ -1,0 +1,28 @@
+uuid: a03b280a-0656-45f7-8bce-ed3546f63a47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner_image
+    - media_entity.bundle.banner_image
+    - node.type.landing_page
+id: node.landing_page.field_banner_image
+field_name: field_banner_image
+entity_type: node
+bundle: landing_page
+label: 'Banner Image'
+description: 'Override banner image for this page. Default will be used is no image is supplied.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      banner_image: banner_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

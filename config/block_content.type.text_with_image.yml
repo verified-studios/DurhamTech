@@ -1,0 +1,8 @@
+uuid: 33233447-ba87-4cc4-b27e-613006b3191f
+langcode: en
+status: true
+dependencies: {  }
+id: text_with_image
+label: 'Text with image'
+revision: 0
+description: 'A block with text and an image. In desktop display, image and text with be side-by-side in a 2 column layout. For smaller screens (mobile, small tablets), the image and text will be stacked on top of each other.'

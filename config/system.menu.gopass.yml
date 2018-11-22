@@ -1,0 +1,8 @@
+uuid: 2965a492-e807-44d0-b71b-f0669a7947ea
+langcode: en
+status: true
+dependencies: {  }
+id: gopass
+label: GoPass
+description: 'Menu for Student Services page '
+locked: false

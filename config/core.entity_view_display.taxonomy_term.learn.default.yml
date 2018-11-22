@@ -1,0 +1,23 @@
+uuid: e11d6639-0b6a-463d-9ea3-7fba30d1dcba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.learn.field_background_image
+    - taxonomy.vocabulary.learn
+  module:
+    - panelizer
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.learn.default
+targetEntityType: taxonomy_term
+bundle: learn
+mode: default
+content: {  }
+hidden:
+  description: true
+  field_background_image: true

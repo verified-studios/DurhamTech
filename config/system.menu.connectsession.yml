@@ -1,0 +1,8 @@
+uuid: bac577b9-83e1-4785-8342-5bd9e552aa8f
+langcode: en
+status: true
+dependencies: {  }
+id: connectsession
+label: ConnectSession
+description: 'menu for connectsession'
+locked: false

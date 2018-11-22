@@ -1,0 +1,8 @@
+uuid: 7bff4767-a3f5-4417-a2fc-a7280dc4ceeb
+langcode: en
+status: true
+dependencies: {  }
+id: community-engagement-menu
+label: 'Community Engagement Menu'
+description: 'Menu for the Community Engagement Landing Page'
+locked: false

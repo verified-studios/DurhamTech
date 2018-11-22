@@ -1,0 +1,19 @@
+uuid: d7b95ffc-7259-4d46-8e1a-03b2fc590d3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_min_required_inst_gpa
+    - node.type.program
+id: node.program.field_min_required_inst_gpa
+field_name: field_min_required_inst_gpa
+entity_type: node
+bundle: program
+label: 'Minimum Required Institutional GPA'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

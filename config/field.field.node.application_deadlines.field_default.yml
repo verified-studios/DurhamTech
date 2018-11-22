@@ -1,0 +1,23 @@
+uuid: d94c93da-49f3-4e6f-9e9b-e58e2304b972
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_default
+    - node.type.application_deadlines
+id: node.application_deadlines.field_default
+field_name: field_default
+entity_type: node
+bundle: application_deadlines
+label: 'Application Deadline Default'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

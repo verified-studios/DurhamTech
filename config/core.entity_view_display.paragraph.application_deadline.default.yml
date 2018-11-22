@@ -1,0 +1,41 @@
+uuid: 6c2f29c4-2be7-4138-98f2-bdd93f4f62d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.application_deadline.field_app_deadline_date
+    - field.field.paragraph.application_deadline.field_app_deadline_description
+    - field.field.paragraph.application_deadline.field_term
+    - paragraphs.paragraphs_type.application_deadline
+  module:
+    - datetime
+id: paragraph.application_deadline.default
+targetEntityType: paragraph
+bundle: application_deadline
+mode: default
+content:
+  field_app_deadline_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_day
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_app_deadline_description:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_term:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

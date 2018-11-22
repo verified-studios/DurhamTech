@@ -1,0 +1,108 @@
+uuid: d3fa4900-1358-44ab-9cab-5010e5b8c88f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.new_article.field_author
+    - field.field.node.new_article.field_body
+    - field.field.node.new_article.field_featured
+    - field.field.node.new_article.field_news_format
+    - field.field.node.new_article.field_news_thumbnail
+    - field.field.node.new_article.field_news_type
+    - field.field.node.new_article.field_publish_date
+    - image.style.thumbnail
+    - node.type.new_article
+  module:
+    - datetime
+    - image
+    - paragraphs
+    - path
+id: node.new_article.default
+targetEntityType: node
+bundle: new_article
+mode: default
+content:
+  field_author:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_body:
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: body
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  field_featured:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_news_format:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_news_thumbnail:
+    type: image_image
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_news_type:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_publish_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  promote: true
+  sticky: true
+  uid: true

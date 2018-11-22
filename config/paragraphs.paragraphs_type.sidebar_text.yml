@@ -1,0 +1,9 @@
+uuid: 6a7937d4-b013-49d2-9f3b-896dbe197775
+langcode: en
+status: true
+dependencies: {  }
+id: sidebar_text
+label: 'Sidebar Text'
+icon_uuid: null
+description: 'Rich-text field for placement in the sidebar.'
+behavior_plugins: {  }

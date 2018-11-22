@@ -1,0 +1,8 @@
+uuid: 9914eed3-df57-40f4-84d3-1ff4ed4ab271
+langcode: en
+status: true
+dependencies: {  }
+id: surgical-technology
+label: 'Surgical Technology'
+description: 'For Academic Program'
+locked: false

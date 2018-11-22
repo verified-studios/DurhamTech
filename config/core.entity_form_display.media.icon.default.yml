@@ -1,0 +1,49 @@
+uuid: 92c22187-6e15-48ee-850c-ece15acb0448
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icon.field_icon_image
+    - image.style.thumbnail
+    - media_entity.bundle.icon
+  module:
+    - image
+    - path
+id: media.icon.default
+targetEntityType: media
+bundle: icon
+mode: default
+content:
+  field_icon_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true

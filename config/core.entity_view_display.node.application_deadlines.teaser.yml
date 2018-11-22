@@ -1,0 +1,23 @@
+uuid: 727c59d5-179b-4af0-bbdc-5b1494308251
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application_deadlines.field_application_deadline
+    - field.field.node.application_deadlines.field_related_programs
+    - node.type.application_deadlines
+  module:
+    - user
+id: node.application_deadlines.teaser
+targetEntityType: node
+bundle: application_deadlines
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true
+  field_application_deadline: true
+  field_related_programs: true

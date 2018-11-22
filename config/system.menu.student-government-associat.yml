@@ -1,0 +1,8 @@
+uuid: 2c036d27-b899-4064-8554-d73971ce23cb
+langcode: en
+status: true
+dependencies: {  }
+id: student-government-associat
+label: 'Student Government Association'
+description: 'For Student Life '
+locked: false

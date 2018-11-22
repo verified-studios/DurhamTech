@@ -1,0 +1,9 @@
+uuid: febca8a0-4e83-4bf7-b93c-16b067d81cdd
+langcode: en
+status: true
+dependencies: {  }
+name: 'Program Type'
+vid: program_type
+description: 'Classification of programs, used for organizing and filtering courses. Flat structure'
+hierarchy: 0
+weight: 0

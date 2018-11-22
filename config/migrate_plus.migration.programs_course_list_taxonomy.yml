@@ -1,0 +1,35 @@
+uuid: 94d9af41-5798-4965-97b7-4f8a4c05c2a7
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: krXDnlavVs0hRQRJvSJZDhhkhEtKW10Ey4CCFF03Z-o
+id: programs_course_list_taxonomy
+migration_tags:
+  - courses
+  - taxonomy
+migration_group: durhamtech_colleague_migrate
+label: 'Course program data for taxonomy terms'
+source:
+  plugin: csv
+  path: 'public://import/programscourselist.csv'
+  header_row_count: 1
+  keys:
+    - 'Program ID'
+  fields:
+    'Program ID': 'Unique identifier for the program as in the data source.'
+    'Program Title': 'Name of the program.'
+    'Required Courses': 'List of required courses'
+process:
+  name: 'Program Title'
+  field_program_id: 'Program ID'
+  field_required_courses: 'Required Courses'
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: programs_course_list
+migration_dependencies:
+  optional: {  }
+  required: {  }

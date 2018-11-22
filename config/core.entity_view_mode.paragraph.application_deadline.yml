@@ -1,0 +1,10 @@
+uuid: fe5ee79b-de23-41ea-88ce-5b40c82f4021
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.application_deadline
+label: 'Application Deadline'
+targetEntityType: paragraph
+cache: true

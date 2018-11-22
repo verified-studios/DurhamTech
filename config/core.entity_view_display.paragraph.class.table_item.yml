@@ -1,0 +1,50 @@
+uuid: ed6ec7cd-842b-46e7-8029-02a5212c9811
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.table_item
+    - field.field.paragraph.class.field_end_time
+    - field.field.paragraph.class.field_meeting_days
+    - field.field.paragraph.class.field_room
+    - field.field.paragraph.class.field_start_time
+    - paragraphs.paragraphs_type.class
+  module:
+    - options
+id: paragraph.class.table_item
+targetEntityType: paragraph
+bundle: class
+mode: table_item
+content:
+  field_end_time:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_meeting_days:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_room:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_start_time:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

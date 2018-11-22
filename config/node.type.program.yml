@@ -1,0 +1,17 @@
+uuid: 80736125-e7c5-41b3-bf24-f61cd9108497
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Program
+type: program
+description: 'Details for an individual program.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,26 @@
+uuid: f36d3212-29b6-46a8-994a-4e7ddd0d92f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_links.field_link
+    - paragraphs.paragraphs_type.sidebar_links
+  module:
+    - link
+id: paragraph.sidebar_links.default
+targetEntityType: paragraph
+bundle: sidebar_links
+mode: default
+content:
+  field_link:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

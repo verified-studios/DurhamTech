@@ -1,0 +1,21 @@
+uuid: 738263ac-2d14-4205-afe7-82ae8b43761e
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_average_cost
+field_name: field_average_cost
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 25
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: b0e9283c-b8ee-4d98-816f-93e2240bb39e
+langcode: en
+status: true
+dependencies: {  }
+id: alumni
+label: Alumni
+description: 'menu for Alumni'
+locked: false

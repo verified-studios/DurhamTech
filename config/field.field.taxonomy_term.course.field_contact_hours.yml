@@ -1,0 +1,19 @@
+uuid: cf8a3fcb-b6a8-442d-9cc9-02ab0a79be44
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_contact_hours
+    - taxonomy.vocabulary.course
+id: taxonomy_term.course.field_contact_hours
+field_name: field_contact_hours
+entity_type: taxonomy_term
+bundle: course
+label: 'Contact Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

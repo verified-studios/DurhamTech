@@ -1,0 +1,169 @@
+.footer {
+  background-color: $gray;
+  padding: 2rem 0 0;
+
+  ul.footer-column-1,
+  ul.footer-column-2,
+  ul.footer-column-3 {
+
+    > li {
+      margin-bottom: 1rem;
+
+      a {
+      }
+    }
+  }
+
+  .footer-top {
+    padding: 15px 0;
+
+    .row {
+      margin: 0;
+
+      a {
+        &:focus {
+          outline-color: lighten($brand-orange, 40%);
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    background-color: $black;
+    padding: 15px 0;
+    margin-top: 2rem;
+
+    &-menu {
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      > li {
+        text-align: center;
+
+        a {
+          color: $white;
+          font-size: em(14);
+          padding: 5px 10px;
+        }
+      }
+    }
+
+    .footer-bottom-social {
+      ul {
+        text-align: center;
+
+        > li {
+          display: inline-block;
+          float: none;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    .footer-top {
+      padding: 25px 0;
+    }
+
+    .footer-bottom {
+      ul {
+
+        > li {
+          float: left;
+          text-align: left;
+
+          &:first-of-type {
+            a {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+
+      .footer-bottom-social {
+        ul {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+#block-footerinformationalblock {
+  p {
+    color: $white;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  @media #{$tablet} {
+    float: left;
+    width: 33%;
+
+    p {
+      text-align: left;
+    }
+  }
+}
+
+[id^="block-footercolumn"] {
+
+  .footer-column-1 {
+    margin-top: 10px;
+  }
+
+  ul {
+
+    > li {
+      a {
+        color: $white;
+        padding: 10px 0;
+        text-align: center;
+
+        &:hover {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  @media #{$tablet} {
+    border-left: 3px solid rgba($light-gray, 0.15);
+    float: left;
+    margin: 6px 0;
+    width: 22%;
+
+    .footer-column-1 {
+      margin-top: 0;
+    }
+
+    ul {
+
+      > li {
+        &:last-child {
+          margin-bottom: 0;
+        }
+        a {
+          font-weight: 300;
+          padding: 0;
+          padding-left: 1rem;
+          text-align: left;
+        }
+        @media #{$normal} {
+          a {
+            padding-left: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.region-footer a {
+  color: $white;
+}

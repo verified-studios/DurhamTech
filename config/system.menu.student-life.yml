@@ -1,0 +1,8 @@
+uuid: c78b635c-304d-453b-aec8-6305e236773b
+langcode: en
+status: true
+dependencies: {  }
+id: student-life
+label: 'Student Life'
+description: 'Links for Student Life '
+locked: false

@@ -1,0 +1,152 @@
+apply_now:
+  label: Apply Now
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/apply-now
+  regions:
+    three_column_deadlines:
+      label: Application Deadlines - 3 column
+    help_info:
+      label: CareerConnect Help Information
+    quote_region:
+      label: Quote Region with image background
+library:
+  label: Library
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/library
+  regions:
+    masthead:
+      label: Call to Action
+    information:
+      label: Information
+    policies:
+      label: Policies
+    resources:
+      label: Resources
+    blog:
+      label: Blog
+    events:
+      label: Events
+employees:
+  label: Employees
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/employees
+  regions:
+    masthead:
+      label: Call to Action
+    information:
+      label: Information
+    news_header:
+      label: News Header
+    news:
+      label: News
+    events_header:
+      label: Events Header
+    events:
+      label: Events
+    social:
+      label: Social Media
+students:
+  label: Students
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/students
+  regions:
+    masthead:
+      label: Call to Action
+    information:
+      label: Information
+    events:
+      label: Events
+    news_header:
+      label: News Header
+    news:
+      label: News
+    policies_procedures:
+      label: Policies & Procedureslk,
+    social:
+      label: Social Media
+about:
+  label: About
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/about
+  regions:
+    masthead:
+      label: Call to Action
+    locations:
+      label: Campus Locations
+    about_ctas:
+      label: About Call to Action
+    about:
+      label: About Information
+    related:
+      label: Related Links
+admissions_enrollment:
+  label: Admissions & Enrollment
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/admissions-enrollment
+  regions:
+    masthead:
+      label: Call to Action
+    three_column:
+      label: 3 Column Region
+    admissions:
+      label: Admissions
+    getstarted:
+      label: Get Started
+    related:
+      label: Related Links
+choose:
+  label: Choose Durham Tech
+  category: Landing Pages
+  template: templates/panelizer/landing-pages/choose-durham-tech
+  regions:
+    explore:
+      label: Explore
+    masthead:
+      label: Affordable Education
+    education:
+      label: Education
+    getstarted:
+      label: Get Started
+one_column_mixed:
+  label: One column mixed
+  category: Panelizer
+  template: templates/panelizer/one-col-mixed
+  regions:
+    full_1:
+      label: Full Width
+    fixed_1:
+      label: Container Width
+    full_2:
+      label: Full Width
+    fixed_2:
+      label: Container Width
+    full_3:
+      label: Full Width
+    fixed_3:
+      label: Container Width
+one_column_sidebar:
+  label: One column with sidebar left
+  category: Panelizer
+  template: templates/panelizer/one-col-sidebar
+  regions:
+    sidebar:
+      label: Left Sidebar
+    content:
+      label: Content
+homepage:
+  label: Homepage layout
+  template: templates/panelizer/homepage
+  category: Panelizer
+  regions:
+    columns_1_left:
+      label: First column section left
+    columns_1_right:
+      label: First column section right
+    full_1:
+      label: Full width
+    columns_2_left:
+      label: Second 2 column section left
+    columns_2_right:
+      label: Second 2 column section right
+    full_2:
+      label: Full width

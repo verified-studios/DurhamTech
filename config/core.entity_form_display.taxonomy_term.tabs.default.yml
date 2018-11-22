@@ -1,0 +1,69 @@
+uuid: 2c8c0d52-80ab-4d38-934a-1e82b69f13f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tabs.field_tab_background_image
+    - field.field.taxonomy_term.tabs.field_tab_body
+    - field.field.taxonomy_term.tabs.field_tab_links
+    - field.field.taxonomy_term.tabs.field_tab_text
+    - image.style.thumbnail
+    - taxonomy.vocabulary.tabs
+  module:
+    - image
+    - link
+    - path
+    - text
+id: taxonomy_term.tabs.default
+targetEntityType: taxonomy_term
+bundle: tabs
+mode: default
+content:
+  field_tab_background_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_tab_body:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_tab_links:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_tab_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  description: true

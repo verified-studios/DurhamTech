@@ -1,0 +1,29 @@
+uuid: c09a2551-2a85-4e7e-90c1-1569588209a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_academic_level
+    - taxonomy.vocabulary.academic_level
+    - taxonomy.vocabulary.course
+id: taxonomy_term.course.field_academic_level
+field_name: field_academic_level
+entity_type: taxonomy_term
+bundle: course
+label: 'Academic Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_level: academic_level
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

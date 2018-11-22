@@ -1,0 +1,29 @@
+uuid: 598c9e09-6fab-44b2-af5e-6740ce5ec5bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.courses_search
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: exposedformcourses_searchpage_1
+theme: durhamtech
+region: content
+weight: -17
+provider: null
+plugin: 'views_exposed_filter_block:courses_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:courses_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /courses
+    negate: false
+    context_mapping: {  }

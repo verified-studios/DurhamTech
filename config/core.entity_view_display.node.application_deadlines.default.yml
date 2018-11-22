@@ -1,0 +1,54 @@
+uuid: 2bca4188-c9a0-4c22-b991-eb70a8106817
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.application_deadlines.field_application_deadline
+    - field.field.node.application_deadlines.field_default
+    - field.field.node.application_deadlines.field_related_programs
+    - node.type.application_deadlines
+  module:
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.application_deadlines.default
+targetEntityType: node
+bundle: application_deadlines
+mode: default
+content:
+  field_application_deadline:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: application_deadline
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_default:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_related_programs:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  addtoany: true
+  links: true

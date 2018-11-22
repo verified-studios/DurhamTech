@@ -1,0 +1,8 @@
+uuid: ed4a2f6a-1283-4d88-9bbb-5546cab4eb92
+langcode: en
+status: true
+dependencies: {  }
+id: optical-shop-
+label: 'Optical Shop '
+description: 'Optical Shop menu'
+locked: false

@@ -1,0 +1,26 @@
+uuid: 6804d3fe-330c-4f71-9a02-f232a82a5ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sidebar_text.field_body
+    - paragraphs.paragraphs_type.sidebar_text
+  module:
+    - text
+id: paragraph.sidebar_text.default
+targetEntityType: paragraph
+bundle: sidebar_text
+mode: default
+content:
+  field_body:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

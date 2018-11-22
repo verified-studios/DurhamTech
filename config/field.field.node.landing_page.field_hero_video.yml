@@ -1,0 +1,23 @@
+uuid: df539a5d-9787-4ed8-88e9-4ce22ce2d71b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_video
+    - node.type.landing_page
+  module:
+    - link
+id: node.landing_page.field_hero_video
+field_name: field_hero_video
+entity_type: node
+bundle: landing_page
+label: 'Hero Video'
+description: 'Optional, will replace a banner image if set. Should be the URL Embed from Youtube, ex: https://www.youtube.com/embed/7GKhwgMbomY'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

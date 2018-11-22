@@ -1,0 +1,8 @@
+uuid: 666039a9-ad85-4095-9cf0-778ede958a8f
+langcode: en
+status: true
+dependencies: {  }
+id: adult-high-school-and-equiv
+label: 'College and Career Readiness'
+description: 'College and Career Readiness'
+locked: false

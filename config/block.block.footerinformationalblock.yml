@@ -1,0 +1,25 @@
+uuid: 654d7c26-f034-441c-b31f-41cd9b195c27
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1fed216a-bd22-4501-ab13-a35a1631af13'
+  module:
+    - block_content
+  theme:
+    - durhamtech
+id: footerinformationalblock
+theme: durhamtech
+region: footer
+weight: -7
+provider: null
+plugin: 'block_content:1fed216a-bd22-4501-ab13-a35a1631af13'
+settings:
+  id: 'block_content:1fed216a-bd22-4501-ab13-a35a1631af13'
+  label: 'Footer Informational Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

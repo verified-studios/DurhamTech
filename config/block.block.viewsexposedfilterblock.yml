@@ -1,0 +1,29 @@
+uuid: ee7f1187-b5dd-4404-9765-86dfa4074cfb
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.programs_search
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: viewsexposedfilterblock
+theme: durhamtech
+region: above_content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:programs_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:programs_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/programs\r\n/academic-programs\r\n/programs-search"
+    negate: false
+    context_mapping: {  }

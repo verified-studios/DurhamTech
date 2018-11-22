@@ -1,0 +1,8 @@
+uuid: f07cb7d3-ec02-4497-836b-394e7f3c7830
+langcode: en
+status: true
+dependencies: {  }
+id: 2017-2018-college-catalog-a
+label: 'College Catalog and Student Handbook'
+description: 'Links for College Catalog and Student Handbook page'
+locked: false

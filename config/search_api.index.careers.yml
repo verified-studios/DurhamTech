@@ -1,0 +1,116 @@
+uuid: 5b36b831-8dc4-4057-87c6-e46e3f7a03ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_learn_category
+    - field.storage.node.field_degree_option
+    - field.storage.node.field_description
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+id: careers
+name: 'Careers Index'
+description: ''
+read_only: false
+field_settings:
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+  field_learn_category:
+    label: 'Learn Category'
+    datasource_id: 'entity:node'
+    property_path: field_learn_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_learn_category
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  field_degree_option:
+    label: 'Basic Education Requirement'
+    datasource_id: 'entity:node'
+    property_path: field_degree_option
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_degree_option
+  field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text
+    boost: 0.5
+    dependencies:
+      config:
+        - field.storage.node.field_description
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - career
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  ignore_character:
+    all_fields: false
+    fields:
+      - title
+      - field_description
+    ignorable: '[''¿¡!?,.:;]'
+    strip:
+      character_sets:
+        Pc: Pc
+        Pd: Pd
+        Pe: Pe
+        Pf: Pf
+        Pi: Pi
+        Po: Po
+        Ps: Ps
+        Cc: 0
+        Cf: 0
+        Co: 0
+        Mc: 0
+        Me: 0
+        Mn: 0
+        Sc: 0
+        Sk: 0
+        Sm: 0
+        So: 0
+        Zl: 0
+        Zp: 0
+        Zs: 0
+    weights:
+      preprocess_index: -10
+      preprocess_query: -10
+  rendered_item: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - title
+      - field_description
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  add_url: {  }
+  aggregated_field: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 100
+server: durham_tech

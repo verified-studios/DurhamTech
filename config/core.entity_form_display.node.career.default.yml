@@ -1,0 +1,137 @@
+uuid: ee55c370-17d2-4e23-be16-14375b86781e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.career.field_banner_image
+    - field.field.node.career.field_career_statistics
+    - field.field.node.career.field_career_url
+    - field.field.node.career.field_degree_option
+    - field.field.node.career.field_description
+    - field.field.node.career.field_learn_category
+    - field.field.node.career.field_percentage_infographic
+    - field.field.node.career.field_related_programs
+    - field.field.node.career.field_title_image
+    - node.type.career
+  module:
+    - paragraphs
+    - path
+id: node.career.default
+targetEntityType: node
+bundle: career
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_career_statistics:
+    type: paragraphs
+    weight: 2
+    settings:
+      title: Statistic
+      title_plural: Statistics
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_career_url:
+    weight: 52
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_degree_option:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_learn_category:
+    weight: 51
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_percentage_infographic:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Infographic
+      title_plural: Infographics
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_related_programs:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  path:
+    type: path
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  field_average_salary: true
+  field_banner_image: true
+  field_title_image: true
+  promote: true
+  sticky: true

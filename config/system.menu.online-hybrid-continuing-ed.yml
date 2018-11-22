@@ -1,0 +1,8 @@
+uuid: cd49b787-bcc5-48b1-8d47-55a8413639ed
+langcode: en
+status: true
+dependencies: {  }
+id: online-hybrid-continuing-ed
+label: 'Online/Hybrid Continuing Education Courses'
+description: 'Online/Hybrid Continuing Education Courses'
+locked: false

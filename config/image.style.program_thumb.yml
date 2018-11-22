@@ -1,0 +1,14 @@
+uuid: 7cf75e9f-82df-428a-863e-d5c070e73b35
+langcode: en
+status: true
+dependencies: {  }
+name: program_thumb
+label: 'Program Thumb'
+effects:
+  a023433e-a9ff-46d5-b0cc-788cb87a821d:
+    uuid: a023433e-a9ff-46d5-b0cc-788cb87a821d
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 500

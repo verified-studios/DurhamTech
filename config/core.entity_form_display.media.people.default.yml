@@ -1,0 +1,54 @@
+uuid: c566010c-0a44-4a01-9a42-f0564fdc0ef7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.people.field_person_image
+    - image.style.thumbnail
+    - media_entity.bundle.people
+  module:
+    - image
+    - path
+id: media.people.default
+targetEntityType: media
+bundle: people
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_person_image:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

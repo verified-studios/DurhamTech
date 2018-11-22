@@ -1,0 +1,8 @@
+uuid: e4990784-a1de-43d4-932d-fb459f2b58c5
+langcode: en
+status: true
+dependencies: {  }
+id: practical-nursing
+label: 'Practical Nursing'
+description: 'Practical Nursing program pages'
+locked: false

@@ -1,0 +1,19 @@
+uuid: b84269b2-d91c-4ccd-8465-bc6628eeb6d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.application_deadline
+    - field.field.paragraph.application_deadline.field_app_deadline_date
+    - field.field.paragraph.application_deadline.field_app_deadline_description
+    - field.field.paragraph.application_deadline.field_term
+    - paragraphs.paragraphs_type.application_deadline
+id: paragraph.application_deadline.application_deadline
+targetEntityType: paragraph
+bundle: application_deadline
+mode: application_deadline
+content: {  }
+hidden:
+  field_app_deadline_date: true
+  field_app_deadline_description: true
+  field_term: true

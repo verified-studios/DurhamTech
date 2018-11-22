@@ -1,0 +1,8 @@
+uuid: cba4da39-66e9-4915-99e4-89198a0c66ab
+langcode: en
+status: true
+dependencies: {  }
+id: community
+label: Community
+description: 'Links for Community'
+locked: false

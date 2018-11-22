@@ -1,0 +1,8 @@
+uuid: cdde0d4c-aeca-4c9f-b9e8-5f475423457c
+langcode: en
+status: true
+dependencies: {  }
+id: campuses-and-locations
+label: 'Campuses and Locations'
+description: 'Menu of Campuses and Locations'
+locked: false

@@ -1,0 +1,16 @@
+uuid: c7083d61-3f58-43f9-bea8-0b27965caf45
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity_image
+id: banner_image
+label: 'Banner Image'
+description: 'Media bundle for banner images'
+type: image
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  source_field: field_banner_image
+  gather_exif: false
+field_map: {  }

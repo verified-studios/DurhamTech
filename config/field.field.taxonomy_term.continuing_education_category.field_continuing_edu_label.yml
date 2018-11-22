@@ -1,0 +1,21 @@
+uuid: 5a9e672e-d4a9-4134-89b0-88107c6c7b89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_continuing_edu_label
+    - taxonomy.vocabulary.continuing_education_category
+id: taxonomy_term.continuing_education_category.field_continuing_edu_label
+field_name: field_continuing_edu_label
+entity_type: taxonomy_term
+bundle: continuing_education_category
+label: continuing_edu_label
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Find Courses'
+default_value_callback: ''
+settings: {  }
+field_type: string

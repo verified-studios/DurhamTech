@@ -1,0 +1,27 @@
+uuid: 177ab812-b8f3-4d2e-a526-0616d94442eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_course_outline
+    - taxonomy.vocabulary.course
+  module:
+    - file
+id: taxonomy_term.course.field_course_outline
+field_name: field_course_outline
+entity_type: taxonomy_term
+bundle: course
+label: 'Course Outline'
+description: 'File upload for course outline.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: course_outlines
+  file_extensions: 'txt pdf doc docx'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

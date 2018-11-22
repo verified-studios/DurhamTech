@@ -1,0 +1,32 @@
+uuid: dbb433ad-e26c-4e64-b3b4-27e1a617cee2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.alert.body
+    - node.type.alert
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.alert.default
+targetEntityType: node
+bundle: alert
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  links: true

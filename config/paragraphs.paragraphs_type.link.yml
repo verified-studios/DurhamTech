@@ -1,0 +1,9 @@
+uuid: 93cc1f2f-c786-46b9-a3b5-7dbbd7c39c40
+langcode: en
+status: true
+dependencies: {  }
+id: link
+label: Link
+icon_uuid: null
+description: 'Displays a link (internal or external) that can be modified with options (button style, alignment).'
+behavior_plugins: {  }

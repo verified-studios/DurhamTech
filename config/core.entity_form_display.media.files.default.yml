@@ -1,0 +1,39 @@
+uuid: 921e76ab-3e4e-445d-966c-8b3361a75323
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.files.field_file
+    - media_entity.bundle.files
+  module:
+    - file
+    - path
+id: media.files.default
+targetEntityType: media
+bundle: files
+mode: default
+content:
+  field_file:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

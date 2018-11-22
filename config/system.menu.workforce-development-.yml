@@ -1,0 +1,8 @@
+uuid: 39ea1a60-aee6-4f88-9713-abb21d91aec4
+langcode: en
+status: true
+dependencies: {  }
+id: workforce-development-
+label: 'Workforce Development '
+description: 'Links for Workforce Development '
+locked: false

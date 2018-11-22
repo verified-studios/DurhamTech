@@ -1,0 +1,21 @@
+uuid: 32e88eb0-0607-4444-857d-ce278c89eec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rich_text
+    - node.type.event
+  module:
+    - text
+id: node.event.field_rich_text
+field_name: field_rich_text
+entity_type: node
+bundle: event
+label: Description
+description: 'Description of the event'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

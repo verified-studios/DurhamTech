@@ -1,0 +1,108 @@
+id: course_data_taxonomy
+label: Course program data for taxonomy terms
+migration_group: durhamtech_colleague_migrate
+migration_tags:
+  - courses
+  - taxonomy
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+source:
+  plugin: csv
+  path: 'public://import/course/courses.csv'
+  header_row_count: 1
+  keys:
+    - Name
+  fields:
+    Name: Unique identifier for the course as in the data source.
+    Title: Name of the course.
+    Type: Type of course.
+    Description_BR: Description of the course.
+    Division: Broad category of the course.
+    Department: Specific category of the course.
+    Credits: How many credits the course is worth.
+    Delivery Method: How the course will be presented.
+    Sec Acad Level: This field indicates the academic area of the course.
+    Xcrs Local Description: Description that can be entered locally by DT Personnel.
+    Prerequisites: Requisite classes required before taking this course.
+    Corequisites: Corequisites.
+    Requisites: Requisites.
+    Seats Available: Seats Available.
+    Total Cost: Course Cost.
+    Contact Hours: Contact Hours.
+migration_dependencies:
+  optional: {}
+  required: {}
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: course
+process:
+  name: Name
+  field_title: Title
+  field_description: Description_BR
+  field_credits: Credits
+  field_requisites_text: Requisites
+  field_class_format:
+    -
+      plugin: static_map
+      source: Delivery Method
+      map:
+        HY: Hybrid
+        TR: Classroom
+        IN: Online
+        DL: Online
+        CP: Classroom
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: class_format
+      value_key: name
+  field_department:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: department
+    value_key: name
+    source: Department
+  field_division:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: department
+    value_key: name
+    source: Division
+  field_academic_level:
+    -
+      plugin: static_map
+      source: Sec Acad Level
+      map:
+        CU: Curriculum
+        CE: Continuing Education
+        BSP: ESL
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: academic_level
+      value_key: name
+  field_local_description:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Xcrs Local Description
+    -
+      plugin: durhamtech_course_strip_tags
+      source: Xcrs Local Description
+  field_corequisites‎:
+    -
+      plugin: durhamtech_course_outline
+      source: Corequisites
+    -
+      plugin: iterator
+      process:
+        target_id: '0'
+  field_seats: Seats Available
+  field_average_cost: Total Cost
+  field_contact_hours: Contact Hours

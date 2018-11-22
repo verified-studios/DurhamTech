@@ -1,0 +1,8 @@
+uuid: bda9bf69-d9a0-4062-a7ba-74b33234e917
+langcode: en
+status: true
+dependencies: {  }
+id: honors-program
+label: 'Honors Program'
+description: 'Honors Program menu'
+locked: false

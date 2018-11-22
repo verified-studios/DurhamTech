@@ -1,0 +1,31 @@
+uuid: cfe4ff56-74ee-49f4-a0ab-22c504949ac7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistic_infographic.field_percentage
+    - field.field.paragraph.statistic_infographic.field_subtitle
+    - paragraphs.paragraphs_type.statistic_infographic
+id: paragraph.statistic_infographic.default
+targetEntityType: paragraph
+bundle: statistic_infographic
+mode: default
+content:
+  field_percentage:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_subtitle:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: f4fbb4e0-29dc-404e-a60d-7d068a85bb20
+langcode: en
+status: true
+dependencies: {  }
+id: body
+label: Body
+icon_uuid: null
+description: 'Rich text field using CKEditor for body content.'
+behavior_plugins: {  }

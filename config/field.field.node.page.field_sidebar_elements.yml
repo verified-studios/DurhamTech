@@ -1,0 +1,66 @@
+uuid: ca70f9d4-05b2-43eb-82dd-7218cc4686e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar_elements
+    - node.type.page
+    - paragraphs.paragraphs_type.sidebar_links
+    - paragraphs.paragraphs_type.sidebar_text
+  module:
+    - entity_reference_revisions
+id: node.page.field_sidebar_elements
+field_name: field_sidebar_elements
+entity_type: node
+bundle: page
+label: 'Sidebar Elements'
+description: 'Various elements that will be placed in a sidebar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      sidebar_links: sidebar_links
+      sidebar_text: sidebar_text
+    target_bundles_drag_drop:
+      body:
+        weight: 12
+        enabled: false
+      class:
+        weight: 13
+        enabled: false
+      header:
+        weight: 14
+        enabled: false
+      image_and_text:
+        weight: 15
+        enabled: false
+      link:
+        weight: 16
+        enabled: false
+      quote:
+        weight: 17
+        enabled: false
+      sidebar_links:
+        enabled: true
+        weight: 18
+      statistic:
+        weight: 19
+        enabled: false
+      sidebar_text:
+        enabled: true
+        weight: 20
+      statistic_infographic:
+        weight: 20
+        enabled: false
+      statistic_with_icon:
+        weight: 21
+        enabled: false
+      statistic_with_subtitle:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

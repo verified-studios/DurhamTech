@@ -1,0 +1,97 @@
+uuid: 10d247eb-d872-4a44-8af0-1f3ad9120101
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_location
+    - field.storage.node.field_event_date
+    - field.storage.node.field_event_type
+    - field.storage.node.field_featured
+    - field.storage.node.field_feature_event_image
+    - search_api.server.durham_tech
+  module:
+    - search_api
+    - node
+id: event_index
+name: 'Event Index'
+description: ''
+read_only: false
+field_settings:
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+  field_event_location:
+    label: 'Event Location'
+    datasource_id: 'entity:node'
+    property_path: field_event_location
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_location
+  field_event_date:
+    label: 'Event Date'
+    datasource_id: 'entity:node'
+    property_path: field_event_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_date
+  field_event_type:
+    label: 'Event Type'
+    datasource_id: 'entity:node'
+    property_path: field_event_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_event_type
+  field_featured:
+    label: Featured
+    datasource_id: 'entity:node'
+    property_path: field_featured
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_featured
+  field_feature_event_image:
+    label: 'Feature Event Image'
+    datasource_id: 'entity:node'
+    property_path: field_feature_event_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_feature_event_image
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  aggregated_field: {  }
+  add_url: {  }
+  rendered_item: {  }
+tracker_settings:
+  default: {  }
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

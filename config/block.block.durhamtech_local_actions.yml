@@ -1,0 +1,20 @@
+uuid: 39a26a52-2f9b-407c-bf35-b6b83c193572
+langcode: en
+status: true
+dependencies:
+  theme:
+    - durhamtech
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: durhamtech_local_actions
+theme: durhamtech
+region: content
+weight: -11
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

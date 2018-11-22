@@ -1,0 +1,44 @@
+uuid: 60b0128f-e35f-4cca-8eaf-57395cceb86a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.files.field_file
+    - media_entity.bundle.files
+  module:
+    - file
+id: media.files.default
+targetEntityType: media
+bundle: files
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 2
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  field_file:
+    weight: 1
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  name:
+    label: hidden
+    type: string
+    weight: 0
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  thumbnail: true
+  uid: true

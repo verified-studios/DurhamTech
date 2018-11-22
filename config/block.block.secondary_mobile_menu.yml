@@ -1,0 +1,27 @@
+uuid: ff8ceb65-9f0e-443a-8d0a-5738feca3756
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary-menu
+  module:
+    - menu_block
+  theme:
+    - durhamtech
+id: secondary_mobile_menu
+theme: durhamtech
+region: navigation_collapsible
+weight: -10
+provider: null
+plugin: 'menu_block:secondary-menu'
+settings:
+  id: 'menu_block:secondary-menu'
+  label: 'Secondary Mobile Menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'secondary-menu:'
+  suggestion: secondary_mobile_menu
+visibility: {  }

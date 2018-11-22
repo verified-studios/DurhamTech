@@ -1,0 +1,37 @@
+uuid: 10202623-221e-4105-ab85-8ae5896d29bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.tab
+    - field.field.taxonomy_term.tabs.field_tab_background_image
+    - field.field.taxonomy_term.tabs.field_tab_body
+    - field.field.taxonomy_term.tabs.field_tab_links
+    - field.field.taxonomy_term.tabs.field_tab_text
+    - taxonomy.vocabulary.tabs
+  module:
+    - panelizer
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.tabs.tab
+targetEntityType: taxonomy_term
+bundle: tabs
+mode: tab
+content:
+  field_tab_text:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  description: true
+  field_tab_background_image: true
+  field_tab_body: true
+  field_tab_links: true

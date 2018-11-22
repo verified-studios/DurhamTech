@@ -1,0 +1,9 @@
+uuid: aca51346-75de-4618-8d09-a9c3e1b8bd03
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_panel
+label: 'Landing Page panel'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

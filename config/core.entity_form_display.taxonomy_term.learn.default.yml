@@ -1,0 +1,48 @@
+uuid: 1d5410c1-f9bf-48fa-b01a-2abbc8334f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.learn.field_background_image
+    - image.style.thumbnail
+    - taxonomy.vocabulary.learn
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.learn.default
+targetEntityType: taxonomy_term
+bundle: learn
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_background_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

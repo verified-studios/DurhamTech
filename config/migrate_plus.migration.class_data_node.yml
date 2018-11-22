@@ -1,0 +1,174 @@
+uuid: ade77b66-7796-4009-81f9-5b3374c66863
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: fxhy9qZ8dpi-H2soYxHQZ64XCd3cwaHtVrJVMU2FwZQ
+id: class_data_node
+migration_tags:
+  - classes
+  - nodes
+migration_group: durhamtech_colleague_migrate
+label: 'Individual class data for nodes.'
+source:
+  plugin: csv
+  path: 'public://import/courses.csv'
+  header_row_count: 1
+  keys:
+    - Id
+  fields:
+    Id: 'Id of the class offering.'
+    Name: 'Name of the class.'
+    Title: 'Title of class.'
+    Type: 'Type of class.'
+    'Delivery Method': 'How the course will be presented.'
+    'Meeting Days': 'Days of the week the class meets.'
+    'Start Date': 'Starting date of the class.'
+    'End Date': 'Ending date of the class.'
+    'Start Time': 'Starting time of the class.'
+    'End Time': 'Ending time of the class.'
+    Location: 'General location of the class.'
+    Building: 'Distinct building class is located in.'
+    Room: 'Room number where the class is located in.'
+  constants:
+    bool_0: 0
+    bool_1: 1
+    uid_root: 1
+process:
+  title:
+    plugin: concat
+    source:
+      - Title
+      - Name
+      - Id
+    delimiter: '-'
+  promote: constants/bool_0
+  uid: constants/uid_root
+  field_class_id: Id
+  field_course:
+    plugin: entity_generate
+    entity_type: taxonomy_term
+    bundle_key: vid
+    bundle: course
+    value_key: name
+    source: Name
+  field_delivery_method:
+    -
+      plugin: static_map
+      source: 'Delivery Method'
+      map:
+        HY: Hybrid
+        TR: Classroom
+        IN: Online
+        DL: Online
+        CP: Classroom
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: class_format
+      value_key: name
+  field_start_date:
+    plugin: format_date
+    from_format: n/j/Y
+    to_format: n/j/Y
+    source: 'Start Date'
+  field_end_date:
+    plugin: format_date
+    from_format: n/j/Y
+    to_format: n/j/Y
+    source: 'End Date'
+  field_building:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: Building
+    -
+      plugin: static_map
+      source: Building
+      map:
+        MC01: 'White (Building 1)'
+        MC02: 'Collins (Building 2)'
+        MC03: 'Phillips (Building 3)'
+        MC04: 'Newton (Building 4)'
+        MC05: 'ERC (Building 5)'
+        MC06: 'CEC (Building 6)'
+        MC07: 'Facility Services (Building 7)'
+        MC08: 'Building 8'
+        MC09: 'Building 9'
+        MC10: 'Wynn (Building 10)'
+        MC20: 'Bacon (Building 20)'
+        OC01: OCC
+        ND01: NDC
+        OL: Online
+        CLIN: Clinical
+        TBA: TBA
+        OCSD: OCSD
+        AUGC: AUGC
+        BAH: BAH
+        CFD: CFD
+        CFLR: CFLR
+        CJRC: CJRC
+        CREE: CREE
+        DADM: DADM
+        DCAO: DCAO
+        DCCR: DCCR
+        DDFS: DDFS
+        DECI: DECI
+        DLOD: DLOD
+        DRES: DRES
+        ECH: ECH
+        ECHC: ECHC
+        EFLA: EFLA
+        FWRK: FWRK
+        HDSS: HDSS
+        HILL: HILL
+        HOLD: HOLD
+        IC: IC
+        MERC: MERC
+        MTOL: RTP
+        NDC: NDC
+        NDC2: NDC2
+        OCC: OCC
+        OCC1: OCC1
+        OCCC: OCCC
+        ORGG: ORGG
+        PGDS: PGDS
+        R66: R66
+        SORS: SORS
+        SOUT: SBB
+        TROS: TROS
+        UMC: UMC
+        WCRS: WCRS
+        COC: COC
+        DPD: DPD
+        ROTA: Rotation
+        CHUR: CHUR
+        ORRU: ORRU
+        SMT: SMT
+        DSN: DSN
+        DUFM: DUFM
+        UBC: UBC
+  field_location:
+    -
+      plugin: callback
+      callable: strtolower
+      source: Location
+    -
+      plugin: static_map
+      bypass: true
+      map:
+        mc: main_campus
+        int: internet
+  class_items:
+    plugin: durhamtech_room_migrate
+    source: Id
+destination:
+  plugin: 'entity:node'
+  default_bundle: class
+migration_dependencies:
+  optional: {  }
+  required: {  }

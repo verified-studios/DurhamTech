@@ -1,0 +1,22 @@
+body.path-user {
+  .main-container {
+    padding: 5rem;
+
+    @include respondto(xs, sm) {
+      padding: 3rem 1rem;
+    }
+  }
+
+  nav.tabs {
+
+    @include respondto(xs, sm) {
+    }
+  }
+
+  .user-login-form {
+    margin: 2rem;
+
+    @include respondto(xs, sm) {
+    }
+  }
+}

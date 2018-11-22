@@ -1,0 +1,23 @@
+uuid: 9395e567-9279-48c3-aa07-ec9411c67009
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multi_column_content
+    - field.storage.block_content.field_columns
+id: block_content.multi_column_content.field_columns
+field_name: field_columns
+entity_type: block_content
+bundle: multi_column_content
+label: Columns
+description: 'Number of columns. They will stack for mobile.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 4
+  prefix: ''
+  suffix: ''
+field_type: integer

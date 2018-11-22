@@ -1,0 +1,19 @@
+uuid: 81573e87-20d9-41a4-8778-51bf3b680933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_header
+    - paragraphs.paragraphs_type.landing_page_panel
+id: paragraph.landing_page_panel.field_header
+field_name: field_header
+entity_type: paragraph
+bundle: landing_page_panel
+label: Header
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

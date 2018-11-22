@@ -1,0 +1,110 @@
+uuid: ca2b6bcc-6012-4cfb-9d75-45cd3f342f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor
+    - editor_file
+third_party_settings:
+  editor_file:
+    status: true
+    scheme: public
+    directory: inline-files
+    extensions: 'txt pdf doc docx html'
+_core:
+  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
+format: basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - Outdent
+            - Indent
+            - Superscript
+            - Subscript
+        -
+          name: Styling
+          items:
+            - TextColor
+            - BGColor
+            - Styles
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+            - Youtube
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Components
+          items:
+            - HorizontalRule
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalFile
+            - DrupalImage
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+        -
+          name: Tools
+          items:
+            - PasteFromWord
+            - PasteText
+            - Source
+      -
+        -
+          name: Tables
+          items:
+            - tableinsert
+            - tabledelete
+            - tableproperties
+            - tablerowinsertbefore
+            - tablerowinsertafter
+            - tablerowdelete
+            - tablecolumninsertbefore
+            - tablecolumninsertafter
+            - tablecolumndelete
+            - tablecellinsertbefore
+            - tablecellinsertafter
+            - tablecelldelete
+            - tablecellproperties
+            - tablecellsmerge
+            - tablecellmergeright
+            - tablecellmergedown
+            - tablecellsplithorizontal
+            - tablecellsplitvertical
+  plugins:
+    stylescombo:
+      styles: "span.btn|Default Button\r\nspan.btn.btn-large|Large Button\r\nspan.btn.btn-outline|Outlined Button\r\nspan.btn.btn-full|Full-width Button\r\n"
+    language:
+      language_list: un
+    colorbutton:
+      colors: 'FFFFFF,000000,CED2D5,262626,4C4C4C,CC4700,19975D,81BE41,99C221,E87722,808990,FDC504'
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

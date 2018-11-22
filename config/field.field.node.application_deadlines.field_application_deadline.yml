@@ -1,0 +1,67 @@
+uuid: 224bd071-1d04-4480-9b5c-c5eb08b2169c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_deadline
+    - node.type.application_deadlines
+    - paragraphs.paragraphs_type.application_deadline
+  module:
+    - entity_reference_revisions
+id: node.application_deadlines.field_application_deadline
+field_name: field_application_deadline
+entity_type: node
+bundle: application_deadlines
+label: 'Application Deadline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      application_deadline: application_deadline
+    target_bundles_drag_drop:
+      application_deadline:
+        enabled: true
+        weight: 14
+      body:
+        weight: 15
+        enabled: false
+      class:
+        weight: 16
+        enabled: false
+      header:
+        weight: 17
+        enabled: false
+      image_and_text:
+        weight: 18
+        enabled: false
+      link:
+        weight: 19
+        enabled: false
+      quote:
+        weight: 20
+        enabled: false
+      sidebar_links:
+        weight: 21
+        enabled: false
+      sidebar_text:
+        weight: 22
+        enabled: false
+      statistic:
+        weight: 23
+        enabled: false
+      statistic_infographic:
+        weight: 24
+        enabled: false
+      statistic_with_icon:
+        weight: 25
+        enabled: false
+      statistic_with_subtitle:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

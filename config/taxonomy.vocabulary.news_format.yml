@@ -1,0 +1,9 @@
+uuid: e3974c04-575f-45b6-b232-dc877f34e704
+langcode: en
+status: true
+dependencies: {  }
+name: 'News Format'
+vid: news_format
+description: 'Format of news article, used for organizing and filtering news content. Flat structure'
+hierarchy: 0
+weight: 0

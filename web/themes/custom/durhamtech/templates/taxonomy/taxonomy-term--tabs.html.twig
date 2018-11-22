@@ -1,0 +1,80 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a taxonomy term.
+ *
+ * Available variables:
+ * - url: URL of the current term.
+ * - name: Name of the current term.
+ * - content: Items for the content of the term (fields and description).
+ *   Use 'content' to print them all, or print a subset such as
+ *   'content.description'. Use the following code to exclude the
+ *   printing of a given child element:
+ *   @code
+ *   {{ content|without('description') }}
+ *   @endcode
+ * - attributes: HTML attributes for the wrapper.
+ * - page: Flag for the full page state.
+ * - term: The taxonomy term entity, including:
+ *   - id: The ID of the taxonomy term.
+ *   - bundle: Machine name of the current vocabulary.
+ * - view_mode: View mode, e.g. 'full', 'teaser', etc.
+ *
+ * @see template_preprocess_taxonomy_term()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set active = '' %}
+{% set show = '' %}
+{% set ariaSelected = 'false' %}
+
+{% if term.id == '2435' %}
+  {% set active = 'active' %}
+  {% set show = 'in' %}
+  {% set ariaSelected = 'true' %}
+{% endif %}
+
+{% if view_mode == 'tab' %}
+
+  <a
+    class="nav-link apply-tab btn btn-block btn-outline btn-lg"
+    id="apply-tab-{{ term.id }}"
+    data-toggle="tab"
+    href="#apply-tab-{{ term.id }}-pane"
+    role="tab"
+    aria-controls="apply-tab-{{ term.id }}-pane"
+    aria-selected="{{ ariaSelected }}">
+    {{ content.field_tab_text[0] }}
+  </a>
+
+{% else %}
+
+  <div
+    class="tab-pane apply-pane fade {{ show }} {{ active }}"
+    id="apply-tab-{{ term.id }}-pane"
+    role="tabpanel"
+    aria-labelledby="apply-tab-{{ term.id }}"
+  >
+    <div class="tab-pane--content">
+      <h2>{{ name }}</h2>
+
+      {% if user.hasPermission('administer nodes') %}
+        <a href="/taxonomy/term/{{ term.id }}/edit?destination={{ path('<current>') }}">Edit</a>
+      {% endif %}
+
+      <p>{{ content.field_tab_body[0] }}</p>
+
+      {% if content.field_tab_links.0['#title'] != '' %}
+        <a href="{{ content.field_tab_links.0['#url'] }}" class="btn btn-white">{{ content.field_tab_links.0['#title'] }}</a>
+      {% endif %}
+
+      {% if content.field_tab_links.1['#title'] != '' %}
+        <a href="{{ content.field_tab_links.1['#url'] }}" class="btn btn-green">{{ content.field_tab_links.1['#title'] }}</a>
+      {% endif %}
+    </div>
+
+  </div>
+
+{% endif %}

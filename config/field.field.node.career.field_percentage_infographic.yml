@@ -1,0 +1,58 @@
+uuid: 365f8bd3-ab58-4597-9f52-7142985756f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_percentage_infographic
+    - node.type.career
+    - paragraphs.paragraphs_type.statistic_infographic
+  module:
+    - entity_reference_revisions
+id: node.career.field_percentage_infographic
+field_name: field_percentage_infographic
+entity_type: node
+bundle: career
+label: 'Percentage Infographic'
+description: 'Infographic used to describe a percentage value relating to the career.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      statistic_infographic: statistic_infographic
+    target_bundles_drag_drop:
+      body:
+        weight: 11
+        enabled: false
+      class:
+        weight: 12
+        enabled: false
+      header:
+        weight: 13
+        enabled: false
+      image_and_text:
+        weight: 14
+        enabled: false
+      link:
+        weight: 15
+        enabled: false
+      quote:
+        weight: 16
+        enabled: false
+      statistic:
+        weight: 17
+        enabled: false
+      statistic_infographic:
+        enabled: true
+        weight: 18
+      statistic_with_icon:
+        weight: 19
+        enabled: false
+      statistic_with_subtitle:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

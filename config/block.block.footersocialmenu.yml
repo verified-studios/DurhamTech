@@ -1,0 +1,27 @@
+uuid: a4a0519f-a43b-43f2-b035-29494518c7e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-social-menu
+  module:
+    - menu_block
+  theme:
+    - durhamtech
+id: footersocialmenu
+theme: durhamtech
+region: footer_bottom_2
+weight: 0
+provider: null
+plugin: 'menu_block:footer-social-menu'
+settings:
+  id: 'menu_block:footer-social-menu'
+  label: 'Footer social menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'footer-social-menu:'
+  suggestion: footer_social_menu
+visibility: {  }

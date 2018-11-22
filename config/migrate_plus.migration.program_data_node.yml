@@ -1,0 +1,87 @@
+uuid: 74adea3f-cdea-47b4-823c-37f6c217d237
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: rhz46hFOfIZ3CSUW1u6-DkVN6Fr58_mA9OlNBHAdlTI
+id: program_data_node
+migration_tags:
+  - classes
+  - nodes
+migration_group: durhamtech_colleague_migrate
+label: 'Individual program data for nodes.'
+source:
+  plugin: csv
+  path: 'public://import/programs.csv'
+  header_row_count: 1
+  keys:
+    - 'Program ID'
+  fields:
+    'Program ID': 'Id of the program.'
+    'Program Title': 'Title of program.'
+    Description_BR: 'Description of program.'
+    'Program Types': 'Type of program.'
+    'Academic Level': 'Academic Level of the program.'
+    'Min Required Credits': 'Minimum Required Credits.'
+    'Min Required Institutional Credits': 'Minimum Required Institutional Credits.'
+    'Min Required Institutional GPA': 'Minimum Required Institutional GPA.'
+    'Required Courses': 'Course Outline.'
+    'Total Cost': 'Estimated Cost.'
+    'Cred Type': 'Cred Type.'
+  constants:
+    bool_0: 0
+    uid_root: 1
+process:
+  title: 'Program Title'
+  promote: constants/bool_0
+  uid: constants/uid_root
+  field_description: Description_BR
+  field_program_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: 'Program Types'
+    -
+      plugin: durhamtech_program_explode
+      source: 'Program Types'
+    -
+      plugin: durhamtech_program_type
+      process:
+        target_id: '0'
+  field_program_id: 'Program ID'
+  field_program_cost: 'Total Cost'
+  field_min_required_credits: 'Min Required Credits'
+  field_min_required_inst: 'Min Required Institutional Credits'
+  field_min_required_inst_gpa: 'Min Required Institutional GPA'
+  field_courses:
+    -
+      plugin: durhamtech_course_outline
+      source: 'Required Courses'
+    -
+      plugin: iterator
+      process:
+        target_id: '0'
+  field_cred_type:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: 'Cred Type'
+    -
+      plugin: entity_generate
+      entity_type: taxonomy_term
+      bundle_key: vid
+      bundle: 'Cred Type'
+      value_key: name
+      source: 'Cred Type'
+  field_active:
+    -
+      plugin: set_active
+destination:
+  plugin: 'entity:node'
+  default_bundle: program
+migration_dependencies:
+  optional: {  }
+  required: {  }

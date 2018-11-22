@@ -1,0 +1,38 @@
+cdn_provider: ''
+_core:
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: 'public://favicon_0.ico'
+  url: 'https://webdev.durhamtech.edu/sites/default/files/favicon.ico'
+  use_default: false
+schemas:
+  bootstrap: 8000
+  durhamtech: 8000
+region_wells:
+  alerts: ''
+  navigation: ''
+  navigation_collapsible: ''
+  secondary_nav: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  above_content: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: ''
+  footer_bottom: ''
+  footer_bottom_2: ''
+table_hover: 0
+table_responsive: '-1'
+table: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: true

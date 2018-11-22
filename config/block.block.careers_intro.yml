@@ -1,0 +1,31 @@
+uuid: c2e16646-d83c-410a-aa4d-e5e01bb4c262
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:multi_column_content:5dd2a610-141d-4876-8218-14f1298f8d78'
+  module:
+    - block_content
+    - system
+  theme:
+    - durhamtech
+id: careers_intro
+theme: durhamtech
+region: above_content
+weight: 0
+provider: null
+plugin: 'block_content:5dd2a610-141d-4876-8218-14f1298f8d78'
+settings:
+  id: 'block_content:5dd2a610-141d-4876-8218-14f1298f8d78'
+  label: 'Careers Intro'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /careers
+    negate: false
+    context_mapping: {  }

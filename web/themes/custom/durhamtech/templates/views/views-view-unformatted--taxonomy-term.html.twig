@@ -1,0 +1,95 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ *
+ * @ingroup themeable
+ */
+#}
+{#{ kint(view.args|keys) }#}
+{#{ kint(drupal_entity('taxonomy_term', view.args.0)['#taxonomy_term'].parent|keys) }#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+{% if view.current_display != 'course_offering' %}
+  <h3 class="section-title">Upcoming Class <span class="green">Offerings</span></h3>
+  <table class="class-offerings">
+    <tbody>
+    <tr>
+      <th>Dates</th>
+      <th>Building</th>
+      <th>Room</th>
+      <th>Time</th>
+      <th>Format</th>
+    </tr>
+    {% for row in rows %}
+        {%
+            set row_classes = [
+            default_row_class ? 'views-row',
+        ]
+        %}
+        {{ row.content }}
+        {#{% if loop.index == 1 %}
+          {{ kint(row.content['#node'].field_delivery_method.0.target_id) }}
+        {% endif %}
+      <tr>
+        {#{ kint(row.content['#node']|keys) }#}
+        {#{% set format_tid = row.content['#node'].field_delivery_method.0.target_id %}
+        <td>{{ row.content['#node'].field_start_date.value }} - {{ row.content['#node'].field_end_date.value }}</td>
+        <td>Mondays 6:00pm - 9:00pm</td>
+        <td>Room Location<br />Campus Location</td>
+        <td>Instructor</td>
+        <td>{{ kint(row.content|keys) }}</td>#}
+
+
+    {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <h3 class="section-title">Upcoming Class Offerings for <span class="green">{{ view.args.1 }}</span></h3>
+  <table class="class-offerings">
+    <tbody>
+    <tr>
+      <th>Course Number</th>
+      <th>Title</th>
+      <th>Dates</th>
+      <th>Building</th>
+      <th>Room</th>
+      <th>Time</th>
+    </tr>
+    {% for row in rows %}
+        {%
+            set row_classes = [
+            default_row_class ? 'views-row',
+        ]
+        %}
+        {{ row.content }}
+        {#{% if loop.index == 1 %}
+          {{ kint(row.content['#node'].field_delivery_method.0.target_id) }}
+        {% endif %}
+      <tr>
+        {#{ kint(row.content['#node']|keys) }#}
+        {#{% set format_tid = row.content['#node'].field_delivery_method.0.target_id %}
+        <td>{{ row.content['#node'].field_start_date.value }} - {{ row.content['#node'].field_end_date.value }}</td>
+        <td>Mondays 6:00pm - 9:00pm</td>
+        <td>Room Location<br />Campus Location</td>
+        <td>Instructor</td>
+        <td>{{ kint(row.content|keys) }}</td>#}
+
+
+    {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

@@ -1,0 +1,363 @@
+/**
+ * Navbar styling.
+ */
+
+body {
+  // Fix horizontal scrolling on iOS devices.
+  // http://drupal.org/node/1870076
+  position: relative;
+
+  &.navbar-is-static-top {
+    margin-top: 0;
+  }
+  &.navbar-is-fixed-top {
+    margin-top: ($navbar-height + ($grid-gutter-width / 2));
+  }
+  &.navbar-is-fixed-bottom {
+    padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
+  }
+
+  @media #{$tablet} {
+    margin-top: ($grid-gutter-width / 2);
+  }
+  @media #{$mobile} {
+    &.toolbar-vertical {
+      &.navbar-is-fixed-top,
+      &.navbar-is-fixed-bottom {
+        .toolbar-bar {
+          position: fixed;
+        }
+        header {
+          z-index: 500;
+        }
+      }
+      // Default toolbar fixed height value.
+      // @see core/modules/toolbar/css/toolbar.icons.theme.css@261
+      &.navbar-is-fixed-top header {
+        top: 39px;
+      }
+    }
+  }
+}
+
+.nav {
+  > li {
+    > a {
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus {
+        background-color: transparent;
+        outline-color: $green;
+      }
+    }
+  }
+}
+.navbar.container {
+  @media #{$tablet} {
+    max-width: (($container-sm - $grid-gutter-width));
+  }
+  @media #{$normal} {
+    max-width: (($container-md - $grid-gutter-width));
+  }
+  @media #{$wide} {
+    max-width: (($container-lg - $grid-gutter-width));
+  }
+}
+
+// Branding.
+.navbar .logo {
+  margin-right: -($grid-gutter-width / 2);
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  @media #{$grid-breakpoint} {
+    margin-right: 0;
+    padding-left: 0;
+  }
+}
+
+// Branding
+.logo {
+  &:focus {
+    outline-color: $green;
+  }
+
+  img {
+    width: 283px;
+
+    @media #{$tablet} {
+      width: 200px;
+    }
+
+    @media #{$normal} {
+      width: 200px;
+    }
+
+    @media#{$wide} {
+      width: 283px;
+    }
+  }
+}
+
+// Menu items
+$main-nav-height: 60px;
+
+.menu.main-menu {
+  > li {
+    > a {
+      @include transition();
+      color: $dark-orange;
+
+      @media #{$normal} {
+        color: $black;
+      }
+
+      &:hover {
+        @include transition();
+      }
+    }
+  }
+
+  @media #{$tablet} {
+    margin: 6px 16px;
+
+    > li {
+      > a {
+        margin: 1.65rem 0;
+        padding: 0 1em;
+        font-size: 1.45rem;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        color: $gray;
+
+        &:hover {
+          color: $black;
+          background: transparent;
+          text-decoration: underline;
+        }
+      }
+
+      &:first-child > a:after {
+        padding-left: 0;
+      }
+
+      &:last-child > a:after {
+        padding-right: 0;
+        border-right: none;
+      }
+    }
+  }
+}
+
+.region-navigation-collapsible {
+  .secondary-menu {
+    @media #{$tablet} {
+      display: none;
+    }
+  }
+}
+
+#secondary-nav {
+  background-color: $transparent-black;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
+  &.secondary-nav-static {
+    position: static;
+    background-color: $black;
+  }
+
+  .secondary-menu {
+    display: none;
+
+    @media #{$tablet} {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+
+      > li {
+        flex-basis: 14%;
+
+        a {
+          color: $white;
+
+          &:focus {
+            outline-color: $brand-orange;
+          }
+        }
+
+        &:first-of-type a {
+          padding-left: 0;
+        }
+
+        &:last-of-type a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+// Toggle button
+.navbar-toggle {
+  padding: 14px 10px;
+
+  .icon-bar {
+    background-color: $black;
+  }
+}
+
+.page-header-wrapper {
+  background-color: $medium-green;
+
+  nav {
+    ul {
+      > li {
+        display: inline-block;
+
+        a {
+          color: $black;
+          display: inline-block;
+          padding: 1rem 1.5rem;
+
+          &:hover {
+            background-color: $white;
+            color: $black;
+          }
+        }
+
+        &.active {
+
+          a {
+            background-color: $white;
+            color: $black;
+            font-weight: 700;
+          }
+        }
+      }
+
+      &.second-tier {
+        display: inline-block;
+
+        li {
+
+          a {
+            background-color: $white;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+
+  .page-header-menu-cont-ed {
+    display: none;
+  }
+
+  // Only show Cont Ed sub nav on Cont Ed programs
+  &.program-ce-header-wrapper .page-header-menu-cont-ed {
+    display: block;
+  }
+
+  // Hide Admission sub nav on Cont Ed programs
+  &.program-ce-header-wrapper .page-header-menu {
+    display: none;
+  }
+}
+
+// Search Form
+.navbar-collapse {
+  .js-search-trigger {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    display: block;
+    margin: 6px;
+    padding: 15px 0;
+
+    @media #{$tablet} {
+      position: relative;
+      float: right;
+      bottom: auto;
+    }
+
+    button {
+      background: none;
+      border: none;
+      padding: 0;
+      svg, i {
+
+      }
+    }
+
+  }
+
+  &.in {
+    padding-bottom: 50px;
+
+    @media #{$tablet} {
+      padding-bottom: 0;
+    }
+  }
+}
+
+#searchbar {
+  background-color: $light-gray;
+  padding: 2rem 0;
+  z-index: 10;
+  width: 100%;
+  display: none;
+}
+.block-views-exposed-filter-blocksearch-page-1 {
+  position: relative;
+  .form-item {
+    display: block;
+    margin-right: 150px;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .form-actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 150px;
+
+    button {
+      width: 130px;
+      float: right;
+      margin-right: 0;
+    }
+  }
+}
+
+#block-durhamtech-main-menu {
+  .menu.main-menu {
+    float: right;
+  }
+}
+
+#block-secondary-mobile-menu {
+  width: 50%;
+
+  @media #{$tablet} {
+    width: auto;
+  }
+}
+
+.navbar {
+  margin-bottom: 0.55rem;
+}
+
+/*.navbar-nav {
+  > li {
+    > a {
+      padding-right:9px;
+    }
+  }
+}*/

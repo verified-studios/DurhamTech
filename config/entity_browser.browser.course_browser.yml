@@ -1,0 +1,41 @@
+uuid: 669c5652-1230-4cc1-9f8d-e2f5b0e114a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.files_browser
+  module:
+    - views
+name: course_browser
+label: 'Course Browser'
+display: iframe
+display_configuration:
+  width: 100%
+  height: '600'
+  link_text: 'Select Course Outline'
+  auto_open: true
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  b075d338-4a5e-4505-8195-3aab0be06ec9:
+    settings:
+      view: files_browser
+      view_display: course_browser
+      submit_text: 'Select Course Outine'
+      auto_select: false
+    uuid: b075d338-4a5e-4505-8195-3aab0be06ec9
+    weight: 1
+    label: Existing
+    id: view
+  fde3b6fc-e9ee-42c3-8b8d-7dcd30a65ab2:
+    settings:
+      upload_location: 'public://course_outlines'
+      multiple: true
+      submit_text: 'Select Course Outine'
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+    uuid: fde3b6fc-e9ee-42c3-8b8d-7dcd30a65ab2
+    weight: 2
+    label: Upload
+    id: upload

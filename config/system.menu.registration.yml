@@ -1,0 +1,8 @@
+uuid: 208ddac9-0c3d-412f-8fee-3e8830a65bec
+langcode: en
+status: true
+dependencies: {  }
+id: registration
+label: Registration
+description: 'Registration Menu'
+locked: false

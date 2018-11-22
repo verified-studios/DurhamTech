@@ -1,0 +1,8 @@
+uuid: 353ddc78-edd1-4ab8-b526-722adb1ac948
+langcode: en
+status: true
+dependencies: {  }
+id: student-services
+label: 'Student Services'
+description: ''
+locked: false

@@ -1,0 +1,9 @@
+uuid: 5756a1f3-483b-4ced-b28e-2c80ca1c19ae
+langcode: en
+status: true
+dependencies: {  }
+id: statistic_with_icon
+label: 'Statistic with Icon'
+icon_uuid: null
+description: 'Displays a statistic with an accompanying icon.'
+behavior_plugins: {  }

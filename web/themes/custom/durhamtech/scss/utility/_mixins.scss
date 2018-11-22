@@ -1,0 +1,60 @@
+/*
+ * Mixins for reusuable blocks of css.
+ */
+
+// Transitions
+@mixin transition($time: 0.2s, $prop: all, $timing: ease-in) {
+  transition: $time $prop $timing;
+}
+
+// Usage: "font-size: em(16)" will convert to "font-size: 1em"
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+// Usage: "font-size: rem(16)" will convert to "font-size: 1.6rem"
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels*0.1}rem;
+}
+
+@mixin border-radius($radius: 4px) {
+  border-radius: $radius;
+}
+
+// Named Breakpoints are phone, tablet-portrait, tablet-landscape-desktop, large-desktop, non-retina, retina
+@mixin respond-to($media) {
+  /* Mobile Devices for Mice */
+  @if $media == xxs {
+    @media (max-width: 360px) { @content; }
+  }
+
+  /* Landscape phones and down */
+  @if $media == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  /* Landscape phone to portrait tablet */
+  @if $media == sm {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+
+  /* Portrait tablet to landscape and desktop */
+  @if $media == md {
+    @media (min-width: 992px) and (max-width: 1199px) { @content; }
+  }
+
+  /* desktop and large desktop */
+  @if $media == lg {
+    @media (min-width: 1200px) and (max-width: 1439px) { @content; }
+  }
+
+  @if $media == xl {
+    @media (min-width: 1439px) and (max-width: 4200px) { @content; }
+  }
+}
+
+@mixin respondto($media...) {
+  @each $mediatype in $media {
+    @include respond-to($mediatype) { @content; }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: ebac9587-c262-4bb3-9146-e30279b5e9e0
+langcode: en
+status: true
+dependencies: {  }
+id: career-and-college-promise
+label: 'Career and College Promise'
+description: 'Career and College Promise'
+locked: false

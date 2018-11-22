@@ -1,0 +1,8 @@
+uuid: 04252c45-4472-44aa-90d1-66568733dd69
+langcode: en
+status: true
+dependencies: {  }
+id: dental-laboratory-technolog
+label: 'Dental Laboratory Technology Menu'
+description: 'For DLT How to Apply page'
+locked: false

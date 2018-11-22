@@ -1,0 +1,25 @@
+uuid: bd1920c8-5ab8-44fe-971b-9f2f520c6306
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header.field_alignment
+    - field.field.paragraph.header.field_header
+    - field.field.paragraph.header.field_size
+    - paragraphs.paragraphs_type.header
+id: paragraph.header.default
+targetEntityType: paragraph
+bundle: header
+mode: default
+content:
+  field_header:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_alignment: true
+  field_size: true

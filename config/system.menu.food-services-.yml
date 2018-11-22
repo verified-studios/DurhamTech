@@ -1,0 +1,8 @@
+uuid: 78c56e95-2d95-4b72-b2e6-c613359551e8
+langcode: en
+status: true
+dependencies: {  }
+id: food-services-
+label: 'Food Services '
+description: 'For Student Services'
+locked: false

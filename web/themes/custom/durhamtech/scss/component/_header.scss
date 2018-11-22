@@ -1,0 +1,157 @@
+.secondary-page-header {
+  position: relative;
+
+  .banner {
+    //box-shadow: inset 2px 2px 20px rgba($black, 0.1);
+    padding-top: 0;
+    position: relative;
+    //background-color: $gray;
+
+    //background: -moz-linear-gradient(bottom, rgba($black, 0.82) 20%, rgba($brand-gray, 0) 100%); /* FF3.6-15 */
+    //background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    //background: linear-gradient(to top, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    background-position: 0% 50%!important;
+    background-size: cover!important;
+
+    @media #{$tablet} {
+      padding-top: 50px;
+      min-height: 500px;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: -moz-linear-gradient(bottom, rgba($black, 0.82) 50%, rgba($brand-gray, 0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 50%,rgba($brand-gray, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to top, rgba($black, 0.82) 50%,rgba($brand-gray, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+      @media #{$wide} {
+        background: -moz-linear-gradient(bottom, rgba($black, 0.82) 20%, rgba($brand-gray, 0) 75%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 75%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to top, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+
+    &.banner-short {
+      min-height: auto;
+      padding-top: 0;
+
+      .banner-text-wrapper {
+        display: block;
+        position: static;
+        margin-top: 0;
+        padding: 4rem 0;
+      }
+
+      &--video {
+        //position: absolute;
+        //bottom: 0;
+        //left: 0;
+        width: 100%;
+        background-color: #000;
+
+        .banner-text-wrapper {
+          position: relative;
+        }
+      }
+    }
+
+    &--video {
+      padding-top: auto;
+      position: absolute;
+      min-height: auto;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &.video-on {
+      height: auto;
+      min-height: auto;
+      padding-bottom: 52.5%; /* Set ratio here */
+    }
+
+    // Banner text/header
+    .banner-text-wrapper {
+      margin-top: 5%;
+      position: relative;
+      width: 100%;
+      padding: 4rem 0;
+      text-shadow: 2px 2px 5px rgba($black, 0.25);
+
+      @media #{$tablet} {
+        padding: 15rem 0 4rem;
+      }
+
+      @media #{$wide} {
+        z-index: 5;
+        position: absolute;
+        bottom: 0;
+      }
+
+      .breadcrumb {
+        background-color: transparent;
+        color: $white;
+        font-weight: 300;
+        padding-left: 0;
+
+        a {
+          color: $light-gray;
+          margin-right: 10px;
+          text-decoration: underline;
+
+          &:hover {
+            color: $brand-orange;
+            text-decoration: none;
+          }
+        }
+
+        span {
+          color: $light-gray;
+          font-weight: 600;
+        }
+      }
+
+      .banner-title {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.apply-header .banner .banner-overlay {
+  background: -moz-linear-gradient(bottom, rgba($black, 0.82) 50%, rgba($brand-gray, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 50%,rgba($brand-gray, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to top, rgba($black, 0.82) 50%,rgba($brand-gray, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  @media #{$wide} {
+    background: -moz-linear-gradient(bottom, rgba($black, 0.82) 50%, rgba($brand-gray, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 50%,rgba($brand-gray, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, rgba($black, 0.82) 50%,rgba($brand-gray, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+}
+
+.path-frontpage .secondary-page-header {
+  .banner {
+    background-position: 0% 50%!important;
+    min-height: 650px;
+  }
+}

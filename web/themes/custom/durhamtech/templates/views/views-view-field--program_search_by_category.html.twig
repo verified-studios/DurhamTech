@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a single field in a view.
+ *
+ * Available variables:
+ * - view: The view that the field belongs to.
+ * - field: The field handler that can process the input.
+ * - row: The raw result of the database query that generated this field.
+ * - output: The processed output that will normally be used.
+ *
+ * When fetching output from the row this construct should be used:
+ * data = row[field.field_alias]
+ *
+ * The above will guarantee that you'll always get the correct data, regardless
+ * of any changes in the aliasing that might happen if the view is modified.
+ *
+ * @see template_preprocess_views_view_field()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set pathinfo =  view.request.pathinfo %}
+<div class="program-panel">
+{% if pathinfo == "/continuing-education" %}
+  {% if view.field.tid.original_value == "2442" %}
+    {% set link = "/continuing-education/small-business-center" %}
+  {% elseif view.field.tid.original_value == "559" %}
+    {% set link = "/corporate-education" %}
+  {% elseif view.field.tid.original_value == "555" %}
+    {% set link = "/college-and-career-readiness" %}
+  {% elseif row._entity.field_page_link.uri is not empty %}
+    {% set link = row._entity.field_page_link.0.url %}
+  {% else %}
+    {% set link = view.field.view_taxonomy_term.original_value %}
+  {% endif %}
+  <a href="{{ link }}"><h3>{{ view.field.name.original_value }}</h3></a>
+  <a href="{{ link }}" class="program-search--category--image"
+      style="background-image: url({{ file_url(row._entity.field_continuing_edu_thumbnail.entity.fileuri) }})"></a>
+  <div class="program-search--category--btn">
+      <a href="{{ link }}" class="btn btn-default btn-block"> {{ row._entity.field_continuing_edu_label.value }} </a>
+  </div>
+
+{% else %}
+  <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext="><h3>{{ view.field.name.original_value }}</h3></a>
+  <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext=" class="program-search--category--image"
+      style="background-image: url({{ file_url(row._entity.field_background_image.entity.fileuri) }})"></a>
+  <div class="program-search--category--btn">
+      <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext=" class="btn btn-default btn-block">Find Programs</a>
+  </div>
+
+{% endif %}
+</div>

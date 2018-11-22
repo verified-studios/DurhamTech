@@ -1,0 +1,108 @@
+uuid: 1af963d0-49af-4be3-91ce-728ff446c66d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.table_format
+    - field.field.node.class.field_building
+    - field.field.node.class.field_class_id
+    - field.field.node.class.field_class_item
+    - field.field.node.class.field_course
+    - field.field.node.class.field_delivery_method
+    - field.field.node.class.field_end_date
+    - field.field.node.class.field_end_time
+    - field.field.node.class.field_location
+    - field.field.node.class.field_meeting_days
+    - field.field.node.class.field_room
+    - field.field.node.class.field_start_date
+    - field.field.node.class.field_start_time
+    - node.type.class
+  module:
+    - datetime
+    - entity_reference_revisions
+    - options
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.class.table_format
+targetEntityType: node
+bundle: class
+mode: table_format
+content:
+  field_building:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_class_id:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_class_item:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_course:
+    type: entity_reference_entity_id
+    weight: 7
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_delivery_method:
+    weight: 5
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_end_date:
+    weight: 1
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_location:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_start_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_datetime
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  addtoany: true
+  field_end_time: true
+  field_meeting_days: true
+  field_room: true
+  field_start_time: true
+  links: true

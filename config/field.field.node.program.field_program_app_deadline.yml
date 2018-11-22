@@ -1,0 +1,32 @@
+uuid: 0d5fafff-5675-420c-be03-7b1af5db5343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_app_deadline
+    - node.type.application_deadlines
+    - node.type.program
+  content:
+    - 'node:application_deadlines:c163263f-3f2b-48b6-8e6b-c8d4d00ab0b6'
+id: node.program.field_program_app_deadline
+field_name: field_program_app_deadline
+entity_type: node
+bundle: program
+label: 'Application Deadline'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: c163263f-3f2b-48b6-8e6b-c8d4d00ab0b6
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      application_deadlines: application_deadlines
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 6f94fceb-b63c-486b-936e-3be88c0e427e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tab_body
+    - taxonomy.vocabulary.tabs
+  module:
+    - text
+id: taxonomy_term.tabs.field_tab_body
+field_name: field_tab_body
+entity_type: taxonomy_term
+bundle: tabs
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

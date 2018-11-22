@@ -1,0 +1,15 @@
+slick:
+  remote: http://kenwheeler.github.io/slick/
+  versieon: 1.x
+  license:
+    name: MIT
+    url: https://github.com/kenwheeler/slick/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    slick/slick/slick.min.js: { weight: -3, minified: true }
+  css:
+    base:
+      slick/slick/slick.css: {}
+      slick/slick/slick-theme.css: {}
+  dependencies:
+    - core/jquery

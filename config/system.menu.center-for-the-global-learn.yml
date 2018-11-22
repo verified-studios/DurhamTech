@@ -1,0 +1,8 @@
+uuid: 1ec286ee-8339-46c0-945f-0a90ab49988b
+langcode: en
+status: true
+dependencies: {  }
+id: center-for-the-global-learn
+label: 'Center for the Global Learner '
+description: 'menu for Center for the Global Learner '
+locked: false

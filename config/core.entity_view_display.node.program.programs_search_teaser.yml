@@ -1,0 +1,103 @@
+uuid: 39340145-63ff-4112-a32b-e33f7b9a0532
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.programs_search_teaser
+    - field.field.node.program.field_continuing_education_cat
+    - field.field.node.program.field_courses
+    - field.field.node.program.field_cred_type
+    - field.field.node.program.field_degree_option
+    - field.field.node.program.field_description
+    - field.field.node.program.field_financial_aid_eligible
+    - field.field.node.program.field_learn_category
+    - field.field.node.program.field_min_required_credits
+    - field.field.node.program.field_min_required_inst
+    - field.field.node.program.field_min_required_inst_gpa
+    - field.field.node.program.field_program_app_deadline
+    - field.field.node.program.field_program_cost
+    - field.field.node.program.field_program_department
+    - field.field.node.program.field_program_id
+    - field.field.node.program.field_program_image
+    - field.field.node.program.field_program_printable
+    - field.field.node.program.field_program_stats
+    - field.field.node.program.field_program_type
+    - field.field.node.program.field_rich_text
+    - field.field.node.program.field_statistic
+    - field.field.node.program.field_teaser_layout
+    - field.field.node.program.field_total_credit_hours
+    - node.type.program
+  module:
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.program.programs_search_teaser
+targetEntityType: node
+bundle: program
+mode: programs_search_teaser
+content:
+  field_degree_option:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_learn_category:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_program_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_total_credit_hours:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_continuing_education_cat: true
+  field_courses: true
+  field_cred_type: true
+  field_financial_aid_eligible: true
+  field_min_required_credits: true
+  field_min_required_inst: true
+  field_min_required_inst_gpa: true
+  field_program_app_deadline: true
+  field_program_cost: true
+  field_program_department: true
+  field_program_id: true
+  field_program_printable: true
+  field_program_stats: true
+  field_program_type: true
+  field_rich_text: true
+  field_statistic: true
+  field_teaser_layout: true
+  links: true

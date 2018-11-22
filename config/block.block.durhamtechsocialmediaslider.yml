@@ -1,0 +1,34 @@
+uuid: 368ac022-d356-4ee5-8ab9-8b29db827f94
+langcode: en
+status: true
+dependencies:
+  module:
+    - durhamtech_social
+    - node
+    - system
+  theme:
+    - durhamtech
+id: durhamtechsocialmediaslider
+theme: durhamtech
+region: content
+weight: -2
+provider: null
+plugin: durhamtech_social_block
+settings:
+  id: durhamtech_social_block
+  label: 'Durham Tech Social Media Slider'
+  provider: durhamtech_social
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/report-conduct\r\n/office-institutional-equity-and-inclusion\r\n"
+    negate: true
+    context_mapping: {  }

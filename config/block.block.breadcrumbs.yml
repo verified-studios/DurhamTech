@@ -1,0 +1,20 @@
+uuid: 2860190f-a4f9-4a1a-8319-311827abf51a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - durhamtech
+id: breadcrumbs
+theme: durhamtech
+region: secondary_nav
+weight: -12
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: visible
+visibility: {  }

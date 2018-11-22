@@ -1,0 +1,8 @@
+uuid: 4cf24989-390c-495c-acce-20e054399e6f
+langcode: en
+status: true
+dependencies: {  }
+id: current-f-1-or-seeking
+label: 'Current F-1 or Seeking'
+description: 'Current F-1 or Seeking menu'
+locked: false

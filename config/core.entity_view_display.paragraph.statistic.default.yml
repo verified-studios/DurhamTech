@@ -1,0 +1,30 @@
+uuid: 8c02b8e9-f5ff-4dbb-9f0f-007048aa967a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.statistic.field_data
+    - field.field.paragraph.statistic.field_header
+    - paragraphs.paragraphs_type.statistic
+id: paragraph.statistic.default
+targetEntityType: paragraph
+bundle: statistic
+mode: default
+content:
+  field_data:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_header:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

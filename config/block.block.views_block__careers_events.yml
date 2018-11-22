@@ -1,0 +1,30 @@
+uuid: b3955065-921d-4861-9aec-45b5e54a9962
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: views_block__careers_events
+theme: durhamtech
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:events-block_3'
+settings:
+  id: 'views_block:events-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /careers
+    negate: false
+    context_mapping: {  }

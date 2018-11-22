@@ -1,0 +1,10 @@
+uuid: c6f3e876-72e4-493d-9e31-e13714dc8e63
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.tab
+label: Tab
+targetEntityType: taxonomy_term
+cache: true

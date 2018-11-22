@@ -1,0 +1,176 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+*   or print a subset such as {{ content.field_example }}. Use
+*   {{ content|without('field_example') }} to temporarily suppress the printing
+*   of a given child element.
+* - author_picture: The node author user entity, rendered using the "compact"
+*   view mode.
+* - metadata: Metadata for this node.
+* - date: Themed creation date field.
+* - author_name: Themed author name field.
+* - url: Direct URL of the current node.
+* - display_submitted: Whether submission information should be displayed.
+* - attributes: HTML attributes for the containing element.
+*   The attributes.class element may contain one or more of the following
+*   classes:
+*   - node: The current template type (also known as a "theming hook").
+*   - node--type-[type]: The current node type. For example, if the node is an
+*     "Article" it would result in "node--type-article". Note that the machine
+*     name will often be in a short form of the human readable label.
+*   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+*     teaser would result in: "node--view-mode-teaser", and
+*     full: "node--view-mode-full".
+*   The following are controlled through the node publishing options.
+*   - node--promoted: Appears on nodes promoted to the front page.
+*   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+*     teaser listings.
+*   - node--unpublished: Appears on unpublished nodes visible only to site
+*     admins.
+* - title_attributes: Same as attributes, except applied to the main title
+*   tag that appears in the template.
+* - content_attributes: Same as attributes, except applied to the main
+*   content tag that appears in the template.
+* - author_attributes: Same as attributes, except applied to the author of
+*   the node tag that appears in the template.
+* - title_prefix: Additional output populated by modules, intended to be
+*   displayed in front of the main title tag that appears in the template.
+* - title_suffix: Additional output populated by modules, intended to be
+*   displayed after the main title tag that appears in the template.
+* - view_mode: View mode; for example, "teaser" or "full".
+* - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+* - page: Flag for the full page state. Will be true if view_mode is 'full'.
+* - readmore: Flag for more state. Will be true if the teaser content of the
+*   node cannot hold the main body content.
+* - logged_in: Flag for authenticated user status. Will be true when the
+*   current user is a logged-in member.
+* - is_admin: Flag for admin user status. Will be true when the current user
+*   is an administrator.
+*
+* @ingroup templates
+*
+* @see template_preprocess_node()
+*
+* @todo Remove the id attribute (or make it a class), because if that gets
+*   rendered twice on a page this is invalid CSS for example: two lists
+*   in different view modes.
+*/
+#}
+
+{% if view.current_display != 'course_offering' %}
+  <tr{{ attributes.addClass(classes) }}>
+    
+    {% set end_date = content.field_end_date.0['#text']|date('U') %}
+    <td>
+      {% if content.field_start_date.0['#text'] is not empty and content.field_end_date.0['#text'] is not empty %}
+        {% set start_date = content.field_start_date.0['#text']|date('n/j') %}
+        {% set end_date = content.field_end_date.0['#text']|date('n/j') %}
+        {{ start_date }} - {{ end_date }}
+      {% endif %}
+    </td>
+    <td>
+      <table>
+        <tbody>
+          {% if content.field_location or content.field_building %}
+          <tr>
+            <td>{{ content.field_location.0 }}</td>
+          </tr>
+          <tr>
+            <td>{{ content.field_building.0 }}</td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </td>
+    <td>
+      {% if content.field_class_item %}
+      <table>
+        <tbody>
+          {% for key, paragraph in content.field_class_item if key|first!='#' %}
+          <tr>
+            <td>{{ paragraph['#paragraph'].get('field_room').value }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+    </td>
+    <td>
+      <table>
+        <tbody>
+          {% for key, paragraph in content.field_class_item if key|first!='#' %}
+          {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
+          {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
+          <tr>
+            <td>{{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </td>
+    <td>
+      {% if content.field_delivery_method.0 == 'Hybrid' or content.field_delivery_method.0 == 'Online' %}
+        <a href="/distance-learning">{{ content.field_delivery_method.0|render }}</a>
+      {% else %}
+        {{ content.field_delivery_method.0|render }}
+      {% endif %}
+    </td>
+  </tr>
+{% else %}
+  <tr{{ attributes.addClass(classes) }}>
+    <td><a href="{{ view.args.3 }}">{{ view.args.2 }}</a></td>
+    <td>{{ view.args.1 }}</td>
+    {% set start_date = content.field_start_date.0['#text']|date('U') %}
+    {% set end_date = content.field_end_date.0['#text']|date('U') %}
+    <td>{{ start_date|format_date('custom', 'n/j') }} - {{ end_date|format_date('custom', 'n/j') }}</td>
+    <td>
+      <table>
+        <tbody>
+          {% if content.field_location or content.field_building %}
+          <tr>
+            <td>{{ content.field_location.0 }}</td>
+          </tr>
+          <tr>
+            <td>{{ content.field_building.0 }}</td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </td>
+    <td>
+      {% if content.field_class_item %}
+      <table>
+        <tbody>
+        {% for key, paragraph in content.field_class_item if key|first!='#' %}
+        <tr>
+          <td>{{ paragraph['#paragraph'].get('field_room').value }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+      {% endif %}
+    </td>
+    <td>
+      <table>
+        <tbody>
+        {% for key, paragraph in content.field_class_item if key|first!='#' %}
+        {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
+        {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
+        <tr>
+          <td>{{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </td>
+  </tr>
+{% endif %}
