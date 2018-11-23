@@ -14,7 +14,7 @@
         color: $gray;
 
         &:hover,
-        &:focus {
+          &:focus {
           color: $brand-orange;
         }
       }
@@ -30,8 +30,20 @@
         }
 
         > li > ul > li > ul { // 4th level menu
-          margin-left: 18px;
+                              margin-left: 18px;
         }
+      }
+    }
+    ._017-2018-college-catalog-a {
+      border-bottom: 1px solid #C1C1C1;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+    }
+    @media #{$tablet} {
+      ._017-2018-college-catalog-a {
+        border-bottom: none;
+        margin-bottom: auto;
+        padding-bottom: auto;
       }
     }
   }

@@ -105,8 +105,6 @@
     {% set program_stats_row_class = 'col-sm-3' %}
 {% endif %}
 
-
-
 {% if degreeOption == 'Continuing Education' %}
     {% set programType = 'program-ce' %}
 {% else %}
@@ -114,152 +112,144 @@
 {% endif %}
 
 <article{{ attributes.addClass(classes) }} id="{{ programType }}">
-
     {{ title_prefix }}
     {% if not page %}
-        <h2{{ title_attributes }}>
-            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h2>
+      <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
     {% endif %}
     {{ title_suffix }}
-    {#{ kint(content|keys) }#}
     <div {{ content_attributes.addClass('content') }}>
-        {#{ content }#}
-        <section{{ content_attributes.addClass('container', 'program') }}>
-            <div class="row program-header">
-                <h2 class="page-title">Program <span class="green">Overview</span></h3>
-                    <h3 class="program-name">{{ label }}</h3>
-            </div>
-            <div class="row program-info-row">
-                <div class="image">
-                    {{ content.field_program_image }}
-                    {% if content.field_financial_aid_eligible.0['#markup'] == "Yes" %}
-                        <br/>
-                        <div class="green">*This program is financial aid eligible.</div>
-                    {% endif %}
-                </div>
-                <div class="description">
-
-                    {{ content.field_description.0['#context'].value|raw  }}
-
-                    {% if content.field_rich_text.0 %}
-                        <br/>
-                        {{ content.field_rich_text }}
-                    {% endif %}
-                    {# application deadline and apply btn here #}
-
-                    {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
-                    {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
-                    {% set deadline = '' %}
-                    {% if override_app_deadline|render|striptags|trim != '' %}
-                        {% set deadline = override_app_deadline|render|striptags|trim %}
-                    {% else %}
-                        {% set deadline = default_app_deadline|render|striptags|trim %}
-                    {% endif %}
-
-                    {% if degreeOption == 'Continuing Education' %}
-                        <div class="row apply-row">
-                            <div class="apply col-sm-12">
-                                <a class="apply-btn btn btn-lg" href="/register-continuing-education">Register</a>
-                            </div>
-                        </div>
-                    {% else %}
-                        <div class="row apply-row">
-                            <div class="app-deadline green col-sm-6">Next Application Deadline is
-                                <strong>{{ deadline }}</strong></div>
-                            <div class="apply col-sm-6">
-                                <a class="apply-btn btn btn-lg" href="/apply">Apply Now</a>
-                            </div>
-                        </div>
-                    {% endif %}
-
-                </div>
-            </div>
-
-            {% if stats_count > 0 %}
-                <div class="row stats-row">
-                    {% if content.field_program_cost.0 %}
-                        <div class="{{ stats_row_class }}">
-                            <div class="paragraph--type--statistic">
-                                <div class="stat">
-                                    <div class="field--name-field-data">
-                                        ${{ content.field_program_cost.0 }}
-                                    </div>
-                                    <h4 class="stat-title">Estimated Tuition &amp; Fees</h4>
-                                </div>
-                            </div>
-                        </div>
-                    {% endif %}
-                    {% for key, stat in content.field_statistic if key|first!='#' %}
-                        <div class="{{ stats_row_class }}">
-                            {{ stat }}
-                        </div>
-                    {% endfor %}
-                </div>
+      <section{{ content_attributes.addClass('container', 'program') }}>
+        <div class="row program-header">
+          <h2 class="page-title">Program <span class="green">Overview</span></h2>
+          <h3 class="program-name">{{ label }}</h3>
+        </div>
+        <div class="row program-info-row">
+          <div class="image">
+            {{ content.field_program_image }}
+            {% if content.field_financial_aid_eligible.0['#markup'] == "Yes" %}
+              <br/>
+              <div class="green">*This program is financial aid eligible.</div>
             {% endif %}
-        </section>
+          </div>
+          <div class="description">
 
-        {% if program_stats_count > 0 %}
-            <section class="program-stats-wrapper program">
-                <div{{ content_attributes.addClass('container') }}>
-                    <h3 class="section-title">Program <span class="green">Stats</span></h3>
-                    <div class="row program-stats-row">
-                        {% for key, stat in content.field_program_stats if key|first!='#' %}
-                            <div class="{{ program_stats_row_class }}">
-                                {{ stat }}
-                            </div>
-                        {% endfor %}
+            {{ content.field_description.0['#context'].value|raw }}
+
+            {% if content.field_rich_text.0 %}
+              <br/>
+              {{ content.field_rich_text }}
+            {% endif %}
+            {# application deadline and apply btn here #}
+
+            {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
+            {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
+            {% set deadline = '' %}
+            {% if override_app_deadline|render|striptags|trim != '' %}
+              {% set deadline = override_app_deadline|render|striptags|trim %}
+            {% else %}
+              {% set deadline = default_app_deadline|render|striptags|trim %}
+            {% endif %}
+
+            {% if degreeOption == 'Continuing Education' %}
+              <div class="row apply-row">
+                <div class="apply col-sm-12">
+                  <a class="apply-btn btn btn-lg" href="/register-continuing-education">Register</a>
+                </div>
+              </div>
+            {% else %}
+              <div class="row apply-row">
+                <div class="app-deadline green col-sm-6">Next Application Deadline is
+                  <strong>{{ deadline }}</strong>
+                </div>
+                <div class="apply col-sm-6">
+                  <a class="apply-btn btn btn-lg" href="/apply">Apply Now</a>
+                </div>
+              </div>
+            {% endif %}
+
+          </div>
+        </div>
+
+        {% if stats_count > 0 %}
+          <div class="row stats-row">
+            {% if content.field_program_cost.0 %}
+              <div class="{{ stats_row_class }}">
+                <div class="paragraph--type--statistic">
+                  <div class="stat">
+                    <div class="field--name-field-data">
+                      ${{ content.field_program_cost.0 }}
                     </div>
+                    <h4 class="stat-title">Estimated Tuition &amp; Fees</h4>
+                  </div>
                 </div>
-            </section>
+              </div>
+            {% endif %}
+            {% for key, stat in content.field_statistic if key|first!='#' %}
+              <div class="{{ stats_row_class }}">
+                {{ stat }}
+              </div>
+            {% endfor %}
+          </div>
         {% endif %}
+    </section>
 
-        {% set upcoming_event = drupal_view('events', 'upcoming_program_events') %}
-        {{ upcoming_event }}
-
-        {% if content.field_program_printable.0 %}
-            <section style="background-color: #f2f2f2; padding: 5rem">
-                <div class="plan-of-study text-center">
-                    {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
-                    <a href="{{ file_url(printable_uri) }}" class="btn btn-2x" target="_blank"><i class="far fa-file-pdf"></i> &nbsp; Download Plan of
-                        Study <span class="ext" aria-label="(link opens in new window)"></span></a>
+      {% if program_stats_count > 0 %}
+        <section class="program-stats-wrapper program">
+          <div{{ content_attributes.addClass('container') }}>
+            <h3 class="section-title">Program <span class="green">Stats</span></h3>
+            <div class="row program-stats-row">
+              {% for key, stat in content.field_program_stats if key|first!='#' %}
+                <div class="{{ program_stats_row_class }}">
+                  {{ stat }}
                 </div>
-            </section>
-        {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </section>
+      {% endif %}
 
-        {% if degreeOption == 'Continuing Education' %}
-            {% set required_classes = ' Test ' %}
-        {% else %}
-            {% set required_classes = drupal_view('required_classes', 'required_classes') %}
-        {% endif %}
+      {% set upcoming_event = drupal_view('events', 'upcoming_program_events') %}
+      {{ upcoming_event }}
 
-        {% if required_classes|render|striptags|trim != '' %}
-            <section class="container required-classes">
+      {% if content.field_program_printable.0 %}
+        <section style="background-color: #f2f2f2; padding: 5rem">
+          <div class="plan-of-study text-center">
+            {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
+            <a href="{{ file_url(printable_uri) }}" class="btn btn-2x" target="_blank"><i class="far fa-file-pdf"></i> &nbsp; Download Plan of Study <span class="ext" aria-label="(link opens in new window)"></span></a>
+          </div>
+        </section>
+      {% endif %}
 
-                {% if degreeOption == 'Continuing Education' %}
-                {% else %}
-                    <h3 class="section-title">Upcoming <span class="green">Course Offerings</span></h3>
-                {% endif %}
+      {% if degreeOption == 'Continuing Education' %}
+        {% set required_classes = ' Test ' %}
+      {% else %}
+        {% set required_classes = drupal_view('required_classes', 'required_classes') %}
+      {% endif %}
 
-                {% if degreeOption == 'Continuing Education' %}
-                    {% for course in node.fields.field_courses %}
-                        {% set required_classes = drupal_view('taxonomy_term', 'course_offering', course.target_id, course.course_name, course.course_number, course.course_path) %}
-                        {{ required_classes }}
-                    {% endfor %}
+      {% if required_classes|render|striptags|trim != '' %}
+        <section class="container required-classes">
+          {% if degreeOption != 'Continuing Education' %}
+            <h3 class="section-title">Upcoming <span class="green">Course Offerings</span></h3>
+          {% endif %}
 
-                {% else %}
-                    {{ required_classes }}
-                {% endif %}
+          {% if degreeOption == 'Continuing Education' %}
+            {% for course in node.fields.field_courses %}
+              {% set required_classes = drupal_view('taxonomy_term', 'course_offering', course.target_id, course.course_name, course.course_number, course.course_path) %}
+              {{ required_classes }}
+            {% endfor %}
+          {% else %}
+            {{ required_classes }}
+          {% endif %}
+        </section>
+      {% endif %}
 
-            </section>
-        {% endif %}
+      {% set program_quotes = drupal_view('quotes_slideshow', 'program_quotes_block') %}
+      {% if program_quotes|render|striptags|trim != '' %}
+        {{ drupal_view('quotes_slideshow', 'program_quotes_block') }}
+      {% endif %}
 
-        {% set program_quotes = drupal_view('quotes_slideshow', 'program_quotes_block') %}
-        {% if program_quotes|render|striptags|trim != '' %}
-            {{ drupal_view('quotes_slideshow', 'program_quotes_block') }}
-        {% endif %}
-
-        
     </div>
 
 </article>
