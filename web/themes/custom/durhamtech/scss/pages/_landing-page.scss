@@ -2,321 +2,29 @@
   padding: 0;
 }
 
-.page-node-type-landing-page .footer {
-  margin-top: 0 !important;
-  border-top: none;
+.page-node-type-landing-page {
+  .footer {
+    margin-top: 0 !important;
+    border-top: none;
+  } 
+  .row {
+    margin-left: -1rem;
+    @media #{$tablet} {
+      margin-left: -1.500rem;
+      padding: 0 1rem;
+    }
+  }
+  .col-sm-6 {
+    margin-bottom: 1.5rem;
+    @media #{$tablet} {
+      margin-bottom: 0;
+    }
+  }
 }
 
 #applyTabContent {
   .contextual-region {
     position: static;
-  }
-}
-
-.landing-page.about .lp-related-links {
-    background: $offwhite;
-
-    ul {
-      columns: auto;
-      -webkit-columns: auto;
-      -moz-columns: auto;
-      margin: 0 auto;
-      max-width: 450px;
-    }
-}
-
-.landing-page.about .lp-masthead {
-  background-color: $white;
-
-  .views-row {
-    width: 33.3333333%;
-
-    //.cta-box {
-    //  height: 200px;
-    //}
-  }
-}
-
-.landing-page.about .lp-about-ctas {
-  background-color: $offwhite;
-
-  .views-row {
-    width: 50%;
-
-    .cta-box {
-      height: 200px;
-    }
-  }
-}
-
-.landing-page.apply-now {
-  .lp-vertical-tabs {
-    position: relative;
-    background-color: $gray;
-    color: $white !important;
-    }
-
-  .lp-deadlines {
-    .view-header {
-      h2 {
-        text-align: center;
-        margin-bottom: 4rem;
-      }
-    }
-
-    .view-content {
-      .views-row {
-
-        .views-field {
-          position: relative;
-
-          .date {
-            display: inline-block;
-            font-weight: 600;
-            line-height: 1;
-            padding-right: 10px;
-            text-align: center;
-            text-transform: uppercase;
-            width: 55px;
-            vertical-align: top;
-          }
-
-          .deadline-info {
-            border-left: 2px solid #000000;
-            display: inline-block;
-            padding-left: 30px;
-            width: calc(100% - 60px);
-            color: $brand-gray;
-
-            h3 {
-              color: $brand-gray;
-            }
-
-            .views-more-link {
-              border: 2px solid black;
-              padding: 1rem;
-              display: inline-block;
-              border-radius: 4px;
-              margin: 2rem 0;
-              font-weight: bold;
-              color: #000;
-
-              &:hover {
-                text-decoration: none;
-              }
-            }
-
-            @include respond-to(xs) {
-              border-left: none;
-              padding-left: 0;
-              margin-bottom: 20px;
-              border-bottom: 2px solid black;
-            }
-          }
-        }
-
-      }
-    }
-  }
-
-  .career-connect {
-    background: $offwhite;
-
-    h2,
-    h3 {
-      text-align: center;
-    }
-
-    h3 {
-      font-weight: 600;
-      margin-bottom: 3rem;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto !important;
-      border-radius: 4px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    button,
-    a.btn {
-      display: block;
-      border-radius: 4px;
-      border: 2px solid $black;
-      margin: 10px auto;
-      padding: 1rem;
-      background: none;
-      width: 100%;
-      text-align: center;
-      color: $black;
-
-      @media #{$normal} {
-        margin: 10px 0;
-      }
-    }
-
-    .welcome-desk-info,
-    button,
-    a.btn {
-      max-width: 450px;
-    }
-
-    .welcome-desk-info {
-      margin: 30px auto;
-      text-align: center;
-
-      @media #{$normal} {
-        margin: 30px 0;
-      }
-    }
-
-    button.btn-primary,
-    a.btn-primary {
-      border: none;
-      background-color: $green;
-      color: $white;
-    }
-  }
-
-  .lp-quote-region {
-    padding: 0;
-
-    .block-region-quote-region {
-      section {
-        padding: 0;
-      }
-
-      h2 {
-        color: $white;
-        width: 50%;
-      }
-
-      p {
-        color: $white;
-      }
-
-      @include respond-to(xs) {
-      }
-    }
-  }
-}
-
-.landing-page.choose .lp-get-started,
-.landing-page.admissions-enrollment .lp-get-started,
-.landing-page.about .lp-get-started {
-  background-color: $dark-gray;
-  position: relative;
-  overflow: hidden;
-  .views-row {
-    width: 25% !important;
-    min-width: 25% !important;
-
-    @include respondto(sm) {
-      width: 50% !important;
-      min-width: 50% !important;
-    }
-
-    @include respondto(xs) {
-      width: 80% !important;
-      min-width: 80% !important;
-    }
-
-    .cta-box {
-      height: 200px;
-    }
-  }
-}
-
-.landing-page.choose .lp-get-started .block-region-getstarted .views-row,
-.landing-page.admissions-enrollment .lp-get-started .block-region-getstarted .views-row,
-.landing-page.about .lp-get-started .block-region-getstarted .views-row {
-  display: inline-block;
-  width: auto !important;
-  min-width: auto !important;
-}
-
-.landing-page.choose {
-  .lp-masthead {
-    .views-row {
-      width: 50%;
-
-      .cta-box {
-        height: 200px;
-      }
-    }
-  }
-
-  .admissions {
-    background: $medium-green;
-    h3 {
-      text-align: center;
-    }
-
-    ul {
-      list-style-type: none;
-      text-align: center;
-      columns: 2;
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      margin: 0 auto;
-      max-width: 450px;
-    }
-  }
-
-  .related-links {
-    background: $offwhite;
-    ul {
-      columns: 3;
-      -webkit-columns: 2;
-      -moz-columns: 2;
-    }
-  }
-}
-
-.landing-page.admissions-enrollment {
-  .lp-masthead {
-    .views-row {
-      width: 50%;
-
-      .cta-box {
-        height: 200px;
-      }
-    }
-  }
-
-  .admissions {
-    background: $offwhite;
-
-    h3 {
-      margin-top: 20px;
-
-      @media #{$tablet} {
-        margin-top: 0;
-      }
-    }
-
-    ul {
-      list-style-type: none;
-      text-align: left;
-      //columns: 2;
-      //-webkit-columns: 2;
-      //-moz-columns: 2;
-      margin: 0 auto;
-      max-width: 450px;
-      padding-left: 0;
-      font-style: italic;
-    }
-  }
-
-  .related-links {
-    background: $offwhite;
-    //ul {
-    //  columns: 3;
-    //  -webkit-columns: 2;
-    //  -moz-columns: 2;
-    //}
   }
 }
 
@@ -432,7 +140,7 @@
 
 
         a:hover,
-        a:focus {
+          a:focus {
 
           img {
             opacity: 0.75;
@@ -509,7 +217,7 @@
 
   .slick--view--quotes-slideshow .svg-inline--fa.fa-w-14 {
     width: 0.5em;
-    
+
     @media #{$tablet} {
       width: 0.875em;
     }
@@ -533,6 +241,307 @@
 
     }
   }
+  &.choose {
+    .lp-masthead {
+      .views-row {
+        width: 100%;
+        @media #{$tablet} {
+          width: 49%;
+          min-width: 33.33333%;
+          margin: auto;
+        }
+
+        .cta-box {
+          height: 200px;
+        }
+      }
+    }
+
+    .admissions {
+      background: $medium-green;
+      h3 {
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        text-align: center;
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        margin: 0 auto;
+        max-width: 450px;
+      }
+    }
+
+    .related-links {
+      background: $offwhite;
+      ul {
+        columns: 3;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+      }
+    }
+  }
+  &.about {
+    .lp-related-links {
+      background: $offwhite;
+
+      ul {
+        columns: auto;
+        -webkit-columns: auto;
+        -moz-columns: auto;
+        margin: 0 auto;
+        max-width: 450px;
+      }
+    }
+
+    .lp-masthead {
+      background-color: $white;
+
+      .views-row {
+        width: 33.3333333%;
+      }
+    }
+
+    .lp-about-ctas {
+      background-color: $offwhite;
+
+      .views-row {
+        width: 50%;
+
+        .cta-box {
+          height: 200px;
+        }
+      }
+    }
+  }
+  &.apply-now {
+    .lp-vertical-tabs {
+      position: relative;
+      background-color: $gray;
+      color: $white !important;
+    }
+
+    .lp-deadlines {
+      .view-header {
+        h2 {
+          text-align: center;
+          margin-bottom: 4rem;
+        }
+      }
+
+      .view-content {
+        .views-row {
+
+          .views-field {
+            position: relative;
+
+            .date {
+              display: inline-block;
+              font-weight: 600;
+              line-height: 1;
+              padding-right: 10px;
+              text-align: center;
+              text-transform: uppercase;
+              width: 55px;
+              vertical-align: top;
+            }
+
+            .deadline-info {
+              border-left: 2px solid #000000;
+              display: inline-block;
+              padding-left: 30px;
+              width: calc(100% - 60px);
+              color: $brand-gray;
+
+              h3 {
+                color: $brand-gray;
+              }
+
+              .views-more-link {
+                border: 2px solid black;
+                padding: 1rem;
+                display: inline-block;
+                border-radius: 4px;
+                margin: 2rem 0;
+                font-weight: bold;
+                color: #000;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+
+              @include respond-to(xs) {
+                border-left: none;
+                padding-left: 0;
+                margin-bottom: 20px;
+                border-bottom: 2px solid black;
+              }
+            }
+          }
+
+        }
+      }
+    }
+
+    .career-connect {
+      background: $offwhite;
+
+      h2,
+      h3 {
+        text-align: center;
+      }
+
+      h3 {
+        font-weight: 600;
+        margin-bottom: 3rem;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto !important;
+        border-radius: 4px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      button,
+      a.btn {
+        display: block;
+        border-radius: 4px;
+        border: 2px solid $black;
+        margin: 10px auto;
+        padding: 1rem;
+        background: none;
+        width: 100%;
+        text-align: center;
+        color: $black;
+
+        @media #{$normal} {
+          margin: 10px 0;
+        }
+      }
+
+      .welcome-desk-info,
+      button,
+      a.btn {
+        max-width: 450px;
+      }
+
+      .welcome-desk-info {
+        margin: 30px auto;
+        text-align: center;
+
+        @media #{$normal} {
+          margin: 30px 0;
+        }
+      }
+
+      button.btn-primary,
+      a.btn-primary {
+        border: none;
+        background-color: $green;
+        color: $white;
+      }
+    }
+
+    .lp-quote-region {
+      padding: 0;
+
+      .block-region-quote-region {
+        section {
+          padding: 0;
+        }
+
+        h2 {
+          color: $white;
+          width: 50%;
+        }
+
+        p {
+          color: $white;
+        }
+
+        @include respond-to(xs) {
+        }
+      }
+    }
+  }
+  &.admissions-enrollment {
+    .lp-masthead {
+      .views-row {
+        width: 100%;
+        @media #{$tablet} {
+          width: 50%;
+        }
+
+        .cta-box {
+          height: 200px;
+        }
+      }
+    }
+
+    .admissions {
+      background: $offwhite;
+
+      h3 {
+        margin-top: 20px;
+
+        @media #{$tablet} {
+          margin-top: 0;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        text-align: left;
+        margin: 0 auto;
+        max-width: 450px;
+        padding-left: 0;
+        font-style: italic;
+      }
+    }
+
+    .related-links {
+      background: $offwhite;
+    }
+  }
+}
+
+.landing-page.choose .lp-get-started,
+.landing-page.admissions-enrollment .lp-get-started,
+.landing-page.about .lp-get-started {
+  background-color: $dark-gray;
+  position: relative;
+  overflow: hidden;
+  .views-row {
+    width: 25% !important;
+    min-width: 25% !important;
+
+    @include respondto(sm) {
+      width: 50% !important;
+      min-width: 50% !important;
+    }
+
+    @include respondto(xs) {
+      width: 80% !important;
+      min-width: 80% !important;
+    }
+
+    .cta-box {
+      height: 200px;
+    }
+  }
+}
+
+.landing-page.choose .lp-get-started .block-region-getstarted .views-row,
+.landing-page.admissions-enrollment .lp-get-started .block-region-getstarted .views-row,
+.landing-page.about .lp-get-started .block-region-getstarted .views-row {
+  display: inline-block;
+  width: auto !important;
+  min-width: auto !important;
 }
 
 .block-region-education {
@@ -571,7 +580,7 @@
     .view-id-categories {
       font-size: 1.600rem;
       .views-row {
-        padding-left: 10px;
+        /*padding-left: 10px;*/
       }
       li {
         margin-left: auto;
@@ -654,16 +663,16 @@
 
     a,
     a:visited,
-    a:hover,
-    a:focus {
+      a:hover,
+      a:focus {
       color: $white;
       font-size: 1.25rem;
     }
 
     a.cta-box,
     a.cta-box:visited,
-    a.cta-box:hover,
-    a.cta-box:focus {
+      a.cta-box:hover,
+      a.cta-box:focus {
       height: auto !important;
       position: static;
       background-color: transparent!important;
@@ -694,7 +703,7 @@
     }
 
     a.cta-box:hover,
-    a.cta-box:focus {
+      a.cta-box:focus {
       background-color: rgba($dark-gray, 0.5) !important;
       border: 2px solid rgba($white, 1);
     }
@@ -712,7 +721,7 @@
   transform:         none;
   padding: 15px;
   margin-bottom: 0;
-  
+
   @media #{$tablet} {
     margin-top: 4rem;
   }
@@ -778,7 +787,7 @@
 .apply-header {
   .banner {
     position: relative;
-    
+
     @media #{$normal} {
       min-height: 900px;
       //-moz-box-shadow:    none;
@@ -887,7 +896,7 @@
   }
 
   .btn-outline:hover,
-  .btn-outline:focus {
+    .btn-outline:focus {
     background-color: rgba($light-gray, 0.12);
     color: $white !important;
     border-color: $white !important;
@@ -966,7 +975,7 @@
 
 
   a.content:hover,
-  a.content:focus {
+    a.content:focus {
     text-decoration: none !important;
 
     h4,
@@ -1049,7 +1058,7 @@
   }
 
   a:hover,
-  a:focus {
+    a:focus {
     text-decoration: underline;
   }
 

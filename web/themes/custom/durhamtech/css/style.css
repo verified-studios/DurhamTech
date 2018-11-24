@@ -6585,12 +6585,18 @@ body {
     body.toolbar-vertical.navbar-is-fixed-top header {
       top: 39px; } }
 
-.nav > li > a:hover {
-  background-color: transparent; }
-
-.nav > li > a:focus {
-  background-color: transparent;
-  outline-color: #00843D; }
+.nav > li > a {
+  padding-left: 0.500rem;
+  padding-right: 0.500rem; }
+  @media screen and (min-width: 992px) {
+    .nav > li > a {
+      padding-left: 1.500rem;
+      padding-right: 1.500rem; } }
+  .nav > li > a:hover {
+    background-color: transparent; }
+  .nav > li > a:focus {
+    background-color: transparent;
+    outline-color: #00843D; }
 
 @media screen and (min-width: 768px) {
   .navbar.container {
@@ -7398,15 +7404,28 @@ table {
   flex-wrap: wrap;
   margin: 2rem -2rem; }
   .flex-view .view-content .views-row {
-    width: 33.33333%;
+    width: 100%;
     min-width: 33.33333%;
-    margin: auto; }
+    margin: 0 1rem; }
+    @media screen and (min-width: 768px) {
+      .flex-view .view-content .views-row {
+        width: 49%;
+        min-width: 33.33333%;
+        margin: auto; } }
+    @media screen and (min-width: 992px) {
+      .flex-view .view-content .views-row {
+        width: 33.33333%;
+        min-width: 33.33333%; } }
 
 .block-broken {
   display: none; }
 
 .cta-box-wrapper {
-  padding: 2rem; }
+  padding: 1.500rem;
+  width: 99%; }
+  @media screen and (min-width: 992px) {
+    .cta-box-wrapper {
+      padding: 2rem; } }
 
 a.cta-box,
 a.cta-box:visited {
@@ -7490,10 +7509,6 @@ a.cta-box:visited {
       padding: 0;
       width: 160%;
       font-size: 2.5rem; }
-      @media screen and (min-width: 992px) {
-        a.cta-box .cta-box--inner h3,
-        a.cta-box:visited .cta-box--inner h3 {
-          white-space: nowrap; } }
     a.cta-box .cta-box--inner p,
     a.cta-box:visited .cta-box--inner p {
       margin: 0;
@@ -7937,6 +7952,9 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     font-size: 1.35rem;
     margin-top: 1rem;
     color: #4c4c4c; }
+
+.stat-subtitle {
+  white-space: nowrap; }
 
 .program-search-buttons {
   padding: 3rem 0;
@@ -9066,233 +9084,21 @@ a.social-twitter:focus {
   margin-top: 0 !important;
   border-top: none; }
 
+.page-node-type-landing-page .row {
+  margin-left: -1rem; }
+  @media screen and (min-width: 768px) {
+    .page-node-type-landing-page .row {
+      margin-left: -1.500rem;
+      padding: 0 1rem; } }
+
+.page-node-type-landing-page .col-sm-6 {
+  margin-bottom: 1.5rem; }
+  @media screen and (min-width: 768px) {
+    .page-node-type-landing-page .col-sm-6 {
+      margin-bottom: 0; } }
+
 #applyTabContent .contextual-region {
   position: static; }
-
-.landing-page.about .lp-related-links {
-  background: #edeeef; }
-  .landing-page.about .lp-related-links ul {
-    columns: auto;
-    -webkit-columns: auto;
-    -moz-columns: auto;
-    margin: 0 auto;
-    max-width: 450px; }
-
-.landing-page.about .lp-masthead {
-  background-color: #FFFFFF; }
-  .landing-page.about .lp-masthead .views-row {
-    width: 33.3333333%; }
-
-.landing-page.about .lp-about-ctas {
-  background-color: #edeeef; }
-  .landing-page.about .lp-about-ctas .views-row {
-    width: 50%; }
-    .landing-page.about .lp-about-ctas .views-row .cta-box {
-      height: 200px; }
-
-.landing-page.apply-now .lp-vertical-tabs {
-  position: relative;
-  background-color: #262626;
-  color: #FFFFFF !important; }
-
-.landing-page.apply-now .lp-deadlines .view-header h2 {
-  text-align: center;
-  margin-bottom: 4rem; }
-
-.landing-page.apply-now .lp-deadlines .view-content .views-row .views-field {
-  position: relative; }
-  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .date {
-    display: inline-block;
-    font-weight: 600;
-    line-height: 1;
-    padding-right: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    width: 55px;
-    vertical-align: top; }
-  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
-    border-left: 2px solid #000000;
-    display: inline-block;
-    padding-left: 30px;
-    width: calc(100% - 60px);
-    color: #808990;
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info h3 {
-      color: #808990; }
-    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link {
-      border: 2px solid black;
-      padding: 1rem;
-      display: inline-block;
-      border-radius: 4px;
-      margin: 2rem 0;
-      font-weight: bold;
-      color: #000; }
-      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link:hover {
-        text-decoration: none; }
-    @media (max-width: 767px) {
-      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
-        border-left: none;
-        padding-left: 0;
-        margin-bottom: 20px;
-        border-bottom: 2px solid black; } }
-
-.landing-page.apply-now .career-connect {
-  background: #edeeef; }
-  .landing-page.apply-now .career-connect h2,
-  .landing-page.apply-now .career-connect h3 {
-    text-align: center; }
-  .landing-page.apply-now .career-connect h3 {
-    font-weight: 600;
-    margin-bottom: 3rem; }
-  .landing-page.apply-now .career-connect img {
-    max-width: 100%;
-    height: auto !important;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto; }
-  .landing-page.apply-now .career-connect button,
-  .landing-page.apply-now .career-connect a.btn {
-    display: block;
-    border-radius: 4px;
-    border: 2px solid #000000;
-    margin: 10px auto;
-    padding: 1rem;
-    background: none;
-    width: 100%;
-    text-align: center;
-    color: #000000; }
-    @media screen and (min-width: 992px) {
-      .landing-page.apply-now .career-connect button,
-      .landing-page.apply-now .career-connect a.btn {
-        margin: 10px 0; } }
-  .landing-page.apply-now .career-connect .welcome-desk-info,
-  .landing-page.apply-now .career-connect button,
-  .landing-page.apply-now .career-connect a.btn {
-    max-width: 450px; }
-  .landing-page.apply-now .career-connect .welcome-desk-info {
-    margin: 30px auto;
-    text-align: center; }
-    @media screen and (min-width: 992px) {
-      .landing-page.apply-now .career-connect .welcome-desk-info {
-        margin: 30px 0; } }
-  .landing-page.apply-now .career-connect button.btn-primary,
-  .landing-page.apply-now .career-connect a.btn-primary {
-    border: none;
-    background-color: #00843D;
-    color: #FFFFFF; }
-
-.landing-page.apply-now .lp-quote-region {
-  padding: 0; }
-  .landing-page.apply-now .lp-quote-region .block-region-quote-region {
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    .landing-page.apply-now .lp-quote-region .block-region-quote-region section {
-      padding: 0; }
-    .landing-page.apply-now .lp-quote-region .block-region-quote-region h2 {
-      color: #FFFFFF;
-      width: 50%; }
-    .landing-page.apply-now .lp-quote-region .block-region-quote-region p {
-      color: #FFFFFF; }
-
-.landing-page.choose .lp-get-started,
-.landing-page.admissions-enrollment .lp-get-started,
-.landing-page.about .lp-get-started {
-  background-color: #4c4c4c;
-  position: relative;
-  overflow: hidden; }
-  .landing-page.choose .lp-get-started .views-row,
-  .landing-page.admissions-enrollment .lp-get-started .views-row,
-  .landing-page.about .lp-get-started .views-row {
-    width: 25% !important;
-    min-width: 25% !important;
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .landing-page.choose .lp-get-started .views-row,
-      .landing-page.admissions-enrollment .lp-get-started .views-row,
-      .landing-page.about .lp-get-started .views-row {
-        width: 50% !important;
-        min-width: 50% !important; } }
-    @media (max-width: 767px) {
-      .landing-page.choose .lp-get-started .views-row,
-      .landing-page.admissions-enrollment .lp-get-started .views-row,
-      .landing-page.about .lp-get-started .views-row {
-        width: 80% !important;
-        min-width: 80% !important; } }
-    .landing-page.choose .lp-get-started .views-row .cta-box,
-    .landing-page.admissions-enrollment .lp-get-started .views-row .cta-box,
-    .landing-page.about .lp-get-started .views-row .cta-box {
-      height: 200px; }
-
-.landing-page.choose .lp-get-started .block-region-getstarted .views-row,
-.landing-page.admissions-enrollment .lp-get-started .block-region-getstarted .views-row,
-.landing-page.about .lp-get-started .block-region-getstarted .views-row {
-  display: inline-block;
-  width: auto !important;
-  min-width: auto !important; }
-
-.landing-page.choose .lp-masthead .views-row {
-  width: 50%; }
-  .landing-page.choose .lp-masthead .views-row .cta-box {
-    height: 200px; }
-
-.landing-page.choose .admissions {
-  background: #84BD00; }
-  .landing-page.choose .admissions h3 {
-    text-align: center; }
-  .landing-page.choose .admissions ul {
-    list-style-type: none;
-    text-align: center;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    margin: 0 auto;
-    max-width: 450px; }
-
-.landing-page.choose .related-links {
-  background: #edeeef; }
-  .landing-page.choose .related-links ul {
-    columns: 3;
-    -webkit-columns: 2;
-    -moz-columns: 2; }
-
-.landing-page.admissions-enrollment .lp-masthead .views-row {
-  width: 50%; }
-  .landing-page.admissions-enrollment .lp-masthead .views-row .cta-box {
-    height: 200px; }
-
-.landing-page.admissions-enrollment .admissions {
-  background: #edeeef; }
-  .landing-page.admissions-enrollment .admissions h3 {
-    margin-top: 20px; }
-    @media screen and (min-width: 768px) {
-      .landing-page.admissions-enrollment .admissions h3 {
-        margin-top: 0; } }
-  .landing-page.admissions-enrollment .admissions ul {
-    list-style-type: none;
-    text-align: left;
-    margin: 0 auto;
-    max-width: 450px;
-    padding-left: 0;
-    font-style: italic; }
-
-.landing-page.admissions-enrollment .related-links {
-  background: #edeeef; }
 
 .landing-page section {
   padding: 2rem 1rem; }
@@ -9433,6 +9239,239 @@ a.social-twitter:focus {
 .landing-page .slick .slick-prev {
   width: 46px; }
 
+.landing-page.choose .lp-masthead .views-row {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .landing-page.choose .lp-masthead .views-row {
+      width: 49%;
+      min-width: 33.33333%;
+      margin: auto; } }
+  .landing-page.choose .lp-masthead .views-row .cta-box {
+    height: 200px; }
+
+.landing-page.choose .admissions {
+  background: #84BD00; }
+  .landing-page.choose .admissions h3 {
+    text-align: center; }
+  .landing-page.choose .admissions ul {
+    list-style-type: none;
+    text-align: center;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    margin: 0 auto;
+    max-width: 450px; }
+
+.landing-page.choose .related-links {
+  background: #edeeef; }
+  .landing-page.choose .related-links ul {
+    columns: 3;
+    -webkit-columns: 2;
+    -moz-columns: 2; }
+
+.landing-page.about .lp-related-links {
+  background: #edeeef; }
+  .landing-page.about .lp-related-links ul {
+    columns: auto;
+    -webkit-columns: auto;
+    -moz-columns: auto;
+    margin: 0 auto;
+    max-width: 450px; }
+
+.landing-page.about .lp-masthead {
+  background-color: #FFFFFF; }
+  .landing-page.about .lp-masthead .views-row {
+    width: 33.3333333%; }
+
+.landing-page.about .lp-about-ctas {
+  background-color: #edeeef; }
+  .landing-page.about .lp-about-ctas .views-row {
+    width: 50%; }
+    .landing-page.about .lp-about-ctas .views-row .cta-box {
+      height: 200px; }
+
+.landing-page.apply-now .lp-vertical-tabs {
+  position: relative;
+  background-color: #262626;
+  color: #FFFFFF !important; }
+
+.landing-page.apply-now .lp-deadlines .view-header h2 {
+  text-align: center;
+  margin-bottom: 4rem; }
+
+.landing-page.apply-now .lp-deadlines .view-content .views-row .views-field {
+  position: relative; }
+  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .date {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    padding-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 55px;
+    vertical-align: top; }
+  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
+    border-left: 2px solid #000000;
+    display: inline-block;
+    padding-left: 30px;
+    width: calc(100% - 60px);
+    color: #808990;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info h3 {
+      color: #808990; }
+    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link {
+      border: 2px solid black;
+      padding: 1rem;
+      display: inline-block;
+      border-radius: 4px;
+      margin: 2rem 0;
+      font-weight: bold;
+      color: #000; }
+      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link:hover {
+        text-decoration: none; }
+    @media (max-width: 767px) {
+      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
+        border-left: none;
+        padding-left: 0;
+        margin-bottom: 20px;
+        border-bottom: 2px solid black; } }
+
+.landing-page.apply-now .career-connect {
+  background: #edeeef; }
+  .landing-page.apply-now .career-connect h2,
+  .landing-page.apply-now .career-connect h3 {
+    text-align: center; }
+  .landing-page.apply-now .career-connect h3 {
+    font-weight: 600;
+    margin-bottom: 3rem; }
+  .landing-page.apply-now .career-connect img {
+    max-width: 100%;
+    height: auto !important;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto; }
+  .landing-page.apply-now .career-connect button,
+  .landing-page.apply-now .career-connect a.btn {
+    display: block;
+    border-radius: 4px;
+    border: 2px solid #000000;
+    margin: 10px auto;
+    padding: 1rem;
+    background: none;
+    width: 100%;
+    text-align: center;
+    color: #000000; }
+    @media screen and (min-width: 992px) {
+      .landing-page.apply-now .career-connect button,
+      .landing-page.apply-now .career-connect a.btn {
+        margin: 10px 0; } }
+  .landing-page.apply-now .career-connect .welcome-desk-info,
+  .landing-page.apply-now .career-connect button,
+  .landing-page.apply-now .career-connect a.btn {
+    max-width: 450px; }
+  .landing-page.apply-now .career-connect .welcome-desk-info {
+    margin: 30px auto;
+    text-align: center; }
+    @media screen and (min-width: 992px) {
+      .landing-page.apply-now .career-connect .welcome-desk-info {
+        margin: 30px 0; } }
+  .landing-page.apply-now .career-connect button.btn-primary,
+  .landing-page.apply-now .career-connect a.btn-primary {
+    border: none;
+    background-color: #00843D;
+    color: #FFFFFF; }
+
+.landing-page.apply-now .lp-quote-region {
+  padding: 0; }
+  .landing-page.apply-now .lp-quote-region .block-region-quote-region {
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    .landing-page.apply-now .lp-quote-region .block-region-quote-region section {
+      padding: 0; }
+    .landing-page.apply-now .lp-quote-region .block-region-quote-region h2 {
+      color: #FFFFFF;
+      width: 50%; }
+    .landing-page.apply-now .lp-quote-region .block-region-quote-region p {
+      color: #FFFFFF; }
+
+.landing-page.admissions-enrollment .lp-masthead .views-row {
+  width: 100%; }
+  @media screen and (min-width: 768px) {
+    .landing-page.admissions-enrollment .lp-masthead .views-row {
+      width: 50%; } }
+  .landing-page.admissions-enrollment .lp-masthead .views-row .cta-box {
+    height: 200px; }
+
+.landing-page.admissions-enrollment .admissions {
+  background: #edeeef; }
+  .landing-page.admissions-enrollment .admissions h3 {
+    margin-top: 20px; }
+    @media screen and (min-width: 768px) {
+      .landing-page.admissions-enrollment .admissions h3 {
+        margin-top: 0; } }
+  .landing-page.admissions-enrollment .admissions ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 450px;
+    padding-left: 0;
+    font-style: italic; }
+
+.landing-page.admissions-enrollment .related-links {
+  background: #edeeef; }
+
+.landing-page.choose .lp-get-started,
+.landing-page.admissions-enrollment .lp-get-started,
+.landing-page.about .lp-get-started {
+  background-color: #4c4c4c;
+  position: relative;
+  overflow: hidden; }
+  .landing-page.choose .lp-get-started .views-row,
+  .landing-page.admissions-enrollment .lp-get-started .views-row,
+  .landing-page.about .lp-get-started .views-row {
+    width: 25% !important;
+    min-width: 25% !important;
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */
+    /* Mobile Devices for Mice */
+    /* Landscape phones and down */
+    /* Landscape phone to portrait tablet */
+    /* Portrait tablet to landscape and desktop */
+    /* desktop and large desktop */ }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .landing-page.choose .lp-get-started .views-row,
+      .landing-page.admissions-enrollment .lp-get-started .views-row,
+      .landing-page.about .lp-get-started .views-row {
+        width: 50% !important;
+        min-width: 50% !important; } }
+    @media (max-width: 767px) {
+      .landing-page.choose .lp-get-started .views-row,
+      .landing-page.admissions-enrollment .lp-get-started .views-row,
+      .landing-page.about .lp-get-started .views-row {
+        width: 80% !important;
+        min-width: 80% !important; } }
+    .landing-page.choose .lp-get-started .views-row .cta-box,
+    .landing-page.admissions-enrollment .lp-get-started .views-row .cta-box,
+    .landing-page.about .lp-get-started .views-row .cta-box {
+      height: 200px; }
+
+.landing-page.choose .lp-get-started .block-region-getstarted .views-row,
+.landing-page.admissions-enrollment .lp-get-started .block-region-getstarted .views-row,
+.landing-page.about .lp-get-started .block-region-getstarted .views-row {
+  display: inline-block;
+  width: auto !important;
+  min-width: auto !important; }
+
 .block-region-education:after {
   content: ' ';
   display: block;
@@ -9464,7 +9503,7 @@ a.social-twitter:focus {
   .block-region-education .view-id-categories {
     font-size: 1.600rem; }
     .block-region-education .view-id-categories .views-row {
-      padding-left: 10px; }
+      /*padding-left: 10px;*/ }
     .block-region-education .view-id-categories li {
       margin-left: auto;
       text-indent: inherit; }
