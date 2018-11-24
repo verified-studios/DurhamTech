@@ -43,6 +43,12 @@ body {
 .nav {
   > li {
     > a {
+      padding-left: 0.500rem;
+      padding-right: 0.500rem;
+      @media #{$normal} {
+        padding-left: 1.500rem;
+        padding-right: 1.500rem;
+      }
       &:hover {
         background-color: transparent;
       }
