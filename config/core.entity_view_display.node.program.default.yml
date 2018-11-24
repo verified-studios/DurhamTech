@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.program.field_active
     - field.field.node.program.field_continuing_education_cat
     - field.field.node.program.field_courses
     - field.field.node.program.field_cred_type
@@ -44,6 +45,16 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
+  field_active:
+    weight: 22
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_continuing_education_cat:
     weight: 19
     label: above
