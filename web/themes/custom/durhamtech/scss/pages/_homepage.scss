@@ -102,7 +102,7 @@
         position: relative;
         left: 0;
         top: 0;
-        height: 200px;
+        height: 150px;
         width: 100%;
         z-index: 5;
         overflow: hidden;
@@ -112,6 +112,12 @@
         padding-bottom: 1rem;
         display: block;
         margin-bottom: 1rem;
+        @media #{$normal} {
+          height: 175px;
+        }
+        @media #{$normal} {
+          height: 200px;
+        }
 
         img {
           position: absolute;
@@ -125,7 +131,10 @@
       p {
         font-weight: 300;
         font-size: 1em;
-        padding: 2rem 3rem;
+        padding: 1rem 3rem 2rem;
+        @media #{$normal} {
+          padding: 2rem;
+        }
       }
 
       &:nth-child(odd) {
