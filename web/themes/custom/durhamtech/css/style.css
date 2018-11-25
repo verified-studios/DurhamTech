@@ -7207,11 +7207,11 @@ p:last-child,
     [id^="block-footercolumn"] ul > li a {
       font-weight: 300;
       padding: 0;
-      padding-left: 1rem;
+      padding-left: 0.500rem;
       text-align: left; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
-    [id^="block-footercolumn"] ul > li a {
-      padding-left: 2rem; } }
+    @media screen and (min-width: 768px) and (min-width: 992px) {
+      [id^="block-footercolumn"] ul > li a {
+        padding-left: 2rem; } }
 
 .region-footer a {
   color: #FFFFFF; }
@@ -9512,12 +9512,13 @@ a.social-twitter:focus {
 
 .view-categories {
   padding: 0 2rem; }
-  .view-categories .views-row {
-    width: 100% !important;
+  .view-categories .view-content .views-row {
+    margin-left: 0;
     min-width: 100% !important;
-    padding-left: 1rem; }
-    .view-categories .views-row a,
-    .view-categories .views-row a:visited {
+    padding-left: 1rem;
+    width: 100% !important; }
+    .view-categories .view-content .views-row a,
+    .view-categories .view-content .views-row a:visited {
       font-weight: 600;
       line-height: 1.65em;
       margin-bottom: 1rem; }
@@ -9568,9 +9569,15 @@ a.social-twitter:focus {
       position: static;
       background-color: transparent !important;
       border: 2px solid rgba(255, 255, 255, 0.5);
-      padding: 1.25rem 2rem;
+      padding: 1.25rem 1rem;
       text-decoration: none !important;
       margin: 2rem 0; }
+      @media screen and (min-width: 768px) {
+        .block-region-getstarted .cta-box-wrapper a.cta-box,
+        .block-region-getstarted .cta-box-wrapper a.cta-box:visited,
+        .block-region-getstarted .cta-box-wrapper a.cta-box:hover,
+        .block-region-getstarted .cta-box-wrapper a.cta-box:focus {
+          padding: 1.25rem 2rem; } }
       .block-region-getstarted .cta-box-wrapper a.cta-box svg,
       .block-region-getstarted .cta-box-wrapper a.cta-box:visited svg,
       .block-region-getstarted .cta-box-wrapper a.cta-box:hover svg,
