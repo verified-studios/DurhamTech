@@ -10,17 +10,16 @@ use Drupal\migrate\Row;
  * Prepare course_outline data.
  *
  * @MigrateProcessPlugin(
- *   id = "durhamtech_course_outline"
+ *   id = "required_courses"
  * )
  */
-class ProgramCourseOutlinePlugin extends ProcessPluginBase {
+class RequiredCourses extends ProcessPluginBase {
 
   /**
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-    $course_outline_data_items = [];
-    //$value_array = explode(',', $value);
+    $required_courses_data_items = [];
     $taxonomyStorage = \Drupal::entityTypeManager()
       ->getStorage('taxonomy_term');
     $courses = $taxonomyStorage->loadTree('course');
@@ -38,13 +37,13 @@ class ProgramCourseOutlinePlugin extends ProcessPluginBase {
           $required_courses_array = explode(',', $required_courses);
           foreach ($courses as $course) {
             if (in_array($course->name, $required_courses_array)) {
-              $course_outline_data_items[$course->tid][] = $course->tid;
+              $required_courses_data_items[$course->tid][] = $course->tid;
             }
           }
         }
       }
     }
-    return $course_outline_data_items;
+    return $required_courses_data_items;
   }
 
 }

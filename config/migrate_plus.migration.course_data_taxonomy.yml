@@ -96,7 +96,7 @@ process:
       source: 'Xcrs Local Description'
   field_corequisites‎:
     -
-      plugin: durhamtech_course_outline
+      plugin: requisite_courses
       source: Corequisites
     -
       plugin: iterator

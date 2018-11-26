@@ -56,7 +56,7 @@ process:
   field_min_required_inst_gpa: 'Min Required Institutional GPA'
   field_courses:
     -
-      plugin: durhamtech_course_outline
+      plugin: required_courses
       source: 'Program ID'
     -
       plugin: iterator
