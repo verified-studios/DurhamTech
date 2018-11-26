@@ -1,0 +1,19 @@
+uuid: 3a17c7d5-ac6a-4a5c-9f91-97a073ab3f46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_program_id
+    - taxonomy.vocabulary.programs_course_list
+id: taxonomy_term.programs_course_list.field_program_id
+field_name: field_program_id
+entity_type: taxonomy_term
+bundle: programs_course_list
+label: field_program_id
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

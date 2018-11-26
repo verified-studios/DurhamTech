@@ -28,9 +28,7 @@ source:
     'Min Required Credits': 'Minimum Required Credits.'
     'Min Required Institutional Credits': 'Minimum Required Institutional Credits.'
     'Min Required Institutional GPA': 'Minimum Required Institutional GPA.'
-    'Required Courses': 'Course Outline.'
     'Total Cost': 'Estimated Cost.'
-    'Cred Type': 'Cred Type.'
   constants:
     bool_0: 0
     uid_root: 1
@@ -58,24 +56,12 @@ process:
   field_min_required_inst_gpa: 'Min Required Institutional GPA'
   field_courses:
     -
-      plugin: durhamtech_course_outline
-      source: 'Required Courses'
+      plugin: required_courses
+      source: 'Program ID'
     -
       plugin: iterator
       process:
         target_id: '0'
-  field_cred_type:
-    -
-      plugin: skip_on_empty
-      method: process
-      source: 'Cred Type'
-    -
-      plugin: entity_generate
-      entity_type: taxonomy_term
-      bundle_key: vid
-      bundle: 'Cred Type'
-      value_key: name
-      source: 'Cred Type'
   field_active:
     -
       plugin: set_active

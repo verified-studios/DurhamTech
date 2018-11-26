@@ -73,13 +73,13 @@ process:
       value_key: name
   field_start_date:
     plugin: format_date
-    from_format: n/j/Y
-    to_format: n/j/Y
+    from_format: m/d/y
+    to_format: m/d/Y
     source: 'Start Date'
   field_end_date:
     plugin: format_date
-    from_format: n/j/Y
-    to_format: n/j/Y
+    from_format: m/d/y
+    to_format: m/d/Y
     source: 'End Date'
   field_building:
     -

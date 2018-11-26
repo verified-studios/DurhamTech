@@ -10,3 +10,4 @@ web/core/*
 web/modules/contrib/*
 web/web/modules/contrib/*
 web/web/core/modules/*
+.DS_Store
