@@ -81,6 +81,10 @@ body {
     margin-right: 0;
     padding-left: 0;
   }
+  img {
+    background-image: url(/themes/custom/durhamtech/images/durham-tech-logo-web.svg);
+    background-repeat: no-repeat;
+  }
 }
 
 // Branding
@@ -360,10 +364,12 @@ $main-nav-height: 60px;
   margin-bottom: 0.55rem;
 }
 
-/*.navbar-nav {
-  > li {
-    > a {
-      padding-right:9px;
+@media all and (-ms-high-contrast:none) {
+  #secondary-nav {
+    .secondary-menu {
+      > li {
+        flex-basis: auto;
+      }
     }
   }
-}*/
+}

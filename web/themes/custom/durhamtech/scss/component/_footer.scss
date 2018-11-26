@@ -8,7 +8,6 @@
 
     > li {
       margin-bottom: 1rem;
-
       a {
       }
     }
@@ -151,11 +150,9 @@
         a {
           font-weight: 300;
           padding: 0;
-          padding-left: 1rem;
+          padding-left: 0.500rem;
           text-align: left;
-        }
-        @media #{$normal} {
-          a {
+          @media #{$normal} {
             padding-left: 2rem;
           }
         }

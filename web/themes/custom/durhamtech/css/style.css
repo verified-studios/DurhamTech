@@ -6618,6 +6618,9 @@ body {
     .navbar .logo {
       margin-right: 0;
       padding-left: 0; } }
+  .navbar .logo img {
+    background-image: url(/themes/custom/durhamtech/images/durham-tech-logo-web.svg);
+    background-repeat: no-repeat; }
 
 .logo:focus {
   outline-color: #00843D; }
@@ -6786,13 +6789,10 @@ body {
 .navbar {
   margin-bottom: 0.55rem; }
 
-/*.navbar-nav {
-  > li {
-    > a {
-      padding-right:9px;
-    }
-  }
-}*/
+@media all and (-ms-high-contrast: none) {
+  #secondary-nav .secondary-menu > li {
+    flex-basis: auto; } }
+
 /**
  * Node styling.
  */
@@ -7207,11 +7207,11 @@ p:last-child,
     [id^="block-footercolumn"] ul > li a {
       font-weight: 300;
       padding: 0;
-      padding-left: 1rem;
+      padding-left: 0.500rem;
       text-align: left; } }
-  @media screen and (min-width: 768px) and (min-width: 992px) {
-    [id^="block-footercolumn"] ul > li a {
-      padding-left: 2rem; } }
+    @media screen and (min-width: 768px) and (min-width: 992px) {
+      [id^="block-footercolumn"] ul > li a {
+        padding-left: 2rem; } }
 
 .region-footer a {
   color: #FFFFFF; }
@@ -8992,7 +8992,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       position: relative;
       left: 0;
       top: 0;
-      height: 200px;
+      height: 150px;
       width: 100%;
       z-index: 5;
       overflow: hidden;
@@ -9002,6 +9002,12 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       padding-bottom: 1rem;
       display: block;
       margin-bottom: 1rem; }
+      @media screen and (min-width: 992px) {
+        .block-durhamtech-social .slick .slick-slide .img {
+          height: 175px; } }
+      @media screen and (min-width: 992px) {
+        .block-durhamtech-social .slick .slick-slide .img {
+          height: 200px; } }
       .block-durhamtech-social .slick .slick-slide .img img {
         position: absolute;
         width: 100% !important;
@@ -9011,7 +9017,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .block-durhamtech-social .slick .slick-slide p {
       font-weight: 300;
       font-size: 1em;
-      padding: 2rem 3rem; }
+      padding: 1rem 3rem 2rem; }
+      @media screen and (min-width: 992px) {
+        .block-durhamtech-social .slick .slick-slide p {
+          padding: 2rem; } }
     .block-durhamtech-social .slick .slick-slide:nth-child(odd) {
       background: #FFFFFF; }
 
@@ -9512,12 +9521,13 @@ a.social-twitter:focus {
 
 .view-categories {
   padding: 0 2rem; }
-  .view-categories .views-row {
-    width: 100% !important;
+  .view-categories .view-content .views-row {
+    margin-left: 0;
     min-width: 100% !important;
-    padding-left: 1rem; }
-    .view-categories .views-row a,
-    .view-categories .views-row a:visited {
+    padding-left: 1rem;
+    width: 100% !important; }
+    .view-categories .view-content .views-row a,
+    .view-categories .view-content .views-row a:visited {
       font-weight: 600;
       line-height: 1.65em;
       margin-bottom: 1rem; }
@@ -9568,9 +9578,15 @@ a.social-twitter:focus {
       position: static;
       background-color: transparent !important;
       border: 2px solid rgba(255, 255, 255, 0.5);
-      padding: 1.25rem 2rem;
+      padding: 1.25rem 1rem;
       text-decoration: none !important;
       margin: 2rem 0; }
+      @media screen and (min-width: 768px) {
+        .block-region-getstarted .cta-box-wrapper a.cta-box,
+        .block-region-getstarted .cta-box-wrapper a.cta-box:visited,
+        .block-region-getstarted .cta-box-wrapper a.cta-box:hover,
+        .block-region-getstarted .cta-box-wrapper a.cta-box:focus {
+          padding: 1.25rem 2rem; } }
       .block-region-getstarted .cta-box-wrapper a.cta-box svg,
       .block-region-getstarted .cta-box-wrapper a.cta-box:visited svg,
       .block-region-getstarted .cta-box-wrapper a.cta-box:hover svg,
