@@ -234,12 +234,7 @@
 
   .slick .slick-next,
   .slick .slick-prev {
-
     width: 46px;
-
-    @media #{$tablet} {
-
-    }
   }
   &.choose {
     .lp-masthead {
@@ -284,6 +279,26 @@
     }
   }
   &.about {
+    .row {
+      @media #{$tablet} {
+        margin-left: 0.500rem;
+      }
+      @media #{$normal} {
+        margin-left: -1.500rem;
+        padding: 0 1rem 0 0;
+      }
+    }
+    .flex-view {
+      .view-content {
+        margin: 2rem 0rem 2rem -2rem;
+        .views-row {
+          margin: 0 0 0 2rem;
+          @media #{$tablet} {
+            margin: auto;
+          }
+        }
+      }
+    }
     .lp-related-links {
       background: $offwhite;
 
@@ -300,7 +315,16 @@
       background-color: $white;
 
       .views-row {
-        width: 33.3333333%;
+        width: 100%;
+        @media #{$tablet} {
+          width: 49%;
+          min-width: 33.33333%;
+          margin: auto;
+        }
+
+        @media #{$tablet} {
+          width: 33.3333333%;
+        }
       }
     }
 
@@ -308,8 +332,12 @@
       background-color: $offwhite;
 
       .views-row {
-        width: 50%;
-
+        width: 100%;
+        @media #{$tablet} {
+          width: 49%;
+          min-width: 33.33333%;
+          margin: auto;
+        }
         .cta-box {
           height: 200px;
         }

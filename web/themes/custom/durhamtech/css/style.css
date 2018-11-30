@@ -7347,6 +7347,9 @@ table {
         display: inline-block;
         padding: 0;
         margin: 0; }
+        @media screen and (min-width: 992px) {
+          .secondary-page-header .banner .banner-text-wrapper .banner-title h1 {
+            max-width: 90%; } }
 
 .apply-header .banner .banner-overlay {
   background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.82) 50%, rgba(128, 137, 144, 0) 100%);
@@ -9278,6 +9281,23 @@ a.social-twitter:focus {
     -webkit-columns: 2;
     -moz-columns: 2; }
 
+@media screen and (min-width: 768px) {
+  .landing-page.about .row {
+    margin-left: 0.500rem; } }
+
+@media screen and (min-width: 992px) {
+  .landing-page.about .row {
+    margin-left: -1.500rem;
+    padding: 0 1rem 0 0; } }
+
+.landing-page.about .flex-view .view-content {
+  margin: 2rem 0rem 2rem -2rem; }
+  .landing-page.about .flex-view .view-content .views-row {
+    margin: 0 0 0 2rem; }
+    @media screen and (min-width: 768px) {
+      .landing-page.about .flex-view .view-content .views-row {
+        margin: auto; } }
+
 .landing-page.about .lp-related-links {
   background: #edeeef; }
   .landing-page.about .lp-related-links ul {
@@ -9290,12 +9310,25 @@ a.social-twitter:focus {
 .landing-page.about .lp-masthead {
   background-color: #FFFFFF; }
   .landing-page.about .lp-masthead .views-row {
-    width: 33.3333333%; }
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .landing-page.about .lp-masthead .views-row {
+        width: 49%;
+        min-width: 33.33333%;
+        margin: auto; } }
+    @media screen and (min-width: 768px) {
+      .landing-page.about .lp-masthead .views-row {
+        width: 33.3333333%; } }
 
 .landing-page.about .lp-about-ctas {
   background-color: #edeeef; }
   .landing-page.about .lp-about-ctas .views-row {
-    width: 50%; }
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .landing-page.about .lp-about-ctas .views-row {
+        width: 49%;
+        min-width: 33.33333%;
+        margin: auto; } }
     .landing-page.about .lp-about-ctas .views-row .cta-box {
       height: 200px; }
 
