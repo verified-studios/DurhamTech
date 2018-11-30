@@ -1,0 +1,33 @@
+uuid: 7f65ee92-79ca-41b7-81d1-1546eafb4b9f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - durhamtech_colleague_migrate
+_core:
+  default_config_hash: krXDnlavVs0hRQRJvSJZDhhkhEtKW10Ey4CCFF03Z-o
+id: building_taxonomy
+migration_tags:
+  - courses
+  - taxonomy
+migration_group: durhamtech_colleague_migrate
+label: 'Class buildings'
+source:
+  plugin: csv
+  path: ./modules/custom/durhamtech_colleague_migrate/fixtures/buildings.csv
+  header_row_count: 1
+  keys:
+    - field_building_code
+  fields:
+    field_building_code: 'Code for the building'
+    name: 'Name of the building.'
+process:
+  name: name
+  field_building_code: field_building_code
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: building
+migration_dependencies:
+  optional: {  }
+  required: {  }

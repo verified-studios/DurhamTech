@@ -1,0 +1,31 @@
+uuid: 1f03e83e-cb05-4694-950c-dae5ff9183f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.building.field_building_code
+    - taxonomy.vocabulary.building
+id: taxonomy_term.building.default
+targetEntityType: taxonomy_term
+bundle: building
+mode: default
+content:
+  field_building_code:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true
