@@ -32,15 +32,15 @@
   section {
     padding: 2rem 1rem;
     @media #{$tablet} {
-      padding: 3rem 0;
+      padding: 2rem 0;
       &.lp-where {
         padding: 2rem 3rem;
       }
     }
     @media #{$normal} {
-      padding: 3rem 0;
+      padding: 2rem 0;
       &.lp-where {
-        padding: 3rem 0;
+        padding: 2rem 0;
       }
     }
 
@@ -65,15 +65,14 @@
 
   .lp-events {
     background-color: $offwhite;
+    position: relative;
 
     @media #{$tablet} {
-
       .block-region-events .view {
         position: static;
       }
 
       .view-events .view-header .more-link {
-        top: 0;
       }
     }
   }
@@ -115,7 +114,7 @@
   .lp-news-grid {
     padding: 0;
     background-color: $offwhite;
-
+    position: relative;
     section {
       padding: 0;
       margin: 2rem 3rem;
@@ -132,12 +131,10 @@
           box-shadow: 5px 5px 15px rgba($gray, 0.08);
         }
 
-
         img {
           width: 100%;
           transition: all ease 160ms;
         }
-
 
         a:hover,
           a:focus {
@@ -947,10 +944,32 @@
   }
 }
 
+.block-region-news {
+  padding: 0;
+  @media #{$normal} {
+    padding: 0 5rem;
+  }
+}
+
+.block-region-events {
+  padding: 0 5rem 0 0;
+  .view {
+    .more-link {
+      bottom: -3rem;
+      right: -5rem;
+    }
+  }
+}
+
+.block-region-news {
+  .view {
+    .more-link {
+    }
+  }
+}
+
 .block-region-events,
 .block-region-news {
-  padding: 0 5rem;
-
   h2.block-title {
     text-align: left;
     font-size: 2rem;
@@ -963,11 +982,7 @@
     position: relative;
 
     .more-link {
-      position: absolute;
-      right: 0;
-      margin: 0;
-      top: -7rem;
-      display: inline-block;
+      float: right;
     }
   }
 }
@@ -1104,13 +1119,8 @@
 }
 
 .view-events .view-header .more-link {
-  margin: 0 0 20px 0;
   font-size: 0.8em;
 
   @media #{$tablet} {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    margin: 0;
   }
 }

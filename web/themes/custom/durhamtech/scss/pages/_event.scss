@@ -65,9 +65,9 @@ $section-spacing-lg: 60px;
 
           a,
           a:hover,
-          a:visited,
-          a:active,
-          a:focus {
+            a:visited,
+            a:active,
+            a:focus {
             color: $dark-gray;
           }
         }
@@ -124,7 +124,8 @@ $section-spacing-lg: 60px;
 }
 
 // Event teaser
-.event.column-teaser, .event.teaser {
+.event.column-teaser,
+.event.teaser {
   .date {
     display: inline-block;
     font-weight: 600;
@@ -143,9 +144,11 @@ $section-spacing-lg: 60px;
   .content {
     border-left: 2px solid $black;
     display: inline-block;
-    padding-left: 30px;
+    padding-left: 2rem;
     width: calc(100% - 60px);
-
+    @media #{$normal} {
+      padding-left: 1rem;
+    }
     .field--name-field-description {
       margin-bottom: 15px;
     }
