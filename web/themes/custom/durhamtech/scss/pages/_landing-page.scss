@@ -1,5 +1,11 @@
 .node--type-landing_page {
   padding: 0;
+  .block-views-blockhomepage-homepage-events {
+    margin-top: 4rem;
+    @media #{$tablet} {
+      margin-top: 0;
+    }
+  }
 }
 
 .page-node-type-landing-page {
@@ -144,15 +150,19 @@
           }
         }
 
+        .search-news-thumbnail {
+          min-height: 250px;
+        }
         .search-news-title {
-          position: absolute;
-          bottom: 0;
-          left: 0;
+          background-color: rgba($black, 0.92);
           color: $white;
           font-size: 1.65rem;
           font-weight: 600;
           padding: 1.5rem 2rem 1.5rem 2rem;
-          background-color: rgba($black, 0.92);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
         }
       }
     }

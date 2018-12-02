@@ -7706,11 +7706,14 @@ a.cta-box:visited {
   margin-right: 10%; }
   .view-id-homepage.view-display-id-homepage_news .more-link {
     margin: 0 auto;
-    padding: 0rem 0rem 4rem;
+    padding: 0rem;
     width: 60%; }
-  @media screen and (min-width: 768px) {
-    .view-id-homepage.view-display-id-homepage_news .more-link {
-      padding: 4rem 6rem 0; } }
+    @media screen and (min-width: 768px) {
+      .view-id-homepage.view-display-id-homepage_news .more-link {
+        padding: 4rem 2rem 0; } }
+    @media screen and (min-width: 992px) {
+      .view-id-homepage.view-display-id-homepage_news .more-link {
+        padding: 4rem 0 0; } }
   .view-id-homepage.view-display-id-homepage_news .content {
     padding: 0 0 0 33%;
     position: relative;
@@ -8980,7 +8983,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     border-radius: 6px;
     color: #FFFFFF;
     display: block;
-    font-wieght: 600;
+    font-weight: 600;
     padding: 6px 12px;
     text-align: center;
     width: 100%; }
@@ -9012,11 +9015,15 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     overflow: hidden; }
     .block-durhamtech-social .slick .slick-slide .social-icon {
       font-size: 24px;
-      left: 2rem;
-      bottom: 1.5rem;
+      left: 1rem;
+      bottom: 1rem;
       position: absolute;
       z-index: 1;
       color: #CC4700; }
+      @media screen and (min-width: 768px) {
+        .block-durhamtech-social .slick .slick-slide .social-icon {
+          left: 1rem;
+          bottom: 1.5rem; } }
     .block-durhamtech-social .slick .slick-slide .img {
       position: relative;
       left: 0;
@@ -9046,10 +9053,15 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     .block-durhamtech-social .slick .slick-slide p {
       font-weight: 300;
       font-size: 1em;
-      padding: 1rem 3rem 2rem; }
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 0rem 3rem 2rem; }
+      @media screen and (min-width: 768px) {
+        .block-durhamtech-social .slick .slick-slide p {
+          padding: 1rem 3rem 2rem; } }
       @media screen and (min-width: 992px) {
         .block-durhamtech-social .slick .slick-slide p {
-          padding: 2rem; } }
+          padding: 0 3rem; } }
     .block-durhamtech-social .slick .slick-slide:nth-child(odd) {
       background: #FFFFFF; }
 
@@ -9117,6 +9129,11 @@ a.social-twitter:focus {
 
 .node--type-landing_page {
   padding: 0; }
+  .node--type-landing_page .block-views-blockhomepage-homepage-events {
+    margin-top: 4rem; }
+    @media screen and (min-width: 768px) {
+      .node--type-landing_page .block-views-blockhomepage-homepage-events {
+        margin-top: 0; } }
 
 .page-node-type-landing-page .footer {
   margin-top: 0 !important;
@@ -9214,15 +9231,18 @@ a.social-twitter:focus {
       .landing-page .lp-news-grid section .views-row a:hover img,
       .landing-page .lp-news-grid section .views-row a:focus img {
         opacity: 0.75; }
+      .landing-page .lp-news-grid section .views-row .search-news-thumbnail {
+        min-height: 250px; }
       .landing-page .lp-news-grid section .views-row .search-news-title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
+        background-color: rgba(0, 0, 0, 0.92);
         color: #FFFFFF;
         font-size: 1.65rem;
         font-weight: 600;
         padding: 1.5rem 2rem 1.5rem 2rem;
-        background-color: rgba(0, 0, 0, 0.92); }
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%; }
 
 .landing-page .lp-related-links {
   background: #84BD00; }
