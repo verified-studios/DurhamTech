@@ -92,8 +92,7 @@
       </div>
     {% endif %}
     <div class="event-teaser-description">
-      {#{ content.field_rich_text }#}
-      {% set body = content.field_rich_text.0['#text']|render|striptags %}
+      {% set body = content.field_rich_text.0['#text']|raw|render|striptags %}
       <div class="field--name-field-description">
         {{ body|length > 160 ? body|slice(0, 160) ~ '' : body }}
         <div class="continue">&nbsp;<span class="fa fa-angle-double-right"></span></div>

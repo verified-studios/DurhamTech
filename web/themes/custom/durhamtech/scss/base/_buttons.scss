@@ -13,7 +13,7 @@
     border-color: $dark-orange;
 
     &:hover,
-    &:focus {
+      &:focus {
       background-color: darken($dark-orange, 5);
       background-color: darken($dark-orange, 5);
     }
@@ -23,7 +23,7 @@
     color: $white;
 
     &:hover,
-    &:focus {
+      &:focus {
       border-color: $green;
       text-decoration: none;
     }
@@ -34,7 +34,7 @@
   }
 
   &:hover,
-  &:focus {
+    &:focus {
     border-color: darken($green, 5);
     background-color: darken($green, 5);
     color: $white;
@@ -88,3 +88,26 @@
   }
 }
 
+.more-link {
+  .btn-outline,
+  .padding-lr-20 {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top: 3px;
+    @media #{$tablet} {
+      padding: 6px 12px;
+      margin-top: auto;
+    }
+    @media #{$normal} {
+      padding: 6px 20px;
+      margin-top: auto;
+    }
+  } 
+}
+.view-events {
+  .btn {
+    
+  }
+}

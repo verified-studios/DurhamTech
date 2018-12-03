@@ -229,12 +229,13 @@ $banner-menu-orange-hover: #f27604;
 
     .more-link {
       margin: 0 auto;
-      padding: 0rem 0rem 4rem;
+      padding: 0rem;
       width: 60%;
-    }
-    @media #{$tablet} {
-      .more-link {
-        padding: 4rem 6rem 0;
+      @media #{$tablet} {
+        padding: 4rem 2rem 0;
+      }
+      @media #{$normal} {
+        padding: 4rem 0 0;
       }
     }
 
@@ -302,7 +303,6 @@ $banner-menu-orange-hover: #f27604;
         transition: all 300ms ease-in-out;
       }
     }
-
 
   }
 

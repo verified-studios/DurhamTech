@@ -38,6 +38,7 @@
     "drupal/fontawesome": "^2.0",
     "drupal/honeypot": "^1.29",
     "drupal/inline_entity_form": "^1.0@beta",
+    "drupal/ldap": "^3.0@beta",
     "drupal/media_entity": "^1.7",
     "drupal/media_entity_image": "^1.2",
     "drupal/menu_block": "^1.4",
