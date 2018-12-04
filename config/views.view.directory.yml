@@ -1,26 +1,16 @@
-uuid: 2dbfac6f-b961-4712-bedb-9ae81c2408f4
+uuid: 5d87d57d-506d-4280-b1fa-71d4657d5032
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.body
-    - field.storage.node.field_body
-    - field.storage.node.field_description
-    - field.storage.node.field_rich_text
-    - field.storage.taxonomy_term.field_description
-    - field.storage.taxonomy_term.field_title
-    - search_api.index.site_index
   module:
-    - entity_reference_revisions
-    - search_api
-    - text
-id: search
-label: Search
+    - ldap_query
+id: directory
+label: Directory
 module: views
 description: ''
 tag: ''
-base_table: search_api_index_site_index
-base_field: search_api_id
+base_table: ldap_query
+base_field: ''
 core: 8.x
 display:
   default:
@@ -38,13 +28,12 @@ display:
       query:
         type: views_query
         options:
-          skip_access: 1
-          bypass_access: 1
+          query_id: users
       exposed_form:
         type: basic
         options:
-          submit_button: Search
-          reset_button: false
+          submit_button: Apply
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -53,7 +42,7 @@ display:
       pager:
         type: full
         options:
-          items_per_page: 10
+          items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
@@ -72,23 +61,95 @@ display:
             offset_label: Offset
           quantity: 9
       style:
-        type: default
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            attribute: attribute
+            attribute_1: attribute_1
+            attribute_2: attribute_2
+            attribute_5: attribute_5
+            attribute_3: attribute_3
+            attribute_4: attribute_4
+            attribute_6: attribute_6
+            attribute_7: attribute_7
+          info:
+            attribute:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_1:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_2:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_5:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_3:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_4:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_6:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_7:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: attribute
+          empty_table: false
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       fields:
-        field_title:
-          id: field_title
-          table: search_api_index_site_index
-          field: field_title
+        attribute:
+          id: attribute
+          table: ldap_query
+          field: attribute
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Last Name'
           exclude: false
           alter:
             alter_text: false
@@ -107,21 +168,21 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
             strip_tags: true
-            trim: true
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -129,36 +190,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: true
-            use_highlighting: true
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        title:
-          id: title
-          table: search_api_index_site_index
-          field: title
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: sn
+          plugin_id: ldap_variable_attribute
+        attribute_1:
+          id: attribute_1
+          table: ldap_query
+          field: attribute
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'First Name'
           exclude: false
           alter:
             alter_text: false
@@ -177,21 +221,21 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 0
             word_boundary: true
-            ellipsis: false
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
-            trim: true
+            strip_tags: false
+            trim: false
             preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -199,38 +243,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: true
-            use_highlighting: true
-            multi_type: separator
-            multi_separator: ', '
-          entity_type: null
-          entity_field: null
-          plugin_id: search_api_field
-        body_1:
-          id: body_1
-          table: search_api_index_site_index
-          field: body
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: givenname
+          plugin_id: ldap_variable_attribute
+        attribute_2:
+          id: attribute_2
+          table: ldap_query
+          field: attribute
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Full Name'
           exclude: false
           alter:
             alter_text: false
@@ -249,161 +274,21 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: '<ul> <li> <p> <br>'
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 300
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: true
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_body:
-          id: field_body
-          table: search_api_index_site_index
-          field: field_body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 200
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: '<ul> <li> <p> <br>'
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: true
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_revisions_entity_view
-          settings:
-            view_mode: preview
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 1
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: false
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_rich_text:
-          id: field_rich_text
-          table: search_api_index_site_index
-          field: field_rich_text
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 200
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: '<ul> <li> <p> <br>'
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -411,36 +296,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 300
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: true
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_description:
-          id: field_description
-          table: search_api_index_site_index
-          field: field_description
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: displayname
+          plugin_id: ldap_variable_attribute
+        attribute_5:
+          id: attribute_5
+          table: ldap_query
+          field: attribute
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -459,57 +327,41 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: '<ul> <li> <p> <br>'
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: true
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
-        field_description_1:
-          id: field_description_1
-          table: search_api_index_site_index
-          field: field_description_1
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: title
+          plugin_id: ldap_variable_attribute
+        attribute_3:
+          id: attribute_3
+          table: ldap_query
+          field: attribute
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Email
           exclude: false
           alter:
             alter_text: false
@@ -528,68 +380,211 @@ display:
             suffix: ''
             target: ''
             nl2br: false
-            max_length: 200
+            max_length: 0
             word_boundary: true
             ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: '<ul> <li> <p> <br>'
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: basic_string
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          field_rendering: false
-          fallback_handler: search_api
-          fallback_options:
-            link_to_item: false
-            use_highlighting: true
-            multi_type: separator
-            multi_separator: ', '
-          plugin_id: search_api_field
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: mail
+          plugin_id: ldap_variable_attribute
+        attribute_4:
+          id: attribute_4
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Extension
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: ipphone
+          plugin_id: ldap_variable_attribute
+        attribute_6:
+          id: attribute_6
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Room
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: physicaldeliveryofficename
+          plugin_id: ldap_variable_attribute
+        attribute_7:
+          id: attribute_7
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: description
+          plugin_id: ldap_variable_attribute
       filters:
-        search_api_fulltext:
-          id: search_api_fulltext
-          table: search_api_index_site_index
-          field: search_api_fulltext
+        attribute:
+          id: attribute
+          table: ldap_query
+          field: attribute
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: contains
           value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: search_api_fulltext_op
-            label: ''
+            operator_id: attribute_op
+            label: Name
             description: ''
             use_operator: false
-            operator: search_api_fulltext_op
-            identifier: search_api_fulltext
+            operator: attribute_op
+            identifier: attribute
             required: false
             remember: false
             multiple: false
@@ -597,6 +592,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -609,54 +605,23 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: terms
-          min_length: null
-          fields: {  }
-          plugin_id: search_api_fulltext
-      sorts:
-        search_api_relevance:
-          id: search_api_relevance
-          table: search_api_index_site_index
-          field: search_api_relevance
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: search_api
-      title: Search
+          attribute_name: displayname
+          plugin_id: ldap_variable_attribute
+      sorts: {  }
+      title: 'Employee Directory'
       header: {  }
       footer: {  }
-      empty:
-        result:
-          id: result
-          table: views
-          field: result
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          content: 'No results found'
-          plugin_id: result
+      empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_body'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_rich_text'
-        - 'config:field.storage.taxonomy_term.field_description'
-        - 'config:field.storage.taxonomy_term.field_title'
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -664,19 +629,11 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: search
-      exposed_block: true
+      path: directory
     cache_metadata:
       max-age: -1
       contexts:
-        - 'languages:language_content'
         - 'languages:language_interface'
         - url
         - url.query_args
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_body'
-        - 'config:field.storage.node.field_description'
-        - 'config:field.storage.node.field_rich_text'
-        - 'config:field.storage.taxonomy_term.field_description'
-        - 'config:field.storage.taxonomy_term.field_title'
+      tags: {  }

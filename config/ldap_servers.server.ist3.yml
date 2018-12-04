@@ -1,0 +1,40 @@
+uuid: fc03df90-3d71-4880-8eb9-b9a290bbeb1f
+langcode: en
+status: true
+dependencies: {  }
+id: ist3
+label: ist3
+type: ad
+address: ist-3.durhamtech.edu
+port: 389
+timeout: 10
+tls: false
+followrefs: null
+weight: null
+bind_method: service_account
+binddn: 'cn=Drupal Service, ou=Service Accounts, dc=durhamtech,  dc=edu'
+bindpw: 23LKf4bwlS8cDTdKAxzY
+basedn: 'ou=Employees,ou=DTCCUsers, dc=durhamtech, dc=edu'
+user_attr: ''
+account_name_attr: 'cn=drupal service,ou=service accounts,dc=durhamtech,dc=edu'
+mail_attr: ''
+mail_template: ''
+picture_attr: ''
+unique_persistent_attr: employeenumber
+unique_persistent_attr_binary: false
+user_dn_expression: ''
+testing_drupal_username: ''
+testing_drupal_user_dn: ''
+grp_unused: true
+grp_object_cat: ''
+grp_nested: false
+grp_user_memb_attr_exists: false
+grp_user_memb_attr: ''
+grp_memb_attr: ''
+grp_memb_attr_match_user_attr: ''
+grp_derive_from_dn: '0'
+grp_derive_from_dn_attr: ''
+grp_test_grp_dn: ''
+grp_test_grp_dn_writeable: ''
+search_pagination: true
+search_page_size: 1000
