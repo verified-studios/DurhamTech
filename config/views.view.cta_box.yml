@@ -213,6 +213,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       sorts: {  }
       header: {  }
       footer: {  }
@@ -329,6 +369,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -336,6 +416,8 @@ display:
         operator: AND
         groups:
           1: AND
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -441,6 +523,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -448,6 +570,8 @@ display:
         operator: AND
         groups:
           1: AND
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -553,6 +677,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -562,6 +726,8 @@ display:
         groups:
           1: AND
       title: 'Admissions & Enrollment CTAs 2-column'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -667,6 +833,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -676,6 +882,8 @@ display:
         groups:
           1: AND
       title: 'Admissions & Enrollment CTAs 3-column'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -781,6 +989,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -790,6 +1038,8 @@ display:
         groups:
           1: AND
       title: 'About Durham Tech CTAs 2-column'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -895,6 +1145,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -904,6 +1194,8 @@ display:
         groups:
           1: AND
       title: 'About Durham Tech CTAs 3-column'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1009,6 +1301,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -1018,6 +1350,8 @@ display:
         groups:
           1: AND
       title: 'Choose (Affordable Education)'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1123,6 +1457,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -1132,6 +1506,8 @@ display:
         groups:
           1: AND
       title: 'Choose (Where)'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1237,6 +1613,46 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: numeric
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
       defaults:
         filters: false
         filter_groups: false
@@ -1246,6 +1662,8 @@ display:
         groups:
           1: AND
       title: 'Choose (Get Started)'
+      fields: {  }
+      sorts: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1266,6 +1684,49 @@ display:
       block_category: Views
       allow:
         items_per_page: false
+      fields: {  }
+      sorts: {  }
+      filters:
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
     cache_metadata:
       max-age: -1
       contexts:
