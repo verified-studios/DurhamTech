@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.application_deadlines.field_application_deadline
+    - field.field.node.application_deadlines.field_default
     - field.field.node.application_deadlines.field_related_programs
     - node.type.application_deadlines
   module:
@@ -17,7 +18,10 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   addtoany: true
   field_application_deadline: true
+  field_default: true
   field_related_programs: true
