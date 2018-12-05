@@ -1,0 +1,23 @@
+uuid: 8f53f9cb-38df-46ed-a301-58fd4b96e4fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_active
+    - node.type.program
+id: node.program.field_active
+field_name: field_active
+entity_type: node
+bundle: program
+label: Active
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

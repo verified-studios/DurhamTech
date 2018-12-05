@@ -77,12 +77,12 @@ process:
   field_start_date:
     plugin: format_date
     from_format: n/j/y
-    to_format: m/d/Y
+    to_format: Y-m-d
     source: 'Start Date'
   field_end_date:
     plugin: format_date
     from_format: n/j/y
-    to_format: m/d/Y
+    to_format: Y-m-d
     source: 'End Date'
   field_location:
     -
