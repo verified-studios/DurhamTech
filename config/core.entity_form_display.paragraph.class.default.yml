@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.class.field_building
     - field.field.paragraph.class.field_end_time
     - field.field.paragraph.class.field_meeting_days
     - field.field.paragraph.class.field_room
@@ -13,21 +14,7 @@ targetEntityType: paragraph
 bundle: class
 mode: default
 content:
-  field_end_time:
-    weight: 3
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_meeting_days:
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  field_room:
+  field_building:
     weight: 0
     settings:
       size: 60
@@ -35,8 +22,30 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_start_time:
+  field_end_time:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_meeting_days:
     weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_room:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_start_time:
+    weight: 3
     settings:
       size: 60
       placeholder: ''

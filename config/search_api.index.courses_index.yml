@@ -27,6 +27,104 @@ name: 'Courses Index'
 description: ''
 read_only: false
 field_settings:
+  field_building:
+    label: Building
+    datasource_id: 'entity:node'
+    property_path: field_building
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_building
+  field_class_format:
+    label: 'Course » Taxonomy term » Class Format'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_class_format'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course
+        - field.storage.taxonomy_term.field_class_format
+      module:
+        - taxonomy
+  field_credits:
+    label: 'Course » Taxonomy term » Credits'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_credits'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_course
+        - field.storage.taxonomy_term.field_credits
+      module:
+        - taxonomy
+  field_end_date:
+    label: 'End Date'
+    datasource_id: 'entity:node'
+    property_path: field_end_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_end_date
+  field_end_time:
+    label: 'Class item » Paragraph » End Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_class_item:entity:field_end_time'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_end_time
+      module:
+        - paragraphs
+  field_location:
+    label: Location
+    datasource_id: 'entity:node'
+    property_path: field_location
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_location
+  field_meeting_days:
+    label: 'Class item » Paragraph » Meeting Days'
+    datasource_id: 'entity:node'
+    property_path: 'field_class_item:entity:field_meeting_days'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_meeting_days
+      module:
+        - paragraphs
+  field_seats:
+    label: 'Course » Taxonomy term » Seats'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_seats'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course
+        - field.storage.taxonomy_term.field_seats
+      module:
+        - taxonomy
+  field_start_date:
+    label: 'Start Date'
+    datasource_id: 'entity:node'
+    property_path: field_start_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_start_date
+  field_start_time:
+    label: 'Class item » Paragraph » Start Time'
+    datasource_id: 'entity:node'
+    property_path: 'field_class_item:entity:field_start_time'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_start_time
+      module:
+        - paragraphs
   field_title:
     label: 'Course » Taxonomy term » Title'
     datasource_id: 'entity:node'
@@ -48,28 +146,6 @@ field_settings:
         - field.storage.node.field_course
       module:
         - taxonomy
-  field_credits:
-    label: 'Course » Taxonomy term » Credits'
-    datasource_id: 'entity:node'
-    property_path: 'field_course:entity:field_credits'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_course
-        - field.storage.taxonomy_term.field_credits
-      module:
-        - taxonomy
-  field_class_format:
-    label: 'Course » Taxonomy term » Class Format'
-    datasource_id: 'entity:node'
-    property_path: 'field_course:entity:field_class_format'
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_course
-        - field.storage.taxonomy_term.field_class_format
-      module:
-        - taxonomy
   path:
     label: 'Course » Taxonomy term » URL alias'
     datasource_id: 'entity:node'
@@ -80,55 +156,6 @@ field_settings:
         - field.storage.node.field_course
       module:
         - taxonomy
-  field_end_date:
-    label: 'End Date'
-    datasource_id: 'entity:node'
-    property_path: field_end_date
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_end_date
-  field_start_date:
-    label: 'Start Date'
-    datasource_id: 'entity:node'
-    property_path: field_start_date
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_start_date
-  field_start_time:
-    label: 'Class item » Paragraph » Start Time'
-    datasource_id: 'entity:node'
-    property_path: 'field_class_item:entity:field_start_time'
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_class_item
-        - field.storage.paragraph.field_start_time
-      module:
-        - paragraphs
-  field_end_time:
-    label: 'Class item » Paragraph » End Time'
-    datasource_id: 'entity:node'
-    property_path: 'field_class_item:entity:field_end_time'
-    type: date
-    dependencies:
-      config:
-        - field.storage.node.field_class_item
-        - field.storage.paragraph.field_end_time
-      module:
-        - paragraphs
-  field_meeting_days:
-    label: 'Class item » Paragraph » Meeting Days'
-    datasource_id: 'entity:node'
-    property_path: 'field_class_item:entity:field_meeting_days'
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_class_item
-        - field.storage.paragraph.field_meeting_days
-      module:
-        - paragraphs
   tid:
     label: 'Course » Taxonomy term » Term ID'
     datasource_id: 'entity:node'
@@ -137,33 +164,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_course
-      module:
-        - taxonomy
-  field_building:
-    label: Building
-    datasource_id: 'entity:node'
-    property_path: field_building
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_building
-  field_location:
-    label: Location
-    datasource_id: 'entity:node'
-    property_path: field_location
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_location
-  field_seats:
-    label: 'Course » Taxonomy term » Seats'
-    datasource_id: 'entity:node'
-    property_path: 'field_course:entity:field_seats'
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_course
-        - field.storage.taxonomy_term.field_seats
       module:
         - taxonomy
 datasource_settings:
@@ -176,6 +176,7 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  add_url: {  }
   aggregated_field: {  }
   highlight:
     highlight: always
@@ -190,15 +191,14 @@ processor_settings:
   ignorecase:
     all_fields: false
     fields:
+      - field_credits
+      - field_meeting_days
       - field_title
       - name
-      - field_credits
       - path
-      - field_meeting_days
     weights:
       preprocess_index: -20
       preprocess_query: -20
-  add_url: {  }
   rendered_item: {  }
 tracker_settings:
   default:

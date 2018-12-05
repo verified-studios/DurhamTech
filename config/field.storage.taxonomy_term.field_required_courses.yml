@@ -1,11 +1,11 @@
-uuid: bdc7eb94-e4d8-4c42-850d-6220125ff618
+uuid: 7b963e89-5473-43ec-801e-bb683020be84
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_program_id
-field_name: field_program_id
+id: taxonomy_term.field_required_courses
+field_name: field_required_courses
 entity_type: taxonomy_term
 type: string
 settings:

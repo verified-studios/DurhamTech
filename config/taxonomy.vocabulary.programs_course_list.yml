@@ -1,0 +1,9 @@
+uuid: a35302f9-47bd-42dd-9e63-ae0abaaf9c57
+langcode: en
+status: true
+dependencies: {  }
+name: 'Programs Course List'
+vid: programs_course_list
+description: ''
+hierarchy: 0
+weight: 0
