@@ -1,0 +1,39 @@
+uuid: c2f5942a-a1cc-46ab-b667-768f9b0d7b39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.programs_course_list.field_program_id
+    - field.field.taxonomy_term.programs_course_list.field_required_courses
+    - taxonomy.vocabulary.programs_course_list
+  module:
+    - text
+id: taxonomy_term.programs_course_list.default
+targetEntityType: taxonomy_term
+bundle: programs_course_list
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_program_id:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_required_courses:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

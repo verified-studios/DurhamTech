@@ -1,12 +1,12 @@
-uuid: bdc7eb94-e4d8-4c42-850d-6220125ff618
+uuid: e810312f-3789-4e27-b469-45d94b6c13da
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_program_id
-field_name: field_program_id
-entity_type: taxonomy_term
+    - paragraphs
+id: paragraph.field_building
+field_name: field_building
+entity_type: paragraph
 type: string
 settings:
   max_length: 255

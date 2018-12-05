@@ -1,0 +1,19 @@
+uuid: ab058c13-9b14-48dc-9052-a4a97981aca8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_required_courses
+    - taxonomy.vocabulary.programs_course_list
+id: taxonomy_term.programs_course_list.field_required_courses
+field_name: field_required_courses
+entity_type: taxonomy_term
+bundle: programs_course_list
+label: 'Required Courses'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

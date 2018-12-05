@@ -1,11 +1,11 @@
-uuid: bdc7eb94-e4d8-4c42-850d-6220125ff618
+uuid: 4b84af34-783b-4e3d-8d8f-a4c1765e6af3
 langcode: en
 status: true
 dependencies:
   module:
     - taxonomy
-id: taxonomy_term.field_program_id
-field_name: field_program_id
+id: taxonomy_term.field_building_code
+field_name: field_building_code
 entity_type: taxonomy_term
 type: string
 settings:

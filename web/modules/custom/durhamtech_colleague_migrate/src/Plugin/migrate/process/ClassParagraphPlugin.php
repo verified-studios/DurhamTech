@@ -40,6 +40,24 @@ class ClassParagraphPlugin extends ProcessPluginBase {
       }
     }
 
+
+
+    // Prepare building data.
+    $building_value = $source['Building'];
+    if (!is_string($building_value)) {
+      throw new MigrateException(sprintf('%s is not a string', var_export($building_value, TRUE)));
+    }
+    $building_row = explode(', ', $building_value);
+    foreach ($building_row as $building_key => $room) {
+      $class_data_items[$building_key]['field_building'] = $room;
+    }
+
+    if (!empty($class_data_items[0]['field_building']) && $building_key < $row_key) {
+      for ($i = $building_key + 1; $i <= $row_key; $i++) {
+        $class_data_items[$i]['field_building'] = $room;
+      }
+    }
+
     // Prepare rooms data.
     $room_value = $source['Room'];
     if (!is_string($room_value)) {
@@ -108,42 +126,34 @@ class ClassParagraphPlugin extends ProcessPluginBase {
 
 
     // Get node Id.
-    $nid = $row->getIdMap()['destid1'];
-    if (empty($nid)) {
-      return;
-    }
-    /** @var Node $node */
-    $node = Node::load($nid);
-    if (empty($node)) {
-      return;
-    }
-
-    $node_paragraphs = $node->field_class_item;
-    $first_paragraph_entity = $node_paragraphs[0]->entity;
-
-    if (!empty($first_paragraph_entity)) {
-      foreach ($node_paragraphs as $node_paragraph_key => $node_paragraph) {
-        /** @var Paragraph $node_paragraph_entity */
-        $node_paragraph_entity = $node_paragraph->entity;
-        foreach ($class_data_items[$node_paragraph_key] as $field_name => $field_value) {
-          $node_paragraph_entity->set($field_name, $field_value);
+    $nid = isset($row->getIdMap()['destid1']) ? $row->getIdMap()['destid1'] : NULL;
+    if (!empty($nid)) {
+      /** @var Node $node */
+      $node = Node::load($nid);
+      if (!empty($node)) {
+        $node_paragraphs = $node->field_class_item;
+        $paragraphEntities = $node_paragraphs->referencedEntities();
+        foreach ($paragraphEntities as $paragraphEntity) {
+          $paragraphEntity->delete();
         }
-        $node_paragraph_entity->save();
-      }
-    }
-    else {
-      foreach ($class_data_items as $item) {
-        $paragraph = Paragraph::create(['type' => 'class']);
-        foreach ($item as $field_name => $field_value) {
-          $paragraph->set($field_name, $field_value);
-        }
-        $paragraph->save();
-        $node->field_class_item->appendItem($paragraph);
       }
     }
 
-    $node->save();
+    $classes = [];
 
+    foreach ($class_data_items as $item) {
+      $paragraph = Paragraph::create(['type' => 'class']);
+      foreach ($item as $field_name => $field_value) {
+        $paragraph->set($field_name, $field_value);
+      }
+      $paragraph->save();
+      $paragraphRevisionId = $paragraph->getRevisionId();
+      $classes[] = [
+        'target_id' => $paragraph->id(),
+        'target_revision_id' => $paragraphRevisionId,
+        ];
+    }
+    return $classes;
   }
 
 }

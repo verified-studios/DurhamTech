@@ -37,15 +37,15 @@ class DtechMigrationManageForm extends FormBase {
       '#title' => 'Courses',
     ];
 
-    $form['courses_fieldset']['clear_courses'] = array(
+    $form['courses_fieldset']['rollback_courses'] = array(
       '#type' => 'submit',
-      '#value' => t('Clear Course Taxonomy'),
-      '#submit' => array('::clearCourses')
+      '#value' => t('Rollback Course Taxonomy'),
+      '#submit' => array('::rollbackCourses')
     );
 
     $form['courses_fieldset']['run_courses'] = array(
       '#type' => 'submit',
-      '#value' => t('Run Courses migrate'),
+      '#value' => t('Run Course migrate'),
       '#submit' => array('::runCourses'),
       '#suffix' => 'Last Updated Date: ' . $this->migrateLastImported('course_data_taxonomy'),
     );
@@ -73,10 +73,10 @@ class DtechMigrationManageForm extends FormBase {
       '#title' => 'Programs Courselist',
     ];
 
-    $form['programs_course_list_fieldset']['clear_programs_course_list'] = array(
+    $form['programs_course_list_fieldset']['rollback_programs_course_list'] = array(
       '#type' => 'submit',
-      '#value' => t('Clear Programs Course List Taxonomy'),
-      '#submit' => array('::clearProgramsCourseList')
+      '#value' => t('Rollback Programs Course List Taxonomy'),
+      '#submit' => array('::rollbackProgramsCourseList')
     );
 
     $form['programs_course_list_fieldset']['run_programs_course_list'] = array(
@@ -131,11 +131,11 @@ class DtechMigrationManageForm extends FormBase {
    * Clear Course Taxonomy
    */
   function dataRefresh() {
-    $this->clearCourses();
+    $this->rollbackCourses();
     $this->runCourses();
     $this->clearClass();
     $this->runClass();
-    $this->clearProgramsCourseList();
+    $this->rollbackProgramsCourseList();
     $this->runProgramsCourseList();
     $this->setProgramsInactive();
     $this->runPrograms();
@@ -144,11 +144,12 @@ class DtechMigrationManageForm extends FormBase {
   /**
    * Clear Course Taxonomy
    */
-  function clearCourses() {
-    $result = \Drupal::entityQuery('taxonomy_term')
-      ->condition('vid', 'course')
-      ->execute();
-    entity_delete_multiple('taxonomy_term', $result);
+  function rollbackCourses() {
+    $migration_id = 'course_data_taxonomy';
+    $migration = \Drupal::service('plugin.manager.migration')->createInstance($migration_id);
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $executable->rollback();
   }
 
   /**
@@ -186,11 +187,12 @@ class DtechMigrationManageForm extends FormBase {
   /**
    * Clear Programs Course List
    */
-  function clearProgramsCourseList() {
-    $result = \Drupal::entityQuery('taxonomy_term')
-      ->condition('vid', 'programs_course_list')
-      ->execute();
-    entity_delete_multiple('taxonomy_term', $result);
+  function rollbackProgramsCourseList() {
+    $migration_id = 'programs_course_list_taxonomy';
+    $migration = \Drupal::service('plugin.manager.migration')->createInstance($migration_id);
+    $migration->getIdMap()->prepareUpdate();
+    $executable = new MigrateExecutable($migration, new MigrateMessage());
+    $executable->rollback();
   }
 
   /**
