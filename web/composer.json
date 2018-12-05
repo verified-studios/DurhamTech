@@ -24,6 +24,7 @@
     "drupal/delete_all": "^1.0",
     "drupal/facets": "^1.0@beta",
     "drupal/fitvids": "^1.0",
+    "drupal/ldap": "^3.0@beta",
     "drupal/media_entity": "^1.7",
     "drupal/menu_block": "^1.4",
     "drupal/page_manager": "^4.0@beta",
