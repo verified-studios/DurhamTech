@@ -19,27 +19,6 @@ name: 'Site Index'
 description: ''
 read_only: false
 field_settings:
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
-    type: text
-  field_description:
-    label: Description
-    datasource_id: 'entity:node'
-    property_path: field_description
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_description
-  field_rich_text:
-    label: Description
-    datasource_id: 'entity:node'
-    property_path: field_rich_text
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_rich_text
   body:
     label: Body
     datasource_id: 'entity:node'
@@ -56,14 +35,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_body
-  field_title:
-    label: Title
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_title
+  field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
     type: text
     dependencies:
       config:
-        - field.storage.taxonomy_term.field_title
+        - field.storage.node.field_description
   field_description_1:
     label: Description
     datasource_id: 'entity:taxonomy_term'
@@ -72,6 +51,27 @@ field_settings:
     dependencies:
       config:
         - field.storage.taxonomy_term.field_description
+  field_rich_text:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_rich_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_rich_text
+  field_title:
+    label: Title
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_title
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
 datasource_settings:
   'entity:node':
     bundles:
@@ -97,6 +97,7 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  add_url: {  }
   aggregated_field: {  }
   highlight:
     highlight: always
@@ -111,17 +112,16 @@ processor_settings:
   ignorecase:
     all_fields: true
     fields:
-      - title
-      - field_description
-      - field_rich_text
       - body
       - field_body
-      - field_title
+      - field_description
       - field_description_1
+      - field_rich_text
+      - field_title
+      - title
     weights:
       preprocess_index: -20
       preprocess_query: -20
-  add_url: {  }
   rendered_item: {  }
 tracker_settings:
   default:

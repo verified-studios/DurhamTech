@@ -7,7 +7,7 @@ label: 'Colleague Users'
 server_id: ist3
 base_dn: 'ou=Employees, ou=DTCCUsers, dc=durhamtech, dc=edu'
 filter: '(&(objectClass=user)(mail=*@*))'
-attributes: 'cn,title,sn,givenname,displayname,mail,ipphone,description,physicaldeliveryofficename'
+attributes: 'cn,title,sn,givenname,displayname,mail,ipphone,physicaldeliveryofficename,building'
 size_limit: 0
 time_limit: 0
 dereference: 0

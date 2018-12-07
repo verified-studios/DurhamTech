@@ -50,7 +50,12 @@ process:
       process:
         target_id: '0'
   field_program_id: 'Program ID'
-  field_program_cost: 'Total Cost'
+  field_program_cost:
+    -
+      plugin: str_replace
+      source: 'Total Cost'
+      search: $
+      replace: ''
   field_min_required_credits: 'Min Required Credits'
   field_min_required_inst: 'Min Required Institutional Credits'
   field_min_required_inst_gpa: 'Min Required Institutional GPA'

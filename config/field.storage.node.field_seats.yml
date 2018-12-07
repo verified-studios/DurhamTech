@@ -1,12 +1,12 @@
-uuid: 81f6fe65-a21b-49e8-8884-42685440c604
+uuid: 5b1809c0-54d1-4c1b-9739-9190def5e628
 langcode: en
 status: true
 dependencies:
   module:
-    - taxonomy
-id: taxonomy_term.field_seats
+    - node
+id: node.field_seats
 field_name: field_seats
-entity_type: taxonomy_term
+entity_type: node
 type: integer
 settings:
   unsigned: false

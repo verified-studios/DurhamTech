@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.class.field_location
     - field.field.node.class.field_meeting_days
     - field.field.node.class.field_room
+    - field.field.node.class.field_seats
     - field.field.node.class.field_start_date
     - field.field.node.class.field_start_time
     - node.type.class
@@ -41,7 +42,7 @@ content:
     region: content
   field_class_item:
     type: entity_reference_paragraphs
-    weight: 14
+    weight: 15
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -80,6 +81,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_seats:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_start_date:
     weight: 9

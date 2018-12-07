@@ -5,10 +5,10 @@ dependencies:
   config:
     - field.storage.node.field_class_item
     - field.storage.node.field_end_date
+    - field.storage.node.field_seats
     - field.storage.node.field_start_date
     - field.storage.taxonomy_term.field_class_format
     - field.storage.taxonomy_term.field_credits
-    - field.storage.taxonomy_term.field_seats
     - field.storage.taxonomy_term.field_title
     - search_api.index.courses_index
     - taxonomy.vocabulary.class_format
@@ -698,9 +698,9 @@ display:
               tags:
                 display_method: label
           plugin_id: search_api_field
-        field_seats:
-          id: field_seats
-          table: search_api_index_courses_index
+        field_seats_1:
+          id: field_seats_1
+          table: search_api_datasource_courses_index_entity_node
           field: field_seats
           relationship: none
           group_type: group
@@ -779,6 +779,7 @@ display:
             format_plural_values:
               - '1'
               - '@count'
+          entity_type: node
           plugin_id: search_api_field
       filters:
         field_class_format:
@@ -962,11 +963,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: '>='
           value:
             min: ''
             max: ''
-            value: '0 minutes'
+            value: now
             type: offset
           group: 1
           exposed: false
@@ -1055,10 +1056,10 @@ display:
       tags:
         - 'config:field.storage.node.field_class_item'
         - 'config:field.storage.node.field_end_date'
+        - 'config:field.storage.node.field_seats'
         - 'config:field.storage.node.field_start_date'
         - 'config:field.storage.taxonomy_term.field_class_format'
         - 'config:field.storage.taxonomy_term.field_credits'
-        - 'config:field.storage.taxonomy_term.field_seats'
         - 'config:field.storage.taxonomy_term.field_title'
   page_1:
     display_plugin: page
@@ -1089,8 +1090,8 @@ display:
       tags:
         - 'config:field.storage.node.field_class_item'
         - 'config:field.storage.node.field_end_date'
+        - 'config:field.storage.node.field_seats'
         - 'config:field.storage.node.field_start_date'
         - 'config:field.storage.taxonomy_term.field_class_format'
         - 'config:field.storage.taxonomy_term.field_credits'
-        - 'config:field.storage.taxonomy_term.field_seats'
         - 'config:field.storage.taxonomy_term.field_title'
