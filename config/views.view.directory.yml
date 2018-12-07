@@ -79,65 +79,57 @@ display:
             attribute_3: attribute_3
             attribute_4: attribute_4
             attribute_6: attribute_6
-            attribute_7: attribute_7
           info:
             attribute:
-              sortable: true
-              default_sort_order: asc
+              sortable: false
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             attribute_1:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            attribute_2:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            attribute_5:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            attribute_3:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            attribute_4:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            attribute_6:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            attribute_7:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-          default: attribute
+            attribute_2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_5:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_3:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_4:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            attribute_6:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
           empty_table: false
       row:
         type: fields
@@ -150,7 +142,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'Last Name'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -174,7 +166,7 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
+            strip_tags: false
             trim: false
             preserve_tags: ''
             html: false
@@ -189,7 +181,7 @@ display:
           empty: ''
           hide_empty: false
           empty_zero: false
-          hide_alter_empty: true
+          hide_alter_empty: false
           multi_value: v-all
           value_separator: ''
           index_value: '0'
@@ -203,7 +195,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'First Name'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -513,59 +505,6 @@ display:
           index_value: '0'
           attribute_name: physicaldeliveryofficename
           plugin_id: ldap_variable_attribute
-        attribute_7:
-          id: attribute_7
-          table: ldap_query
-          field: attribute
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Description
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          multi_value: v-all
-          value_separator: ''
-          index_value: '0'
-          attribute_name: description
-          plugin_id: ldap_variable_attribute
       filters:
         attribute:
           id: attribute
@@ -607,7 +546,20 @@ display:
             group_items: {  }
           attribute_name: displayname
           plugin_id: ldap_variable_attribute
-      sorts: {  }
+      sorts:
+        attribute:
+          id: attribute
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          attribute_name: sn
+          plugin_id: ldap_variable_attribute
       title: 'Employee Directory'
       header: {  }
       footer: {  }

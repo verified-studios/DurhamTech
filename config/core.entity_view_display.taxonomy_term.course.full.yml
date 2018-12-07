@@ -17,7 +17,6 @@ dependencies:
     - field.field.taxonomy_term.course.field_local_description
     - field.field.taxonomy_term.course.field_requisites
     - field.field.taxonomy_term.course.field_requisites_text
-    - field.field.taxonomy_term.course.field_seats
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
@@ -111,4 +110,3 @@ hidden:
   field_corequisites: true
   field_local_description: true
   field_requisites: true
-  field_seats: true

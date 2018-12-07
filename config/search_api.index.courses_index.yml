@@ -3,23 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_course
-    - field.storage.taxonomy_term.field_title
-    - field.storage.taxonomy_term.field_credits
-    - field.storage.taxonomy_term.field_class_format
-    - field.storage.node.field_end_date
-    - field.storage.node.field_start_date
+    - field.storage.node.field_building
     - field.storage.node.field_class_item
-    - field.storage.paragraph.field_start_time
     - field.storage.paragraph.field_end_time
     - field.storage.paragraph.field_meeting_days
-    - field.storage.node.field_building
+    - field.storage.paragraph.field_start_time
+    - field.storage.node.field_course
+    - field.storage.taxonomy_term.field_class_format
+    - field.storage.taxonomy_term.field_credits
+    - field.storage.taxonomy_term.field_title
+    - field.storage.node.field_end_date
     - field.storage.node.field_location
-    - field.storage.taxonomy_term.field_seats
+    - field.storage.node.field_start_date
     - search_api.server.durham_tech
   module:
-    - taxonomy
     - paragraphs
+    - taxonomy
+    - path
     - search_api
     - node
 id: courses_index
@@ -95,17 +95,6 @@ field_settings:
         - field.storage.paragraph.field_meeting_days
       module:
         - paragraphs
-  field_seats:
-    label: 'Course » Taxonomy term » Seats'
-    datasource_id: 'entity:node'
-    property_path: 'field_course:entity:field_seats'
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_course
-        - field.storage.taxonomy_term.field_seats
-      module:
-        - taxonomy
   field_start_date:
     label: 'Start Date'
     datasource_id: 'entity:node'
@@ -146,6 +135,7 @@ field_settings:
         - field.storage.node.field_course
       module:
         - taxonomy
+        - taxonomy
   path:
     label: 'Course » Taxonomy term » URL alias'
     datasource_id: 'entity:node'
@@ -156,6 +146,7 @@ field_settings:
         - field.storage.node.field_course
       module:
         - taxonomy
+        - path
   tid:
     label: 'Course » Taxonomy term » Term ID'
     datasource_id: 'entity:node'
@@ -165,6 +156,7 @@ field_settings:
       config:
         - field.storage.node.field_course
       module:
+        - taxonomy
         - taxonomy
 datasource_settings:
   'entity:node':

@@ -36,6 +36,7 @@ source:
     Location: 'General location of the class.'
     Building: 'Distinct building class is located in.'
     Room: 'Room number where the class is located in.'
+    'Seats Available': 'Seats Available.'
   constants:
     bool_0: 0
     bool_1: 1
@@ -98,6 +99,7 @@ process:
   field_class_item:
     plugin: durhamtech_room_migrate
     source: Id
+  field_seats: 'Seats Available'
 destination:
   plugin: 'entity:node'
   default_bundle: class

@@ -1,0 +1,8 @@
+uuid: fdde1553-dd84-46d1-bd97-a31a584160aa
+langcode: en
+status: true
+dependencies: {  }
+id: registration-and-advising
+label: 'Registration and Advising'
+description: 'menu for registration and advising'
+locked: false

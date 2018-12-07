@@ -1,0 +1,30 @@
+uuid: ea06d453-6070-4a97-a7ae-6f587fa9321d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - durhamtech
+id: views_block__library_block
+theme: durhamtech
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:events-block_1'
+settings:
+  id: 'views_block:events-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /library
+    negate: false
+    context_mapping: {  }
