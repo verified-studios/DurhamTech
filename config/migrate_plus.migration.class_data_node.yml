@@ -69,6 +69,7 @@ process:
         IN: Online
         DL: Online
         CP: Classroom
+        WB: WB
     -
       plugin: entity_generate
       entity_type: taxonomy_term
