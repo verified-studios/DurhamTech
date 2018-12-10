@@ -105,7 +105,12 @@ process:
       plugin: iterator
       process:
         target_id: '0'
-  field_average_cost: 'Average Cost'
+  field_average_cost:
+    -
+      plugin: str_replace
+      source: 'Average Cost'
+      search: $
+      replace: ''
   field_contact_hours: 'Contact Hours'
 destination:
   plugin: 'entity:taxonomy_term'
