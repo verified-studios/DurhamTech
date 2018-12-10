@@ -1,0 +1,19 @@
+uuid: cd542bb1-94bb-44dc-b034-c7dbe22d603f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_building_code
+    - taxonomy.vocabulary.building
+id: taxonomy_term.building.field_building_code
+field_name: field_building_code
+entity_type: taxonomy_term
+bundle: building
+label: 'Building Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

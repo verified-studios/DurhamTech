@@ -1,0 +1,8 @@
+uuid: 679999b5-44c2-45ca-b82b-7b6b140b8409
+langcode: en
+status: true
+dependencies: {  }
+id: durham-tech-bookstore
+label: 'Durham Tech Bookstore'
+description: 'bookstore information'
+locked: false

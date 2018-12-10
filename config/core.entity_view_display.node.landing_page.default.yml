@@ -3,6 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_banner_image
+    - field.field.node.landing_page.field_hero_video
+    - field.field.node.landing_page.field_link_panel
+    - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
     - panelizer
@@ -57,3 +62,8 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
+  body: true
+  field_banner_image: true
+  field_hero_video: true
+  field_link_panel: true
+  panelizer: true

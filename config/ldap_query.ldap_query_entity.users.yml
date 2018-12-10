@@ -1,0 +1,14 @@
+uuid: dab2380c-e662-4f1a-b800-538192a655ca
+langcode: en
+status: true
+dependencies: {  }
+id: users
+label: 'Colleague Users'
+server_id: ist3
+base_dn: 'ou=Employees, ou=DTCCUsers, dc=durhamtech, dc=edu'
+filter: '(&(objectClass=user)(mail=*@*))'
+attributes: 'cn,title,sn,givenname,displayname,mail,ipphone,physicaldeliveryofficename,building'
+size_limit: 0
+time_limit: 0
+dereference: 0
+scope: 3

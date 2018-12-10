@@ -1,0 +1,30 @@
+uuid: fb4a14a9-c67b-41f0-a420-db63220f8c72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.building.field_building_code
+    - taxonomy.vocabulary.building
+  module:
+    - text
+id: taxonomy_term.building.default
+targetEntityType: taxonomy_term
+bundle: building
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_building_code:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

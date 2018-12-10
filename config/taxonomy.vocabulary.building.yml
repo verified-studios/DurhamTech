@@ -1,0 +1,9 @@
+uuid: 11b1c8af-6bf3-4030-a173-9d9e3957cba9
+langcode: en
+status: true
+dependencies: {  }
+name: Building
+vid: building
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,4 +1,4 @@
-uuid: 3a17c7d5-ac6a-4a5c-9f91-97a073ab3f46
+uuid: c783be90-598a-4152-9c14-578c7369ba2a
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ id: taxonomy_term.programs_course_list.field_program_id
 field_name: field_program_id
 entity_type: taxonomy_term
 bundle: programs_course_list
-label: field_program_id
+label: 'Program ID'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }
