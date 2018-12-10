@@ -8480,6 +8480,15 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .view-id-events_search.view-display-id-attachment_1 .view-content .views-row {
     border-bottom: none; }
 
+.view-id-events .views-row {
+  margin-bottom: 20px; }
+  @media screen and (min-width: 768px) {
+    .view-id-events .views-row {
+      margin-bottom: 0; } }
+
+.view-id-events .views-row:last-of-type {
+  margin-bottom: 0px; }
+
 #views-exposed-form-events-search-block-1 {
   padding: 15px 0; }
   @media screen and (min-width: 1200px) {

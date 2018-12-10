@@ -206,6 +206,17 @@ $section-spacing-lg: 60px;
     }
   }
 }
+.view-id-events {
+  .views-row {
+    margin-bottom: 20px;
+    @media #{$tablet} {
+      margin-bottom: 0;
+    }
+  }
+  .views-row:last-of-type {
+    margin-bottom: 0px;
+  }
+}
 
 // Event search sidebar
 #views-exposed-form-events-search-block-1 {

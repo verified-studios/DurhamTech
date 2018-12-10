@@ -51,3 +51,88 @@
  * @see html.html.twig
  */
 #}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+
+{% include '@durhamtech/partials/header.html.twig' %}
+
+{# Secondary Menu - Full Width #}
+{% if page.secondary_nav %}
+  <div class="secondary-page-header">
+    {% block secondary_nav %}
+      <div class="secondary-nav" id="secondary-nav" role="secondary-nav">
+        <div class="{{ container }}">
+          <div class="row">
+            {{ page.secondary_nav.secondary_menu }}
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+    <div class="banner" style="background-image: url('{{ file_url(banner_img) }}')" >
+      <div class="banner-overlay"></div>
+      <div class="banner-text-wrapper">
+        <div class="container">
+          <div class="breadcrumb"><a href="/">Home</a><a href="/courses">Courses</a><span>{{ node_title }}</span></div>
+          <div class="banner-title"><h1 class="white">Courses</h1></div>
+        </div>
+      </div>
+      {{ page.secondary_nav|without('secondary_menu', 'breadcrumbs') }}
+    </div>
+  </div>
+{% endif %}
+
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    <div class="page-header-wrapper">
+      <div class="container">
+        <div class="col-sm-12" role="heading">
+          {{ page.header }}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+{% endif %}
+
+{% block content %}
+<div role="main" class="main-container js-quickedit-main-content">
+  <ul>
+    <li>field_i_have_a_target_id: {{ vals.level }}</li>
+    <li>field_i_m_interested_in_target_id: {{ vals.degree }}</li>
+    <li>field_learn_category_target_id: {{ vals.category }}</li>
+  </ul>
+  <a id="main-content"></a>
+  <div class="container">
+    <div class="row">
+      <section class="col-sm-12">
+        <div class="region region-content">
+          {{ drupal_view('program_search_by_category') }}
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% if page.footer %}
+  {% block footer %}
+    <footer class="footer" role="contentinfo">
+      <div class="footer-top {{ container }}">
+        <div class="row">
+        {{ page.footer }}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="{{ container }}">
+          <div class="row">
+            <div class="col-sm-6 footer-bottom-menu bottom-footer-menu-placeholder">
+              {{ page.footer_bottom }}
+            </div>
+            <div class="col-sm-6 footer-bottom-social bottom-footer-social-placeholder">
+              {{ page.footer_bottom_2 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  {% endblock %}
+{% endif %}
