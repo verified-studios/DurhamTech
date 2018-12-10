@@ -52,13 +52,11 @@
     </div>
     {% endif %}
   </div>
-
   <div class="course-metadata row">
-    {% if content.field_credits is not empty %}
     <div class="col-sm-3 price">
       <h4 class="metadata-title">Cost:</h4>
       <div class="field field-cost">
-        ${{ content.field_credits|render|striptags * 70 }}
+        ${{ content.field_average_cost|render|striptags }}
       </div>
     </div>
     <div class="col-sm-3 credits">
@@ -69,7 +67,6 @@
       <h4 class="metadata-title">Contact Hours:</h4>
       {{ content.field_contact_hours }}
     </div>
-    {% endif %}
     {% if content.field_requisites is not empty %}
     {% endif %}
 

@@ -54,6 +54,7 @@ process:
         IN: Online
         DL: Online
         CP: Classroom
+        WB: WB
     -
       plugin: entity_generate
       entity_type: taxonomy_term
@@ -104,7 +105,12 @@ process:
       plugin: iterator
       process:
         target_id: '0'
-  field_average_cost: 'Average Cost'
+  field_average_cost:
+    -
+      plugin: str_replace
+      source: 'Average Cost'
+      search: $
+      replace: ''
   field_contact_hours: 'Contact Hours'
 destination:
   plugin: 'entity:taxonomy_term'
