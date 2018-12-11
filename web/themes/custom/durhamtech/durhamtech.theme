@@ -35,8 +35,8 @@ function durhamtech_preprocess_field(&$variables, $hook) {
 function durhamtech_preprocess_page(&$variables) {
   $banner = NULL;
   $current_path = \Drupal::service('path.current')->getPath();
-
   if ($current_path === '/home/go') {
+    $variables['#cache']['max-age'] = 0;
     $variables['vals'] = [
       'level' => \Drupal::request()->query->get('field_i_have_a_target_id'),
       'degree' => \Drupal::request()->query->get('field_i_m_interested_in_target_id'),
@@ -68,7 +68,12 @@ function durhamtech_preprocess_page(&$variables) {
         }
       }
     }
-
+    if ($variables['vals']['category'] !== 'All') {
+      $destination = '/programs-search?field_learn_category=' . $variables['vals']['category'];
+    } else {
+      $destination = '/programs';
+    }
+    durhamtech_goto($destination);
   }
 
   switch($current_path) {

@@ -1,0 +1,23 @@
+uuid: c7c8ee37-cc3d-4c41-9d78-26fe42321af0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_seats
+    - taxonomy.vocabulary.course
+id: taxonomy_term.course.field_seats
+field_name: field_seats
+entity_type: taxonomy_term
+bundle: course
+label: Seats
+description: 'Number of seats available for the course.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

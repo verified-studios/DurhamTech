@@ -16,6 +16,7 @@
     "drupal/addtoany": "^1.8",
     "drupal/admin_toolbar": "^1.21",
     "drupal/better_exposed_filters": "^3.0@alpha",
+    "drupal/cache_control_override": "^1.0@alpha",
     "drupal/captcha": "^1.0@beta",
     "drupal/ckeditor_tabletoolstoolbar": "^1.0",
     "drupal/ckeditor_youtube": "^1.1",

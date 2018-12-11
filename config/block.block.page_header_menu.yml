@@ -28,6 +28,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/careers\r\n/careers/*\r\n/academic-programs/*\r\n/academic-programs\r\n/courses\r\n/courses/*"
+    pages: "/careers\r\n/careers/*\r\n/programs/*\r\n/programs\r\n/courses\r\n/courses/*\r\n/apply\r\n/apply/*\r\n/tuition-and-fees\r\n/admissions-and-enrollment"
     negate: false
     context_mapping: {  }
