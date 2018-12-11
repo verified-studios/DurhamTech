@@ -1,0 +1,23 @@
+uuid: fa73eb3b-c70a-4d35-a127-ce8ae1325ed3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target_type
+    - taxonomy.vocabulary.education_goals
+  module:
+    - options
+id: taxonomy_term.education_goals.field_target_type
+field_name: field_target_type
+entity_type: taxonomy_term
+bundle: education_goals
+label: 'Target Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: url
+default_value_callback: ''
+settings: {  }
+field_type: list_string

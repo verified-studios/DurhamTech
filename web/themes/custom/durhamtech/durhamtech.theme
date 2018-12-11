@@ -7,6 +7,8 @@
  * Place your custom PHP code in this file.
  */
 
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * Implements hook_preprocess_HOOK() for block templates.
  */
@@ -20,9 +22,6 @@ function durhamtech_preprocess_block(&$variables) {
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-/**
- * Implements hook_preprocess_page().
- */
 function durhamtech_goto($path) {
 
   $response = new RedirectResponse($path);
@@ -43,6 +42,33 @@ function durhamtech_preprocess_page(&$variables) {
       'degree' => \Drupal::request()->query->get('field_i_m_interested_in_target_id'),
       'category' => \Drupal::request()->query->get('field_learn_category_target_id')
     ];
+    if ($variables['vals']['degree'] !== 'All') {
+      $degree_term = Term::Load($variables['vals']['degree']);
+      $degree_term_target_type = !empty($degree_term) ? $degree_term->get('field_target_type')->value : NULL;
+      if ($degree_term_target_type == 'url') {
+        $destination = $degree_term->get('field_target')->value;
+        if (!empty($destination)) {
+          durhamtech_goto($destination);
+        }
+      } else {
+        $category_term = Term::Load($variables['vals']['category']);
+        $category_term_target_type = !empty($category_term) ? $category_term->get('field_target_type')->value : NULL;
+        if ($category_term_target_type == 'url') {
+          $destination = $category_term->get('field_target')->value;
+          if (!empty($destination)) {
+            durhamtech_goto($destination);
+          }
+        } else {
+          if ($variables['vals']['category'] !== 'All') {
+            $destination = '/programs-search?field_learn_category=' . $variables['vals']['category'];
+          } else {
+            $destination = '/programs';
+          }
+          durhamtech_goto($destination);
+        }
+      }
+    }
+
   }
 
   switch($current_path) {
@@ -81,7 +107,7 @@ function durhamtech_preprocess_page(&$variables) {
     $url_parts = explode('/', $current_path);
 
     $result = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
-    
+
     $url_arr = explode('/', $result);
     switch ($url_arr[1]) {
       case 'courses':
@@ -153,7 +179,7 @@ function durhamtech_preprocess_page(&$variables) {
         case 'academic-programs':
           $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Academic Programs']);
           break;
-        default: 
+        default:
           $banner = \Drupal::entityTypeManager()->getStorage("media")->load(1);
           break;
       }
@@ -215,7 +241,7 @@ function durhamtech_preprocess_node(&$variables)
         $variables['node']->field_courses[$k]->course_path = $alias;
       }
     }
-    
+
     $image_thumb = $variables['node']->get('field_program_image')->getValue();
     if (isset($image_thumb[0])) {
       $file = \Drupal\file\Entity\File::load($image_thumb[0]['target_id']);

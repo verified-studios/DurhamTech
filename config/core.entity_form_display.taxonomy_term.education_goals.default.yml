@@ -1,28 +1,16 @@
-uuid: 1d5410c1-f9bf-48fa-b01a-2abbc8334f68
+uuid: 87bda9ba-e1b9-4659-b3c9-90cca4716f26
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.learn.field_background_image
-    - field.field.taxonomy_term.learn.field_target
-    - field.field.taxonomy_term.learn.field_target_type
-    - image.style.thumbnail
-    - taxonomy.vocabulary.learn
-  module:
-    - image
-id: taxonomy_term.learn.default
+    - field.field.taxonomy_term.education_goals.field_target
+    - field.field.taxonomy_term.education_goals.field_target_type
+    - taxonomy.vocabulary.education_goals
+id: taxonomy_term.education_goals.default
 targetEntityType: taxonomy_term
-bundle: learn
+bundle: education_goals
 mode: default
 content:
-  field_background_image:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
   field_target:
     weight: 2
     settings:
