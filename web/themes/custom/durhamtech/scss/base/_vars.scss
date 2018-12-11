@@ -17,6 +17,7 @@ $transparent-black: rgba($black, 0.85);
 // Brand Colors
 $green: #00843D;
 $medium-green: #84BD00;
+$dark-green: #006B31;
 $light-green: $medium-green;
 $brand-orange: #E87722;
 $brand-gray: #808990;
@@ -36,6 +37,7 @@ $colors: (
   'dark-orange': $dark-orange,
   'transparent-black': $transparent-black,
   'green': $green,
+  'dark-green': $dark-green,
   'light-green': $light-green,
   'orange': $brand-orange,
   'brand-gray': $brand-gray,
