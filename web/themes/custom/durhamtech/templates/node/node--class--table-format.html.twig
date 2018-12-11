@@ -68,7 +68,7 @@
 
 {% if view.current_display != 'course_offering' %}
   <tr{{ attributes.addClass(classes) }}>
-    
+
     {% set end_date = content.field_end_date.0['#text']|date('U') %}
     <td>
       {% if content.field_start_date.0['#text'] is not empty and content.field_end_date.0['#text'] is not empty %}
@@ -80,16 +80,26 @@
     <td>
       <table>
         <tbody>
-          {% if content.field_location or content.field_building %}
+          {% if content.field_location %}
           <tr>
             <td>{{ content.field_location.0 }}</td>
-          </tr>
-          <tr>
-            <td>{{ content.field_building.0 }}</td>
           </tr>
           {% endif %}
         </tbody>
       </table>
+    </td>
+    <td>
+      {% if content.field_class_item %}
+        <table>
+          <tbody>
+          {% for key, paragraph in content.field_class_item if key|first!='#' %}
+            <tr>
+              <td>{{ paragraph['#paragraph'].get('field_building').value }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      {% endif %}
     </td>
     <td>
       {% if content.field_class_item %}
@@ -110,9 +120,9 @@
           {% for key, paragraph in content.field_class_item if key|first!='#' %}
           {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
           {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
-          <tr>
-            <td>{{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}</td>
-          </tr>
+            <tr>
+              <td>{% for key, day in paragraph['#paragraph'].get('field_meeting_days')%}{{ day.value }}{% if not loop.last %},{% endif %}{% endfor %} {{ start_time.value }} - {{ end_time.value }}</td>
+            </tr>
           {% endfor %}
         </tbody>
       </table>
@@ -135,12 +145,9 @@
     <td>
       <table>
         <tbody>
-          {% if content.field_location or content.field_building %}
+          {% if content.field_location %}
           <tr>
             <td>{{ content.field_location.0 }}</td>
-          </tr>
-          <tr>
-            <td>{{ content.field_building.0 }}</td>
           </tr>
           {% endif %}
         </tbody>
@@ -148,15 +155,28 @@
     </td>
     <td>
       {% if content.field_class_item %}
-      <table>
-        <tbody>
-        {% for key, paragraph in content.field_class_item if key|first!='#' %}
-        <tr>
-          <td>{{ paragraph['#paragraph'].get('field_room').value }}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-      </table>
+        <table>
+          <tbody>
+          {% for key, paragraph in content.field_class_item if key|first!='#' %}
+            <tr>
+              <td>{{ paragraph['#paragraph'].get('field_building').value }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      {% endif %}
+    </td>
+    <td>
+      {% if content.field_class_item %}
+        <table>
+          <tbody>
+          {% for key, paragraph in content.field_class_item if key|first!='#' %}
+            <tr>
+              <td>{{ paragraph['#paragraph'].get('field_room').value }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
       {% endif %}
     </td>
     <td>
@@ -166,7 +186,7 @@
         {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
         {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
         <tr>
-          <td>{{ paragraph['#paragraph'].get('field_meeting_days').value }} {{ start_time.value }} - {{ end_time.value }}</td>
+          <td>{% for key, day in paragraph['#paragraph'].get('field_meeting_days')%}{{ day.value }}{% if not loop.last %},{% endif %}{% endfor %} {{ start_time.value }} - {{ end_time.value }}</td>
         </tr>
         {% endfor %}
         </tbody>
