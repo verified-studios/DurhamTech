@@ -124,3 +124,4 @@ hidden:
   field_corequisites: true
   field_local_description: true
   field_requisites: true
+  field_seats: true
