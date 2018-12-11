@@ -68,12 +68,21 @@ function durhamtech_preprocess_page(&$variables) {
         }
       }
     }
-    if ($variables['vals']['category'] !== 'All') {
-      $destination = '/programs-search?field_learn_category=' . $variables['vals']['category'];
+    $category_term = Term::Load($variables['vals']['category']);
+    $category_term_target_type = !empty($category_term) ? $category_term->get('field_target_type')->value : NULL;
+    if ($category_term_target_type == 'url') {
+      $destination = $category_term->get('field_target')->value;
+      if (!empty($destination)) {
+        durhamtech_goto($destination);
+      }
     } else {
-      $destination = '/programs';
+      if ($variables['vals']['category'] !== 'All') {
+        $destination = '/programs-search?field_learn_category=' . $variables['vals']['category'];
+      } else {
+        $destination = '/programs';
+      }
+      durhamtech_goto($destination);
     }
-    durhamtech_goto($destination);
   }
 
   switch($current_path) {
