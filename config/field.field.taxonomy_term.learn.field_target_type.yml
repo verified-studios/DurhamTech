@@ -1,0 +1,23 @@
+uuid: 1c961a8b-2078-4fcd-adaf-6a4d20e93c39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target_type
+    - taxonomy.vocabulary.learn
+  module:
+    - options
+id: taxonomy_term.learn.field_target_type
+field_name: field_target_type
+entity_type: taxonomy_term
+bundle: learn
+label: 'Target Type'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: url
+default_value_callback: ''
+settings: {  }
+field_type: list_string
