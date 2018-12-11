@@ -1,42 +1,34 @@
 <div class="landing-page apply-now">
-    {#<section class="lp-vertical-tabs">#}
-        {#<div class="container">#}
-            {#<div class="row">#}
-              {#<div class="col-md-3">#}
-                {#<ul class="nav nav-tabs" id="applyTab" role="tablist">#}
-                  {#{{ content.vertical_tab_region }}#}
-                {#</ul>#}
-              {#</div>#}
-              {#<div class="col-tab-panes col-md-6 col-md-offset-1">#}
-                {#<div class="tab-content" id="applyTabContent">#}
-                  {#{{ content.vertical_tab_region_body }}#}
-                {#</div>#}
-              {#</div>#}
-            {#</div>#}
-        {#</div>#}
-    {#</section>#}
+  <section class="lp-vertical-tabs">
+    <div class="container">
+      <div class="row">
+        {{ content.vertical_tab_region }}
+        {{ content.vertical_tab_region_body }}
+      </div>
+    </div>
+  </section>
 
-    <section class="lp-deadlines">
-        <div class="container">
-            <div class="row">
-                {{ content.three_column_deadlines }}
-            </div>
-        </div>
-    </section>
+  <section class="lp-deadlines">
+    <div class="container">
+      <div class="row">
+        {{ content.three_column_deadlines }}
+      </div>
+    </div>
+  </section>
 
-    <section class="career-connect">
-        <div class="container">
-            <div class="row">
-                {{ content.help_info }}
-            </div>
-        </div>
-    </section>
+  <section class="career-connect">
+    <div class="container">
+      <div class="row">
+        {{ content.help_info }}
+      </div>
+    </div>
+  </section>
 
-    <section id="dc-quotes-slideshow" class="lp-quote-region">
-        <div class="container-fluid">
-            <div class="row">
-                {{ content.quote_region }}
-            </div>
-        </div>
-    </section>
+  <section id="dc-quotes-slideshow" class="lp-quote-region">
+    <div class="container-fluid">
+      <div class="row">
+        {{ content.quote_region }}
+      </div>
+    </div>
+  </section>
 </div>

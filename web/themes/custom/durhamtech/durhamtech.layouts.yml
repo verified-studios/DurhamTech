@@ -3,6 +3,8 @@ apply_now:
   category: Landing Pages
   template: templates/panelizer/landing-pages/apply-now
   regions:
+    vertical_tab_region:
+      label: Vertical Tab Region
     three_column_deadlines:
       label: Application Deadlines - 3 column
     help_info:
