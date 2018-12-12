@@ -66,9 +66,7 @@
 */
 #}
 
-{% if view.current_display != 'course_offering' %}
   <tr{{ attributes.addClass(classes) }}>
-
     {% set end_date = content.field_end_date.0['#text']|date('U') %}
     <td>
       {% if content.field_start_date.0['#text'] is not empty and content.field_end_date.0['#text'] is not empty %}
@@ -135,62 +133,3 @@
       {% endif %}
     </td>
   </tr>
-{% else %}
-  <tr{{ attributes.addClass(classes) }}>
-    <td><a href="{{ view.args.3 }}">{{ view.args.2 }}</a></td>
-    <td>{{ view.args.1 }}</td>
-    {% set start_date = content.field_start_date.0['#text']|date('U') %}
-    {% set end_date = content.field_end_date.0['#text']|date('U') %}
-    <td>{{ start_date|format_date('custom', 'n/j') }} - {{ end_date|format_date('custom', 'n/j') }}</td>
-    <td>
-      <table>
-        <tbody>
-          {% if content.field_location %}
-          <tr>
-            <td>{{ content.field_location.0 }}</td>
-          </tr>
-          {% endif %}
-        </tbody>
-      </table>
-    </td>
-    <td>
-      {% if content.field_class_item %}
-        <table>
-          <tbody>
-          {% for key, paragraph in content.field_class_item if key|first!='#' %}
-            <tr>
-              <td>{{ paragraph['#paragraph'].get('field_building').value }}</td>
-            </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      {% endif %}
-    </td>
-    <td>
-      {% if content.field_class_item %}
-        <table>
-          <tbody>
-          {% for key, paragraph in content.field_class_item if key|first!='#' %}
-            <tr>
-              <td>{{ paragraph['#paragraph'].get('field_room').value }}</td>
-            </tr>
-          {% endfor %}
-          </tbody>
-        </table>
-      {% endif %}
-    </td>
-    <td>
-      <table>
-        <tbody>
-        {% for key, paragraph in content.field_class_item if key|first!='#' %}
-        {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
-        {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
-        <tr>
-          <td>{% for key, day in paragraph['#paragraph'].get('field_meeting_days')%}{{ day.value }}{% if not loop.last %},{% endif %}{% endfor %} {{ start_time.value }} - {{ end_time.value }}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-      </table>
-    </td>
-  </tr>
-{% endif %}

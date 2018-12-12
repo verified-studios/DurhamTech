@@ -25,6 +25,9 @@
 
 {% if view.current_display != 'course_offering' %}
   <h3 class="section-title">Upcoming Class <span class="green">Offerings</span></h3>
+{% else %}
+  <h3 class="section-title">Upcoming Class Offerings for <span class="green">{{ view.args.1 }}</span> (<a href="{{ view.args.3 }}">{{ view.args.2 }}</a>)</h3>
+{% endif %}
   <div class="table-responsive">
     <table class="class-offerings">
       <tbody>
@@ -43,59 +46,7 @@
           ]
           %}
           {{ row.content }}
-          {#{% if loop.index == 1 %}
-            {{ kint(row.content['#node'].field_delivery_method.0.target_id) }}
-          {% endif %}
-        <tr>
-          {#{ kint(row.content['#node']|keys) }#}
-          {#{% set format_tid = row.content['#node'].field_delivery_method.0.target_id %}
-          <td>{{ row.content['#node'].field_start_date.value }} - {{ row.content['#node'].field_end_date.value }}</td>
-          <td>Mondays 6:00pm - 9:00pm</td>
-          <td>Room Location<br />Campus Location</td>
-          <td>Instructor</td>
-          <td>{{ kint(row.content|keys) }}</td>#}
-
-
       {% endfor %}
       </tbody>
     </table>
   </div>
-{% else %}
-  <h3 class="section-title">Upcoming Class Offerings for <span class="green">{{ view.args.1 }}</span></h3>
-  <div class="table-responsive">
-    <table class="class-offerings">
-      <tbody>
-      <tr>
-        <th>Course Number</th>
-        <th>Title</th>
-        <th>Dates</th>
-        <th>Location</th>
-        <th>Building</th>
-        <th>Room</th>
-        <th>Time</th>
-      </tr>
-      {% for row in rows %}
-          {%
-              set row_classes = [
-              default_row_class ? 'views-row',
-          ]
-          %}
-          {{ row.content }}
-          {#{% if loop.index == 1 %}
-            {{ kint(row.content['#node'].field_delivery_method.0.target_id) }}
-          {% endif %}
-        <tr>
-          {#{ kint(row.content['#node']|keys) }#}
-          {#{% set format_tid = row.content['#node'].field_delivery_method.0.target_id %}
-          <td>{{ row.content['#node'].field_start_date.value }} - {{ row.content['#node'].field_end_date.value }}</td>
-          <td>Mondays 6:00pm - 9:00pm</td>
-          <td>Room Location<br />Campus Location</td>
-          <td>Instructor</td>
-          <td>{{ kint(row.content|keys) }}</td>#}
-
-
-      {% endfor %}
-      </tbody>
-    </table>
-  </div>
-{% endif %}
