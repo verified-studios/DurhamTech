@@ -9393,133 +9393,127 @@ a.social-twitter:focus {
     .landing-page.about .lp-about-ctas .views-row .cta-box {
       height: 200px; }
 
-.landing-page.apply-now .lp-vertical-tabs {
-  background-image: url(/themes/custom/durhamtech/images/student_information_and_records_banner.jpg);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: cover;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
-  color: #FFFFFF !important;
+.landing-page.apply-now {
   position: relative; }
-  .landing-page.apply-now .lp-vertical-tabs h2,
-  .landing-page.apply-now .lp-vertical-tabs p {
-    color: white; }
-  .landing-page.apply-now .lp-vertical-tabs li.active a {
-    color: white;
-    background-color: #00843D;
-    border: 1px solid #00843D; }
-    .landing-page.apply-now .lp-vertical-tabs li.active a:hover {
-      background-color: #006B31;
-      border: 1px solid #006B31; }
-  .landing-page.apply-now .lp-vertical-tabs li a {
-    border: 1px solid white;
-    color: white; }
-
-.landing-page.apply-now .lp-deadlines .view-header h2 {
-  text-align: center;
-  margin-bottom: 4rem; }
-
-.landing-page.apply-now .lp-deadlines .view-content .views-row .views-field {
-  position: relative; }
-  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .date {
-    display: inline-block;
-    font-weight: 600;
-    line-height: 1;
-    padding-right: 10px;
+  .landing-page.apply-now .lp-vertical-tabs {
+    color: #FFFFFF !important;
+    position: absolute;
+    top: -40rem; }
+    .landing-page.apply-now .lp-vertical-tabs h2,
+    .landing-page.apply-now .lp-vertical-tabs p {
+      color: white; }
+    .landing-page.apply-now .lp-vertical-tabs li.active a {
+      color: white;
+      background-color: #00843D;
+      border: 1px solid #00843D; }
+      .landing-page.apply-now .lp-vertical-tabs li.active a:hover {
+        background-color: #006B31;
+        border: 1px solid #006B31; }
+    .landing-page.apply-now .lp-vertical-tabs li a {
+      border: 1px solid white;
+      color: white; }
+  .landing-page.apply-now .lp-deadlines .view-header h2 {
     text-align: center;
-    text-transform: uppercase;
-    width: 55px;
-    vertical-align: top; }
-  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
-    border-left: 2px solid #000000;
-    display: inline-block;
-    padding-left: 30px;
-    width: calc(100% - 60px);
-    color: #808990;
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info h3 {
-      color: #808990; }
-    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link {
-      border: 2px solid black;
-      padding: 1rem;
+    margin-bottom: 4rem; }
+  .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field {
+    position: relative; }
+    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .date {
       display: inline-block;
+      font-weight: 600;
+      line-height: 1;
+      padding-right: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      width: 55px;
+      vertical-align: top; }
+    .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
+      border-left: 2px solid #000000;
+      display: inline-block;
+      padding-left: 30px;
+      width: calc(100% - 60px);
+      color: #808990;
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info h3 {
+        color: #808990; }
+      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link {
+        border: 2px solid black;
+        padding: 1rem;
+        display: inline-block;
+        border-radius: 4px;
+        margin: 2rem 0;
+        font-weight: bold;
+        color: #000; }
+        .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link:hover {
+          text-decoration: none; }
+      @media (max-width: 767px) {
+        .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
+          border-left: none;
+          padding-left: 0;
+          margin-bottom: 20px;
+          border-bottom: 2px solid black; } }
+  .landing-page.apply-now .career-connect {
+    background: #edeeef; }
+    .landing-page.apply-now .career-connect h2,
+    .landing-page.apply-now .career-connect h3 {
+      text-align: center; }
+    .landing-page.apply-now .career-connect h3 {
+      font-weight: 600;
+      margin-bottom: 3rem; }
+    .landing-page.apply-now .career-connect img {
+      max-width: 100%;
+      height: auto !important;
       border-radius: 4px;
-      margin: 2rem 0;
-      font-weight: bold;
-      color: #000; }
-      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info .views-more-link:hover {
-        text-decoration: none; }
-    @media (max-width: 767px) {
-      .landing-page.apply-now .lp-deadlines .view-content .views-row .views-field .deadline-info {
-        border-left: none;
-        padding-left: 0;
-        margin-bottom: 20px;
-        border-bottom: 2px solid black; } }
-
-.landing-page.apply-now .career-connect {
-  background: #edeeef; }
-  .landing-page.apply-now .career-connect h2,
-  .landing-page.apply-now .career-connect h3 {
-    text-align: center; }
-  .landing-page.apply-now .career-connect h3 {
-    font-weight: 600;
-    margin-bottom: 3rem; }
-  .landing-page.apply-now .career-connect img {
-    max-width: 100%;
-    height: auto !important;
-    border-radius: 4px;
-    display: block;
-    margin: 0 auto; }
-  .landing-page.apply-now .career-connect button,
-  .landing-page.apply-now .career-connect a.btn {
-    display: block;
-    border-radius: 4px;
-    border: 2px solid #000000;
-    margin: 10px auto;
-    padding: 1rem;
-    background: none;
-    width: 100%;
-    text-align: center;
-    color: #000000; }
-    @media screen and (min-width: 992px) {
-      .landing-page.apply-now .career-connect button,
-      .landing-page.apply-now .career-connect a.btn {
-        margin: 10px 0; } }
-  .landing-page.apply-now .career-connect .welcome-desk-info,
-  .landing-page.apply-now .career-connect button,
-  .landing-page.apply-now .career-connect a.btn {
-    max-width: 450px; }
-  .landing-page.apply-now .career-connect .welcome-desk-info {
-    margin: 30px auto;
-    text-align: center; }
-    @media screen and (min-width: 992px) {
-      .landing-page.apply-now .career-connect .welcome-desk-info {
-        margin: 30px 0; } }
-  .landing-page.apply-now .career-connect button.btn-primary,
-  .landing-page.apply-now .career-connect a.btn-primary {
-    border: none;
-    background-color: #00843D;
-    color: #FFFFFF; }
-
-.landing-page.apply-now .lp-quote-region {
-  padding: 0; }
-  .landing-page.apply-now .lp-quote-region .block-region-quote-region {
-    /* Mobile Devices for Mice */
-    /* Landscape phones and down */
-    /* Landscape phone to portrait tablet */
-    /* Portrait tablet to landscape and desktop */
-    /* desktop and large desktop */ }
-    .landing-page.apply-now .lp-quote-region .block-region-quote-region section {
-      padding: 0; }
-    .landing-page.apply-now .lp-quote-region .block-region-quote-region h2 {
-      color: #FFFFFF;
-      width: 50%; }
-    .landing-page.apply-now .lp-quote-region .block-region-quote-region p {
+      display: block;
+      margin: 0 auto; }
+    .landing-page.apply-now .career-connect button,
+    .landing-page.apply-now .career-connect a.btn {
+      display: block;
+      border-radius: 4px;
+      border: 2px solid #000000;
+      margin: 10px auto;
+      padding: 1rem;
+      background: none;
+      width: 100%;
+      text-align: center;
+      color: #000000; }
+      @media screen and (min-width: 992px) {
+        .landing-page.apply-now .career-connect button,
+        .landing-page.apply-now .career-connect a.btn {
+          margin: 10px 0; } }
+    .landing-page.apply-now .career-connect .welcome-desk-info,
+    .landing-page.apply-now .career-connect button,
+    .landing-page.apply-now .career-connect a.btn {
+      max-width: 450px; }
+    .landing-page.apply-now .career-connect .welcome-desk-info {
+      margin: 30px auto;
+      text-align: center; }
+      @media screen and (min-width: 992px) {
+        .landing-page.apply-now .career-connect .welcome-desk-info {
+          margin: 30px 0; } }
+    .landing-page.apply-now .career-connect button.btn-primary,
+    .landing-page.apply-now .career-connect a.btn-primary {
+      border: none;
+      background-color: #00843D;
       color: #FFFFFF; }
+  .landing-page.apply-now .lp-quote-region {
+    padding: 0; }
+    .landing-page.apply-now .lp-quote-region .block-region-quote-region {
+      /* Mobile Devices for Mice */
+      /* Landscape phones and down */
+      /* Landscape phone to portrait tablet */
+      /* Portrait tablet to landscape and desktop */
+      /* desktop and large desktop */ }
+      .landing-page.apply-now .lp-quote-region .block-region-quote-region section {
+        padding: 0; }
+      .landing-page.apply-now .lp-quote-region .block-region-quote-region h2 {
+        color: #FFFFFF;
+        width: 50%; }
+      .landing-page.apply-now .lp-quote-region .block-region-quote-region p {
+        color: #FFFFFF; }
 
 .landing-page.admissions-enrollment .lp-masthead .views-row {
   width: 100%; }
@@ -9791,6 +9785,9 @@ a.social-twitter:focus {
 
 .apply-header .banner {
   position: relative; }
+  @media screen and (min-width: 992px) {
+    .apply-header .banner {
+      min-height: 900px; } }
   .apply-header .banner #block-banner-menu .banner-menu > li.active {
     display: none; }
   .apply-header .banner .banner-text-wrapper {
