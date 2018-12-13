@@ -354,12 +354,19 @@
   &.apply-now {
     position: relative;
     .lp-vertical-tabs {
-      color: $white !important;
-      position: absolute;
-      top: -40rem;
+      color: black;
+      position: static;
+      @media #{$normal} {
+        color: $white !important;
+        position: absolute;
+        top: -40rem;
+      }
       h2,
       p {
-        color: white;
+        color: black;
+        @media #{$normal} {
+          color: white;
+        }
       }
       li {
         &.active {
@@ -374,8 +381,11 @@
           }
         }
         a {
-          border: 1px solid white;
-          color: white;
+          color: black;
+          @media #{$normal} {
+            color: white;
+            border: 1px solid white;
+          }
         }
       }
     }

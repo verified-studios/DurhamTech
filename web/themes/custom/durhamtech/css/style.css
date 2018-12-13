@@ -9396,12 +9396,20 @@ a.social-twitter:focus {
 .landing-page.apply-now {
   position: relative; }
   .landing-page.apply-now .lp-vertical-tabs {
-    color: #FFFFFF !important;
-    position: absolute;
-    top: -40rem; }
+    color: black;
+    position: static; }
+    @media screen and (min-width: 992px) {
+      .landing-page.apply-now .lp-vertical-tabs {
+        color: #FFFFFF !important;
+        position: absolute;
+        top: -40rem; } }
     .landing-page.apply-now .lp-vertical-tabs h2,
     .landing-page.apply-now .lp-vertical-tabs p {
-      color: white; }
+      color: black; }
+      @media screen and (min-width: 992px) {
+        .landing-page.apply-now .lp-vertical-tabs h2,
+        .landing-page.apply-now .lp-vertical-tabs p {
+          color: white; } }
     .landing-page.apply-now .lp-vertical-tabs li.active a {
       color: white;
       background-color: #00843D;
@@ -9410,8 +9418,11 @@ a.social-twitter:focus {
         background-color: #006B31;
         border: 1px solid #006B31; }
     .landing-page.apply-now .lp-vertical-tabs li a {
-      border: 1px solid white;
-      color: white; }
+      color: black; }
+      @media screen and (min-width: 992px) {
+        .landing-page.apply-now .lp-vertical-tabs li a {
+          color: white;
+          border: 1px solid white; } }
   .landing-page.apply-now .lp-deadlines .view-header h2 {
     text-align: center;
     margin-bottom: 4rem; }
