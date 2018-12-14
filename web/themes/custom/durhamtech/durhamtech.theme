@@ -113,6 +113,9 @@ function durhamtech_preprocess_page(&$variables) {
     case '/search';
       $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'About Durham tech']);
       break;
+    case '/workforce-development';
+      $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Workforce-Development-Banner-41']);
+      break;
     default:
       break;
   }
