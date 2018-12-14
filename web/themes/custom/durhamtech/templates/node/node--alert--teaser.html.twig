@@ -84,7 +84,7 @@
       {% if content.field_button_target.0['#title'] != '' and content.field_button_text.0['#context']['value'] != '' %}
       <a href="{{ content.field_button_target.0['#title']}}" class="btn btn-outline" tabindex="1">{{ content.field_button_text.0['#context']['value'] }}</a>
       {% endif %}
-      <a class="js-close-alert" href="#"><i class="fas fa-times-circle fa-lg"></i></a>
+      <a class="js-close-alert" aria-label="close alert button" href="#"><i class="fas fa-times-circle fa-lg"></i></a>
     </div>
   </div>
 

@@ -49,15 +49,15 @@
     <ul>
       {% for key, menu_item in content['#items'] %}
         {% if menu_item.title|lower == 'twitter' %}
-          <li class="twitter"><a href="{{ menu_item.url }}" class="white"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li class="twitter"><a href="{{ menu_item.url }}" class="white" aria-label="twitter link"><i class="fab fa-twitter fa-lg"></i></a></li>
         {% elseif menu_item.title|lower == 'facebook' %}
-          <li class="facebook"><a href="{{ menu_item.url }}" class="white"><i class="fab fa-facebook fa-lg"></i></a></li>
+          <li class="facebook"><a href="{{ menu_item.url }}" class="white" aria-label="facebook link"><i class="fab fa-facebook fa-lg"></i></a></li>
         {% elseif menu_item.title|lower == 'youtube' %}
-          <li class="youtube"><a href="{{ menu_item.url }}" class="white"><i class="fab fa-youtube fa-lg"></i></a></li>
+          <li class="youtube"><a href="{{ menu_item.url }}" class="white" aria-label="youtube link"><i class="fab fa-youtube fa-lg"></i></a></li>
         {% elseif menu_item.title|lower == 'linkedin' %}
-          <li class="linkedin"><a href="{{ menu_item.url }}" class="white"><i class="fab fa-linkedin fa-lg"></i></a></li>
+          <li class="linkedin"><a href="{{ menu_item.url }}" class="white" aria-label="linkedin link"><i class="fab fa-linkedin fa-lg"></i></a></li>
         {% elseif menu_item.title|lower == 'instagram' %}
-          <li class="instagram"><a href="{{ menu_item.url }}" class="white"><i class="fab fa-instagram fa-lg"></i></a></li>
+          <li class="instagram"><a href="{{ menu_item.url }}" class="white" aria-label="instagram link"><i class="fab fa-instagram fa-lg"></i></a></li>
         {% endif %}
       {% endfor %}
     </ul>
