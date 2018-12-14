@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.featured
+    - field.field.node.event.field_abstract
     - field.field.node.event.field_associated_program
+    - field.field.node.event.field_banner_image
     - field.field.node.event.field_event_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_subtype
@@ -31,6 +33,13 @@ targetEntityType: node
 bundle: event
 mode: featured
 content:
+  field_abstract:
+    type: basic_string
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_event_date:
     weight: 0
     label: hidden
@@ -82,5 +91,6 @@ content:
 hidden:
   addtoany: true
   field_associated_program: true
+  field_banner_image: true
   field_featured: true
   links: true

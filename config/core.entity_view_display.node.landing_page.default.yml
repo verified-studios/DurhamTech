@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_abstract
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_hero_video
     - field.field.node.landing_page.field_link_panel
@@ -55,6 +56,13 @@ targetEntityType: node
 bundle: landing_page
 mode: default
 content:
+  field_abstract:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   links:
     weight: 100
     region: content

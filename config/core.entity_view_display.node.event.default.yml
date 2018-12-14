@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_abstract
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_banner_image
     - field.field.node.event.field_event_date
@@ -31,6 +32,13 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  field_abstract:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_banner_image:
     weight: 6
     label: above

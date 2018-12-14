@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.career.field_abstract
     - field.field.node.career.field_banner_image
     - field.field.node.career.field_career_statistics
     - field.field.node.career.field_career_url
@@ -23,13 +24,21 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_abstract:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
   field_career_statistics:
     type: paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Statistic
       title_plural: Statistics
@@ -39,10 +48,14 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: _none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_career_url:
-    weight: 52
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -51,13 +64,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_degree_option:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_description:
-    weight: 1
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -65,7 +78,7 @@ content:
     type: string_textarea
     region: content
   field_learn_category:
-    weight: 51
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -75,7 +88,7 @@ content:
     region: content
   field_percentage_infographic:
     type: paragraphs
-    weight: 4
+    weight: 5
     settings:
       title: Infographic
       title_plural: Infographics
@@ -85,10 +98,14 @@ content:
       add_mode: dropdown
       form_display_mode: default
       default_paragraph_type: _none
+      closed_mode_threshold: 0
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
     third_party_settings: {  }
     region: content
   field_related_programs:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -98,13 +115,13 @@ content:
     region: content
   path:
     type: path
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
@@ -119,7 +136,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -127,7 +144,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 50
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }

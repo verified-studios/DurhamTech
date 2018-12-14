@@ -5,13 +5,21 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_abstract
     - field.field.node.landing_page.field_banner_image
     - field.field.node.landing_page.field_hero_video
     - field.field.node.landing_page.field_link_panel
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.landing_page.teaser
 targetEntityType: node
 bundle: landing_page
@@ -25,6 +33,7 @@ content:
 hidden:
   addtoany: true
   body: true
+  field_abstract: true
   field_banner_image: true
   field_hero_video: true
   field_link_panel: true

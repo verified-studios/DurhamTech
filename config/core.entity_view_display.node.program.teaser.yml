@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.program.field_abstract
+    - field.field.node.program.field_active
     - field.field.node.program.field_continuing_education_cat
     - field.field.node.program.field_courses
     - field.field.node.program.field_cred_type
@@ -43,9 +45,16 @@ targetEntityType: node
 bundle: program
 mode: teaser
 content:
+  field_abstract:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_degree_option:
     type: entity_reference_label
-    weight: 6
+    weight: 7
     region: content
     label: hidden
     settings:
@@ -53,14 +62,14 @@ content:
     third_party_settings: {  }
   field_description:
     type: basic_string
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_program_app_deadline:
     type: entity_reference_label
-    weight: 8
+    weight: 9
     region: content
     label: hidden
     settings:
@@ -68,7 +77,7 @@ content:
     third_party_settings: {  }
   field_program_cost:
     type: string
-    weight: 7
+    weight: 8
     region: content
     label: hidden
     settings:
@@ -85,7 +94,7 @@ content:
     third_party_settings: {  }
   field_program_stats:
     type: entity_reference_revisions_entity_view
-    weight: 3
+    weight: 4
     region: content
     label: hidden
     settings:
@@ -102,7 +111,7 @@ content:
     third_party_settings: {  }
   field_statistic:
     type: entity_reference_revisions_entity_view
-    weight: 9
+    weight: 10
     region: content
     label: above
     settings:
@@ -111,14 +120,14 @@ content:
     third_party_settings: {  }
   field_teaser_layout:
     type: list_default
-    weight: 5
+    weight: 6
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_total_credit_hours:
     type: string
-    weight: 4
+    weight: 5
     region: content
     label: hidden
     settings:
@@ -126,6 +135,7 @@ content:
     third_party_settings: {  }
 hidden:
   addtoany: true
+  field_active: true
   field_average_completion: true
   field_average_cost: true
   field_average_salary: true

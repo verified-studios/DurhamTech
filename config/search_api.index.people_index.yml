@@ -2,61 +2,28 @@ uuid: ff96b1f3-cc80-4551-bfa9-76b08a9389cf
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_department
-    - field.storage.node.field_phone_number
-    - field.storage.node.field_position_title
-    - field.storage.node.field_office_location
-    - search_api.server.durham_tech
   module:
-    - search_api
     - node
+    - search_api
+  config:
+    - search_api.server.durham_tech
 id: people_index
 name: 'People Index'
 description: ''
 read_only: false
 field_settings:
-  url:
-    label: URI
-    property_path: search_api_url
-    type: string
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
     type: string
-  field_department:
-    label: Department
-    datasource_id: 'entity:node'
-    property_path: field_department
-    type: integer
     dependencies:
-      config:
-        - field.storage.node.field_department
-  field_phone_number:
-    label: 'Phone Number'
-    datasource_id: 'entity:node'
-    property_path: field_phone_number
+      module:
+        - node
+  url:
+    label: URI
+    property_path: search_api_url
     type: string
-    dependencies:
-      config:
-        - field.storage.node.field_phone_number
-  field_position_title:
-    label: Position/Title
-    datasource_id: 'entity:node'
-    property_path: field_position_title
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_position_title
-  field_office_location:
-    label: 'Office Location'
-    datasource_id: 'entity:node'
-    property_path: field_office_location
-    type: string
-    dependencies:
-      config:
-        - field.storage.node.field_office_location
 datasource_settings:
   'entity:node':
     bundles:
@@ -67,9 +34,9 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
-  rendered_item: {  }
   add_url: {  }
   aggregated_field: {  }
+  rendered_item: {  }
 tracker_settings:
   default:
     indexing_order: fifo
