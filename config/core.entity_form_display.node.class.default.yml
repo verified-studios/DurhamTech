@@ -28,12 +28,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   field_class_id:
-    weight: 12
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -42,7 +42,7 @@ content:
     region: content
   field_class_item:
     type: entity_reference_paragraphs
-    weight: 15
+    weight: 16
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -53,7 +53,7 @@ content:
     third_party_settings: {  }
     region: content
   field_course:
-    weight: 8
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
@@ -62,7 +62,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_delivery_method:
-    weight: 13
+    weight: 14
     settings:
       match_operator: CONTAINS
       size: 60
@@ -71,33 +71,33 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_end_date:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_location:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_seats:
-    weight: 14
+    weight: 15
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_start_date:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   path:
     type: path
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -105,21 +105,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 4
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 5
     region: content
     third_party_settings: {  }
   title:
@@ -132,7 +132,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -140,7 +140,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }

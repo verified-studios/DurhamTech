@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_description
-    - field.storage.node.field_rich_text
+    - field.storage.node.field_abstract
+    - field.storage.node.field_author
     - field.storage.node.body
     - field.storage.node.field_body
-    - field.storage.taxonomy_term.field_title
+    - field.storage.node.field_class_item
+    - field.storage.paragraph.field_building
+    - field.storage.node.field_location
     - field.storage.taxonomy_term.field_description
     - search_api.server.durham_tech
   module:
-    - search_api
+    - paragraphs
     - node
     - taxonomy
+    - search_api
 id: site_index
 name: 'Site Index'
 description: ''
@@ -27,23 +30,42 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  field_abstract:
+    label: Abstract
+    datasource_id: 'entity:node'
+    property_path: field_abstract
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_abstract
+  field_author:
+    label: Author
+    datasource_id: 'entity:node'
+    property_path: field_author
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_author
   field_body:
     label: Body
     datasource_id: 'entity:node'
     property_path: field_body
-    type: text
+    type: integer
     dependencies:
       config:
         - field.storage.node.field_body
-  field_description:
-    label: Description
+  field_building:
+    label: 'Class item » Paragraph » Building'
     datasource_id: 'entity:node'
-    property_path: field_description
-    type: text
+    property_path: 'field_class_item:entity:field_building'
+    type: string
     dependencies:
       config:
-        - field.storage.node.field_description
-  field_description_1:
+        - field.storage.node.field_class_item
+        - field.storage.paragraph.field_building
+      module:
+        - paragraphs
+  field_description:
     label: Description
     datasource_id: 'entity:taxonomy_term'
     property_path: field_description
@@ -51,27 +73,30 @@ field_settings:
     dependencies:
       config:
         - field.storage.taxonomy_term.field_description
-  field_rich_text:
-    label: Description
+  field_location:
+    label: Location
     datasource_id: 'entity:node'
-    property_path: field_rich_text
-    type: text
+    property_path: field_location
+    type: string
     dependencies:
       config:
-        - field.storage.node.field_rich_text
-  field_title:
-    label: Title
+        - field.storage.node.field_location
+  name:
+    label: Name
     datasource_id: 'entity:taxonomy_term'
-    property_path: field_title
-    type: text
+    property_path: name
+    type: string
     dependencies:
-      config:
-        - field.storage.taxonomy_term.field_title
+      module:
+        - taxonomy
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: text
+    type: string
+    dependencies:
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -113,11 +138,12 @@ processor_settings:
     all_fields: true
     fields:
       - body
-      - field_body
+      - field_abstract
+      - field_author
+      - field_building
       - field_description
-      - field_description_1
-      - field_rich_text
-      - field_title
+      - field_location
+      - name
       - title
     weights:
       preprocess_index: -20

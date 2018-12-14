@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.class.field_location
     - field.field.node.class.field_meeting_days
     - field.field.node.class.field_room
+    - field.field.node.class.field_seats
     - field.field.node.class.field_start_date
     - field.field.node.class.field_start_time
     - node.type.class
@@ -63,7 +64,7 @@ content:
     type: entity_reference_entity_id
     weight: 7
     region: content
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
   field_delivery_method:
@@ -104,5 +105,6 @@ hidden:
   field_end_time: true
   field_meeting_days: true
   field_room: true
+  field_seats: true
   field_start_time: true
   links: true
