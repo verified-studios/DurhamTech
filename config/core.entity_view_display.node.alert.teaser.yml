@@ -5,8 +5,11 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.alert.body
+    - field.field.node.alert.field_button_target
+    - field.field.node.alert.field_button_text
     - node.type.alert
   module:
+    - link
     - panelizer
     - text
     - user
@@ -29,6 +32,26 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_button_target:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_button_text:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   addtoany: true
   links: true

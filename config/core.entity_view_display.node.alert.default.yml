@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.alert.body
+    - field.field.node.alert.field_button_target
+    - field.field.node.alert.field_button_text
     - node.type.alert
   module:
+    - link
     - panelizer
     - text
     - user
@@ -26,6 +29,26 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_button_target:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_button_text:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
 hidden:
   addtoany: true

@@ -1,0 +1,23 @@
+uuid: eac4ffe5-c2ad-4b16-b8c9-5c1543986501
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_button_target
+    - node.type.alert
+  module:
+    - link
+id: node.alert.field_button_target
+field_name: field_button_target
+entity_type: node
+bundle: alert
+label: 'Button Target'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 0
+field_type: link
