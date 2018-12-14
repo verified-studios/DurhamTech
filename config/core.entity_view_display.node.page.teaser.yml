@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_abstract
     - field.field.node.page.field_attachment
     - field.field.node.page.field_banner_image
     - field.field.node.page.field_body
@@ -12,7 +13,14 @@ dependencies:
     - field.field.node.page.field_sidebar_elements
     - node.type.page
   module:
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
 id: node.page.teaser
@@ -31,6 +39,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_abstract: true
   field_attachment: true
   field_banner_image: true
   field_body: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.column_teaser
+    - field.field.node.new_article.field_abstract
     - field.field.node.new_article.field_author
     - field.field.node.new_article.field_body
     - field.field.node.new_article.field_featured
@@ -30,6 +31,13 @@ targetEntityType: node
 bundle: new_article
 mode: column_teaser
 content:
+  field_abstract:
+    type: basic_string
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_author:
     weight: 1
     label: hidden

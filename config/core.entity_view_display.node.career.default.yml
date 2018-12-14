@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.career.field_abstract
     - field.field.node.career.field_banner_image
     - field.field.node.career.field_career_statistics
     - field.field.node.career.field_career_url
@@ -28,6 +29,13 @@ targetEntityType: node
 bundle: career
 mode: default
 content:
+  field_abstract:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_banner_image:
     weight: 2
     label: hidden

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.new_article.field_abstract
     - field.field.node.new_article.field_author
     - field.field.node.new_article.field_body
     - field.field.node.new_article.field_featured
@@ -27,6 +28,13 @@ targetEntityType: node
 bundle: new_article
 mode: default
 content:
+  field_abstract:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_author:
     weight: 2
     label: hidden
