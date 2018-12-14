@@ -5912,6 +5912,7 @@ a.white:focus {
   text-decoration: underline; }
 
 .stat .field--name-field-data {
+  color: #84bd00;
   font-size: 1.5em;
   font-weight: 600; }
 
