@@ -42,9 +42,9 @@
   </div>
 
 {% else %}
-  <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext="><h3>{{ view.field.name.original_value }}</h3></a>
+  <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext=" aria-label="{{ view.field.name.original_value }}"><h3>{{ view.field.name.original_value }}</h3></a>
   <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext=" class="program-search--category--image"
-      style="background-image: url({{ file_url(row._entity.field_background_image.entity.fileuri) }})"></a>
+      style="background-image: url({{ file_url(row._entity.field_background_image.entity.fileuri) }})" aria-label="{{ view.field.name.original_value }}"></a>
   <div class="program-search--category--btn">
       <a href="/programs-search?field_degree_option=All&field_learn_category={{ view.field.tid.original_value }}&search_api_fulltext=" class="btn btn-default btn-block">Find Programs</a>
   </div>
