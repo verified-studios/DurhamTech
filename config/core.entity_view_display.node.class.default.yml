@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.class.field_abstract
     - field.field.node.class.field_building
     - field.field.node.class.field_class_id
     - field.field.node.class.field_class_item
@@ -34,6 +35,13 @@ targetEntityType: node
 bundle: class
 mode: default
 content:
+  field_abstract:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_building:
     weight: 109
     label: above

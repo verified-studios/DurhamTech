@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.table_format
+    - field.field.node.class.field_abstract
     - field.field.node.class.field_building
     - field.field.node.class.field_class_id
     - field.field.node.class.field_class_item
@@ -14,6 +15,7 @@ dependencies:
     - field.field.node.class.field_location
     - field.field.node.class.field_meeting_days
     - field.field.node.class.field_room
+    - field.field.node.class.field_seats
     - field.field.node.class.field_start_date
     - field.field.node.class.field_start_time
     - node.type.class
@@ -34,6 +36,13 @@ targetEntityType: node
 bundle: class
 mode: table_format
 content:
+  field_abstract:
+    type: basic_string
+    weight: 8
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_building:
     weight: 3
     label: hidden
@@ -63,7 +72,7 @@ content:
     type: entity_reference_entity_id
     weight: 7
     region: content
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
   field_delivery_method:
@@ -104,5 +113,6 @@ hidden:
   field_end_time: true
   field_meeting_days: true
   field_room: true
+  field_seats: true
   field_start_time: true
   links: true
