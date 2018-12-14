@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.alert.body
+    - field.field.node.alert.field_button_target
+    - field.field.node.alert.field_button_text
     - node.type.alert
   module:
+    - link
     - path
     - text
 id: node.alert.default
@@ -28,6 +31,22 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_button_target:
+    weight: 52
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_button_text:
+    weight: 51
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
     weight: 6
