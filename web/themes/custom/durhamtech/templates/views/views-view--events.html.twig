@@ -57,7 +57,11 @@
       {{ attachment_before }}
     </div>
   {% endif %}
-
+  {% if header %}
+    <div class="view-header">
+      {{ header }}
+    </div>
+  {% endif %}
   {% if rows %}
     <div class="view-content row">
       {{ rows }}
@@ -76,13 +80,8 @@
       {{ attachment_after }}
     </div>
   {% endif %}
-  {% if header %}
-    <div class="view-header">
-      {{ header }}
-      {% if more %}
-        {{ more }}
-      {% endif %}
-    </div>
+  {% if more %}
+    {{ more }}
   {% endif %}
   {% if footer %}
     <div class="view-footer">
