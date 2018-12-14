@@ -1,6 +1,6 @@
 uuid: 61b8efb9-6a24-4fee-95d5-e8dec81242fe
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer-social-menu

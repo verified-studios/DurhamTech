@@ -134,7 +134,7 @@ display:
               sortable: false
               default_sort_order: asc
               align: ''
-              separator: '-'
+              separator: '<br>'
               empty_column: false
               responsive: ''
           default: '-1'
@@ -414,11 +414,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Extension
+          label: Phone
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '919-536-7200 x{{ attribute_4 }}'
             make_link: false
             path: ''
             absolute: false
@@ -511,7 +511,7 @@ display:
           multi_value: v-all
           value_separator: ''
           index_value: '0'
-          attribute_name: buildingid
+          attribute_name: buildingname
           plugin_id: ldap_variable_attribute
         attribute_6:
           id: attribute_6
@@ -520,11 +520,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: Room
+          label: Office
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: 'Room {{ attribute_6 }}'
             make_link: false
             path: ''
             absolute: false
