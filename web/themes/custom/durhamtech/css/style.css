@@ -9402,7 +9402,8 @@ a.social-twitter:focus {
       .landing-page.apply-now .lp-vertical-tabs {
         color: #FFFFFF !important;
         position: absolute;
-        top: -40rem; } }
+        top: -40rem;
+        left: 8%; } }
     .landing-page.apply-now .lp-vertical-tabs h2,
     .landing-page.apply-now .lp-vertical-tabs p {
       color: black; }
