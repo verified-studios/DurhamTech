@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.program.field_abstract
     - field.field.node.program.field_active
     - field.field.node.program.field_continuing_education_cat
     - field.field.node.program.field_courses
@@ -45,6 +46,13 @@ targetEntityType: node
 bundle: program
 mode: default
 content:
+  field_abstract:
+    weight: 23
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
   field_active:
     weight: 22
     label: above

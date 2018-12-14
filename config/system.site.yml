@@ -4,7 +4,7 @@ mail: mathew@verifiedstudios.com
 slogan: ''
 page:
   403: ''
-  404: ''
+  404: /node/9698
   front: /node/1456
 admin_compact_mode: false
 weight_select_max: 100

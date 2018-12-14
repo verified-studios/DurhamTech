@@ -17,7 +17,6 @@ dependencies:
     - field.field.taxonomy_term.course.field_local_description
     - field.field.taxonomy_term.course.field_requisites
     - field.field.taxonomy_term.course.field_requisites_text
-    - field.field.taxonomy_term.course.field_seats
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
@@ -41,14 +40,6 @@ content:
     weight: 0
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_academic_level:
-    type: entity_reference_label
-    weight: 11
-    region: content
-    label: hidden
-    settings:
-      link: true
     third_party_settings: {  }
   field_average_cost:
     type: string
@@ -129,6 +120,7 @@ content:
     type: string
     region: content
 hidden:
+  field_academic_level: true
   field_corequisites: true
   field_local_description: true
   field_requisites: true

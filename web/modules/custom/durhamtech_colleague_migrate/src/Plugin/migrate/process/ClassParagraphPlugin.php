@@ -22,6 +22,10 @@ class ClassParagraphPlugin extends ProcessPluginBase {
    * {@inheritdoc}
    */
   public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
+    $taxonomyStorage = \Drupal::entityTypeManager()
+      ->getStorage('taxonomy_term');
+    //$buildings = $taxonomyStorage->loadTree('building');
+
     $class_data_items = [];
     $source = $row->getSource();
 
@@ -48,16 +52,26 @@ class ClassParagraphPlugin extends ProcessPluginBase {
       throw new MigrateException(sprintf('%s is not a string', var_export($building_value, TRUE)));
     }
     $building_row = explode(', ', $building_value);
-    foreach ($building_row as $building_key => $room) {
-      $class_data_items[$building_key]['field_building'] = $room;
+    foreach ($building_row as $building_key => $building_code) {
+      $building=$building_code;
+      $buildings_taxonomy_entry = \Drupal::entityQuery('taxonomy_term')
+        ->condition('vid', 'building')
+        ->condition('field_building_code', $building_code)
+        ->execute();
+      if (!empty($buildings_taxonomy_entry)) {
+        $buildings_taxonomy_entry_term_id = key($buildings_taxonomy_entry);
+        $building_term = $taxonomyStorage->load($buildings_taxonomy_entry_term_id);
+        if (!empty($building_term)) {
+          $building = $building_term->name->value;
+        }
+      }
+      $class_data_items[$building_key]['field_building'] = $building;
     }
-
     if (!empty($class_data_items[0]['field_building']) && $building_key < $row_key) {
       for ($i = $building_key + 1; $i <= $row_key; $i++) {
-        $class_data_items[$i]['field_building'] = $room;
+        $class_data_items[$i]['field_building'] = $building;
       }
     }
-
     // Prepare rooms data.
     $room_value = $source['Room'];
     if (!is_string($room_value)) {

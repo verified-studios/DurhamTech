@@ -1,0 +1,19 @@
+uuid: 11a1f42b-697a-4c7a-9e81-083568f1f408
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_abstract
+    - node.type.landing_page
+id: node.landing_page.field_abstract
+field_name: field_abstract
+entity_type: node
+bundle: landing_page
+label: Abstract
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
