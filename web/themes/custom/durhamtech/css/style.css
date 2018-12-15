@@ -5912,7 +5912,6 @@ a.white:focus {
   text-decoration: underline; }
 
 .stat .field--name-field-data {
-  color: #84bd00;
   font-size: 1.5em;
   font-weight: 600; }
 
@@ -8059,6 +8058,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .program-stats-wrapper .section-title {
     color: #FFFFFF;
     text-align: center; }
+    .program-stats-wrapper .section-title .green {
+      color: #84BD00; }
   .program-stats-wrapper .stat-title {
     color: #FFFFFF; }
   .program-stats-wrapper .field {
