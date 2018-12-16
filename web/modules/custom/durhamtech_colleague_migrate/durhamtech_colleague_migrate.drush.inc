@@ -27,6 +27,9 @@ function drush_durhamtech_colleague_migrate_migrate_execute() {
   $logger->info('Started Course Migrate');
   _runMigration('course_data_taxonomy');
   $logger->info('Finished Course Migrate');
+  $logger->info('Started Class Rollback');
+  _runRollback('class_data_node');
+  $logger->info('Finished Class Rollback');
   $logger->info('Started Class Migrate');
   _runMigration('class_data_node');
   $logger->info('Finished Class Migrate');
@@ -40,7 +43,7 @@ function drush_durhamtech_colleague_migrate_migrate_execute() {
 
 
 /**
- * Run Migrate migrate.
+ * Run Migration.
  */
 function _runMigration($migration_id) {
   /** @var \Drupal\migrate\Plugin\Migration $migration */
@@ -48,5 +51,15 @@ function _runMigration($migration_id) {
   $migration->getIdMap()->prepareUpdate();
   $executable = new MigrateExecutable($migration, new MigrateMessage());
   $executable->import();
+}
+
+/**
+ * Run Rollback
+ */
+function _runRollback($migration_id) {
+  $migration = \Drupal::service('plugin.manager.migration')->createInstance($migration_id);
+  $migration->getIdMap()->prepareUpdate();
+  $executable = new MigrateExecutable($migration, new MigrateMessage());
+  $executable->rollback();
 }
 

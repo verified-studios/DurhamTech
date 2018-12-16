@@ -4,17 +4,17 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_abstract
-    - field.storage.node.field_author
     - field.storage.node.body
     - field.storage.node.field_body
-    - field.storage.node.field_class_item
-    - field.storage.paragraph.field_building
-    - field.storage.node.field_location
+    - field.storage.node.field_description
+    - field.storage.node.field_sidebar_elements
+    - field.storage.paragraph.field_body
     - field.storage.taxonomy_term.field_description
+    - field.storage.taxonomy_term.field_title
     - search_api.server.durham_tech
   module:
-    - paragraphs
     - node
+    - paragraphs
     - taxonomy
     - search_api
 id: site_index
@@ -38,14 +38,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_abstract
-  field_author:
-    label: Author
+  field_abstract_1:
+    label: Abstract
     datasource_id: 'entity:node'
-    property_path: field_author
-    type: string
+    property_path: field_abstract
+    type: text
     dependencies:
       config:
-        - field.storage.node.field_author
+        - field.storage.node.field_abstract
   field_body:
     label: Body
     datasource_id: 'entity:node'
@@ -54,18 +54,34 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_body
-  field_building:
-    label: 'Class item » Paragraph » Building'
+  field_body_1:
+    label: 'Sidebar Elements » Paragraph » Body'
     datasource_id: 'entity:node'
-    property_path: 'field_class_item:entity:field_building'
-    type: string
+    property_path: 'field_sidebar_elements:entity:field_body'
+    type: text
     dependencies:
       config:
-        - field.storage.node.field_class_item
-        - field.storage.paragraph.field_building
+        - field.storage.node.field_sidebar_elements
+        - field.storage.paragraph.field_body
       module:
         - paragraphs
   field_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_description
+  field_description_1:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_description
+  field_description_2:
     label: Description
     datasource_id: 'entity:taxonomy_term'
     property_path: field_description
@@ -73,14 +89,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.taxonomy_term.field_description
-  field_location:
-    label: Location
-    datasource_id: 'entity:node'
-    property_path: field_location
-    type: string
+  field_title:
+    label: Title
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_title
+    type: text
+    boost: !!float 21
     dependencies:
       config:
-        - field.storage.node.field_location
+        - field.storage.taxonomy_term.field_title
   name:
     label: Name
     datasource_id: 'entity:taxonomy_term'
@@ -93,10 +110,27 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
+    type: text
+    boost: !!float 13
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
     type: string
     dependencies:
       module:
         - node
+  vid:
+    label: Vocabulary
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+    dependencies:
+      module:
+        - taxonomy
 datasource_settings:
   'entity:node':
     bundles:
@@ -108,7 +142,6 @@ datasource_settings:
         - landing_page
         - new_article
         - page
-        - person
         - program
     languages:
       default: true
@@ -139,12 +172,16 @@ processor_settings:
     fields:
       - body
       - field_abstract
-      - field_author
-      - field_building
+      - field_abstract_1
+      - field_body_1
       - field_description
-      - field_location
+      - field_description_1
+      - field_description_2
+      - field_title
       - name
       - title
+      - type
+      - vid
     weights:
       preprocess_index: -20
       preprocess_query: -20
