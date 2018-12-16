@@ -594,10 +594,10 @@ display:
           group_type: group
           admin_label: ''
           label: Format
-          exclude: false
+          exclude: true
           alter:
             alter_text: true
-            text: "{% if field_class_format == \"Hybrid\" or field_class_format == \"Online\" %}\n<a href=\"/online-learning\">{{ field_class_format }}</a>\n{% else %}\n{{ field_class_format }}\n{% endif %}"
+            text: "{% if field_class_format == \"Hybrid\" or field_class_format == \"Online\" %}\r\n<a href=\"/online-learning\">{{ field_class_format }}</a>\r\n{% else %}\r\n{{ field_class_format }}\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -660,6 +660,9 @@ display:
                 display_method: label
               academic_level_basic:
                 display_method: label
+              building:
+                display_method: label
+                view_mode: default
               class_format:
                 display_method: label
               continuing_education_category:
@@ -679,6 +682,7 @@ display:
                 display_method: label
               education_goals:
                 display_method: label
+                view_mode: default
               event_type:
                 display_method: label
               learn:
@@ -692,6 +696,9 @@ display:
                 display_method: label
               program_type:
                 display_method: label
+              programs_course_list:
+                display_method: label
+                view_mode: default
               tabs:
                 display_method: label
                 view_mode: default
