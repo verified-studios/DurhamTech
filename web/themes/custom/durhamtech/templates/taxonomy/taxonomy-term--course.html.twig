@@ -41,7 +41,7 @@
     {% if content.field_requisites_text.0 %}
     <p>
       <br/>
-      <em>{{ content.field_requisites_text.0['#text'] }}</em>
+      <em>{{ content.field_requisites_text.0['#text']|raw }}</em>
     </p>
     {% endif %}
 
