@@ -36,7 +36,7 @@
   {% endif %}
   <a href="{{ link }}"><h3>{{ view.field.name.original_value }}</h3></a>
   <a href="{{ link }}" class="program-search--category--image"
-      style="background-image: url({{ file_url(row._entity.field_continuing_edu_thumbnail.entity.fileuri) }})"></a>
+      style="background-image: url({{ file_url(row._entity.field_continuing_edu_thumbnail.entity.fileuri) }})" aria-label="{{ view.field.name.original_value }}"></a>
   <div class="program-search--category--btn">
       <a href="{{ link }}" class="btn btn-default btn-block"> {{ row._entity.field_continuing_edu_label.value }} </a>
   </div>
