@@ -1,0 +1,20 @@
+.view-directory {
+  margin: 3rem 0;
+  .form-item {
+    float: none;
+    margin: 0 2rem;
+    label {
+      color: #000000;
+      font-size: 1.25rem;
+      letter-spacing: 0.03em;
+      margin-right: 1rem;
+      text-transform: uppercase;
+    }
+  }
+    .btn {
+      border: none;
+      font-size: 1.25rem;
+      min-width: 150px;
+      padding: 1rem 2rem;
+    }
+}
