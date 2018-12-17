@@ -4,12 +4,14 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.learn.field_background_image
+    - field.field.taxonomy_term.learn.field_page_link
     - field.field.taxonomy_term.learn.field_target
     - field.field.taxonomy_term.learn.field_target_type
     - image.style.thumbnail
     - taxonomy.vocabulary.learn
   module:
     - image
+    - link
 id: taxonomy_term.learn.default
 targetEntityType: taxonomy_term
 bundle: learn
@@ -22,6 +24,14 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_page_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_target:
     weight: 2

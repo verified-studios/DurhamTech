@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.taxonomy_term.field_page_link
     - taxonomy.vocabulary.continuing_education_category
     - taxonomy.vocabulary.learn
   module:
+    - link
     - taxonomy
     - user
 id: categories
@@ -558,6 +560,73 @@ display:
           absolute: false
           entity_type: taxonomy_term
           plugin_id: entity_link
+        field_page_link:
+          id: field_page_link
+          table: taxonomy_term__field_page_link
+          field: field_page_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: true
+            url_plain: true
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         name:
           id: name
           table: taxonomy_term_field_data
@@ -569,7 +638,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="{{ view_taxonomy_term }}">{{ name }}</a>'
+            text: "<a href=\"\r\n{% if field_page_link != '' %}\r\n{{ field_page_link }}\r\n{% else %}\r\n{{ view_taxonomy_term }}\r\n{% endif %}\r\n\">{{ name }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -631,7 +700,8 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.taxonomy_term.field_page_link'
   cat_learn:
     display_plugin: block
     id: cat_learn
@@ -851,6 +921,73 @@ display:
           absolute: false
           entity_type: taxonomy_term
           plugin_id: entity_link
+        field_page_link:
+          id: field_page_link
+          table: taxonomy_term__field_page_link
+          field: field_page_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: uri
+          type: link
+          settings:
+            trim_length: 80
+            url_only: true
+            url_plain: true
+            rel: '0'
+            target: '0'
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         name:
           id: name
           table: taxonomy_term_field_data
@@ -862,7 +999,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/programs-search?field_degree_option=All&field_learn_category={{ tid }}&search_api_fulltext=">{{ name }}</a>'
+            text: "<a href=\"\r\n{% if field_page_link != '' %}\r\n{{ field_page_link }}\r\n{% else %}\r\n/programs-search?field_degree_option=All&field_learn_category={{ tid }}&search_api_fulltext=\r\n{% endif %}\r\n\">{{ name }}</a>"
             make_link: false
             path: ''
             absolute: false
@@ -924,4 +1061,5 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.taxonomy_term.field_page_link'

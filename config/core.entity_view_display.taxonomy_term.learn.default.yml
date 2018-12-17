@@ -4,10 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.learn.field_background_image
+    - field.field.taxonomy_term.learn.field_page_link
     - field.field.taxonomy_term.learn.field_target
     - field.field.taxonomy_term.learn.field_target_type
     - taxonomy.vocabulary.learn
   module:
+    - link
     - options
     - panelizer
 third_party_settings:
@@ -21,6 +23,18 @@ targetEntityType: taxonomy_term
 bundle: learn
 mode: default
 content:
+  field_page_link:
+    weight: -2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_target:
     weight: -4
     label: above
