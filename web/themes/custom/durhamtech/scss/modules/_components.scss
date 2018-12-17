@@ -1,28 +1,6 @@
 $banner-menu-orange: #ff9000;
 $banner-menu-orange-hover: #f27604;
 
-// Alerts
-.alert.teaser {
-  margin-bottom: 0;
-
-  .field, svg, i {
-    display: inline-block;
-    margin-right: 15px;
-    vertical-align: middle;
-  }
-
-  .js-close-alert {
-    color: #262626;
-
-    svg {
-      cursor: pointer;
-      float: right;
-      height: 45px;
-      margin-right: 0;
-    }
-  }
-}
-
 #block-get-started {
   background-color: $transparent-black;
   border-radius: 4px;
