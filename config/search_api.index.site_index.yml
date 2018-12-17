@@ -3,19 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_abstract
     - field.storage.node.body
+    - field.storage.node.field_abstract
     - field.storage.node.field_body
-    - field.storage.node.field_description
     - field.storage.node.field_sidebar_elements
     - field.storage.paragraph.field_body
-    - field.storage.taxonomy_term.field_description
-    - field.storage.taxonomy_term.field_title
+    - field.storage.node.field_description
     - search_api.server.durham_tech
   module:
-    - node
     - paragraphs
     - taxonomy
+    - node
     - search_api
 id: site_index
 name: 'Site Index'
@@ -81,23 +79,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_description
-  field_description_2:
-    label: Description
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_description
-    type: text
-    dependencies:
-      config:
-        - field.storage.taxonomy_term.field_description
-  field_title:
-    label: Title
-    datasource_id: 'entity:taxonomy_term'
-    property_path: field_title
-    type: text
-    boost: !!float 21
-    dependencies:
-      config:
-        - field.storage.taxonomy_term.field_title
   name:
     label: Name
     datasource_id: 'entity:taxonomy_term'
@@ -137,8 +118,6 @@ datasource_settings:
       default: false
       selected:
         - career
-        - class
-        - event
         - landing_page
         - new_article
         - page
@@ -149,8 +128,7 @@ datasource_settings:
   'entity:taxonomy_term':
     bundles:
       default: false
-      selected:
-        - course
+      selected: {  }
     languages:
       default: true
       selected: {  }
@@ -176,8 +154,6 @@ processor_settings:
       - field_body_1
       - field_description
       - field_description_1
-      - field_description_2
-      - field_title
       - name
       - title
       - type
