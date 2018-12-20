@@ -1,0 +1,13 @@
+uuid: f9e2a294-1c39-49d5-a567-a449a1db334a
+langcode: en
+status: true
+dependencies:
+  module:
+    - file_entity
+_core:
+  default_config_hash: avtMV7rJREHdDbTt8-SlYOhDMN1y-SsxgvL-1H0a4OY
+id: file_delete_action
+label: 'Delete file'
+type: file
+plugin: file_delete_action
+configuration: {  }

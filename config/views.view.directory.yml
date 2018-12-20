@@ -76,6 +76,7 @@ display:
             attribute_1: attribute_1
             attribute_2: attribute_2
             attribute_5: attribute_5
+            attribute_8: attribute_5
             attribute_3: attribute_3
             attribute_4: attribute_4
             attribute_7: attribute_6
@@ -103,6 +104,13 @@ display:
               empty_column: false
               responsive: ''
             attribute_5:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: '<br>'
+              empty_column: false
+              responsive: ''
+            attribute_8:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -353,6 +361,59 @@ display:
           value_separator: ''
           index_value: '0'
           attribute_name: title
+          plugin_id: ldap_variable_attribute
+        attribute_8:
+          id: attribute_8
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          multi_value: v-all
+          value_separator: ''
+          index_value: '0'
+          attribute_name: department
           plugin_id: ldap_variable_attribute
         attribute_3:
           id: attribute_3
@@ -683,6 +744,134 @@ display:
     display_options:
       display_extenders: {  }
       path: directory
+      filters:
+        attribute_2:
+          id: attribute_2
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: attribute_2_op
+            label: 'First Name'
+            description: ''
+            use_operator: false
+            operator: attribute_2_op
+            identifier: attribute_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          attribute_name: givenname
+          plugin_id: ldap_variable_attribute
+        attribute_3:
+          id: attribute_3
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: attribute_3_op
+            label: 'Last Name'
+            description: ''
+            use_operator: false
+            operator: attribute_3_op
+            identifier: attribute_3
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          attribute_name: sn
+          plugin_id: ldap_variable_attribute
+        attribute_1:
+          id: attribute_1
+          table: ldap_query
+          field: attribute
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: attribute_1_op
+            label: 'Search by Department'
+            description: ''
+            use_operator: false
+            operator: attribute_1_op
+            identifier: attribute_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          attribute_name: department
+          plugin_id: ldap_variable_attribute
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
