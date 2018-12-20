@@ -7834,13 +7834,17 @@ a.cta-box:visited {
 .block--type-text-with-image .field--name-field-image img {
   width: 100%; }
 
-.slick .slick-next, .slick .slick-prev {
+.slick .slick-next,
+.slick .slick-prev {
   font-size: inherit;
+  height: auto;
   width: 70px;
   z-index: 999; }
-  .slick .slick-next::before, .slick .slick-prev::before {
+  .slick .slick-next::before,
+  .slick .slick-prev::before {
     content: none; }
-  .slick .slick-next svg, .slick .slick-prev svg {
+  .slick .slick-next svg,
+  .slick .slick-prev svg {
     color: #4c4c4c;
     font-size: 5em;
     height: auto; }

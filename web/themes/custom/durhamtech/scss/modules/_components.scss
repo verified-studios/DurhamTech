@@ -374,11 +374,12 @@ $banner-menu-orange-hover: #f27604;
 
 // quote slideshow
 .slick {
-  .slick-next, .slick-prev {
+  .slick-next,
+  .slick-prev {
     font-size: inherit;
+    height: auto;
     width: 70px;
     z-index: 999;
-
     &::before {
       content: none;
     }
@@ -398,8 +399,8 @@ $banner-menu-orange-hover: #f27604;
     left: 15px;
   }
 }
-.slick--view--quotes-slideshow {
 
+.slick--view--quotes-slideshow {
   .quote.teaser {
     .content {
       background-size: cover!important;
