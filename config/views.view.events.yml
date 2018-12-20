@@ -285,7 +285,7 @@ display:
           plugin_id: node_nid
       display_extenders: {  }
       use_more: true
-      use_more_always: true
+      use_more_always: false
       use_more_text: 'More Events'
       link_url: events
       link_display: custom_url
@@ -1983,18 +1983,15 @@ display:
       block_description: 'Upcoming program events'
       display_description: ''
       block_hide_empty: true
-      use_more: true
       defaults:
-        use_more: false
-        use_more_always: false
-        use_more_text: false
+        use_more: true
+        use_more_always: true
+        use_more_text: true
         header: false
         footer: false
         sorts: false
         filters: true
         filter_groups: true
-      use_more_always: true
-      use_more_text: 'More Events'
       header:
         area_text_custom:
           id: area_text_custom
