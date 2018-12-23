@@ -7312,8 +7312,9 @@ table {
   .secondary-page-header .banner {
     padding-top: 0;
     position: relative;
-    background-position: 0% 50% !important;
-    background-size: cover !important; }
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: cover; }
     @media screen and (min-width: 768px) {
       .secondary-page-header .banner {
         padding-top: 50px;
@@ -7427,8 +7428,13 @@ table {
       /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ } }
 
 .path-frontpage .secondary-page-header .banner {
-  background-position: 0% 50% !important;
+  background-position-x: 35%;
+  background-position-y: 100%;
+  background-size: 1350px;
   min-height: 650px; }
+  @media screen and (min-width: 768px) {
+    .path-frontpage .secondary-page-header .banner {
+      background-position: 0% 50% !important; } }
 
 .sidebar .menu {
   margin: 0;

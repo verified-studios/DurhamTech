@@ -2,17 +2,11 @@
   position: relative;
 
   .banner {
-    //box-shadow: inset 2px 2px 20px rgba($black, 0.1);
     padding-top: 0;
     position: relative;
-    //background-color: $gray;
-
-    //background: -moz-linear-gradient(bottom, rgba($black, 0.82) 20%, rgba($brand-gray, 0) 100%); /* FF3.6-15 */
-    //background: -webkit-linear-gradient(bottom, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 100%); /* Chrome10-25,Safari5.1-6 */
-    //background: linear-gradient(to top, rgba($black, 0.82) 20%,rgba($brand-gray, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    background-position: 0% 50%!important;
-    background-size: cover!important;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @media #{$tablet} {
       padding-top: 50px;
@@ -154,9 +148,16 @@
   }
 }
 
-.path-frontpage .secondary-page-header {
-  .banner {
-    background-position: 0% 50%!important;
-    min-height: 650px;
+.path-frontpage {
+  .secondary-page-header {
+    .banner {
+      background-position-x: 35%;
+      background-position-y: 100%;
+      background-size: 1350px;
+      min-height: 650px;
+      @media #{$tablet} {
+        background-position: 0% 50%!important;
+      }
+    }
   }
 }
