@@ -5,8 +5,11 @@ global-styling:
   js:
     js/script.js: {}
   dependencies:
+    - core/drupal
+    - core/drupalSettings
     - core/jquery
     - core/jquery.once
+    - slick/slick
 
 bootstrap-scripts:
   js:
