@@ -6344,18 +6344,27 @@ ul:not(.menu), ol:not(.menu) {
   font-weight: bold; }
 
 .alert .btn {
-  margin: 2rem 0 0; }
+  margin: 2rem 0 0 4rem; }
 
 .alert .js-close-alert {
   position: absolute;
-  right: 2rem;
+  right: 0rem;
   top: -1rem; }
+  @media screen and (min-width: 768px) {
+    .alert .js-close-alert {
+      right: 1rem; } }
+  @media screen and (min-width: 992px) {
+    .alert .js-close-alert {
+      right: 2rem; } }
 
 .alert.teaser {
   margin-bottom: 0; }
   .alert.teaser .fa-exclamation-circle {
-    float: left; }
-  .alert.teaser .field, .alert.teaser svg, .alert.teaser i {
+    float: left;
+    left: 0;
+    position: absolute; }
+  .alert.teaser .field,
+  .alert.teaser svg, .alert.teaser i {
     margin-right: 15px;
     vertical-align: top; }
   .alert.teaser .svg,
@@ -6370,7 +6379,11 @@ ul:not(.menu), ol:not(.menu) {
       margin-right: 0; }
 
 .alert .field--name-body {
-  display: block; }
+  display: block;
+  padding: 0 0 0 4rem; }
+  @media screen and (min-width: 768px) {
+    .alert .field--name-body {
+      padding: 0 1rem 0 4rem; } }
   @media screen and (min-width: 992px) {
     .alert .field--name-body {
       margin-top: 1rem; } }
@@ -7434,7 +7447,27 @@ table {
   min-height: 650px; }
   @media screen and (min-width: 768px) {
     .path-frontpage .secondary-page-header .banner {
-      background-position: 0% 50% !important; } }
+      background-position: 0% 50%; } }
+
+.path-careers .secondary-page-header .banner {
+  background-position: 55% 0%; }
+  @media screen and (min-width: 768px) {
+    .path-careers .secondary-page-header .banner {
+      background-position: 0% 50%; } }
+
+.path-continuing-education .secondary-page-header .banner,
+.path-programs .secondary-page-header .banner {
+  background-position: 35% 0%; }
+  @media screen and (min-width: 768px) {
+    .path-continuing-education .secondary-page-header .banner,
+    .path-programs .secondary-page-header .banner {
+      background-position: 0% 50%; } }
+
+.path-courses .secondary-page-header .banner {
+  background-position: 15% 0%; }
+  @media screen and (min-width: 768px) {
+    .path-courses .secondary-page-header .banner {
+      background-position: 0% 50%; } }
 
 .sidebar .menu {
   margin: 0;

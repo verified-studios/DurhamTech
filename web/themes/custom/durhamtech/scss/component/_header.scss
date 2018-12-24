@@ -156,8 +156,42 @@
       background-size: 1350px;
       min-height: 650px;
       @media #{$tablet} {
-        background-position: 0% 50%!important;
+        background-position: 0% 50%;
       }
     }
   }
+}
+
+.path-careers {
+  .secondary-page-header {
+    .banner {
+      background-position: 55% 0%;
+      @media #{$tablet} {
+        background-position: 0% 50%;
+      }
+    }
+  } 
+}
+
+.path-continuing-education,
+.path-programs {
+  .secondary-page-header {
+    .banner {
+      background-position: 35% 0%;
+      @media #{$tablet} {
+        background-position: 0% 50%;
+      }
+    }
+  } 
+}
+
+.path-courses {
+  .secondary-page-header {
+    .banner {
+      background-position: 15% 0%;
+      @media #{$tablet} {
+        background-position: 0% 50%;
+      }
+    }
+  } 
 }

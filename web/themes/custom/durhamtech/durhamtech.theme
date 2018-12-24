@@ -35,6 +35,7 @@ function durhamtech_preprocess_field(&$variables, $hook) {
 function durhamtech_preprocess_page(&$variables) {
   $banner = NULL;
   $current_path = \Drupal::service('path.current')->getPath();
+  $variables['body_classes'] = 'zaboinga';
   if ($current_path === '/home/go') {
     $variables['#cache']['max-age'] = 0;
     $variables['vals'] = [

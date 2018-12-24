@@ -14,19 +14,28 @@
     font-weight: $alert-link-font-weight;
   }
   .btn {
-    margin: 2rem 0 0;
+    margin: 2rem 0 0 4rem;
   }
   .js-close-alert {
     position: absolute;
-    right: 2rem;
+    right: 0rem;
     top: -1rem;
+    @media #{$tablet} {
+      right: 1rem;
+    }
+    @media #{$normal} {
+      right: 2rem;
+    }
   }
   &.teaser {
     margin-bottom: 0;
     .fa-exclamation-circle {
       float: left;
+      left: 0;
+      position: absolute;
     }
-    .field, svg, i {
+    .field, 
+    svg, i {
       margin-right: 15px;
       vertical-align: top;
     }
@@ -47,6 +56,10 @@
   }
   .field--name-body {
     display: block;
+    padding: 0 0 0 4rem;
+    @media #{$tablet} {
+      padding: 0 1rem 0 4rem;
+    }
     @media #{$normal} {
       margin-top: 1rem;
     }
