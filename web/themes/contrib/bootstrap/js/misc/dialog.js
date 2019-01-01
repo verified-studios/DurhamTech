@@ -1,104 +1,86 @@
 /**
  * @file
- * Dialog API inspired by HTML5 dialog element.
- *
- * @see http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element
+ * dialog.ajax.js
  */
+(function ($, Drupal, Bootstrap) {
 
-(function ($, Drupal, drupalSettings) {
-
-  'use strict';
+  Drupal.behaviors.dialog.ajaxCurrentButton = null;
+  Drupal.behaviors.dialog.ajaxOriginalButton = null;
 
   /**
-   * Default dialog options.
+   * Synchronizes a faux button with its original counterpart.
    *
-   * @type {object}
-   *
-   * @prop {bool} [autoOpen=true]
-   * @prop {string} [dialogClass='']
-   * @prop {string} [buttonClass='button']
-   * @prop {string} [buttonPrimaryClass='button--primary']
-   * @prop {function} close
+   * @param {Boolean} [reset = false]
+   *   Whether to reset the current and original buttons after synchronizing.
    */
-  drupalSettings.dialog = {
-    autoOpen: true,
-    dialogClass: '',
-    // Drupal-specific extensions: see dialog.jquery-ui.js.
-    buttonClass: 'button',
-    buttonPrimaryClass: 'button--primary',
-    // When using this API directly (when generating dialogs on the client
-    // side), you may want to override this method and do
-    // `jQuery(event.target).remove()` as well, to remove the dialog on
-    // closing.
-    close: function (event) {
-      Drupal.detachBehaviors(event.target, null, 'unload');
+  Drupal.behaviors.dialog.ajaxUpdateButtons = function (reset) {
+    if (this.ajaxCurrentButton && this.ajaxOriginalButton) {
+      this.ajaxCurrentButton.html(this.ajaxOriginalButton.html());
+      this.ajaxCurrentButton.prop('disabled', this.ajaxOriginalButton.prop('disabled'));
+    }
+    if (reset) {
+      this.ajaxCurrentButton = null;
+      this.ajaxOriginalButton = null;
     }
   };
 
-  /**
-   * @typedef {object} Drupal.dialog~dialogDefinition
-   *
-   * @prop {boolean} open
-   *   Is the dialog open or not.
-   * @prop {*} returnValue
-   *   Return value of the dialog.
-   * @prop {function} show
-   *   Method to display the dialog on the page.
-   * @prop {function} showModal
-   *   Method to display the dialog as a modal on the page.
-   * @prop {function} close
-   *   Method to hide the dialog from the page.
-   */
+  $(document)
+    .ajaxSend(function () {
+      Drupal.behaviors.dialog.ajaxUpdateButtons();
+    })
+    .ajaxComplete(function () {
+      Drupal.behaviors.dialog.ajaxUpdateButtons(true);
+    })
+  ;
 
   /**
-   * Polyfill HTML5 dialog element with jQueryUI.
-   *
-   * @param {HTMLElement} element
-   * @param {object} options
-   *   jQuery UI options to be passed to the dialog.
-   *
-   * @return {Drupal.dialog~dialogDefinition}
+   * {@inheritdoc}
    */
-  Drupal.dialog = function (element, options) {
-    var $element = $(element);
+  Drupal.behaviors.dialog.prepareDialogButtons = function prepareDialogButtons($dialog) {
+    var _this = this;
+    var buttons = [];
+    var $buttons = $dialog.find('.form-actions').find('button, input[type=submit], .form-actions a.button');
+    $buttons.each(function () {
+      var $originalButton = $(this)
+        // Prevent original button from being tabbed to.
+        .attr('tabindex', -1)
+        // Visually make the original button invisible, but don't actually hide
+        // or remove it from the DOM because the click needs to be proxied from
+        // the faux button created in the footer to its original counterpart.
+        .css({
+          display: 'block',
+          width: 0,
+          height: 0,
+          padding: 0,
+          border: 0,
+          overflow: 'hidden'
+        });
 
-    function openDialog(settings) {
-      settings = $.extend({}, drupalSettings.dialog, options, settings);
-      // Trigger a global event to allow scripts to bind events to the dialog.
-      $(window).trigger('dialog:beforecreate', [dialog, $element, settings]);
-      $element
-        .modal(settings)
-        .on('shown.bs.modal.drupal', function () {
-          dialog.open = true;
-          $(window).trigger('dialog:aftercreate', [dialog, $element, settings]);
-        })
-      ;
-    }
+      buttons.push({
+        // Strip all HTML from the actual text value. This value is escaped.
+        // It actual HTML value will be synced with the original button's HTML
+        // below in the "create" method.
+        text: Bootstrap.stripHtml($originalButton),
+        class: $originalButton.attr('class').replace('use-ajax-submit', ''),
+        click: function click(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          _this.ajaxCurrentButton = $(e.target);
+          _this.ajaxOriginalButton = $originalButton;
+          // Some core JS binds dialog buttons to the mousedown or mouseup
+          // events instead of click; all three events must be simulated here.
+          // @see https://www.drupal.org/project/bootstrap/issues/3016254
+          Bootstrap.simulate($originalButton, ['mousedown', 'mouseup', 'click']);
+        },
+        create: function () {
+          _this.ajaxCurrentButton = $(this);
+          _this.ajaxOriginalButton = $originalButton;
+          _this.ajaxUpdateButtons(true);
+        }
+      });
+    });
 
-    function closeDialog(value) {
-      $(window).trigger('dialog:beforeclose', [dialog, $element]);
-      $element
-        .on('hidden.bs.modal.drupal', function () {
-          dialog.returnValue = value;
-          dialog.open = false;
-          $(window).trigger('dialog:afterclose', [dialog, $element]);
-        })
-        .modal('hide');
-    }
-
-    var dialog = {
-      open: false,
-      returnValue: void(0),
-      show: function () {
-        openDialog({show: false});
-      },
-      showModal: function () {
-        openDialog({show: true});
-      },
-      close: closeDialog
-    };
-
-    return dialog;
+    return buttons;
   };
 
-})(jQuery, Drupal, drupalSettings);
+})(window.jQuery, window.Drupal, window.Drupal.bootstrap);
