@@ -60,30 +60,26 @@ body {
     }
   }
 }
-.navbar.container {
-  @media #{$tablet} {
-    max-width: (($container-sm - $grid-gutter-width));
-  }
-  @media #{$normal} {
-    max-width: (($container-md - $grid-gutter-width));
-  }
-  @media #{$wide} {
-    max-width: (($container-lg - $grid-gutter-width));
-  }
-}
-
-// Branding.
-.navbar .logo {
-  margin-right: -($grid-gutter-width / 2);
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
-  @media #{$grid-breakpoint} {
-    margin-right: 0;
-    padding-left: 0;
-  }
-  img {
-    background-image: url(/themes/custom/durhamtech/images/durham-tech-logo-web.svg);
-    background-repeat: no-repeat;
+.navbar {
+  &.container {
+    @media #{$tablet} {
+      max-width: (($container-sm - $grid-gutter-width));
+    }
+    @media #{$normal} {
+      max-width: (($container-md - $grid-gutter-width));
+    }
+    @media #{$wide} {
+      max-width: (($container-lg - $grid-gutter-width));
+    }
+  } 
+  .logo {
+    margin-right: -($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    @media #{$grid-breakpoint} {
+      margin-right: 0;
+      padding-left: 0;
+    }
   }
 }
 
@@ -369,6 +365,15 @@ $main-nav-height: 60px;
     .secondary-menu {
       > li {
         flex-basis: auto;
+      }
+    }
+  }
+  .navbar {
+    .logo {
+      img {
+        background-image: url(/themes/custom/durhamtech/images/durham-tech-logo-web.svg);
+        background-repeat: no-repeat;
+        height: 4.325rem;
       }
     }
   }
