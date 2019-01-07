@@ -110,6 +110,87 @@ display:
           quantity: 5
       style:
         type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          override: true
+          sticky: false
+          caption: ''
+          summary: ''
+          description: ''
+          columns:
+            field_start_date: field_start_date
+            field_end_date: field_end_date
+            name: name
+            field_title: field_title
+            nothing: nothing
+            field_class_item: field_class_item
+            field_credits: field_credits
+            field_class_format: field_class_format
+            field_seats_1: field_seats_1
+          info:
+            field_start_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_end_date:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nothing:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_class_item:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_credits:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_class_format:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_seats_1:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
+          empty_table: false
       row:
         type: fields
       fields:
@@ -960,7 +1041,31 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: search_api_date
-      sorts: {  }
+      sorts:
+        field_title:
+          id: field_title
+          table: search_api_index_courses_index
+          field: field_title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        name:
+          id: name
+          table: search_api_index_courses_index
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
       title: Courses
       header:
         result:
