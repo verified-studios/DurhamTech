@@ -1042,10 +1042,10 @@ display:
             group_items: {  }
           plugin_id: search_api_date
       sorts:
-        field_title:
-          id: field_title
+        name:
+          id: name
           table: search_api_index_courses_index
-          field: field_title
+          field: name
           relationship: none
           group_type: group
           admin_label: ''
@@ -1054,10 +1054,10 @@ display:
           expose:
             label: ''
           plugin_id: search_api
-        name:
-          id: name
+        field_title:
+          id: field_title
           table: search_api_index_courses_index
-          field: name
+          field: field_title
           relationship: none
           group_type: group
           admin_label: ''
