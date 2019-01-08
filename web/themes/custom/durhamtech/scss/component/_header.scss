@@ -157,6 +157,7 @@
       min-height: 650px;
       @media #{$tablet} {
         background-position: 0% 50%;
+        background-size: cover;
       }
     }
   }

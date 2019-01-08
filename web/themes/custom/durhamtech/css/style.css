@@ -7448,7 +7448,8 @@ table {
   min-height: 650px; }
   @media screen and (min-width: 768px) {
     .path-frontpage .secondary-page-header .banner {
-      background-position: 0% 50%; } }
+      background-position: 0% 50%;
+      background-size: cover; } }
 
 .path-careers .secondary-page-header .banner {
   background-position: 55% 0%; }
