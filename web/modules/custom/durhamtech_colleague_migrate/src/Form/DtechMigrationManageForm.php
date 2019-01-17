@@ -37,11 +37,11 @@ class DtechMigrationManageForm extends FormBase {
       '#title' => 'Courses',
     ];
 
-    $form['courses_fieldset']['rollback_courses'] = array(
+    /*$form['courses_fieldset']['rollback_courses'] = array(
       '#type' => 'submit',
       '#value' => t('Rollback Course Taxonomy'),
       '#submit' => array('::rollbackCourses')
-    );
+    );*/
 
     $form['courses_fieldset']['run_courses'] = array(
       '#type' => 'submit',
@@ -66,6 +66,12 @@ class DtechMigrationManageForm extends FormBase {
       '#value' => t('Run Class migrate'),
       '#submit' => array('::runClass'),
       '#suffix' => 'Last Updated Date: ' . $this->migrateLastImported('class_data_node'),
+    );
+
+    $form['class_fieldset']['class_course'] = array(
+      '#type' => 'submit',
+      '#value' => t('Add class data to courses'),
+      '#submit' => array('::classCourse')
     );
 
     $form['programs_course_list_fieldset'] = [
@@ -182,6 +188,31 @@ class DtechMigrationManageForm extends FormBase {
     $migration->getIdMap()->prepareUpdate();
     $executable = new MigrateExecutable($migration, new MigrateMessage());
     $executable->import();
+  }
+
+  /**
+   * Add clas data to coures
+   */
+  function classCourse() {
+    $connection = \Drupal::database();
+    $courseStorage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+    $courses = \Drupal::entityQuery('taxonomy_term')
+      ->condition('vid', 'course')
+      ->execute();
+    foreach ($courses as $course) {
+      $query = $connection->select('node__field_course', 'nfc');
+      $query->addJoin('left', 'node__field_location', 'nfl', 'nfc.entity_id = nfl.entity_id');
+      $query->addField('nfc', 'entity_id');
+      $query->addField('nfl', 'field_location_value');
+      $query->condition('nfc.bundle', 'class', '=');
+      $query->condition('nfc.field_course_target_id',$course, '=');
+      $classes = $query->execute()->fetchAll();
+      if (!empty($classes)) {
+        $courseTerm = $courseStorage->load($course);
+        $courseTerm->set('field_class_count', sizeof($classes));
+        //$courseTerm->save();
+      }
+    }
   }
 
   /**

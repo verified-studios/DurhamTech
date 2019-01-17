@@ -1,0 +1,23 @@
+uuid: 1c1605b1-91d5-49b4-81d8-4e38d668442f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_class_count
+    - taxonomy.vocabulary.course
+id: taxonomy_term.course.field_class_count
+field_name: field_class_count
+entity_type: taxonomy_term
+bundle: course
+label: 'Class Count'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

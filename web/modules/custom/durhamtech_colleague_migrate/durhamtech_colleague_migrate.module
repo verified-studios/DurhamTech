@@ -1,0 +1,18 @@
+  <?php
+
+  /**
+  * @file
+  * Contains the durhamtech_colleague_migrate module.
+  *
+  * Currently this only works for select list widgets.
+  * @TODO Modify this to work for other widget types.
+  */
+
+  /**
+  * Implements hook_form_alter().
+  */
+  function durhamtech_colleague_migrate_form_alter(&$form, $form_state, $form_id) {
+    if ($form['#id'] == 'views-exposed-form-course-search-page-1') {
+      unset($form['field_location']['#options']['internet']);
+    }
+  }

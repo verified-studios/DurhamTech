@@ -1,0 +1,21 @@
+uuid: 70ce5c7b-09cf-47a6-bbc8-a9bdca73707f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_location
+    - taxonomy.vocabulary.course
+  module:
+    - options
+id: taxonomy_term.course.field_location
+field_name: field_location
+entity_type: taxonomy_term
+bundle: course
+label: Locations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
