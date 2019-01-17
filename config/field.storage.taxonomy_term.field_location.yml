@@ -1,0 +1,57 @@
+uuid: 0f5d37fa-830f-4f70-a912-13a548ea1d0f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - taxonomy
+id: taxonomy_term.field_location
+field_name: field_location
+entity_type: taxonomy_term
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: main_campus
+      label: 'Main Campus'
+    -
+      value: internet
+      label: Internet
+    -
+      value: occ
+      label: OCC
+    -
+      value: ndc
+      label: NDC
+    -
+      value: smt
+      label: SMT
+    -
+      value: rtp
+      label: RTP
+    -
+      value: chur
+      label: CHUR
+    -
+      value: fd
+      label: FD
+    -
+      value: oc
+      label: OC
+    -
+      value: other
+      label: OTHER
+    -
+      value: polic
+      label: POLIC
+    -
+      value: sbb
+      label: SBB
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

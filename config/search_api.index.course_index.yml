@@ -1,0 +1,97 @@
+uuid: 38277e83-f44c-402d-86f4-d0836e26c02d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_class_count
+    - field.storage.taxonomy_term.field_class_format
+    - field.storage.taxonomy_term.field_description
+    - field.storage.taxonomy_term.field_location
+    - field.storage.taxonomy_term.field_title
+    - search_api.server.durham_tech
+  module:
+    - taxonomy
+    - search_api
+id: course_index
+name: 'Course Index'
+description: ''
+read_only: false
+field_settings:
+  field_class_count:
+    label: 'Class Count'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_class_count
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_class_count
+  field_class_format:
+    label: 'Class Format'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_class_format
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_class_format
+  field_description:
+    label: Description
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_description
+  field_location:
+    label: Locations
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_location
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_location
+  field_title:
+    label: Title
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_title
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - course
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - field_description
+      - field_location
+      - field_title
+      - name
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: durham_tech

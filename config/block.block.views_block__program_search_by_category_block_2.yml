@@ -12,7 +12,7 @@ dependencies:
 id: views_block__program_search_by_category_block_2
 theme: durhamtech
 region: content
-weight: -13
+weight: -14
 provider: null
 plugin: 'views_block:program_search_by_category-block_2'
 settings:

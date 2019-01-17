@@ -14,7 +14,10 @@ function durhamtech_colleague_migrate_drush_command() {
     'description' => 'This will import all of the colleague data',
     'aliases' => ['me'],
   ];
-
+  $commands['clear-extra-courses'] = [
+    'description' => 'This will remove courses with the course id added.',
+    'aliases' => ['cec'],
+  ];
   return $commands;
 }
 
@@ -41,6 +44,23 @@ function drush_durhamtech_colleague_migrate_migrate_execute() {
   $logger->info('Finished Program Migrate');
 }
 
+/**
+ * Drush command logic.
+ * drush_[MODULE_NAME]_[COMMAND_NAME]().
+ */
+function drush_durhamtech_colleague_migrate_clear_extra_courses() {
+  $term_storage = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  $courses = $term_storage->loadTree('course');
+  foreach ($courses as $tid => $course){
+    $name = $course->name;
+    $x = strpos($name, '-', strpos($name, '-')+1);
+    echo $course->tid . ' | ' . $course->name .' | ' . $x . ' | ' . is_int($x) .  "\n";
+    if (is_int($x)){
+      $term_storage->load($course->tid)->delete();
+    }
+  }
+
+}
 
 /**
  * Run Migration.

@@ -1,0 +1,5 @@
+services:
+  durhamtech_colleague_migrate.event_subscriber:
+    class: Drupal\durhamtech_colleague_migrate\EventSubscriber\DurhamtechColleagueMigrateSubscriber
+    tags:
+      - { name: event_subscriber }

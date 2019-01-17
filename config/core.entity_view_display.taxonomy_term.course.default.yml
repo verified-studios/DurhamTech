@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.taxonomy_term.course.field_academic_level
     - field.field.taxonomy_term.course.field_average_cost
+    - field.field.taxonomy_term.course.field_class_count
     - field.field.taxonomy_term.course.field_class_format
     - field.field.taxonomy_term.course.field_contact_hours
     - field.field.taxonomy_term.course.field_corequisites
@@ -14,12 +15,15 @@ dependencies:
     - field.field.taxonomy_term.course.field_description
     - field.field.taxonomy_term.course.field_division
     - field.field.taxonomy_term.course.field_local_description
+    - field.field.taxonomy_term.course.field_location
     - field.field.taxonomy_term.course.field_requisites
     - field.field.taxonomy_term.course.field_requisites_text
+    - field.field.taxonomy_term.course.field_seats
     - field.field.taxonomy_term.course.field_title
     - taxonomy.vocabulary.course
   module:
     - file
+    - options
     - panelizer
     - text
 third_party_settings:
@@ -55,6 +59,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_class_count:
+    weight: 16
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_class_format:
     weight: 7
@@ -125,6 +138,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_location:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_requisites:
     weight: 6

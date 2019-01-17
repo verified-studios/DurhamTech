@@ -737,8 +737,41 @@ display:
             value: '<a href="/files/media-files/StaffingChart.pdf">Staffing Chart</a>'
             format: basic_html
           plugin_id: text
-      footer: {  }
-      empty: {  }
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="durhamtech-results durhamtech-results-@total">We found @total course<em>s</em> matching your search criteria.</span>'
+          plugin_id: result
+      footer:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: '<span class="durhamtech-results durhamtech-results-@total">Showing @start - @end of @total course<em>s</em> matching your search criteria.</span>'
+          plugin_id: result
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<span class="durhamtech-noresults">No courses were found matching your search criteria. Please refine the search parameters.</span>'
+            format: basic_html
+          plugin_id: text
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
@@ -851,7 +884,7 @@ display:
           exposed: true
           expose:
             operator_id: attribute_1_op
-            label: 'Search by Department'
+            label: 'Department'
             description: ''
             use_operator: false
             operator: attribute_1_op
@@ -885,6 +918,7 @@ display:
         operator: AND
         groups:
           1: AND
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
