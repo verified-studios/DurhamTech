@@ -210,7 +210,7 @@ class DtechMigrationManageForm extends FormBase {
       if (!empty($classes)) {
         $courseTerm = $courseStorage->load($course);
         $courseTerm->set('field_class_count', sizeof($classes));
-        //$courseTerm->save();
+        $courseTerm->save();
       }
     }
   }

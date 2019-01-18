@@ -10,5 +10,6 @@ web/core/*
 web/modules/contrib/*
 web/web/modules/contrib/*
 web/web/core/modules/*
+web/themes/contrib/bootstrap/*
 .DS_Store
 web/web/*

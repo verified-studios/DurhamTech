@@ -1,13 +1,9 @@
 <?php
-/**
- * @file
- * Contains \Drupal\bootstrap\Plugin\Form\SystemThemeSettings.
- */
 
 namespace Drupal\bootstrap\Plugin\Form;
 
-use Drupal\bootstrap\Annotation\BootstrapForm;
 use Drupal\bootstrap\Bootstrap;
+use Drupal\bootstrap\Plugin\Setting\DeprecatedSettingInterface;
 use Drupal\bootstrap\Utility\Element;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -95,7 +91,7 @@ class SystemThemeSettings extends FormBase implements FormInterface {
    * @param \Drupal\Core\Form\FormStateInterface $form_state
    *   The current state of the form.
    *
-   * @return \Drupal\bootstrap\Theme|FALSE
+   * @return \Drupal\bootstrap\Theme|false
    *   The currently selected theme object or FALSE if not a Bootstrap theme.
    */
   public static function getTheme(Element $form, FormStateInterface $form_state) {
@@ -127,6 +123,12 @@ class SystemThemeSettings extends FormBase implements FormInterface {
     // Iterate over all setting plugins and manually save them since core's
     // process is severely limiting and somewhat broken.
     foreach ($theme->getSettingPlugin() as $name => $setting) {
+      // Skip saving deprecated settings.
+      if ($setting instanceof DeprecatedSettingInterface) {
+        $form_state->unsetValue($name);
+        continue;
+      }
+
       // Allow the setting to participate in the form submission process.
       // Must call the "submitForm" method in case any setting actually uses it.
       // It should, in turn, invoke "submitFormElement", if the setting that
@@ -179,9 +181,9 @@ class SystemThemeSettings extends FormBase implements FormInterface {
     // Iterate over all setting plugins and allow them to participate.
     foreach ($theme->getSettingPlugin() as $setting) {
       // Allow the setting to participate in the form validation process.
-      // Must call the "validateForm" method in case any setting actually uses it.
-      // It should, in turn, invoke "validateFormElement", if the setting that
-      // overrides it is implemented properly.
+      // Must call the "validateForm" method in case any setting actually uses
+      // it. It should, in turn, invoke "validateFormElement", if the setting
+      // that overrides it is implemented properly.
       $setting->validateForm($form->getArray(), $form_state);
     }
   }
