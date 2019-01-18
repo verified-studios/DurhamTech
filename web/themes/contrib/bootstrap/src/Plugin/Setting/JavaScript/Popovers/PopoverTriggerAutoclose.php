@@ -1,14 +1,8 @@
 <?php
-/**
- * @file
- * Contains \Drupal\bootstrap\Plugin\Setting\JavaScript\Popovers\PopoverTriggerAutoclose.
- */
 
 namespace Drupal\bootstrap\Plugin\Setting\JavaScript\Popovers;
 
-use Drupal\bootstrap\Annotation\BootstrapSetting;
-use Drupal\bootstrap\Plugin\Setting\SettingBase;
-use Drupal\Core\Annotation\Translation;
+use Drupal\bootstrap\Plugin\Setting\DeprecatedSettingInterface;
 
 /**
  * The "popover_trigger_autoclose" theme setting.
@@ -27,14 +21,10 @@ use Drupal\Core\Annotation\Translation;
  *     "options" = @Translation("Options"),
  *   },
  * )
+ *
+ * @deprecated Since 8.x-3.14. Will be removed in a future release.
+ *
+ * @see \Drupal\bootstrap\Plugin\Setting\JavaScript\Popovers\PopoverAutoClose
  */
-class PopoverTriggerAutoclose extends SettingBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  public function drupalSettings() {
-    return !!$this->theme->getSetting('popover_enabled');
-  }
-
+class PopoverTriggerAutoclose extends PopoverAutoClose implements DeprecatedSettingInterface {
 }

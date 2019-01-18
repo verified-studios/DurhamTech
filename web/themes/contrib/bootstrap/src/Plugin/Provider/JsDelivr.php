@@ -1,15 +1,9 @@
 <?php
-/**
- * @file
- * Contains \Drupal\bootstrap\Plugin\Provider\JsDelivr.
- */
 
 namespace Drupal\bootstrap\Plugin\Provider;
 
-use Drupal\bootstrap\Annotation\BootstrapProvider;
 use Drupal\bootstrap\Bootstrap;
 use Drupal\Component\Utility\NestedArray;
-use Drupal\Core\Annotation\Translation;
 
 /**
  * The "jsdelivr" CDN provider plugin.
@@ -19,7 +13,7 @@ use Drupal\Core\Annotation\Translation;
  * @BootstrapProvider(
  *   id = "jsdelivr",
  *   label = @Translation("jsDelivr"),
- *   api = "http://api.jsdelivr.com/v1/bootstrap/libraries",
+ *   api = "https://api.jsdelivr.com/v1/bootstrap/libraries",
  *   themes = { },
  *   versions = { },
  * )
@@ -100,7 +94,7 @@ class JsDelivr extends ProviderBase {
    * {@inheritdoc}
    */
   public function processApi(array $json, array &$definition) {
-    $definition['description'] = t('<p style="background:#EB4C36"><a href=":jsdelivr" target="_blank"><img src="//www.jsdelivr.com/img/logo.png" alt="jsDelivr Logo"/></a></p><p><a href=":jsdelivr" target="_blank">jsDelivr</a> is a free multi-CDN infrastructure that uses <a href=":maxcdn" target="_blank">MaxCDN</a>, <a href=":cloudflare" target="_blank">Cloudflare</a> and many others to combine their powers for the good of the open source community... <a href=":jsdelivr_about" target="_blank">read more</a></p>', [
+    $definition['description'] = t('<p><a href=":jsdelivr" target="_blank">jsDelivr</a> is a free multi-CDN infrastructure that uses <a href=":maxcdn" target="_blank">MaxCDN</a>, <a href=":cloudflare" target="_blank">Cloudflare</a> and many others to combine their powers for the good of the open source community... <a href=":jsdelivr_about" target="_blank">read more</a></p>', [
       ':jsdelivr' => 'https://www.jsdelivr.com',
       ':jsdelivr_about' => 'https://www.jsdelivr.com/about',
       ':maxcdn' => 'https://www.maxcdn.com',
