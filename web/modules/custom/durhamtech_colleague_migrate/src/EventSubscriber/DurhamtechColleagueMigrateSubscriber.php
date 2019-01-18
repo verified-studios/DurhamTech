@@ -15,9 +15,6 @@ class DurhamtechColleagueMigrateSubscriber implements EventSubscriberInterface {
     // $fetcher_plugin = 'migration_plugin';
     // $row = $event->getRow();
     $migration = $event->getMigration();
-    if ($migration->id() === 'class_data_node') {
-      echo "\n" . 'abc' . "\n";
-    }
   }
 
   /**
