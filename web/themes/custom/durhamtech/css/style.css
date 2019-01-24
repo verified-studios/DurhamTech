@@ -5900,10 +5900,10 @@ p {
     margin-bottom: 15px; }
 
 a {
-  color: #CC4700; }
+  color: #be4301; }
   a:hover {
     background-color: transparent;
-    color: #CC4700;
+    color: #be4301;
     text-decoration: underline; }
 
 a.white:focus {
@@ -5947,11 +5947,11 @@ ul:not(.menu), ol:not(.menu) {
   font-size: 0.8em;
   font-weight: 700; }
   .btn.btn-orange, .btn.btn-orange:visited, .btn-primary.btn-orange, .btn-primary.btn-orange:visited {
-    background-color: #CC4700;
-    border-color: #CC4700; }
+    background-color: #be4301;
+    border-color: #be4301; }
     .btn.btn-orange:hover, .btn.btn-orange:focus, .btn.btn-orange:visited:hover, .btn.btn-orange:visited:focus, .btn-primary.btn-orange:hover, .btn-primary.btn-orange:focus, .btn-primary.btn-orange:visited:hover, .btn-primary.btn-orange:visited:focus {
-      background-color: #b33e00;
-      background-color: #b33e00; }
+      background-color: #a53a01;
+      background-color: #a53a01; }
   .btn > a, .btn-primary > a {
     color: #FFFFFF; }
     .btn > a:hover, .btn > a:focus, .btn-primary > a:hover, .btn-primary > a:focus {
@@ -6041,10 +6041,10 @@ ul:not(.menu), ol:not(.menu) {
   color: #4c4c4c; }
 
 .bg-dark-orange {
-  background-color: #CC4700; }
+  background-color: #be4301; }
 
 .dark-orange {
-  color: #CC4700; }
+  color: #be4301; }
 
 .bg-transparent-black {
   background-color: rgba(0, 0, 0, 0.85); }
@@ -6709,7 +6709,7 @@ body {
 
 .menu.main-menu > li > a {
   transition: 0.2s all ease-in;
-  color: #CC4700; }
+  color: #be4301; }
   @media screen and (min-width: 992px) {
     .menu.main-menu > li > a {
       color: #000000; } }
@@ -6761,7 +6761,8 @@ body {
           #secondary-nav .secondary-menu > li a {
             color: #FFFFFF; }
             #secondary-nav .secondary-menu > li a:focus {
-              outline-color: #E87722; }
+              /*outline-color: $brand-orange;*/
+              outline-color: #FFFFFF; }
           #secondary-nav .secondary-menu > li:first-of-type a {
             padding-left: 0; }
           #secondary-nav .secondary-menu > li:last-of-type a {
@@ -7536,7 +7537,7 @@ a.cta-box:visited {
   color: #FFFFFF;
   height: 150px;
   overflow: hidden;
-  background-color: #993500;
+  background-color: #8b3101;
   padding: 2rem;
   position: relative;
   border-radius: 4px;
@@ -7544,7 +7545,7 @@ a.cta-box:visited {
   a.cta-box:hover, a.cta-box:focus,
   a.cta-box:visited:hover,
   a.cta-box:visited:focus {
-    background-color: #662400; }
+    background-color: #591f00; }
     a.cta-box:hover .fa,
     a.cta-box:hover .svg-inline--fa, a.cta-box:focus .fa,
     a.cta-box:focus .svg-inline--fa,
@@ -7752,7 +7753,7 @@ a.cta-box:visited {
     #block-banner-menu .menu > li > a:hover svg, #block-banner-menu .menu > li > a:focus svg {
       opacity: 1; }
     #block-banner-menu .menu > li > a svg {
-      color: #CC4700;
+      color: #be4301;
       float: left;
       margin-right: 10px;
       min-height: 35px;
@@ -7766,7 +7767,7 @@ a.cta-box:visited {
     #block-banner-menu .menu > li > a:hover, #block-banner-menu .menu > li > a:focus {
       transition: 0.2s all ease-in;
       background-color: #FFFFFF;
-      border-color: #CC4700; }
+      border-color: #be4301; }
       #block-banner-menu .menu > li > a:hover svg, #block-banner-menu .menu > li > a:focus svg {
         transform: rotate(-10deg); }
 
@@ -7947,17 +7948,17 @@ a.cta-box:visited {
   color: #000000;
   font-weight: 600; }
   .sidebar .menu .active > a:hover {
-    color: #CC4700; }
+    color: #be4301; }
 
 .pagination > li a, .pagination > li span {
-  color: #CC4700; }
+  color: #be4301; }
   .pagination > li a:hover, .pagination > li span:hover {
-    color: #CC4700; }
+    color: #be4301; }
 
 .pagination > li.active a {
   background-color: #00843D; }
   .pagination > li.active a:hover {
-    background-color: #CC4700; }
+    background-color: #be4301; }
 
 .tab-pane {
   display: none; }
@@ -8384,11 +8385,11 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .program-search--category a:visited,
   .program-search--category a:hover,
   .program-search--category a:focus {
-    color: #CC4700; }
+    color: #be4301; }
   .program-search--category h3 {
     font-size: 1.65rem;
     font-weight: 600;
-    color: #CC4700; }
+    color: #be4301; }
 
 .program-search--category--btn .btn {
   position: absolute;
@@ -9135,7 +9136,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       bottom: 1rem;
       position: absolute;
       z-index: 1;
-      color: #CC4700; }
+      color: #be4301; }
       @media screen and (min-width: 768px) {
         .block-durhamtech-social .slick .slick-slide .social-icon {
           left: 1rem;
@@ -9527,6 +9528,8 @@ a.social-twitter:focus {
         .landing-page.apply-now .lp-vertical-tabs li a {
           color: white;
           border: 1px solid white; } }
+      .landing-page.apply-now .lp-vertical-tabs li a:focus {
+        outline-color: #4D90FE; }
   .landing-page.apply-now .lp-deadlines .view-header h2 {
     text-align: center;
     margin-bottom: 4rem; }
@@ -10016,7 +10019,7 @@ a.social-twitter:focus {
     border-left: 2px solid #CED2D5; }
     .event.column-teaser a.content h4,
     .event.column-teaser a.content:visited h4 {
-      color: #CC4700 !important;
+      color: #be4301 !important;
       font-weight: 700 !important; }
     .event.column-teaser a.content p,
     .event.column-teaser a.content .field--name-field-description,
@@ -10059,7 +10062,7 @@ a.social-twitter:focus {
       padding-left: 5px; }
       .event.column-teaser a.content:hover .continue svg,
       .event.column-teaser a.content:focus .continue svg {
-        color: #CC4700; }
+        color: #be4301; }
 
 .view-display-id-homepage_events .event.column-teaser a.content h4,
 .view-display-id-homepage_events .event.column-teaser a.content p,
