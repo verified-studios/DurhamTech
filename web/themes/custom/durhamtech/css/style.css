@@ -8300,6 +8300,30 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       font-weight: 600;
       font-family: "Open Sans", sans-serif;
       color: #000000; }
+    #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper,
+    #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper,
+    #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper {
+      display: inline-block;
+      vertical-align: middle; }
+      #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend,
+      #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend,
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend {
+        display: none; }
+      #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item,
+      #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item,
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item {
+        margin: 0;
+        padding: 0; }
+      #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label,
+      #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label,
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label {
+        font-weight: bold;
+        vertical-align: middle; }
+      #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input,
+      #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input,
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input {
+        margin-right: 10px;
+        padding: 0; }
   #views-exposed-form-programs-search-page-1 .form--inline .form-item-search-api-fulltext,
   #views-exposed-form-course-search-page-1 .form--inline .form-item-search-api-fulltext,
   #views-exposed-form-careers-search-page-1 .form--inline .form-item-search-api-fulltext {
@@ -8310,8 +8334,17 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext,
   #views-exposed-form-course-search-page-1 .form--inline #edit-search-api-fulltext,
   #views-exposed-form-careers-search-page-1 .form--inline #edit-search-api-fulltext {
-    width: 500px;
-    max-width: 80%; }
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext,
+      #views-exposed-form-course-search-page-1 .form--inline #edit-search-api-fulltext,
+      #views-exposed-form-careers-search-page-1 .form--inline #edit-search-api-fulltext {
+        width: 500px;
+        max-width: 80%; } }
+  #views-exposed-form-programs-search-page-1 .form--inline #edit-actions,
+  #views-exposed-form-course-search-page-1 .form--inline #edit-actions,
+  #views-exposed-form-careers-search-page-1 .form--inline #edit-actions {
+    width: 100%; }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search,
   #views-exposed-form-programs-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-course-search-page-1 .form--inline #edit-submit-programs-search,
@@ -10085,22 +10118,27 @@ a.social-twitter:focus {
 .view-events .view-header .more-link {
   font-size: 0.8em; }
 
-.view-directory {
-  margin: 3rem 0; }
-  .view-directory .form-item {
+/*.view-directory {*/
+#views-exposed-form-directory-page-1 {
+  margin: 3rem 0 1rem; }
+  #views-exposed-form-directory-page-1 .form-item {
     float: none;
-    margin: 0 2rem; }
-    .view-directory .form-item label {
+    margin: 0 1rem 0 0; }
+    #views-exposed-form-directory-page-1 .form-item label {
       color: #000000;
       font-size: 1.25rem;
       letter-spacing: 0.03em;
       margin-right: 1rem;
       text-transform: uppercase; }
-  .view-directory .btn {
+  #views-exposed-form-directory-page-1 .btn {
     border: none;
     font-size: 1.25rem;
-    min-width: 150px;
-    padding: 1rem 2rem; }
+    /*min-width: 100px;*/
+    padding: 1rem 2rem;
+    margin-right: 0; }
+
+.view-header .staffing-chart {
+  text-align: center; }
 
 body.path-user .main-container {
   padding: 5rem;
