@@ -425,8 +425,8 @@ display:
           label: Email
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "{% if attribute_3|lower matches '/^.*@durhamtech.edu$/' %}\r\n<a href=\"mailto:{{ attribute_3|lower }}\">{{ attribute_3|lower }}</a>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -734,7 +734,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: '<a href="/files/media-files/StaffingChart.pdf">Staffing Chart</a>'
+            value: '<div class="staffing-chart"><a href="/sites/default/files/media-files/StaffingChart_0.pdf" target="_blank"><i class="far fa-file-pdf"></i> Staffing Chart <span class="ext" aria-label="(link opens in new window)"></span></a></div>'
             format: basic_html
           plugin_id: text
         result:
