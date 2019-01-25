@@ -429,7 +429,7 @@ display:
             identifier: field_class_count
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -450,7 +450,7 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: 'Upcoming Classes'
+                title: 'Current and Upcoming Classes'
                 operator: 'not empty'
                 value:
                   value: ''

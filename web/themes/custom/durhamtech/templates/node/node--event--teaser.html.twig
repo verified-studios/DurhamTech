@@ -85,7 +85,7 @@
       <h4 class="event-teaser-title">{{ label }}</h4>
     </a>
     <div class="event-teaser-location">
-        {{ content.field_event_location[0] }}, {{ event_date|format_date('custom', 'ga') }}
+        {{ content.field_event_location[0] }}, {{ event_date|format_date('custom', 'g:i a') }}
     </div>
     <div class="event-teaser-description">
       {# content.field_rich_text #}

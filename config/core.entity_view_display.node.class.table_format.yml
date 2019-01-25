@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.class.field_meeting_days
     - field.field.node.class.field_room
     - field.field.node.class.field_seats
+    - field.field.node.class.field_section_number
     - field.field.node.class.field_start_date
     - field.field.node.class.field_start_time
     - node.type.class
@@ -53,7 +54,7 @@ content:
     region: content
   field_class_item:
     type: entity_reference_revisions_entity_view
-    weight: 6
+    weight: 7
     region: content
     label: hidden
     settings:
@@ -62,13 +63,13 @@ content:
     third_party_settings: {  }
   field_course:
     type: entity_reference_entity_id
-    weight: 7
+    weight: 8
     region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
   field_delivery_method:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       link: false
@@ -91,6 +92,14 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  field_section_number:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_start_date:
     weight: 0
     label: hidden

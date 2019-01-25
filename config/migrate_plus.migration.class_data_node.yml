@@ -37,6 +37,7 @@ source:
     Building: 'Distinct building class is located in.'
     Room: 'Room number where the class is located in.'
     'Seats Available': 'Seats Available.'
+    'Section Name': 'Section Name.'
   constants:
     bool_0: 0
     bool_1: 1
@@ -47,11 +48,12 @@ process:
     source:
       - Title
       - Name
-      - Id
+      - 'Section Name'
     delimiter: '-'
   promote: constants/bool_0
   uid: constants/uid_root
   field_class_id: Id
+  field_section_number: 'Section Name'
   field_course:
     plugin: entity_generate
     entity_type: taxonomy_term

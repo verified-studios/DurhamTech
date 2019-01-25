@@ -1,0 +1,19 @@
+uuid: 987603cf-2294-4d05-a2aa-277676c17a43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_number
+    - node.type.class
+id: node.class.field_section_number
+field_name: field_section_number
+entity_type: node
+bundle: class
+label: 'Section Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
