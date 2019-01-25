@@ -122,6 +122,9 @@ $main-nav-height: 60px;
       &:hover {
         @include transition();
       }
+      &:focus {
+        outline-color: $green;
+      }
     }
   }
 
@@ -284,6 +287,9 @@ $main-nav-height: 60px;
     display: block;
     margin: 6px;
     padding: 15px 0;
+    &:focus {
+      outline-color: $green;
+    }
 
     @media #{$tablet} {
       position: relative;
@@ -295,8 +301,10 @@ $main-nav-height: 60px;
       background: none;
       border: none;
       padding: 0;
+      :focus {
+        outline-color: $green;
+      }
       svg, i {
-
       }
     }
 

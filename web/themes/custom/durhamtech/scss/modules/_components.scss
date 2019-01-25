@@ -44,6 +44,9 @@ $banner-menu-orange-hover: #f27604;
       &:first-of-type {
         margin-top: 0;
       }
+      .control-label {
+        display: none;
+      }
       .select-wrapper {
         width: 100%;
         select {

@@ -6715,6 +6715,8 @@ body {
       color: #000000; } }
   .menu.main-menu > li > a:hover {
     transition: 0.2s all ease-in; }
+  .menu.main-menu > li > a:focus {
+    outline-color: #00843D; }
 
 @media screen and (min-width: 768px) {
   .menu.main-menu {
@@ -6807,6 +6809,8 @@ body {
   display: block;
   margin: 6px;
   padding: 15px 0; }
+  .navbar-collapse .js-search-trigger:focus {
+    outline-color: #00843D; }
   @media screen and (min-width: 768px) {
     .navbar-collapse .js-search-trigger {
       position: relative;
@@ -6816,6 +6820,8 @@ body {
     background: none;
     border: none;
     padding: 0; }
+    .navbar-collapse .js-search-trigger button :focus {
+      outline-color: #00843D; }
 
 .navbar-collapse.in {
   padding-bottom: 50px; }
@@ -7667,6 +7673,8 @@ a.cta-box:visited {
       width: 100%; }
       #block-get-started form .form-item:first-of-type {
         margin-top: 0; }
+      #block-get-started form .form-item .control-label {
+        display: none; }
       #block-get-started form .form-item .select-wrapper {
         width: 100%; }
         #block-get-started form .form-item .select-wrapper select {
@@ -8352,9 +8360,12 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   #views-exposed-form-course-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-careers-search-page-1 .form--inline #edit-submit-programs-search,
   #views-exposed-form-careers-search-page-1 .form--inline #edit-reset {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
-    min-width: 150px;
+    /*font-size: 1.5rem;*/
+    font-size: 0.8em;
+    /*padding: 1rem 2rem;*/
+    /*padding: inherit;*/
+    padding: 6px 12px;
+    /*min-width: 150px;*/
     border: none; }
     #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search .glyphicon,
     #views-exposed-form-programs-search-page-1 .form--inline #edit-reset .glyphicon,
@@ -8367,8 +8378,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   #views-exposed-form-programs-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-course-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-careers-search-page-1 .form--inline #edit-reset {
-    min-width: 100px;
-    background-color: #4c4c4c; }
+    min-width: 90px;
+    background-color: #4c4c4c;
+    /*padding: 0 0;*/
+    border: 1px solid #4c4c4c; }
 
 #block-views-block-program-search-by-category-block-1 {
   margin-bottom: 2rem; }
@@ -10123,22 +10136,45 @@ a.social-twitter:focus {
 
 /*.view-directory {*/
 #views-exposed-form-directory-page-1 {
-  margin: 3rem 0 1rem; }
+  margin: 3rem 0 1rem;
+  text-align: center; }
   #views-exposed-form-directory-page-1 .form-item {
     float: none;
-    margin: 0 1rem 0 0; }
+    /*margin: 0 1rem 0 0;*/
+    margin: 0; }
     #views-exposed-form-directory-page-1 .form-item label {
       color: #000000;
       font-size: 1.25rem;
       letter-spacing: 0.03em;
       margin-right: 1rem;
       text-transform: uppercase; }
+    #views-exposed-form-directory-page-1 .form-item.form-item-attribute-2 {
+      background-color: #CED2D5;
+      padding: 2rem 0 2rem 3rem;
+      border-radius: 1rem 0 0 1rem;
+      max-width: 100%; }
+    #views-exposed-form-directory-page-1 .form-item.form-item-attribute-3 {
+      background-color: #CED2D5;
+      padding: 2rem 3rem;
+      /*border-radius: 1rem;*/
+      max-width: 100%;
+      margin-left: -4px; }
+    #views-exposed-form-directory-page-1 .form-item.form-item-attribute-1 {
+      background-color: #CED2D5;
+      padding: 2rem 3rem 2rem 0;
+      border-radius: 0 1rem 1rem 0;
+      max-width: 100%;
+      margin-left: -5px; }
   #views-exposed-form-directory-page-1 .btn {
     border: none;
     font-size: 1.25rem;
-    /*min-width: 100px;*/
+    min-width: 100px;
     padding: 1rem 2rem;
-    margin-right: 0; }
+    margin: 2rem 0 0; }
+    #views-exposed-form-directory-page-1 .btn#edit-reset {
+      background-color: #4c4c4c;
+      min-width: 100px;
+      margin-left: 1rem; }
 
 .view-header .staffing-chart {
   text-align: center; }
