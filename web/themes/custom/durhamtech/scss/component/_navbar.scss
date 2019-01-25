@@ -191,7 +191,8 @@ $main-nav-height: 60px;
           color: $white;
 
           &:focus {
-            outline-color: $brand-orange;
+            /*outline-color: $brand-orange;*/
+            outline-color: $white;
           }
         }
 

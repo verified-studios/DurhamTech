@@ -246,7 +246,7 @@
       border-radius: 0;
 
       .media-image {
-        margin-top: 0; 
+        margin-top: 0;
       }
 
       img {
@@ -368,6 +368,25 @@
         font-family: $open-sans;
         color: $black;
       }
+      &#edit-field-class-count--wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        legend {
+          display: none;
+        }
+        .form-item {
+          margin: 0;
+          padding: 0;
+        }
+        label {
+          font-weight: bold;
+          vertical-align: middle;
+        }
+        input {
+          margin-right: 10px;
+          padding: 0;
+        }
+      }
     }
 
     .form-item-search-api-fulltext {
@@ -378,8 +397,14 @@
     }
 
     #edit-search-api-fulltext {
-      width: 500px;
-      max-width: 80%;
+      width: 100%;
+      @media #{$tablet} {
+        width: 500px;
+        max-width: 80%;
+      }
+    }
+    #edit-actions {
+      width: 100%;
     }
     #edit-submit-programs-search,
     #edit-reset {
