@@ -1,10 +1,10 @@
 /*.view-directory {*/
 #views-exposed-form-directory-page-1 {
+  position: relative;
   margin: 3rem 0 1rem ;
   text-align: center;
   .form-item {
     float: none;
-    /*margin: 0 1rem 0 0;*/
     margin: 0;
     label {
       color: #000000;
@@ -15,40 +15,102 @@
     }
     &.form-item-attribute-2 {
       background-color: #CED2D5;
-      padding: 2rem 0 2rem 3rem;
-      border-radius: 1rem 0 0 1rem ;
-      max-width: 100%;
+      border-radius: 1rem 1rem 0 0;
+      margin-left: 0;
+      padding: 2rem 3rem 1rem;
+      width: 100%;
+
+      @media #{$tablet} {
+        position: relative;
+        border-radius: 1rem 0 0;
+        margin-right: -3px;
+        padding: 2rem 0 0 3rem;
+        width: 45%;
+        &::after {
+          content: '';
+          background-color: #CED2D5;
+          width: 5px;
+          height: 100%;
+          position: absolute;
+          top: 0px;
+          right: -3px;
+        }
+      }
+      @media #{$wide} {
+        background-color: #CED2D5;
+        padding: 2rem 0 2rem 3rem;
+        border-radius: 1rem 0 0 1rem;
+        max-width: 100%;
+        width: auto;
+      }
     }
     &.form-item-attribute-3 {
       background-color: #CED2D5;
+      border-radius: 0;
+      margin-left: 0;
       padding: 2rem 3rem;
-      /*border-radius: 1rem;*/
-      max-width: 100%;
-      margin-left: -4px;
+      width: 100%;
+
+      @media #{$tablet} {
+        border-radius: 0 1rem 0 0;
+        margin-left: -2px;
+        padding: 2rem 3rem 0;
+        width: 45%;
+      }
+      @media #{$wide} {
+        background-color: #CED2D5;
+        padding: 2rem 3rem;
+        border-radius: 0;
+        max-width: 100%;
+        width: auto;
+        margin-left: -4px;
+      }
     }
     &.form-item-attribute-1 {
       background-color: #CED2D5;
-      padding: 2rem 3rem 2rem 0;
-      border-radius: 0 1rem 1rem 0;
-      max-width: 100%;
-      margin-left: -5px;
+      border-radius: 0 0 1rem 1rem;
+      margin-left: 0;
+      padding: 1rem 3rem 2rem;
+      width: 100%;
+
+      @media #{$tablet} {
+        margin-left: 0;
+        padding: 2rem 3rem 2rem 0;
+        width: 90%;
+      }
+      @media #{$wide} {
+        background-color: #CED2D5;
+        padding: 2rem 3rem 2rem 0;
+        border-radius: 0 1rem 1rem 0;
+        max-width: 100%;
+        width: auto;
+        margin-left: -5px;
+      }
     }
+  }
+  #edit-actions {
+    margin-bottom: 15px;
   }
   .btn {
     border: none;
+    display: inline-block;
     font-size: 1.25rem;
     min-width: 100px;
     padding: 1rem 2rem;
-    margin: 2rem 0 0;
+    margin: 2rem 1rem 0 0;
     &#edit-reset {
       background-color: $dark-gray;
       min-width: 100px;
       margin-left: 1rem;
     }
   }
-}
-.view-header {
-  .staffing-chart {
-    text-align: center;
+  .view-footer {
+    @media #{$wide} {
+      position: absolute;
+      bottom: 17px;
+      right: 75px;
+      margin: 2rem 0 0;
+      width: 150px;
+    }
   }
 }
