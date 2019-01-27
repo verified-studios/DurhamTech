@@ -8145,6 +8145,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 
 .plan-of-study {
   margin-bottom: 20px; }
+  .plan-of-study .btn {
+    margin: 1rem; }
 
 .required-classes {
   border-top: 1px solid #000000; }
