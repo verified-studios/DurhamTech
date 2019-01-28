@@ -1,0 +1,19 @@
+uuid: 7545f70d-68cb-4993-855f-6c11f6bf0e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_printable2_name
+    - node.type.program
+id: node.program.field_program_printable2_name
+field_name: field_program_printable2_name
+entity_type: node
+bundle: program
+label: 'Printable2 Button Name'
+description: 'Name for button for Printable2 file.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
