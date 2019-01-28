@@ -134,6 +134,9 @@
 
 .plan-of-study {
   margin-bottom: 20px;
+  .btn {
+    margin: 1rem;
+  }
 }
 
 .required-classes {
@@ -408,9 +411,12 @@
     }
     #edit-submit-programs-search,
     #edit-reset {
-      font-size: 1.5rem;
-      padding: 1rem 2rem;
-      min-width: 150px;
+      /*font-size: 1.5rem;*/
+      font-size: 0.8em;
+      /*padding: 1rem 2rem;*/
+      /*padding: inherit;*/
+      padding: 6px 12px;
+      /*min-width: 150px;*/
       border: none;
 
       .glyphicon {
@@ -420,8 +426,10 @@
     }
 
     #edit-reset {
-      min-width: 100px;
+      min-width: 90px;
       background-color: $dark-gray;
+      /*padding: 0 0;*/
+      border: 1px solid $dark-gray;
     }
   }
 }

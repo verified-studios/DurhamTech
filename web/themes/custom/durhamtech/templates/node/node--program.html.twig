@@ -217,7 +217,13 @@
         <section style="background-color: #f2f2f2; padding: 5rem">
           <div class="plan-of-study text-center">
             {% set printable_uri = content.field_program_printable.0['#file'].uri.0.value %}
-            <a href="{{ file_url(printable_uri) }}" class="btn btn-2x" target="_blank"><i class="far fa-file-pdf"></i> &nbsp; Download Plan of Study <span class="ext" aria-label="(link opens in new window)"></span></a>
+              {% set printable_name = content.field_program_printable_name.0 %}
+            <a href="{{ file_url(printable_uri) }}" class="btn btn-2x" target="_blank"><i class="far fa-file-pdf"></i> &nbsp; {{ printable_name }} <span class="ext" aria-label="(link opens in new window)"></span></a>
+              {% if content.field_program_printable2.0 %}
+                  {% set printable2_uri = content.field_program_printable2.0['#file'].uri.0.value %}
+                  {% set printable2_name = content.field_program_printable2_name.0 %}
+                  <a href="{{ file_url(printable2_uri) }}" class="btn btn-2x" target="_blank"><i class="far fa-file-pdf"></i> &nbsp; {{ printable2_name }} <span class="ext" aria-label="(link opens in new window)"></span></a>
+              {% endif %}
           </div>
         </section>
       {% endif %}
