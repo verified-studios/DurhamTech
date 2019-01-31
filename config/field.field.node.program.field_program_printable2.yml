@@ -1,0 +1,27 @@
+uuid: bd9268d4-bf33-4467-8ad5-5d84b6bb2af6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_printable2
+    - node.type.program
+  module:
+    - file
+id: node.program.field_program_printable2
+field_name: field_program_printable2
+entity_type: node
+bundle: program
+label: Printable2
+description: 'Only upload PDF files'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'printable/[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

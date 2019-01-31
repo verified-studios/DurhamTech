@@ -26,7 +26,7 @@ source:
     Name: 'Unique identifier for the course as in the data source.'
     Title: 'Name of the course.'
     Type: 'Type of course.'
-    Description_BR: 'Description of the course.'
+    Description: 'Description of the course.'
     Division: 'Broad category of the course.'
     Department: 'Specific category of the course.'
     Credits: 'How many credits the course is worth.'
@@ -41,7 +41,7 @@ source:
 process:
   name: Name
   field_title: Title
-  field_description: Description_BR
+  field_description: Description
   field_credits: Credits
   field_requisites_text: Requisites
   field_class_format:
