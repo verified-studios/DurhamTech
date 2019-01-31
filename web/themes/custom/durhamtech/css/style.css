@@ -10136,11 +10136,13 @@ a.social-twitter:focus {
 .view-events .view-header .more-link {
   font-size: 0.8em; }
 
-/*.view-directory {*/
 #views-exposed-form-directory-page-1 {
   position: relative;
   margin: 3rem 0 1rem;
   text-align: center; }
+  @media screen and (min-width: 768px) {
+    #views-exposed-form-directory-page-1 .form-inline .form-control {
+      width: 240px; } }
   #views-exposed-form-directory-page-1 .form-item {
     float: none;
     margin: 0; }
@@ -10219,24 +10221,30 @@ a.social-twitter:focus {
           margin-left: -5px; } }
   #views-exposed-form-directory-page-1 #edit-actions {
     margin-bottom: 15px; }
-  #views-exposed-form-directory-page-1 .btn {
-    border: none;
-    display: inline-block;
-    font-size: 1.25rem;
-    min-width: 100px;
-    padding: 1rem 2rem;
-    margin: 2rem 1rem 0 0; }
-    #views-exposed-form-directory-page-1 .btn#edit-reset {
-      background-color: #4c4c4c;
+    #views-exposed-form-directory-page-1 #edit-actions .btn {
+      border: none;
+      display: inline-block;
+      font-size: 1.25rem;
       min-width: 100px;
-      margin-left: 1rem; }
-  @media screen and (min-width: 1200px) {
-    #views-exposed-form-directory-page-1 .view-footer {
-      position: absolute;
-      bottom: 17px;
-      right: 75px;
-      margin: 2rem 0 0;
-      width: 150px; } }
+      padding: 1rem 2rem;
+      margin: 2rem 1rem 0 0; }
+      #views-exposed-form-directory-page-1 #edit-actions .btn#edit-reset {
+        background-color: #4c4c4c;
+        min-width: 100px;
+        margin-left: 1rem; }
+
+.view-header {
+  position: relative; }
+  .view-header .staffing-chart {
+    text-align: center;
+    width: 100%; }
+    @media screen and (min-width: 1200px) {
+      .view-header .staffing-chart {
+        position: absolute;
+        top: -72px;
+        right: 76px;
+        margin: 2rem 0 0;
+        width: 150px; } }
 
 body.path-user .main-container {
   padding: 5rem;
