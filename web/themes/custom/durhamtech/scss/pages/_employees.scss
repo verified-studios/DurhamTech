@@ -1,8 +1,13 @@
-/*.view-directory {*/
+
 #views-exposed-form-directory-page-1 {
   position: relative;
   margin: 3rem 0 1rem ;
   text-align: center;
+  .form-inline .form-control {
+    @media #{$tablet} {
+      width: 240px;
+    }
+  }
   .form-item {
     float: none;
     margin: 0;
@@ -90,25 +95,30 @@
   }
   #edit-actions {
     margin-bottom: 15px;
-  }
-  .btn {
-    border: none;
-    display: inline-block;
-    font-size: 1.25rem;
-    min-width: 100px;
-    padding: 1rem 2rem;
-    margin: 2rem 1rem 0 0;
-    &#edit-reset {
-      background-color: $dark-gray;
+    .btn {
+      border: none;
+      display: inline-block;
+      font-size: 1.25rem;
       min-width: 100px;
-      margin-left: 1rem;
+      padding: 1rem 2rem;
+      margin: 2rem 1rem 0 0;
+      &#edit-reset {
+        background-color: $dark-gray;
+        min-width: 100px;
+        margin-left: 1rem;
+      }
     }
   }
-  .view-footer {
+}
+.view-header {
+  position: relative;
+  .staffing-chart {
+    text-align: center;
+    width: 100%;
     @media #{$wide} {
       position: absolute;
-      bottom: 17px;
-      right: 75px;
+      top: -72px;
+      right: 76px;
       margin: 2rem 0 0;
       width: 150px;
     }
