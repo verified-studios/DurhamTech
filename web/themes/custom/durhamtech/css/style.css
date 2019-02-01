@@ -7430,7 +7430,7 @@ table {
         margin: 0; }
         @media screen and (min-width: 992px) {
           .secondary-page-header .banner .banner-text-wrapper .banner-title h1 {
-            max-width: 90%; } }
+            /*max-width: 90%;*/ } }
 
 .apply-header .banner .banner-overlay {
   background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.82) 50%, rgba(128, 137, 144, 0) 100%);
