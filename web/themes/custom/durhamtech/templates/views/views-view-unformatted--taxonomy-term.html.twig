@@ -26,7 +26,7 @@
 {% if view.current_display != 'course_offering' %}
   <h3 class="section-title">Upcoming Class <span class="green">Offerings</span></h3>
 {% else %}
-  <h3 class="section-title">Upcoming Class Offerings for <span class="green">{{ view.args.1 }}</span> (<a href="{{ view.args.3 }}">{{ view.args.2 }}</a>)</h3>
+  <h3 class="section-title">Upcoming Class Offerings for <a href="{{ view.args.3 }}">{{ view.args.1 }}</a> ({{ view.args.2 }})</h3>
 {% endif %}
   <div class="table-responsive">
     <table class="class-offerings">

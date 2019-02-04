@@ -91,7 +91,7 @@
                         <h3 class="program-teaser-title">
                             <a href="{{ url }}">{{ label }}</a>
                         </h3>
-                        {% set description = content.field_description.0['#context'].value|render %}
+                        {% set description = content.field_description.0['#context'].value|render|striptags %}
                         <p>{{ description|length > 150 ? description|slice(0, 150) ~ '...' : description }}</p>
                         
                         {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
