@@ -852,7 +852,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: "<section class=\"content container program\">\r\n<div class=\"row\">\r\n<h3 class=\"section-title\">Community Service <span class=\"green\">Events</span></h3>"
+          content: "<section class=\"content container program\">\r\n<div class=\"row\">\r\n<h3 class=\"section-title\">Upcoming <span class=\"green\">Events</span></h3>"
           plugin_id: text_custom
     cache_metadata:
       max-age: -1
