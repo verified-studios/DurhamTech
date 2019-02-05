@@ -29,6 +29,10 @@
           }
         }
 
+        > li > ul { // 3rd level menu
+          margin-left: 10px;
+        }
+
         > li > ul > li > ul { // 4th level menu
                               margin-left: 18px;
         }
