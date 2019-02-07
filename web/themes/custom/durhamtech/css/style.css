@@ -6841,6 +6841,8 @@ body {
   .block-views-exposed-filter-blocksearch-page-1 .form-item {
     display: block;
     margin-right: 150px; }
+    .block-views-exposed-filter-blocksearch-page-1 .form-item label {
+      display: none; }
     .block-views-exposed-filter-blocksearch-page-1 .form-item input {
       width: 100%; }
   .block-views-exposed-filter-blocksearch-page-1 .form-actions {
@@ -7497,6 +7499,8 @@ table {
       margin-top: 1rem; }
       .sidebar .menu li > ul li a {
         font-weight: 400; }
+      .sidebar .menu li > ul > li > ul {
+        margin-left: 10px; }
       .sidebar .menu li > ul > li > ul > li > ul {
         margin-left: 18px; }
   .sidebar .menu ._017-2018-college-catalog-a {

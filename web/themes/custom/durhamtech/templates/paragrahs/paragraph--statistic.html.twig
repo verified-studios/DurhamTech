@@ -49,7 +49,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <div class="stat">{{ content.field_data|render }}</div>
-      <h4 class="stat-title">{{ content.field_header }}</h4>
+      <h4 class="stat-title">{{ content.field_header.0 }}</h4>
     {% endblock %}
   </div>
 {% endblock paragraph %}
