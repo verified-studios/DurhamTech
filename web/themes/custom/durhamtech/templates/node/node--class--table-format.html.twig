@@ -67,7 +67,7 @@
 #}
 
   <tr{{ attributes.addClass(classes) }}>
-    <td>{{ content.field_class_id.0 }}</td>
+    <td>{{ content.field_section_number.0 }}</td>
     {% set end_date = content.field_end_date.0['#text']|date('U') %}
     <td>
       {% if content.field_start_date.0['#text'] is not empty and content.field_end_date.0['#text'] is not empty %}
