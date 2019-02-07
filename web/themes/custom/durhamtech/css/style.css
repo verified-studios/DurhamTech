@@ -6841,6 +6841,8 @@ body {
   .block-views-exposed-filter-blocksearch-page-1 .form-item {
     display: block;
     margin-right: 150px; }
+    .block-views-exposed-filter-blocksearch-page-1 .form-item label {
+      display: none; }
     .block-views-exposed-filter-blocksearch-page-1 .form-item input {
       width: 100%; }
   .block-views-exposed-filter-blocksearch-page-1 .form-actions {
