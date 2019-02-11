@@ -9773,6 +9773,20 @@ a.social-twitter:focus {
       font-weight: 600;
       line-height: 1.65em;
       margin-bottom: 1rem; }
+  .view-categories .item-list {
+    margin-left: 0;
+    min-width: 100% !important;
+    padding-left: 1rem;
+    width: 100% !important; }
+    .view-categories .item-list ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+    .view-categories .item-list a,
+    .view-categories .item-list a:visited {
+      font-weight: 600;
+      line-height: 1.65em;
+      margin-bottom: 1rem; }
 
 .block-region-getstarted {
   position: static; }
