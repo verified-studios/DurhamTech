@@ -71,7 +71,25 @@ body {
     @media #{$wide} {
       max-width: (($container-lg - $grid-gutter-width));
     }
-  } 
+  }
+
+  .flex-row {
+    @media #{$normal} {
+      display: flex;
+    }
+  }
+
+  .navbar-header {
+    @include clearfix;
+  
+    /* @media (min-width: $grid-float-breakpoint) { */
+    @media #{$normal} {
+      /* float: left; */
+      display: inline-block;
+      float: none;
+    }
+  }
+
   .logo {
     margin-right: -($grid-gutter-width / 2);
     padding-left: ($grid-gutter-width / 2);
@@ -160,6 +178,9 @@ $main-nav-height: 60px;
 }
 
 .region-navigation-collapsible {
+  @media #{$normal} {
+    display: inline;
+  }
   .secondary-menu {
     @media #{$tablet} {
       display: none;
@@ -280,11 +301,17 @@ $main-nav-height: 60px;
 
 // Search Form
 .navbar-collapse {
+  &.collapse {
+    @media #{$tablet} {
+      display: inherit !important;
+      margin-left: auto;
+    }
+  }
   .js-search-trigger {
     position: absolute;
     bottom: 0;
     cursor: pointer;
-    display: block;
+    display: inline;
     margin: 6px;
     padding: 15px 0;
     &:focus {
@@ -292,9 +319,15 @@ $main-nav-height: 60px;
     }
 
     @media #{$tablet} {
-      position: relative;
-      float: right;
+      /* position: relative;
+      float: right; */
       bottom: auto;
+      right: 0;
+    }
+    @media #{$normal} {
+      position: relative;
+      float: none;
+      /* bottom: auto; */
     }
 
     button {
@@ -358,6 +391,12 @@ $main-nav-height: 60px;
 #block-durhamtech-main-menu {
   .menu.main-menu {
     float: right;
+    @media #{$tablet} {
+      margin-right: 42px;
+    }
+    @media #{$normal} {
+      float: none;
+    }
   }
 }
 

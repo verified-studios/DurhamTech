@@ -6682,6 +6682,23 @@ body {
   .navbar.container {
     max-width: 1140px; } }
 
+@media screen and (min-width: 992px) {
+  .navbar .flex-row {
+    display: flex; } }
+
+.navbar .navbar-header {
+  /* @media (min-width: $grid-float-breakpoint) { */ }
+  .navbar .navbar-header:before, .navbar .navbar-header:after {
+    content: " ";
+    display: table; }
+  .navbar .navbar-header:after {
+    clear: both; }
+  @media screen and (min-width: 992px) {
+    .navbar .navbar-header {
+      /* float: left; */
+      display: inline-block;
+      float: none; } }
+
 .navbar .logo {
   margin-right: -15px;
   padding-left: 15px;
@@ -6737,6 +6754,10 @@ body {
     .menu.main-menu > li:last-child > a:after {
       padding-right: 0;
       border-right: none; } }
+
+@media screen and (min-width: 992px) {
+  .region-navigation-collapsible {
+    display: inline; } }
 
 @media screen and (min-width: 768px) {
   .region-navigation-collapsible .secondary-menu {
@@ -6802,20 +6823,31 @@ body {
   .page-header-wrapper.program-ce-header-wrapper .page-header-menu {
     display: none; }
 
+@media screen and (min-width: 768px) {
+  .navbar-collapse.collapse {
+    display: inherit !important;
+    margin-left: auto; } }
+
 .navbar-collapse .js-search-trigger {
   position: absolute;
   bottom: 0;
   cursor: pointer;
-  display: block;
+  display: inline;
   margin: 6px;
   padding: 15px 0; }
   .navbar-collapse .js-search-trigger:focus {
     outline-color: #00843D; }
   @media screen and (min-width: 768px) {
     .navbar-collapse .js-search-trigger {
+      /* position: relative;
+      float: right; */
+      bottom: auto;
+      right: 0; } }
+  @media screen and (min-width: 992px) {
+    .navbar-collapse .js-search-trigger {
       position: relative;
-      float: right;
-      bottom: auto; } }
+      float: none;
+      /* bottom: auto; */ } }
   .navbar-collapse .js-search-trigger button {
     background: none;
     border: none;
@@ -6857,6 +6889,12 @@ body {
 
 #block-durhamtech-main-menu .menu.main-menu {
   float: right; }
+  @media screen and (min-width: 768px) {
+    #block-durhamtech-main-menu .menu.main-menu {
+      margin-right: 42px; } }
+  @media screen and (min-width: 992px) {
+    #block-durhamtech-main-menu .menu.main-menu {
+      float: none; } }
 
 #block-secondary-mobile-menu {
   width: 50%; }

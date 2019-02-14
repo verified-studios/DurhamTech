@@ -11,7 +11,7 @@
             {% if not navbar_attributes.hasClass(container) %}
             <div class="{{ container }}">
                 {% endif %}
-                <div class="row">
+                <div class="row flex-row">
                     <div class="navbar-header">
                         {{ page.navigation }}
                         {# .btn-navbar is used as the toggle for collapsed navbar content #}
@@ -29,12 +29,12 @@
                     {# Navigation (collapsible) #}
                     {% if page.navigation_collapsible %}
                         <div id="navbar-collapse" class="navbar-collapse collapse">
+                            {{ page.navigation_collapsible }}
                             <div class="js-search-trigger">
                                 <button aria-label="search-button" tabindex="14">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </div>
-                            {{ page.navigation_collapsible }}
                         </div>
                     {% endif %}
                     {% if not navbar_attributes.hasClass(container) %}
