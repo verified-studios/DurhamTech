@@ -6308,6 +6308,9 @@ ul:not(.menu), ol:not(.menu) {
   padding-top: 50px;
   padding-bottom: 50px; }
 
+div.td-padding-t-15 + div.td-padding-t-15 {
+  padding-top: 1.5rem; }
+
 .bordered {
   border: 1px solid #000000; }
 
