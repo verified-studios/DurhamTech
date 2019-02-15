@@ -745,7 +745,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: '<span class="durhamtech-results durhamtech-results-@total">We found @total course<em>s</em> matching your search criteria.</span>'
+          content: '<span class="durhamtech-results durhamtech-results-@total">We found @total result<em>s</em> matching your search criteria.</span>'
           plugin_id: result
       footer:
         result:
@@ -756,7 +756,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: '<span class="durhamtech-results durhamtech-results-@total">Showing @start - @end of @total course<em>s</em> matching your search criteria.</span>'
+          content: '<span class="durhamtech-results durhamtech-results-@total">Showing @start - @end of @total result<em>s</em> matching your search criteria.</span>'
           plugin_id: result
       empty:
         area:
@@ -769,7 +769,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: '<span class="durhamtech-noresults">No courses were found matching your search criteria. Please refine the search parameters.</span>'
+            value: '<span class="durhamtech-noresults">No results were found matching your search criteria. Please refine the search parameters.</span>'
             format: basic_html
           plugin_id: text
       relationships: {  }

@@ -1708,7 +1708,7 @@ display:
       row:
         type: fields
         options:
-          default_field_elements: true
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
@@ -2246,7 +2246,7 @@ display:
       row:
         type: fields
         options:
-          default_field_elements: true
+          default_field_elements: false
           inline: {  }
           separator: ''
           hide_empty: false
