@@ -77,54 +77,30 @@
       {% endif %}
     </td>
     <td>
-      <table>
-        <tbody>
-          {% if content.field_location %}
-          <tr>
-            <td>{{ content.field_location.0 }}</td>
-          </tr>
-          {% endif %}
-        </tbody>
-      </table>
-    </td>
-    <td>
-      {% if content.field_class_item %}
-        <table>
-          <tbody>
-          {% for key, paragraph in content.field_class_item if key|first!='#' %}
-            <tr>
-              <td>{{ paragraph['#paragraph'].get('field_building').value }}</td>
-            </tr>
-          {% endfor %}
-          </tbody>
-        </table>
+      {% if content.field_location %}
+        {{ content.field_location.0 }}
       {% endif %}
     </td>
     <td>
       {% if content.field_class_item %}
-      <table>
-        <tbody>
-          {% for key, paragraph in content.field_class_item if key|first!='#' %}
-          <tr>
-            <td>{{ paragraph['#paragraph'].get('field_room').value }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+        {% for key, paragraph in content.field_class_item if key|first!='#' %}
+          <div class="td-padding-t-15">{{ paragraph['#paragraph'].get('field_building').value }}</div>
+        {% endfor %}
       {% endif %}
     </td>
     <td>
-      <table>
-        <tbody>
-          {% for key, paragraph in content.field_class_item if key|first!='#' %}
-          {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
-          {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
-            <tr>
-              <td>{% for key, day in paragraph['#paragraph'].get('field_meeting_days')%}{{ day.value }}{% if not loop.last %},{% endif %}{% endfor %} {{ start_time.value }} - {{ end_time.value }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      {% if content.field_class_item %}
+        {% for key, paragraph in content.field_class_item if key|first!='#' %}
+          <div class="td-padding-t-15">{{ paragraph['#paragraph'].get('field_room').value }}</div>
+        {% endfor %}
+      {% endif %}
+    </td>
+    <td>
+      {% for key, paragraph in content.field_class_item if key|first!='#' %}
+      {% set start_time = paragraph['#paragraph'].get('field_start_time') %}
+      {% set end_time = paragraph['#paragraph'].get('field_end_time') %}
+        <div class="td-padding-t-15">{% for key, day in paragraph['#paragraph'].get('field_meeting_days')%}{{ day.value }}{% if not loop.last %},{% endif %}{% endfor %} {{ start_time.value }} - {{ end_time.value }}</div>
+      {% endfor %}
     </td>
     <td>
       {% if content.field_delivery_method.0 == 'Hybrid' or content.field_delivery_method.0 == 'Online' %}

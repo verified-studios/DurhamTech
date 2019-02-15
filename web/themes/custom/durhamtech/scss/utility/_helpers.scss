@@ -36,6 +36,10 @@
   }
 }
 
+div.td-padding-t-15 + div.td-padding-t-15 {
+  padding-top: 1.5rem;
+}
+
 // Border helper classes
 $border-color: $black;
 
