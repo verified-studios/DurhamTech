@@ -60,27 +60,27 @@ display:
           id: sticky
           table: taxonomy_index
           field: sticky
-          order: DESC
-          plugin_id: standard
           relationship: none
           group_type: group
           admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
+          plugin_id: standard
         created:
           id: created
           table: taxonomy_index
           field: created
-          order: DESC
-          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
+          order: ASC
           exposed: false
           expose:
             label: ''
           granularity: second
+          plugin_id: date
       arguments:
         tid:
           id: tid
