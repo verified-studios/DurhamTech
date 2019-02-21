@@ -12,41 +12,26 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: che
+      label: 'The Chesterfield'
+    -
+      value: dsn
+      label: 'Duke Street North'
+    -
       value: main_campus
       label: 'Main Campus'
     -
-      value: internet
-      label: Internet
+      value: ndc
+      label: 'Northern Durham Center'
     -
       value: occ
-      label: OCC
-    -
-      value: ndc
-      label: NDC
-    -
-      value: smt
-      label: SMT
+      label: 'Orange County Campus'
     -
       value: rtp
-      label: RTP
-    -
-      value: chur
-      label: CHUR
-    -
-      value: fd
-      label: FD
-    -
-      value: oc
-      label: OC
+      label: 'Research Triangle Park'
     -
       value: other
       label: OTHER
-    -
-      value: polic
-      label: POLIC
-    -
-      value: sbb
-      label: SBB
   allowed_values_function: ''
 module: options
 locked: false

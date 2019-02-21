@@ -6563,7 +6563,7 @@ table .checkbox.form-no-label, table .radio.form-no-label {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    line-height: 1;
+    line-height: 1.3;
     padding-right: 2em; }
     .select-wrapper select::-ms-expand {
       opacity: 0; }
@@ -7370,6 +7370,11 @@ table {
     border-left: 1px solid #dfe2e3; }
   table table > tbody > tr:nth-of-type(2n) {
     background-color: transparent; }
+  table tr td.courses-name-column {
+    width: 20%; }
+  table tr td.courses-course-column {
+    max-width: 100%;
+    white-space: nowrap; }
 
 .secondary-page-header {
   position: relative; }

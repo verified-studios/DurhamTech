@@ -167,6 +167,7 @@ class DtechMigrationManageForm extends FormBase {
     $migration->getIdMap()->prepareUpdate();
     $executable = new MigrateExecutable($migration, new MigrateMessage());
     $executable->import();
+    $this->classCourse();
   }
 
   /**
@@ -191,7 +192,7 @@ class DtechMigrationManageForm extends FormBase {
   }
 
   /**
-   * Add clas data to coures
+   * Add class data to courses
    */
   function classCourse() {
     $connection = \Drupal::database();
@@ -199,18 +200,38 @@ class DtechMigrationManageForm extends FormBase {
     $courses = \Drupal::entityQuery('taxonomy_term')
       ->condition('vid', 'course')
       ->execute();
+
+    $visibleLocations = [
+      'che',
+      'dsn',
+      'main_campus',
+      'ndc',
+      'occ',
+      'rtp',
+    ];
+
     foreach ($courses as $course) {
+      $courseTerm = $courseStorage->load($course);
       $query = $connection->select('node__field_course', 'nfc');
       $query->addJoin('left', 'node__field_location', 'nfl', 'nfc.entity_id = nfl.entity_id');
       $query->addField('nfc', 'entity_id');
       $query->addField('nfl', 'field_location_value');
       $query->condition('nfc.bundle', 'class', '=');
-      $query->condition('nfc.field_course_target_id',$course, '=');
+      $query->condition('nfc.field_course_target_id', $course, '=');
       $classes = $query->execute()->fetchAll();
       if (!empty($classes)) {
-        $courseTerm = $courseStorage->load($course);
+        $locations = array_unique(array_column($classes, 'field_location_value'));
+        foreach ($locations as $key=>$location) {
+          if(!in_array($location, $visibleLocations)) {
+            $locations[$key] = 'other';
+          }
+        }
+        $locations = array_unique($locations);
         $courseTerm->set('field_class_count', sizeof($classes));
+        $courseTerm->set('field_location', $locations);
         $courseTerm->save();
+      } else {
+        $courseTerm->set('field_class_count', 0);
       }
     }
   }
