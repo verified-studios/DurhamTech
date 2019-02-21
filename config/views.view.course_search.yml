@@ -146,7 +146,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: courses-course-column
           element_label_type: ''
           element_label_class: ''
           element_label_colon: true
@@ -216,7 +216,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: courses-name-column
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
