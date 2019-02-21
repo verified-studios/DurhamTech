@@ -49,4 +49,18 @@ table {
   table > tbody > tr:nth-of-type(2n) {
     background-color: transparent;
   }
+
+  tr {
+    td {
+      &.courses-name-column {
+        width: 20%;
+      }
+      &.courses-course-column {
+        max-width:100%;
+        white-space:nowrap;
+      }
+    }
+  }
+
 }
+

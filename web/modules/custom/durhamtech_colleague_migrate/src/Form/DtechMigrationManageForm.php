@@ -201,7 +201,17 @@ class DtechMigrationManageForm extends FormBase {
       ->condition('vid', 'course')
       ->execute();
 
+    $visibleLocations = [
+      'che',
+      'dsn',
+      'main_campus',
+      'ndc',
+      'occ',
+      'rtp',
+    ];
+
     foreach ($courses as $course) {
+      $courseTerm = $courseStorage->load($course);
       $query = $connection->select('node__field_course', 'nfc');
       $query->addJoin('left', 'node__field_location', 'nfl', 'nfc.entity_id = nfl.entity_id');
       $query->addField('nfc', 'entity_id');
@@ -211,10 +221,17 @@ class DtechMigrationManageForm extends FormBase {
       $classes = $query->execute()->fetchAll();
       if (!empty($classes)) {
         $locations = array_unique(array_column($classes, 'field_location_value'));
-        $courseTerm = $courseStorage->load($course);
+        foreach ($locations as $key=>$location) {
+          if(!in_array($location, $visibleLocations)) {
+            $locations[$key] = 'other';
+          }
+        }
+        $locations = array_unique($locations);
         $courseTerm->set('field_class_count', sizeof($classes));
         $courseTerm->set('field_location', $locations);
         $courseTerm->save();
+      } else {
+        $courseTerm->set('field_class_count', 0);
       }
     }
   }
