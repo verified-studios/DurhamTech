@@ -3,17 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.body
     - field.storage.node.field_abstract
+    - field.storage.node.body
     - field.storage.node.field_body
+    - field.storage.node.field_description
+    - field.storage.node.field_keywords
     - field.storage.node.field_sidebar_elements
     - field.storage.paragraph.field_body
-    - field.storage.node.field_description
     - search_api.server.durham_tech
   module:
-    - paragraphs
-    - taxonomy
     - node
+    - paragraphs
     - search_api
 id: site_index
 name: 'Site Index'
@@ -79,14 +79,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_description
-  name:
-    label: Name
-    datasource_id: 'entity:taxonomy_term'
-    property_path: name
-    type: string
+  field_keywords:
+    label: Keywords
+    datasource_id: 'entity:node'
+    property_path: field_keywords
+    type: text
     dependencies:
-      module:
-        - taxonomy
+      config:
+        - field.storage.node.field_keywords
   title:
     label: Title
     datasource_id: 'entity:node'
@@ -104,14 +104,6 @@ field_settings:
     dependencies:
       module:
         - node
-  vid:
-    label: Vocabulary
-    datasource_id: 'entity:taxonomy_term'
-    property_path: vid
-    type: string
-    dependencies:
-      module:
-        - taxonomy
 datasource_settings:
   'entity:node':
     bundles:
@@ -122,13 +114,6 @@ datasource_settings:
         - new_article
         - page
         - program
-    languages:
-      default: true
-      selected: {  }
-  'entity:taxonomy_term':
-    bundles:
-      default: false
-      selected: {  }
     languages:
       default: true
       selected: {  }
@@ -154,10 +139,9 @@ processor_settings:
       - field_body_1
       - field_description
       - field_description_1
-      - name
+      - field_keywords
       - title
       - type
-      - vid
     weights:
       preprocess_index: -20
       preprocess_query: -20

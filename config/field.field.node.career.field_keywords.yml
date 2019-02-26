@@ -1,0 +1,19 @@
+uuid: 8ee03382-f0e4-49e9-8ba1-ae2c0fc34811
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.career
+id: node.career.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: career
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

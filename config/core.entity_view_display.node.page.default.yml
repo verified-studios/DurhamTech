@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_attachment
     - field.field.node.page.field_banner_image
     - field.field.node.page.field_body
+    - field.field.node.page.field_keywords
     - field.field.node.page.field_menu
     - field.field.node.page.field_menu_two
     - field.field.node.page.field_sidebar_elements
@@ -29,6 +30,11 @@ targetEntityType: node
 bundle: page
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_abstract:
     weight: 0
     label: hidden
@@ -52,6 +58,14 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_keywords:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
     region: content
   field_menu:
     weight: 5
