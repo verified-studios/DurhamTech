@@ -28,7 +28,7 @@
     "drupal/config_installer": "^1.0",
     "drupal/console": "^1",
     "drupal/core": "~8.5",
-    "drupal/devel": "^1.2",
+    "drupal/devel": "^2",
     "drupal/editor_advanced_link": "^1.4",
     "drupal/editor_file": "^1.2",
     "drupal/entity_browser": "^1.4",
