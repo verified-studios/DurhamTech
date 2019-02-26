@@ -1,0 +1,19 @@
+uuid: b5dceb21-857b-41af-a895-55a2c025b98a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.new_article
+id: node.new_article.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: new_article
+label: Keywords
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
