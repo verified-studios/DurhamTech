@@ -13,3 +13,12 @@ slick:
       slick/slick/slick-theme.css: {}
   dependencies:
     - core/jquery
+
+juicer.io:
+  js:
+    'https://assets.juicer.io/embed.js': { external: true }
+  css:
+    base:
+      'https://assets.juicer.io/embed.css': { external: true }
+  dependencies:
+  - core/jquery

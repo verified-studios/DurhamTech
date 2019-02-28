@@ -30,20 +30,20 @@ function drush_durhamtech_colleague_migrate_migrate_execute() {
   $logger->info('Started Course Migrate');
   _runMigration('course_data_taxonomy');
   $logger->info('Finished Course Migrate');
+  $logger->info('Started Class Rollback');
+  _runRollback('class_data_node');
+  $logger->info('Finished Class Rollback');
+  $logger->info('Started Class Migrate');
+  _runMigration('class_data_node');
+  $logger->info('Finished Class Migrate');
   $logger->info('Started Adding Class Data to Courses');
   classCourse();
   $logger->info('Finished Adding Class Data to Courses');
-  $logger->info('Started Class Rollback');
-  //_runRollback('class_data_node');
-  $logger->info('Finished Class Rollback');
-  $logger->info('Started Class Migrate');
-  //_runMigration('class_data_node');
-  $logger->info('Finished Class Migrate');
   $logger->info('Started Programs Course List Migrate');
-  //_runMigration('programs_course_list_taxonomy');
+  _runMigration('programs_course_list_taxonomy');
   $logger->info('Finished Programs Course List  Migrate');
   $logger->info('Started Program Migrate');
-  //_runMigration('program_data_node');
+  _runMigration('program_data_node');
   $logger->info('Finished Program Migrate');
 }
 
