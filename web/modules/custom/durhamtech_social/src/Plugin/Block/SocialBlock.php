@@ -23,8 +23,8 @@ class SocialBlock extends BlockBase
     {
         $output = '';
 
-        $instagram  = Instagram::getPosts(1);
-        $twitter    = Twitter::getPosts(1);
+        //$instagram  = Instagram::getPosts(1);
+        //$twitter    = Twitter::getPosts(1);
         $facebook    =
           ['
               <a href="https://www.facebook.com/durhamtech" target="_blank" class="social-slide social-instagram social-facebook">
@@ -35,24 +35,26 @@ class SocialBlock extends BlockBase
                 </div>
               </a>'];
 
-        $posts      = array_merge($instagram, $twitter,$facebook);
+        //$posts      = array_merge($instagram, $twitter,$facebook);
 
-        shuffle($posts);
+        //shuffle($posts);
 
-        foreach ($posts as $k => $post ) {
-            $output .= $post;
-        }
+        //foreach ($posts as $k => $post ) {
+        //    $output .= $post;
+        //}
 
-        $slick = '<div class="slick slick-social">' . $output . '</div>';
+        //$slick = '<div class="slick slick-social">' . $output . '</div>';
+
+        $juicer = '<ul class="juicer-feed" data-feed-id="durhamtech"></ul>';
 
         return array(
             '#type' => 'markup',
             '#attached' => array(
                 'library' => array(
-                    'durhamtech_social/slick'
+                    'durhamtech_social/juicer.io'
                 ),
             ),
-            '#markup' => $slick,
+            '#markup' => $juicer,
         );
     }
 }
