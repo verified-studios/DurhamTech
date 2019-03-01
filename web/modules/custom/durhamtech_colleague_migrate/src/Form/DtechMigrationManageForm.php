@@ -133,6 +133,10 @@ class DtechMigrationManageForm extends FormBase {
 
   }
 
+  function classCourse() {
+    classCourse();
+  }
+
   /**
    * Clear Course Taxonomy
    */

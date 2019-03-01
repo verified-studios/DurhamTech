@@ -44,23 +44,6 @@ process:
   field_description: Description
   field_credits: Credits
   field_requisites_text: Requisites
-  field_class_format:
-    -
-      plugin: static_map
-      source: 'Delivery Method'
-      map:
-        HY: Hybrid
-        TR: Classroom
-        IN: Online
-        DL: Online
-        CP: Classroom
-        WB: Hybrid
-    -
-      plugin: entity_generate
-      entity_type: taxonomy_term
-      bundle_key: vid
-      bundle: class_format
-      value_key: name
   field_department:
     plugin: entity_generate
     entity_type: taxonomy_term
