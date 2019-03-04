@@ -40,13 +40,16 @@
       $courseTerm = $courseStorage->load($course);
       $query = $connection->select('node__field_course', 'nfc');
       $query->addJoin('left', 'node__field_location', 'nfl', 'nfc.entity_id = nfl.entity_id');
+      $query->addJoin('left', 'node__field_delivery_method', 'nfdm', 'nfc.entity_id = nfdm.entity_id');
       $query->addField('nfc', 'entity_id');
       $query->addField('nfl', 'field_location_value');
+      $query->addField('nfdm', 'field_delivery_method_target_id');
       $query->condition('nfc.bundle', 'class', '=');
       $query->condition('nfc.field_course_target_id', $course, '=');
       $classes = $query->execute()->fetchAll();
       if (!empty($classes)) {
         $locations = array_unique(array_column($classes, 'field_location_value'));
+        $class_formats = array_unique(array_column($classes, 'field_delivery_method_target_id'));
         foreach ($locations as $key=>$location) {
           if(!in_array($location, $visibleLocations)) {
             $locations[$key] = 'other';
@@ -55,10 +58,12 @@
         $locations = array_unique($locations);
         $courseTerm->set('field_class_count', sizeof($classes));
         $courseTerm->set('field_location', $locations);
+        $courseTerm->set('field_class_format', $class_formats);
         $courseTerm->save();
       } else {
         $courseTerm->set('field_class_count', 0);
         $courseTerm->set('field_location', []);
+        $courseTerm->set('field_class_format', []);
       }
     }
   }

@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/community\r\n/center-global-learner"
+    pages: /community
     negate: false
     context_mapping: {  }
