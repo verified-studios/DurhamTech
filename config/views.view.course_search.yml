@@ -456,6 +456,7 @@ display:
                   value: ''
                   min: ''
                   max: ''
+              2: {  }
           plugin_id: search_api_numeric
         name:
           id: name
