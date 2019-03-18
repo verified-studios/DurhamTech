@@ -84,7 +84,7 @@
     <td>
       {% if content.field_class_item %}
         {% for key, paragraph in content.field_class_item if key|first!='#' %}
-          <div class="td-padding-t-15">{{ paragraph['#paragraph'].get('field_building').value }}</div>
+          <div class="td-padding-t-15"><a href="/locations">{{ paragraph['#paragraph'].get('field_building').value }}</a></div>
         {% endfor %}
       {% endif %}
     </td>

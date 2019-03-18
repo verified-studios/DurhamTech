@@ -48,6 +48,7 @@
     "drupal/media_entity": "^1.7",
     "drupal/media_entity_image": "^1.2",
     "drupal/menu_block": "^1.4",
+    "drupal/menu_trail_by_path": "^1.1",
     "drupal/migrate_plus": "^4.0",
     "drupal/migrate_source_csv": "^2.0",
     "drupal/migrate_tools": "^4.0",
@@ -73,10 +74,10 @@
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
-    "behat/behat": "3.*",
-    "behat/mink": "^1.7",
-    "behat/mink-extension": "^2.2",
-    "behat/mink-goutte-driver": "^1.2",
+    "behat/behat": "^3",
+    "behat/mink": "^1",
+    "behat/mink-extension": "^2",
+    "behat/mink-goutte-driver": "^1",
     "jcalderonzumba/gastonjs": "^1.0.2",
     "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
     "drupal/drupal-extension": "^3.1",
@@ -160,6 +161,9 @@
       ]
     },
     "patches": {
+      "drupal/core": {
+        "Grouped exposed taxonomy term filters do not work": "https://www.drupal.org/files/issues/1810148-58.patch"
+      },
       "drupal/bootstrap": {
         "Error: Unsupported operand types during providers JSON discovery": "https://www.drupal.org/files/issues/2019-01-24/3027569-8.x-3.x-8.patch"
       }
