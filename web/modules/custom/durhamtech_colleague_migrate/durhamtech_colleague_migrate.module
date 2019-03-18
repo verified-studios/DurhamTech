@@ -61,7 +61,7 @@
         $courseTerm->set('field_class_format', $class_formats);
         $courseTerm->save();
       } else {
-        $courseTerm->set('field_class_count', 0);
+        $courseTerm->set('field_class_count', NULL);
         $courseTerm->set('field_location', []);
         $courseTerm->set('field_class_format', []);
       }

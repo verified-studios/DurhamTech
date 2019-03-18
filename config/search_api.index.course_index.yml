@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.taxonomy_term.field_academic_level
     - field.storage.taxonomy_term.field_class_count
     - field.storage.taxonomy_term.field_class_format
     - field.storage.taxonomy_term.field_description
@@ -17,6 +18,14 @@ name: 'Course Index'
 description: ''
 read_only: false
 field_settings:
+  field_academic_level:
+    label: 'Academic Level'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_academic_level
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_academic_level
   field_class_count:
     label: 'Class Count'
     datasource_id: 'entity:taxonomy_term'
