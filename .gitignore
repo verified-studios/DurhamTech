@@ -13,3 +13,4 @@ web/web/core/modules/*
 web/themes/contrib/*
 .DS_Store
 web/web/*
+web/sites/dt.dd
