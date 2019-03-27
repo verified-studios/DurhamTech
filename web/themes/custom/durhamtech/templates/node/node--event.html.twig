@@ -105,19 +105,27 @@
       </div>
     </div>
     {% set event_date = content.field_event_date.0['#text']|date('U') %}
-
+    {% set event_end_date = content.field_event_end_date.0['#text']|date('U') %}
     {#{ kint(content|keys) }#}
     <h2 class="page-title">{{ label }}</h2>
     {% if event_date or content.field_event_location.0 %}
       <div class="event-data text-center clearfix">
         <div class="row">
           <div class="event-date col-md-4">
-            <h4 class="event-data-title">Date</h4>
+            <h4 class="event-data-title">Start Date</h4>
             {{ event_date|format_date('custom', 'F d, Y') }}
+            {% if content.field_event_end_date.0 %}
+              <br/><br /><h4 class="event-data-title">End Date</h4>
+              {{ event_end_date|format_date('custom', 'F d, Y') }}
+            {% endif %}
           </div>
           <div class="event-time col-md-4">
-            <h4 class="event-data-title">Time</h4>
+            <h4 class="event-data-title">Start Time</h4>
             {{ event_date|format_date('custom', 'g:i a') }}
+            {% if content.field_event_end_date.0 %}
+              <br /><br ><h4 class="event-data-title">End Time</h4>
+              {{ event_end_date|format_date('custom', 'g:i a') }}
+            {% endif %}
           </div>
           {% if content.field_event_location.0 %}
             <div class="event-location col-md-4">
