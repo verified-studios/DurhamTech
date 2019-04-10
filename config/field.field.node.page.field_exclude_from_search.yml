@@ -1,0 +1,23 @@
+uuid: 6be7701e-7c8c-414b-8d4a-21952db33854
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_exclude_from_search
+    - node.type.page
+  module:
+    - search_api_exclude_entity
+id: node.page.field_exclude_from_search
+field_name: field_exclude_from_search
+entity_type: node
+bundle: page
+label: 'Exclude from search'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings: {  }
+field_type: search_api_exclude_entity
