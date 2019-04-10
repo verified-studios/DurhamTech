@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.page.field_attachment
     - field.field.node.page.field_banner_image
     - field.field.node.page.field_body
+    - field.field.node.page.field_exclude_from_search
     - field.field.node.page.field_keywords
     - field.field.node.page.field_menu
     - field.field.node.page.field_menu_two
@@ -16,6 +17,7 @@ dependencies:
     - entity_reference_revisions
     - file
     - panelizer
+    - search_api_exclude_entity
     - user
 third_party_settings:
   panelizer:
@@ -58,6 +60,16 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_exclude_from_search:
+    weight: 8
+    label: above
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: search_api_exclude_entity_formatter
     region: content
   field_keywords:
     weight: 7
