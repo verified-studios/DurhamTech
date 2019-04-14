@@ -23,6 +23,7 @@ regions:
   footer_bottom_2: 'Footer Bottom 2'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
+  campaign_page: 'Campaign Page'
 
 libraries:
   - 'durhamtech/global-styling'

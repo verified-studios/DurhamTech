@@ -1,0 +1,1211 @@
+body, html, header {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+$campaign-gray: #333c40;
+
+.campaign {
+  /* helper classes */
+  .mx-15 {
+    margin: 0 15px;
+  }
+
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+
+  .my-20 {
+    margin: 20px 0;
+  }
+
+  .mb-24 {
+    margin-bottom: 24px;
+  }
+
+  .mb-28 {
+    margin-bottom: 28px;
+  }
+
+  .mb-36 {
+    margin-bottom: 36px;
+  }
+
+  .m-40 {
+    margin: 40px;
+  }
+
+  .mt-15 {
+    margin-top: 15px;
+  }
+
+  .mt-20 {
+    margin-top: 20px;
+  }
+
+  .mt-28 {
+    margin-top: 28px;
+  }
+
+  .mt-40 {
+    margin-top: 40px;
+  }
+
+  .mb-40 {
+    margin-bottom: 40px;
+  }
+
+  .mx-40 {
+    margin: 40px 0;
+  }
+
+  .my-40 {
+    margin: 0 40px;
+  }
+
+  .mb-100 {
+    margin-bottom: 100px;
+  }
+
+  .px-15 {
+
+    padding: 0 15px;
+
+  }
+
+  .pb-20 {
+
+    padding-bottom: 20px;
+
+  }
+
+  .pr-20 {
+
+    padding-right: 20px;
+
+  }
+
+  .pt-28 {
+    padding-top: 28px;
+  }
+
+  .pt-40 {
+    padding-top: 40px;
+  }
+
+  .pb-40 {
+    padding-bottom: 40px;
+  }
+
+  .pb-100 {
+    padding-bottom: 100px;
+  }
+
+  .px-40 {
+    padding: 0 40px;
+  }
+
+  .py-40 {
+    padding: 40px 0;
+  }
+
+  .rotate45 {
+
+    transform: rotate(45deg);
+
+  }
+
+  .rotate90 {
+
+    transform: rotate(90deg);
+
+  }
+
+  .txt-uc {
+
+    text-transform: uppercase;
+
+  }
+
+  .quote-source {
+    font-size: 14px;
+    line-height: 22px;
+    .quote-name {
+      text-transform: uppercase;
+    }
+  }
+
+  @mixin tri($color, $border-width, $z) {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 $border-width $border-width;
+    border-color: transparent transparent $color transparent;
+
+  }
+
+  /*@mixin tri-goals() {
+
+      content: '';
+
+      position: absolute;
+
+      bottom: 0;
+
+      right: 0;
+
+      width: 0;
+
+      height: 0;
+
+      border-style: solid;
+
+      border-width: 0 0 66px 66px;
+
+      border-color: transparent transparent $medium-green transparent;
+
+  }*/
+
+  /* font-size: 16px; */
+  font-size: 16px;
+  line-height: 28px;
+
+  h1, h2, h3, h4, h5, h6, p, div, ul, li {
+
+    /* font-family: $helvetica; */
+
+    line-height: 28px;
+
+  }
+
+  h1 {
+    color: $medium-green;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: $medium-green;
+    font-size: 1.75rem; /* 28px */
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 34px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+    &.cam-gray {
+      color: $campaign-gray;
+    }
+  }
+
+  p {
+    /*font-size: 16px;
+    line-height: 26px;*/
+  }
+
+  section {
+    /* padding: 40px; */
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn-campaign {
+    background: $medium-green;
+    /* background: $green; */
+    border: none;
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 50px;
+    /*width: 230px;
+    height: 54px;*/
+    /*margin-bottom: 100px;*/
+    /* margin-bottom: 100vh; */
+  }
+
+  a.btn-campaign {
+    background: $medium-green;
+    /* background: $green; */
+    border: none;
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /*width: 230px;
+    height: 54px;*/
+    padding: 15px 50px;
+    /*margin-bottom: 100px;*/
+    /* margin-bottom: 100vh; */
+    box-sizing: border-box;
+    display: inline-block;
+    transition: all .6s;
+    &:hover {
+      background: #8dff00;
+      text-decoration: none;
+    }
+  }
+
+  header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* cursor: pointer; */
+
+    &:before {
+      content: "";
+      background: rgba(0, 0, 0, 0.3);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+    }
+
+    /*  .vid-container {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+     } */
+
+
+    video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      /* position: fixed; */
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+
+    .hea-container {
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: absolute;
+      z-index: 99;
+      /* .dt-logo-container {
+          margin-bottom: 30px;
+          /* position: absolute;
+          bottom: 80px;
+          z-index: 99; *
+          .dt-logo {
+              width: 230px;
+              height: auto;
+          }
+      } */
+
+      h1 {
+        margin-bottom: 60px;
+      }
+
+      h2 {
+        color: #fff !important;
+        font-size: 34px;
+        font-weight: 300;
+        /* font-weight: normal; */
+        /*margin-bottom: 28px;*/
+        text-transform: none;
+      }
+
+      .fgf-logo {
+        width: 95%;
+        max-width: 700px;
+        height: auto;
+      }
+    }
+
+    .dt-logo-container {
+      /* position: absolute; */
+      /* display: block; */
+      /* bottom: 230px; */
+      /* bottom: 10vh; */
+      /* margin-top: 15%; */
+      z-index: 99;
+      .dt-logo {
+        /* width: 65%; */
+        max-width: 300px;
+        height: auto;
+      }
+    }
+
+    .down-arrow {
+      position: absolute;
+      bottom: 6px;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 36px;
+      z-index: 99;
+      a {
+        color: rgba(255, 255, 255, 0.4);
+      }
+    }
+
+
+    /* Style the video: 100% width and height to cover the entire window */
+
+    #myVideo {
+
+      /* position: fixed;
+
+      right: 0;
+
+      bottom: 0;
+
+      min-width: 100%;
+
+      min-height: 100%; */
+
+
+      /* z-index: -100;
+
+      top: 50%;
+
+      left: 50%;
+
+      transform: translateX(-50%) translateY(-50%);
+
+      transition: 1s opacity;
+
+      min-width: 100%;
+
+      min-height: 100%;
+
+      width: auto;
+
+      height: auto; */
+
+
+      /* position: fixed; */
+
+      /* top: 50%;
+
+      left: 50%;
+
+      min-width: 100%;
+
+      min-height: 100%;
+
+      width: auto;
+
+      height: auto;
+
+      z-index: -100;
+
+      -ms-transform: translateX(-50%) translateY(-50%);
+
+      -moz-transform: translateX(-50%) translateY(-50%);
+
+      -webkit-transform: translateX(-50%) translateY(-50%);
+
+      transform: translateX(-50%) translateY(-50%);
+
+      background: url(placeholder.jpg) no-repeat;
+
+      background-size: cover; */
+
+    }
+
+
+    /* Add some content at the bottom of the video/page */
+
+    .content {
+
+      /* position: fixed;
+
+      bottom: 0; */
+
+      background: rgba(0, 0, 0, 0.5);
+
+      color: #f1f1f1;
+
+      height: 100vh;
+
+      width: 100%;
+
+      padding: 20px;
+
+      z-index: 99;
+
+    }
+
+
+  }
+
+
+  .campaign-news {
+    .landing-page {
+      .lp-news-grid {
+        section {
+          margin-top: 0 !important;
+          h2 {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+
+  .more-link {
+    float: right;
+  }
+
+
+  .campaign-progress {
+
+    background-color: $campaign-gray;
+
+    color: $white;
+
+    padding: 40px 15px 40px 15px;
+
+    text-align: center;
+
+    h2 {
+
+      /*letter-spacing: 1px;*/
+
+      /*margin-bottom: 28px;*/
+
+    }
+
+    /* new */
+    .campaign-progress-container {
+
+      @media #{$tablet} {
+        display: flex;
+        /*align-items: center;*/
+        /*align-content: center;*/
+        justify-content: center;
+        margin: 0 auto;
+        /*align-items: baseline;*/
+        /*width: 800px;*/
+        div {
+          /*vertical-align: center;*/
+
+          /*display: flex;           !* nested flex container *!
+          align-items: center;*/
+          /*flex-grow: 1;*/
+        }
+      }
+
+
+      .chart-container {
+        @media #{$tablet} {
+          padding: 0 70px;
+
+        }
+
+      }
+
+
+      .chart {
+        position: relative;
+        margin: 0 auto 28px;
+        height: 150px;
+        width: 150px;
+        /*max-width: 150px;*/
+        /*width: 100%;*/
+
+        @media #{$tablet} {
+          margin: 0;
+
+        }
+
+        .circle {
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          /*margin: 0 auto;*/
+          background-color: transparent;
+          border: 10px solid #979797;
+          border-radius: 50%;
+          height: 140px;
+          width: 140px;
+          /*z-index: 99;*/
+        }
+
+        .semi-circle-wrapper {
+          position: absolute;
+          /*left: 0;
+          right: 0;*/
+          bottom: 26px;
+          /*margin: 0 auto;
+          width: 145px;
+          text-align: center;*/
+          width: 100%;
+
+          .semi-circle {
+            background-color: #B8E986;
+            /*border: 10px solid #979797;*/
+            border-radius: 0 0 104px 104px;
+            /*border-radius: 50%;*/
+            margin: 0 auto;
+            height: 48px;
+            /*height: 96px;*/
+            width: 96px;
+            /*padding: 0;
+            margin: 0;*/
+          }
+        }
+
+        .progress-chart {
+          /*display: none;*/
+          position: absolute;
+          right: 0;
+          background-color: transparent;
+          border: 20px solid $medium-green;
+          border-left: none;
+          /*border-radius: 70px 70px 0 0;*/
+          border-bottom-right-radius: 75px;
+          border-top-right-radius: 75px;
+          height: 150px;
+          width: 75px;
+
+          transition: stroke-dashoffset 0.35s;
+          /*transform: rotate(-90deg);
+          transform-origin: 50% 50%,*/
+        }
+
+        .progress-text {
+          position: absolute;
+          bottom: 36px;
+          color: $campaign-gray;
+          font-size: 26px;
+          font-weight: bold;
+          width: 100%;
+          z-index: 99;
+        }
+
+
+      }
+
+      .campaign-content-container {
+        margin-bottom: 30px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        h3 {
+          color: #fff;
+          font-size: 30px;
+          font-weight: bold;
+          margin: 0 0 4px;
+          padding: 0;
+        }
+
+        .campaign-content {
+          text-transform: uppercase;
+        }
+
+        @media #{$tablet} {
+          border-left: 1px solid $white;
+          /*flex-grow: 1;*/
+          height: 100px;
+          /*padding-left: 50px;*/
+          /*width: 100%;*/
+          margin-top: 30px;
+          /*min-width: 100px;*/
+          padding: 20px 70px 0;
+        }
+      }
+    }
+  }
+
+  .campaign-goals {
+    position: relative;
+    text-align: center;
+    .campaign-goals-container {
+      position: relative;
+      border: 10px solid $medium-green;
+      max-width: 350px;
+      margin: 0 auto;
+      /*&::after {
+          @include tri-goals();
+      }*/
+      .campaign-goals-flex {
+        h3 {
+          color: $campaign-gray;
+          font-size: 40px;
+          font-weight: bold;
+          margin: 0 0 10px;
+          padding: 0;
+          &.five-mil {
+            font-size: 52px;
+            margin: 0 0 14px;
+          }
+        }
+        p {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 18px;
+          margin: 0 auto;
+          padding: 0;
+          width: 175px;
+          &.five-mil {
+            font-size: 24px;
+          }
+        }
+        .campaign-arrow {
+          transform: rotate(90deg);
+        }
+        @media #{$tablet} {
+          display: flex;
+          justify-content: center;
+          /*align-items: center;*/
+          .campaign-goals-div {
+            margin-top: 50px;
+          }
+          .campaign-goals-arrow {
+            margin: 60px 30px;
+            .campaign-arrow {
+              transform: rotate(0);
+            }
+          }
+        }
+
+      }
+      @media #{$tablet} {
+        max-width: 1000px;
+      }
+
+
+      .triple-tri-wrapper {
+        position: relative;
+        height: 100%;
+        z-index: 999999999999999;
+        .triple-tri {
+          @include tri($white, 66px, 101);
+          bottom: -50px;
+          right: -10px;
+        }
+        &::before {
+          @include tri($medium-green, 76px, 111);
+          bottom: -50px;
+          right: -10px;
+        }
+        &::after {
+          @include tri($medium-green, 56px, 122);
+          bottom: -50px;
+          right: -10px;
+        }
+
+      }
+
+    }
+  }
+
+  .expand-student-support {
+    .feature {
+      position: relative;
+      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
+      /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;*/
+      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;
+      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat 50% -170px;
+      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -200px;
+      /*background-size: cover;*/
+      background-size: 800px;
+      height: 300px;
+      color: $white;
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+      @media #{$tablet} {
+        height: 570px;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
+        background-size: cover;
+        background-size: unset;
+      }
+      @media #{$wide} {
+        /*height: 570px;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -530px;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
+        background-size: cover;*/
+      }
+      .feature-quote {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        p {
+          color: $white;
+        }
+        @media #{$tablet} {
+          bottom: 30px;
+
+        }
+        .feature-quote-content {
+          margin: 0 auto;
+          font-size: 14px;
+          font-weight: bold;
+          /*max-width: 320px;*/
+          width: 90%;
+          line-height: 17px;
+          text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+          @media #{$tablet} {
+            font-size: 22px;
+            line-height: 30px;
+            max-width: 675px;
+          }
+
+        }
+        .feature-quote-by {
+          font-size: 12px;
+          font-style: normal;
+          line-height: 17px;
+          margin-top: 10px;
+          text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+          @media #{$tablet} {
+            font-size: 14px;
+            line-height: 19px;
+            font-style: normal;
+          }
+        }
+      }
+    }
+    img {
+      /*max-height: 350px;*/
+      max-width: 100%;
+    }
+    li {
+      font-size: 14px;
+      line-height: 26px;
+    }
+    .expand-content {
+      margin: 40px 15px;
+      h2 {
+        /*text-align: center;*/
+      }
+      @media #{$tablet} {
+        margin: 40px auto;
+        padding: 0 30px;
+        /*max-width: 1200px;*/
+        max-width: 1028px;
+      }
+    }
+  }
+
+  .forge-tomorrows-workforce {
+    background: $campaign-gray;
+    color: $white;
+    h4, p {
+      color: $white;
+    }
+    img {
+      max-width: 100%;
+    }
+    li {
+      font-size: 14px;
+      line-height: 26px;
+    }
+    .feature {
+      margin-bottom: 40px;
+      position: relative;
+      background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center center;
+      background-size: cover;
+      height: 350px;
+      color: $campaign-gray;
+      p {
+        color: $campaign-gray;
+      }
+      @media #{$tablet} {
+        /*background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -400px;
+        background-size: cover;*/
+        /*background-size: unset;*/
+        height: 450px;
+        /*background-size: 800px;*/
+
+      }
+      @media #{$normal} {
+        /*background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -400px;
+        background-size: cover;*/
+        /*background-size: unset;*/
+       /* max-width: 1540px;
+        margin: 0 auto;*/
+
+      }
+      @media #{$wide} {
+        background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -275px;
+        background-size: cover;
+        /*background-size: unset;*/
+        max-width: 1540px;
+        margin: 0 auto 40px;
+        height: 500px;
+
+      }
+      .feature-quote {
+        position: absolute;
+        bottom: 20px;
+        left: 12px;
+        /*width: 246px;*/
+        width: 55%;
+        @media #{$tablet} {
+          bottom: 40px;
+          left: 50px;
+          /*width: 400px;*/
+          width: 50%;
+        }
+        @media #{$normal} {
+          left: 100px;
+          width: 500px;
+        }
+        @media #{$wide} {
+          left: 100px;
+          width: 600px;
+          bottom: 70px;
+        }
+        .feature-quote-content {
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 19px;
+          margin-bottom: 15px;
+          @media #{$tablet} {
+            font-size: 20px;
+            line-height: 27px;
+
+          }
+        }
+        .feature-quote-by {
+          font-size: 12px;
+          line-height: 17px;
+          @media #{$tablet} {
+            font-size: 14px;
+            line-height: 19px;
+
+          }
+
+        }
+      }
+    }
+    .forge-content-wrapper {
+      margin: 0 15px;
+      @media #{$tablet} {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 1028px;
+        /*margin: 0 auto;*/
+      }
+      .forge-stats-wrapper {
+        position: relative;
+        margin-bottom: 40px;
+        /*width: 100%;*/
+        width: 270px;
+        @media #{$tablet} {
+          margin-bottom: 10px;
+        }
+        @media #{$normal} {
+          /*width: 270px;*/
+        }
+        .forge-stats {
+          color: $medium-green;
+          border-left: 10px solid $medium-green;
+          /*width: 270px;*/
+          height: 334px;
+          padding-right: 40px;
+          @media #{$tablet} {
+            position: absolute;
+            bottom: 0;
+            /*width: 40%;
+            padding-right: 100px;*/
+          }
+
+          .forge-stats-number {
+            font-size: 56px;
+            font-weight: bold;
+            line-height: 32px;
+            margin: 10px 0 15px 12px;
+
+          }
+          .forge-stats-content {
+            font-size: 26px;
+            line-height: 30px;
+            margin-left: 12px;
+
+          }
+        }
+      }
+      .forge-content {
+        @media #{$tablet} {
+          width: 70%;
+          /*flex-grow: 2;*/
+        }
+        @media #{$normal} {
+          width: 668px;
+          /*flex-grow: 2;*/
+        }
+
+      }
+    }
+  }
+
+  .your-gift-ways-to-give {
+    margin: 0 15px 40px;
+    @media #{$tablet} {
+      display: flex;
+      /*justify-content: center;*/
+      /*margin: 0 auto;*/
+      /*max-width: 1200px;*/
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 30px;
+      padding-right: 30px;
+      max-width: 1028px;
+    }
+
+    .your-gift {
+      margin-bottom: 40px;
+      padding-right: 30px;
+      /*h2 {
+        text-transform: none;
+      }*/
+      @media #{$tablet} {
+        flex-basis: 50%;
+        margin-bottom: 0;
+      }
+    }
+
+    .ways-to-give {
+      h4 {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+      }
+      @media #{$tablet} {
+        flex-basis: 50%;
+      }
+    }
+  }
+
+
+  .presidents-message {
+    background: $campaign-gray;
+    color: $white;
+    h4, p {
+      color: $white;
+    }
+    img {
+      /*max-width: 100%;*/
+    }
+    .pres-content-wrapper {
+      @media #{$tablet} {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 30px;
+        padding-right: 30px;
+        /*max-width: 968px;*/
+        max-width: 1028px;
+
+      }
+      .pres-pho {
+        background: url(../../../../../pres2.jpg) no-repeat center center;
+        background-size: cover;
+        /*background-size: 800px;*/
+        height: 450px;
+        @media #{$tablet} {
+          background: url(../../../../../pres2.jpg) no-repeat -120px center;
+          background-size: 650px;
+          float: right;
+          height: 710px;
+          width: 360px;
+          margin-left: 30px;
+          margin-bottom: 30px;
+        }
+      }
+      .pres-content {
+        margin: 0 15px;
+        padding: 40px 0;
+      }
+
+    }
+  }
+
+
+  .student-testimonials {
+    position: relative;
+    margin: 0 auto 40px auto;
+    @media #{$tablet} {
+      max-width: 1200px;
+    }
+    .student-cards {
+      position: relative;
+      background: $campaign-gray;
+      color: $white;
+      margin-bottom: 10px;
+      /*height: 350px;*/
+      .student-content {
+        padding: 20px 15px;
+        p {
+          font-weight: bold;
+          line-height: 24px;
+        }
+        .quote-source {
+          margin: 20px 0;
+        }
+        @media #{$tablet} {
+          font-size: 18px;
+          padding: 40px;
+          width: 50%;
+          .quote-source {
+            margin: 30px 0;
+          }
+        }
+
+      }
+      .student1 {
+        .highlight {
+          color: $brand-orange;
+        }
+        @media #{$tablet} {
+          display: flex;
+        }
+        /*@media #{$wide} {
+          margin-bottom: 40px;
+        }*/
+        &::before {
+          @include tri($white, 76px, 99);
+        }
+        &::after {
+          @include tri($brand-orange, 66px, 99);
+        }
+        .student1-pho {
+          /*content: '';*/
+          background: url(../../../../../pho-student1.jpg) no-repeat center center;
+          background-size: cover;
+          height: 350px;
+          @media #{$tablet} {
+            /*height: 350px;*/
+            height: unset;
+            width: 50%;
+          }
+        }
+        .student1-content {/*
+          padding: 20px 15px;
+          p {
+            font-weight: bold;
+          }
+          .quote-source {
+            margin: 20px 0;
+          }
+          @media #{$tablet} {
+            font-size: 18px;
+            padding: 40px;
+            width: 50%;
+            .quote-source {
+              margin: 30px 0;
+            }
+          }*/
+        }
+      }
+
+
+
+      .student2 {
+        .highlight {
+          color: $medium-green;
+        }
+        @media #{$tablet} {
+          display: flex;
+        }
+        /*@media #{$wide} {
+          margin-bottom: 40px;
+        }*/
+        &::before {
+          @include tri($white, 76px, 99);
+        }
+        &::after {
+          @include tri($medium-green, 66px, 99);
+        }
+        .student2-pho {
+          /*content: '';*/
+          background: url(../../../../../student2.jpg) no-repeat center center;
+          background-size: cover;
+          height: 350px;
+          @media #{$tablet} {
+            /*height: 350px;*/
+            height: unset;
+            width: 50%;
+          }
+        }
+      }
+      .student3 {
+        .highlight {
+          color: $brand-orange;
+        }
+        @media #{$tablet} {
+          display: flex;
+        }
+        /*@media #{$wide} {
+          margin-bottom: 40px;
+        }*/
+        &::before {
+          @include tri($white, 76px, 99);
+        }
+        &::after {
+          @include tri($brand-orange, 66px, 99);
+        }
+        .student3-pho {
+          /*content: '';*/
+          background: url(../../../../../student3.jpg) no-repeat center center;
+          background-size: cover;
+          height: 350px;
+          @media #{$tablet} {
+            /*height: 350px;*/
+            /*height: unset;*/
+            width: 50%;
+          }
+        }
+      }
+      p {
+        color: $white;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+
+  footer {
+
+    background-color: $black;
+
+    text-align: center;
+
+    .fgf-logo-foo {
+
+      max-width: 200px;
+
+    }
+
+    .dt-logo-foo {
+
+      max-width: 160px;
+
+    }
+
+  }
+
+}
