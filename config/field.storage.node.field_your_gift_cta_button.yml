@@ -1,0 +1,19 @@
+uuid: 87556329-e65f-469e-aa9e-dad00790976f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_your_gift_cta_button
+field_name: field_your_gift_cta_button
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

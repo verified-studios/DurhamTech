@@ -1,0 +1,19 @@
+uuid: c25b35fc-a3eb-4c48-8a9c-b93df816d7a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_goals_header
+    - node.type.campaign_page
+id: node.campaign_page.field_campaign_goals_header
+field_name: field_campaign_goals_header
+entity_type: node
+bundle: campaign_page
+label: 'Campaign Goals Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

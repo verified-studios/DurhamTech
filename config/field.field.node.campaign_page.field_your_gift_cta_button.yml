@@ -1,0 +1,23 @@
+uuid: 5280fbb8-8140-4f72-9148-7a6f7f669dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_your_gift_cta_button
+    - node.type.campaign_page
+  module:
+    - link
+id: node.campaign_page.field_your_gift_cta_button
+field_name: field_your_gift_cta_button
+entity_type: node
+bundle: campaign_page
+label: 'Your Gift CTA Button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

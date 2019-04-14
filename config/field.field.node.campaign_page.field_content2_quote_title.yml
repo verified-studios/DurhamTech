@@ -1,0 +1,19 @@
+uuid: 23bdfe23-353c-41aa-b5c8-50ec14f47905
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content2_quote_title
+    - node.type.campaign_page
+id: node.campaign_page.field_content2_quote_title
+field_name: field_content2_quote_title
+entity_type: node
+bundle: campaign_page
+label: 'Content Area2 Quote Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

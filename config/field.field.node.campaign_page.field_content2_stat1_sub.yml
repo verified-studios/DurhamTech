@@ -1,0 +1,19 @@
+uuid: 2faddb8d-dfb4-46ca-8eed-1882d80a4c4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content2_stat1_sub
+    - node.type.campaign_page
+id: node.campaign_page.field_content2_stat1_sub
+field_name: field_content2_stat1_sub
+entity_type: node
+bundle: campaign_page
+label: 'Content Area2 Stat1 Sub'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

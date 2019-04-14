@@ -1,0 +1,27 @@
+uuid: 775f6b8c-72b7-497b-be1f-3979d7fbb83e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_background_video
+    - node.type.campaign_page
+  module:
+    - file
+id: node.campaign_page.field_header_background_video
+field_name: field_header_background_video
+entity_type: node
+bundle: campaign_page
+label: 'Header Background Video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt mp4'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

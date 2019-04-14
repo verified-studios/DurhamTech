@@ -1,0 +1,19 @@
+uuid: e384b906-66f1-4a07-bc6c-02421a5f2506
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_student1_quote_name
+    - node.type.campaign_page
+id: node.campaign_page.field_student1_quote_name
+field_name: field_student1_quote_name
+entity_type: node
+bundle: campaign_page
+label: 'Student1 Quote Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

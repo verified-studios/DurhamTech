@@ -1,0 +1,21 @@
+uuid: 579784c5-c0eb-4673-b938-31c59d0bef1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_goals_goal1
+    - node.type.campaign_page
+  module:
+    - text
+id: node.campaign_page.field_campaign_goals_goal1
+field_name: field_campaign_goals_goal1
+entity_type: node
+bundle: campaign_page
+label: 'Campaign Goals Goal1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

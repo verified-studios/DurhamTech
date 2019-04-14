@@ -1,0 +1,21 @@
+uuid: 8e2ab368-c4d1-468c-a78d-f551b8ed6c25
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_content2_stat1_sub
+field_name: field_content2_stat1_sub
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

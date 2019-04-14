@@ -1,0 +1,21 @@
+uuid: 6350533c-4ef1-4de4-92f8-4635f1ca75c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content1_content
+    - node.type.campaign_page
+  module:
+    - text
+id: node.campaign_page.field_content1_content
+field_name: field_content1_content
+entity_type: node
+bundle: campaign_page
+label: 'Content Area1 Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

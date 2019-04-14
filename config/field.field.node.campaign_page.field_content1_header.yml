@@ -1,0 +1,19 @@
+uuid: 248a6b6d-5301-415e-9e06-9a402dee6e89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content1_header
+    - node.type.campaign_page
+id: node.campaign_page.field_content1_header
+field_name: field_content1_header
+entity_type: node
+bundle: campaign_page
+label: 'Content Area1 Header'
+description: '2019 EXPAND STUDENT SUPPORT section'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

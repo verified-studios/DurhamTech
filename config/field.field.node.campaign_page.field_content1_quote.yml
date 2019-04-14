@@ -1,0 +1,21 @@
+uuid: b352d9de-8d2b-4429-860b-d24877a740d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content1_quote
+    - node.type.campaign_page
+  module:
+    - text
+id: node.campaign_page.field_content1_quote
+field_name: field_content1_quote
+entity_type: node
+bundle: campaign_page
+label: 'Content Area1 Quote'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 4324e340-ec74-4cce-bb39-66722136080d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_student3_quote_title
+field_name: field_student3_quote_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

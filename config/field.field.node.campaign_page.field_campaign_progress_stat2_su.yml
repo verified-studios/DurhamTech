@@ -1,0 +1,19 @@
+uuid: 79d04f53-ea2a-4bef-8f08-4e7b6c57e2ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_progress_stat2_su
+    - node.type.campaign_page
+id: node.campaign_page.field_campaign_progress_stat2_su
+field_name: field_campaign_progress_stat2_su
+entity_type: node
+bundle: campaign_page
+label: 'Campaign Progress Stat2 Sub'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

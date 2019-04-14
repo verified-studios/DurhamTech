@@ -1,0 +1,19 @@
+uuid: fa0a5f29-4145-4e77-ae32-589599ed2aa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_your_gift_header
+    - node.type.campaign_page
+id: node.campaign_page.field_your_gift_header
+field_name: field_your_gift_header
+entity_type: node
+bundle: campaign_page
+label: 'Your Gift Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

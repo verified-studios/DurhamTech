@@ -1,0 +1,19 @@
+uuid: 7346ab18-c68f-4c77-8d8d-8a8c1bcd8118
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_tagline
+    - node.type.campaign_page
+id: node.campaign_page.field_header_tagline
+field_name: field_header_tagline
+entity_type: node
+bundle: campaign_page
+label: 'Header Tagline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

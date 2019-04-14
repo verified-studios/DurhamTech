@@ -1,0 +1,576 @@
+uuid: a27a59fe-b8da-46d2-b20e-407897fee07e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.campaign_page.body
+    - field.field.node.campaign_page.field_campaign_goals_goal1
+    - field.field.node.campaign_page.field_campaign_goals_goal1_sub
+    - field.field.node.campaign_page.field_campaign_goals_goal2
+    - field.field.node.campaign_page.field_campaign_goals_goal2_sub
+    - field.field.node.campaign_page.field_campaign_goals_goal3
+    - field.field.node.campaign_page.field_campaign_goals_goal3_sub
+    - field.field.node.campaign_page.field_campaign_goals_header
+    - field.field.node.campaign_page.field_campaign_progress_chart
+    - field.field.node.campaign_page.field_campaign_progress_header
+    - field.field.node.campaign_page.field_campaign_progress_stat1
+    - field.field.node.campaign_page.field_campaign_progress_stat1_su
+    - field.field.node.campaign_page.field_campaign_progress_stat2
+    - field.field.node.campaign_page.field_campaign_progress_stat2_su
+    - field.field.node.campaign_page.field_content1_content
+    - field.field.node.campaign_page.field_content1_header
+    - field.field.node.campaign_page.field_content1_image
+    - field.field.node.campaign_page.field_content1_quote
+    - field.field.node.campaign_page.field_content1_quote_name
+    - field.field.node.campaign_page.field_content1_quote_title
+    - field.field.node.campaign_page.field_content2_content
+    - field.field.node.campaign_page.field_content2_header
+    - field.field.node.campaign_page.field_content2_image
+    - field.field.node.campaign_page.field_content2_quote
+    - field.field.node.campaign_page.field_content2_quote_name
+    - field.field.node.campaign_page.field_content2_quote_title
+    - field.field.node.campaign_page.field_content2_stat1
+    - field.field.node.campaign_page.field_content2_stat1_sub
+    - field.field.node.campaign_page.field_content2_stat2
+    - field.field.node.campaign_page.field_content2_stat2_sub
+    - field.field.node.campaign_page.field_content3_content
+    - field.field.node.campaign_page.field_content3_header
+    - field.field.node.campaign_page.field_content3_image
+    - field.field.node.campaign_page.field_content_area1_quote_title2
+    - field.field.node.campaign_page.field_content_area2_quote_title2
+    - field.field.node.campaign_page.field_header_background_image
+    - field.field.node.campaign_page.field_header_background_video
+    - field.field.node.campaign_page.field_header_campaign_logo
+    - field.field.node.campaign_page.field_header_cta_button
+    - field.field.node.campaign_page.field_header_dt_logo
+    - field.field.node.campaign_page.field_header_tagline
+    - field.field.node.campaign_page.field_student1_image
+    - field.field.node.campaign_page.field_student1_quote
+    - field.field.node.campaign_page.field_student1_quote_name
+    - field.field.node.campaign_page.field_student1_quote_title
+    - field.field.node.campaign_page.field_student1_quote_title2
+    - field.field.node.campaign_page.field_student2_image
+    - field.field.node.campaign_page.field_student2_quote
+    - field.field.node.campaign_page.field_student2_quote_name
+    - field.field.node.campaign_page.field_student2_quote_title
+    - field.field.node.campaign_page.field_student2_quote_title2
+    - field.field.node.campaign_page.field_student3_image
+    - field.field.node.campaign_page.field_student3_quote
+    - field.field.node.campaign_page.field_student3_quote_name
+    - field.field.node.campaign_page.field_student3_quote_title
+    - field.field.node.campaign_page.field_student3_quote_title2
+    - field.field.node.campaign_page.field_ways_to_give_content
+    - field.field.node.campaign_page.field_ways_to_give_header
+    - field.field.node.campaign_page.field_your_gift_content
+    - field.field.node.campaign_page.field_your_gift_cta_button
+    - field.field.node.campaign_page.field_your_gift_header
+    - node.type.campaign_page
+  module:
+    - file
+    - image
+    - link
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.campaign_page.default
+targetEntityType: node
+bundle: campaign_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_campaign_goals_goal1:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_goals_goal1_sub:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_goals_goal2:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_goals_goal2_sub:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_goals_goal3:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_goals_goal3_sub:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_goals_header:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_campaign_progress_chart:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_progress_header:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_campaign_progress_stat1:
+    weight: 10
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_progress_stat1_su:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_campaign_progress_stat2:
+    weight: 11
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_campaign_progress_stat2_su:
+    weight: 20
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content1_content:
+    weight: 26
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_content1_header:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content1_image:
+    weight: 22
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_content1_quote:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_content1_quote_name:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content1_quote_title:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_content:
+    weight: 32
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_content2_header:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_image:
+    weight: 28
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_content2_quote:
+    weight: 29
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_content2_quote_name:
+    weight: 30
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_quote_title:
+    weight: 31
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_stat1:
+    weight: 33
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_stat1_sub:
+    weight: 34
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_stat2:
+    weight: 35
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content2_stat2_sub:
+    weight: 36
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content3_content:
+    weight: 44
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_content3_header:
+    weight: 42
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content3_image:
+    weight: 43
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_content_area1_quote_title2:
+    weight: 61
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_content_area2_quote_title2:
+    weight: 62
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_header_background_image:
+    weight: 4
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_header_background_video:
+    weight: 5
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_header_campaign_logo:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_header_cta_button:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_header_dt_logo:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_header_tagline:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student1_image:
+    weight: 45
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_student1_quote:
+    weight: 47
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student1_quote_name:
+    weight: 48
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student1_quote_title:
+    weight: 49
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student1_quote_title2:
+    weight: 58
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student2_image:
+    weight: 50
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_student2_quote:
+    weight: 51
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student2_quote_name:
+    weight: 52
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student2_quote_title:
+    weight: 53
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student2_quote_title2:
+    weight: 59
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student3_image:
+    weight: 54
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_student3_quote:
+    weight: 55
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_student3_quote_name:
+    weight: 56
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student3_quote_title:
+    weight: 57
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_student3_quote_title2:
+    weight: 60
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ways_to_give_content:
+    weight: 41
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ways_to_give_header:
+    weight: 40
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_your_gift_content:
+    weight: 38
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_your_gift_cta_button:
+    weight: 39
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_your_gift_header:
+    weight: 37
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

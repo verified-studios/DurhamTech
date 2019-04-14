@@ -1,0 +1,21 @@
+uuid: 4625c67d-ae48-45e3-bbd1-ce26a62c7c6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_campaign_progress_chart
+    - node.type.campaign_page
+  module:
+    - text
+id: node.campaign_page.field_campaign_progress_chart
+field_name: field_campaign_progress_chart
+entity_type: node
+bundle: campaign_page
+label: 'Campaign Progress Chart'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

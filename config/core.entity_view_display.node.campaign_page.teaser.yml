@@ -1,0 +1,30 @@
+uuid: ec96ec64-f789-4a72-9415-f06b104012fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.campaign_page.body
+    - node.type.campaign_page
+  module:
+    - text
+    - user
+id: node.campaign_page.teaser
+targetEntityType: node
+bundle: campaign_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

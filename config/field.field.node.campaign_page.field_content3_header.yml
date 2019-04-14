@@ -1,0 +1,19 @@
+uuid: a6f1b86a-cab3-490b-a991-10482129b9e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content3_header
+    - node.type.campaign_page
+id: node.campaign_page.field_content3_header
+field_name: field_content3_header
+entity_type: node
+bundle: campaign_page
+label: 'Content Area3 Header'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 0e3caf27-21b3-4ad3-97ed-3fcae8dcadc9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_campaign_progress_stat2
+field_name: field_campaign_progress_stat2
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

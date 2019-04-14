@@ -1,0 +1,21 @@
+uuid: 07b6459c-500b-4430-bda7-39b335c5c944
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ways_to_give_content
+    - node.type.campaign_page
+  module:
+    - text
+id: node.campaign_page.field_ways_to_give_content
+field_name: field_ways_to_give_content
+entity_type: node
+bundle: campaign_page
+label: 'Ways to Give Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
