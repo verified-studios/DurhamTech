@@ -93,16 +93,14 @@
                         </h3>
                         {% set description = content.field_description.0['#context'].value|render|striptags %}
                         <p>{{ description|length > 150 ? description|slice(0, 150) ~ '...' : description }}</p>
-                        
                         {% set default_app_deadline = drupal_view('upcoming_application_deadlines', 'default_next_deadline') %}
-                        {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline') %}
+                        {% set override_app_deadline = drupal_view('upcoming_application_deadlines', 'override_next_deadline', node.id) %}
                         {% set deadline = '' %}
                         {% if override_app_deadline|render|striptags|trim != '' %}
                             {% set deadline = override_app_deadline|render|striptags|trim %}
                         {% else %}
                             {% set deadline = default_app_deadline|render|striptags|trim %}
                         {% endif %}
-
                         {% if degreeOption == 'Continuing Education' %}
                         {% else %}
                             <table class="program-teaser-table">
