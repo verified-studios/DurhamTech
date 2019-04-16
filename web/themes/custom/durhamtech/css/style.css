@@ -10362,27 +10362,6 @@ body, html, header {
 
 .campaign {
   /* helper classes */
-  /*@mixin tri-goals() {
-
-      content: '';
-
-      position: absolute;
-
-      bottom: 0;
-
-      right: 0;
-
-      width: 0;
-
-      height: 0;
-
-      border-style: solid;
-
-      border-width: 0 0 66px 66px;
-
-      border-color: transparent transparent $medium-green transparent;
-
-  }*/
   /* font-size: 16px; */
   font-size: 16px;
   line-height: 28px; }
@@ -10462,39 +10441,25 @@ body, html, header {
     text-transform: uppercase; }
     .campaign h2.cam-gray {
       color: #333c40; }
-  .campaign p {
-    /*font-size: 16px;
-    line-height: 26px;*/ }
   .campaign section {
-    /* padding: 40px; */
     margin: 0;
     padding: 0; }
   .campaign .btn-campaign {
     background: #84BD00;
-    /* background: $green; */
     border: none;
     color: #000;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 15px 50px;
-    /*width: 230px;
-    height: 54px;*/
-    /*margin-bottom: 100px;*/
-    /* margin-bottom: 100vh; */ }
+    padding: 15px 50px; }
   .campaign a.btn-campaign {
     background: #84BD00;
-    /* background: $green; */
     border: none;
     color: #000;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-    /*width: 230px;
-    height: 54px;*/
     padding: 15px 50px;
-    /*margin-bottom: 100px;*/
-    /* margin-bottom: 100vh; */
     box-sizing: border-box;
     display: inline-block;
     transition: all .6s; }
@@ -10509,14 +10474,6 @@ body, html, header {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* cursor: pointer; */
-    /*  .vid-container {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-     } */
-    /* Style the video: 100% width and height to cover the entire window */
     /* Add some content at the bottom of the video/page */ }
     .campaign header:before {
       content: "";
@@ -10533,49 +10490,29 @@ body, html, header {
       object-fit: cover;
       width: 100vw;
       height: 100vh;
-      /* position: fixed; */
       position: absolute;
       top: 0;
       left: 0; }
     .campaign header .hea-container {
-      /* display: flex; */
       align-items: center;
       justify-content: center;
       text-align: center;
       position: absolute;
-      z-index: 99;
-      /* .dt-logo-container {
-          margin-bottom: 30px;
-          /* position: absolute;
-          bottom: 80px;
-          z-index: 99; *
-          .dt-logo {
-              width: 230px;
-              height: auto;
-          }
-      } */ }
+      z-index: 99; }
       .campaign header .hea-container h1 {
         margin-bottom: 60px; }
       .campaign header .hea-container h2 {
         color: #fff !important;
         font-size: 34px;
         font-weight: 300;
-        /* font-weight: normal; */
-        /*margin-bottom: 28px;*/
         text-transform: none; }
       .campaign header .hea-container .fgf-logo {
         width: 95%;
         max-width: 700px;
         height: auto; }
     .campaign header .dt-logo-container {
-      /* position: absolute; */
-      /* display: block; */
-      /* bottom: 230px; */
-      /* bottom: 10vh; */
-      /* margin-top: 15%; */
       z-index: 99; }
       .campaign header .dt-logo-container .dt-logo {
-        /* width: 65%; */
         max-width: 300px;
         height: auto; }
     .campaign header .down-arrow {
@@ -10586,63 +10523,7 @@ body, html, header {
       z-index: 99; }
       .campaign header .down-arrow a {
         color: rgba(255, 255, 255, 0.4); }
-    .campaign header #myVideo {
-      /* position: fixed;
-
-      right: 0;
-
-      bottom: 0;
-
-      min-width: 100%;
-
-      min-height: 100%; */
-      /* z-index: -100;
-
-      top: 50%;
-
-      left: 50%;
-
-      transform: translateX(-50%) translateY(-50%);
-
-      transition: 1s opacity;
-
-      min-width: 100%;
-
-      min-height: 100%;
-
-      width: auto;
-
-      height: auto; */
-      /* position: fixed; */
-      /* top: 50%;
-
-      left: 50%;
-
-      min-width: 100%;
-
-      min-height: 100%;
-
-      width: auto;
-
-      height: auto;
-
-      z-index: -100;
-
-      -ms-transform: translateX(-50%) translateY(-50%);
-
-      -moz-transform: translateX(-50%) translateY(-50%);
-
-      -webkit-transform: translateX(-50%) translateY(-50%);
-
-      transform: translateX(-50%) translateY(-50%);
-
-      background: url(placeholder.jpg) no-repeat;
-
-      background-size: cover; */ }
     .campaign header .content {
-      /* position: fixed;
-
-      bottom: 0; */
       background: rgba(0, 0, 0, 0.5);
       color: #f1f1f1;
       height: 100vh;
@@ -10661,23 +10542,11 @@ body, html, header {
     padding: 40px 15px 40px 15px;
     text-align: center;
     /* new */ }
-    .campaign .campaign-progress h2 {
-      /*letter-spacing: 1px;*/
-      /*margin-bottom: 28px;*/ }
     @media screen and (min-width: 768px) {
       .campaign .campaign-progress .campaign-progress-container {
         display: flex;
-        /*align-items: center;*/
-        /*align-content: center;*/
         justify-content: center;
-        margin: 0 auto;
-        /*align-items: baseline;*/
-        /*width: 800px;*/ }
-        .campaign .campaign-progress .campaign-progress-container div {
-          /*vertical-align: center;*/
-          /*display: flex;           !* nested flex container *!
-          align-items: center;*/
-          /*flex-grow: 1;*/ } }
+        margin: 0 auto; } }
     @media screen and (min-width: 768px) {
       .campaign .campaign-progress .campaign-progress-container .chart-container {
         padding: 0 70px; } }
@@ -10685,9 +10554,7 @@ body, html, header {
       position: relative;
       margin: 0 auto 28px;
       height: 150px;
-      width: 150px;
-      /*max-width: 150px;*/
-      /*width: 100%;*/ }
+      width: 150px; }
       @media screen and (min-width: 768px) {
         .campaign .campaign-progress .campaign-progress-container .chart {
           margin: 0; } }
@@ -10695,48 +10562,32 @@ body, html, header {
         position: absolute;
         top: 5px;
         left: 5px;
-        /*margin: 0 auto;*/
         background-color: transparent;
         border: 10px solid #979797;
         border-radius: 50%;
         height: 140px;
-        width: 140px;
-        /*z-index: 99;*/ }
+        width: 140px; }
       .campaign .campaign-progress .campaign-progress-container .chart .semi-circle-wrapper {
         position: absolute;
-        /*left: 0;
-          right: 0;*/
         bottom: 26px;
-        /*margin: 0 auto;
-          width: 145px;
-          text-align: center;*/
         width: 100%; }
         .campaign .campaign-progress .campaign-progress-container .chart .semi-circle-wrapper .semi-circle {
           background-color: #B8E986;
-          /*border: 10px solid #979797;*/
           border-radius: 0 0 104px 104px;
-          /*border-radius: 50%;*/
           margin: 0 auto;
           height: 48px;
-          /*height: 96px;*/
-          width: 96px;
-          /*padding: 0;
-            margin: 0;*/ }
+          width: 96px; }
       .campaign .campaign-progress .campaign-progress-container .chart .progress-chart {
-        /*display: none;*/
         position: absolute;
         right: 0;
         background-color: transparent;
         border: 20px solid #84BD00;
         border-left: none;
-        /*border-radius: 70px 70px 0 0;*/
         border-bottom-right-radius: 75px;
         border-top-right-radius: 75px;
         height: 150px;
         width: 75px;
-        transition: stroke-dashoffset 0.35s;
-        /*transform: rotate(-90deg);
-          transform-origin: 50% 50%,*/ }
+        transition: stroke-dashoffset 0.35s; }
       .campaign .campaign-progress .campaign-progress-container .chart .progress-text {
         position: absolute;
         bottom: 36px;
@@ -10760,12 +10611,8 @@ body, html, header {
       @media screen and (min-width: 768px) {
         .campaign .campaign-progress .campaign-progress-container .campaign-content-container {
           border-left: 1px solid #FFFFFF;
-          /*flex-grow: 1;*/
           height: 100px;
-          /*padding-left: 50px;*/
-          /*width: 100%;*/
           margin-top: 30px;
-          /*min-width: 100px;*/
           padding: 20px 70px 0; } }
   .campaign .campaign-goals {
     position: relative;
@@ -10774,10 +10621,7 @@ body, html, header {
       position: relative;
       border: 10px solid #84BD00;
       max-width: 350px;
-      margin: 0 auto;
-      /*&::after {
-          @include tri-goals();
-      }*/ }
+      margin: 0 auto; }
       .campaign .campaign-goals .campaign-goals-container .campaign-goals-flex h3 {
         color: #333c40;
         font-size: 40px;
@@ -10801,8 +10645,7 @@ body, html, header {
       @media screen and (min-width: 768px) {
         .campaign .campaign-goals .campaign-goals-container .campaign-goals-flex {
           display: flex;
-          justify-content: center;
-          /*align-items: center;*/ }
+          justify-content: center; }
           .campaign .campaign-goals .campaign-goals-container .campaign-goals-flex .campaign-goals-div {
             margin-top: 50px; }
           .campaign .campaign-goals .campaign-goals-container .campaign-goals-flex .campaign-goals-arrow {
@@ -10854,10 +10697,10 @@ body, html, header {
           right: -10px; }
   .campaign .expand-student-support .feature {
     position: relative;
-    background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
+    /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;*/
     /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;*/
-    background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;
-    background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat 50% -170px;
+    /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;
+      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat 50% -170px;*/
     background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -200px;
     /*background-size: cover;*/
     background-size: 800px;
@@ -10869,10 +10712,10 @@ body, html, header {
     @media screen and (min-width: 768px) {
       .campaign .expand-student-support .feature {
         height: 570px;
+        /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;*/
         background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
-        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
-        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
-        background-size: cover;
+        /*background-size: cover;*/
         background-size: unset; } }
     @media screen and (min-width: 1200px) {
       .campaign .expand-student-support .feature {
@@ -10895,41 +10738,38 @@ body, html, header {
         margin: 0 auto;
         font-size: 14px;
         font-weight: bold;
-        /*max-width: 320px;*/
         width: 90%;
-        line-height: 17px;
+        line-height: 17px !important;
         text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); }
+        .campaign .expand-student-support .feature .feature-quote .feature-quote-content p {
+          line-height: 17px !important; }
         @media screen and (min-width: 768px) {
           .campaign .expand-student-support .feature .feature-quote .feature-quote-content {
             font-size: 22px;
-            line-height: 30px;
+            line-height: 30px !important;
             max-width: 675px; } }
       .campaign .expand-student-support .feature .feature-quote .feature-quote-by {
         font-size: 12px;
         font-style: normal;
-        line-height: 17px;
+        line-height: 17px !important;
         margin-top: 10px;
         text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); }
         @media screen and (min-width: 768px) {
           .campaign .expand-student-support .feature .feature-quote .feature-quote-by {
             font-size: 14px;
-            line-height: 19px;
+            line-height: 19px !important;
             font-style: normal; } }
   .campaign .expand-student-support img {
-    /*max-height: 350px;*/
     max-width: 100%; }
   .campaign .expand-student-support li {
     font-size: 14px;
     line-height: 26px; }
   .campaign .expand-student-support .expand-content {
     margin: 40px 15px; }
-    .campaign .expand-student-support .expand-content h2 {
-      /*text-align: center;*/ }
     @media screen and (min-width: 768px) {
       .campaign .expand-student-support .expand-content {
         margin: 40px auto;
         padding: 0 30px;
-        /*max-width: 1200px;*/
         max-width: 1028px; } }
   .campaign .forge-tomorrows-workforce {
     background: #333c40;
@@ -10957,13 +10797,6 @@ body, html, header {
           /*background-size: unset;*/
           height: 450px;
           /*background-size: 800px;*/ } }
-      @media screen and (min-width: 992px) {
-        .campaign .forge-tomorrows-workforce .feature {
-          /*background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -400px;
-        background-size: cover;*/
-          /*background-size: unset;*/
-          /* max-width: 1540px;
-        margin: 0 auto;*/ } }
       @media screen and (min-width: 1200px) {
         .campaign .forge-tomorrows-workforce .feature {
           background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -275px;
@@ -10976,13 +10809,11 @@ body, html, header {
         position: absolute;
         bottom: 20px;
         left: 12px;
-        /*width: 246px;*/
         width: 55%; }
         @media screen and (min-width: 768px) {
           .campaign .forge-tomorrows-workforce .feature .feature-quote {
             bottom: 40px;
             left: 50px;
-            /*width: 400px;*/
             width: 50%; } }
         @media screen and (min-width: 992px) {
           .campaign .forge-tomorrows-workforce .feature .feature-quote {
@@ -10996,19 +10827,21 @@ body, html, header {
         .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-content {
           font-size: 14px;
           font-weight: bold;
-          line-height: 19px;
+          line-height: 19px !important;
           margin-bottom: 15px; }
+          .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-content p {
+            line-height: 19px !important; }
           @media screen and (min-width: 768px) {
             .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-content {
               font-size: 20px;
-              line-height: 27px; } }
+              line-height: 27px !important; } }
         .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-by {
           font-size: 12px;
-          line-height: 17px; }
+          line-height: 17px !important; }
           @media screen and (min-width: 768px) {
             .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-by {
               font-size: 14px;
-              line-height: 19px; } }
+              line-height: 19px !important; } }
     .campaign .forge-tomorrows-workforce .forge-content-wrapper {
       margin: 0 15px; }
       @media screen and (min-width: 768px) {
@@ -11018,31 +10851,23 @@ body, html, header {
           margin-right: auto;
           padding-left: 30px;
           padding-right: 30px;
-          max-width: 1028px;
-          /*margin: 0 auto;*/ } }
+          max-width: 1028px; } }
       .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-stats-wrapper {
         position: relative;
         margin-bottom: 40px;
-        /*width: 100%;*/
         width: 270px; }
         @media screen and (min-width: 768px) {
           .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-stats-wrapper {
             margin-bottom: 10px; } }
-        @media screen and (min-width: 992px) {
-          .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-stats-wrapper {
-            /*width: 270px;*/ } }
         .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-stats-wrapper .forge-stats {
           color: #84BD00;
           border-left: 10px solid #84BD00;
-          /*width: 270px;*/
           height: 334px;
           padding-right: 40px; }
           @media screen and (min-width: 768px) {
             .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-stats-wrapper .forge-stats {
               position: absolute;
-              bottom: 0;
-              /*width: 40%;
-            padding-right: 100px;*/ } }
+              bottom: 0; } }
           .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-stats-wrapper .forge-stats .forge-stats-number {
             font-size: 56px;
             font-weight: bold;
@@ -11054,20 +10879,15 @@ body, html, header {
             margin-left: 12px; }
       @media screen and (min-width: 768px) {
         .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-content {
-          width: 70%;
-          /*flex-grow: 2;*/ } }
+          width: 70%; } }
       @media screen and (min-width: 992px) {
         .campaign .forge-tomorrows-workforce .forge-content-wrapper .forge-content {
-          width: 668px;
-          /*flex-grow: 2;*/ } }
+          width: 668px; } }
   .campaign .your-gift-ways-to-give {
     margin: 0 15px 40px; }
     @media screen and (min-width: 768px) {
       .campaign .your-gift-ways-to-give {
         display: flex;
-        /*justify-content: center;*/
-        /*margin: 0 auto;*/
-        /*max-width: 1200px;*/
         margin-left: auto;
         margin-right: auto;
         padding-left: 30px;
@@ -11075,10 +10895,7 @@ body, html, header {
         max-width: 1028px; } }
     .campaign .your-gift-ways-to-give .your-gift {
       margin-bottom: 40px;
-      padding-right: 30px;
-      /*h2 {
-        text-transform: none;
-      }*/ }
+      padding-right: 30px; }
       @media screen and (min-width: 768px) {
         .campaign .your-gift-ways-to-give .your-gift {
           flex-basis: 50%;
@@ -11097,15 +10914,12 @@ body, html, header {
     color: #FFFFFF; }
     .campaign .presidents-message h4, .campaign .presidents-message p {
       color: #FFFFFF; }
-    .campaign .presidents-message img {
-      /*max-width: 100%;*/ }
     @media screen and (min-width: 768px) {
       .campaign .presidents-message .pres-content-wrapper {
         margin-left: auto;
         margin-right: auto;
         padding-left: 30px;
         padding-right: 30px;
-        /*max-width: 968px;*/
         max-width: 1028px; } }
     .campaign .presidents-message .pres-content-wrapper .pres-pho {
       background: url(../../../../../pres2.jpg) no-repeat center center;
@@ -11134,8 +10948,7 @@ body, html, header {
       position: relative;
       background: #333c40;
       color: #FFFFFF;
-      margin-bottom: 10px;
-      /*height: 350px;*/ }
+      margin-bottom: 10px; }
       .campaign .student-testimonials .student-cards .student-content {
         padding: 20px 15px; }
         .campaign .student-testimonials .student-cards .student-content p {
@@ -11150,140 +10963,104 @@ body, html, header {
             width: 50%; }
             .campaign .student-testimonials .student-cards .student-content .quote-source {
               margin: 30px 0; } }
-      .campaign .student-testimonials .student-cards .student1 {
-        /*@media screen and (min-width: 1200px) {
-          margin-bottom: 40px;
-        }*/ }
-        .campaign .student-testimonials .student-cards .student1 .highlight {
-          color: #E87722; }
+      .campaign .student-testimonials .student-cards .student1 .highlight {
+        color: #E87722; }
+      @media screen and (min-width: 768px) {
+        .campaign .student-testimonials .student-cards .student1 {
+          display: flex; } }
+      .campaign .student-testimonials .student-cards .student1::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 76px 76px;
+        border-color: transparent transparent #FFFFFF transparent; }
+      .campaign .student-testimonials .student-cards .student1::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 66px 66px;
+        border-color: transparent transparent #E87722 transparent; }
+      .campaign .student-testimonials .student-cards .student1 .student1-pho {
+        background: url(../../../../../pho-student1.jpg) no-repeat center center;
+        background-size: cover;
+        height: 350px; }
         @media screen and (min-width: 768px) {
-          .campaign .student-testimonials .student-cards .student1 {
-            display: flex; } }
-        .campaign .student-testimonials .student-cards .student1::before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 76px 76px;
-          border-color: transparent transparent #FFFFFF transparent; }
-        .campaign .student-testimonials .student-cards .student1::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 66px 66px;
-          border-color: transparent transparent #E87722 transparent; }
-        .campaign .student-testimonials .student-cards .student1 .student1-pho {
-          /*content: '';*/
-          background: url(../../../../../pho-student1.jpg) no-repeat center center;
-          background-size: cover;
-          height: 350px; }
-          @media screen and (min-width: 768px) {
-            .campaign .student-testimonials .student-cards .student1 .student1-pho {
-              /*height: 350px;*/
-              height: unset;
-              width: 50%; } }
-        .campaign .student-testimonials .student-cards .student1 .student1-content {
-          /*
-          padding: 20px 15px;
-          p {
-            font-weight: bold;
-          }
-          .quote-source {
-            margin: 20px 0;
-          }
-          @media screen and (min-width: 768px) {
-            font-size: 18px;
-            padding: 40px;
-            width: 50%;
-            .quote-source {
-              margin: 30px 0;
-            }
-          }*/ }
-      .campaign .student-testimonials .student-cards .student2 {
-        /*@media screen and (min-width: 1200px) {
-          margin-bottom: 40px;
-        }*/ }
-        .campaign .student-testimonials .student-cards .student2 .highlight {
-          color: #84BD00; }
+          .campaign .student-testimonials .student-cards .student1 .student1-pho {
+            height: unset;
+            width: 50%; } }
+      .campaign .student-testimonials .student-cards .student2 .highlight {
+        color: #84BD00; }
+      @media screen and (min-width: 768px) {
+        .campaign .student-testimonials .student-cards .student2 {
+          display: flex; } }
+      .campaign .student-testimonials .student-cards .student2::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 76px 76px;
+        border-color: transparent transparent #FFFFFF transparent; }
+      .campaign .student-testimonials .student-cards .student2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 66px 66px;
+        border-color: transparent transparent #84BD00 transparent; }
+      .campaign .student-testimonials .student-cards .student2 .student2-pho {
+        background: url(../../../../../student2.jpg) no-repeat center center;
+        background-size: cover;
+        height: 350px; }
         @media screen and (min-width: 768px) {
-          .campaign .student-testimonials .student-cards .student2 {
-            display: flex; } }
-        .campaign .student-testimonials .student-cards .student2::before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 76px 76px;
-          border-color: transparent transparent #FFFFFF transparent; }
-        .campaign .student-testimonials .student-cards .student2::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 66px 66px;
-          border-color: transparent transparent #84BD00 transparent; }
-        .campaign .student-testimonials .student-cards .student2 .student2-pho {
-          /*content: '';*/
-          background: url(../../../../../student2.jpg) no-repeat center center;
-          background-size: cover;
-          height: 350px; }
-          @media screen and (min-width: 768px) {
-            .campaign .student-testimonials .student-cards .student2 .student2-pho {
-              /*height: 350px;*/
-              height: unset;
-              width: 50%; } }
-      .campaign .student-testimonials .student-cards .student3 {
-        /*@media screen and (min-width: 1200px) {
-          margin-bottom: 40px;
-        }*/ }
-        .campaign .student-testimonials .student-cards .student3 .highlight {
-          color: #E87722; }
+          .campaign .student-testimonials .student-cards .student2 .student2-pho {
+            height: unset;
+            width: 50%; } }
+      .campaign .student-testimonials .student-cards .student3 .highlight {
+        color: #E87722; }
+      @media screen and (min-width: 768px) {
+        .campaign .student-testimonials .student-cards .student3 {
+          display: flex; } }
+      .campaign .student-testimonials .student-cards .student3::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 76px 76px;
+        border-color: transparent transparent #FFFFFF transparent; }
+      .campaign .student-testimonials .student-cards .student3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 66px 66px;
+        border-color: transparent transparent #E87722 transparent; }
+      .campaign .student-testimonials .student-cards .student3 .student3-pho {
+        background: url(../../../../../student3.jpg) no-repeat center center;
+        background-size: cover;
+        height: 350px; }
         @media screen and (min-width: 768px) {
-          .campaign .student-testimonials .student-cards .student3 {
-            display: flex; } }
-        .campaign .student-testimonials .student-cards .student3::before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 76px 76px;
-          border-color: transparent transparent #FFFFFF transparent; }
-        .campaign .student-testimonials .student-cards .student3::after {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          width: 0;
-          height: 0;
-          border-style: solid;
-          border-width: 0 0 66px 66px;
-          border-color: transparent transparent #E87722 transparent; }
-        .campaign .student-testimonials .student-cards .student3 .student3-pho {
-          /*content: '';*/
-          background: url(../../../../../student3.jpg) no-repeat center center;
-          background-size: cover;
-          height: 350px; }
-          @media screen and (min-width: 768px) {
-            .campaign .student-testimonials .student-cards .student3 .student3-pho {
-              /*height: 350px;*/
-              /*height: unset;*/
-              width: 50%; } }
+          .campaign .student-testimonials .student-cards .student3 .student3-pho {
+            width: 50%; } }
       .campaign .student-testimonials .student-cards p {
         color: #FFFFFF; }
       .campaign .student-testimonials .student-cards img {

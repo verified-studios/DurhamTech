@@ -70,21 +70,15 @@ $campaign-gray: #333c40;
   }
 
   .px-15 {
-
     padding: 0 15px;
-
   }
 
   .pb-20 {
-
     padding-bottom: 20px;
-
   }
 
   .pr-20 {
-
     padding-right: 20px;
-
   }
 
   .pt-28 {
@@ -112,21 +106,15 @@ $campaign-gray: #333c40;
   }
 
   .rotate45 {
-
     transform: rotate(45deg);
-
   }
 
   .rotate90 {
-
     transform: rotate(90deg);
-
   }
 
   .txt-uc {
-
     text-transform: uppercase;
-
   }
 
   .quote-source {
@@ -147,41 +135,15 @@ $campaign-gray: #333c40;
     border-style: solid;
     border-width: 0 0 $border-width $border-width;
     border-color: transparent transparent $color transparent;
-
   }
-
-  /*@mixin tri-goals() {
-
-      content: '';
-
-      position: absolute;
-
-      bottom: 0;
-
-      right: 0;
-
-      width: 0;
-
-      height: 0;
-
-      border-style: solid;
-
-      border-width: 0 0 66px 66px;
-
-      border-color: transparent transparent $medium-green transparent;
-
-  }*/
 
   /* font-size: 16px; */
   font-size: 16px;
   line-height: 28px;
 
   h1, h2, h3, h4, h5, h6, p, div, ul, li {
-
     /* font-family: $helvetica; */
-
     line-height: 28px;
-
   }
 
   h1 {
@@ -202,45 +164,29 @@ $campaign-gray: #333c40;
     }
   }
 
-  p {
-    /*font-size: 16px;
-    line-height: 26px;*/
-  }
-
   section {
-    /* padding: 40px; */
     margin: 0;
     padding: 0;
   }
 
   .btn-campaign {
     background: $medium-green;
-    /* background: $green; */
     border: none;
     color: #000;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     padding: 15px 50px;
-    /*width: 230px;
-    height: 54px;*/
-    /*margin-bottom: 100px;*/
-    /* margin-bottom: 100vh; */
   }
 
   a.btn-campaign {
     background: $medium-green;
-    /* background: $green; */
     border: none;
     color: #000;
     font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
-    /*width: 230px;
-    height: 54px;*/
     padding: 15px 50px;
-    /*margin-bottom: 100px;*/
-    /* margin-bottom: 100vh; */
     box-sizing: border-box;
     display: inline-block;
     transition: all .6s;
@@ -258,7 +204,6 @@ $campaign-gray: #333c40;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* cursor: pointer; */
 
     &:before {
       content: "";
@@ -273,42 +218,21 @@ $campaign-gray: #333c40;
       z-index: 10;
     }
 
-    /*  .vid-container {
-         position: absolute;
-         top: 0;
-         left: 0;
-         width: 100%;
-     } */
-
-
     video {
       object-fit: cover;
       width: 100vw;
       height: 100vh;
-      /* position: fixed; */
       position: absolute;
       top: 0;
       left: 0;
     }
 
-
     .hea-container {
-      /* display: flex; */
       align-items: center;
       justify-content: center;
       text-align: center;
       position: absolute;
       z-index: 99;
-      /* .dt-logo-container {
-          margin-bottom: 30px;
-          /* position: absolute;
-          bottom: 80px;
-          z-index: 99; *
-          .dt-logo {
-              width: 230px;
-              height: auto;
-          }
-      } */
 
       h1 {
         margin-bottom: 60px;
@@ -318,8 +242,6 @@ $campaign-gray: #333c40;
         color: #fff !important;
         font-size: 34px;
         font-weight: 300;
-        /* font-weight: normal; */
-        /*margin-bottom: 28px;*/
         text-transform: none;
       }
 
@@ -331,14 +253,8 @@ $campaign-gray: #333c40;
     }
 
     .dt-logo-container {
-      /* position: absolute; */
-      /* display: block; */
-      /* bottom: 230px; */
-      /* bottom: 10vh; */
-      /* margin-top: 15%; */
       z-index: 99;
       .dt-logo {
-        /* width: 65%; */
         max-width: 300px;
         height: auto;
       }
@@ -356,94 +272,16 @@ $campaign-gray: #333c40;
     }
 
 
-    /* Style the video: 100% width and height to cover the entire window */
-
-    #myVideo {
-
-      /* position: fixed;
-
-      right: 0;
-
-      bottom: 0;
-
-      min-width: 100%;
-
-      min-height: 100%; */
-
-
-      /* z-index: -100;
-
-      top: 50%;
-
-      left: 50%;
-
-      transform: translateX(-50%) translateY(-50%);
-
-      transition: 1s opacity;
-
-      min-width: 100%;
-
-      min-height: 100%;
-
-      width: auto;
-
-      height: auto; */
-
-
-      /* position: fixed; */
-
-      /* top: 50%;
-
-      left: 50%;
-
-      min-width: 100%;
-
-      min-height: 100%;
-
-      width: auto;
-
-      height: auto;
-
-      z-index: -100;
-
-      -ms-transform: translateX(-50%) translateY(-50%);
-
-      -moz-transform: translateX(-50%) translateY(-50%);
-
-      -webkit-transform: translateX(-50%) translateY(-50%);
-
-      transform: translateX(-50%) translateY(-50%);
-
-      background: url(placeholder.jpg) no-repeat;
-
-      background-size: cover; */
-
-    }
-
-
     /* Add some content at the bottom of the video/page */
 
     .content {
-
-      /* position: fixed;
-
-      bottom: 0; */
-
       background: rgba(0, 0, 0, 0.5);
-
       color: #f1f1f1;
-
       height: 100vh;
-
       width: 100%;
-
       padding: 20px;
-
       z-index: 99;
-
     }
-
-
   }
 
 
@@ -467,119 +305,72 @@ $campaign-gray: #333c40;
 
 
   .campaign-progress {
-
     background-color: $campaign-gray;
-
     color: $white;
-
     padding: 40px 15px 40px 15px;
-
     text-align: center;
-
-    h2 {
-
-      /*letter-spacing: 1px;*/
-
-      /*margin-bottom: 28px;*/
-
-    }
 
     /* new */
     .campaign-progress-container {
 
       @media #{$tablet} {
         display: flex;
-        /*align-items: center;*/
-        /*align-content: center;*/
         justify-content: center;
         margin: 0 auto;
-        /*align-items: baseline;*/
-        /*width: 800px;*/
-        div {
-          /*vertical-align: center;*/
-
-          /*display: flex;           !* nested flex container *!
-          align-items: center;*/
-          /*flex-grow: 1;*/
-        }
       }
-
 
       .chart-container {
         @media #{$tablet} {
           padding: 0 70px;
-
         }
-
       }
-
 
       .chart {
         position: relative;
         margin: 0 auto 28px;
         height: 150px;
         width: 150px;
-        /*max-width: 150px;*/
-        /*width: 100%;*/
 
         @media #{$tablet} {
           margin: 0;
-
         }
 
         .circle {
           position: absolute;
           top: 5px;
           left: 5px;
-          /*margin: 0 auto;*/
           background-color: transparent;
           border: 10px solid #979797;
           border-radius: 50%;
           height: 140px;
           width: 140px;
-          /*z-index: 99;*/
         }
 
         .semi-circle-wrapper {
           position: absolute;
-          /*left: 0;
-          right: 0;*/
           bottom: 26px;
-          /*margin: 0 auto;
-          width: 145px;
-          text-align: center;*/
           width: 100%;
 
           .semi-circle {
             background-color: #B8E986;
-            /*border: 10px solid #979797;*/
             border-radius: 0 0 104px 104px;
-            /*border-radius: 50%;*/
             margin: 0 auto;
             height: 48px;
-            /*height: 96px;*/
             width: 96px;
-            /*padding: 0;
-            margin: 0;*/
           }
         }
 
         .progress-chart {
-          /*display: none;*/
           position: absolute;
           right: 0;
           background-color: transparent;
           border: 20px solid $medium-green;
           border-left: none;
-          /*border-radius: 70px 70px 0 0;*/
           border-bottom-right-radius: 75px;
           border-top-right-radius: 75px;
           height: 150px;
           width: 75px;
-
           transition: stroke-dashoffset 0.35s;
-          /*transform: rotate(-90deg);
-          transform-origin: 50% 50%,*/
         }
 
         .progress-text {
@@ -591,8 +382,6 @@ $campaign-gray: #333c40;
           width: 100%;
           z-index: 99;
         }
-
-
       }
 
       .campaign-content-container {
@@ -615,12 +404,8 @@ $campaign-gray: #333c40;
 
         @media #{$tablet} {
           border-left: 1px solid $white;
-          /*flex-grow: 1;*/
           height: 100px;
-          /*padding-left: 50px;*/
-          /*width: 100%;*/
           margin-top: 30px;
-          /*min-width: 100px;*/
           padding: 20px 70px 0;
         }
       }
@@ -635,9 +420,6 @@ $campaign-gray: #333c40;
       border: 10px solid $medium-green;
       max-width: 350px;
       margin: 0 auto;
-      /*&::after {
-          @include tri-goals();
-      }*/
       .campaign-goals-flex {
         h3 {
           color: $campaign-gray;
@@ -667,7 +449,6 @@ $campaign-gray: #333c40;
         @media #{$tablet} {
           display: flex;
           justify-content: center;
-          /*align-items: center;*/
           .campaign-goals-div {
             margin-top: 50px;
           }
@@ -713,10 +494,10 @@ $campaign-gray: #333c40;
   .expand-student-support {
     .feature {
       position: relative;
-      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
+      /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;*/
       /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;*/
-      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;
-      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat 50% -170px;
+      /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat -250px -170px;
+      background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat 50% -170px;*/
       background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -200px;
       /*background-size: cover;*/
       background-size: 800px;
@@ -727,10 +508,10 @@ $campaign-gray: #333c40;
       width: 100%;
       @media #{$tablet} {
         height: 570px;
+        /*background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
+        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;*/
         background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
-        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center center;
-        background: url(../../../../../pho-chapel-hill-tire.jpg) no-repeat center -330px;
-        background-size: cover;
+        /*background-size: cover;*/
         background-size: unset;
       }
       @media #{$wide} {
@@ -756,13 +537,15 @@ $campaign-gray: #333c40;
           margin: 0 auto;
           font-size: 14px;
           font-weight: bold;
-          /*max-width: 320px;*/
           width: 90%;
-          line-height: 17px;
+          line-height: 17px !important;
           text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
+          p {
+            line-height: 17px !important;
+          }
           @media #{$tablet} {
             font-size: 22px;
-            line-height: 30px;
+            line-height: 30px !important;
             max-width: 675px;
           }
 
@@ -770,19 +553,18 @@ $campaign-gray: #333c40;
         .feature-quote-by {
           font-size: 12px;
           font-style: normal;
-          line-height: 17px;
+          line-height: 17px !important;
           margin-top: 10px;
           text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
           @media #{$tablet} {
             font-size: 14px;
-            line-height: 19px;
+            line-height: 19px !important;
             font-style: normal;
           }
         }
       }
     }
     img {
-      /*max-height: 350px;*/
       max-width: 100%;
     }
     li {
@@ -791,13 +573,9 @@ $campaign-gray: #333c40;
     }
     .expand-content {
       margin: 40px 15px;
-      h2 {
-        /*text-align: center;*/
-      }
       @media #{$tablet} {
         margin: 40px auto;
         padding: 0 30px;
-        /*max-width: 1200px;*/
         max-width: 1028px;
       }
     }
@@ -834,14 +612,6 @@ $campaign-gray: #333c40;
         /*background-size: 800px;*/
 
       }
-      @media #{$normal} {
-        /*background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -400px;
-        background-size: cover;*/
-        /*background-size: unset;*/
-       /* max-width: 1540px;
-        margin: 0 auto;*/
-
-      }
       @media #{$wide} {
         background: url(../../../../../pho-forge-tomorrows-workforce.jpg) no-repeat center -275px;
         background-size: cover;
@@ -855,12 +625,10 @@ $campaign-gray: #333c40;
         position: absolute;
         bottom: 20px;
         left: 12px;
-        /*width: 246px;*/
         width: 55%;
         @media #{$tablet} {
           bottom: 40px;
           left: 50px;
-          /*width: 400px;*/
           width: 50%;
         }
         @media #{$normal} {
@@ -875,20 +643,23 @@ $campaign-gray: #333c40;
         .feature-quote-content {
           font-size: 14px;
           font-weight: bold;
-          line-height: 19px;
+          line-height: 19px !important;
           margin-bottom: 15px;
+          p {
+            line-height: 19px !important;
+          }
           @media #{$tablet} {
             font-size: 20px;
-            line-height: 27px;
+            line-height: 27px !important;
 
           }
         }
         .feature-quote-by {
           font-size: 12px;
-          line-height: 17px;
+          line-height: 17px !important;
           @media #{$tablet} {
             font-size: 14px;
-            line-height: 19px;
+            line-height: 19px !important;
 
           }
 
@@ -904,30 +675,22 @@ $campaign-gray: #333c40;
         padding-left: 30px;
         padding-right: 30px;
         max-width: 1028px;
-        /*margin: 0 auto;*/
       }
       .forge-stats-wrapper {
         position: relative;
         margin-bottom: 40px;
-        /*width: 100%;*/
         width: 270px;
         @media #{$tablet} {
           margin-bottom: 10px;
         }
-        @media #{$normal} {
-          /*width: 270px;*/
-        }
         .forge-stats {
           color: $medium-green;
           border-left: 10px solid $medium-green;
-          /*width: 270px;*/
           height: 334px;
           padding-right: 40px;
           @media #{$tablet} {
             position: absolute;
             bottom: 0;
-            /*width: 40%;
-            padding-right: 100px;*/
           }
 
           .forge-stats-number {
@@ -948,11 +711,9 @@ $campaign-gray: #333c40;
       .forge-content {
         @media #{$tablet} {
           width: 70%;
-          /*flex-grow: 2;*/
         }
         @media #{$normal} {
           width: 668px;
-          /*flex-grow: 2;*/
         }
 
       }
@@ -963,9 +724,6 @@ $campaign-gray: #333c40;
     margin: 0 15px 40px;
     @media #{$tablet} {
       display: flex;
-      /*justify-content: center;*/
-      /*margin: 0 auto;*/
-      /*max-width: 1200px;*/
       margin-left: auto;
       margin-right: auto;
       padding-left: 30px;
@@ -976,9 +734,6 @@ $campaign-gray: #333c40;
     .your-gift {
       margin-bottom: 40px;
       padding-right: 30px;
-      /*h2 {
-        text-transform: none;
-      }*/
       @media #{$tablet} {
         flex-basis: 50%;
         margin-bottom: 0;
@@ -1006,16 +761,12 @@ $campaign-gray: #333c40;
     h4, p {
       color: $white;
     }
-    img {
-      /*max-width: 100%;*/
-    }
     .pres-content-wrapper {
       @media #{$tablet} {
         margin-left: auto;
         margin-right: auto;
         padding-left: 30px;
         padding-right: 30px;
-        /*max-width: 968px;*/
         max-width: 1028px;
 
       }
@@ -1054,7 +805,6 @@ $campaign-gray: #333c40;
       background: $campaign-gray;
       color: $white;
       margin-bottom: 10px;
-      /*height: 350px;*/
       .student-content {
         padding: 20px 15px;
         p {
@@ -1081,9 +831,6 @@ $campaign-gray: #333c40;
         @media #{$tablet} {
           display: flex;
         }
-        /*@media #{$wide} {
-          margin-bottom: 40px;
-        }*/
         &::before {
           @include tri($white, 76px, 99);
         }
@@ -1091,32 +838,13 @@ $campaign-gray: #333c40;
           @include tri($brand-orange, 66px, 99);
         }
         .student1-pho {
-          /*content: '';*/
           background: url(../../../../../pho-student1.jpg) no-repeat center center;
           background-size: cover;
           height: 350px;
           @media #{$tablet} {
-            /*height: 350px;*/
             height: unset;
             width: 50%;
           }
-        }
-        .student1-content {/*
-          padding: 20px 15px;
-          p {
-            font-weight: bold;
-          }
-          .quote-source {
-            margin: 20px 0;
-          }
-          @media #{$tablet} {
-            font-size: 18px;
-            padding: 40px;
-            width: 50%;
-            .quote-source {
-              margin: 30px 0;
-            }
-          }*/
         }
       }
 
@@ -1129,9 +857,6 @@ $campaign-gray: #333c40;
         @media #{$tablet} {
           display: flex;
         }
-        /*@media #{$wide} {
-          margin-bottom: 40px;
-        }*/
         &::before {
           @include tri($white, 76px, 99);
         }
@@ -1139,12 +864,10 @@ $campaign-gray: #333c40;
           @include tri($medium-green, 66px, 99);
         }
         .student2-pho {
-          /*content: '';*/
           background: url(../../../../../student2.jpg) no-repeat center center;
           background-size: cover;
           height: 350px;
           @media #{$tablet} {
-            /*height: 350px;*/
             height: unset;
             width: 50%;
           }
@@ -1157,9 +880,6 @@ $campaign-gray: #333c40;
         @media #{$tablet} {
           display: flex;
         }
-        /*@media #{$wide} {
-          margin-bottom: 40px;
-        }*/
         &::before {
           @include tri($white, 76px, 99);
         }
@@ -1167,13 +887,10 @@ $campaign-gray: #333c40;
           @include tri($brand-orange, 66px, 99);
         }
         .student3-pho {
-          /*content: '';*/
           background: url(../../../../../student3.jpg) no-repeat center center;
           background-size: cover;
           height: 350px;
           @media #{$tablet} {
-            /*height: 350px;*/
-            /*height: unset;*/
             width: 50%;
           }
         }
@@ -1189,23 +906,13 @@ $campaign-gray: #333c40;
 
 
   footer {
-
     background-color: $black;
-
     text-align: center;
-
     .fgf-logo-foo {
-
       max-width: 200px;
-
     }
-
     .dt-logo-foo {
-
       max-width: 160px;
-
     }
-
   }
-
 }

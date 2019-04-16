@@ -52,14 +52,6 @@
  */
 #}
 
-{#<pre>{{ dump() }}</pre>#}
-
-{#<ol>
-  {% for key, value in _context.page %}
-    <li>{{ key }}</li>
-  {% endfor %}
-</ol>#}
-
 
 <section id="campaign" class="campaign">
   <header>
@@ -71,18 +63,14 @@
     <div class="hea-container">
       <h1><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="" class="fgf-logo"></h1>
       <h2>{{ node.field_header_tagline.value }}</h2>
-      <div class="mb-100 pt-28z"><a href="{{ node.field_header_cta_button.uri }}" class="btn-campaign">{{ node.field_header_cta_button.title }}</a></div>
+      <div class="mb-100"><a href="{{ node.field_header_cta_button.uri }}" class="btn-campaign">{{ node.field_header_cta_button.title }}</a></div>
       <div class="dt-logo-container"><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="" class="dt-logo"></div>
     </div>
     <div id="down-arrow" class="down-arrow"><a href="#campaign-progress"><i class="glyphicon glyphicon-chevron-down"></i></a></div>
   </header>
 
-
-
-
   <section id="campaign-progress" class="campaign-progress">
     <h2>{{ node.field_campaign_progress_header.value }}</h2>
-    <!--<div class="campaign-content-container"><img src="chart.png" alt="Campaign Progress Chart"></div>-->
     <div class="campaign-progress-container">
       <div class="chart-container">
         <div class="chart">
@@ -100,28 +88,19 @@
         <h3>$<span class="count">{{ node.field_campaign_progress_stat2.value }}</span></h3>
         <div class="campaign-content">{{ node.field_campaign_progress_stat2_su.value }}</div>
       </div>
-      <!--<div class="campaign-content-container">
-          <h3>3,981</h3>
-          <div class="campaign-content">Donors</div>
-      </div>-->
     </div>
   </section>
 
 
-
-
-
+  {# begin campign news #}
   <section id="campaign-news" class="campaign-news">
-
     <div class="landing-page"><div class="lp-news-grid py-40">
         <section>
           <h2 class="cam-gray">Campaign News</h2>
-
           <div class="employee-news view view-news-search view-id-news_search view-display-id-block_3 js-view-dom-id-afbe533c09dd21b445995dbd7bb86e604ef46c73d1312d679f34f5927f8adc58">
             <div class="row">
               <div class="content-wrapper">
                 <div class="view-content">
-
                   <div class="views-row">
                     <div class="views-field views-field-nothing">
                                     <span class="field-content">
@@ -188,14 +167,9 @@
           </div>
 
         </section></div></div>
-
-
   </section>
-
   <div class="clearfix mb-40"></div>
-
-
-
+  {# end campign news #}
 
 
 
@@ -224,56 +198,31 @@
     </div>
   </section>
 
-
-
-
-
-
   <section id="expand-student-support" class="expand-student-support mb-40">
     <div class="feature mb-40" style="background-image: url({{ file_url(node.field_content1_image.entity.uri.value) }});">
       <!--<img src="pho-chapel-hill-tire.jpg" alt="">-->
       <div class="feature-quote">
         <div class="feature-quote-content">{{ node.field_content1_quote.value|raw }}</div>
-        <div class="feature-quote-by mt-20z"><strong class="txt-uc">{{ node.field_content1_quote_name.value }}</strong> | {{ node.field_content1_quote_title.value }}<br>{{ node.field_content_area1_quote_title2.value }}</div>
+        <div class="feature-quote-by"><strong class="txt-uc">{{ node.field_content1_quote_name.value }}</strong> | {{ node.field_content1_quote_title.value }}<br>{{ node.field_content_area1_quote_title2.value }}</div>
       </div>
     </div>
-    <div class="expand-content mx-15z mt-40z">
+    <div class="expand-content">
       <h2 class="cam-gray">{{ node.field_content1_header.value }}</h2>
       {{ node.field_content1_content.value|raw }}
-      {#<p>Most students work at least one job while at Durham Tech, and many are caring for families, too. Scholarships, stipends, and grants keep our future workforce in the classroom and focused on success – creating a better future for themselves, their family, and our community.</p>
-      <h4>Your support for the Forge Great Futures campaign relieves financial barriers and funds experiential opportunities to help students pursue their dreams through:</h4>
-      <ul>
-        <li><strong>Scholarships and awards to keep education affordable</strong><br>
-          Help keep the rising cost of tuition, fees, and textbooks affordable. Your support will help students reduce work hours and graduate faster, with fewer obstacles.</li>
-        <li><strong>Stipends for work-based learning</strong><br>
-          Provide students with resources to secure industry-specific internships in positions that would otherwise be unpaid.</li>
-        <li><strong>Academic and research opportunities for high-achieving students</strong><br>
-          Our students are contenders in local, state, and national competitions. They participate in honors and research opportunities. Private funding is essential to their ability to participate.</li>
-        <li><strong>Leadership and employability skills training</strong><br>
-          Special cohort-based leadership initiatives will engage students in their own development. Employability training will educate students in effective communications and work habits.</li>
-      </ul>#}
     </div>
   </section>
 
-
-
-
-
-
-
-
-
   <section id="forge-tomorrows-workforce" class="forge-tomorrows-workforce pb-40 mb-40">
-    <div class="feature mb-40z" style="background-image: url({{ file_url(node.field_content2_image.entity.uri.value) }});">
+    <div class="feature" style="background-image: url({{ file_url(node.field_content2_image.entity.uri.value) }});">
       <!--<img src="pho-forge-tomorrows-workforce.jpg" alt="">-->
       <div class="feature-quote">
         <div class="feature-quote-content">{{ node.field_content2_quote.value|raw }}</div>
         <div class="feature-quote-by"><strong class="txt-uc">{{ node.field_content2_quote_name.value }}</strong> | {{ node.field_content2_quote_title.value }}<br>{{ node.field_content_area2_quote_title2.value }}</div>
       </div>
     </div>
-    <div class="forge-content-wrapper mx-15z">
+    <div class="forge-content-wrapper">
       <div class="forge-stats-wrapper">
-        <div class="forge-stats mb-40z col-md-3z">
+        <div class="forge-stats">
           <div class="forge-stats-number">{{ node.field_content2_stat1.value }}</div>
           <div class="forge-stats-content mb-40">{{ node.field_content2_stat1_sub.value }}</div>
           <div class="forge-stats-number">{{ node.field_content2_stat2.value }}</div>
@@ -283,94 +232,38 @@
       <div class="forge-content">
         <h2>{{ node.field_content2_header.value }}</h2>
         {{ node.field_content2_content.value|raw }}
-        {#<p>Durham Tech students need real-world learning experiences in cutting-edge technical labs and collaborative workspaces. High-quality training and technology that mirror industry environments prepare graduates for success as tomorrow’s workforce.</p>
-        <h4>Our goal is to equip students with skills, experiences, and inspiration. With your support, Durham Tech students will have resources to:</h4>
-        <ul>
-          <li>
-            <strong>Pursue careers in high-demand industries</strong><br>
-            <p>Students will be fully skilled in fields that need workers now—through installation of a modern hybrid vehicle bay, an advanced plumbing lab, virtual welders, HVAC trainers, and more.</p>
-          </li>
-          <li>
-            <strong>Gain experience with the latest technologies</strong><br>
-            <p>Students across STEM and industrial programs will access state-of-the-art software in our new integrated technology labs.</p>
-          </li>
-          <li>
-            <strong>Collaborate with new makerspace tools</strong><br>
-            <p></p>
-          </li>
-          <li>
-            <strong>Develop skills needed by industry partners</strong><br>
-            <p>As Durham Tech develops new programs in high-growth areas with industry partners, students will graduate with ready-to-work skills for careers in industry.</p>
-          </li>
-        </ul>#}
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
   <section id="your-gift-ways-to-give" class="your-gift-ways-to-give">
-    <div id="your-gift" class="your-gift mx-15z mb-40z">
+    <div id="your-gift" class="your-gift">
       <h2 class="cam-gray">{{ node.field_your_gift_header.value }}</h2>
       {{ node.field_your_gift_content.value|raw }}
-      {#<p>To make a contribution or to request additional information, please contact:</p>
-      <p>Melissa Chappell<br>Executive Director<br>Durham Tech Foundation<br>919-123-4567<br><a href="mailto:chappellm@durhamtect.edu">chappellm@durhamtect.edu</a></p>#}
-      {#<button class="btn-campaign">{{ node.field_your_gift_cta_button.title }}</button>#}
-      <div class="mb-100z pt-28z"><a href="{{ node.field_your_gift_cta_button.uri }}" class="btn-campaign">{{ node.field_your_gift_cta_button.title }}</a></div>
+      <div><a href="{{ node.field_your_gift_cta_button.uri }}" class="btn-campaign">{{ node.field_your_gift_cta_button.title }}</a></div>
     </div>
-    <div id="ways-to-give" class="ways-to-give mx-15z mb-40z">
+    <div id="ways-to-give" class="ways-to-give">
       <h2 class="cam-gray">{{ node.field_ways_to_give_header.value }}</h2>
       {{ node.field_ways_to_give_content.value|raw }}
-      {#<h4>One-Time-Gift</h4>
-      <p>of cash, stocks, or property.</p>
-      <h4>Multi-year Gifts</h4>
-      <p>provide ongoing contributions to the designation of your choice.</p>
-      <h4>Matching Gifts</h4>
-      <p>from your employer or your spouse’s employer.</p>
-      <h4>Planned Gifts</h4>
-      <p>through a bequest, charitable trust, or naming the Foundation as a beneficiary of a life insurance policy.</p>
-      <h4>Endowed Gifts</h4>
-      <p>ensure that a scholarship or program will continue in perpetuity.</p>#}
     </div>
   </section>
-
-
-
-
-
 
   <section id="presidents-message" class="presidents-message mb-40">
     <div class="pres-content-wrapper">
-      <div class="pres-pho mb-40z" style="background-image: url({{ file_url(node.field_content3_image.entity.uri.value) }});"><!--<img src="pres.jpg" alt="">--></div>
-      <div class="pres-content mx-15z pb-40z">
+      <div class="pres-pho" style="background-image: url({{ file_url(node.field_content3_image.entity.uri.value) }});"></div>
+      <div class="pres-content">
         <h2>{{ node.field_content3_header.value }}</h2>
         {{ node.field_content3_content.value|raw }}
-        {#<p>Chances are, Durham Tech has touched your life or the life of someone you care about.</p>
-        <p>Our students are expertly trained in a wide range of fields, from healthcare to childcare, from high-tech to biotech, from public safety to occupational safety. Our graduates get great jobs and most stay right here to serve our community.</p>
-        <p>For more than 55 years, Durham Technical Community College has been an economic driver in the Triangle, dedicated to innovation and to meeting our region’s needs for a smart, reliable, and versatile workforce.</p>
-        <p>The Forge Great Futures campaign is raising $5 million to ensure our students can fulfill their dreams of a better future. Through this campaign, tomorrow’s workforce will learn in cutting-edge technical labs, collaborate in innovative workspaces, and develop ready-to-work skills for careers in industry. Students will get the support they need – scholarships, internships, leadership – to stay focused on success while enrolled in school.</p>
-        <p>Throughout our history, we have forged strong relationships with our visionary public and private partners. In November 2016, Durham County voters approved a $20 million bond to create a new Industrial and Engineering Technologies Center on our Durham campus. The Forge Great Futures campaign will also provide the private support needed to bring this center to life: new academic programs, technologies and equipment, and industry partnerships.</p>
-        <p>We need your support to create the next wave of technology pioneers and industrial workers. State and county funds alone cannot cover the expenses associated with the technology, tools, and rising tuition costs of higher education today. Your support will provide vital resources for those students who want to forge change in their own lives, and for our communities in Durham and Orange counties to prosper.</p>
-        <p>Thank you for investing in your community college.</p>
-        <!--<div><img src="sig.png" alt=""></div>-->
-        <p>William G. Ingram<br>President</p>#}
       </div>
     </div>
   </section>
-
 
   <section id="student-testimonials" class="student-testimonials mb-40">
     <div class="student-cards">
       <div class="student1">
-        <!--<div><img src="pho-student1.jpg" alt=""></div>-->
         <div class="student1-pho" style="background-image: url({{ file_url(node.field_student1_image.entity.uri.value) }});"></div>
         <div class="student-content">
           {{ node.field_student1_quote.value|raw }}
-          {#<p>“Durham Tech has impacted my life greatly by affording me the opportunity through <span class="highlight">educational resources</span> to actually be great. It taught me a lot about hurdles, time management, and planning.”</p>#}
           <div class="quote-source">
             <strong class="txt-uc">{{ node.field_student1_quote_name.value }}</strong> | {{ node.field_student1_quote_title.value }}<br>{{ node.field_student1_quote_title2.value }}
           </div>
@@ -378,46 +271,34 @@
       </div>
     </div>
 
-
     <div class="student-cards">
       <div class="student2">
-        <!--<div><img src="student2.jpg" alt=""></div>-->
         <div class="student2-pho" style="background-image: url({{ file_url(node.field_student2_image.entity.uri.value) }});"></div>
         <div class="student-content">
           {{ node.field_student2_quote.value|raw }}
-          {#<p>“Quality education means hands-on learning. DurhamTech instructors bring industry experience and they provide <span class="highlight">outside-the-box teaching</span> that helps us learn what we need to succeed in our careers. Durham Tech changes with the times – and with changing technology needs.”</p>#}
           <div class="quote-source my-20 pr-20">
             <strong class="txt-uc">{{ node.field_student2_quote_name.value }}</strong> | {{ node.field_student2_quote_title.value }}<br>{{ node.field_student2_quote_title2.value }}
-
           </div>
         </div>
       </div>
     </div>
 
-
     <div class="student-cards">
       <div class="student3">
-        <!--<div><img src="student3.jpg" alt=""></div>-->
         <div class="student3-pho" style="background-image: url({{ file_url(node.field_student3_image.entity.uri.value) }});"></div>
         <div class="student-content">
           {{ node.field_student3_quote.value|raw }}
-          {#<p>“Durham Tech has been an <span class="highlight">absolute life changer</span>. Going from college dropout to potential NASA engineer – the real-world experience I’ve had here has helped me make that change. I am deeply grateful and deeply fortunate to have these opportunities.”</p>#}
           <div class="quote-source my-20 pr-20">
             <strong class="txt-uc">{{ node.field_student3_quote_name.value }}</strong> | {{ node.field_student3_quote_title.value }}<br>{{ node.field_student3_quote_title2.value }}
           </div>
         </div>
       </div>
     </div>
-
-
   </section>
-
 
   <footer class="padding-40">
     <div><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="" class="fgf-logo-foo mb-28"></div>
     <div><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="" class="dt-logo-foo mb-28"></div>
   </footer>
-
-
 
 </section>
