@@ -10364,7 +10364,17 @@ body, html, header {
   /* helper classes */
   /* font-size: 16px; */
   font-size: 16px;
-  line-height: 28px; }
+  line-height: 28px;
+  /*footer {
+    background-color: $black;
+    text-align: center;
+    .fgf-logo-foo {
+      max-width: 200px;
+    }
+    .dt-logo-foo {
+      max-width: 160px;
+    }
+  }*/ }
   .campaign .mx-15 {
     margin: 0 15px; }
   .campaign .mb-20 {
@@ -10554,19 +10564,7 @@ body, html, header {
       position: relative;
       margin: 0 auto 28px;
       height: 150px;
-      width: 150px;
-      /*.progress-chart {
-          position: absolute;
-          right: 0;
-          background-color: transparent;
-          border: 20px solid $medium-green;
-          border-left: none;
-          border-bottom-right-radius: 75px;
-          border-top-right-radius: 75px;
-          height: 150px;
-          width: 75px;
-          transition: stroke-dashoffset 0.35s;
-        }*/ }
+      width: 150px; }
       @media screen and (min-width: 768px) {
         .campaign .campaign-progress .campaign-progress-container .chart {
           margin: 0; } }
@@ -10584,58 +10582,43 @@ body, html, header {
         bottom: 26px;
         width: 100%; }
         .campaign .campaign-progress .campaign-progress-container .chart .semi-circle-wrapper .semi-circle {
-          background-color: #B8E986;
-          background-color: red;
+          /*background-color: #B8E986;
+            background-color: red;*/
           background-color: #333c40;
-          /*background-color: red;*/
-          /*border: 10px solid #979797;*/
-          /*border-radius: 0 0 104px 104px;*/
           border-radius: 50%;
           margin: 0 auto;
-          /*height: 48px;*/
           height: 96px;
           width: 96px;
-          /*padding: 0;
-            margin: 0;*/
-          /*animation: fade 2s 1s infinite linear alternate;*/
           display: inline-block;
           position: relative;
           top: 7px;
           overflow: hidden; }
           .campaign .campaign-progress .campaign-progress-container .chart .semi-circle-wrapper .semi-circle .semi-circle-fill {
-            content: '';
             background-color: #B8E986;
             position: absolute;
             left: 0;
             bottom: 0;
             width: 100px;
             height: 0;
-            /*animation: fade 4s ease forwards;*/ }
+            transition: height 3.0s ease-in-out; }
       .campaign .campaign-progress .campaign-progress-container .chart .progress-chart {
-        /*display: none;*/
         position: absolute;
         right: 0;
         background-color: transparent;
         border: 20px solid #84BD00;
-        /*border-left: none;*/
-        /*border-radius: 70px 70px 0 0;*/
-        /*border-bottom-right-radius: 75px;
-          border-top-right-radius: 75px;*/
         border-radius: 50%;
         height: 150px;
-        width: 150px;
-        /*transition: stroke-dashoffset 0.35s;*/
-        /*transform: rotate(-90deg);
-          transform-origin: 50% 50%,*/ }
+        width: 150px; }
       .campaign .campaign-progress .campaign-progress-container .chart .progress-text {
         position: absolute;
         top: 60px;
-        color: #333c40;
+        /*color: $campaign-gray;*/
         color: #fff;
         font-size: 26px;
         font-weight: bold;
         width: 100%;
-        z-index: 99; }
+        z-index: 99;
+        text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.7); }
     .campaign .campaign-progress .campaign-progress-container .campaign-content-container {
       margin-bottom: 30px; }
       .campaign .campaign-progress .campaign-progress-container .campaign-content-container:last-child {
@@ -11105,12 +11088,5 @@ body, html, header {
         color: #FFFFFF; }
       .campaign .student-testimonials .student-cards img {
         max-width: 100%; }
-  .campaign footer {
-    background-color: #000000;
-    text-align: center; }
-    .campaign footer .fgf-logo-foo {
-      max-width: 200px; }
-    .campaign footer .dt-logo-foo {
-      max-width: 160px; }
 
 /*# sourceMappingURL=style.css.map */

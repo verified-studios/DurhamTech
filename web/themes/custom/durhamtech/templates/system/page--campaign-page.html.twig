@@ -56,14 +56,14 @@
 <section id="campaign" class="campaign">
   <header>
     <div class="vid-container">
-      <video playsinline muted autoplay loop>
+      <video id="hea-vid" playsinline muted autoplay loop>
         <source src="{{ file_url(node.field_header_background_video.entity.uri.value) }}" type="video/mp4">
       </video>
     </div>
     <div class="hea-container">
       <h1><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="" class="fgf-logo"></h1>
       <h2>{{ node.field_header_tagline.value }}</h2>
-      <div class="mb-100"><a href="{{ node.field_header_cta_button.uri }}" class="btn-campaign">{{ node.field_header_cta_button.title }}</a></div>
+      <div class="mb-100"><a href="{{ node.field_header_cta_button.uri }}" class="btn-campaign" target="_blank">{{ node.field_header_cta_button.title }}</a></div>
       <div class="dt-logo-container"><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="" class="dt-logo"></div>
     </div>
     <div id="down-arrow" class="down-arrow"><a href="#campaign-progress"><i class="glyphicon glyphicon-chevron-down"></i></a></div>
@@ -91,87 +91,17 @@
     </div>
   </section>
 
-
-  {# begin campign news #}
+  {# begin news #}
   <section id="campaign-news" class="campaign-news">
     <div class="landing-page"><div class="lp-news-grid py-40">
         <section>
           <h2 class="cam-gray">Campaign News</h2>
-          <div class="employee-news view view-news-search view-id-news_search view-display-id-block_3 js-view-dom-id-afbe533c09dd21b445995dbd7bb86e604ef46c73d1312d679f34f5927f8adc58">
-            <div class="row">
-              <div class="content-wrapper">
-                <div class="view-content">
-                  <div class="views-row">
-                    <div class="views-field views-field-nothing">
-                                    <span class="field-content">
-
-                                        <div class="col-sm-12 col-md-6 col-lg-4 col-no-padding">
-                                            <a href="/news/first-responders-participate-durham-tech-public-safety-uas-institute-drone-class" class="search-news-link">
-                                                <div class="search-news-thumbnail">
-                                                    <img src="https://durhamtech.edu/sites/default/files/styles/image_grid/public/2019-02/7S7A5276_edited%20smaller.jpg?itok=aylsKnrK" width="450" height="300" alt="first responder squats on ground and touches drone" typeof="Image" class="img-responsive">
-                                                </div>
-                                                <div class="search-news-title">
-                                                    First responders participate in Durham Tech, Public Safety UAS Institute drone class
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    </span>
-                    </div>
-                  </div>
-
-                  <div class="views-row">
-                    <div class="views-field views-field-nothing">
-                                    <span class="field-content">
-
-                                        <div class="col-sm-12 col-md-6 col-lg-4 col-no-padding">
-                                            <a href="/news/durham-tech-durham-public-schools-skilled-trades-program-officially-launches" class="search-news-link">
-                                                <div class="search-news-thumbnail">
-                                                    <img src="https://durhamtech.edu/sites/default/files/styles/image_grid/public/2019-02/7S7A0290_edited.jpg?itok=97JNbNIZ" width="450" height="300" alt="instructor shows student how to use a drill" typeof="Image" class="img-responsive">
-                                                </div>
-                                                <div class="search-news-title">
-                                                    Durham Tech, Durham Public Schools skilled trades program officially launches
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    </span>
-                    </div>
-                  </div>
-
-                  <div class="views-row">
-                    <div class="views-field views-field-nothing">
-                                    <span class="field-content">
-
-                                        <div class="col-sm-12 col-md-6 col-lg-4 col-no-padding">
-                                            <a href="/news/music-recording-classes-teach-valuable-skills-more-aspiring-music-professionals" class="search-news-link">
-                                                <div class="search-news-thumbnail">
-                                                    <img src="https://durhamtech.edu/sites/default/files/styles/image_grid/public/2019-01/7S7A5066_edited%20smaller.jpg?itok=Nptuh6zn" width="450" height="300" alt="student playing piano" typeof="Image" class="img-responsive">
-                                                </div>
-                                                <div class="search-news-title">
-                                                    Music recording classes teach valuable skills to more than aspiring music professionals
-                                                </div>
-                                            </a>
-                                        </div>
-
-                                    </span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="more-link form-group">
-              <a href="/news" class="btn btn-outline padding-lr-20">More News</a>
-            </div>
-          </div>
-
+          {{ page.content.views_block__news_search_block_5 }}
         </section></div></div>
   </section>
+
   <div class="clearfix mb-40"></div>
-  {# end campign news #}
-
-
+  {# end news #}
 
   <section id="campaign-goals" class="campaign-goals mx-15 mb-40">
     <h2 class="cam-gray">{{ node.field_campaign_goals_header.value }}</h2>
@@ -240,7 +170,7 @@
     <div id="your-gift" class="your-gift">
       <h2 class="cam-gray">{{ node.field_your_gift_header.value }}</h2>
       {{ node.field_your_gift_content.value|raw }}
-      <div><a href="{{ node.field_your_gift_cta_button.uri }}" class="btn-campaign">{{ node.field_your_gift_cta_button.title }}</a></div>
+      <div><a href="{{ node.field_your_gift_cta_button.uri }}" class="btn-campaign" target="_blank">{{ node.field_your_gift_cta_button.title }}</a></div>
     </div>
     <div id="ways-to-give" class="ways-to-give">
       <h2 class="cam-gray">{{ node.field_ways_to_give_header.value }}</h2>
@@ -296,12 +226,33 @@
     </div>
   </section>
 
-  <footer class="padding-40">
-    <div><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="" class="fgf-logo-foo mb-28"></div>
-    <div><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="" class="dt-logo-foo mb-28"></div>
-  </footer>
-
 </section>
+
+
+{% if page.footer %}
+  {% block footer %}
+    <footer class="footer" role="contentinfo">
+      <div class="footer-top container">
+        <div class="row">
+          {{ page.footer }}
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 footer-bottom-menu bottom-footer-menu-placeholder">
+              {{ page.footer_bottom }}
+            </div>
+            <div class="col-sm-6 footer-bottom-social bottom-footer-social-placeholder">
+              {{ page.footer_bottom_2 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  {% endblock %}
+{% endif %}
+
 
 
 <script>
@@ -320,25 +271,44 @@
     );
   };
 
-  if (isInViewport(ch)) {
-    animateValue("count", 0, prog, 3000);
-    animateValue("progress-text", 0, perc, 3000);
-
-    window.removeEventListener('scroll', arguments.callee);
-  }
-
+  // begin vid pause
+  var vid = document.getElementById("hea-vid");
   window.addEventListener('scroll', function (event) {
-    if (isInViewport(ch)) {
-      animateValue("count", 0, prog, 3000);
-      animateValue("progress-text", 0, perc, 3000);
-
-      window.removeEventListener('scroll', arguments.callee);
+    if (isInViewport(vid)) {
+      vid.play();
+    } else {
+      vid.pause();
     }
   }, false);
 
+
+  if (isInViewport(vid)) {
+    vid.play();
+  } else {
+    vid.pause();
+  }
+  // end vid pause
+
+  window.addEventListener('scroll', function (event) {
+    if (isInViewport(ch)) {
+      window.removeEventListener('scroll', arguments.callee);
+      animateValue("count", 0, prog, 3000);
+      animateValue("progress-text", 0, perc, 3000);
+      var scFill = document.getElementById("semi-circle-fill");
+      scFill.style.height = perc + "%";
+    }
+  }, false);
+
+  if (isInViewport(ch)) {
+    window.removeEventListener('scroll', arguments.callee);
+    animateValue("count", 0, prog, 3000);
+    animateValue("progress-text", 0, perc, 3000);
+    var scFill = document.getElementById("semi-circle-fill");
+    scFill.style.height = perc + "%";
+  }
+
   function animateValue(id, start, end, duration) {
     // assumes integer values for start and end
-
     var obj = document.getElementById(id);
     var range = end - start;
     // no timer shorter than 50ms (not really visible any way)
@@ -378,6 +348,5 @@
     }
     return val;
   }
-
 
 </script>
