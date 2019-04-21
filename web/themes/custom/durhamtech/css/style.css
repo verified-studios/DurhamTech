@@ -10564,7 +10564,16 @@ body, html, header {
       position: relative;
       margin: 0 auto 28px;
       height: 150px;
-      width: 150px; }
+      width: 150px;
+      /*.progress-chart {
+          position: absolute;
+          right: 0;
+          background-color: transparent;
+          border: 20px solid $medium-green;
+          border-radius: 50%;
+          height: 150px;
+          width: 150px;
+        }*/ }
       @media screen and (min-width: 768px) {
         .campaign .campaign-progress .campaign-progress-container .chart {
           margin: 0; } }
@@ -10601,14 +10610,15 @@ body, html, header {
             width: 100px;
             height: 0;
             transition: height 3.0s ease-in-out; }
-      .campaign .campaign-progress .campaign-progress-container .chart .progress-chart {
+      .campaign .campaign-progress .campaign-progress-container .chart .progress-svg {
         position: absolute;
         right: 0;
-        background-color: transparent;
-        border: 20px solid #84BD00;
-        border-radius: 50%;
-        height: 150px;
-        width: 150px; }
+        z-index: 99999999999999; }
+        .campaign .campaign-progress .campaign-progress-container .chart .progress-svg .progress-ring__circle {
+          /*transition: 3.0s stroke-dashoffset;*/
+          transform: rotate(-90deg);
+          transform-origin: 50% 50%;
+          visibility: hidden; }
       .campaign .campaign-progress .campaign-progress-container .chart .progress-text {
         position: absolute;
         top: 60px;

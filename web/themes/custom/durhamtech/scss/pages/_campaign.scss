@@ -377,7 +377,25 @@ $campaign-gray: #333c40;
           }
         }
 
-        .progress-chart {
+        .progress-svg {
+          position: absolute;
+          right: 0;
+          z-index: 99999999999999;
+
+          .progress-ring {
+
+          }
+
+          .progress-ring__circle {
+            /*transition: 3.0s stroke-dashoffset;*/
+            // axis compensation
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            visibility: hidden;
+          }
+        }
+
+        /*.progress-chart {
           position: absolute;
           right: 0;
           background-color: transparent;
@@ -385,7 +403,7 @@ $campaign-gray: #333c40;
           border-radius: 50%;
           height: 150px;
           width: 150px;
-        }
+        }*/
 
         .progress-text {
           position: absolute;

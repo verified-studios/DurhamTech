@@ -76,7 +76,22 @@
         <div class="chart">
           <div class="circle"></div>
           <div class="semi-circle-wrapper"><div class="semi-circle"><div id="semi-circle-fill" class="semi-circle-fill"></div></div></div>
-          <div class="progress-chart"></div>
+          <div class="progress-svg">
+            <svg
+              class="progress-ring"
+              width="150"
+              height="150">
+              <circle
+                class="progress-ring__circle"
+                stroke="#84BD00"
+                stroke-width="20"
+                fill="transparent"
+                r="65"
+                cx="75"
+                cy="75"/>
+            </svg>
+          </div>
+          <!--<div class="progress-chart"></div>-->
           <div id="progress-text" class="progress-text">{{ node.field_campaign_progress_chart.value }}%</div>
         </div>
       </div>
@@ -257,96 +272,128 @@
 
 <script>
 
-  var prog = {{ node.field_campaign_progress_stat2.value }};
-  var perc = Math.floor((prog / 5000000) * 100);
+  var callback = function(){
+    // Handler when the DOM is fully loaded
 
-  var ch = document.getElementById('chart-container');
-  var isInViewport = function (elem) {
-    var bounding = elem.getBoundingClientRect();
-    return (
-      bounding.top >= 0 &&
-      bounding.left >= 0 &&
-      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  };
+    var prog = {{ node.field_campaign_progress_stat2.value }};
+    var perc = Math.floor((prog / 5000000) * 100);
 
-  // begin vid pause
-  var vid = document.getElementById("hea-vid");
-  window.addEventListener('scroll', function (event) {
+    var ch = document.getElementById('chart-container');
+    var isInViewport = function (elem) {
+      var bounding = elem.getBoundingClientRect();
+      return (
+        bounding.top >= 0 &&
+        bounding.left >= 0 &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    };
+
+    var circle = document.querySelector('circle');
+    var radius = circle.r.baseVal.value;
+    var circumference = radius * 2 * Math.PI;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = `${circumference}`;
+
+    const offset = circumference - 0 / 100 * circumference;
+    circle.style.strokeDashoffset = offset;
+
+    function setProgress(percent) {
+      circle.style.visibility = 'visible';
+      circle.style.transition = '3.0s stroke-dashoffset';
+      const offset = circumference - percent / 100 * circumference;
+      circle.style.strokeDashoffset = offset;
+    }
+
+    // begin vid pause
+    var vid = document.getElementById("hea-vid");
+    window.addEventListener('scroll', function (event) {
+      if (isInViewport(vid)) {
+        vid.play();
+      } else {
+        vid.pause();
+      }
+    }, false);
+
+
     if (isInViewport(vid)) {
       vid.play();
     } else {
       vid.pause();
     }
-  }, false);
+    // end vid pause
 
+    window.addEventListener('scroll', function (event) {
+      if (isInViewport(ch)) {
+        window.removeEventListener('scroll', arguments.callee);
+        animateValue("count", 0, prog, 3000);
+        animateValue("progress-text", 0, perc, 3000);
+        setProgress(perc);
+        var scFill = document.getElementById("semi-circle-fill");
+        scFill.style.height = perc + "%";
+      }
+    }, false);
 
-  if (isInViewport(vid)) {
-    vid.play();
-  } else {
-    vid.pause();
-  }
-  // end vid pause
-
-  window.addEventListener('scroll', function (event) {
     if (isInViewport(ch)) {
       window.removeEventListener('scroll', arguments.callee);
       animateValue("count", 0, prog, 3000);
       animateValue("progress-text", 0, perc, 3000);
+      setProgress(perc);
       var scFill = document.getElementById("semi-circle-fill");
       scFill.style.height = perc + "%";
     }
-  }, false);
 
-  if (isInViewport(ch)) {
-    window.removeEventListener('scroll', arguments.callee);
-    animateValue("count", 0, prog, 3000);
-    animateValue("progress-text", 0, perc, 3000);
-    var scFill = document.getElementById("semi-circle-fill");
-    scFill.style.height = perc + "%";
-  }
+    function animateValue(id, start, end, duration) {
+      // assumes integer values for start and end
+      var obj = document.getElementById(id);
+      var range = end - start;
+      // no timer shorter than 50ms (not really visible any way)
+      var minTimer = 50;
+      // calc step time to show all interediate values
+      var stepTime = Math.abs(Math.floor(duration / range));
 
-  function animateValue(id, start, end, duration) {
-    // assumes integer values for start and end
-    var obj = document.getElementById(id);
-    var range = end - start;
-    // no timer shorter than 50ms (not really visible any way)
-    var minTimer = 50;
-    // calc step time to show all interediate values
-    var stepTime = Math.abs(Math.floor(duration / range));
+      // never go below minTimer
+      stepTime = Math.max(stepTime, minTimer);
 
-    // never go below minTimer
-    stepTime = Math.max(stepTime, minTimer);
+      // get current time and calculate desired end time
+      var startTime = new Date().getTime();
+      var endTime = startTime + duration;
+      var timer;
 
-    // get current time and calculate desired end time
-    var startTime = new Date().getTime();
-    var endTime = startTime + duration;
-    var timer;
-
-    function run() {
-      var now = new Date().getTime();
-      var remaining = Math.max((endTime - now) / duration, 0);
-      var value = Math.round(end - (remaining * range));
-      value = commaSeparateNumber(value);
-      if (id == "progress-text") {
-        value = value + "%";
+      function run() {
+        var now = new Date().getTime();
+        var remaining = Math.max((endTime - now) / duration, 0);
+        var value = Math.round(end - (remaining * range));
+        value = commaSeparateNumber(value);
+        if (id == "progress-text") {
+          value = value + "%";
+        }
+        obj.innerHTML = value;
+        if (value == end) {
+          clearInterval(timer);
+        }
       }
-      obj.innerHTML = value;
-      if (value == end) {
-        clearInterval(timer);
-      }
+
+      timer = setInterval(run, stepTime);
+      run();
     }
 
-    timer = setInterval(run, stepTime);
-    run();
-  }
-
-  function commaSeparateNumber(val) {
-    while (/(\d+)(\d{3})/.test(val.toString())) {
-      val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+    function commaSeparateNumber(val) {
+      while (/(\d+)(\d{3})/.test(val.toString())) {
+        val = val.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
+      }
+      return val;
     }
-    return val;
+  };
+
+  if (
+    document.readyState === "complete" ||
+    (document.readyState !== "loading" && !document.documentElement.doScroll)
+  ) {
+    callback();
+  } else {
+    document.addEventListener("DOMContentLoaded", callback);
   }
 
 </script>
