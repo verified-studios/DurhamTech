@@ -15,29 +15,6 @@ name: 'Careers Index'
 description: ''
 read_only: false
 field_settings:
-  status:
-    label: status
-    datasource_id: 'entity:node'
-    property_path: status
-    type: boolean
-  uid:
-    label: uid
-    datasource_id: 'entity:node'
-    property_path: uid
-    type: integer
-  field_learn_category:
-    label: 'Learn Category'
-    datasource_id: 'entity:node'
-    property_path: field_learn_category
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_learn_category
-  title:
-    label: Title
-    datasource_id: 'entity:node'
-    property_path: title
-    type: string
   field_degree_option:
     label: 'Basic Education Requirement'
     datasource_id: 'entity:node'
@@ -55,6 +32,29 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_description
+  field_learn_category:
+    label: 'Learn Category'
+    datasource_id: 'entity:node'
+    property_path: field_learn_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_learn_category
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
 datasource_settings:
   'entity:node':
     bundles:
@@ -65,11 +65,13 @@ datasource_settings:
       default: true
       selected: {  }
 processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
   ignore_character:
     all_fields: false
     fields:
-      - title
       - field_description
+      - title
     ignorable: '[''¿¡!?,.:;]'
     strip:
       character_sets:
@@ -96,17 +98,15 @@ processor_settings:
     weights:
       preprocess_index: -10
       preprocess_query: -10
-  rendered_item: {  }
   ignorecase:
     all_fields: false
     fields:
-      - title
       - field_description
+      - title
     weights:
       preprocess_index: -20
       preprocess_query: -20
-  add_url: {  }
-  aggregated_field: {  }
+  rendered_item: {  }
 tracker_settings:
   default:
     indexing_order: fifo
