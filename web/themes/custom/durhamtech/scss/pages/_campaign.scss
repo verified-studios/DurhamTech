@@ -581,6 +581,9 @@ $campaign-gray: #333c40;
             font-size: 22px;
             line-height: 30px !important;
             max-width: 675px;
+            p {
+              line-height: 30px !important;
+            }
           }
 
         }
@@ -685,6 +688,9 @@ $campaign-gray: #333c40;
           @media #{$tablet} {
             font-size: 20px;
             line-height: 27px !important;
+            p {
+              line-height: 27px !important;
+            }
 
           }
         }

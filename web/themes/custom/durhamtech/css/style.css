@@ -10780,7 +10780,9 @@ body, html, header {
           .campaign .expand-student-support .feature .feature-quote .feature-quote-content {
             font-size: 22px;
             line-height: 30px !important;
-            max-width: 675px; } }
+            max-width: 675px; }
+            .campaign .expand-student-support .feature .feature-quote .feature-quote-content p {
+              line-height: 30px !important; } }
       .campaign .expand-student-support .feature .feature-quote .feature-quote-by {
         font-size: 12px;
         font-style: normal;
@@ -10867,7 +10869,9 @@ body, html, header {
           @media screen and (min-width: 768px) {
             .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-content {
               font-size: 20px;
-              line-height: 27px !important; } }
+              line-height: 27px !important; }
+              .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-content p {
+                line-height: 27px !important; } }
         .campaign .forge-tomorrows-workforce .feature .feature-quote .feature-quote-by {
           font-size: 12px;
           line-height: 17px !important; }
