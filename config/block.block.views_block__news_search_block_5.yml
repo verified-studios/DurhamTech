@@ -1,0 +1,32 @@
+uuid: a9086d4f-22a0-48c2-ab26-70f106347231
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news_search
+  module:
+    - ctools
+    - views
+  theme:
+    - durhamtech
+id: views_block__news_search_block_5
+theme: durhamtech
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:news_search-block_4'
+settings:
+  id: 'views_block:news_search-block_4'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      campaign_page: campaign_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

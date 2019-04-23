@@ -3,18 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_abstract
     - field.storage.node.body
+    - field.storage.node.field_abstract
     - field.storage.node.field_body
-    - field.storage.node.field_description
-    - field.storage.node.field_keywords
     - field.storage.node.field_sidebar_elements
     - field.storage.paragraph.field_body
+    - field.storage.node.field_description
+    - field.storage.node.field_keywords
     - search_api.server.durham_tech
   module:
-    - node
     - paragraphs
+    - node
     - search_api
+    - search_api_exclude_entity
 id: site_index
 name: 'Site Index'
 description: ''
@@ -146,6 +147,10 @@ processor_settings:
       preprocess_index: -20
       preprocess_query: -20
   rendered_item: {  }
+  search_api_exclude_entity_processor:
+    fields:
+      node:
+        - field_exclude_from_search
 tracker_settings:
   default:
     indexing_order: lifo

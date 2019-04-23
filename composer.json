@@ -63,6 +63,7 @@
     "drupal/search_api": "^1.5",
     "drupal/search_api_exclude_entity": "^1.0",
     "drupal/simple_block": "^1.0@beta",
+    "drupal/sitemap": "^1.5",
     "drupal/slick": "^1.1",
     "drupal/slick_views": "^1.0@RC",
     "drupal/twig_tweak": "^2.0",

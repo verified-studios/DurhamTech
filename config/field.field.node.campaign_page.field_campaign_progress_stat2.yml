@@ -12,7 +12,7 @@ field_name: field_campaign_progress_stat2
 entity_type: node
 bundle: campaign_page
 label: 'Campaign Progress Stat2'
-description: ''
+description: 'Campaign progress dollar amount. Input number only with no $ or commas. The code will add that. Also, the percentage progress bars are calculated in the code based on this number.'
 required: false
 translatable: false
 default_value: {  }
