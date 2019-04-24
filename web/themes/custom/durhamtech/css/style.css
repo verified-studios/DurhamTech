@@ -11102,5 +11102,41 @@ body, html, header {
         color: #FFFFFF; }
       .campaign .student-testimonials .student-cards img {
         max-width: 100%; }
+  .campaign footer {
+    /*background-color: $black;*/
+    /*background-color: $campaign-gray;*/
+    background-color: #262626; }
+    @media screen and (min-width: 768px) {
+      .campaign footer .foo-content-wrapper {
+        display: flex; } }
+    .campaign footer .foo-content-wrapper .foo-logos {
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        .campaign footer .foo-content-wrapper .foo-logos {
+          padding-right: 100px;
+          text-align: left; } }
+      @media screen and (min-width: 992px) {
+        .campaign footer .foo-content-wrapper .foo-logos {
+          padding-right: 130px; } }
+      .campaign footer .foo-content-wrapper .foo-logos .fgf-logo-foo {
+        max-width: 200px; }
+      .campaign footer .foo-content-wrapper .foo-logos .dt-logo-foo {
+        max-width: 160px; }
+    .campaign footer .foo-content-wrapper nav {
+      /*@media screen and (min-width: 992px) {
+          margin-left: 20px;
+        }*/ }
+      @media screen and (min-width: 768px) {
+        .campaign footer .foo-content-wrapper nav {
+          margin-left: 20px; } }
+
+footer.footer {
+  margin-top: 0 !important;
+  border: none;
+  padding-top: 0 !important; }
+  footer.footer .footer-bottom {
+    /*background-color: #000000;
+    padding: 15px 0;*/
+    margin-top: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */

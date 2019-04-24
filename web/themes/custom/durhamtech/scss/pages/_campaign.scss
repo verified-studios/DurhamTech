@@ -952,4 +952,53 @@ $campaign-gray: #333c40;
       max-width: 160px;
     }
   }*/
+
+
+
+  footer {
+    /*background-color: $black;*/
+    /*background-color: $campaign-gray;*/
+    background-color: #262626;
+    .foo-content-wrapper {
+      @media #{$tablet} {
+        display: flex;
+      }
+      .foo-logos {
+        text-align: center;
+        @media #{$tablet} {
+          padding-right: 100px;
+          text-align: left;
+        }
+        @media #{$normal} {
+          padding-right: 130px;
+        }
+        .fgf-logo-foo {
+          max-width: 200px;
+        }
+        .dt-logo-foo {
+          max-width: 160px;
+        }
+      }
+      nav {
+        @media #{$tablet} {
+          margin-left: 20px;
+        }
+        /*@media #{$normal} {
+          margin-left: 20px;
+        }*/
+      }
+    }
+  }
+}
+
+footer.footer {
+  margin-top: 0 !important;
+  border: none;
+  padding-top: 0 !important;
+
+  .footer-bottom {
+    /*background-color: #000000;
+    padding: 15px 0;*/
+    margin-top: 0 !important;
+  }
 }
