@@ -61,12 +61,12 @@
       </video>
     </div>
     <div class="hea-container">
-      <h1><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="" class="fgf-logo"></h1>
+      <h1><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="{{ node.field_header_campaign_logo.alt }}" class="fgf-logo"></h1>
       <h2>{{ node.field_header_tagline.value }}</h2>
       <div class="mb-100"><a href="{{ node.field_header_cta_button.uri }}" class="btn-campaign" target="_blank">{{ node.field_header_cta_button.title }}</a></div>
-      <div class="dt-logo-container"><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="" class="dt-logo"></div>
+      <div class="dt-logo-container"><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="{{ node.field_header_dt_logo.alt }}" class="dt-logo"></div>
     </div>
-    <div id="down-arrow" class="down-arrow"><a href="#campaign-progress"><i class="glyphicon glyphicon-chevron-down"></i></a></div>
+    <div id="down-arrow" class="down-arrow"><a href="#campaign-progress"><i class="glyphicon glyphicon-chevron-down"></i><span class="sr-only">Down arrow</span></a></div>
   </header>
 
   <section id="campaign-progress" class="campaign-progress">
@@ -126,12 +126,12 @@
           <h3>{{  node.field_campaign_goals_goal1.value }}</h3>
           <p>{{ node.field_campaign_goals_goal1_sub.value }}</p>
         </div>
-        <div class="campaign-goals-arrow mb-28"><img src="arrow-icons.png" alt="" class="campaign-arrow"></div>
+        <div class="campaign-goals-arrow mb-28"><img src="arrow-icons.png" alt="Right arrow icon" class="campaign-arrow"></div>
         <div class="campaign-goals-div mb-28">
           <h3>{{ node.field_campaign_goals_goal2.value }}</h3>
           <p>{{ node.field_campaign_goals_goal2_sub.value }}</p>
         </div>
-        <div class="campaign-goals-arrow mb-24"><img src="arrow-icons.png" alt="" class="campaign-arrow"></div>
+        <div class="campaign-goals-arrow mb-24"><img src="arrow-icons.png" alt="Right arrow icon" class="campaign-arrow"></div>
         <div class="campaign-goals-div">
           <h3 class="five-mil">{{ node.field_campaign_goals_goal3.value }}</h3>
           <p class="five-mil">{{ node.field_campaign_goals_goal3_sub.value }}</p>
@@ -245,8 +245,8 @@
   <footer class="padding-40">
     <div class="foo-content-wrapper container">
       <div class="foo-logos">
-        <div><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="" class="fgf-logo-foo mb-28"></div>
-        <div><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="" class="dt-logo-foo mb-28"></div>
+        <div><img src="{{ file_url(node.field_header_campaign_logo.entity.uri.value) }}" alt="{{ node.field_header_campaign_logo.alt }}" class="fgf-logo-foo mb-28"></div>
+        <div><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="{{ node.field_header_dt_logo.alt }}" class="dt-logo-foo mb-28"></div>
       </div>
       <nav id="block-footercolumn1" class="contextual-region">
         <ul class="menu nav footer-column-1">
