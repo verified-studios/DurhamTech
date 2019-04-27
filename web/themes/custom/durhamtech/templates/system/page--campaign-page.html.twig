@@ -249,36 +249,10 @@
         <div><img src="{{ file_url(node.field_header_dt_logo.entity.uri.value) }}" alt="{{ node.field_header_dt_logo.alt }}" class="dt-logo-foo mb-28"></div>
       </div>
       <nav id="block-footercolumn1" class="contextual-region">
-        <ul class="menu nav footer-column-1">
-          <li>
-            <a href="https://www.durhamtech.edu">Durham Tech Website</a>
-          </li>
-          <li>
-            <a href="https://www.durhamtech.edu/durham-tech-foundation">Durham Tech Foundation</a>
-          </li>
-          <li>
-            <a href="https://www.durhamtech.edu/durham-tech-foundation/our-impact">Our Impact</a>
-          </li>
-          <li>
-            <a href="https://dtcc46085.thankyou4caring.org/">Donate Now</a>
-          </li>
-        </ul>
+        {{ page.footer.campaignpagefootercolumnone }}
       </nav>
       <nav id="block-footercolumn2" class="contextual-region">
-        <ul class="menu nav footer-column-2">
-          <li>
-            <a href="https://www.durhamtech.edu/about-durham-tech/mission-vision-and-values">Strategic Plan</a>
-          </li>
-          <li>
-            <a href="#">Campaign News</a>
-          </li>
-          <li>
-            <a href="https://www.durhamtech.edu/pay-college/scholarships">Student Scholarships</a>
-          </li>
-          <li>
-            <a href="https://www.durhamtech.edu/about-durham-tech/leadership-and-administration">Leadership & Administration</a>
-          </li>
-        </ul>
+        {{ page.footer.campaignpagefootercolumntwo }}
       </nav>
 
     </div>
@@ -290,11 +264,6 @@
 {% if page.footer %}
   {% block footer %}
     <footer class="footer" role="contentinfo">
-      {#<div class="footer-top container">
-        <div class="row">
-          {{ page.footer }}
-        </div>
-      </div>#}
       <div class="footer-bottom">
         <div class="container">
           <div class="row">

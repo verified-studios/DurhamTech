@@ -11123,12 +11123,12 @@ body, html, header {
       .campaign footer .foo-content-wrapper .foo-logos .dt-logo-foo {
         max-width: 160px; }
     .campaign footer .foo-content-wrapper nav {
+      /*@media screen and (min-width: 768px) {
+          margin-left: 20px;
+        }*/
       /*@media screen and (min-width: 992px) {
           margin-left: 20px;
         }*/ }
-      @media screen and (min-width: 768px) {
-        .campaign footer .foo-content-wrapper nav {
-          margin-left: 20px; } }
 
 footer.footer {
   margin-top: 0 !important;
