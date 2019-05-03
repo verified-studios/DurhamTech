@@ -2,6 +2,7 @@
 
 namespace Drupal\durhamtech_colleague_migrate\Plugin\migrate\process;
 
+use Drupal\Component\Datetime\DateTimePlus;
 use Drupal\migrate\MigrateException;
 use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\MigrateExecutableInterface;
@@ -94,6 +95,54 @@ class ClassParagraphPlugin extends ProcessPluginBase {
       }
     }
 
+    // Prepare Start Date.
+    $start_date_value = $source['Start Date'];
+    $start_date_row = explode(', ', $start_date_value);
+    $start_date_row = array_filter($start_date_row, function ($value) {
+      return $value !== '';
+    });
+    $rowCount = sizeof($start_date_row);
+    echo $rowCount . "\n";
+    foreach ($start_date_row as $start_date_key => $start_date) {
+      $class_data_items[$start_date_key]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+    }
+
+    if (!empty($class_data_items[0]['field_start_date']) && $start_date_key < $row_key) {
+      for ($i = $start_date_key + 1; $i <= $row_key; $i++) {
+        $class_data_items[$i]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+      }
+    }
+
+    if (!empty($class_data_items[0]['field_start_date']) && $start_date_key < $room_key) {
+      for ($i = $start_date_key + 1; $i <= $room_key; $i++) {
+       $class_data_items[$i]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+      }
+    }
+
+    // Prepare End Date.
+    $end_date_value = $source['End Date'];
+    $end_date_row = explode(', ', $end_date_value);
+    $end_date_row = array_filter($end_date_row, function ($value) {
+      return $value !== '';
+    });
+    $rowCount = sizeof($end_date_row);
+    echo $rowCount . "\n";
+    foreach ($end_date_row as $end_date_key => $end_date) {
+      $class_data_items[$end_date_key]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+    }
+
+    if (!empty($class_data_items[0]['field_end_date']) && $end_date_key < $row_key) {
+      for ($i = $end_date_key + 1; $i <= $row_key; $i++) {
+        $class_data_items[$i]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+      }
+    }
+
+    if (!empty($class_data_items[0]['field_end_date']) && $end_date_key < $room_key) {
+      for ($i = $end_date_key + 1; $i <= $room_key; $i++) {
+        $class_data_items[$i]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+      }
+    }
+
     // Prepare Start Time.
     $start_time_value = $source['Start Time'];
     $start_time_row = explode(', ', $start_time_value);
@@ -168,6 +217,32 @@ class ClassParagraphPlugin extends ProcessPluginBase {
         ];
     }
     return $classes;
+  }
+
+  public function transformDate($value, $fromFormat, $toFormat) {
+    if (empty($value) && $value !== '0' && $value !== 0) {
+      return '';
+    }
+
+    if (isset($this->configuration['timezone'])) {
+      @trigger_error('Configuration key "timezone" is deprecated in 8.4.x and will be removed before Drupal 9.0.0, use "from_timezone" and "to_timezone" instead. See https://www.drupal.org/node/2885746', E_USER_DEPRECATED);
+      $from_timezone = $this->configuration['timezone'];
+      $to_timezone = isset($this->configuration['to_timezone']) ? $this->configuration['to_timezone'] : NULL;
+    }
+    else {
+      $system_timezone = date_default_timezone_get();
+      $default_timezone = !empty($system_timezone) ? $system_timezone : 'UTC';
+      $from_timezone = isset($this->configuration['from_timezone']) ? $this->configuration['from_timezone'] : $default_timezone;
+      $to_timezone = isset($this->configuration['to_timezone']) ? $this->configuration['to_timezone'] : $default_timezone;
+    }
+    $settings = isset($this->configuration['settings']) ? $this->configuration['settings'] : [];
+
+    // Attempts to transform the supplied date using the defined input format.
+    // DateTimePlus::createFromFormat can throw exceptions, so we need to
+    // explicitly check for problems.
+    $transformed = DateTimePlus::createFromFormat($fromFormat, $value, $from_timezone, $settings)->format($toFormat, ['timezone' => $to_timezone]);
+
+    return $transformed;
   }
 
 }
