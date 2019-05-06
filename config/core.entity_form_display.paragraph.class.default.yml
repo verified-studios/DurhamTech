@@ -4,11 +4,15 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.class.field_building
+    - field.field.paragraph.class.field_end_date
     - field.field.paragraph.class.field_end_time
     - field.field.paragraph.class.field_meeting_days
     - field.field.paragraph.class.field_room
+    - field.field.paragraph.class.field_start_date
     - field.field.paragraph.class.field_start_time
     - paragraphs.paragraphs_type.class
+  module:
+    - datetime
 id: paragraph.class.default
 targetEntityType: paragraph
 bundle: class
@@ -22,8 +26,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_end_time:
+  field_end_date:
     weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_end_time:
+    weight: 6
     settings:
       size: 60
       placeholder: ''
@@ -44,8 +54,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_start_time:
+  field_start_date:
     weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_start_time:
+    weight: 5
     settings:
       size: 60
       placeholder: ''

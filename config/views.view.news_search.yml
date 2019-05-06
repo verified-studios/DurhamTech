@@ -14,6 +14,7 @@ dependencies:
     - taxonomy.vocabulary.news_type
   content:
     - 'taxonomy_term:news_type:6dc3fac7-1f87-41b9-a0ca-f9d8e1473eb5'
+    - 'taxonomy_term:news_type:76b9084b-f328-4536-8de9-2af03f097f3e'
     - 'taxonomy_term:news_type:c4032712-cb31-4733-8f77-c0640c34c614'
   module:
     - better_exposed_filters
@@ -2675,7 +2676,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            1330: 1330
+            4267: 4267
           group: 1
           exposed: false
           expose:

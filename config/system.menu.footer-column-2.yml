@@ -1,7 +1,12 @@
 uuid: 6d627c53-7a00-46b4-a673-4954c88536da
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Emergency Links'
 id: footer-column-2
 label: 'Footer Column 2'
 description: 'Menu for second column of footer'

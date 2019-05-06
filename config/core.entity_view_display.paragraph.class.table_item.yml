@@ -4,18 +4,31 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.table_item
+    - field.field.paragraph.class.field_building
+    - field.field.paragraph.class.field_end_date
     - field.field.paragraph.class.field_end_time
     - field.field.paragraph.class.field_meeting_days
     - field.field.paragraph.class.field_room
+    - field.field.paragraph.class.field_start_date
     - field.field.paragraph.class.field_start_time
     - paragraphs.paragraphs_type.class
   module:
+    - datetime
     - options
 id: paragraph.class.table_item
 targetEntityType: paragraph
 bundle: class
 mode: table_item
 content:
+  field_end_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_end_time:
     weight: 3
     label: hidden
@@ -39,6 +52,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_start_date:
+    type: datetime_default
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_start_time:
     weight: 2
     label: hidden
@@ -47,4 +69,5 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+hidden:
+  field_building: true

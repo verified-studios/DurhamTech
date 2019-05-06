@@ -1,7 +1,12 @@
 uuid: 7f3e21f3-4887-4a77-838e-014afdf76e13
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Contact Us'
 id: footer-column-1
 label: 'Footer Column 1'
 description: 'Menu for first column of footer'

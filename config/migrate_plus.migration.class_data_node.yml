@@ -29,8 +29,6 @@ source:
     Type: 'Type of class.'
     'Delivery Method': 'How the course will be presented.'
     'Meeting Days': 'Days of the week the class meets.'
-    'Start Date': 'Starting date of the class.'
-    'End Date': 'Ending date of the class.'
     'Start Time': 'Starting time of the class.'
     'End Time': 'Ending time of the class.'
     Location: 'General location of the class.'
@@ -78,16 +76,6 @@ process:
       bundle_key: vid
       bundle: class_format
       value_key: name
-  field_start_date:
-    plugin: format_date
-    from_format: n/j/y
-    to_format: Y-m-d
-    source: 'Start Date'
-  field_end_date:
-    plugin: format_date
-    from_format: n/j/y
-    to_format: Y-m-d
-    source: 'End Date'
   field_location:
     -
       plugin: callback

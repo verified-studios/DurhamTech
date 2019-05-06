@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: community-engagement-menu
-label: 'Community Engagement Menu'
+label: 'Community Engagement'
 description: 'Menu for the Community Engagement Landing Page'
 locked: false

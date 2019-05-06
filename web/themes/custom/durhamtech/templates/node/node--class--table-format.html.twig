@@ -70,11 +70,16 @@
     <td>{{ content.field_section_number.0 }}</td>
     {% set end_date = content.field_end_date.0['#text']|date('U') %}
     <td>
-      {% if content.field_start_date.0['#text'] is not empty and content.field_end_date.0['#text'] is not empty %}
+      {#{% if content.field_start_date.0['#text'] is not empty and content.field_end_date.0['#text'] is not empty %}
         {% set start_date = content.field_start_date.0['#text']|date('n/j') %}
         {% set end_date = content.field_end_date.0['#text']|date('n/j') %}
         {{ start_date }} - {{ end_date }}
-      {% endif %}
+      {% endif %}#}
+      {% for key, paragraph in content.field_class_item if key|first!='#' %}
+        {% set start_date = paragraph['#paragraph'].get('field_start_date').value|date('n/j') %}
+        {% set end_date = paragraph['#paragraph'].get('field_end_date').value|date('n/j') %}
+        <div class="td-padding-t-15">{{ start_date }} - {{ end_date }}</div>
+      {% endfor %}
     </td>
     <td>
       {% if content.field_location %}

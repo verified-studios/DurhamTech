@@ -3,7 +3,7 @@ page_title: 'Durham Tech Sitemap'
 message:
   value: ''
   format: restricted_html
-show_front: true
+show_front: false
 show_titles: true
 show_books: {  }
 books_expanded: true
@@ -26,9 +26,7 @@ show_menus:
   career-services-: career-services-
   center-for-academic-excelle: center-for-academic-excelle
   center-for-the-global-learn: center-for-the-global-learn
-  christian-club: christian-club
   clinical-trials-research-as: clinical-trials-research-as
-  cloud-computing-lab: cloud-computing-lab
   commencement: commencement
   community: community
   community-engagement-menu: community-engagement-menu
@@ -37,7 +35,6 @@ show_menus:
   corporate-education: corporate-education
   counseling-services-: counseling-services-
   current-f-1-or-seeking: current-f-1-or-seeking
-  dental-laboratory-technolog: dental-laboratory-technolog
   disability-services: disability-services
   dual-enrollment: dual-enrollment
   durham-tech-bookstore: durham-tech-bookstore
@@ -53,14 +50,11 @@ show_menus:
   enroll-as-a-visiting-studen: enroll-as-a-visiting-studen
   equity-and-inclusion: equity-and-inclusion
   esl: esl
-  esthetician-spa: esthetician-spa
   excellence-awards: excellence-awards
   facility-services-: facility-services-
   financial-aid: financial-aid
   financial-coaching: financial-coaching
   food-services-: food-services-
-  footer: footer
-  footer-bottom-menu: footer-bottom-menu
   footer-column-1: footer-column-1
   footer-column-2: footer-column-2
   footer-column-3: footer-column-3
@@ -74,36 +68,22 @@ show_menus:
   library-menu: library-menu
   main: main
   marketing-and-communication: marketing-and-communication
-  massage-therapy-clinic: massage-therapy-clinic
   online-hybrid-continuing-ed: online-hybrid-continuing-ed
   online-learning: online-learning
-  optical-shop-: optical-shop-
-  opticianry-menu: opticianry-menu
   orange-county-campus: orange-county-campus
-  page-header-menu: page-header-menu
-  page-header-menu-cont-ed: page-header-menu-cont-ed
-  phi-beta-lambda-menu-: phi-beta-lambda-menu-
   placement-testing: placement-testing
   placement-testing-menu: placement-testing-menu
   policies-and-procedures: policies-and-procedures
-  practical-nursing: practical-nursing
   reap: reap
   registration: registration
   registration-and-advising: registration-and-advising
-  respiratory-therapy-: respiratory-therapy-
-  science-department-menu: science-department-menu
   secondary-menu: secondary-menu
   single-parent-program: single-parent-program
-  site-navigation: site-navigation
   small-business-center-: small-business-center-
   student-government-associat: student-government-associat
   student-information-and-rec: student-information-and-rec
-  student-life: student-life
-  student-life-clubs-and-orga: student-life-clubs-and-orga
   student-services: student-services
-  surgical-technology: surgical-technology
   the-transfer-center-: the-transfer-center-
-  tools: tools
   tuition-and-fees: tuition-and-fees
   veterans-affairs: veterans-affairs
   work-based-learning-menu: work-based-learning-menu
@@ -111,17 +91,37 @@ show_menus:
   account: '0'
   admin: '0'
   banner-menu: '0'
+  christian-club: '0'
+  cloud-computing-lab: '0'
+  dental-laboratory-technolog: '0'
   devel: '0'
+  esthetician-spa: '0'
+  footer: '0'
+  footer-bottom-menu: '0'
+  massage-therapy-clinic: '0'
+  optical-shop-: '0'
+  opticianry-menu: '0'
+  page-header-menu: '0'
+  page-header-menu-cont-ed: '0'
+  phi-beta-lambda-menu-: '0'
+  practical-nursing: '0'
+  respiratory-therapy-: '0'
+  science-department-menu: '0'
+  site-navigation: '0'
+  student-life: '0'
+  student-life-clubs-and-orga: '0'
+  surgical-technology: '0'
+  tools: '0'
 show_menus_hidden: false
 show_vocabularies:
-  course: course
+  ctbox: '0'
   academic_level: '0'
   academic_level_basic: '0'
   building: '0'
   class_format: '0'
   continuing_education_category: '0'
+  course: '0'
   cred_type: '0'
-  ctbox: '0'
   degree_options: '0'
   department: '0'
   education_goals: '0'
@@ -146,129 +146,129 @@ rss_taxonomy: -1
 css: true
 order:
   front: -50
-  menus_page-header-menu: -50
-  menus_site-navigation: -50
-  menus_single-parent-program: -50
-  menus_secondary-menu: -50
-  menus_science-department-menu: -50
-  menus_respiratory-therapy-: -50
-  menus_registration-and-advising: -50
-  menus_registration: -50
-  menus_reap: -50
-  menus_practical-nursing: -50
-  menus_policies-and-procedures: -50
-  menus_placement-testing-menu: -50
-  menus_placement-testing: -50
-  menus_student-government-associat: -50
-  menus_student-information-and-rec: -50
-  menus_page-header-menu-cont-ed: -50
-  menus_orange-county-campus: -50
-  menus_opticianry-menu: -50
-  menus_optical-shop-: -50
-  menus_online-learning: -50
-  menus_online-hybrid-continuing-ed: -50
-  menus_massage-therapy-clinic: -50
-  menus_marketing-and-communication: -50
-  menus_main: -50
-  menus_library-menu: -50
-  menus_its: -50
-  menus_human-resources: -50
-  menus_honors-program: -50
-  menus_small-business-center-: -50
-  menus_gopass: -50
-  menus_health-technologies-admissi: -50
-  vocabularies_course: -50
-  vocabularies_tabs: -50
-  vocabularies_programs_course_list: -50
-  vocabularies_program_type: -50
-  vocabularies_position_title: -50
-  vocabularies_news_type: -50
-  vocabularies_news_format: -50
-  vocabularies_learn: -50
-  vocabularies_event_type: -50
-  vocabularies_education_goals: -50
-  vocabularies_department: -50
-  vocabularies_degree_options: -50
-  vocabularies_ctbox: -50
-  vocabularies_cred_type: -50
-  vocabularies_continuing_education_category: -50
-  menus_student-life: -50
-  vocabularies_class_format: -50
-  vocabularies_building: -50
-  vocabularies_academic_level_basic: -50
-  vocabularies_academic_level: -50
-  menus_workforce-development-: -50
-  menus_work-based-learning-menu: -50
-  menus_veterans-affairs: -50
-  menus_tuition-and-fees: -50
-  menus_tools: -50
-  menus_the-transfer-center-: -50
-  menus_surgical-technology: -50
-  menus_student-services: -50
-  menus_student-life-clubs-and-orga: -50
-  menus_phi-beta-lambda-menu-: -50
-  menus_foundation-menu: -50
-  menus_campus-police-and-public-sa: -50
-  menus_banner-menu: -50
-  menus_connectsession: -50
-  menus_community-engagement-menu: -50
-  menus_community: -50
-  menus_commencement: -50
-  menus_cloud-computing-lab: -50
-  menus_clinical-trials-research-as: -50
-  menus_christian-club: -50
-  menus_center-for-the-global-learn: -50
-  menus_center-for-academic-excelle: -50
-  menus_career-services-: -50
-  menus_career-and-college-promise: -50
-  menus_campuses-and-locations: -50
-  menus_corporate-education: -50
-  menus_counseling-services-: -50
-  menus_bookstore: -50
-  menus_arts-sciences-and-universit: -50
-  menus_alumni: -50
-  menus_adult-high-school-and-equiv: -50
-  menus_admissions-and-enrollment: -50
-  menus_admission-steps-for-student: -50
-  menus_admission-steps-for-non-u-s: -50
-  menus_admission-steps-for-daca-st: -50
-  menus_admin: -50
-  menus_account: -50
-  menus_academic-excellence-awards: -50
-  menus_academic-advising: -50
-  menus_about-durham-tech: -50
-  menus_continuing-education: -50
-  menus_footer-social-menu: -50
-  menus_2017-2018-college-catalog-a: -50
-  menus_enroll-as-a-visiting-studen: -50
-  menus_footer-column-3: -50
-  menus_footer-column-2: -50
-  menus_footer-column-1: -50
-  menus_footer-bottom-menu: -50
-  menus_footer: -50
-  menus_food-services-: -50
-  menus_financial-coaching: -50
-  menus_financial-aid: -50
-  menus_facility-services-: -50
-  menus_excellence-awards: -50
-  menus_esthetician-spa: -50
-  menus_esl: -50
-  menus_equity-and-inclusion: -50
-  menus_enroll-as-a-non-u-s-student: -50
-  menus_current-f-1-or-seeking: -50
-  menus_english-for-academic-purpos: -50
-  menus_employees-student-support: -50
-  menus_employees: -50
-  menus_employee-resources: -50
-  menus_employee-manual-home: -50
-  menus_emergency-procedures-menu: -50
-  menus_emergency-financial-assista: -50
-  menus_early-childhood-education: -50
-  menus_durham-tech-bookstore: -50
-  menus_dual-enrollment: -50
-  menus_disability-services: -50
-  menus_devel: -50
-  menus_dental-laboratory-technolog: -50
-  vocabularies_tags: -50
+  menus_main: -49
+  menus_secondary-menu: -48
+  menus_about-durham-tech: -47
+  menus_academic-advising: -46
+  menus_academic-excellence-awards: -45
+  menus_account: -44
+  menus_admin: -43
+  menus_admission-steps-for-daca-st: -42
+  menus_admission-steps-for-non-u-s: -41
+  menus_admission-steps-for-student: -40
+  menus_admissions-and-enrollment: -39
+  menus_alumni: -38
+  menus_arts-sciences-and-universit: -37
+  menus_banner-menu: -36
+  menus_bookstore: -35
+  menus_campus-police-and-public-sa: -34
+  menus_campuses-and-locations: -33
+  menus_career-and-college-promise: -32
+  menus_career-services-: -31
+  menus_center-for-academic-excelle: -30
+  menus_center-for-the-global-learn: -29
+  menus_christian-club: -28
+  menus_clinical-trials-research-as: -27
+  menus_cloud-computing-lab: -26
+  menus_adult-high-school-and-equiv: -25
+  menus_2017-2018-college-catalog-a: -24
+  menus_commencement: -23
+  menus_community: -22
+  menus_community-engagement-menu: -21
+  menus_connectsession: -20
+  menus_footer-column-1: -19
+  menus_continuing-education: -18
+  menus_corporate-education: -17
+  menus_counseling-services-: -16
+  menus_current-f-1-or-seeking: -15
+  menus_dental-laboratory-technolog: -14
+  menus_devel: -13
+  menus_disability-services: -12
+  menus_dual-enrollment: -11
+  menus_durham-tech-bookstore: -10
+  menus_early-childhood-education: -9
+  menus_emergency-financial-assista: -8
+  menus_emergency-procedures-menu: -7
+  menus_employee-manual-home: -6
+  menus_employee-resources: -5
+  menus_employees: -4
+  menus_employees-student-support: -3
+  menus_english-for-academic-purpos: -2
+  menus_enroll-as-a-non-u-s-student: -1
+  menus_enroll-as-a-visiting-studen: 0
+  menus_equity-and-inclusion: 1
+  menus_esl: 2
+  menus_esthetician-spa: 3
+  menus_excellence-awards: 4
+  menus_facility-services-: 5
+  menus_financial-aid: 6
+  menus_financial-coaching: 7
+  menus_food-services-: 8
+  menus_footer: 9
+  menus_footer-bottom-menu: 10
+  menus_footer-column-2: 11
+  menus_footer-column-3: 12
+  menus_foundation-menu: 13
+  menus_gopass: 14
+  menus_health-technologies-admissi: 15
+  menus_honors-program: 16
+  menus_human-resources: 17
+  menus_its: 18
+  menus_library-menu: 19
+  menus_marketing-and-communication: 20
+  menus_massage-therapy-clinic: 21
+  menus_online-hybrid-continuing-ed: 22
+  menus_online-learning: 23
+  menus_optical-shop-: 24
+  menus_opticianry-menu: 25
+  menus_orange-county-campus: 26
+  menus_page-header-menu: 27
+  menus_page-header-menu-cont-ed: 28
+  menus_phi-beta-lambda-menu-: 29
+  menus_placement-testing: 30
+  menus_placement-testing-menu: 31
+  menus_policies-and-procedures: 32
+  menus_practical-nursing: 33
+  menus_reap: 34
+  menus_registration: 35
+  menus_registration-and-advising: 36
+  menus_respiratory-therapy-: 37
+  menus_science-department-menu: 38
+  menus_single-parent-program: 39
+  menus_site-navigation: 40
+  menus_footer-social-menu: 41
+  menus_small-business-center-: 42
+  menus_student-government-associat: 43
+  menus_student-life-clubs-and-orga: 44
+  menus_student-information-and-rec: 45
+  menus_student-life: 46
+  menus_student-services: 47
+  menus_surgical-technology: 48
+  menus_the-transfer-center-: 49
+  menus_tuition-and-fees: 50
+  menus_work-based-learning-menu: 50
+  menus_veterans-affairs: 50
+  vocabularies_course: 50
+  vocabularies_programs_course_list: 50
+  vocabularies_tabs: 50
+  vocabularies_degree_options: 50
+  vocabularies_building: 50
+  vocabularies_continuing_education_category: 50
+  vocabularies_class_format: 50
+  menus_workforce-development-: 50
+  menus_tools: 50
+  vocabularies_ctbox: 50
+  vocabularies_academic_level_basic: 50
+  vocabularies_cred_type: 50
+  vocabularies_department: 50
+  vocabularies_education_goals: 50
+  vocabularies_event_type: 50
+  vocabularies_learn: 50
+  vocabularies_news_format: 50
+  vocabularies_news_type: 50
+  vocabularies_position_title: 50
+  vocabularies_program_type: 50
+  vocabularies_academic_level: 50
+  vocabularies_tags: 50
 _core:
   default_config_hash: f4sH8CGbEMFQXKFoGeaHbmIP_f6cOTi02EeFhHSbYyo

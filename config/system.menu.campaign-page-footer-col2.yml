@@ -1,0 +1,8 @@
+uuid: 7cc7db85-44e6-41b3-9e9a-95a12ea2035a
+langcode: en
+status: true
+dependencies: {  }
+id: campaign-page-footer-col2
+label: 'Campaign Page Footer Column Two'
+description: ''
+locked: false

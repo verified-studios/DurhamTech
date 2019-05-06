@@ -1,7 +1,12 @@
 uuid: 646464a9-ca0c-4e59-a5c2-e42add5bbe8f
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Social Media'
 id: footer-social-menu
 label: 'Footer social menu'
 description: 'Footer menu for social media icons'

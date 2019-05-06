@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: library-menu
-label: 'Library Menu'
+label: Library
 description: 'Library menu'
 locked: false
