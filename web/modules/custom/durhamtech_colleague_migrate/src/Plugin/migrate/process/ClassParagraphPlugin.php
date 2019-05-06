@@ -102,7 +102,6 @@ class ClassParagraphPlugin extends ProcessPluginBase {
       return $value !== '';
     });
     $rowCount = sizeof($start_date_row);
-    echo $rowCount . "\n";
     foreach ($start_date_row as $start_date_key => $start_date) {
       $class_data_items[$start_date_key]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
     }
@@ -126,7 +125,6 @@ class ClassParagraphPlugin extends ProcessPluginBase {
       return $value !== '';
     });
     $rowCount = sizeof($end_date_row);
-    echo $rowCount . "\n";
     foreach ($end_date_row as $end_date_key => $end_date) {
       $class_data_items[$end_date_key]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
     }

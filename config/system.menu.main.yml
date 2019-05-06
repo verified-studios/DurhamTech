@@ -1,7 +1,12 @@
 uuid: 9a8d1d1d-b974-41c9-a40c-8dc549e8a5ff
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Key Users'
 _core:
   default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
 id: main

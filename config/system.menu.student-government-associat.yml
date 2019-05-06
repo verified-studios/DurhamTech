@@ -1,7 +1,12 @@
 uuid: 2c036d27-b899-4064-8554-d73971ce23cb
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Student Life'
 id: student-government-associat
 label: 'Student Government Association'
 description: 'For Student Life '

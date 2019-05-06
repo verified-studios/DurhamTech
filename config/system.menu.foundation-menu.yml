@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: foundation-menu
-label: 'Foundation Menu'
+label: Foundation
 description: 'Menu for Foundation'
 locked: false

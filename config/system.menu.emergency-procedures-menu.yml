@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: emergency-procedures-menu
-label: 'Emergency Procedures Menu'
+label: 'Emergency Procedures'
 description: 'Emergency Procedures Menu'
 locked: false

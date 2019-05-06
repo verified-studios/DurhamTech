@@ -1,7 +1,12 @@
 uuid: a84691a5-0d79-4cba-99fe-863dc05639d4
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Contact Us'
 _core:
   default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
 id: footer

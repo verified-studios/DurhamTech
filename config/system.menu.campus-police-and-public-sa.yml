@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: campus-police-and-public-sa
-label: 'Campus Police and Public Safety Menu'
+label: 'Campus Police and Public Safety'
 description: 'Menu for the Campus Police and Public Safety department pages'
 locked: false

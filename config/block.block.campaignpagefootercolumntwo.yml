@@ -1,0 +1,35 @@
+uuid: 802d1463-a1c0-4c33-ba74-dd56d3f5b57f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.campaign-page-footer-col2
+  module:
+    - ctools
+    - menu_block
+  theme:
+    - durhamtech
+id: campaignpagefootercolumntwo
+theme: durhamtech
+region: footer
+weight: 0
+provider: null
+plugin: 'menu_block:campaign-page-footer-col2'
+settings:
+  id: 'menu_block:campaign-page-footer-col2'
+  label: 'Campaign Page Footer Column Two'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 0
+  parent: 'campaign-page-footer-col2:'
+  suggestion: campaign_page_footer_col2
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      campaign_page: campaign_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

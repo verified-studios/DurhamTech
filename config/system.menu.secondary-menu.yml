@@ -1,7 +1,12 @@
 uuid: edaded63-daed-4a3d-a634-4063bbca8053
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Key Navigation Links'
 id: secondary-menu
 label: 'Secondary Menu'
 description: 'Secondary navigation in the header'
