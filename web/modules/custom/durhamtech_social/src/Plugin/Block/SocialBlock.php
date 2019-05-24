@@ -45,7 +45,7 @@ class SocialBlock extends BlockBase
 
         //$slick = '<div class="slick slick-social">' . $output . '</div>';
 
-        $juicer = '<ul class="juicer-feed" data-feed-id="durhamtech"></ul>';
+        $juicer = '<div class="juicer-feed" data-feed-id="durhamtech"></div>';
 
         return array(
             '#type' => 'markup',
