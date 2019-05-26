@@ -7796,7 +7796,8 @@ a.cta-box:visited {
   #block-banner-menu .menu > li > a {
     transition: 0.2s all ease-in;
     background-color: #FFFFFF;
-    border-left: 10px solid #E87722;
+    /*border-left: 10px solid $brand-orange;*/
+    border-left: 10px solid #be4301;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     border-top-right-radius: 0;
@@ -7817,7 +7818,7 @@ a.cta-box:visited {
       min-height: 35px;
       min-width: 35px;
       vertical-align: middle;
-      opacity: 0.5;
+      /*opacity: 0.5;*/
       padding: 5px;
       transition: all 160ms ease-in-out; }
     #block-banner-menu .menu > li > a .ext {
@@ -9972,7 +9973,8 @@ a.social-twitter:focus {
           padding: 7px 30px 7px 7px;
           max-width: 200px;
           text-indent: 0;
-          border-left: 10px solid #E87722;
+          /*border-left: 10px solid $brand-orange;*/
+          border-left: 10px solid #be4301;
           -moz-border-top-right-radius: 0;
           -moz-border-bottom-right-radius: 0;
           -webkit-border-top-right-radius: 0;
