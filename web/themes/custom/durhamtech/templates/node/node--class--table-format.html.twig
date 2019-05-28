@@ -76,9 +76,11 @@
         {{ start_date }} - {{ end_date }}
       {% endif %}#}
       {% for key, paragraph in content.field_class_item if key|first!='#' %}
+        {% if paragraph['#paragraph'].get('field_start_date').value is not empty and paragraph['#paragraph'].get('field_end_date').value is not empty %}
         {% set start_date = paragraph['#paragraph'].get('field_start_date').value|date('n/j') %}
         {% set end_date = paragraph['#paragraph'].get('field_end_date').value|date('n/j') %}
         <div class="td-padding-t-15">{{ start_date }} - {{ end_date }}</div>
+        {% endif %}
       {% endfor %}
     </td>
     <td>
