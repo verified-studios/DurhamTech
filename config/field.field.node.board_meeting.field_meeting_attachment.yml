@@ -1,0 +1,73 @@
+uuid: aa8d689e-4a61-4d31-a6a0-048470694f40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meeting_attachment
+    - node.type.board_meeting
+    - paragraphs.paragraphs_type.meeting_attachment
+  module:
+    - entity_reference_revisions
+id: node.board_meeting.field_meeting_attachment
+field_name: field_meeting_attachment
+entity_type: node
+bundle: board_meeting
+label: 'Meeting Attachment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      meeting_attachment: meeting_attachment
+    target_bundles_drag_drop:
+      application_deadline:
+        weight: 16
+        enabled: false
+      body:
+        weight: 17
+        enabled: false
+      class:
+        weight: 18
+        enabled: false
+      header:
+        weight: 19
+        enabled: false
+      image_and_text:
+        weight: 20
+        enabled: false
+      landing_page_panel:
+        weight: 21
+        enabled: false
+      link:
+        weight: 22
+        enabled: false
+      meeting_attachment:
+        enabled: true
+        weight: 23
+      quote:
+        weight: 24
+        enabled: false
+      sidebar_links:
+        weight: 25
+        enabled: false
+      sidebar_text:
+        weight: 26
+        enabled: false
+      statistic:
+        weight: 27
+        enabled: false
+      statistic_infographic:
+        weight: 28
+        enabled: false
+      statistic_with_icon:
+        weight: 29
+        enabled: false
+      statistic_with_subtitle:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,31 @@
+uuid: 498b323c-e7f8-41e9-8ac2-92b676381108
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.meeting_attachment.field_meeting_attachment
+    - field.field.paragraph.meeting_attachment.field_meeting_tab
+    - paragraphs.paragraphs_type.meeting_attachment
+  module:
+    - file
+id: paragraph.meeting_attachment.default
+targetEntityType: paragraph
+bundle: meeting_attachment
+mode: default
+content:
+  field_meeting_attachment:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_meeting_tab:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

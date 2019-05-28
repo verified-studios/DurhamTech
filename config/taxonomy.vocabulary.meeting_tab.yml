@@ -1,0 +1,8 @@
+uuid: 3d28d301-f9ba-4340-b683-7bd7ced4e06f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Meeting Tab'
+vid: meeting_tab
+description: ''
+weight: 0

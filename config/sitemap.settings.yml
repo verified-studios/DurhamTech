@@ -19,7 +19,6 @@ show_menus:
   adult-high-school-and-equiv: adult-high-school-and-equiv
   alumni: alumni
   arts-sciences-and-universit: arts-sciences-and-universit
-  bookstore: bookstore
   campus-police-and-public-sa: campus-police-and-public-sa
   campuses-and-locations: campuses-and-locations
   career-and-college-promise: career-and-college-promise
@@ -91,6 +90,9 @@ show_menus:
   account: '0'
   admin: '0'
   banner-menu: '0'
+  bookstore: '0'
+  campaign-page-footer-col2: '0'
+  campaign-page-footer-column: '0'
   christian-club: '0'
   cloud-computing-lab: '0'
   dental-laboratory-technolog: '0'
@@ -114,7 +116,6 @@ show_menus:
   tools: '0'
 show_menus_hidden: false
 show_vocabularies:
-  ctbox: '0'
   academic_level: '0'
   academic_level_basic: '0'
   building: '0'
@@ -122,6 +123,7 @@ show_vocabularies:
   continuing_education_category: '0'
   course: '0'
   cred_type: '0'
+  ctbox: '0'
   degree_options: '0'
   department: '0'
   education_goals: '0'
@@ -153,10 +155,10 @@ order:
   menus_academic-excellence-awards: -45
   menus_account: -44
   menus_admin: -43
-  menus_admission-steps-for-daca-st: -42
-  menus_admission-steps-for-non-u-s: -41
-  menus_admission-steps-for-student: -40
-  menus_admissions-and-enrollment: -39
+  menus_admissions-and-enrollment: -42
+  menus_admission-steps-for-daca-st: -41
+  menus_admission-steps-for-non-u-s: -40
+  menus_admission-steps-for-student: -39
   menus_alumni: -38
   menus_arts-sciences-and-universit: -37
   menus_banner-menu: -36
@@ -245,6 +247,11 @@ order:
   menus_student-services: 47
   menus_surgical-technology: 48
   menus_the-transfer-center-: 49
+  vocabularies_cred_type: 50
+  menus_workforce-development-: 50
+  vocabularies_class_format: 50
+  menus_campaign-page-footer-col2: 50
+  vocabularies_tags: 50
   menus_tuition-and-fees: 50
   menus_work-based-learning-menu: 50
   menus_veterans-affairs: 50
@@ -252,15 +259,9 @@ order:
   vocabularies_programs_course_list: 50
   vocabularies_tabs: 50
   vocabularies_degree_options: 50
-  vocabularies_building: 50
-  vocabularies_continuing_education_category: 50
-  vocabularies_class_format: 50
-  menus_workforce-development-: 50
-  menus_tools: 50
-  vocabularies_ctbox: 50
-  vocabularies_academic_level_basic: 50
-  vocabularies_cred_type: 50
   vocabularies_department: 50
+  menus_tools: 50
+  vocabularies_building: 50
   vocabularies_education_goals: 50
   vocabularies_event_type: 50
   vocabularies_learn: 50
@@ -269,6 +270,9 @@ order:
   vocabularies_position_title: 50
   vocabularies_program_type: 50
   vocabularies_academic_level: 50
-  vocabularies_tags: 50
+  vocabularies_academic_level_basic: 50
+  vocabularies_ctbox: 50
+  vocabularies_continuing_education_category: 50
+  menus_campaign-page-footer-column: 50
 _core:
   default_config_hash: f4sH8CGbEMFQXKFoGeaHbmIP_f6cOTi02EeFhHSbYyo

@@ -1,0 +1,32 @@
+uuid: 5755c954-476b-48e3-ba7b-72d7dee5290f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.meeting_attachment.field_meeting_attachment
+    - field.field.paragraph.meeting_attachment.field_meeting_tab
+    - paragraphs.paragraphs_type.meeting_attachment
+  module:
+    - file
+id: paragraph.meeting_attachment.default
+targetEntityType: paragraph
+bundle: meeting_attachment
+mode: default
+content:
+  field_meeting_attachment:
+    weight: 1
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_meeting_tab:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

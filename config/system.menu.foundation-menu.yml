@@ -1,7 +1,12 @@
 uuid: 10b2e9e8-8621-4e90-abfc-1d3cb683217d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - sitemap
+third_party_settings:
+  sitemap:
+    sitemap_display_name: 'Durham Tech Foundation'
 id: foundation-menu
 label: Foundation
 description: 'Menu for Foundation'

@@ -1,9 +1,12 @@
+uuid: 811003a9-fed4-49fb-bfb9-d1174c18d251
 langcode: en
 status: open
 dependencies:
   enforced:
     module:
       - webform
+_core:
+  default_config_hash: 2mY3gdlgja7LgpbvT7LRgFdTbao-xC0g7dLx22mJhRI
 open: null
 close: null
 weight: 0
@@ -237,6 +240,3 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-uuid: 811003a9-fed4-49fb-bfb9-d1174c18d251
-_core:
-  default_config_hash: 2mY3gdlgja7LgpbvT7LRgFdTbao-xC0g7dLx22mJhRI

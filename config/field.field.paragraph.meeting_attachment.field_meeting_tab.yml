@@ -1,0 +1,29 @@
+uuid: ba461362-55c3-4725-9f69-531c4d0e8265
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_meeting_tab
+    - paragraphs.paragraphs_type.meeting_attachment
+    - taxonomy.vocabulary.meeting_tab
+id: paragraph.meeting_attachment.field_meeting_tab
+field_name: field_meeting_tab
+entity_type: paragraph
+bundle: meeting_attachment
+label: 'Meeting Tab'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      meeting_tab: meeting_tab
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

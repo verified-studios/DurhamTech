@@ -1,0 +1,22 @@
+uuid: f3507deb-ce26-4d27-b73f-6b725cabec42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.board_meeting
+  module:
+    - text
+id: node.board_meeting.body
+field_name: body
+entity_type: node
+bundle: board_meeting
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
