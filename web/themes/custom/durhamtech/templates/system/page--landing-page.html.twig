@@ -60,7 +60,7 @@
   <div class="secondary-page-header {% if node.nid.value == '7822' %}apply-header{% endif %}">
     {% block secondary_nav %}
       <div class="secondary-nav {% if (node.fields.field_hero_video.value.0.uri) %}secondary-nav-static{% endif %}"
-           id="secondary-nav" role="secondary-nav">
+           id="secondary-nav" role="navigation">
         <div class="{{ container }}">
           <div class="row">
             {{ page.secondary_nav.secondary_menu }}
@@ -75,7 +75,7 @@
         <div class="banner--video">
           <iframe width="1920" height="1080" src="{{ video }}?autoplay=0&cc_load_policy=1&list={{ video }}&rel=0"
                   frameborder="0"
-                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  allow="autoplay; encrypted-media" title="Hero Video" allowfullscreen></iframe>
         </div>
         {{ page.secondary_nav|without('secondary_menu', 'breadcrumbs') }}
       </div>
