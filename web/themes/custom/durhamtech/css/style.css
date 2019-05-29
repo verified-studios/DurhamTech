@@ -7812,7 +7812,8 @@ a.cta-box:visited {
     #block-banner-menu .menu > li > a:hover svg, #block-banner-menu .menu > li > a:focus svg {
       opacity: 1; }
     #block-banner-menu .menu > li > a svg {
-      color: #be4301;
+      /*color: $dark-orange;*/
+      color: #c74906;
       float: left;
       margin-right: 10px;
       min-height: 35px;
@@ -9974,7 +9975,7 @@ a.social-twitter:focus {
           max-width: 200px;
           text-indent: 0;
           /*border-left: 10px solid $brand-orange;*/
-          border-left: 10px solid #be4301;
+          border-left: 10px solid #E87722;
           -moz-border-top-right-radius: 0;
           -moz-border-bottom-right-radius: 0;
           -webkit-border-top-right-radius: 0;
@@ -10143,7 +10144,8 @@ a.social-twitter:focus {
       padding-left: 5px; }
       .event.column-teaser a.content:hover .continue svg,
       .event.column-teaser a.content:focus .continue svg {
-        color: #be4301; }
+        /*color: $dark-orange;*/
+        color: #c74906; }
 
 .view-display-id-homepage_events .event.column-teaser a.content h4,
 .view-display-id-homepage_events .event.column-teaser a.content p,
