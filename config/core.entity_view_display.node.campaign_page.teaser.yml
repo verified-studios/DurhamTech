@@ -5,6 +5,66 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.campaign_page.body
+    - field.field.node.campaign_page.field_campaign_goals_goal1
+    - field.field.node.campaign_page.field_campaign_goals_goal1_sub
+    - field.field.node.campaign_page.field_campaign_goals_goal2
+    - field.field.node.campaign_page.field_campaign_goals_goal2_sub
+    - field.field.node.campaign_page.field_campaign_goals_goal3
+    - field.field.node.campaign_page.field_campaign_goals_goal3_sub
+    - field.field.node.campaign_page.field_campaign_goals_header
+    - field.field.node.campaign_page.field_campaign_progress_chart
+    - field.field.node.campaign_page.field_campaign_progress_header
+    - field.field.node.campaign_page.field_campaign_progress_stat1
+    - field.field.node.campaign_page.field_campaign_progress_stat1_su
+    - field.field.node.campaign_page.field_campaign_progress_stat2
+    - field.field.node.campaign_page.field_campaign_progress_stat2_su
+    - field.field.node.campaign_page.field_content1_content
+    - field.field.node.campaign_page.field_content1_header
+    - field.field.node.campaign_page.field_content1_image
+    - field.field.node.campaign_page.field_content1_quote
+    - field.field.node.campaign_page.field_content1_quote_name
+    - field.field.node.campaign_page.field_content1_quote_title
+    - field.field.node.campaign_page.field_content2_content
+    - field.field.node.campaign_page.field_content2_header
+    - field.field.node.campaign_page.field_content2_image
+    - field.field.node.campaign_page.field_content2_quote
+    - field.field.node.campaign_page.field_content2_quote_name
+    - field.field.node.campaign_page.field_content2_quote_title
+    - field.field.node.campaign_page.field_content2_stat1
+    - field.field.node.campaign_page.field_content2_stat1_sub
+    - field.field.node.campaign_page.field_content2_stat2
+    - field.field.node.campaign_page.field_content2_stat2_sub
+    - field.field.node.campaign_page.field_content3_content
+    - field.field.node.campaign_page.field_content3_header
+    - field.field.node.campaign_page.field_content3_image
+    - field.field.node.campaign_page.field_content_area1_quote_title2
+    - field.field.node.campaign_page.field_content_area2_quote_title2
+    - field.field.node.campaign_page.field_header_background_image
+    - field.field.node.campaign_page.field_header_background_video
+    - field.field.node.campaign_page.field_header_campaign_logo
+    - field.field.node.campaign_page.field_header_cta_button
+    - field.field.node.campaign_page.field_header_dt_logo
+    - field.field.node.campaign_page.field_header_tagline
+    - field.field.node.campaign_page.field_student1_image
+    - field.field.node.campaign_page.field_student1_quote
+    - field.field.node.campaign_page.field_student1_quote_name
+    - field.field.node.campaign_page.field_student1_quote_title
+    - field.field.node.campaign_page.field_student1_quote_title2
+    - field.field.node.campaign_page.field_student2_image
+    - field.field.node.campaign_page.field_student2_quote
+    - field.field.node.campaign_page.field_student2_quote_name
+    - field.field.node.campaign_page.field_student2_quote_title
+    - field.field.node.campaign_page.field_student2_quote_title2
+    - field.field.node.campaign_page.field_student3_image
+    - field.field.node.campaign_page.field_student3_quote
+    - field.field.node.campaign_page.field_student3_quote_name
+    - field.field.node.campaign_page.field_student3_quote_title
+    - field.field.node.campaign_page.field_student3_quote_title2
+    - field.field.node.campaign_page.field_ways_to_give_content
+    - field.field.node.campaign_page.field_ways_to_give_header
+    - field.field.node.campaign_page.field_your_gift_content
+    - field.field.node.campaign_page.field_your_gift_cta_button
+    - field.field.node.campaign_page.field_your_gift_header
     - node.type.campaign_page
   module:
     - text

@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Programs Course List'
 vid: programs_course_list
 description: ''
-hierarchy: 0
 weight: 0

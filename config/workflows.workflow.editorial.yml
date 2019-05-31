@@ -66,3 +66,4 @@ type_settings:
     node:
       - event
       - page
+  default_moderation_state: draft

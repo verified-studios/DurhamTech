@@ -1,0 +1,36 @@
+uuid: 34b6cac3-a7e8-479b-bd62-ac9c374016a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.board_meeting.body
+    - field.field.node.board_meeting.field_meeting_attachment
+    - field.field.node.board_meeting.field_meeting_date
+    - field.field.node.board_meeting.field_meeting_location
+    - node.type.board_meeting
+  module:
+    - text
+    - user
+id: node.board_meeting.teaser
+targetEntityType: node
+bundle: board_meeting
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_meeting_attachment: true
+  field_meeting_date: true
+  field_meeting_location: true

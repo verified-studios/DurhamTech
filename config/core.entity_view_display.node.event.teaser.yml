@@ -8,9 +8,11 @@ dependencies:
     - field.field.node.event.field_associated_program
     - field.field.node.event.field_banner_image
     - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_end_date
     - field.field.node.event.field_event_location
     - field.field.node.event.field_event_subtype
     - field.field.node.event.field_event_type
+    - field.field.node.event.field_exclude_from_search
     - field.field.node.event.field_feature_event_image
     - field.field.node.event.field_featured
     - field.field.node.event.field_rich_text
@@ -32,6 +34,11 @@ targetEntityType: node
 bundle: event
 mode: teaser
 content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   field_abstract:
     type: basic_string
     weight: 4
@@ -76,8 +83,10 @@ hidden:
   addtoany: true
   field_associated_program: true
   field_banner_image: true
+  field_event_end_date: true
   field_event_subtype: true
   field_event_type: true
+  field_exclude_from_search: true
   field_featured: true
   field_start_date: true
   links: true

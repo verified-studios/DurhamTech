@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Academic Level (Course)'
 vid: academic_level
 description: 'This vocabulary indicates the academic area.'
-hierarchy: 0
 weight: 0

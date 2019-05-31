@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Event Type'
 vid: event_type
 description: 'Type of event, used for organizing and filtering events. Flat structure'
-hierarchy: 0
 weight: 0

@@ -1,0 +1,9 @@
+uuid: 65d0f8f5-204d-45bf-8f6b-6539bd81f432
+langcode: en
+status: true
+dependencies: {  }
+id: meeting_attachment
+label: 'Meeting Attachment'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

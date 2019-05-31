@@ -1,0 +1,22 @@
+uuid: 198ef516-cdc9-4cd9-a0ff-27112271aae6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: board_meeting
+label: 'Board Meeting'
+type: 'canonical_entities:node'
+pattern: '/meetings/[node:field_meeting_date:value]'
+selection_criteria:
+  8ae53d4e-0882-41dc-85fa-b1ac27730fa7:
+    id: node_type
+    bundles:
+      board_meeting: board_meeting
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8ae53d4e-0882-41dc-85fa-b1ac27730fa7
+selection_logic: and
+weight: -5
+relationships: {  }

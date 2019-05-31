@@ -5,5 +5,4 @@ dependencies: {  }
 name: Learn
 vid: learn
 description: 'Subjects areas for home page question I want to learn about'
-hierarchy: 0
 weight: 0

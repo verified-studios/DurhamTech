@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Cred Type'
 vid: cred_type
 description: ''
-hierarchy: 0
 weight: 0

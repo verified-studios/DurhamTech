@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Class Format'
 vid: class_format
 description: 'Format of an individual class, used for organizing and filtering courses. Flat structure'
-hierarchy: 0
 weight: 0

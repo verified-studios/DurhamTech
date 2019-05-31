@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.program.field_degree_option
     - field.field.node.program.field_description
     - field.field.node.program.field_financial_aid_eligible
+    - field.field.node.program.field_keywords
     - field.field.node.program.field_learn_category
     - field.field.node.program.field_min_required_credits
     - field.field.node.program.field_min_required_inst
@@ -22,6 +23,9 @@ dependencies:
     - field.field.node.program.field_program_id
     - field.field.node.program.field_program_image
     - field.field.node.program.field_program_printable
+    - field.field.node.program.field_program_printable2
+    - field.field.node.program.field_program_printable2_name
+    - field.field.node.program.field_program_printable_name
     - field.field.node.program.field_program_stats
     - field.field.node.program.field_program_type
     - field.field.node.program.field_rich_text
@@ -143,6 +147,7 @@ hidden:
   field_courses: true
   field_cred_type: true
   field_financial_aid_eligible: true
+  field_keywords: true
   field_learn_category: true
   field_licensure_pass_rate: true
   field_min_required_credits: true
@@ -151,5 +156,8 @@ hidden:
   field_program_department: true
   field_program_id: true
   field_program_printable: true
+  field_program_printable2: true
+  field_program_printable2_name: true
+  field_program_printable_name: true
   field_rich_text: true
   links: true

@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'CTA Box'
 vid: ctbox
 description: ''
-hierarchy: 1
 weight: 0

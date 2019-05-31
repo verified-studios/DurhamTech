@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: veterans-affairs
-label: 'Veterans Affairs'
+label: 'Veterans Services '
 description: 'For Student Services '
 locked: false
