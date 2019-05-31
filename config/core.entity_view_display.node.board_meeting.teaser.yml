@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.board_meeting.body
+    - field.field.node.board_meeting.field_meeting_attachment
+    - field.field.node.board_meeting.field_meeting_date
+    - field.field.node.board_meeting.field_meeting_location
     - node.type.board_meeting
   module:
     - text
@@ -27,4 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_meeting_attachment: true
+  field_meeting_date: true
+  field_meeting_location: true

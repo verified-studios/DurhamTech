@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Academic Level (Basic)'
 vid: academic_level_basic
 description: 'For use on homepage and general data analysis.'
-hierarchy: 0
 weight: 0

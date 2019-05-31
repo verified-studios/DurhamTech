@@ -5,5 +5,4 @@ dependencies: {  }
 name: Position/Title
 vid: position_title
 description: 'Identification of roles for people working at Durham Tech. Hierarchal structure'
-hierarchy: 0
 weight: 0

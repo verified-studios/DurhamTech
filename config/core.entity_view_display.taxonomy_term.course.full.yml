@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.taxonomy_term.full
     - field.field.taxonomy_term.course.field_academic_level
     - field.field.taxonomy_term.course.field_average_cost
+    - field.field.taxonomy_term.course.field_class_count
     - field.field.taxonomy_term.course.field_class_format
     - field.field.taxonomy_term.course.field_contact_hours
     - field.field.taxonomy_term.course.field_corequisites
@@ -15,6 +16,7 @@ dependencies:
     - field.field.taxonomy_term.course.field_description
     - field.field.taxonomy_term.course.field_division
     - field.field.taxonomy_term.course.field_local_description
+    - field.field.taxonomy_term.course.field_location
     - field.field.taxonomy_term.course.field_requisites
     - field.field.taxonomy_term.course.field_requisites_text
     - field.field.taxonomy_term.course.field_seats
@@ -129,7 +131,9 @@ content:
     type: string
     region: content
 hidden:
+  field_class_count: true
   field_corequisites: true
   field_local_description: true
+  field_location: true
   field_requisites: true
   field_seats: true

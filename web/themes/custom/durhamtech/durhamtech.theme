@@ -34,6 +34,7 @@ function durhamtech_preprocess_field(&$variables, $hook) {
 }
 
 function durhamtech_preprocess_page(&$variables) {
+  $a=1;
   $banner = NULL;
   $current_path = \Drupal::service('path.current')->getPath();
   $variables['body_classes'] = 'zaboinga';
@@ -143,7 +144,6 @@ function durhamtech_preprocess_page(&$variables) {
   if($banner !== NULL) {
     $banner = reset($banner);
   }
-
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node !== NULL) {
     // Load a default based on url pattern.
@@ -212,6 +212,7 @@ function durhamtech_preprocess_page(&$variables) {
         $banner = reset($banner);
       }
     }
+
   } else {
     $entity = \Drupal::entityTypeManager()->getStorage("media")->load(1);
     if (isset($entity)) {
@@ -328,6 +329,11 @@ function durhamtech_preprocess_node(&$variables)
       }
     }
     $variables['content']['next_app_deadline'] = !empty($next_period) ? $next_period : NULL;
+  }
+
+  if ($variables['node']->bundle() === 'board_meeting') {
+    $variables['date_formatted'] =$variables['node']->field_meeting_date->date->format('Y-m-d');
+    $a=1;
   }
 }
 

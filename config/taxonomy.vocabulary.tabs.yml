@@ -5,5 +5,4 @@ dependencies: {  }
 name: Tabs
 vid: tabs
 description: 'for the Apply Now page'
-hierarchy: 1
 weight: 0

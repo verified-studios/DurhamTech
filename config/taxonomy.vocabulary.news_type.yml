@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'News Type'
 vid: news_type
 description: 'Type of news article, used for organizing and filtering news content. Flat structure'
-hierarchy: 1
 weight: 0

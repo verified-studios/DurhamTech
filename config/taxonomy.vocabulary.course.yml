@@ -5,5 +5,4 @@ dependencies: {  }
 name: Course
 vid: course
 description: 'Taxonomy used to create individual course pages'
-hierarchy: 0
 weight: 0

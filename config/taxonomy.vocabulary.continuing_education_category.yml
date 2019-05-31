@@ -5,5 +5,4 @@ dependencies: {  }
 name: 'Continuing education category'
 vid: continuing_education_category
 description: ''
-hierarchy: 0
 weight: 0

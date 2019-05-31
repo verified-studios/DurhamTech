@@ -5,5 +5,4 @@ dependencies: {  }
 name: Department
 vid: department
 description: 'Department a person is involved with. Used for filtering Faculty directory. Hierarchal Structure'
-hierarchy: 0
 weight: 0

@@ -82,27 +82,45 @@
         </h2>
     {% endif %}
     {{ title_suffix }}
-
+    <br /><br />
     <div{{ content_attributes.addClass('content') }}>
         {#{% set meeting_date = content.field_meeting_date.0['#text']|date('U') %}#}
-        <h2 class="page-title">{{ label }}</h2>
         {% if meeting_date or content.field_meeting_location.0 %}
-            <div class="event-data text-center clearfix">
+            <div class="event-data clearfix">
                 <div class="row">
                     <div class="event-date col-md-4">
-                        <h4 class="event-data-title">Meeting Date</h4>
-                        {{ content.field_meeting_date.0 }}
+                        <h3 class="event-data-title">Meeting Date</h3>
+                        {{ date_formatted }}
 
                         {#{{ meeting_date|format_date('custom', 'F d, Y') }}}#}
                     </div>
                     {% if content.field_meeting_location.0 %}
                         <div class="event-location col-md-4">
-                            <h4 class="event-data-title">Location</h4>
+                            <h3 class="event-data-title">Location</h3>
                             {{ content.field_meeting_location }}
                         </div>
                     {% endif %}
+                    <div class="event-date col-md-4">
+                        <h3 class="event-data-title">Archives</h3>
+                        <a href="">View Archives</a>
+                    </div>
                 </div>
             </div>
+        <div>
+            {% for paragraph in content.field_meeting_attachment %}
+                {% if paragraph['#paragraph'].get('field_meeting_attachment') is not empty %}
+                {% set tid = paragraph['#paragraph'].get('field_meeting_tab').target_id %}
+                <p>{% if tid %}
+                    <h3>{{ drupal_field('name', 'taxonomy_term', tid) }}</h3>
+                {% endif %}
+                <a href="{{ file_url (paragraph['#paragraph'].get('field_meeting_attachment').entity.uri.value) }}">
+                    Download {{ paragraph['#paragraph'].get('field_meeting_attachment').entity.label }}
+                </a>
+                </p>
+                {% endif %}
+            {% endfor %}
+            <br /><br />
+        </div>
         {% endif %}
     </div>
 
