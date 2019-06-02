@@ -358,6 +358,9 @@ $main-nav-height: 60px;
   z-index: 10;
   width: 100%;
   display: none;
+  .block-title {
+    display: none;
+  }
 }
 .block-views-exposed-filter-blocksearch-page-1 {
   position: relative;

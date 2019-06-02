@@ -6870,6 +6870,8 @@ body {
   z-index: 10;
   width: 100%;
   display: none; }
+  #searchbar .block-title {
+    display: none; }
 
 .block-views-exposed-filter-blocksearch-page-1 {
   position: relative; }
