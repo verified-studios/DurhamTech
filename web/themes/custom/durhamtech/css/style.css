@@ -10289,16 +10289,16 @@ a.social-twitter:focus {
           max-width: 100%;
           width: auto;
           margin-left: -5px; } }
-  #views-exposed-form-directory-page-1 #edit-actions {
+  #views-exposed-form-directory-page-1 .form-actions.form-group.js-form-wrapper.form-wrapper {
     margin-bottom: 15px; }
-    #views-exposed-form-directory-page-1 #edit-actions .btn {
+    #views-exposed-form-directory-page-1 .form-actions.form-group.js-form-wrapper.form-wrapper .btn {
       border: none;
       display: inline-block;
       font-size: 1.25rem;
       min-width: 100px;
       padding: 1rem 2rem;
       margin: 2rem 1rem 0 0; }
-      #views-exposed-form-directory-page-1 #edit-actions .btn#edit-reset {
+      #views-exposed-form-directory-page-1 .form-actions.form-group.js-form-wrapper.form-wrapper .btn#edit-reset {
         background-color: #4c4c4c;
         min-width: 100px;
         margin-left: 1rem; }
