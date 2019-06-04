@@ -10,27 +10,38 @@ dependencies:
     - field.field.node.board_meeting.field_meeting_location
     - node.type.board_meeting
   module:
-    - text
+    - datetime
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.board_meeting.teaser
 targetEntityType: node
 bundle: board_meeting
 mode: teaser
 content:
-  body:
+  field_meeting_date:
+    type: datetime_default
+    weight: 0
+    region: content
     label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
     settings:
-      trim_length: 600
+      format_type: medium
+      timezone_override: ''
     third_party_settings: {  }
+  field_meeting_location:
+    type: string
+    weight: 1
     region: content
-  links:
-    weight: 100
-    settings: {  }
+    label: hidden
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
-    region: content
 hidden:
+  body: true
   field_meeting_attachment: true
-  field_meeting_date: true
-  field_meeting_location: true
+  links: true
