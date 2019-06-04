@@ -16,9 +16,9 @@ slick:
 
 juicer.io:
   js:
-    'https://assets.juicer.io/embed.js': { external: true }
+    'https://assets.juicer.io/embed.js': { external: true, attributes: { defer: true, async: true} }
   css:
     base:
-      'https://assets.juicer.io/embed.css': { external: true }
+      'https://assets.juicer.io/embed.css': { external: true, attributes: { defer: true, async: true} }
   dependencies:
   - core/jquery
