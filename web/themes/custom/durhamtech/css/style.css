@@ -8410,6 +8410,10 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   #views-exposed-form-course-search-page-1 .form--inline #edit-actions,
   #views-exposed-form-careers-search-page-1 .form--inline #edit-actions {
     width: 100%; }
+  #views-exposed-form-programs-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper,
+  #views-exposed-form-course-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper,
+  #views-exposed-form-careers-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper {
+    width: 100%; }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search,
   #views-exposed-form-programs-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-course-search-page-1 .form--inline #edit-submit-programs-search,
