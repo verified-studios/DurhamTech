@@ -1,0 +1,119 @@
+.board-meeting {
+  .date {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    padding-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 55px;
+    vertical-align: top;
+
+    .date-number {
+      font-size: em(32);
+    }
+  }
+
+  .content {
+    border-left: 2px solid $black;
+    display: inline-block;
+    padding-left: 2rem;
+    width: calc(100% - 60px);
+    @media #{$normal} {
+      padding-left: 1rem;
+    }
+    .field--name-field-description {
+      margin-bottom: 15px;
+    }
+  }
+
+  .event-buttons {
+     text-align: center;
+
+     .btn {
+       margin-bottom: 10px;
+     }
+
+     .social-media {
+       a {
+         float: none;
+         display: inline-block;
+       }
+     }
+
+     .a2a_kit {
+       float: none;
+       margin: 0 auto;
+     }
+   }
+}
+
+.board-meeting.teaser {
+  .content {
+    width: calc(100% - 185px);
+  }
+  .event-buttons {
+    display: inline-block;
+    width: 120px;
+    vertical-align: top;
+
+    .view-more {
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      margin-bottom: 10px;
+    }
+
+    .social-media {
+      a {
+        float: none;
+        display: inline-block;
+      }
+    }
+
+    .a2a_kit {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .social-media {
+      text-align: center;
+
+      svg {
+        color: $green;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+
+// Events view
+/*.view-id-events_search {*/
+  .view-content {
+    padding: 0 30px;
+
+    @media #{$wide} {
+      padding: 0 15px;
+    }
+
+    .views-row {
+      border-bottom: 1px solid $black;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  /*&.view-display-id-attachment_1 {
+    .view-content {
+      padding: 0;
+
+      .views-row {
+        border-bottom: none;
+        //padding: 10px;
+      }
+    }
+  }*/
+/*
+}*/

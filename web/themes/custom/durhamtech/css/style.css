@@ -11145,4 +11145,85 @@ footer.footer {
     padding: 15px 0;*/
     margin-top: 0 !important; }
 
+.board-meeting .date {
+  display: inline-block;
+  font-weight: 600;
+  line-height: 1;
+  padding-right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 55px;
+  vertical-align: top; }
+  .board-meeting .date .date-number {
+    font-size: 2em; }
+
+.board-meeting .content {
+  border-left: 2px solid #000000;
+  display: inline-block;
+  padding-left: 2rem;
+  width: calc(100% - 60px); }
+  @media screen and (min-width: 992px) {
+    .board-meeting .content {
+      padding-left: 1rem; } }
+  .board-meeting .content .field--name-field-description {
+    margin-bottom: 15px; }
+
+.board-meeting .event-buttons {
+  text-align: center; }
+  .board-meeting .event-buttons .btn {
+    margin-bottom: 10px; }
+  .board-meeting .event-buttons .social-media a {
+    float: none;
+    display: inline-block; }
+  .board-meeting .event-buttons .a2a_kit {
+    float: none;
+    margin: 0 auto; }
+
+.board-meeting.teaser .content {
+  width: calc(100% - 185px); }
+
+.board-meeting.teaser .event-buttons {
+  display: inline-block;
+  width: 120px;
+  vertical-align: top; }
+  .board-meeting.teaser .event-buttons .view-more {
+    margin-bottom: 10px; }
+  .board-meeting.teaser .event-buttons .btn {
+    margin-bottom: 10px; }
+  .board-meeting.teaser .event-buttons .social-media a {
+    float: none;
+    display: inline-block; }
+  .board-meeting.teaser .event-buttons .a2a_kit {
+    float: none;
+    margin: 0 auto; }
+  .board-meeting.teaser .event-buttons .social-media {
+    text-align: center; }
+    .board-meeting.teaser .event-buttons .social-media svg {
+      color: #00843D;
+      font-size: 2rem; }
+
+/*.view-id-events_search {*/
+.view-content {
+  padding: 0 30px; }
+  @media screen and (min-width: 1200px) {
+    .view-content {
+      padding: 0 15px; } }
+  .view-content .views-row {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 20px;
+    padding-bottom: 20px; }
+
+/*&.view-display-id-attachment_1 {
+    .view-content {
+      padding: 0;
+
+      .views-row {
+        border-bottom: none;
+        //padding: 10px;
+      }
+    }
+  }*/
+/*
+}*/
+
 /*# sourceMappingURL=style.css.map */
