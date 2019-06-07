@@ -11152,6 +11152,9 @@ footer.footer {
 .block-views-blockboard-meetings-block-1 .block-title {
   display: none; }
 
+.board-meeting.teaser .content {
+  border-left: 2px solid #000000; }
+
 .board-meeting {
   margin-top: 30px; }
   .board-meeting .date {
