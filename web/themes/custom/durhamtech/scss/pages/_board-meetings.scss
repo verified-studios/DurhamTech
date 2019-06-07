@@ -4,6 +4,12 @@
   }
 }
 
+.board-meeting.teaser {
+  .content {
+    border-left: 2px solid $black;
+  }
+}
+
 .board-meeting {
   margin-top: 30px;
   .date {

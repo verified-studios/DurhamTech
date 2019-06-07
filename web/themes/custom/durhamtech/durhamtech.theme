@@ -332,8 +332,8 @@ function durhamtech_preprocess_node(&$variables)
   }
 
   if ($variables['node']->bundle() === 'board_meeting') {
-    $variables['date_formatted'] =$variables['node']->field_meeting_date->date->format('Y-m-d');
-    $a=1;
+    $variables['day'] = $variables['node']->field_meeting_date->date->format('d');
+    $variables['month'] = $variables['node']->field_meeting_date->date->format('M');
   }
 }
 

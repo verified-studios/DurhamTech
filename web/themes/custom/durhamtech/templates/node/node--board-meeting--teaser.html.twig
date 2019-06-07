@@ -76,9 +76,8 @@
   ]
 %}
 <article{{ attributes.addClass(classes) }}>
-  {% set meeting_date = content.field_event_date.0['#text']|date('U') %}
   <div class="date">
-    {{ meeting_date|format_date('custom', 'M') }}<br /><span class="date-number">{{ meeting_date|format_date('custom', 'd') }}</span>
+    {{ month }}<br /><span class="date-number">{{ day}}</span>
   </div>
   <div{{ content_attributes.addClass('content') }}>
     <a href="{{ url }}">
