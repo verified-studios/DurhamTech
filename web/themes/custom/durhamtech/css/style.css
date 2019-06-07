@@ -11149,39 +11149,44 @@ footer.footer {
     padding: 15px 0;*/
     margin-top: 0 !important; }
 
-.board-meeting .date {
-  display: inline-block;
-  font-weight: 600;
-  line-height: 1;
-  padding-right: 10px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 55px;
-  vertical-align: top; }
-  .board-meeting .date .date-number {
-    font-size: 2em; }
+.block-views-blockboard-meetings-block-1 .block-title {
+  display: none; }
 
-.board-meeting .content {
-  border-left: 2px solid #000000;
-  display: inline-block;
-  padding-left: 2rem;
-  width: calc(100% - 60px); }
-  @media screen and (min-width: 992px) {
-    .board-meeting .content {
-      padding-left: 1rem; } }
-  .board-meeting .content .field--name-field-description {
-    margin-bottom: 15px; }
-
-.board-meeting .event-buttons {
-  text-align: center; }
-  .board-meeting .event-buttons .btn {
-    margin-bottom: 10px; }
-  .board-meeting .event-buttons .social-media a {
-    float: none;
-    display: inline-block; }
-  .board-meeting .event-buttons .a2a_kit {
-    float: none;
-    margin: 0 auto; }
+.board-meeting {
+  margin-top: 30px; }
+  .board-meeting .date {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+    padding-right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 55px;
+    vertical-align: top; }
+    .board-meeting .date .date-number {
+      font-size: 2em; }
+  .board-meeting .content {
+    border-left: 2px solid #000000;
+    display: inline-block;
+    padding-left: 2rem;
+    width: calc(100% - 60px); }
+    @media screen and (min-width: 992px) {
+      .board-meeting .content {
+        padding-left: 1rem; } }
+    .board-meeting .content .field--name-field-description {
+      margin-bottom: 15px; }
+  .board-meeting .event-buttons {
+    text-align: center; }
+    .board-meeting .event-buttons .btn {
+      margin-bottom: 10px; }
+    .board-meeting .event-buttons .social-media {
+      display: none; }
+      .board-meeting .event-buttons .social-media a {
+        float: none;
+        display: inline-block; }
+    .board-meeting .event-buttons .a2a_kit {
+      float: none;
+      margin: 0 auto; }
 
 .board-meeting.teaser .content {
   width: calc(100% - 185px); }

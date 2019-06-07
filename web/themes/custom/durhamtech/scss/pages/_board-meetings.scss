@@ -1,4 +1,11 @@
+.block-views-blockboard-meetings-block-1 {
+  .block-title {
+    display: none;
+  }
+}
+
 .board-meeting {
+  margin-top: 30px;
   .date {
     display: inline-block;
     font-weight: 600;
@@ -35,6 +42,7 @@
      }
 
      .social-media {
+       display: none;
        a {
          float: none;
          display: inline-block;
