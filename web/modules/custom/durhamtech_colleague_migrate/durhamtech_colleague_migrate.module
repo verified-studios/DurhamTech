@@ -9,6 +9,24 @@
   */
 
   /**
+   * Implements hook_page_attachments().
+   */
+  function durhamtech_colleague_migrate_page_attachments(array &$page) {
+    $path   = \Drupal::service('path.current')->getPath();
+
+    $admin_pages = (substr($path, 0, 7) != '/admin/');
+    if ($admin_pages) {
+      $script = "var _monsido = _monsido || [];
+_monsido.push(['_setDomainToken', 'BJlfUN3rhuqosvozhTTgXg']);
+_monsido.push(['_withStatistics', 'false']);\n";
+      $page['#attached']['html_head'][] = [
+        ['#tag' => 'script', '#value' => $script],
+        'monsido',
+      ];
+    }
+  }
+
+  /**
   * Implements hook_form_alter().
   */
   function durhamtech_colleague_migrate_form_alter(&$form, $form_state, $form_id) {

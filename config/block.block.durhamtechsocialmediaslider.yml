@@ -29,6 +29,6 @@ visibility:
       node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: "/report-conduct\r\n/office-institutional-equity-and-inclusion\r\n"
+    pages: "/report-conduct\r\n/office-institutional-equity-and-inclusion\r\n/board-meetings\r\n"
     negate: true
     context_mapping: {  }

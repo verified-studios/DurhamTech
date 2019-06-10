@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_meeting_date
-    - field.storage.node.field_meeting_location
     - node.type.board_meeting
   module:
     - better_exposed_filters
@@ -77,75 +76,22 @@ display:
           offset: 0
       style:
         type: default
-      row:
-        type: 'entity:node'
         options:
-          relationship: none
-          view_mode: teaser
-      fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          settings:
-            link_to_entity: true
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
+          grouping:
+            -
+              field: nothing
+              rendered: true
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
           hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+      fields:
         field_meeting_date:
           id: field_meeting_date
           table: node__field_meeting_date
@@ -154,7 +100,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -198,7 +144,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: html_date
+            format_type: html_year
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -210,10 +156,59 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_meeting_location:
-          id: field_meeting_location
-          table: node__field_meeting_location
-          field: field_meeting_location
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '{{ field_meeting_date }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          plugin_id: custom
+        rendered_entity:
+          id: rendered_entity
+          table: node
+          field: rendered_entity
           relationship: none
           group_type: group
           admin_label: ''
@@ -258,21 +253,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: false
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          view_mode: teaser
+          entity_type: node
+          plugin_id: rendered_entity
       filters:
         status:
           value: '1'
@@ -294,55 +277,101 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+        field_meeting_date_value:
+          id: field_meeting_date_value
+          table: node__field_meeting_date
+          field: field_meeting_date_value
           relationship: none
           group_type: group
           admin_label: ''
+          order: DESC
           exposed: false
           expose:
             label: ''
-          granularity: second
-        title:
-          id: title
-          table: node_field_data
-          field: title
+          granularity: day
+          plugin_id: datetime
+      title: 'Board Meetings'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
-          exposed: true
-          expose:
-            label: Title
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-      title: 'Board Meetings'
-      header: {  }
-      footer: {  }
+          empty: false
+          tokenize: false
+          content:
+            value: '<br /><br />'
+            format: basic_html
+          plugin_id: text
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<br /><br />'
+            format: basic_html
+          plugin_id: text
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
       css_class: sidebar
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:core.entity_view_display.node.alert.default'
+        - 'config:core.entity_view_display.node.alert.teaser'
+        - 'config:core.entity_view_display.node.application_deadlines.default'
+        - 'config:core.entity_view_display.node.application_deadlines.teaser'
+        - 'config:core.entity_view_display.node.board_meeting.default'
+        - 'config:core.entity_view_display.node.board_meeting.teaser'
+        - 'config:core.entity_view_display.node.campaign_page.default'
+        - 'config:core.entity_view_display.node.campaign_page.teaser'
+        - 'config:core.entity_view_display.node.career.default'
+        - 'config:core.entity_view_display.node.career.teaser'
+        - 'config:core.entity_view_display.node.class.default'
+        - 'config:core.entity_view_display.node.class.table_format'
+        - 'config:core.entity_view_display.node.class.teaser'
+        - 'config:core.entity_view_display.node.event.column_teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.featured'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.homepage_path.default'
+        - 'config:core.entity_view_display.node.homepage_path.teaser'
+        - 'config:core.entity_view_display.node.landing_page.default'
+        - 'config:core.entity_view_display.node.landing_page.teaser'
+        - 'config:core.entity_view_display.node.new_article.column_teaser'
+        - 'config:core.entity_view_display.node.new_article.default'
+        - 'config:core.entity_view_display.node.new_article.featured'
+        - 'config:core.entity_view_display.node.new_article.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.program.default'
+        - 'config:core.entity_view_display.node.program.programs_search_teaser'
+        - 'config:core.entity_view_display.node.program.teaser'
+        - 'config:core.entity_view_display.node.quote.default'
+        - 'config:core.entity_view_display.node.quote.teaser'
+        - 'config:core.entity_view_display.node.webform.default'
+        - 'config:core.entity_view_display.node.webform.teaser'
         - 'config:field.storage.node.field_meeting_date'
-        - 'config:field.storage.node.field_meeting_location'
   block_1:
     display_plugin: block
     id: block_1
@@ -355,9 +384,40 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
       tags:
+        - 'config:core.entity_view_display.node.alert.default'
+        - 'config:core.entity_view_display.node.alert.teaser'
+        - 'config:core.entity_view_display.node.application_deadlines.default'
+        - 'config:core.entity_view_display.node.application_deadlines.teaser'
+        - 'config:core.entity_view_display.node.board_meeting.default'
+        - 'config:core.entity_view_display.node.board_meeting.teaser'
+        - 'config:core.entity_view_display.node.campaign_page.default'
+        - 'config:core.entity_view_display.node.campaign_page.teaser'
+        - 'config:core.entity_view_display.node.career.default'
+        - 'config:core.entity_view_display.node.career.teaser'
+        - 'config:core.entity_view_display.node.class.default'
+        - 'config:core.entity_view_display.node.class.table_format'
+        - 'config:core.entity_view_display.node.class.teaser'
+        - 'config:core.entity_view_display.node.event.column_teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.featured'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.homepage_path.default'
+        - 'config:core.entity_view_display.node.homepage_path.teaser'
+        - 'config:core.entity_view_display.node.landing_page.default'
+        - 'config:core.entity_view_display.node.landing_page.teaser'
+        - 'config:core.entity_view_display.node.new_article.column_teaser'
+        - 'config:core.entity_view_display.node.new_article.default'
+        - 'config:core.entity_view_display.node.new_article.featured'
+        - 'config:core.entity_view_display.node.new_article.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.program.default'
+        - 'config:core.entity_view_display.node.program.programs_search_teaser'
+        - 'config:core.entity_view_display.node.program.teaser'
+        - 'config:core.entity_view_display.node.quote.default'
+        - 'config:core.entity_view_display.node.quote.teaser'
+        - 'config:core.entity_view_display.node.webform.default'
+        - 'config:core.entity_view_display.node.webform.teaser'
         - 'config:field.storage.node.field_meeting_date'
-        - 'config:field.storage.node.field_meeting_location'

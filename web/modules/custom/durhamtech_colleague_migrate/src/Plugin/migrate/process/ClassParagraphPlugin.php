@@ -103,18 +103,24 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     });
     $rowCount = sizeof($start_date_row);
     foreach ($start_date_row as $start_date_key => $start_date) {
-      $class_data_items[$start_date_key]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+      if ($this->validateDate($start_date)) {
+        $class_data_items[$start_date_key]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+      }
     }
 
     if (!empty($class_data_items[0]['field_start_date']) && $start_date_key < $row_key) {
       for ($i = $start_date_key + 1; $i <= $row_key; $i++) {
-        $class_data_items[$i]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+        if ($this->validateDate($start_date)) {
+          $class_data_items[$i]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+        }
       }
     }
 
     if (!empty($class_data_items[0]['field_start_date']) && $start_date_key < $room_key) {
       for ($i = $start_date_key + 1; $i <= $room_key; $i++) {
-       $class_data_items[$i]['field_start_date'] = $this->transformDate($start_date,'n/j/y','Y-m-d');
+        if ($this->validateDate($start_date)) {
+          $class_data_items[$i]['field_start_date'] = $this->transformDate($start_date, 'n/j/y', 'Y-m-d');
+        }
       }
     }
 
@@ -126,18 +132,24 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     });
     $rowCount = sizeof($end_date_row);
     foreach ($end_date_row as $end_date_key => $end_date) {
-      $class_data_items[$end_date_key]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+      if ($this->validateDate($end_date)) {
+        $class_data_items[$end_date_key]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+      }
     }
 
     if (!empty($class_data_items[0]['field_end_date']) && $end_date_key < $row_key) {
       for ($i = $end_date_key + 1; $i <= $row_key; $i++) {
-        $class_data_items[$i]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+        if ($this->validateDate($end_date)) {
+          $class_data_items[$i]['field_end_date'] = $this->transformDate($end_date, 'n/j/y', 'Y-m-d');
+        }
       }
     }
 
     if (!empty($class_data_items[0]['field_end_date']) && $end_date_key < $room_key) {
       for ($i = $end_date_key + 1; $i <= $room_key; $i++) {
-        $class_data_items[$i]['field_end_date'] = $this->transformDate($end_date,'n/j/y','Y-m-d');
+        if ($this->validateDate($end_date)) {
+          $class_data_items[$i]['field_end_date'] = $this->transformDate($end_date, 'n/j/y', 'Y-m-d');
+        }
       }
     }
 
@@ -241,6 +253,17 @@ class ClassParagraphPlugin extends ProcessPluginBase {
     $transformed = DateTimePlus::createFromFormat($fromFormat, $value, $from_timezone, $settings)->format($toFormat, ['timezone' => $to_timezone]);
 
     return $transformed;
+  }
+
+  function validateDate($date, $delimiter = '/')
+  {
+    $tempDate = explode($delimiter, $date);
+
+    if (sizeof($tempDate) < 3) {
+      return false;
+    }
+    // checkdate(month, day, year)
+    return checkdate($tempDate[0], $tempDate[1], $tempDate[2]);
   }
 
 }

@@ -28,3 +28,4 @@ regions:
 libraries:
   - 'durhamtech/global-styling'
   - 'durhamtech/bootstrap-scripts'
+  - 'durhamtech/monsido'
