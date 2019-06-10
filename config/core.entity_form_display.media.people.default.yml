@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.media.people.field_person_image
     - image.style.thumbnail
-    - media_entity.bundle.people
+    - media.type.people
   module:
     - image
     - path

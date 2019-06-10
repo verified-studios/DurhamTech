@@ -9,7 +9,7 @@ dependencies:
     - image.style.thumbnail
     - node.type.career
   module:
-    - media_entity
+    - media
     - node
     - user
 id: career

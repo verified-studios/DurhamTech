@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_icon
-    - media_entity.bundle.icon
+    - media.type.icon
     - paragraphs.paragraphs_type.statistic_with_icon
 id: paragraph.statistic_with_icon.field_icon
 field_name: field_icon

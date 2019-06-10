@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.files
+    - media.type.files
   module:
     - entity_embed
-    - media_entity
+    - media
 label: File
 id: file
 type_id: entity

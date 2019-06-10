@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.media.banner_image.field_banner_image
     - image.style.thumbnail
-    - media_entity.bundle.banner_image
+    - media.type.banner_image
   module:
     - image
     - path

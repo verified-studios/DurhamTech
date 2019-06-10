@@ -1,12 +1,15 @@
 uuid: dfe42154-965b-4403-935a-97eb2ee35010
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media_entity_generic
 id: files
 label: Files
 description: 'Media bundle for uploading various files.'
-type: generic
+source: generic
 queue_thumbnail_downloads: false
 new_revision: false
-type_configuration: {  }
+source_configuration:
+  source_field: field_media_generic
 field_map: {  }

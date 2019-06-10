@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_banner_image
-    - media_entity.bundle.banner_image
+    - media.type.banner_image
     - node.type.page
 id: node.page.field_banner_image
 field_name: field_banner_image

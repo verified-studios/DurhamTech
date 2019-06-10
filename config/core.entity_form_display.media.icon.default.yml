@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.media.icon.field_icon_image
     - image.style.thumbnail
-    - media_entity.bundle.icon
+    - media.type.icon
   module:
     - image
     - path

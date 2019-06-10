@@ -69,8 +69,8 @@ module:
   ldap_servers: 0
   ldap_user: 0
   link: 0
-  media_entity: 0
-  media_entity_image: 0
+  media: 0
+  media_entity_generic: 0
   menu_block: 0
   menu_trail_by_path: 0
   menu_ui: 0

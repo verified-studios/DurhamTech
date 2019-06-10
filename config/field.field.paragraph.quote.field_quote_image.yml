@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_quote_image
-    - media_entity.bundle.banner_image
+    - media.type.banner_image
     - paragraphs.paragraphs_type.quote
 id: paragraph.quote.field_quote_image
 field_name: field_quote_image

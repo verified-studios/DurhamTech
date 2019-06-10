@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.people.field_person_image
-    - media_entity.bundle.people
+    - media.type.people
   module:
     - image
 id: media.people.default

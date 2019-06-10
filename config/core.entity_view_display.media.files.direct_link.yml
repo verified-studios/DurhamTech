@@ -5,7 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.direct_link
     - field.field.media.files.field_file
-    - media_entity.bundle.files
+    - media.type.files
   module:
     - file
 id: media.files.direct_link

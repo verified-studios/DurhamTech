@@ -5,7 +5,7 @@ dependencies:
   module:
     - entity_browser
     - file
-    - media_entity
+    - media
     - user
 id: files_browser
 label: 'Files Browser'

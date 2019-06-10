@@ -3,15 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.banner_image
-    - media_entity.bundle.files
-    - media_entity.bundle.icon
-    - media_entity.bundle.image
-    - media_entity.bundle.people
+    - media.type.banner_image
+    - media.type.files
+    - media.type.icon
+    - media.type.image
+    - media.type.people
   module:
     - entity_browser
     - image
-    - media_entity
+    - media
     - user
 id: entity_browser
 label: 'Entity Browser'

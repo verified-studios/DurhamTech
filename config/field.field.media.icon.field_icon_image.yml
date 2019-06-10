@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_icon_image
-    - media_entity.bundle.icon
+    - media.type.icon
   module:
     - image
 id: media.icon.field_icon_image
