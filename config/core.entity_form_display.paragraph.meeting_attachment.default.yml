@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.meeting_attachment
   module:
     - file
+    - imce
 id: paragraph.meeting_attachment.default
 targetEntityType: paragraph
 bundle: meeting_attachment
@@ -17,7 +18,9 @@ content:
     weight: 1
     settings:
       progress_indicator: throbber
-    third_party_settings: {  }
+    third_party_settings:
+      imce:
+        enabled: true
     type: file_generic
     region: content
   field_meeting_tab:

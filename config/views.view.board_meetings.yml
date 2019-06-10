@@ -167,7 +167,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_meeting_date }}'
+            text: '<b>{{ field_meeting_date }}</b>'
             make_link: false
             path: ''
             absolute: false
