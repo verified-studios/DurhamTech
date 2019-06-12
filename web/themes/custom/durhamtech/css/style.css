@@ -11215,28 +11215,14 @@ footer.footer {
       color: #00843D;
       font-size: 2rem; }
 
-/*.view-id-events_search {*/
-.view-content {
+.view-board-meetings .view-content {
   padding: 0 30px; }
   @media screen and (min-width: 1200px) {
-    .view-content {
+    .view-board-meetings .view-content {
       padding: 0 15px; } }
-  .view-content .views-row {
+  .view-board-meetings .view-content .views-row {
     border-bottom: 1px solid #000000;
     margin-bottom: 20px;
     padding-bottom: 20px; }
-
-/*&.view-display-id-attachment_1 {
-    .view-content {
-      padding: 0;
-
-      .views-row {
-        border-bottom: none;
-        //padding: 10px;
-      }
-    }
-  }*/
-/*
-}*/
 
 /*# sourceMappingURL=style.css.map */
