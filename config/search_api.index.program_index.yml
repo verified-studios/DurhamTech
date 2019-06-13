@@ -3,21 +3,32 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_program_department
     - field.storage.node.field_degree_option
-    - field.storage.node.field_program_type
+    - field.storage.node.field_program_department
     - field.storage.node.field_learn_category
+    - field.storage.node.field_program_type
     - search_api.server.durham_tech
     - core.entity_view_mode.node.teaser
   module:
-    - search_api
-    - node
     - taxonomy
+    - node
+    - search_api
 id: program_index
 name: 'Program Index'
 description: ''
 read_only: false
 field_settings:
+  degree_option_name:
+    label: 'Degree Option » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_degree_option:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_degree_option
+      module:
+        - taxonomy
+        - taxonomy
   field_degree_option:
     label: 'Degree Option'
     datasource_id: 'entity:node'
@@ -55,6 +66,9 @@ field_settings:
     datasource_id: 'entity:taxonomy_term'
     property_path: name
     type: string
+    dependencies:
+      module:
+        - taxonomy
   node_grants:
     label: 'Node access information'
     property_path: search_api_node_grants
@@ -79,11 +93,17 @@ field_settings:
     type: boolean
     indexed_locked: true
     type_locked: true
+    dependencies:
+      module:
+        - node
   title:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
     type: text
+    dependencies:
+      module:
+        - node
   uid:
     label: uid
     datasource_id: 'entity:node'
@@ -91,6 +111,9 @@ field_settings:
     type: integer
     indexed_locked: true
     type_locked: true
+    dependencies:
+      module:
+        - node
 datasource_settings:
   'entity:node':
     bundles:
@@ -154,6 +177,14 @@ processor_settings:
     weights:
       preprocess_index: -10
       preprocess_query: -10
+    ignorable_classes:
+      - Pc
+      - Pd
+      - Pe
+      - Pf
+      - Pi
+      - Po
+      - Ps
   ignorecase:
     all_fields: false
     fields:
