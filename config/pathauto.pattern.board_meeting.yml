@@ -7,16 +7,16 @@ dependencies:
 id: board_meeting
 label: 'Board Meeting'
 type: 'canonical_entities:node'
-pattern: '/meetings/[node:field_meeting_date:value]'
+pattern: '/board-meetings/[node:field_meeting_date:date:custom:F-j-Y]'
 selection_criteria:
-  8ae53d4e-0882-41dc-85fa-b1ac27730fa7:
+  cf89c761-31b2-490d-945a-69130e045d19:
     id: node_type
     bundles:
       board_meeting: board_meeting
     negate: false
     context_mapping:
       node: node
-    uuid: 8ae53d4e-0882-41dc-85fa-b1ac27730fa7
+    uuid: cf89c761-31b2-490d-945a-69130e045d19
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -82,37 +82,34 @@
         </h2>
     {% endif %}
     {{ title_suffix }}
-    <br /><br />
     <div{{ content_attributes.addClass('content') }}>
-        {#{% set meeting_date = content.field_meeting_date.0['#text']|date('U') %}#}
-        {% if meeting_date or content.field_meeting_location.0 %}
-            <div class="event-data clearfix">
-                <div class="row">
-                    <div class="event-date col-md-4">
-                        <h3 class="event-data-title">Meeting Date</h3>
-                        {{ date_formatted }}
-
-                        {#{{ meeting_date|format_date('custom', 'F d, Y') }}}#}
+        <h2 class="page-title">{{ label }}</h2>
+        <br /><br />
+        <div class="event-data text-center clearfix">
+            <div class="row">
+                <div class="event-date col-md-4">
+                    <h3 class="event-data-title">Meeting Date</h3>
+                    {{ date_formatted }}
+                </div>
+                {% if content.field_meeting_location.0 %}
+                    <div class="event-location col-md-4">
+                        <h3 class="event-data-title">Location</h3>
+                        {{ content.field_meeting_location }}
                     </div>
-                    {% if content.field_meeting_location.0 %}
-                        <div class="event-location col-md-4">
-                            <h3 class="event-data-title">Location</h3>
-                            {{ content.field_meeting_location }}
-                        </div>
-                    {% endif %}
-                    <div class="event-date col-md-4">
-                        <h3 class="event-data-title">&nbsp;</h3>
-                        <a href="/board-meetings">Back to Meetings Home</a>
-                    </div>
+                {% endif %}
+                <div class="event-date col-md-4">
+                    <h3 class="event-data-title">Board Meetings</h3>
+                    <a href="/board-meetings">Back to Meetings Home</a>
                 </div>
             </div>
+        </div>
         <div>
             {% for paragraph in content.field_meeting_attachment %}
                 {% if paragraph['#paragraph'].get('field_meeting_attachment') is not empty %}
                 {% set tid = paragraph['#paragraph'].get('field_meeting_tab').target_id %}
                 <p>
                     {% if tid %}
-                        <h3>{{ drupal_field('name', 'taxonomy_term', tid) }}</h3>
+                        <h4>{{ drupal_field('name', 'taxonomy_term', tid) }}</h4>
                     {% endif %}
                     <span style="line-height: 1.7em;">
                         {% for attachment in paragraph['#paragraph'].get('field_meeting_attachment') %}
@@ -129,7 +126,6 @@
             {% endfor %}
             <br /><br />
         </div>
-        {% endif %}
     </div>
 
 </article>

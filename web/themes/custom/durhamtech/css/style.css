@@ -5872,6 +5872,12 @@ h4 {
   font-weight: 600;
   color: #000000; }
 
+.event-data-title {
+  color: #00843D;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 0; }
+
 h4.stat-title, h4.event-data-title {
   color: #000000;
   font-size: 1.6rem;
