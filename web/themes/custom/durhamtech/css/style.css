@@ -5856,6 +5856,9 @@ h3 {
   font-size: 1.5em;
   font-weight: 300; }
 
+h3.event-data-title {
+  font-size: 1.2em; }
+
 h3.section-title, .block-views .block-title, .node--type-landing_page .block-title {
   font-size: 3rem;
   margin-bottom: 30px; }
