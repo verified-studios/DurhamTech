@@ -5858,7 +5858,10 @@ h3 {
 
 h3.event-data-title {
   font-size: 1.2em;
-  font-weight: 500; }
+  font-weight: 600; }
+
+h3.event-data-title {
+  font-size: 1.2em; }
 
 h3.section-title, .block-views .block-title, .node--type-landing_page .block-title {
   font-size: 3rem;
@@ -7717,8 +7720,7 @@ a.cta-box:visited {
     #block-get-started .title .small {
       font-weight: 700;
       font-size: 2.2rem;
-      letter-spacing: 0.07em;
-      color: #FFFFFF; }
+      letter-spacing: 0.07em; }
   #block-get-started form {
     position: relative;
     width: 100%; }
