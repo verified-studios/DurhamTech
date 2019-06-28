@@ -8,7 +8,9 @@ dependencies:
     - node.type.new_article
     - taxonomy.vocabulary.event_type
   content:
-    - 'taxonomy_term:event_type:427724c4-4b8a-4880-87e7-e4981b184d49'
+    - 'taxonomy_term:event_type:20ce2a82-1757-4d38-b6fa-7d7959f4b0ac'
+    - 'taxonomy_term:event_type:3dd874ef-8982-49ae-a75a-510e9bf5bab7'
+    - 'taxonomy_term:event_type:51beb156-d1c5-4cb0-aaad-26d296e20437'
   module:
     - datetime
     - node
@@ -277,9 +279,11 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: not
+          operator: or
           value:
-            - 551
+            - 539
+            - 541
+            - 540
           group: 1
           exposed: false
           expose:
@@ -307,7 +311,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
+          reduce_duplicates: true
           type: textfield
           limit: true
           vid: event_type
