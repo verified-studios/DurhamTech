@@ -7720,7 +7720,8 @@ a.cta-box:visited {
     #block-get-started .title .small {
       font-weight: 700;
       font-size: 2.2rem;
-      letter-spacing: 0.07em; }
+      letter-spacing: 0.07em;
+      color: #FFFFFF; }
   #block-get-started form {
     position: relative;
     width: 100%; }
@@ -7858,7 +7859,8 @@ a.cta-box:visited {
     height: 175px;
     border-radius: 3px; }
     .view-id-homepage.view-display-id-homepage_news .content:hover .field--name-field-news-thumbnail img {
-      opacity: 1; }
+      /*opacity: 1;*/
+      opacity: 0.72; }
     .view-id-homepage.view-display-id-homepage_news .content a:hover {
       color: #FFFFFF; }
     .view-id-homepage.view-display-id-homepage_news .content a .news-teaser-title {
@@ -7888,7 +7890,7 @@ a.cta-box:visited {
     border-radius: 3px;
     width: 25%; }
     .view-id-homepage.view-display-id-homepage_news .field--name-field-news-thumbnail img {
-      opacity: 0.72;
+      opacity: 1.0;
       border-radius: 3px;
       transition: all 300ms ease-in-out; }
 
@@ -8763,7 +8765,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   .course .view-header {
     padding: 60px 0; }
     .course .view-header .course-metadata {
-      padding-top: 60px; } }
+      padding-top: 30px; } }
 
 #views-exposed-form-news-search-block-1 {
   padding-left: 10px; }

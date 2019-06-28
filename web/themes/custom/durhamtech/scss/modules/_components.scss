@@ -29,6 +29,7 @@ $banner-menu-orange-hover: #f27604;
       font-weight: 700;
       font-size: rem(22);
       letter-spacing: 0.07em;
+      color: $white;
     }
   }
 
@@ -233,7 +234,8 @@ $banner-menu-orange-hover: #f27604;
 
       &:hover {
         .field--name-field-news-thumbnail img {
-          opacity: 1;
+          /*opacity: 1;*/
+          opacity: 0.72;
         }
       }
 
@@ -281,9 +283,10 @@ $banner-menu-orange-hover: #f27604;
       width: 25%;
 
       img {
-        opacity: 0.72;
+        opacity: 1.0;
         border-radius: 3px;
         transition: all 300ms ease-in-out;
+
       }
     }
 
