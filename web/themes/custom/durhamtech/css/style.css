@@ -5895,6 +5895,10 @@ h5 {
   font-style: italic;
   color: #4c4c4c; }
 
+h6 {
+  font-size: 1.0em;
+  font-weight: bold; }
+
 p {
   color: #262626;
   line-height: 1.5;
