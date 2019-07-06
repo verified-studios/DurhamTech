@@ -47,11 +47,13 @@
 #}
 <section id="block-get-started" class="contextual-region block block-block-content clearfix">
 
-  <div class="get-started-block" id="get-started">
-    <h1 class="title">Get<span class="small">Started</span></h1>
-    {% block content %}
-      {{ content }}
-    {% endblock %}
+  <div class="get-started-block">
+    <h1 id="get-started" class="title">Get<span class="small">Started</span></h1>
+    <div aria-labelledby="get-started">
+        {% block content %}
+            {{ content }}
+        {% endblock %}
+    </div>
   </div>
 
 
