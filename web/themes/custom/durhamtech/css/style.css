@@ -7262,6 +7262,9 @@ p:last-child,
 .navbar.container {
   max-width: none; }
 
+#block-durhamtechsocialmediaslider .j-image img {
+  object-position: center 15%; }
+
 .footer {
   background-color: #262626;
   padding: 2rem 0 0; }
