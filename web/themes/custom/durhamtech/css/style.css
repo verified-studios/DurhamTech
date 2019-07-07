@@ -7487,7 +7487,7 @@ table {
             text-decoration: none; }
         .secondary-page-header .banner .banner-text-wrapper .breadcrumb span {
           color: #CED2D5;
-          font-weight: 600; }
+          /*font-weight: 600;*/ }
       .secondary-page-header .banner .banner-text-wrapper .banner-title {
         display: inline-block;
         padding: 0;
