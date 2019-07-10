@@ -8124,7 +8124,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 .field--type-text-long figure.align-right, .field--type-text-long figure.align-left {
   padding: 0 0 2rem 4rem; }
   .field--type-text-long figure.align-right figcaption, .field--type-text-long figure.align-left figcaption {
-    font-size: 1.2rem;
+    /*font-size: 1.2rem;*/
+    font-size: 15px;
     font-style: italic;
     margin-top: 1rem;
     color: #4c4c4c; }
