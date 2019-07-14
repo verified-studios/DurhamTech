@@ -6345,6 +6345,11 @@ div.td-padding-t-15 + div.td-padding-t-15 {
 .bordered-top {
   border-top: 1px solid #000000; }
 
+/* print styles to hide footer */
+@media print {
+  footer {
+    display: none; } }
+
 /**
  * Alert styling.
  */

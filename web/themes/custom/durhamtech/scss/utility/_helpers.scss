@@ -72,3 +72,12 @@ $border-color: $black;
 .bordered-top {
   border-top: 1px solid $border-color;
 }
+
+
+
+/* print styles to hide footer */
+@media print {
+  footer {
+    display: none;
+  }
+}
