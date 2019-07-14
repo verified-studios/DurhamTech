@@ -111,7 +111,7 @@
     <div class="landing-page"><div class="lp-news-grid py-40">
         <section>
           <h2 class="cam-gray">Campaign News</h2>
-          {{ page.content.views_block__news_search_block_5 }}
+          {{ drupal_view('news_search', 'block_4', node.field_page_news_type.0.target_id) }}
         </section></div></div>
   </section>
 

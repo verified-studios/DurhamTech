@@ -45,6 +45,7 @@ dependencies:
     - field.field.node.campaign_page.field_header_cta_button
     - field.field.node.campaign_page.field_header_dt_logo
     - field.field.node.campaign_page.field_header_tagline
+    - field.field.node.campaign_page.field_page_news_type
     - field.field.node.campaign_page.field_student1_image
     - field.field.node.campaign_page.field_student1_quote
     - field.field.node.campaign_page.field_student1_quote_name
@@ -67,8 +68,15 @@ dependencies:
     - field.field.node.campaign_page.field_your_gift_header
     - node.type.campaign_page
   module:
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.campaign_page.teaser
 targetEntityType: node
 bundle: campaign_page
@@ -77,16 +85,24 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 1
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_page_news_type:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_campaign_goals_goal1: true
   field_campaign_goals_goal1_sub: true

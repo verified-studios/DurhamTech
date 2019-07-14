@@ -44,6 +44,7 @@ dependencies:
     - field.field.node.campaign_page.field_header_cta_button
     - field.field.node.campaign_page.field_header_dt_logo
     - field.field.node.campaign_page.field_header_tagline
+    - field.field.node.campaign_page.field_page_news_type
     - field.field.node.campaign_page.field_student1_image
     - field.field.node.campaign_page.field_student1_quote
     - field.field.node.campaign_page.field_student1_quote_name
@@ -80,19 +81,11 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 61
+    weight: 62
     region: content
     settings: {  }
     third_party_settings: {  }
   field_campaign_goals_goal1:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textfield
-    region: content
-  field_campaign_goals_goal1_sub:
     weight: 14
     settings:
       size: 60
@@ -100,7 +93,7 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_campaign_goals_goal2:
+  field_campaign_goals_goal1_sub:
     weight: 15
     settings:
       size: 60
@@ -108,7 +101,7 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_campaign_goals_goal2_sub:
+  field_campaign_goals_goal2:
     weight: 16
     settings:
       size: 60
@@ -116,7 +109,7 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_campaign_goals_goal3:
+  field_campaign_goals_goal2_sub:
     weight: 17
     settings:
       size: 60
@@ -124,7 +117,7 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
-  field_campaign_goals_goal3_sub:
+  field_campaign_goals_goal3:
     weight: 18
     settings:
       size: 60
@@ -132,8 +125,16 @@ content:
     third_party_settings: {  }
     type: text_textfield
     region: content
+  field_campaign_goals_goal3_sub:
+    weight: 19
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_campaign_goals_header:
-    weight: 12
+    weight: 13
     settings:
       size: 60
       placeholder: ''
@@ -141,7 +142,7 @@ content:
     type: string_textfield
     region: content
   field_campaign_progress_header:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -149,7 +150,7 @@ content:
     type: string_textfield
     region: content
   field_campaign_progress_stat1:
-    weight: 8
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -157,7 +158,7 @@ content:
     type: text_textfield
     region: content
   field_campaign_progress_stat1_su:
-    weight: 9
+    weight: 10
     settings:
       size: 60
       placeholder: ''
@@ -165,7 +166,7 @@ content:
     type: string_textfield
     region: content
   field_campaign_progress_stat2:
-    weight: 10
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -173,7 +174,7 @@ content:
     type: text_textfield
     region: content
   field_campaign_progress_stat2_su:
-    weight: 11
+    weight: 12
     settings:
       size: 60
       placeholder: ''
@@ -181,7 +182,7 @@ content:
     type: string_textfield
     region: content
   field_content1_content:
-    weight: 25
+    weight: 26
     settings:
       rows: 5
       placeholder: ''
@@ -189,7 +190,7 @@ content:
     type: text_textarea
     region: content
   field_content1_header:
-    weight: 19
+    weight: 20
     settings:
       size: 60
       placeholder: ''
@@ -197,7 +198,7 @@ content:
     type: string_textfield
     region: content
   field_content1_image:
-    weight: 20
+    weight: 21
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -205,7 +206,7 @@ content:
     type: image_image
     region: content
   field_content1_quote:
-    weight: 21
+    weight: 22
     settings:
       rows: 5
       placeholder: ''
@@ -213,14 +214,6 @@ content:
     type: text_textarea
     region: content
   field_content1_quote_name:
-    weight: 22
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content1_quote_title:
     weight: 23
     settings:
       size: 60
@@ -228,111 +221,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_content2_content:
-    weight: 32
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_content2_header:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content2_image:
-    weight: 27
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_content2_quote:
-    weight: 28
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_content2_quote_name:
-    weight: 29
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content2_quote_title:
-    weight: 30
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content2_stat1:
-    weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content2_stat1_sub:
-    weight: 34
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content2_stat2:
-    weight: 35
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content2_stat2_sub:
-    weight: 36
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content3_content:
-    weight: 44
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_content3_header:
-    weight: 42
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_content3_image:
-    weight: 43
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-    region: content
-  field_content_area1_quote_title2:
+  field_content1_quote_title:
     weight: 24
     settings:
       size: 60
@@ -340,7 +229,47 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_content_area2_quote_title2:
+  field_content2_content:
+    weight: 33
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_content2_header:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content2_image:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_content2_quote:
+    weight: 29
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_content2_quote_name:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content2_quote_title:
     weight: 31
     settings:
       size: 60
@@ -348,8 +277,80 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_content2_stat1:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content2_stat1_sub:
+    weight: 35
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content2_stat2:
+    weight: 36
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content2_stat2_sub:
+    weight: 37
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content3_content:
+    weight: 45
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_content3_header:
+    weight: 43
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content3_image:
+    weight: 44
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_content_area1_quote_title2:
+    weight: 25
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_content_area2_quote_title2:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_header_background_image:
-    weight: 5
+    weight: 6
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -357,14 +358,14 @@ content:
     type: image_image
     region: content
   field_header_background_video:
-    weight: 6
+    weight: 7
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_header_campaign_logo:
-    weight: 1
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -372,7 +373,7 @@ content:
     type: image_image
     region: content
   field_header_cta_button:
-    weight: 3
+    weight: 4
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -380,7 +381,7 @@ content:
     type: link_default
     region: content
   field_header_dt_logo:
-    weight: 4
+    weight: 5
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -388,15 +389,21 @@ content:
     type: image_image
     region: content
   field_header_tagline:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_page_news_type:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_student1_image:
-    weight: 45
+    weight: 46
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -404,7 +411,7 @@ content:
     type: image_image
     region: content
   field_student1_quote:
-    weight: 46
+    weight: 47
     settings:
       rows: 5
       placeholder: ''
@@ -412,14 +419,6 @@ content:
     type: text_textarea
     region: content
   field_student1_quote_name:
-    weight: 47
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_student1_quote_title:
     weight: 48
     settings:
       size: 60
@@ -427,7 +426,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student1_quote_title2:
+  field_student1_quote_title:
     weight: 49
     settings:
       size: 60
@@ -435,8 +434,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student2_image:
+  field_student1_quote_title2:
     weight: 50
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_student2_image:
+    weight: 51
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -444,7 +451,7 @@ content:
     type: image_image
     region: content
   field_student2_quote:
-    weight: 51
+    weight: 52
     settings:
       rows: 5
       placeholder: ''
@@ -452,14 +459,6 @@ content:
     type: text_textarea
     region: content
   field_student2_quote_name:
-    weight: 52
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_student2_quote_title:
     weight: 53
     settings:
       size: 60
@@ -467,7 +466,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student2_quote_title2:
+  field_student2_quote_title:
     weight: 54
     settings:
       size: 60
@@ -475,8 +474,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student3_image:
+  field_student2_quote_title2:
     weight: 55
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_student3_image:
+    weight: 56
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -484,7 +491,7 @@ content:
     type: image_image
     region: content
   field_student3_quote:
-    weight: 56
+    weight: 57
     settings:
       rows: 5
       placeholder: ''
@@ -492,14 +499,6 @@ content:
     type: text_textarea
     region: content
   field_student3_quote_name:
-    weight: 57
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_student3_quote_title:
     weight: 58
     settings:
       size: 60
@@ -507,7 +506,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_student3_quote_title2:
+  field_student3_quote_title:
     weight: 59
     settings:
       size: 60
@@ -515,8 +514,16 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_student3_quote_title2:
+    weight: 60
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   field_ways_to_give_content:
-    weight: 41
+    weight: 42
     settings:
       rows: 5
       placeholder: ''
@@ -524,7 +531,7 @@ content:
     type: text_textarea
     region: content
   field_ways_to_give_header:
-    weight: 40
+    weight: 41
     settings:
       size: 60
       placeholder: ''
@@ -532,7 +539,7 @@ content:
     type: string_textfield
     region: content
   field_your_gift_content:
-    weight: 38
+    weight: 39
     settings:
       rows: 5
       placeholder: ''
@@ -540,7 +547,7 @@ content:
     type: text_textarea
     region: content
   field_your_gift_cta_button:
-    weight: 39
+    weight: 40
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -548,7 +555,7 @@ content:
     type: link_default
     region: content
   field_your_gift_header:
-    weight: 37
+    weight: 38
     settings:
       size: 60
       placeholder: ''
@@ -557,13 +564,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 66
+    weight: 67
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 64
+    weight: 65
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -571,21 +578,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 62
+    weight: 63
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 67
+    weight: 68
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 63
+    weight: 64
     region: content
     third_party_settings: {  }
   title:
@@ -598,7 +605,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 60
+    weight: 61
     settings:
       match_operator: CONTAINS
       size: 60
@@ -606,7 +613,7 @@ content:
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 65
+    weight: 66
     region: content
     settings: {  }
     third_party_settings: {  }
