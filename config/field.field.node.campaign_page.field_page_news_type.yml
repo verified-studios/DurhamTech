@@ -1,0 +1,29 @@
+uuid: abbe3361-57d9-4f79-b6a8-fcb10d1e3bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_news_type
+    - node.type.campaign_page
+    - taxonomy.vocabulary.news_type
+id: node.campaign_page.field_page_news_type
+field_name: field_page_news_type
+entity_type: node
+bundle: campaign_page
+label: 'Page News Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      news_type: news_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
