@@ -101,13 +101,36 @@
           <div class="banner-overlay"></div>
           <div class="banner-text-wrapper">
             <div class="container">
-              <div class="breadcrumb">
+             {# <div class="breadcrumb">
                 <a href="/">Home</a>
                 {% if url_first_arg and url_first_arg|lower != node_title|trim|lower|replace({' ': '-'}) %}
                   <a href="/{{ url_first_arg }}">{{ node_title|capitalize }}</a>
                 {% endif %}
                 <span>{{ node_title }}</span>
+              </div>#}
+
+
+              <div class="breadcrumb">
+                {% if page.secondary_nav.breadcrumbs|render|striptags|trim is not empty %}
+                  {{ page.secondary_nav.breadcrumbs }}
+                {% else %}
+                  <a href="/">Home</a>
+                  {#{% if url_first_arg and url_first_arg|lower != node_title|trim|lower|replace({' ': '-'}) %}
+                    <a href="/{{ url_first_arg }}">{{ node_title|capitalize }}</a>
+                  {% elseif url_first_arg and url_first_arg|lower != page['#title']|trim|lower|replace({' ': '-'}) %}
+                    <a href="/{{ url_first_arg }}">{{ page['#title'].value|capitalize }}</a>
+                  {% endif %}#}
+                  {% if node_title %}
+                    <span>{{ node_title }}</span>
+                  {% elseif page['#title'] %}
+                    <span>{{ page['#title'] }}</span>
+                  {% endif %}
+                {% endif %}
               </div>
+              {% set breadcrumb_args = page.secondary_nav.breadcrumbs|render|striptags|trim|split('\n') %}
+              {% set bc_sec_arg = breadcrumb_args.1|trim %}
+
+
               <div class="banner-title"><h1
                   class="white">{{ parent_title ? parent_title : node_title }}</h1></div>
             </div>
