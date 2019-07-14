@@ -8092,6 +8092,14 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       padding-bottom: 60px;
       padding-top: 60px; } }
 
+.page-node-type-new-article .container {
+  padding-bottom: 30px;
+  /*padding-top: $section-spacing-sm;*/ }
+  @media screen and (min-width: 768px) {
+    .page-node-type-new-article .container {
+      padding-bottom: 60px;
+      /*padding-top: $section-spacing-lg;*/ } }
+
 @media screen and (min-width: 768px) {
   .view.sidebar .filters-wrapper {
     display: inline-block;

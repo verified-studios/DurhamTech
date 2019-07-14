@@ -24,6 +24,17 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   }
 }
 
+.page-node-type-new-article .container {
+  padding-bottom: $section-spacing-sm;
+  /*padding-top: $section-spacing-sm;*/
+
+  @media #{$tablet} {
+    padding-bottom: $section-spacing-lg;
+    /*padding-top: $section-spacing-lg;*/
+  }
+
+}
+
 $sidebar-width: 300px;
 
 
