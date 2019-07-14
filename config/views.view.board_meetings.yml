@@ -304,7 +304,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<br /><br />'
+            value: '<br /><a target="_blank" href="/sites/default/files/media-files/board/BoardofTrusteesMeetings.pdf">Meeting Calendar</a><br /><br />'
             format: basic_html
           plugin_id: text
       footer:
