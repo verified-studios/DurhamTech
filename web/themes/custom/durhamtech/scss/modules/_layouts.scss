@@ -24,7 +24,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   }
 }
 
-.page-node-type-new-article .container {
+.page-node-type-new-article .container, .page-node-type-event .container {
   padding-bottom: $section-spacing-sm;
   /*padding-top: $section-spacing-sm;*/
 
