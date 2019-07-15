@@ -7397,6 +7397,13 @@ table {
     max-width: 100%;
     white-space: nowrap; }
 
+.table-responsive-helphub {
+  /*padding-left: -15px;
+  padding-right: -15px;*/
+  margin-left: -15px;
+  margin-right: -15px;
+  font-size: 14px; }
+
 .secondary-page-header {
   position: relative; }
   .secondary-page-header .banner {
