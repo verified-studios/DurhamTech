@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.board_meeting.body
+    - field.field.node.board_meeting.field_banner_image
     - field.field.node.board_meeting.field_meeting_attachment
     - field.field.node.board_meeting.field_meeting_date
     - field.field.node.board_meeting.field_meeting_location
@@ -31,6 +32,14 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 105
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_meeting_attachment:
     type: entity_reference_revisions_entity_view
