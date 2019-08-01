@@ -167,7 +167,7 @@
 
 
 .path-continuing-education  .main-container {
-  padding-top: 6rem;
+  /*padding-top: 6rem;*/
 }
 
 
@@ -215,7 +215,8 @@
 }
 
 #block-viewsexposedfilterblock,
-#block-exposedformprograms-searchpage-1 {
+#block-exposedformprograms-searchpage-1,
+#block-exposedformcontinuing-education-searchpage-1 {
   margin: 3rem 0;
 }
 
@@ -353,7 +354,8 @@
 
 #views-exposed-form-programs-search-page-1,
 #views-exposed-form-course-search-page-1,
-#views-exposed-form-careers-search-page-1 {
+#views-exposed-form-careers-search-page-1,
+#views-exposed-form-continuing-education-search-page-1 {
   .form--inline {
     text-align: center;
     .form-item {

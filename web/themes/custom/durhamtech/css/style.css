@@ -8266,7 +8266,7 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   margin-top: 0; }
 
 .path-continuing-education .main-container {
-  padding-top: 6rem; }
+  /*padding-top: 6rem;*/ }
 
 .path-courses .main-container {
   padding-top: 6rem; }
@@ -8303,7 +8303,8 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       margin-top: 0.25rem !important; }
 
 #block-viewsexposedfilterblock,
-#block-exposedformprograms-searchpage-1 {
+#block-exposedformprograms-searchpage-1,
+#block-exposedformcontinuing-education-searchpage-1 {
   margin: 3rem 0; }
 
 .path-taxonomy .program.teaser {
@@ -8387,16 +8388,19 @@ section.container, section.program, section.career, .node--type-landing_page, .p
 
 #views-exposed-form-programs-search-page-1 .form--inline,
 #views-exposed-form-course-search-page-1 .form--inline,
-#views-exposed-form-careers-search-page-1 .form--inline {
+#views-exposed-form-careers-search-page-1 .form--inline,
+#views-exposed-form-continuing-education-search-page-1 .form--inline {
   text-align: center; }
   #views-exposed-form-programs-search-page-1 .form--inline .form-item,
   #views-exposed-form-course-search-page-1 .form--inline .form-item,
-  #views-exposed-form-careers-search-page-1 .form--inline .form-item {
+  #views-exposed-form-careers-search-page-1 .form--inline .form-item,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item {
     margin: 0 2rem 2rem;
     float: none; }
     #views-exposed-form-programs-search-page-1 .form--inline .form-item label,
     #views-exposed-form-course-search-page-1 .form--inline .form-item label,
-    #views-exposed-form-careers-search-page-1 .form--inline .form-item label {
+    #views-exposed-form-careers-search-page-1 .form--inline .form-item label,
+    #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item label {
       text-transform: uppercase;
       margin-right: 1rem;
       letter-spacing: 0.03em;
@@ -8407,65 +8411,79 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     #views-exposed-form-course-search-page-1 .form--inline .form-item select,
     #views-exposed-form-course-search-page-1 .form--inline .form-item input,
     #views-exposed-form-careers-search-page-1 .form--inline .form-item select,
-    #views-exposed-form-careers-search-page-1 .form--inline .form-item input {
+    #views-exposed-form-careers-search-page-1 .form--inline .form-item input,
+    #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item select,
+    #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item input {
       font-weight: 600;
       font-family: "Open Sans", sans-serif;
       color: #000000; }
     #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper,
     #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper,
-    #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper {
+    #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper,
+    #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper {
       display: inline-block;
       vertical-align: middle; }
       #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend,
       #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend,
-      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend {
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend,
+      #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper legend {
         display: none; }
       #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item,
       #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item,
-      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item {
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item,
+      #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper .form-item {
         margin: 0;
         padding: 0; }
       #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label,
       #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label,
-      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label {
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label,
+      #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper label {
         font-weight: bold;
         vertical-align: middle; }
       #views-exposed-form-programs-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input,
       #views-exposed-form-course-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input,
-      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input {
+      #views-exposed-form-careers-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input,
+      #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item#edit-field-class-count--wrapper input {
         margin-right: 10px;
         padding: 0; }
   #views-exposed-form-programs-search-page-1 .form--inline .form-item-search-api-fulltext,
   #views-exposed-form-course-search-page-1 .form--inline .form-item-search-api-fulltext,
-  #views-exposed-form-careers-search-page-1 .form--inline .form-item-search-api-fulltext {
+  #views-exposed-form-careers-search-page-1 .form--inline .form-item-search-api-fulltext,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline .form-item-search-api-fulltext {
     background-color: #CED2D5;
     padding: 2rem 3rem;
     border-radius: 1rem;
     max-width: 100%; }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext,
   #views-exposed-form-course-search-page-1 .form--inline #edit-search-api-fulltext,
-  #views-exposed-form-careers-search-page-1 .form--inline #edit-search-api-fulltext {
+  #views-exposed-form-careers-search-page-1 .form--inline #edit-search-api-fulltext,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-search-api-fulltext {
     width: 100%; }
     @media screen and (min-width: 768px) {
       #views-exposed-form-programs-search-page-1 .form--inline #edit-search-api-fulltext,
       #views-exposed-form-course-search-page-1 .form--inline #edit-search-api-fulltext,
-      #views-exposed-form-careers-search-page-1 .form--inline #edit-search-api-fulltext {
+      #views-exposed-form-careers-search-page-1 .form--inline #edit-search-api-fulltext,
+      #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-search-api-fulltext {
         width: 500px;
         max-width: 80%; } }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-actions,
   #views-exposed-form-course-search-page-1 .form--inline #edit-actions,
-  #views-exposed-form-careers-search-page-1 .form--inline #edit-actions {
+  #views-exposed-form-careers-search-page-1 .form--inline #edit-actions,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-actions {
     width: 100%; }
   #views-exposed-form-programs-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper,
   #views-exposed-form-course-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper,
-  #views-exposed-form-careers-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper {
+  #views-exposed-form-careers-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline .form-actions.form-group.js-form-wrapper.form-wrapper {
     width: 100%; }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-submit-programs-search,
   #views-exposed-form-programs-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-course-search-page-1 .form--inline #edit-submit-programs-search,
   #views-exposed-form-course-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-careers-search-page-1 .form--inline #edit-submit-programs-search,
-  #views-exposed-form-careers-search-page-1 .form--inline #edit-reset {
+  #views-exposed-form-careers-search-page-1 .form--inline #edit-reset,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-submit-programs-search,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-reset {
     /*font-size: 1.5rem;*/
     font-size: 0.8em;
     /*padding: 1rem 2rem;*/
@@ -8478,12 +8496,15 @@ section.container, section.program, section.career, .node--type-landing_page, .p
     #views-exposed-form-course-search-page-1 .form--inline #edit-submit-programs-search .glyphicon,
     #views-exposed-form-course-search-page-1 .form--inline #edit-reset .glyphicon,
     #views-exposed-form-careers-search-page-1 .form--inline #edit-submit-programs-search .glyphicon,
-    #views-exposed-form-careers-search-page-1 .form--inline #edit-reset .glyphicon {
+    #views-exposed-form-careers-search-page-1 .form--inline #edit-reset .glyphicon,
+    #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-submit-programs-search .glyphicon,
+    #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-reset .glyphicon {
       opacity: 0.5;
       margin-right: 1rem; }
   #views-exposed-form-programs-search-page-1 .form--inline #edit-reset,
   #views-exposed-form-course-search-page-1 .form--inline #edit-reset,
-  #views-exposed-form-careers-search-page-1 .form--inline #edit-reset {
+  #views-exposed-form-careers-search-page-1 .form--inline #edit-reset,
+  #views-exposed-form-continuing-education-search-page-1 .form--inline #edit-reset {
     min-width: 90px;
     background-color: #4c4c4c;
     /*padding: 0 0;*/
