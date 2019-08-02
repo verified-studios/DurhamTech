@@ -8119,6 +8119,22 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       padding-bottom: 60px;
       /*padding-top: $section-spacing-lg;*/ } }
 
+.page-node-type-event .footer-bottom .container {
+  padding-bottom: 0;
+  /*padding-top: $section-spacing-sm;*/ }
+  @media screen and (min-width: 768px) {
+    .page-node-type-event .footer-bottom .container {
+      padding-bottom: 0;
+      /*padding-top: $section-spacing-lg;*/ } }
+
+.page-node-type-event .footer-top.container {
+  padding-bottom: 15px;
+  /*padding-top: $section-spacing-sm;*/ }
+  @media screen and (min-width: 768px) {
+    .page-node-type-event .footer-top.container {
+      padding-bottom: 30px;
+      /*padding-top: $section-spacing-lg;*/ } }
+
 @media screen and (min-width: 768px) {
   .view.sidebar .filters-wrapper {
     display: inline-block;
