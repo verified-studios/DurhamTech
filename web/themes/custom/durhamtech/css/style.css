@@ -8111,22 +8111,41 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       padding-bottom: 60px;
       padding-top: 60px; } }
 
-.page-node-type-new-article .container, .page-node-type-event .container {
+.page-node-type-new-article .container {
   padding-bottom: 30px;
   /*padding-top: $section-spacing-sm;*/ }
   @media screen and (min-width: 768px) {
-    .page-node-type-new-article .container, .page-node-type-event .container {
+    .page-node-type-new-article .container {
       padding-bottom: 60px;
       /*padding-top: $section-spacing-lg;*/ } }
 
-.page-node-type-event .footer-bottom .container {
-  padding-bottom: 0;
+.page-node-type-event .main-container.container {
+  padding-bottom: 30px;
   /*padding-top: $section-spacing-sm;*/ }
   @media screen and (min-width: 768px) {
-    .page-node-type-event .footer-bottom .container {
-      padding-bottom: 0;
+    .page-node-type-event .main-container.container {
+      padding-bottom: 60px;
       /*padding-top: $section-spacing-lg;*/ } }
 
+/*.page-node-type-event .secondary-nav .container {
+  padding-bottom: 0;
+  !*padding-top: $section-spacing-sm;*!
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+    !*padding-top: $section-spacing-lg;*!
+  }
+}
+
+.page-node-type-event .footer-bottom .container {
+  padding-bottom: 0;
+  !*padding-top: $section-spacing-sm;*!
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+    !*padding-top: $section-spacing-lg;*!
+  }
+}*/
 .page-node-type-event .footer-top.container {
   padding-bottom: 15px;
   /*padding-top: $section-spacing-sm;*/ }
