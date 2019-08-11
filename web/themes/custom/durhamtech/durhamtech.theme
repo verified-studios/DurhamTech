@@ -110,6 +110,9 @@ function durhamtech_preprocess_page(&$variables) {
     case '/continuing-education';
       $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Continuing Education Banner']);
       break;
+    case '/continuing-education-search';
+      $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Continuing Education Banner']);
+      break;
     case '/report-conduct';
       $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'student services']);
       break;
@@ -136,6 +139,9 @@ function durhamtech_preprocess_page(&$variables) {
       case 'continuing-education':
         $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Continuing Education Banner']);
       break;
+      case 'continuing-education-search':
+        $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Continuing Education Banner']);
+        break;
       default:
         break;
     }
@@ -191,6 +197,9 @@ function durhamtech_preprocess_page(&$variables) {
           $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Careers Banner']);
           break;
         case 'continuing-education':
+          $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Continuing Education Banner']);
+          break;
+        case 'continuing-education-search':
           $banner = \Drupal::entityTypeManager()->getStorage("media")->loadbyProperties(['name' => 'Continuing Education Banner']);
           break;
         case 'program':
