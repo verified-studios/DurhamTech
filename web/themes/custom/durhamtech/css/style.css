@@ -8112,6 +8112,14 @@ section.container, section.program, section.career, .node--type-landing_page, .p
       padding-top: 60px; } }
 
 .page-node-type-new-article .container {
+  /*padding-bottom: $section-spacing-sm;*/
+  /*padding-top: $section-spacing-sm;*/ }
+  @media screen and (min-width: 768px) {
+    .page-node-type-new-article .container {
+      /*padding-bottom: $section-spacing-lg;*/
+      /*padding-top: $section-spacing-lg;*/ } }
+
+.page-node-type-event .main-container.container {
   padding-bottom: 30px;
   /*padding-top: $section-spacing-sm;*/ }
   @media screen and (min-width: 768px) {
