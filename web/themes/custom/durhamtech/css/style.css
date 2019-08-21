@@ -8123,15 +8123,15 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   padding-bottom: 30px;
   /*padding-top: $section-spacing-sm;*/ }
   @media screen and (min-width: 768px) {
-    .page-node-type-new-article .container {
+    .page-node-type-event .main-container.container {
       padding-bottom: 60px;
       /*padding-top: $section-spacing-lg;*/ } }
 
-.page-node-type-event .main-container.container {
+.page-node-type-new-article .main-container.container {
   padding-bottom: 30px;
   /*padding-top: $section-spacing-sm;*/ }
   @media screen and (min-width: 768px) {
-    .page-node-type-event .main-container.container {
+    .page-node-type-new-article .main-container.container {
       padding-bottom: 60px;
       /*padding-top: $section-spacing-lg;*/ } }
 
@@ -8159,6 +8159,14 @@ section.container, section.program, section.career, .node--type-landing_page, .p
   /*padding-top: $section-spacing-sm;*/ }
   @media screen and (min-width: 768px) {
     .page-node-type-event .footer-top.container {
+      padding-bottom: 30px;
+      /*padding-top: $section-spacing-lg;*/ } }
+
+.page-node-type-new-article .footer-top.container {
+  padding-bottom: 15px;
+  /*padding-top: $section-spacing-sm;*/ }
+  @media screen and (min-width: 768px) {
+    .page-node-type-new-article .footer-top.container {
       padding-bottom: 30px;
       /*padding-top: $section-spacing-lg;*/ } }
 
