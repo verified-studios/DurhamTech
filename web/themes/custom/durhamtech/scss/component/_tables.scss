@@ -43,6 +43,9 @@ table {
     td {
       color: $gray;
       border-left: 1px solid darken($offwhite, 5);
+      &.location {
+        text-transform: uppercase;
+      }
     }
   }
   // nested table
