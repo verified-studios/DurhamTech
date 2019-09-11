@@ -45,11 +45,12 @@
  * @see template_process()
  */
 #}
+
 <section id="block-get-started" class="contextual-region block block-block-content clearfix">
 
   <div class="get-started-block">
     <h1 class="title">Get<span class="small">Started</span></h1>
-    <div id="get-started" class="visually-hidden">The Get Started section contains three dropdown boxes with options for "I Have a" options, "I'm Interested in" options and "My Area of Interest is" options.</div>
+    <div id="get-started" class="visually-hidden">The Get Started section contains three combo boxes allowing you to select your current education level, prospective education level and area of interest, respectively.</div>
     <div aria-labelledby="get-started">
         {% block content %}
             {{ content }}
@@ -57,5 +58,6 @@
     </div>
   </div>
 
-
 </section>
+
+
